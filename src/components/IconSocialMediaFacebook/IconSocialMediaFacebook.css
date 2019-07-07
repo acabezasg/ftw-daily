@@ -4,6 +4,6 @@
   fill: #fff;
   transition: var(--transitionStyleButton);
   &:hover {
-    fill: var(--marketplaceColor);
+    fill: #3b5998;
   }
 }
