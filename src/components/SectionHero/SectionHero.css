@@ -95,7 +95,7 @@
 
   @media (--viewportMedium) {
     max-width: 100%;
-    margin: 0 0 63px 0;
+    margin: 0 0 40px 0;
   }
 }
 
@@ -112,4 +112,8 @@
   }
 }
 
-
+.heroButton:hover {
+  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+  color: #fff;
+  text-decoration: none !important;
+}

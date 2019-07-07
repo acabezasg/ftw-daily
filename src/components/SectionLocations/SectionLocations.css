@@ -57,6 +57,14 @@
   transition: var(--transitionStyleButton); 
 }
 
+.aspectWrapper {
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+}
+
+.location:hover {
+  transform: scale(1.04);
+}
+
 .aspectWrapper:hover ~ .linkText {
   background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
