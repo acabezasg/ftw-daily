@@ -62,14 +62,6 @@
   transform: scale(1.04);
 }
 
-.aspectWrapper:hover ~ .linkText {
-  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-}
-
-.aspectWrapper:hover {
-  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-}
-
 
 /* An image wrapper that defines the images aspect ratio */
 .aspectWrapper {
@@ -81,6 +73,14 @@
   @media (--viewportMedium) {
     padding-bottom: calc(2 / 3 * 100%); /* 3:2 Aspect Ratio */
   }
+}
+
+.aspectWrapper:hover ~ .linkText {
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+.aspectWrapper:hover {
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
 
 .locationImage {
