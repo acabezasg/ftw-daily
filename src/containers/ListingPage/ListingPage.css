@@ -34,7 +34,9 @@
   }
 
   @media (--viewportLarge) {
-    padding: 36px 36px 0 36px;
+    max-width: 1128px;
+    padding: 0 36px;
+    margin: 50px auto 0px;
   }
 }
 
@@ -261,7 +263,7 @@
   @media (--viewportMedium) {
     position: absolute;
     left: 60px;
-    top: -49px;
+    top: -50px;
     margin-left: 0;
     margin-top: 0;
   }

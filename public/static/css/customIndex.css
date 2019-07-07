@@ -1,0 +1,135 @@
+    body {
+    overflow-x: hidden !important;
+    background: #F7F7F7;
+    }
+
+    .listingsLink {
+    color: #000;
+    }
+
+    /* HOW IT WORKS */
+
+    #how-it-works {
+    display: flex;
+    margin-bottom: 50px;
+    }
+
+    #three-containers {
+    max-width: 33%;
+    flex: 0 0 33%;
+    text-align: center;
+    }
+
+    #howitworks-title {
+    text-align: center;
+    }
+
+    #howitworks-ul li {
+    margin-bottom: 10px;
+    font-weight: 300;
+    }
+
+    #three-containers h2 {
+    margin-bottom: 27px;
+    }
+ 
+    #three-containers:nth-child(1):before {
+    content: url(/static/icons/how-1.png);
+    }
+
+    #three-containers:nth-child(2):before {
+    content: url(/static/icons/how-2.png);
+    }
+
+    #three-containers:nth-child(3):before {
+    content: url(/static/icons/how-3.png);
+    }
+
+    #howitworks-title h1 {
+    margin-bottom: 60px !important; 
+    }
+
+    #how-padding {
+    margin-top: 80px !important;
+    text-align: center;
+    }
+
+    #how-button {
+    color: #fff;
+    background-color: #41a6df;
+    padding: 10px 20px;
+    border-radius: 5px;
+    }
+
+    @media (max-width: 767px) {
+      #three-containers {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 60px;
+      }
+
+      #how-it-works {
+        display: inherit;
+      }
+    }
+
+    /* WHY USE */
+
+    .whyUse {
+    background: #41a6df;
+    }
+
+    /* FOOTER */
+
+    #back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0 ;
+    background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+    font-size: 21px;
+    }
+
+    #back-to-top:hover {
+    background-image: linear-gradient(to right top, #d16ba5, #d16ba5, #d16ba5, #d16ba5, #d16ba5, #d16ba5, #d16ba5, #d16ba5, #d16ba5, #d16ba5, #d16ba5, #d16ba5);
+    color: #fff;
+    }
+
+    #back-to-top.show {
+    opacity: 1;
+    }
+
+    .selected {
+    text-decoration: none !important;
+    color: #41a6df !important;
+    }
+
+    #bread-active:hover {
+    cursor: pointer;
+    color: #41a6df;
+    }
+
+    #bread-back {
+     color: rgb(155, 155, 155) !important;
+    }
+
+    #bread-back:hover {
+     color: #41a6df !important;
+    }
+
+    #how-padding a:hover {
+    background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+    color: #fff;
+    text-decoration: none !important;
+    }

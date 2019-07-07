@@ -8,6 +8,8 @@
   /* Remove link's hover effect */
   &:hover {
     text-decoration: none;
+    transform: scale(1.02);
+    box-shadow: 4px 6px 25px 1px rgba(0,0,0,0.46);
   }
 }
 
@@ -17,11 +19,6 @@
   width: 100%;
   position: relative;
   transition: var(--transitionStyleButton);
-
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: var(--boxShadowListingCard);
-  }
 }
 
 /* Firefox doesn't support image aspect ratio inside flexbox */
@@ -45,7 +42,9 @@
   /* Layout */
   display: flex;
   flex-direction: row;
-  padding: 16px 0 2px 0;
+  padding: 15px;
+  background: #41a6df;
+  padding: 15px
 }
 
 .price {
@@ -58,6 +57,7 @@
 }
 
 .priceValue {
+  color: #fff;
   /* Font */
   @apply --marketplaceH3FontStyles;
 
@@ -74,7 +74,7 @@
 .perUnit {
   /* Font */
   @apply --marketplaceTinyFontStyles;
-  color: var(--matterColor);
+  color: #fff;
 
   /* Remove default margins from font */
   margin-top: 0;
@@ -87,14 +87,14 @@
 }
 
 .mainInfo {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  text-align: right;
 }
 
 .title {
   /* Font */
   @apply --marketplaceH3FontStyles;
-  color: var(--matterColor);
+  color: #fff;
 
   /* Remove default margins from font */
   margin-top: 0;
@@ -109,7 +109,7 @@
 .authorInfo {
   /* Font */
   @apply --marketplaceTinyFontStyles;
-  color: var(--matterColor);
+  color: #fff;
 
   /* Remove default margins from font */
   margin-top: 0;
