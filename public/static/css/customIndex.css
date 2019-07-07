@@ -3,111 +3,11 @@
     background: #F7F7F7;
     }
 
-    #how-padding a:hover {
-    background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
-    color: #fff;
-    text-decoration: none !important;
-    }
-
-    .Button_inlineTextButtonRoot__1A7_R a {
-    color: #b2b2b2 !important;
-    }
-
-    .LandingPage_hero__CxAkT {
-    justify-content: center !important;
-    }
-
     .listingsLink {
     color: #000;
     }
 
-    .ListingCard_info__2X44s {
-     padding: 15px 20px !important;
-     background: #41a6df;
-     width: 100%;
-    }   
-
-    .SearchResultsPanel_listingCard___Fcmu:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
-    }
-
-    .ListingCard_threeToTwoWrapper__1mtRM:hover {
-    transform: scale(1) !important;
-    box-shadow: 0 !important;
-    }
-
-    .ListingCard_priceValue__IPtpn, .ListingCard_title__2Hja_, .ListingCard_authorInfo__FZ-94, .ListingCard_perUnit__32sU5 {
-     color: #fff !important;
-    }
-
-    .ListingCard_mainInfo__1SEE_ {
-    margin-left: auto;
-    }
-    
-    @media (min-width: 1024px) {
-    .ListingPage_threeToTwoWrapper__11Ru3 {
-    margin: 0 auto;
-    max-width: 1128px;
-    padding: 0 36px;
-    }}
-
-    @media (min-width: 768px) {
-   .ListingPage_sectionAvatar__2wdQw {
-    top: -57px;
-    }}
-
-    .TabNavHorizontal_selectedTabContent__eJ4vb {
-    border-bottom-color: #41a6df !important;
-    }
-
-    .SectionHero_heroMainTitle__3YHOS, .SectionLocations_title__pYWqb {
-    max-width: 100% !important;
-    text-align: center !important;
-    }
-
-    .SectionHero_heroButton__3j9FY {
-	  background-color: #41a6df !important;
-    }
-
-    .FieldTextInput_input__2ddAI {
-    border-bottom-color: #41a6df;
-    }
-
-    .SectionHero_heroButton__3j9FY {
-    margin: 0 auto !important;
-    }
-
-    .LocationAutocompleteInput_iconSvgGroup__2g-R7 {
-    stroke: #41a6df !important;
-    }
-
-    .TopbarDesktop_createListingLink__5mz2j:hover, .TopbarDesktop_signupLink__ynA7h:hover, .TopbarDesktop_loginLink__2GdiG:hover, .TopbarDesktop_logoLink__3mf-U:hover {
-    border-bottom: 4px solid #41a6df !important;
-    }
-
-   .LandingPage_hero__CxAkT {
-    justify-content: center;
-    padding-top: 10px !important;
-    } 
-
-    .LandingPage_section__3Tv0O:nth-of-type(2n) .LandingPage_sectionContent__1ahe_::before {
-    background: #41a6df !important;
-    }
-
     /* HOW IT WORKS */
-
-    .SectionHowItWorks_title__26n__ {
-    text-align: center;
-    }
-
-    .LandingPage_section__3Tv0O:nth-of-type(2n) .LandingPage_sectionContent__1ahe_::before {
-    margin: 0 auto;
-    }
-
-    .SectionHowItWorks_stepTitle__2pBRA {
-    text-align: center;
-    }
 
     #how-it-works {
     display: flex;
@@ -148,10 +48,6 @@
     #howitworks-title h1 {
     margin-bottom: 60px !important; 
     }
- 
-    .LandingPage_section__3Tv0O:nth-of-type(2n) .LandingPage_sectionContent__1ahe_::before {
-    display: none !important;
-    }
 
     #how-padding {
     margin-top: 80px !important;
@@ -163,11 +59,6 @@
     background-color: #41a6df;
     padding: 10px 20px;
     border-radius: 5px;
-    }
-
-    .SectionLocations_imageWrapper__2e2Gp:hover {
-    transform: scale(1) !important;
-    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0) !important;
     }
 
     @media (max-width: 767px) {
@@ -189,11 +80,6 @@
     }
 
     /* FOOTER */
-
-    @media (max-width: 520px) {
-    .LandingPage_sectionContent__1ahe_ {
-    margin: 80px 40px 120px 40px !important;
-    }}
 
     #back-to-top {
     position: fixed;
@@ -224,17 +110,9 @@
     opacity: 1;
     }
 
-    .Footer_organizationCopyright__3CBW- {
-    margin-top: 24px !important;
-    }
-
     .selected {
     text-decoration: none !important;
     color: #41a6df !important;
-    }
-
-    .Button_inlineTextButtonRoot__1A7_R {
-    margin-top: 12px !important;
     }
 
     #bread-active:hover {
