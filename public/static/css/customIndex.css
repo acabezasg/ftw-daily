@@ -3,7 +3,7 @@
     background: #F7F7F7;
     }
 
-   .LandingPage_whyContainer__2R9A8 a:hover, #how-padding a:hover {
+    #how-padding a:hover {
     background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
     color: #fff;
     text-decoration: none !important;
@@ -85,27 +85,6 @@
     .TopbarDesktop_createListingLink__5mz2j:hover, .TopbarDesktop_signupLink__ynA7h:hover, .TopbarDesktop_loginLink__2GdiG:hover, .TopbarDesktop_logoLink__3mf-U:hover {
     border-bottom: 4px solid #41a6df !important;
     }
-
-    .SectionLocations_linkText__1a8gC {
-    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
-    padding: 16px 0px 17px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin: 0 !important;
-    text-align: center;
-    }
-
-    .SectionLocations_location__1paVa {
-    position: relative;
-    }
-
-   .SectionLocations_aspectWrapper__dh-cu img {
-    z-index: -1;
-   }
-
-   .SectionLocations_linkText__1a8gC span {
-    color: #4a4a4a;
-   }
 
    .LandingPage_hero__CxAkT {
     justify-content: center;
@@ -247,10 +226,6 @@
 
     .Footer_organizationCopyright__3CBW- {
     margin-top: 24px !important;
-    }
-
-    .LayoutWrapperTopbar_root__2UZ56 {
-    position: relative !important;
     }
 
     .selected {

@@ -4,7 +4,8 @@
   @apply --marketplaceH1FontStyles;
 
   margin-top: 0;
-  max-width: 735px;
+  text-align: center;
+  max-width: 100%;
 
   @media (--viewportMedium) {
     margin-bottom: 23px;
@@ -55,10 +56,6 @@
   width: 100%;
   border-radius: 4px;
   transition: var(--transitionStyleButton); 
-}
-
-.aspectWrapper {
-  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
 }
 
 .location:hover {
@@ -122,3 +119,24 @@
   margin: 0 !important;
   text-align: center;
 }
+
+  .aspectWrapper img {
+    z-index: -1;
+   }
+
+   .linkText span {
+    color: #4a4a4a;
+   }
+
+   .location {
+    position: relative;
+    }
+
+    .linkText {
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
+    padding: 16px 0px 17px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0 !important;
+    text-align: center;
+    }

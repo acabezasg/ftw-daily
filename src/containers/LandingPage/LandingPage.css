@@ -92,7 +92,7 @@
   @media (--viewportLarge) {
     max-width: 1128px;
     padding: 0 36px 0 36px;
-    margin: var(--LandingPage_sectionMarginTopLarge) auto 93px auto;
+    margin: 80px auto 128px auto;
   }
 
   @media (--viewportXLarge) {
@@ -191,4 +191,10 @@
 
 .whyContainer:nth-child(2):before {
     content: url(/static/icons/why-2.png);
+}
+
+.whyContainer a:hover {
+    background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+    color: #fff;
+    text-decoration: none !important;
 }
