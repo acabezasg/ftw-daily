@@ -2,6 +2,9 @@
 <html data-htmlattr="htmlAttributes">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <!--!title-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--!meta-->
@@ -177,7 +180,7 @@
       mapbox-sdk.min.js is included from static folder for CSP purposes.
       We didn't bundle it to the main app since it would unnecessarily slow down initial rendering.
     -->
-    <script src="%PUBLIC_URL%/static/scripts/custom/faqHover.js"></script>
+    <script src="%PUBLIC_URL%/static/scripts/custom/faqHover.js?v=1"></script>
     <script src="%PUBLIC_URL%/static/scripts/custom/smooth-scroll.js"></script>
     <script src="%PUBLIC_URL%/static/scripts/mapbox/mapbox-sdk.min.js"></script>
     <script src="%PUBLIC_URL%/static/scripts/custom/locationHover.js"></script>

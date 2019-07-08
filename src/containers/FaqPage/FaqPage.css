@@ -93,6 +93,16 @@
   background-position: 0 -150px;
 }
 
+@media (max-width: 520px) {
+  .faqBg, .faqBg2, .faqBg3 {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.mainTitle span {
+  display: none;
+  }}
+
 .faqBg3 span {
   color: #fff;
   font-size: 28px;
