@@ -1,3 +1,4 @@
+export { default as ContactPage } from './ContactPage/ContactPage';
 export { default as AboutPage } from './AboutPage/AboutPage';
 export { default as FaqPage } from './FaqPage/FaqPage';
 export { default as PetSittersPage } from './PetSittersPage/PetSittersPage';
