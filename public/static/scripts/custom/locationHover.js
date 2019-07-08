@@ -7,31 +7,32 @@ $(function() {
   });
 });
 
-
 $(function() {
-  $('.FaqPage_faqBg__1GzLC').hover(function() {
-  $('.FaqPage_spanContainer__2zcTm').css('background', 'rgb(0, 0, 0, 0.6');
+  $('#faqBg').hover(function() {
+  $('#spanContainer').css('background', 'rgb(0, 0, 0, 0.6');
   }, function() {
     // on mouseout, reset the background colour
-  $('.FaqPage_spanContainer__2zcTm').css('background', '');
+  $('#spanContainer').css('background', '');
   });
 });
 
 $(function() {
-  $('.FaqPage_faqBg2__1hmVo').hover(function() {
-  $('.FaqPage_spanContainer2__5X7ul').css('background', 'rgb(0, 0, 0, 0.6');
+  $('#faqBg2').hover(function() {
+  $('#spanContainer2').css('background', 'rgb(0, 0, 0, 0.6');
   }, function() {
     // on mouseout, reset the background colour
-  $('.FaqPage_spanContainer2__5X7ul').css('background', '');
+  $('#spanContainer2').css('background', '');
   });
 });
 
 $(function() {
-  $('.FaqPage_faqBg3__3IVmS').hover(function() {
-  $('.FaqPage_spanContainer3__3Xn3O').css('background', 'rgb(0, 0, 0, 0.6');
+  $('#faqBg3').hover(function() {
+  $('#spanContainer3').css('background', 'rgb(0, 0, 0, 0.6');
   }, function() {
     // on mouseout, reset the background colour
-  $('.FaqPage_spanContainer3__3Xn3O').css('background', '');
+  $('#spanContainer3').css('background', '');
   });
 });
+
+
 
