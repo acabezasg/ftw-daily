@@ -42,24 +42,24 @@ const FaqPage = () => {
      </div>
 
       <a href="/pet-owner-faq"> 
-       <div className={css.faqBg}>
-        <div className={css.spanContainer}>
+       <div className={css.faqBg} id="faqBg">
+        <div className={css.spanContainer} id="spanContainer">
          <span>Pet <span className={css.spanMain}>Owners</span> Corner</span>
         </div>
        </div>
       </a>
 
       <a href="/pet-sitter-faq"> 
-       <div className={css.faqBg2}>
-        <div className={css.spanContainer2}>
+       <div className={css.faqBg2} id="faqBg2">
+        <div className={css.spanContainer} id="spanContainer2">
          <span>Pet <span className={css.spanMain}>Sitter</span> Corner</span>
         </div>
        </div>
       </a>
 
       <a href="/pet-services-faq"> 
-       <div className={css.faqBg3}>
-        <div className={css.spanContainer3}>
+       <div className={css.faqBg3} id="faqBg3">
+        <div className={css.spanContainer} id="spanContainer3">
          <span>Pet <span className={css.spanMain}>Services</span> Corner</span>
         </div>
        </div>
