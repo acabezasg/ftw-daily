@@ -133,3 +133,15 @@
     color: #fff;
     text-decoration: none !important;
     }
+
+    #faqBg:hover #spanContainer {
+    background: rgba(0, 0, 0, 0.6)
+    }
+
+    #faqBg2:hover #spanContainer2 {
+    background: rgba(0, 0, 0, 0.6)
+    }
+
+    #faqBg3:hover #spanContainer3 {
+    background: rgba(0, 0, 0, 0.6)
+    }
