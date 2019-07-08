@@ -23,19 +23,19 @@ const LazyImage = lazyLoadWithDimensions(LocationImage);
 const locationLink = (name, image, searchQuery) => {
   const nameText = <span className={css.locationName}>{name}</span>;
   return (
-    <NamedLink name="SearchPage" to={{ search: searchQuery }} className={css.location}>
+  <NamedLink name="SearchPage" to={{ search: searchQuery }} className={css.location}>
       <div className={css.imageWrapper}>
-        <div className={css.aspectWrapper}>
+        <div className={css.aspectWrapper} id="wrapperAspect">
           <LazyImage src={image} alt={name} className={css.locationImage} />
         </div>
-      </div>
-      <div className={css.linkText}>
+      <div className={css.linkText} id="textLink">
         <FormattedMessage
-          id="SectionLocations.listingsInLocation"
+          id="SectionLocations.listingsInLocation" 
           values={{ location: nameText }}
         />
       </div>
-    </NamedLink>
+    </div>
+  </NamedLink>
   );
 };
 
