@@ -59,14 +59,15 @@
 }
 
 .location:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
+  box-shadow: none !important;
 }
 
 
 /* An image wrapper that defines the images aspect ratio */
 .aspectWrapper {
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
   padding-bottom: calc(6 / 13 * 100%); /* 13:6 Aspect Ratio */
 
   @media (--viewportMedium) {
@@ -105,8 +106,8 @@
 .linkText {
   box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
   padding: 16px 0px 17px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   margin: 0 !important;
   text-align: center;
   background: #fff;
@@ -130,13 +131,4 @@
 
    .location {
     position: relative;
-    }
-
-    .linkText {
-    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
-    padding: 16px 0px 17px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin: 0 !important;
-    text-align: center;
     }
