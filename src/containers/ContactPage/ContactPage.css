@@ -60,6 +60,11 @@
   width: 100%;
 }
 
+@media (max-width: 520px) {
+.contentWrapper form { 
+  width: 100% !important;
+}}
+
 .contentWrapper form {
   width: 50%;
   margin-right: 10px;
@@ -80,4 +85,8 @@
 
 h1 {
 	margin-bottom: 55px !important;
+}
+
+.contentWrapper > div:first-of-type {
+    width: 50%;
 }
