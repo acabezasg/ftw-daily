@@ -180,30 +180,6 @@
       mapbox-sdk.min.js is included from static folder for CSP purposes.
       We didn't bundle it to the main app since it would unnecessarily slow down initial rendering.
     -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script>
-$(function(){
-    $("#ajaxForm").submit(function(e){
-        e.preventDefault();
-        var href = $(this).attr("action");
-        $.ajax({
-            type: "POST",
-            url: href,
-            data: new FormData(this),
-            dataType: "json",
-            processData: false,
-            contentType: false,
-            success: function(response){
-                if(response.status == "success"){
-                    alert("We received your submission, thank you!");
-                }else{
-                    alert("An error occured.");
-                }
-            }
-        });
-    });
-});
-    </script>
 
     <script src="%PUBLIC_URL%/static/scripts/custom/smooth-scroll.js"></script>
     <script src="%PUBLIC_URL%/static/scripts/mapbox/mapbox-sdk.min.js"></script>

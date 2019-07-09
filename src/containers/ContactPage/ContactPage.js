@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios"; // For making client request.
 
-
 class Form extends React.Component {
   constructor(props){
     super(props);
@@ -10,7 +9,7 @@ class Form extends React.Component {
 
   handleForm = e => {
     axios.post(
-      "https://formcarry.com/s/LxMYb0c7kXC", 
+      "https://formcarry.com/s/Ek8wZYC7v0H", 
       this.state, 
       {headers: {"Accept": "application/json"}}
       )
@@ -28,6 +27,7 @@ class Form extends React.Component {
 
   render() {
     return (
+
       <form onSubmit={this.handleForm}>
         <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" onChange={this.handleFields} />
@@ -41,10 +41,17 @@ class Form extends React.Component {
         <label htmlFor="message">Your Message</label>
         <textarea name="message" id="message" onChange={this.handleFields}></textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit" className="square" onClick={function() { alert('click'); }}>Send</button>
+  
       </form>
     );
   }
 }
 
+  
 export default Form;
+
+
+
+
+
