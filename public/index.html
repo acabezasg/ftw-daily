@@ -23,11 +23,14 @@
     <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
     <meta name="theme-color" content="#c0392b">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+    </script>
     <!-- End Favicons -->
 
     <!--!link-->
 
-<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 
     <style>
      /**
@@ -180,7 +183,6 @@
       mapbox-sdk.min.js is included from static folder for CSP purposes.
       We didn't bundle it to the main app since it would unnecessarily slow down initial rendering.
     -->
-
     <script src="%PUBLIC_URL%/static/scripts/custom/smooth-scroll.js"></script>
     <script src="%PUBLIC_URL%/static/scripts/mapbox/mapbox-sdk.min.js"></script>
     <script src="%PUBLIC_URL%/static/scripts/custom/locationHover.js"></script>

@@ -61,6 +61,13 @@
     border-radius: 5px;
     }
 
+    #how-button:hover {
+    background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+    color: #fff;
+    text-decoration: none !important;
+    cursor: pointer;
+    }
+
     @media (max-width: 767px) {
       #three-containers {
         max-width: 100%;
@@ -128,12 +135,6 @@
      color: #41a6df !important;
     }
 
-    #how-padding a:hover {
-    background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
-    color: #fff;
-    text-decoration: none !important;
-    }
-
     #faqBg:hover #spanContainer {
     background: rgba(0, 0, 0, 0.6)
     }
@@ -144,4 +145,11 @@
 
     #faqBg3:hover #spanContainer3 {
     background: rgba(0, 0, 0, 0.6)
+    }
+
+    #map {
+    width: 50%;
+    height: auto;
+    background-color: grey;
+    margin-left: 10px;
     }

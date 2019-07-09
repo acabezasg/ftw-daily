@@ -1,57 +1,60 @@
-import React from "react";
-import axios from "axios"; // For making client request.
+import React from 'react';
+import config from '../../config';
+import { twitterPageURL } from '../../util/urlHelpers';
+import { StaticPage, TopbarContainer } from '../../containers';
+import {
+  ContactForm,
+  GoogleMap,
+  LayoutSingleColumn,
+  LayoutWrapperTopbar,
+  LayoutWrapperMain,
+  LayoutWrapperFooter,
+  Footer,
+  ExternalLink,
+} from '../../components';
 
-class Form extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {name: "", surname: "", email: "", message: ""};
-  }
+import css from './ContactPage.css';
 
-  handleForm = e => {
-    axios.post(
-      "https://formcarry.com/s/Ek8wZYC7v0H", 
-      this.state, 
-      {headers: {"Accept": "application/json"}}
-      )
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+const ContactPage = () => {
+  const { siteTwitterHandle, siteFacebookPage } = config;
+  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
-    e.preventDefault();
-  }
+  // prettier-ignore
+  return (
+    <StaticPage
+      title="Contact Page"
+      schema={{
+        '@context': 'http://schema.org',
+        '@type': 'ContactPage',
+        description: 'Contact Us',
+        name: 'Contact Page',
+      }}
+    >
+      <LayoutSingleColumn>
+        <LayoutWrapperTopbar>
+          <TopbarContainer />
+        </LayoutWrapperTopbar>
 
-  handleFields = e => this.setState({ [e.target.name]: e.target.value });
+        <LayoutWrapperMain className={css.staticPageWrapper}>
+          <h1 className={css.pageTitle}>Need help? Ask our experts for any help you need.</h1>
 
-  render() {
-    return (
+          <div className={css.contentWrapper}>
 
-      <form onSubmit={this.handleForm}>
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" onChange={this.handleFields} />
+          <ContactForm />
 
-        <label htmlFor="surname">Surname</label>
-        <input type="text" id="surname" name="surname" onChange={this.handleFields} />
+          <GoogleMap />
 
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" onChange={this.handleFields} />
+          </div>
 
-        <label htmlFor="message">Your Message</label>
-        <textarea name="message" id="message" onChange={this.handleFields}></textarea>
+        </LayoutWrapperMain>
 
-        <button type="submit" className="square" onClick={function() { alert('click'); }}>Send</button>
-  
-      </form>
-    );
-  }
-}
+        <LayoutWrapperFooter>
+          <Footer />
+        </LayoutWrapperFooter>
+      </LayoutSingleColumn>
+    </StaticPage>
+  );
+};
 
-  
-export default Form;
-
-
-
-
+export default ContactPage;
 

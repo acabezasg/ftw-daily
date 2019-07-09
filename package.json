@@ -25,6 +25,7 @@
     "express-sitemap": "^1.8.0",
     "final-form": "^4.11.0",
     "final-form-arrays": "^1.1.0",
+    "google-maps-react": "^2.0.2",
     "helmet": "^3.18.0",
     "lodash": "^4.17.11",
     "mapbox-gl-multitouch": "^1.0.3",

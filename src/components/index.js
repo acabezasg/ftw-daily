@@ -63,6 +63,12 @@ export { default as ListingLink } from './ListingLink/ListingLink';
 export { default as PaginationLinks } from './PaginationLinks/PaginationLinks';
 export { default as ReviewRating } from './ReviewRating/ReviewRating';
 
+// Contact Form
+export { default as ContactForm } from './ContactForm/ContactForm';
+
+// Google Map
+export { default as GoogleMap } from './GoogleMap/GoogleMap';
+
 // Layout helpers
 export { default as LayoutWrapperFooter } from './LayoutWrapperFooter/LayoutWrapperFooter';
 export { default as LayoutWrapperMain } from './LayoutWrapperMain/LayoutWrapperMain';
