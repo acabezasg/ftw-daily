@@ -51,8 +51,9 @@ const RedirectToLandingPage = () => <NamedRedirect name="LandingPage" />;
 // See behaviour from Routes.js where Route is created.
 const routeConfiguration = () => {
   return [
+  
     {
-      path: '/contactpage',
+      path: '/contact',
       name: 'ContactPage',
       component: ContactPage
     },

@@ -198,3 +198,9 @@
     color: #fff;
     text-decoration: none !important;
 }
+
+@media (max-width: 1024px) {
+  .sectionContentFirstChild {
+    padding: 0 36px 0 36px;
+  }
+}
