@@ -172,7 +172,7 @@ export const LandingPageComponent = props => {
 
                </div>
 
-               <a href="#" id="how-button">Start Now</a>
+               <a href="#" id="how-button">Explore</a>
 
               </div>
 

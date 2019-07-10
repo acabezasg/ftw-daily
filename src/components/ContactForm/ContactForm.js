@@ -33,16 +33,16 @@ class ContactForm extends React.Component {
 
       <form onSubmit={this.handleForm}>
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" onChange={this.handleFields} value={this.state.name} />
+        <input required type="text" id="name" name="name" onChange={this.handleFields} value={this.state.name} />
 
         <label htmlFor="surname">Surname</label>
-        <input type="text" id="surname" name="surname" onChange={this.handleFields} value={this.state.surname} />
+        <input required type="text" id="surname" name="surname" onChange={this.handleFields} value={this.state.surname} />
 
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" onChange={this.handleFields} value={this.state.email} />
+        <input required type="email" id="email" name="email" onChange={this.handleFields} value={this.state.email} />
 
         <label htmlFor="message">Your Message</label>
-        <textarea name="message" id="message" onChange={this.handleFields} value={this.state.message}></textarea>
+        <textarea required name="message" id="message" onChange={this.handleFields} value={this.state.message}></textarea>
 
         <button id="how-button" type="submit">Send</button>
 

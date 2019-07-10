@@ -35,12 +35,7 @@ const FaqPage = () => {
 
     <LayoutWrapperMain className={css.staticPageWrapper}>
       <div className={css.sectionContent}>
-
-     <div className={css.mainTitle}>
-      <h2>Find the answers to your questions <span>Frequently Asked Questions</span></h2>
-       <hr />
-     </div>
-
+      
       <a href="/pet-owner-faq"> 
        <div className={css.faqBg} id="faqBg">
         <div className={css.spanContainer} id="spanContainer">
