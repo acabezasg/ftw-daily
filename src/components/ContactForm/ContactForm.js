@@ -19,8 +19,8 @@ class ContactForm extends React.Component {
         successMessage.innerHTML = JSON.stringify(response.data.title);
       })
       .catch(function (error) {
-        let successMessage = document.querySelector('.success-message');
-        successMessage.innerHTML = JSON.stringify(error);
+        let errorMessage = document.querySelector('.error-message');
+        errorMessage.innerHTML = JSON.stringify(error);
       });
 
     e.preventDefault();
@@ -33,22 +33,26 @@ class ContactForm extends React.Component {
 
       <form onSubmit={this.handleForm}>
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" onChange={this.handleFields} value={this.state.fullName} />
+        <input type="text" id="name" name="name" onChange={this.handleFields} value={this.state.name} />
 
         <label htmlFor="surname">Surname</label>
-        <input type="text" id="surname" name="surname" onChange={this.handleFields} value={this.state.fullName} />
+        <input type="text" id="surname" name="surname" onChange={this.handleFields} value={this.state.surname} />
 
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" onChange={this.handleFields} value={this.state.fullName} />
+        <input type="email" id="email" name="email" onChange={this.handleFields} value={this.state.email} />
 
         <label htmlFor="message">Your Message</label>
-        <textarea name="message" id="message" onChange={this.handleFields} value={this.state.fullName}></textarea>
+        <textarea name="message" id="message" onChange={this.handleFields} value={this.state.message}></textarea>
 
         <button id="how-button" type="submit">Send</button>
-  
- <div className="success-message">
-                <label></label>
-              </div>
+
+          <div className="success-message">
+            <label></label>
+          </div>
+
+          <div className="error-message">
+            <label></label>
+          </div>
 
       </form>
     );

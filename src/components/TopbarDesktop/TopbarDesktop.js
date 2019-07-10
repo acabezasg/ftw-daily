@@ -153,6 +153,12 @@ const TopbarDesktop = props => {
         <FormattedMessage id="Faq" />
       </span>
     </NamedLink>
+    
+    <NamedLink className={css.createListingLink} name="ContactPage">
+      <span className={css.signup}>
+        <FormattedMessage id="Contact" />
+      </span>
+    </NamedLink>
 
       {inboxLink}
       {profileMenu}
