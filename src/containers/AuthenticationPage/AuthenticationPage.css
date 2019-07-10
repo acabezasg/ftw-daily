@@ -147,3 +147,7 @@
 .error {
   @apply --marketplaceModalErrorStyles;
 }
+
+.layoutWrapperMain h1 {
+  margin-bottom: 0px !important;
+}
