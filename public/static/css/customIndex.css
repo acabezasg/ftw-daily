@@ -147,13 +147,6 @@
     background: rgba(0, 0, 0, 0.6)
     }
 
-    #map {
-    width: 50%;
-    height: auto;
-    background-color: grey;
-    margin-left: 10px;
-    }
-
     .success-message {
     color: #41a6df;
     text-align: center;
