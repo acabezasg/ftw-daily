@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import "react-tabs/style/react-tabs.css";
+import { FacebookProvider, EmbeddedPost, Page } from 'react-facebook';
+import { Timeline } from 'react-twitter-widgets';
 import config from '../../config';
 import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
@@ -15,8 +16,6 @@ import {
 
 import twitterimg from './twitter.png';
 import facebookimg from './facebook.png';
-import pawActive from './paw-active.png';
-import paw from './paw.png';
 
 import css from './WhatWeDoPage.css';
 
@@ -132,6 +131,10 @@ const WhatWeDoPage = () => {
 
           <h2>TMPS on Facebook</h2>
 
+          <FacebookProvider appId="1569883489808798">
+            <Page href="https://www.facebook.com/trustmypetsitter" tabs="timeline" />
+          </FacebookProvider>
+
         </div>
 
           <div className={css.trustTw}>
@@ -139,6 +142,18 @@ const WhatWeDoPage = () => {
             <img src={twitterimg} alt="Facebook Icon" />
 
             <h2>TMPS on Twitter</h2>
+
+            <Timeline
+              dataSource={{
+              sourceType: 'profile',
+              screenName: 'trustpetsitter'
+            }}
+              options={{
+              username: 'trustpetsitter',
+              height: '507px'
+            }}
+              onLoad={() => console.log('Timeline is loaded!')}
+              />
 
           </div>
 
