@@ -101,6 +101,7 @@
 
 .whatwedoLeft {
   width: 20%;
+  margin: 0;
 }
 
 .whatwedoRight {
@@ -110,10 +111,6 @@
 
 .whatwedoRight h2 {
   margin-top: 0px !important;
-}
-
-.active {
-  color: #41a6df;
 }
 
 .sectionContent {
@@ -127,7 +124,7 @@
   @media (--viewportLarge) {
     max-width: 1128px;
     padding: 0 36px 0 36px;
-    margin: 50px auto 90px auto;
+    margin: 50px auto 35px auto;
   }
 
   @media (--viewportXLarge) {
@@ -140,7 +137,7 @@
   width: 100%;
   text-align: center;
   margin-top: 30px;
-  margin-bottom: -30px;
+  margin-bottom: 30px;
   display: flex;
 }
 
@@ -167,4 +164,16 @@
   position: relative;
   bottom: 5px;
   margin-right: 4px;
+}
+
+.whatwedoLeft li {
+  margin-bottom: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.whatwedoLeft span {
+  position: relative;
+  left: 30px;
+  bottom: 2px;
 }
