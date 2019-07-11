@@ -1,4 +1,6 @@
 import React from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import "react-tabs/style/react-tabs.css";
 import config from '../../config';
 import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
@@ -19,6 +21,7 @@ import paw from './paw.png';
 import css from './WhatWeDoPage.css';
 
 const WhatWeDoPage = () => {
+
   const { siteTwitterHandle, siteFacebookPage } = config;
   const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
@@ -54,22 +57,16 @@ const WhatWeDoPage = () => {
 
       <div className={css.sectionContent}>
 
-        <div className={css.whatwedoWrapper}>
-        
-         <div className={css.whatwedoLeft}>
-        
-           <ul className={css.whatwedoUl}>
-              
-            <li className={css.active}><img className={css.pawImg} src={pawActive} alt="Paw Icon" /> Pet Owners</li>
-            <li><img className={css.pawImg} src={paw} alt="Paw Icon" /> Pet Sitters</li>
-            <li><img className={css.pawImg} src={paw} alt="Paw Icon" /> Pet Services</li>
+    <Tabs className={css.whatwedoWrapper}>
 
-           </ul>
+      <TabList className={css.whatwedoLeft}>
+        <Tab className={css.tabImg}> <span>Pet Owners</span></Tab>
+        <Tab className={css.tabImg}> <span>Pet Sitters</span></Tab>
+        <Tab className={css.tabImg}> <span>Pet Services</span></Tab>
+      </TabList>
 
-         </div>
-
-         <div className={css.whatwedoRight}>
-        
+      <div className={css.whatwedoRight}>
+       <TabPanel>
           <h2>
             Most people know instinctively that pets are likely to be happier in their own homes. 
             The most obvious reason is that your pets are used to a daily routine, where they 
@@ -87,9 +84,37 @@ const WhatWeDoPage = () => {
             Every Pet Sitter is ID verified using industry leading technology. At Trust My Pet Sitter 
             your pets benefit from 1:1 attention from a dedicated live-in Pet Sitter, chosen by you!
           </p>
+        </TabPanel>
 
+        <TabPanel>
+          <h2>
+            List your Pet Sitters Business at Trust My Pet Sitter and let us help give you the tools 
+            to success. You set your work schedule, set your rates and concentrate on running your business.
+          </h2>
 
-         </div>
+          <p>
+            We'll ensure you are continually advertised helping to attract new clients and build great relationships.
+            Trust My Pet Sitter can help to connect you with local pet owners looking for Daily Drop-in Pet Sitters, 
+            and Dog Walkers.
+          </p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>
+            List your Pet Services Business at Trust My Pet Sitter and let us help give you the tools 
+            to success. You set your work schedule, set your rates and concentrate on running your business.
+          </h2>
+
+          <p>
+            We'll ensure you are continually advertised helping to attract new clients and build great relationships.
+            Trust My Pet Sitter can help to connect you with local pet owners looking for Daily Drop-in Pet Sitters, 
+            and Dog Walkers.
+          </p>
+        </TabPanel>
+
+      </div>
+
+    </Tabs>
         
         </div>
 
@@ -122,8 +147,6 @@ const WhatWeDoPage = () => {
       </div>
 
     </div>
-
-  </div>
 
       </LayoutWrapperMain>
 
