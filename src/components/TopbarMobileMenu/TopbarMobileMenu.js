@@ -83,10 +83,22 @@ const TopbarMobileMenu = props => {
         </span>
 
         <InlineTextButton className={css.logoutButton}>
+          <a href="howitworks"><FormattedMessage id="How it Works" /></a>
+        </InlineTextButton>
+
+        <InlineTextButton className={css.logoutButton}>
+          <a href="faq"><FormattedMessage id="Faq" /></a>
+        </InlineTextButton>
+
+        <InlineTextButton className={css.logoutButton}>
           <a href="/s/listings"><FormattedMessage id="Listings" /></a>
         </InlineTextButton>
+
+        <InlineTextButton className={css.logoutButton}>
+          <a href="contact"><FormattedMessage id="Contact" /></a>
+        </InlineTextButton>
         
-        <InlineTextButton rootClassName={css.logoutButton} onClick={onLogout}>
+        <InlineTextButton rootClassName={css.logoutButton, css.logoutLast} onClick={onLogout}>
           <FormattedMessage id="TopbarMobileMenu.logoutLink" />
         </InlineTextButton>
 

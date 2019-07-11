@@ -133,7 +133,7 @@
 
 .organizationCopyright {
   @apply --marketplaceTinyFontStyles;
-  margin-top: 28px;
+  margin-top: 26px;
   color: #ffff;
 }
 

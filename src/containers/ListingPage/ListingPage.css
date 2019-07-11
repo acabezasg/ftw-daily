@@ -403,7 +403,7 @@
 .descriptionTitle {
   /* Font */
   @apply --marketplaceH3FontStyles;
-  color: var(--matterColorAnti);
+  color: #000;
 
   margin-top: 0;
   margin-bottom: 13px;
@@ -426,7 +426,7 @@
 .featuresTitle {
   /* Font */
   @apply --marketplaceH3FontStyles;
-  color: var(--matterColorAnti);
+  color: #000;
 
   margin-top: 0;
   margin-bottom: 16px;
@@ -462,7 +462,7 @@
 .locationTitle {
   /* Font */
   @apply --marketplaceH3FontStyles;
-  color: var(--matterColorAnti);
+  color: #000;
 
   margin-top: 0;
   margin-bottom: 20px;
@@ -486,7 +486,7 @@
 
 .reviewsHeading {
   @apply --marketplaceH3FontStyles;
-  color: var(--matterColorAnti);
+  color: #000;
 
   margin: 52px 0 20px 0;
 
@@ -513,7 +513,7 @@
 
 .yourHostHeading {
   @apply --marketplaceH3FontStyles;
-  color: var(--matterColorAnti);
+  color: #000;
 
   margin: 54px 0 23px 0;
 

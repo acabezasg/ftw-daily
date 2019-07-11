@@ -142,11 +142,14 @@ const TopbarDesktop = props => {
       </span>
     </NamedLink>
 
+    {/*
     <NamedLink className={css.createListingLink} name="HowItWorksPage">
       <span className={css.signup}>
         <FormattedMessage id="How it Works" />
       </span>
     </NamedLink>
+    </View>
+    */}
 
     <NamedLink className={css.createListingLink} name="SearchListingsPage">
       <span className={css.signup}>
@@ -154,17 +157,21 @@ const TopbarDesktop = props => {
       </span>
     </NamedLink>
 
+    {/*
     <NamedLink className={css.createListingLink} name="FaqPage">
       <span className={css.signup}>
         <FormattedMessage id="Faq" />
       </span>
     </NamedLink>
+    */}
     
+    {/*
     <NamedLink className={css.createListingLink} name="ContactPage">
       <span className={css.signup}>
         <FormattedMessage id="Contact" />
       </span>
     </NamedLink>
+    */}
 
       {inboxLink}
 

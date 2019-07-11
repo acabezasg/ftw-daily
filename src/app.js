@@ -91,6 +91,7 @@ export const ClientApp = props => {
   const { store } = props;
   setupLocale();
   return (
+
     <IntlProvider locale={config.locale} messages={localeMessages}>
       <Provider store={store}>
         <BrowserRouter>

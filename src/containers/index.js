@@ -1,3 +1,4 @@
+export { default as WhatWeDoPage } from './WhatWeDoPage/WhatWeDoPage';
 export { default as HowItWorksPage } from './HowItWorksPage/HowItWorksPage';
 export { default as ContactPage } from './ContactPage/ContactPage';
 export { default as AboutPage } from './AboutPage/AboutPage';
