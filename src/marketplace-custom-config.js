@@ -24,7 +24,7 @@ export const amenities = [{
     ],
 },
 {
-    key: 'rptiles',
+    key: 'rptile',
     label: 'Rptiles',
     weight: [{
             key: 'giant',
@@ -45,7 +45,7 @@ export const amenities = [{
     ],
 },
 {
-    key: 'farm_animals',
+    key: 'farm',
     label: 'Farm Animals',
     weight: [{
             key: 'giant',
@@ -66,7 +66,7 @@ export const amenities = [{
     ],
 },
 {
-    key: 'cats',
+    key: 'cat',
     label: 'Cats',
     weight: [{
             key: 'giant',
@@ -88,7 +88,7 @@ export const amenities = [{
 },
 
 {
-    key: 'rabbits',
+    key: 'rabbit',
     label: 'Rabbits',
     weight: [{
             key: 'giant',
@@ -110,7 +110,7 @@ export const amenities = [{
 },
 
 {
-    key: 'pet_birds',
+    key: 'bird',
     label: 'Pet Birds',
     weight: [{
             key: 'giant',
@@ -131,7 +131,7 @@ export const amenities = [{
     ],
 },
 {
-    key: 'aquarium_fish',
+    key: 'fish',
     label: 'Aquarium Fish',
     weight: [{
             key: 'giant',

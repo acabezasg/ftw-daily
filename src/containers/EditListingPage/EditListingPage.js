@@ -80,6 +80,7 @@ export class EditListingPageComponent extends Component {
     } = this.props;
   
     const { id, type } = params;
+    
     const isNewURI = type === LISTING_PAGE_PARAM_TYPE_NEW;
     const isDraftURI = type === LISTING_PAGE_PARAM_TYPE_DRAFT;
   

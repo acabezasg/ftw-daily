@@ -189,9 +189,9 @@ const EditListingWizardTab = props => {
       );
     }
     case HOME: {
-      const submitButtonTranslationKey = isNewListingFlow
-        ? 'EditListingWizard.saveNewFeatures'
-        : 'EditListingWizard.saveEditFeatures';
+      const submitButtonTranslationKey = isNewListingFlow 
+        ? 'EditListingWizard.saveNewHome'
+        : 'EditListingWizard.saveEditHome';
       return (
         <EditListingHomePanel
           {...panelProps(HOME)}
@@ -217,9 +217,22 @@ const EditListingWizardTab = props => {
       );
     }
     case LOCATION: {
-      const submitButtonTranslationKey = isNewListingFlow
-        ? 'EditListingWizard.saveNewLocation'
-        : 'EditListingWizard.saveEditLocation';
+      var submitButtonTranslationKey;
+      if(isNewListingFlow){
+        if(user_type){
+          submitButtonTranslationKey = 'EditListingWizard.saveNewLocation';
+        }else{
+          submitButtonTranslationKey = 'EditListingWizard.saveNewPricing';
+        }
+
+      }else{
+        if(user_type){
+          submitButtonTranslationKey = 'EditListingWizard.saveEditLocation';
+        }else{
+          submitButtonTranslationKey = 'EditListingWizard.saveEditPricing';
+        }
+      }
+      
       return (
         <EditListingLocationPanel
           {...panelProps(LOCATION)}

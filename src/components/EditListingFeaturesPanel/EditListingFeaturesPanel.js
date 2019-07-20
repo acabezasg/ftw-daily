@@ -21,7 +21,7 @@ const EditListingFeaturesPanel = props => {
     panelUpdated,
     updateInProgress,
     errors,
-    
+    user_type,
   } = props;
 
   const FEATURES_NAME = 'amenities';
@@ -42,7 +42,7 @@ const EditListingFeaturesPanel = props => {
 
   const amenities = publicData && publicData.amenities;
   const initialValues = { amenities };
-  console.log(initialValues);
+ 
   // state = {
   //   selected:[...initialValues]
   // }
@@ -59,7 +59,7 @@ const EditListingFeaturesPanel = props => {
         initialValues={{
           dog: publicData.dog,
           cat: publicData.cat,
-          reptile: publicData.reptile,
+          rptile: publicData.rptile,
           bird: publicData.bird,
           farm: publicData.farm,
           rabbit: publicData.rabbit,
@@ -73,7 +73,7 @@ const EditListingFeaturesPanel = props => {
             amenities = [],
             dog,
             cat,
-            reptile,
+            rptile,
             bird,
             farm,
             rabbit,
@@ -86,7 +86,7 @@ const EditListingFeaturesPanel = props => {
             { amenities,
               dog,
               cat,
-              reptile,
+              rptile,
               bird,
               farm,
               rabbit,
@@ -102,6 +102,7 @@ const EditListingFeaturesPanel = props => {
         updateInProgress={updateInProgress}
         fetchErrors={errors}
         categories={config.custom.amenities}
+        user_type ={ user_type}
         
       />
     </div>

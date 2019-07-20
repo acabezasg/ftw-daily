@@ -39,6 +39,7 @@ export const EditListingLocationFormComponent = props => (
         fetchErrors,
         values,
         listing,
+        user_type,
       } = fieldRenderProps;
 
       const titleRequiredMessage = intl.formatMessage({ id: 'EditListingLocationForm.address' });
@@ -110,12 +111,16 @@ export const EditListingLocationFormComponent = props => (
             label={buildingMessage}
             placeholder={buildingPlaceholderMessage}
           />
-          <FieldCurrencyInput
-            id="price"
-            name="price"
-            currencyConfig={config.currencyConfig}
-            className={css.hiden}
-          />
+          {
+            !user_type?(
+              <FieldCurrencyInput
+                id="price"
+                name="price"
+                currencyConfig={config.currencyConfig}
+                className={css.hiden}
+              />
+            ):null
+          }
           <SectionMapMaybe
             geolocation={geolocation}
             publicData={publicData}

@@ -20,6 +20,7 @@ const EditListingPoliciesPanel = props => {
     panelUpdated,
     updateInProgress,
     errors,
+    user_type,
   } = props;
 
   const classes = classNames(rootClassName || css.root, className);
@@ -57,6 +58,7 @@ const EditListingPoliciesPanel = props => {
         updated={panelUpdated}
         updateInProgress={updateInProgress}
         fetchErrors={errors}
+        user_type ={ user_type}
       />
     </div>
   );

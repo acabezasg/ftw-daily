@@ -24,6 +24,7 @@ const EditListingPricingPanel = props => {
     panelUpdated,
     updateInProgress,
     errors,
+    user_type,
   } = props;
 
   const classes = classNames(rootClassName || css.root, className);
@@ -51,6 +52,7 @@ const EditListingPricingPanel = props => {
       updated={panelUpdated}
       updateInProgress={updateInProgress}
       fetchErrors={errors}
+      user_type ={ user_type}
     />
   ) : (
     <div className={css.priceCurrencyInvalid}>

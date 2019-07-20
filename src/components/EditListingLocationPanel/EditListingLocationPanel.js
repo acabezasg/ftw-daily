@@ -57,11 +57,12 @@ class EditListingLocationPanel extends Component {
       panelUpdated,
       updateInProgress,
       errors,
+      user_type
     } = this.props;
 
     const classes = classNames(rootClassName || css.root, className);
     const currentListing = ensureOwnListing(listing);
-    console.log('currentListing',currentListing);
+  
     const isPublished =
       currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
     const panelTitle = isPublished ? (
@@ -108,6 +109,7 @@ class EditListingLocationPanel extends Component {
           updateInProgress={updateInProgress}
           fetchErrors={errors}
           listing={ listing }
+          user_type ={ user_type}
         />
       </div>
     );

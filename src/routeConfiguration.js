@@ -168,7 +168,7 @@ const routeConfiguration = () => {
       ),
     },
     {
-      path: '/l/new/owner',
+      path: '/l/new',
       name: 'NewListingPage-owner',
       auth: true,
       component: () => (
@@ -179,7 +179,7 @@ const routeConfiguration = () => {
       ),
     },
     {
-      path: '/l/new/sitter',
+      path: '/l/new',
       name: 'NewListingPage-sitter',
       auth: true,
       component: () => (
@@ -188,9 +188,9 @@ const routeConfiguration = () => {
           params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description_sitter' }}
         />
       ),
-    },
+    }, 
     {
-      path: '/l/new/service',
+      path: '/l/new',
       name: 'NewListingPage-service',
       auth: true,
       component: () => (
@@ -208,7 +208,7 @@ const routeConfiguration = () => {
       loadData: EditListingPage.loadData,
     },
     {
-      path: '/l/:slug/:id/:type/:tab/:category',
+      path: '/l/:slug/:id/:type/:tab',
       name: 'EditListingPage_category',
       auth: true,
       component: props => <EditListingPage {...props} />,
@@ -405,9 +405,9 @@ const routeConfiguration = () => {
 
 
     {
-      path: '/ordertype',
+      path: '/ordertype/:type',
       name: 'OrderTypesPage',
-      component: OrderTypesPage,
+      component: props => <OrderTypesPage {...props} />,
     },
   ];
 };

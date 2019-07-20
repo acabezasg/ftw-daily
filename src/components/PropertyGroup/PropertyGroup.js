@@ -60,29 +60,35 @@ const PropertyGroup = props => {
   // const get_size = (key) => {
   //   return 
   // }
-  
-  console.log('publicData',publicData);
   return publicData !== null && flag?(
     <ul className={listClasses}>
       
       {checked.map(option => {
-        console.log('option',option.key);
-
-        console.log("label",""+ option.label +" -> " );
         
         var weight="";
-        
-        size.forEach(function(e,i){
-          if(e.key == option.key){
-            weight = option.label;
-            return;
-          }
-        })
-        console.log('size',size,weight);
-        var weight_en = publicData[option.key]?publicData[option.key]:'';
+        var weight_en="";
+
+        if(String(option.label).toLowerCase() == "other"){
+          weight_en = publicData.other;
+        }else{
+          size.forEach(function(e,i){
+            if(String(e.key).toLowerCase() == String(publicData[option.key]).toLowerCase()){
+              weight = e.label;
+              console.log('size',size,weight);
+              weight_en = publicData[option.key]?publicData[option.key]:'';
+              return;
+            }
+          })
+         
+        }
+        console.log('option',option);
+        console.log( 'publicData',publicData);
+        console.log( 'size',size);
+        console.log( 'weight_en,weight',weight_en,weight);
         return (
-          <Item key={`${id}.${option.key}`} label={""+ option.label +' => '+ weight_en + ' ' + weight} isSelected={option.isSelected} />
+          <Item key={`${id}.${option.key}`} label={""+ option.label +' => '+ weight_en } isSelected={option.isSelected} />
         )
+
       })}
     </ul>
   )
