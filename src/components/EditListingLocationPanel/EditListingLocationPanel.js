@@ -6,8 +6,11 @@ import { LISTING_STATE_DRAFT } from '../../util/types';
 import { ensureOwnListing } from '../../util/data';
 import { ListingLink } from '../../components';
 import { EditListingLocationForm } from '../../forms';
-
+import config from '../../config';
 import css from './EditListingLocationPanel.css';
+import { types as sdkTypes } from '../../util/sdkLoader';
+const { Money } = sdkTypes;
+
 
 class EditListingLocationPanel extends Component {
   constructor(props) {
@@ -58,7 +61,7 @@ class EditListingLocationPanel extends Component {
 
     const classes = classNames(rootClassName || css.root, className);
     const currentListing = ensureOwnListing(listing);
-
+    console.log('currentListing',currentListing);
     const isPublished =
       currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
     const panelTitle = isPublished ? (
@@ -70,6 +73,8 @@ class EditListingLocationPanel extends Component {
       <FormattedMessage id="EditListingLocationPanel.createListingTitle" />
     );
 
+    const minPrice = new Money(config.listingMinimumPriceSubUnits, config.currency);
+
     return (
       <div className={classes}>
         <h1 className={css.title}>{panelTitle}</h1>
@@ -77,7 +82,7 @@ class EditListingLocationPanel extends Component {
           className={css.form}
           initialValues={this.state.initialValues}
           onSubmit={values => {
-            const { building = '', location } = values;
+            const { building = '', location, price = minPrice } = values;
             const {
               selectedPlace: { address, origin },
             } = location;
@@ -86,11 +91,13 @@ class EditListingLocationPanel extends Component {
               publicData: {
                 location: { address, building },
               },
+              price: price
             };
             this.setState({
               initialValues: {
                 building,
                 location: { search: address, selectedPlace: { address, origin } },
+                price: minPrice
               },
             });
             onSubmit(updateValues);

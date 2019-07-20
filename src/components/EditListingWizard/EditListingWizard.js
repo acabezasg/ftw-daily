@@ -37,7 +37,7 @@ export const TABS = [
   HOME,
   ...availabilityMaybe,
   LOCATION,
-  PRICING,
+  // PRICING,
   PHOTOS,
   POLICY,
 ];
@@ -206,11 +206,11 @@ class EditListingWizard extends Component {
       onPayoutDetailsFormChange,
       checkFlag,
       handleChange,
-      user_type,
       ...rest
     } = this.props;
-
-    const selectedTab = params.tab;
+    const tab_ary = params.tab.split('_');
+    const user_type=(tab_ary.length == 2)? tab_ary[1]:null;
+    const selectedTab = tab_ary[0];
     console.log('param',params);
     const {category} = params;
     const isNewListingFlow = [LISTING_PAGE_PARAM_TYPE_NEW, LISTING_PAGE_PARAM_TYPE_DRAFT].includes(
@@ -255,7 +255,7 @@ class EditListingWizard extends Component {
       <div className={classes}>
         <NamedLink name="OrderTypesPage">
           <SecondaryButton>    
-              Pet {category}
+              Pet {user_type}
           </SecondaryButton>
         </NamedLink>
         <Tabs

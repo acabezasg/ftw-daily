@@ -51,6 +51,7 @@ import SectionReviews from './SectionReviews';
 import SectionHostMaybe from './SectionHostMaybe';
 import SectionRulesMaybe from './SectionRulesMaybe';
 import SectionMapMaybe from './SectionMapMaybe';
+import SectionHomeMaybe from './SectionHomeMaybe';
 import css from './ListingPage.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
@@ -190,6 +191,8 @@ export class ListingPageComponent extends Component {
       fetchTimeSlotsError,
       categoriesConfig,
       amenitiesConfig,
+      equipmentsConfig,
+      locationsConfig,
     } = this.props;
 
     const listingId = new UUID(rawParams.id);
@@ -377,7 +380,7 @@ export class ListingPageComponent extends Component {
           <span className={css.separator}>•</span>
         </span>
       ) : null;
-
+    const size = config.custom.size;
     return (
       <Page
         title={schemaTitle}
@@ -427,7 +430,8 @@ export class ListingPageComponent extends Component {
                     onContactUser={this.onContactUser}
                   />
                   <SectionDescriptionMaybe description={description} />
-                  <SectionFeaturesMaybe options={amenitiesConfig} publicData={publicData} />
+                  <SectionFeaturesMaybe options={amenitiesConfig} publicData={publicData} size={size}/>
+                  <SectionHomeMaybe options={{options1:equipmentsConfig,options2:locationsConfig}} publicData={publicData} />
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}
@@ -486,6 +490,8 @@ ListingPageComponent.defaultProps = {
   sendEnquiryError: null,
   categoriesConfig: config.custom.categories,
   amenitiesConfig: config.custom.amenities,
+  equipmentsConfig: config.custom.equipments,
+  locationsConfig: config.custom.locations,
 };
 
 ListingPageComponent.propTypes = {

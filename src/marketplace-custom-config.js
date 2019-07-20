@@ -25,7 +25,7 @@ export const amenities = [{
 },
 {
     key: 'reptiles',
-    label: 'Rptiles',
+    label: 'Reptiles',
     weight: [{
             key: 'giant',
             label: '(101+ lbs)',

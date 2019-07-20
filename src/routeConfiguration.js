@@ -174,7 +174,7 @@ const routeConfiguration = () => {
       component: () => (
         <NamedRedirect
           name="EditListingPage_category"
-          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description', category:'owner' }}
+          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description_owner' }}
         />
       ),
     },
@@ -185,7 +185,7 @@ const routeConfiguration = () => {
       component: () => (
         <NamedRedirect
           name="EditListingPage_category"
-          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description', category:'sitter' }}
+          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description_sitter' }}
         />
       ),
     },
@@ -196,7 +196,7 @@ const routeConfiguration = () => {
       component: () => (
         <NamedRedirect
           name="EditListingPage_category"
-          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description', category:'service' }}
+          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description_service' }}
         />
       ),
     },

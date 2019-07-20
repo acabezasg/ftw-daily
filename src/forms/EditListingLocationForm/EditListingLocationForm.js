@@ -16,7 +16,9 @@ import {
   ensureUser,
   userDisplayNameAsString,
 } from '../../util/data';
-import { Form, LocationAutocompleteInputField, Button, FieldTextInput,GoogleMap } from '../../components';
+import config from '../../config';
+import { Form, LocationAutocompleteInputField, Button, FieldTextInput,GoogleMap ,FieldCurrencyInput} from '../../components';
+
 import SectionMapMaybe  from '../../containers/ListingPage/SectionMapMaybe';
 import css from './EditListingLocationForm.css';
 
@@ -107,6 +109,12 @@ export const EditListingLocationFormComponent = props => (
             id="building"
             label={buildingMessage}
             placeholder={buildingPlaceholderMessage}
+          />
+          <FieldCurrencyInput
+            id="price"
+            name="price"
+            currencyConfig={config.currencyConfig}
+            className={css.hiden}
           />
           <SectionMapMaybe
             geolocation={geolocation}
