@@ -52,19 +52,51 @@ const Item = props => {
 };
 
 const PropertyGroup = props => {
-  const { rootClassName, className, id, options, selectedOptions, twoColumns } = props;
+  const { rootClassName, className, id, options, selectedOptions, twoColumns,publicData, flag,size } = props;
   const classes = classNames(rootClassName || css.root, className);
   const listClasses = twoColumns ? classNames(classes, css.twoColumns) : classes;
 
   const checked = checkSelected(options, selectedOptions);
-
-  return (
+  // const get_size = (key) => {
+  //   return 
+  // }
+  
+  console.log('publicData',publicData);
+  return publicData !== null && flag?(
     <ul className={listClasses}>
-      {checked.map(option => (
-        <Item key={`${id}.${option.key}`} label={option.label} isSelected={option.isSelected} />
-      ))}
+      
+      {checked.map(option => {
+        console.log('option',option.key);
+
+        console.log("label",""+ option.label +" -> " );
+        
+        var weight="";
+        
+        size.forEach(function(e,i){
+          if(e.key == option.key){
+            weight = option.label;
+            return;
+          }
+        })
+        console.log('size',size,weight);
+        var weight_en = publicData[option.key]?publicData[option.key]:'';
+        return (
+          <Item key={`${id}.${option.key}`} label={""+ option.label +' => '+ weight_en + ' ' + weight} isSelected={option.isSelected} />
+        )
+      })}
     </ul>
-  );
+  )
+  :
+  (
+    <ul className={listClasses}>
+      {checked.map(option => {
+        console.log("loop",option.key,)
+        return (
+          <Item key={`${id}.${option.key}`} label={option.label} isSelected={option.isSelected} />
+        )
+      })}
+    </ul>
+  )
 };
 
 PropertyGroup.defaultProps = {

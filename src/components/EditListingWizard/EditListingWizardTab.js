@@ -98,7 +98,7 @@ const EditListingWizardTab = props => {
     updatedTab,
     updateInProgress,
     intl,
-    
+    user_type
   } = props;
 
   const { type } = params;
@@ -155,6 +155,7 @@ const EditListingWizardTab = props => {
       onChange,
       panelUpdated: updatedTab === tab,
       updateInProgress,
+      user_type,
     };
   };
 

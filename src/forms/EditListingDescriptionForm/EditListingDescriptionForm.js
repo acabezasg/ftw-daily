@@ -109,11 +109,14 @@ const EditListingDescriptionFormComponent = props => (
             validate={composeValidators(required(descriptionRequiredMessage))}
           />
 
-          {/* <CustomCategorySelectFieldMaybe
-            id="category"
-            name="category"
-            categories={categories}
-            intl={intl}
+          {/* <FieldTextInput
+            id="user_type"
+            name="user_type"
+            className={css.description}
+            type="text"
+            label=''
+            placeholder=''
+            
           /> */}
 
           <Button

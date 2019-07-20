@@ -315,7 +315,7 @@
   "EditListingWizard.saveNewPhotos": "Next: Verify",
   "EditListingWizard.saveNewPolicies": "Submit",
 
-  "EditListingWizard.tabLabelDescription": "Your Description",
+  "EditListingWizard.tabLabelDescription": "About You and Your Location",
   "EditListingWizard.tabLabelFeatures": "Your Pets ",
   "EditListingWizard.tabLabelHome": "Your Home",
   "EditListingWizard.tabLabelAvailability": "Your Availbility",
@@ -414,6 +414,8 @@
   "ListingCard.perUnit": "per unit",
   "ListingCard.unsupportedPrice": "({currency})",
   "ListingCard.unsupportedPriceTitle": "Unsupported currency ({currency})",
+
+  "ListingPage.homeTitle": "About your home",
   "ListingPage.bookingSubTitle": "Start by choosing your dates.",
   "ListingPage.bookingTitle": "Book {title}",
   "ListingPage.closedListing": "This listing has been closed and can't be booked.",
@@ -442,6 +444,8 @@
   "ListingPage.schemaTitle": "{title} - {price} | {siteTitle}",
   "ListingPage.viewImagesButton": "View photos ({count})",
   "ListingPage.yourHostHeading": "Personal informations",
+
+
   "LocationAutocompleteInput.currentLocation": "Current location",
   "LocationSearchForm.placeholder": "e.g Sitter, Owner…",
   "LoginForm.emailInvalid": "A valid email address is required",

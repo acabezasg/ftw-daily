@@ -302,7 +302,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[1]?(
+            {/* {this.state.checkFlag[1]?(
                 <CategoryField
                 id="reptile"
                 name="reptile"
@@ -405,7 +405,7 @@ export class EditListingFeaturesFormComponent extends Component {
                 categoryRequired={categoryOthersRequired}
               />
               ):null
-            }
+            } */}
          
   
 
