@@ -29,6 +29,7 @@ import {
   StyleguidePage,
   TermsOfServicePage,
   TransactionPage,
+  OrderTypesPage,
 } from './containers';
 
 
@@ -167,12 +168,53 @@ const routeConfiguration = () => {
       ),
     },
     {
+      path: '/l/new/owner',
+      name: 'NewListingPage-owner',
+      auth: true,
+      component: () => (
+        <NamedRedirect
+          name="EditListingPage_category"
+          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description', category:'owner' }}
+        />
+      ),
+    },
+    {
+      path: '/l/new/sitter',
+      name: 'NewListingPage-sitter',
+      auth: true,
+      component: () => (
+        <NamedRedirect
+          name="EditListingPage_category"
+          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description', category:'sitter' }}
+        />
+      ),
+    },
+    {
+      path: '/l/new/service',
+      name: 'NewListingPage-service',
+      auth: true,
+      component: () => (
+        <NamedRedirect
+          name="EditListingPage_category"
+          params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description', category:'service' }}
+        />
+      ),
+    },
+    {
       path: '/l/:slug/:id/:type/:tab',
       name: 'EditListingPage',
       auth: true,
       component: props => <EditListingPage {...props} />,
       loadData: EditListingPage.loadData,
     },
+    {
+      path: '/l/:slug/:id/:type/:tab/:category',
+      name: 'EditListingPage_category',
+      auth: true,
+      component: props => <EditListingPage {...props} />,
+      loadData: EditListingPage.loadData,
+    },
+   
 
     // Canonical path should be after the `/l/new` path since they
     // conflict and `new` is not a valid listing UUID.
@@ -359,6 +401,13 @@ const routeConfiguration = () => {
       authPage: 'LoginPage',
       component: props => <EmailVerificationPage {...props} />,
       loadData: EmailVerificationPage.loadData,
+    },
+
+
+    {
+      path: '/ordertype',
+      name: 'OrderTypesPage',
+      component: OrderTypesPage,
     },
   ];
 };

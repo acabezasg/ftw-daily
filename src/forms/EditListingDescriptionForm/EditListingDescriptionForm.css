@@ -52,6 +52,9 @@
 .category {
   @apply --EditListingDescriptionForm_formMargins;
 }
+.hiden {
+  display: none;
+}
 
 .submitButton {
   margin-top: auto;

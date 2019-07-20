@@ -2,12 +2,13 @@ import React from 'react';
 import { arrayOf, bool, func, shape, string } from 'prop-types';
 import { compose } from 'redux';
 import { Form as FinalForm } from 'react-final-form';
+
 import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { maxLength, required, composeValidators } from '../../util/validators';
 import { Form, Button, FieldTextInput } from '../../components';
-import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
+// import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
 
@@ -108,12 +109,12 @@ const EditListingDescriptionFormComponent = props => (
             validate={composeValidators(required(descriptionRequiredMessage))}
           />
 
-          <CustomCategorySelectFieldMaybe
+          {/* <CustomCategorySelectFieldMaybe
             id="category"
             name="category"
             categories={categories}
             intl={intl}
-          />
+          /> */}
 
           <Button
             className={css.submitButton}
@@ -130,7 +131,10 @@ const EditListingDescriptionFormComponent = props => (
   />
 );
 
-EditListingDescriptionFormComponent.defaultProps = { className: null, fetchErrors: null };
+EditListingDescriptionFormComponent.defaultProps = {
+  className: null,
+  fetchErrors: null
+};
 
 EditListingDescriptionFormComponent.propTypes = {
   className: string,

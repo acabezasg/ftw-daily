@@ -6,7 +6,7 @@ import { ensureOwnListing } from '../../util/data';
 import { LISTING_STATE_DRAFT } from '../../util/types';
 import { ListingLink } from '../../components';
 import { EditListingAvailabilityForm } from '../../forms';
-
+import config from '../../config';
 import css from './EditListingAvailabilityPanel.css';
 
 const EditListingAvailabilityPanel = props => {
@@ -22,7 +22,8 @@ const EditListingAvailabilityPanel = props => {
     updateInProgress,
     errors,
   } = props;
-
+  const EQUIPMENTS_NAME = 'equipments';
+  const LOCATIONS_NAME = 'locations';
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
@@ -70,6 +71,10 @@ const EditListingAvailabilityPanel = props => {
         updated={panelUpdated}
         updateError={errors.updateListingError}
         updateInProgress={updateInProgress}
+        name_equipment = {EQUIPMENTS_NAME}
+        name_location = {LOCATIONS_NAME}
+        equipments={config.custom.equipments}
+        locations={config.custom.locations}
       />
     </div>
   );

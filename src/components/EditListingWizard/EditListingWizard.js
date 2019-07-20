@@ -12,7 +12,7 @@ import {
 } from '../../util/urlHelpers';
 import { ensureListing, ensureCurrentUser } from '../../util/data';
 import { PayoutDetailsForm } from '../../forms';
-import { Modal, NamedRedirect, Tabs } from '../../components';
+import { Modal, NamedRedirect, NamedLink,Tabs, SecondaryButton } from '../../components';
 
 import EditListingWizardTab, {
   AVAILABILITY,
@@ -22,6 +22,7 @@ import EditListingWizardTab, {
   LOCATION,
   PRICING,
   PHOTOS,
+  HOME,
 } from './EditListingWizardTab';
 import css from './EditListingWizard.css';
 
@@ -33,11 +34,12 @@ const availabilityMaybe = config.enableAvailability ? [AVAILABILITY] : [];
 export const TABS = [
   DESCRIPTION,
   FEATURES,
-  POLICY,
+  HOME,
+  ...availabilityMaybe,
   LOCATION,
   PRICING,
-  ...availabilityMaybe,
   PHOTOS,
+  POLICY,
 ];
 
 // Tabs are horizontal in small screens
@@ -59,7 +61,10 @@ const tabLabel = (intl, tab) => {
     key = 'EditListingWizard.tabLabelAvailability';
   } else if (tab === PHOTOS) {
     key = 'EditListingWizard.tabLabelPhotos';
+  } else if (tab === HOME) {
+    key = 'EditListingWizard.tabLabelHome';
   }
+  
 
   return intl.formatMessage({ id: key });
 };
@@ -197,10 +202,15 @@ class EditListingWizard extends Component {
       fetchInProgress,
       onManageDisableScrolling,
       onPayoutDetailsFormChange,
+      checkFlag,
+      handleChange,
+      user_type,
       ...rest
     } = this.props;
 
     const selectedTab = params.tab;
+    console.log('param',params);
+    const {category} = params;
     const isNewListingFlow = [LISTING_PAGE_PARAM_TYPE_NEW, LISTING_PAGE_PARAM_TYPE_DRAFT].includes(
       params.type
     );
@@ -241,6 +251,11 @@ class EditListingWizard extends Component {
 
     return (
       <div className={classes}>
+        <NamedLink name="OrderTypesPage">
+          <SecondaryButton>    
+              Pet {category}
+          </SecondaryButton>
+        </NamedLink>
         <Tabs
           rootClassName={css.tabsContainer}
           navRootClassName={css.nav}
@@ -265,6 +280,7 @@ class EditListingWizard extends Component {
                 handleCreateFlowTabScrolling={this.handleCreateFlowTabScrolling}
                 handlePublishListing={this.handlePublishListing}
                 fetchInProgress={fetchInProgress}
+                user_type = {user_type}
               />
             );
           })}
@@ -349,6 +365,8 @@ EditListingWizard.propTypes = {
 
   // from injectIntl
   intl: intlShape.isRequired,
+
+  
 };
 
 export default compose(

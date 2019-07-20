@@ -10,8 +10,14 @@ import {
   autocompletePlaceSelected,
   composeValidators,
 } from '../../util/validators';
-import { Form, LocationAutocompleteInputField, Button, FieldTextInput } from '../../components';
-
+import {
+  ensureListing,
+  ensureOwnListing,
+  ensureUser,
+  userDisplayNameAsString,
+} from '../../util/data';
+import { Form, LocationAutocompleteInputField, Button, FieldTextInput,GoogleMap } from '../../components';
+import SectionMapMaybe  from '../../containers/ListingPage/SectionMapMaybe';
 import css from './EditListingLocationForm.css';
 
 export const EditListingLocationFormComponent = props => (
@@ -30,6 +36,7 @@ export const EditListingLocationFormComponent = props => (
         updateInProgress,
         fetchErrors,
         values,
+        listing,
       } = fieldRenderProps;
 
       const titleRequiredMessage = intl.formatMessage({ id: 'EditListingLocationForm.address' });
@@ -65,7 +72,11 @@ export const EditListingLocationFormComponent = props => (
       const submitReady = updated && pristine;
       const submitInProgress = updateInProgress;
       const submitDisabled = invalid || disabled || submitInProgress;
-
+      
+      
+      const currentListing = ensureOwnListing(listing);
+      const { geolocation, publicData } = currentListing.attributes;
+      
       return (
         <Form className={classes} onSubmit={handleSubmit}>
           {errorMessage}
@@ -97,7 +108,11 @@ export const EditListingLocationFormComponent = props => (
             label={buildingMessage}
             placeholder={buildingPlaceholderMessage}
           />
-
+          <SectionMapMaybe
+            geolocation={geolocation}
+            publicData={publicData}
+            listingId={currentListing.id}
+          />
           <Button
             className={css.submitButton}
             type="submit"

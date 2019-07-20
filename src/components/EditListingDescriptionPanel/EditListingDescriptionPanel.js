@@ -7,7 +7,6 @@ import { ListingLink } from '../../components';
 import { LISTING_STATE_DRAFT } from '../../util/types';
 import { EditListingDescriptionForm } from '../../forms';
 import config from '../../config';
-
 import css from './EditListingDescriptionPanel.css';
 
 const EditListingDescriptionPanel = props => {
