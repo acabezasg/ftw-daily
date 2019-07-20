@@ -5,6 +5,7 @@ import { Form as FinalForm } from 'react-final-form';
 import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
+import { maxLength, required, composeValidators } from '../../util/validators';
 import { Form, Button, FieldTextInput } from '../../components';
 
 import css from './EditListingPoliciesForm.css';
@@ -38,7 +39,7 @@ export const EditListingPoliciesFormComponent = props => (
       const maxLengthMessage = intl.formatMessage(
         { id: 'EditListingPoliciesForm.maxLength' },
         {
-          maxLength: RULES_MAX_LENGTH,
+          maxLength: RULES_MAX_LENGTH, 
         }
       );
       const maxLength60Message = maxLength(maxLengthMessage, RULES_MAX_LENGTH);
