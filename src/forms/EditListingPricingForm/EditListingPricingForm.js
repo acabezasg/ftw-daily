@@ -5,7 +5,7 @@ import { Form as FinalForm } from 'react-final-form';
 import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import config from '../../config';
-import { LINE_ITEM_NIGHT, LINE_ITEM_DAY, propTypes } from '../../util/types';
+import { LINE_ITEM_NIGHT, LINE_ITEM_DAY,LINE_ITEM_HOUR, propTypes } from '../../util/types';
 import * as validators from '../../util/validators';
 import { formatMoney } from '../../util/currency';
 import { types as sdkTypes } from '../../util/sdkLoader';
@@ -34,8 +34,11 @@ export const EditListingPricingFormComponent = props => (
       const unitType = config.bookingUnitType;
       const isNightly = unitType === LINE_ITEM_NIGHT;
       const isDaily = unitType === LINE_ITEM_DAY;
+      const isHourly = unitType === LINE_ITEM_HOUR;
 
-      const translationKey = isNightly
+      const translationKey = isHourly
+        ? 'EditListingPricingForm.pricePerHour'
+        : isNightly
         ? 'EditListingPricingForm.pricePerNight'
         : isDaily
         ? 'EditListingPricingForm.pricePerDay'
@@ -98,6 +101,62 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
+
+          {/* <FieldCurrencyInput
+            id="hprice"
+            name="hprice"
+            className={css.priceInput}
+            autoFocus
+            label={pricePerUnitMessage}
+            placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          />
+
+          <FieldCurrencyInput
+            id="dprice"
+            name="dprice"
+            className={css.priceInput}
+            autoFocus
+            label={pricePerUnitMessage}
+            placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          />
+
+          <FieldCurrencyInput
+            id="nprice"
+            name="nprice"
+            className={css.priceInput}
+            autoFocus
+            label={pricePerUnitMessage}
+            placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          />
+
+          <FieldCurrencyInput
+            id="wprice"
+            name="wprice"
+            className={css.priceInput}
+            autoFocus
+            label={pricePerUnitMessage}
+            placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          />
+
+          <FieldCurrencyInput
+            id="mprice"
+            name="mprice"
+            className={css.priceInput}
+            autoFocus
+            label={pricePerUnitMessage}
+            placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          /> */}
+
 
           <Button
             className={css.submitButton}

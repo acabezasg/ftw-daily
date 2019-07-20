@@ -56,8 +56,8 @@ export const EditListingPoliciesFormComponent = props => (
           {errorMessageShowListing}
 
           <FieldTextInput
-            id="rules"
-            name="rules"
+            id="identify"
+            name="identify"
             className={css.policy}
             type="textarea"
             label={rulesLabelMessage}

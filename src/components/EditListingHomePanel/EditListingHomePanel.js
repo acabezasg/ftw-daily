@@ -17,7 +17,7 @@ const EditListingHomePanel = props => {
     onSubmit,
     onChange,
     submitButtonText,
-    panelUpdated,
+    panelUpdated, 
     updateInProgress,
     errors,
   } = props;
@@ -38,8 +38,8 @@ const EditListingHomePanel = props => {
     <FormattedMessage id="EditListingHomePanel.createListingTitle" />
   );
 
-  const amenities = publicData && publicData.amenities;
-  const initialValues = { amenities };
+  const {locations,equipments} = publicData;
+  const initialValues = { locations,equipments };
   console.log(initialValues);
   // state = {
   //   selected:[...initialValues]
@@ -53,12 +53,26 @@ const EditListingHomePanel = props => {
       <EditListingHomeForm
         className={css.form}
         name={FEATURES_NAME}
-        initialValues={{ amenities: publicData.amenities }}
+        initialValues={{ 
+          locations: publicData.locations,
+          equipments: publicData.equipments,
+          bedroom:publicData.bedroom,
+          bathroom:publicData.bathroom,
+        }} 
         onSubmit={values => {
-          const { amenities = [],category } = values;
+          const { 
+            locations = [],
+            equipments = [],
+            bedroom,
+            bathroom, 
+          } = values;
 
           const updatedValues = {
-            publicData: { amenities,category },
+            publicData: { 
+              locations,
+              equipments,
+              bedroom,
+              bathroom },
           };
           onSubmit(updatedValues);
         }}
@@ -69,8 +83,8 @@ const EditListingHomePanel = props => {
         fetchErrors={errors}
         locations={config.custom.locations}
         equipments={config.custom.equipments}
-        name_equipment="Equipment"
-        name_location="Location"
+        name_equipments="equipments"
+        name_locations="locations"
         
       />
     </div>

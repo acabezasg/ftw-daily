@@ -257,6 +257,7 @@
   "EditListingPricingForm.pricePerDay": "Price per day in euros",
   "EditListingPricingForm.pricePerNight": "Price per hour in euros",
   "EditListingPricingForm.pricePerUnit": "Price per unit in euros",
+  "EditListingPricingForm.pricePerHour": "Price per hour in euros",
   "EditListingPricingForm.priceRequired": "You need to add a valid price.",
   "EditListingPricingForm.priceTooLow": "Price should be at least {minPrice}.",
   "EditListingPricingForm.showListingFailed": "Fetching listing data failed",
@@ -276,18 +277,20 @@
   "EditListingWizard.saveNewFeatures": "Next: Home",
   "EditListingWizard.saveNewLocation": "Next: Photo",
   "EditListingWizard.saveNewAvailability": "Next: Location",
+  
+  
+  "EditListingWizard.saveNewPricing": "Next: Availability",
   "EditListingWizard.saveNewPhotos": "Publish Verify",
   "EditListingWizard.saveNewPolicies": "Submit",
-  "EditListingWizard.saveNewPricing": "Next: Availability",
 
-  "EditListingWizard.tabLabelDescription": "Pet Owner",
+  "EditListingWizard.tabLabelDescription": "Your Description",
   "EditListingWizard.tabLabelFeatures": "Your Pets ",
   "EditListingWizard.tabLabelHome": "Your Home",
   "EditListingWizard.tabLabelAvailability": "Your Availbility",
   "EditListingWizard.tabLabelLocation": "Your Location",
   "EditListingWizard.tabLabelPhotos": "Your Photos",
   "EditListingWizard.tabLabelPolicy": "ID Verification",
-  "EditListingWizard.tabLabelPricing": "Pricing",
+  "EditListingWizard.tabLabelPricing": "Your Price",
 
   "EmailVerificationForm.finishAccountSetup": "We will need to send you email notifications. To allow this, please verify your email address {email}.",
   "EmailVerificationForm.successButtonText": "Continue exploring",

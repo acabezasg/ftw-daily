@@ -34,8 +34,8 @@ export class EditListingHomeFormComponent extends Component {
             listingId,
             locations,
             equipments,
-            name_equipment,
-            name_location,
+            name_equipments,
+            name_locations,
           } = fieldRenderProps;
 
           const errorMessage = updateError ? (
@@ -118,23 +118,23 @@ export class EditListingHomeFormComponent extends Component {
               <h3>{homeTitle}</h3>
               <FieldCheckboxGroup
                 className={css_des.features}
-                id={name_equipment}
-                name={name_equipment}
+                id={name_equipments}
+                name={name_equipments}
                 options={equipments}
 
               />
               <br></br>
               <FieldCheckboxGroup
                 className={css_des.features}
-                id={name_location}
-                name={name_location}
+                id={name_locations}
+                name={name_locations}
                 options={locations}
 
               />
               <br></br>
               <CategoryField
                 id="bedroom"
-                name="Bedroom"
+                name="bedroom"
                 className={css.category}
                 categories={number}
                 intl={intl}
@@ -145,7 +145,7 @@ export class EditListingHomeFormComponent extends Component {
 
               <CategoryField
                 id="bathroom"
-                name="Bathroom"
+                name="bathroom"
                 className={css.category}
                 categories={number}
                 intl={intl}

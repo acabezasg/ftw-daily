@@ -56,12 +56,43 @@ const EditListingFeaturesPanel = props => {
         
         className={css.form}
         name={FEATURES_NAME}
-        initialValues={{ amenities: publicData.amenities }}
+        initialValues={{
+          dog: publicData.dog,
+          cat: publicData.cat,
+          reptile: publicData.reptile,
+          bird: publicData.bird,
+          farm: publicData.farm,
+          rabbit: publicData.rabbit,
+          fish: publicData.fish,
+          other: publicData.other,
+          horse: publicData.horse,
+          amenities: publicData.amenities 
+        }}
         onSubmit={values => {
-          const { amenities = [],category } = values;
+          const { 
+            amenities = [],
+            dog,
+            cat,
+            reptile,
+            bird,
+            farm,
+            rabbit,
+            fish,
+            horse,
+            other } = values;
 
           const updatedValues = {
-            publicData: { amenities,category },
+            publicData: 
+            { amenities,
+              dog,
+              cat,
+              reptile,
+              bird,
+              farm,
+              rabbit,
+              fish,
+              horse,
+              other },
           };
           onSubmit(updatedValues);
         }}

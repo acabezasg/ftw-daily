@@ -38,8 +38,11 @@ export class EditListingFeaturesFormComponent extends Component {
       'other':8,
     }
     var ary = Array(9).fill(false);
+    var pet_ary = props.initialValues.amenities;
     console.log('initial',props.initialValues);
-    this.init(ary,props.initialValues.amenities,key_ary);
+    if(pet_ary !== null){
+      this.init(ary,pet_ary,key_ary);
+    }
     this.state = {
       checkFlag: ary,
       runFlag: true,
@@ -62,7 +65,7 @@ export class EditListingFeaturesFormComponent extends Component {
   }
   
   init(data,pet_ary,key_ary){
-    if(pet_ary.length){
+    if(pet_ary && pet_ary.length){
       pet_ary.forEach(function(f,i){
         data[key_ary[f]] = !data[key_ary[f]]; 
       })
@@ -289,7 +292,7 @@ export class EditListingFeaturesFormComponent extends Component {
           {this.state.checkFlag[0]?(
                 <CategoryField
                 id="dog"
-                name="Dogs"
+                name="dog"
                 className={css.category}
                 categories={categories[0].weight}
                 intl={intl}
@@ -302,7 +305,7 @@ export class EditListingFeaturesFormComponent extends Component {
             {this.state.checkFlag[1]?(
                 <CategoryField
                 id="reptile"
-                name="Reptiles"
+                name="reptile"
                 className={css.category}
                 categories={categories[1].weight}
                 intl={intl}
@@ -314,8 +317,8 @@ export class EditListingFeaturesFormComponent extends Component {
             }
             {this.state.checkFlag[2]?(
                 <CategoryField
-                id="cats"
-                name="Cats"
+                id="cat"
+                name="cat"
                 className={css.category}
                 categories={categories[2].weight}
                 intl={intl}
@@ -327,8 +330,8 @@ export class EditListingFeaturesFormComponent extends Component {
             }
             {this.state.checkFlag[3]?(
                 <CategoryField
-                id="farm_animals"
-                name="FarmAnimals"
+                id="farm"
+                name="farm"
                 className={css.category}
                 categories={categories[3].weight}
                 intl={intl}
@@ -340,8 +343,8 @@ export class EditListingFeaturesFormComponent extends Component {
             }
             {this.state.checkFlag[4]?(
                 <CategoryField
-                id="rabbits"
-                name="Rabbits"
+                id="rabbit"
+                name="rabbit"
                 className={css.category}
                 categories={categories[4].weight}
                 intl={intl}
@@ -353,8 +356,8 @@ export class EditListingFeaturesFormComponent extends Component {
             }
             {this.state.checkFlag[5]?(
                 <CategoryField
-                id="pet_birds"
-                name="PetBirds"
+                id="bird"
+                name="bird"
                 className={css.category}
                 categories={categories[5].weight}
                 intl={intl}
@@ -366,8 +369,8 @@ export class EditListingFeaturesFormComponent extends Component {
             }
             {this.state.checkFlag[6]?(
                 <CategoryField
-                id="auarium_fish"
-                name="Aquarium Fish"
+                id="fish"
+                name="fish"
                 className={css.category}
                 categories={categories[6].weight}
                 intl={intl}
@@ -380,7 +383,7 @@ export class EditListingFeaturesFormComponent extends Component {
             {this.state.checkFlag[7]?(
                 <CategoryField
                 id="horse"
-                name="Horse"
+                name="horse"
                 className={css.category}
                 categories={categories[7].weight}
                 intl={intl}
@@ -392,8 +395,8 @@ export class EditListingFeaturesFormComponent extends Component {
             }
             {this.state.checkFlag[8]?(
                 <CategoryField
-                id="others"
-                name="Others"
+                id="other"
+                name="other"
                 className={css.category}
                 categories={categories[8].weight}
                 intl={intl}
