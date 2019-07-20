@@ -150,7 +150,7 @@
   "EditListingDescriptionForm.titleRequired": "You need to add a name.",
   "EditListingDescriptionForm.updateFailed": "Failed to update listing. Please try again.",
 
-  "EditListingDescriptionPanel.createListingTitle": "About you and your feeling",
+  "EditListingDescriptionPanel.createListingTitle": "About You and Your Pets",
   "EditListingDescriptionPanel.title": "Edit descripttion of {listingTitle}",
 
 
@@ -173,9 +173,9 @@
   "EditListingFeaturesForm.category.cat.placeholder": "Choose the size of your cat",
   "EditListingFeaturesForm.category.cat.required": "You need to select a category for your cat.",
 
-  "EditListingFeaturesForm.category.reptiles.label": "Reptiles Size",
-  "EditListingFeaturesForm.category.reptiles.placeholder": "Choose the size of your reptiles",
-  "EditListingFeaturesForm.category.reptiles.required": "You need to select a category for your reptiles.",
+  "EditListingFeaturesForm.category.reptiles.label": "Rptiles Size",
+  "EditListingFeaturesForm.category.reptiles.placeholder": "Choose the size of your rptiles",
+  "EditListingFeaturesForm.category.reptiles.required": "You need to select a category for your rptiles.",
 
   "EditListingFeaturesForm.category.horse.label": "Horse Size",
   "EditListingFeaturesForm.category.horse.placeholder": "Choose the size of your horse",
