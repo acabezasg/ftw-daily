@@ -136,23 +136,6 @@
   "DateInput.defaultPlaceholder": "Date input",
   "DateInput.screenReaderInputMessage": "Date input",
 
-  "EditListingHomeForm.category.bedroom.label": "Number of Bedrooms",
-  "EditListingHomeForm.category.bathroom.label": "Number of Bathrooms",
-  "EditListingHomeForm.category.bedroom.placeholder": "Drop down list to choose number",
-  "EditListingHomeForm.category.bathroom.placeholder": "Drop down list to choose number",
-  "EditListingHomeForm.category.bedroom.required": "Please input umber of badrooms",
-  "EditListingHomeForm.category.bathroom.required": "Please input umber of bathrooms",
-  "EditListingHomeForm.homeTitle": "Please select all that apply",
-  "EditListingHomeForm.title": "Please select all that apply",
-
-  "EditListingAvailabilityForm.fetchMonthDataFailed": "Oops, couldn't load data for {month}, please try again.",
-  "EditListingAvailabilityForm.availableDay": "Available",
-  "EditListingAvailabilityForm.blockedDay": "Not available",
-  "EditListingAvailabilityForm.bookedDay": "Booked",
-  "EditListingAvailabilityForm.updateFailed": "Failed to update listing. Please try again.",
-  "EditListingAvailabilityPanel.title": "Edit the availability of {listingTitle}",
-  "EditListingAvailabilityPanel.createListingTitle": "When is it available?",
-
   "EditListingDescriptionForm.categoryLabel": "Sauna type",
   "EditListingDescriptionForm.categoryPlaceholder": "Choose the type of your sauna…",
   "EditListingDescriptionForm.categoryRequired": "You need to select a category for your sauna.",
@@ -166,8 +149,15 @@
   "EditListingDescriptionForm.titlePlaceholder": "2 lovely dogs Sammy and Cleo in Manhattan?",
   "EditListingDescriptionForm.titleRequired": "You need to add a name.",
   "EditListingDescriptionForm.updateFailed": "Failed to update listing. Please try again.",
-  "EditListingDescriptionPanel.createListingTitle": "About you and your pets",
-  "EditListingDescriptionPanel.title": "Edit details of {listingTitle}",
+
+  "EditListingDescriptionPanel.createListingTitle": "About you and your feeling",
+  "EditListingDescriptionPanel.title": "Edit descripttion of {listingTitle}",
+
+
+
+
+  
+  
 
   "EditListingFeaturesForm.homeTitle": "Your Pets – Please select all applicable ",
 
@@ -213,8 +203,34 @@
 
   "EditListingFeaturesForm.showListingFailed": "Fetching listing data failed",
   "EditListingFeaturesForm.updateFailed": "Failed to update listing. Please try again.",
-  "EditListingFeaturesPanel.createListingTitle": "What amenities does your sauna have?",
-  "EditListingFeaturesPanel.title": "Edit the amenities of {listingTitle}",
+
+  "EditListingFeaturesPanel.createListingTitle": "What animals do you have?",
+  "EditListingFeaturesPanel.title": "Edit the pets of {listingTitle}",
+
+
+
+  "EditListingHomeForm.category.bedroom.label": "Number of Bedrooms",
+  "EditListingHomeForm.category.bathroom.label": "Number of Bathrooms",
+  "EditListingHomeForm.category.bedroom.placeholder": "Drop down list to choose number",
+  "EditListingHomeForm.category.bathroom.placeholder": "Drop down list to choose number",
+  "EditListingHomeForm.category.bedroom.required": "Please input umber of badrooms",
+  "EditListingHomeForm.category.bathroom.required": "Please input umber of bathrooms",
+  "EditListingHomeForm.homeTitle": "Please select all that apply",
+  "EditListingHomeForm.title": "Please select all that apply",
+
+  "EditListingHomePanel.createListingTitle": "About your home and your surrounding",
+  "EditListingHomePanel.title": "Edit home of {listingTitle}",
+
+
+  "EditListingAvailabilityForm.fetchMonthDataFailed": "Oops, couldn't load data for {month}, please try again.",
+  "EditListingAvailabilityForm.availableDay": "Available",
+  "EditListingAvailabilityForm.blockedDay": "Not available",
+  "EditListingAvailabilityForm.bookedDay": "Booked",
+  "EditListingAvailabilityForm.updateFailed": "Failed to update listing. Please try again.",
+
+  "EditListingAvailabilityPanel.title": "Edit the availability of {listingTitle}",
+  "EditListingAvailabilityPanel.createListingTitle": "When is it available?",
+
 
   "EditListingLocationForm.address": "Please enter your Town or Village",
   "EditListingLocationForm.addressNotRecognized": "We didn't recognize this location. Please try another location.",
@@ -224,12 +240,14 @@
   "EditListingLocationForm.buildingPlaceholder": "A 42",
   "EditListingLocationForm.showListingFailed": "Fetching listing data failed",
   "EditListingLocationForm.updateFailed": "Failed to update listing. Please try again.",
-  "EditListingLocationPanel.createListingTitle": "Where's your sauna?",
+
+  "EditListingLocationPanel.createListingTitle": "Where's your home?",
   "EditListingLocationPanel.title": "Edit the location of {listingTitle}",
 
   "EditListingPage.loadingListingData": "Loading listing data…",
   "EditListingPage.titleCreateListing": "Create a listing",
   "EditListingPage.titleEditListing": "Edit listing",
+
   "EditListingPhotosForm.addImagesTip": "Tip :Please upload your Photographs to be used alongside your listing. We recommend at least 4 photos which include your pets and home",
   "EditListingPhotosForm.bankAccountNumberRequired": "You need to add a bank account number.",
   "EditListingPhotosForm.chooseImage": "+ Choose an image…",
@@ -241,18 +259,13 @@
   "EditListingPhotosForm.savedImageAltText": "Saved listing image",
   "EditListingPhotosForm.showListingFailed": "Fetching listing data failed",
   "EditListingPhotosForm.updateFailed": "Failed to update listing. Please try again.",
+
   "EditListingPhotosPanel.createListingTitle": "Add a few photos",
   "EditListingPhotosPanel.payoutModalInfo": "Since this was the first listing you created, we need to know bit more about you in order to send you money. We only ask these once.",
   "EditListingPhotosPanel.payoutModalTitleOneMoreThing": "One more thing:",
   "EditListingPhotosPanel.payoutModalTitlePayoutPreferences": "Payout preferences",
   "EditListingPhotosPanel.title": "Edit the photos of {listingTitle}",
-  "EditListingPoliciesForm.rulesLabel": "ID Verification",
-  "EditListingPoliciesForm.rulesLabelSmall": "All Trust My Pet Sitter Owners and Sitters are ID verified.  It only takes a few minutes and helps keep all members of our community safe.",
-  "EditListingPoliciesForm.rulesPlaceholder": "Take to YOTI",
-  "EditListingPoliciesForm.showListingFailed": "Fetching listing data failed",
-  "EditListingPoliciesForm.updateFailed": "Failed to update listing. Please try again.",
-  "EditListingPoliciesPanel.createListingTitle": "Time to set some ground rules for the bathers.",
-  "EditListingPoliciesPanel.title": "Edit the rules of {listingTitle}",
+
   "EditListingPricingForm.priceInputPlaceholder": "Choose your price…",
   "EditListingPricingForm.pricePerDay": "Price per day in euros",
   "EditListingPricingForm.pricePerNight": "Price per hour in euros",
@@ -266,21 +279,40 @@
   "EditListingPricingPanel.listingPriceCurrencyInvalid": "Listing currency is different from the marketplace currency. You cannot edit the price.",
   "EditListingPricingPanel.title": "Edit the pricing of {listingTitle}",
 
-  "EditListingWizard.saveEditDescription": "Save description",
+
+
+  "EditListingPoliciesForm.rulesLabel": "ID Verification",
+  "EditListingPoliciesForm.rulesLabelSmall": "All Trust My Pet Sitter Owners and Sitters are ID verified.  It only takes a few minutes and helps keep all members of our community safe.",
+  "EditListingPoliciesForm.rulesPlaceholder": "Take to YOTI",
+  "EditListingPoliciesForm.showListingFailed": "Fetching listing data failed",
+  "EditListingPoliciesForm.updateFailed": "Failed to update listing. Please try again.",
+  "EditListingPoliciesForm.maxLength": "Must be {maxLength} characters or less",
+  "EditListingPoliciesForm.rulesRequired": "You need to add an ID.",
+
+  "EditListingPoliciesPanel.createListingTitle": "Time to verify your ID.",
+  "EditListingPoliciesPanel.title": "Edit the ID verification of {listingTitle}",
+
+  
+
+
+
+  "EditListingWizard.saveEditDescription": "Save Description",
   "EditListingWizard.saveEditFeatures": "Save Pet Types",
-  "EditListingWizard.saveEditLocation": "Save location",
-  "EditListingWizard.saveEditAvailability": "Save home",
-  "EditListingWizard.saveEditPhotos": "Save photos",
-  "EditListingWizard.saveEditPolicies": "Verify",
-  "EditListingWizard.saveEditPricing": "Save pricing",
+  "EditListingWizard.saveEditHome": "Save Home",
+  "EditListingWizard.saveEditAvailability": "Save Availability",
+  "EditListingWizard.saveEditLocation": "Save Location",
+  "EditListingWizard.saveEditPricing": "Save Price",
+  "EditListingWizard.saveEditPhotos": "Save Photos",
+  "EditListingWizard.saveEditPolicies": "Save Verify",
+  
+
   "EditListingWizard.saveNewDescription": "Next: Pet Types",
   "EditListingWizard.saveNewFeatures": "Next: Home",
-  "EditListingWizard.saveNewLocation": "Next: Photo",
+  "EditListingWizard.saveNewHome": "Next: Availability",
   "EditListingWizard.saveNewAvailability": "Next: Location",
-  
-  
-  "EditListingWizard.saveNewPricing": "Next: Availability",
-  "EditListingWizard.saveNewPhotos": "Publish Verify",
+  "EditListingWizard.saveNewLocation": "Next: Price",
+  "EditListingWizard.saveNewPricing": "Next: Photo",
+  "EditListingWizard.saveNewPhotos": "Next: Verify",
   "EditListingWizard.saveNewPolicies": "Submit",
 
   "EditListingWizard.tabLabelDescription": "Your Description",

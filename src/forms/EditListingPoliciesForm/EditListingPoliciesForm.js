@@ -8,7 +8,7 @@ import { propTypes } from '../../util/types';
 import { Form, Button, FieldTextInput } from '../../components';
 
 import css from './EditListingPoliciesForm.css';
-
+const RULES_MAX_LENGTH = 20;
 export const EditListingPoliciesFormComponent = props => (
   <FinalForm
     {...props}
@@ -32,6 +32,16 @@ export const EditListingPoliciesFormComponent = props => (
       const rulesPlaceholderMessage = intl.formatMessage({
         id: 'EditListingPoliciesForm.rulesPlaceholder',
       });
+      const rulesRequiredMessage = intl.formatMessage({
+        id: 'EditListingPoliciesForm.rulesRequired',
+      });
+      const maxLengthMessage = intl.formatMessage(
+        { id: 'EditListingPoliciesForm.maxLength' },
+        {
+          maxLength: RULES_MAX_LENGTH,
+        }
+      );
+      const maxLength60Message = maxLength(maxLengthMessage, RULES_MAX_LENGTH);
 
       const { updateListingError, showListingsError } = fetchErrors || {};
       const errorMessage = updateListingError ? (
@@ -62,6 +72,8 @@ export const EditListingPoliciesFormComponent = props => (
             type="textarea"
             label={rulesLabelMessage}
             placeholder={rulesPlaceholderMessage}
+            maxLength={RULES_MAX_LENGTH}
+            validate={composeValidators(required(rulesRequiredMessage), maxLength60Message)}
           />
 
           <Button
