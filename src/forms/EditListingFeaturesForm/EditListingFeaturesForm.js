@@ -68,7 +68,7 @@ export class EditListingFeaturesFormComponent extends Component {
       })
     }
     return data;
-  }
+  } 
   render(){
     return(
       <FinalForm
