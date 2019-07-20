@@ -5,10 +5,11 @@ import { Form as FinalForm } from 'react-final-form';
 import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
+import { maxLength, required, composeValidators } from '../../util/validators';
 import { Form, Button, FieldTextInput } from '../../components';
 
 import css from './EditListingPoliciesForm.css';
-
+const RULES_MAX_LENGTH = 20;
 export const EditListingPoliciesFormComponent = props => (
   <FinalForm
     {...props}
@@ -32,6 +33,16 @@ export const EditListingPoliciesFormComponent = props => (
       const rulesPlaceholderMessage = intl.formatMessage({
         id: 'EditListingPoliciesForm.rulesPlaceholder',
       });
+      const rulesRequiredMessage = intl.formatMessage({
+        id: 'EditListingPoliciesForm.rulesRequired',
+      });
+      const maxLengthMessage = intl.formatMessage(
+        { id: 'EditListingPoliciesForm.maxLength' },
+        {
+          maxLength: RULES_MAX_LENGTH, 
+        }
+      );
+      const maxLength60Message = maxLength(maxLengthMessage, RULES_MAX_LENGTH);
 
       const { updateListingError, showListingsError } = fetchErrors || {};
       const errorMessage = updateListingError ? (
@@ -56,12 +67,14 @@ export const EditListingPoliciesFormComponent = props => (
           {errorMessageShowListing}
 
           <FieldTextInput
-            id="rules"
-            name="rules"
+            id="identify"
+            name="identify"
             className={css.policy}
             type="textarea"
             label={rulesLabelMessage}
             placeholder={rulesPlaceholderMessage}
+            maxLength={RULES_MAX_LENGTH}
+            validate={composeValidators(required(rulesRequiredMessage), maxLength60Message)}
           />
 
           <Button

@@ -163,7 +163,9 @@ const ButtonsComponent = () => {
   );
 };
 
-export const Buttons = {
-  component: ButtonsComponent,
-  group: 'buttons',
-};
+// export const Buttons = {
+//   component: ButtonsComponent,
+//   group: 'buttons',
+// };
+
+export default ButtonsComponent;

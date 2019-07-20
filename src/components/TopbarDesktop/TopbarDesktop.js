@@ -175,7 +175,7 @@ const TopbarDesktop = props => {
 
       {inboxLink}
 
-      <NamedLink className={css.createListingLink} name="NewListingPage">
+      <NamedLink className={css.createListingLink} name="OrderTypesPage"> 
         <span className={css.createListing}>
           <FormattedMessage id="TopbarDesktop.createListing" />
         </span>

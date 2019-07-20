@@ -17,9 +17,11 @@ import {
   EditListingPhotosPanel,
   EditListingPoliciesPanel,
   EditListingPricingPanel,
+  EditListingHomePanel,
 } from '../../components';
 
 import css from './EditListingWizard.css';
+import { restElement } from '@babel/types';
 
 export const AVAILABILITY = 'availability';
 export const DESCRIPTION = 'description';
@@ -28,16 +30,18 @@ export const POLICY = 'policy';
 export const LOCATION = 'location';
 export const PRICING = 'pricing';
 export const PHOTOS = 'photos';
+export const HOME = 'home';
 
 // EditListingWizardTab component supports these tabs
 export const SUPPORTED_TABS = [
   DESCRIPTION,
   FEATURES,
-  POLICY,
+  AVAILABILITY,
   LOCATION,
   PRICING,
-  AVAILABILITY,
   PHOTOS,
+  POLICY,
+  HOME,
 ];
 
 const pathParamsToNextTab = (params, tab, marketplaceTabs) => {
@@ -94,6 +98,7 @@ const EditListingWizardTab = props => {
     updatedTab,
     updateInProgress,
     intl,
+    
   } = props;
 
   const { type } = params;
@@ -175,6 +180,20 @@ const EditListingWizardTab = props => {
       return (
         <EditListingFeaturesPanel
           {...panelProps(FEATURES)}
+          submitButtonText={intl.formatMessage({ id: submitButtonTranslationKey })}
+          onSubmit={values => {
+            onCompleteEditListingWizardTab(tab, values);
+          }}
+        />
+      );
+    }
+    case HOME: {
+      const submitButtonTranslationKey = isNewListingFlow
+        ? 'EditListingWizard.saveNewFeatures'
+        : 'EditListingWizard.saveEditFeatures';
+      return (
+        <EditListingHomePanel
+          {...panelProps(HOME)}
           submitButtonText={intl.formatMessage({ id: submitButtonTranslationKey })}
           onSubmit={values => {
             onCompleteEditListingWizardTab(tab, values);
@@ -320,6 +339,8 @@ EditListingWizardTab.propTypes = {
   updateInProgress: bool.isRequired,
 
   intl: intlShape.isRequired,
+
+  
 };
 
 export default EditListingWizardTab;

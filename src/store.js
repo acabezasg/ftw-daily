@@ -12,12 +12,20 @@ import config from './config';
 export default function configureStore(initialState = {}, sdk = null, analyticsHandlers = []) {
   const middlewares = [thunk.withExtraArgument(sdk), analytics.createMiddleware(analyticsHandlers)];
 
+  // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  
   // Enable Redux Devtools in client side dev mode.
+  // const composeEnhancers =
+  //   config.dev && typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  //     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  //     : compose;
   const composeEnhancers =
-    config.dev && typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-      : compose;
-
+  typeof window === 'object' &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+      'trace':true,
+    }) : compose;
+      
   const enhancer = composeEnhancers(applyMiddleware(...middlewares));
 
   const store = createStore(createReducer(), initialState, enhancer);

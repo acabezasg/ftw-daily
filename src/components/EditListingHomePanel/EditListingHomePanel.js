@@ -1,16 +1,15 @@
 import React from 'react';
-import { bool, func, object, string, propTypes,array } from 'prop-types';
+import { bool, func, object, string, propTypes } from 'prop-types';
 import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
 import { ensureListing } from '../../util/data';
-import { ListingLink } from '../../components';
+import { ListingLink } from '..';
 import { LISTING_STATE_DRAFT } from '../../util/types';
-import { EditListingFeaturesForm } from '../../forms';
+import { EditListingHomeForm } from '../../forms';
 import config from '../../config';
-import css from './EditListingFeaturesPanel.css';
-import { restElement } from '@babel/types';
+import css from './EditListingHomePanel.css';
 
-const EditListingFeaturesPanel = props => {
+const EditListingHomePanel = props => {
   const {
     rootClassName,
     className,
@@ -18,10 +17,9 @@ const EditListingFeaturesPanel = props => {
     onSubmit,
     onChange,
     submitButtonText,
-    panelUpdated,
+    panelUpdated, 
     updateInProgress,
     errors,
-    
   } = props;
 
   const FEATURES_NAME = 'amenities';
@@ -33,15 +31,15 @@ const EditListingFeaturesPanel = props => {
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
   const panelTitle = isPublished ? (
     <FormattedMessage
-      id="EditListingFeaturesPanel.title"
+      id="EditListingHomePanel.title"
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
   ) : (
-    <FormattedMessage id="EditListingFeaturesPanel.createListingTitle" />
+    <FormattedMessage id="EditListingHomePanel.createListingTitle" />
   );
 
-  const amenities = publicData && publicData.amenities;
-  const initialValues = { amenities };
+  const {locations,equipments} = publicData;
+  const initialValues = { locations,equipments };
   console.log(initialValues);
   // state = {
   //   selected:[...initialValues]
@@ -52,47 +50,29 @@ const EditListingFeaturesPanel = props => {
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
-      <EditListingFeaturesForm
-        
+      <EditListingHomeForm
         className={css.form}
         name={FEATURES_NAME}
-        initialValues={{
-          dog: publicData.dog,
-          cat: publicData.cat,
-          reptile: publicData.reptile,
-          bird: publicData.bird,
-          farm: publicData.farm,
-          rabbit: publicData.rabbit,
-          fish: publicData.fish,
-          other: publicData.other,
-          horse: publicData.horse,
-          amenities: publicData.amenities 
-        }}
+        initialValues={{ 
+          locations: publicData.locations,
+          equipments: publicData.equipments,
+          bedroom:publicData.bedroom,
+          bathroom:publicData.bathroom,
+        }} 
         onSubmit={values => {
           const { 
-            amenities = [],
-            dog,
-            cat,
-            reptile,
-            bird,
-            farm,
-            rabbit,
-            fish,
-            horse,
-            other } = values;
+            locations = [],
+            equipments = [],
+            bedroom,
+            bathroom, 
+          } = values;
 
           const updatedValues = {
-            publicData: 
-            { amenities,
-              dog,
-              cat,
-              reptile,
-              bird,
-              farm,
-              rabbit,
-              fish,
-              horse,
-              other },
+            publicData: { 
+              locations,
+              equipments,
+              bedroom,
+              bathroom },
           };
           onSubmit(updatedValues);
         }}
@@ -101,14 +81,17 @@ const EditListingFeaturesPanel = props => {
         updated={panelUpdated}
         updateInProgress={updateInProgress}
         fetchErrors={errors}
-        categories={config.custom.amenities}
+        locations={config.custom.locations}
+        equipments={config.custom.equipments}
+        name_equipments="equipments"
+        name_locations="locations"
         
       />
     </div>
   );
 };
 
-EditListingFeaturesPanel.defaultProps = {
+EditListingHomePanel.defaultProps = {
   rootClassName: null,
   className: null,
   listing: null,
@@ -117,7 +100,7 @@ EditListingFeaturesPanel.defaultProps = {
 
 
 
-EditListingFeaturesPanel.propTypes = {
+EditListingHomePanel.propTypes = {
   rootClassName: string,
   className: string,
 
@@ -130,7 +113,6 @@ EditListingFeaturesPanel.propTypes = {
   panelUpdated: bool.isRequired,
   updateInProgress: bool.isRequired,
   errors: object.isRequired,
- 
 };
 
-export default EditListingFeaturesPanel;
+export default EditListingHomePanel;

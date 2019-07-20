@@ -100,6 +100,7 @@ class EditListingLocationPanel extends Component {
           updated={panelUpdated}
           updateInProgress={updateInProgress}
           fetchErrors={errors}
+          listing={ listing }
         />
       </div>
     );
