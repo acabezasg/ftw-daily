@@ -62,7 +62,7 @@ export class EditListingFeaturesFormComponent extends Component {
   }
   
   init(data,pet_ary,key_ary){
-    if(!empty(pet_ary)){
+    if(pet_ary.length){
       pet_ary.forEach(function(f,i){
         data[key_ary[f]] = !data[key_ary[f]]; 
       })
