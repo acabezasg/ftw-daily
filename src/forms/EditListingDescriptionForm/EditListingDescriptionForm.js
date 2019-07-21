@@ -7,7 +7,7 @@ import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { maxLength, required, composeValidators } from '../../util/validators';
-import { Form, Button, FieldTextInput } from '../../components';
+import { Form, Button, FieldTextInput ,CategoryField} from '../../components';
 // import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
@@ -30,11 +30,13 @@ const EditListingDescriptionFormComponent = props => (
         updated,
         updateInProgress,
         fetchErrors,
+        user_type,
+        service,
       } = fieldRenderProps;
-
-      const titleMessage = intl.formatMessage({ id: 'EditListingDescriptionForm.title' });
+      const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+      const titleMessage = intl.formatMessage({ id: 'EditListingDescriptionForm.title.'+user_name });
       const titlePlaceholderMessage = intl.formatMessage({
-        id: 'EditListingDescriptionForm.titlePlaceholder',
+        id: 'EditListingDescriptionForm.titlePlaceholder.'+user_name,
       });
       const titleRequiredMessage = intl.formatMessage({
         id: 'EditListingDescriptionForm.titleRequired',
@@ -47,15 +49,30 @@ const EditListingDescriptionFormComponent = props => (
       );
 
       const descriptionMessage = intl.formatMessage({
-        id: 'EditListingDescriptionForm.description',
+        id: 'EditListingDescriptionForm.description.'+user_name,
       });
       const descriptionPlaceholderMessage = intl.formatMessage({
-        id: 'EditListingDescriptionForm.descriptionPlaceholder',
+        id: 'EditListingDescriptionForm.descriptionPlaceholder.'+user_name,
       });
       const maxLength60Message = maxLength(maxLengthMessage, TITLE_MAX_LENGTH);
       const descriptionRequiredMessage = intl.formatMessage({
         id: 'EditListingDescriptionForm.descriptionRequired',
       });
+
+      const categoryServiceLabel = intl.formatMessage({
+        id: 'EditListingDescriptionForm.category.service.label',
+        // values: {animal},
+      });
+      const categoryServicePlaceholder = intl.formatMessage({
+        id: 'EditListingDescriptionForm.category.service.placeholder',
+        // values: {animal},
+      });
+      const categoryServiceRequired = required(
+        intl.formatMessage({
+          id: 'EditListingDescriptionForm.category.service.required',
+          // values: {animal},
+        })
+      );
 
       const { updateListingError, createListingDraftError, showListingsError } = fetchErrors || {};
       const errorMessageUpdateListing = updateListingError ? (
@@ -87,6 +104,34 @@ const EditListingDescriptionFormComponent = props => (
           {errorMessageCreateListingDraft}
           {errorMessageUpdateListing}
           {errorMessageShowListing}
+          
+          {
+            user_type ==2?
+            (
+              <FieldTextInput
+                id="business"
+                name="business"
+                className={css.title}
+                type="text"
+              />
+              
+            ):null
+          }
+          {
+            user_type == 2?
+            (
+              <CategoryField
+                id="service"
+                name="service"
+                className={css.category}
+                categories={service}
+                intl={intl}
+                categoryLabel={categoryServiceLabel}
+                categoryPlaceholder={categoryServicePlaceholder}
+                categoryRequired={categoryServiceRequired}
+              />
+            ):null
+          }
           <FieldTextInput
             id="title"
             name="title"

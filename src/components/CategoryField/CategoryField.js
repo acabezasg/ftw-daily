@@ -22,7 +22,7 @@ const CategoryField = props => {
       {categories.map(c => (
 
         <option key={c.key} value={c.key}>
-          {c.key + ' '+ c.label}
+          {c.label}
         </option>
       ))}
     </FieldSelect>

@@ -21,6 +21,7 @@ const EditListingAvailabilityPanel = props => {
     panelUpdated,
     updateInProgress,
     errors,
+    user_type,
   } = props;
   const EQUIPMENTS_NAME = 'equipments';
   const LOCATIONS_NAME = 'locations';
@@ -40,17 +41,19 @@ const EditListingAvailabilityPanel = props => {
     ],
   };
   const availabilityPlan = currentListing.attributes.availabilityPlan || defaultAvailabilityPlan;
-
+  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const publish = isPublished ?"title.":"createListingTitle.";
+  const AvailabilityPanelTitle = 'EditListingAvailabilityPanel.'+ publish + user_name;
   return (
     <div className={classes}>
       <h1 className={css.title}>
         {isPublished ? (
           <FormattedMessage
-            id="EditListingAvailabilityPanel.title"
+            id={AvailabilityPanelTitle}
             values={{ listingTitle: <ListingLink listing={listing} /> }}
           />
         ) : (
-          <FormattedMessage id="EditListingAvailabilityPanel.createListingTitle" />
+          <FormattedMessage id={AvailabilityPanelTitle} />
         )}
       </h1>
       <EditListingAvailabilityForm

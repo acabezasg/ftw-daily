@@ -28,13 +28,16 @@ const EditListingPoliciesPanel = props => {
   const { publicData } = currentListing.attributes;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
+  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const publish = isPublished ?"title.":"createListingTitle.";
+  const PoliciesPanelTitle = 'EditListingPoliciesPanel.'+ publish + user_name;
   const panelTitle = isPublished ? (
     <FormattedMessage
-      id="EditListingPoliciesPanel.title"
+      id={PoliciesPanelTitle}
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
   ) : (
-    <FormattedMessage id="EditListingPoliciesPanel.createListingTitle" />
+    <FormattedMessage id={PoliciesPanelTitle} />
   );
 
   return (

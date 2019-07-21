@@ -175,9 +175,23 @@ const EditListingWizardTab = props => {
       );
     }
     case FEATURES: {
-      const submitButtonTranslationKey = isNewListingFlow
-        ? 'EditListingWizard.saveNewFeatures'
-        : 'EditListingWizard.saveEditFeatures';
+      
+
+        var submitButtonTranslationKey;
+      if(isNewListingFlow){
+        if(user_type !==2){
+          submitButtonTranslationKey = 'EditListingWizard.saveNewFeatures';
+        }else{
+          submitButtonTranslationKey = 'EditListingWizard.saveNewHome';
+        }
+
+      }else{
+        if(user_type !== 2){
+          submitButtonTranslationKey = 'EditListingWizard.saveEditFeatures';
+        }else{
+          submitButtonTranslationKey = 'EditListingWizard.saveEditFeatures';
+        }
+      }
       return (
         <EditListingFeaturesPanel
           {...panelProps(FEATURES)}
@@ -217,21 +231,10 @@ const EditListingWizardTab = props => {
       );
     }
     case LOCATION: {
-      var submitButtonTranslationKey;
-      if(isNewListingFlow){
-        if(user_type){
-          submitButtonTranslationKey = 'EditListingWizard.saveNewLocation';
-        }else{
-          submitButtonTranslationKey = 'EditListingWizard.saveNewPricing';
-        }
-
-      }else{
-        if(user_type){
-          submitButtonTranslationKey = 'EditListingWizard.saveEditLocation';
-        }else{
-          submitButtonTranslationKey = 'EditListingWizard.saveEditPricing';
-        }
-      }
+      const submitButtonTranslationKey = isNewListingFlow
+        ? 'EditListingWizard.saveNewLocation'
+        : 'EditListingWizard.saveEditLocation';
+      
       
       return (
         <EditListingLocationPanel
@@ -258,9 +261,15 @@ const EditListingWizardTab = props => {
       );
     }
     case AVAILABILITY: {
-      const submitButtonTranslationKey = isNewListingFlow
+      if(user_type){
+        var submitButtonTranslationKey = isNewListingFlow
         ? 'EditListingWizard.saveNewAvailability'
         : 'EditListingWizard.saveEditAvailability';
+      }else{
+        var submitButtonTranslationKey = isNewListingFlow
+        ? 'EditListingWizard.saveNewPricing'
+        : 'EditListingWizard.saveEditAvailability';
+      }
       return (
         <EditListingAvailabilityPanel
           {...panelProps(AVAILABILITY)}

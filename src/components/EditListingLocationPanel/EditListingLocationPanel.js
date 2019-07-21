@@ -63,15 +63,18 @@ class EditListingLocationPanel extends Component {
     const classes = classNames(rootClassName || css.root, className);
     const currentListing = ensureOwnListing(listing);
   
-    const isPublished =
-      currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
+    const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
+    const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+    const publish = isPublished ?"title.":"createListingTitle.";
+    const LocationPanelTitle = 'EditListingLocationPanel.' + publish + user_name;
+      
     const panelTitle = isPublished ? (
       <FormattedMessage
-        id="EditListingLocationPanel.title"
+        id={LocationPanelTitle}
         values={{ listingTitle: <ListingLink listing={listing} /> }}
       />
     ) : (
-      <FormattedMessage id="EditListingLocationPanel.createListingTitle" />
+      <FormattedMessage id={LocationPanelTitle} />
     );
 
     const minPrice = new Money(config.listingMinimumPriceSubUnits, config.currency);

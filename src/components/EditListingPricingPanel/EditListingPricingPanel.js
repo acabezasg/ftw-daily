@@ -16,7 +16,7 @@ const { Money } = sdkTypes;
 const EditListingPricingPanel = props => {
   const {
     className,
-    rootClassName,
+    rootClassName, 
     listing,
     onSubmit,
     onChange,
@@ -29,30 +29,50 @@ const EditListingPricingPanel = props => {
 
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
-  const { price } = currentListing.attributes;
-
+  const { price,publicData } = currentListing.attributes;
+  const rate = config.custom.rate;
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
+  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const publish = isPublished ?"title.":"createListingTitle.";
+  const PricingPanelTitle = 'EditListingPricingPanel.'+ publish + user_name;
   const panelTitle = isPublished ? (
     <FormattedMessage
-      id="EditListingPricingPanel.title"
+      id={PricingPanelTitle}
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
   ) : (
-    <FormattedMessage id="EditListingPricingPanel.createListingTitle" />
+    <FormattedMessage id={PricingPanelTitle} />
   );
 
   const priceCurrencyValid = price instanceof Money ? price.currency === config.currency : true;
   const form = priceCurrencyValid ? (
     <EditListingPricingForm
       className={css.form}
-      initialValues={{ price }}
-      onSubmit={onSubmit}
+      initialValues={{ 
+        rate: publicData.rate,
+        price: price,
+      }} 
+      onSubmit={values => {
+        const { 
+          rate,
+          price, 
+        } = values;
+
+        const updatedValues = {
+          publicData: { 
+            rate,
+          },
+          price:price
+        };
+        onSubmit(updatedValues);
+      }}
       onChange={onChange}
       saveActionMsg={submitButtonText}
       updated={panelUpdated}
       updateInProgress={updateInProgress}
       fetchErrors={errors}
       user_type ={ user_type}
+      rate = {rate}
     />
   ) : (
     <div className={css.priceCurrencyInvalid}>

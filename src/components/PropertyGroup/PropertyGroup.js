@@ -86,7 +86,7 @@ const PropertyGroup = props => {
         console.log( 'size',size);
         console.log( 'weight_en,weight',weight_en,weight);
         return (
-          <Item key={`${id}.${option.key}`} label={String(option.label) +' => '+ String(weight_en) } isSelected={option.isSelected} />
+          <Item key={`${id}.${option.key}`} label={String(option.label) +' => '+ String(weight_en) + String(weight)} isSelected={option.isSelected} />
         )
 
       })}

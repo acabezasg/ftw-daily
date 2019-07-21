@@ -6,10 +6,11 @@ import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import config from '../../config';
 import { LINE_ITEM_NIGHT, LINE_ITEM_DAY,LINE_ITEM_HOUR, propTypes } from '../../util/types';
+
 import * as validators from '../../util/validators';
 import { formatMoney } from '../../util/currency';
 import { types as sdkTypes } from '../../util/sdkLoader';
-import { Button, Form, FieldCurrencyInput } from '../../components';
+import { Button, Form, FieldCurrencyInput,CategoryField } from '../../components';
 import css from './EditListingPricingForm.css';
 
 const { Money } = sdkTypes;
@@ -30,6 +31,7 @@ export const EditListingPricingFormComponent = props => (
         updateInProgress,
         fetchErrors,
         user_type,
+        rate,
       } = fieldRenderProps;
 
       const unitType = config.bookingUnitType;
@@ -81,6 +83,21 @@ export const EditListingPricingFormComponent = props => (
       const submitDisabled = invalid || disabled || submitInProgress;
       const { updateListingError, showListingsError } = fetchErrors || {};
 
+      const categoryRateLabel = intl.formatMessage({
+        id: 'EditListingPricingForm.category.rate.label',
+        // values: {animal},
+      });
+      const categoryRatePlaceholder = intl.formatMessage({
+        id: 'EditListingPricingForm.category.rate.placeholder',
+        // values: {animal},
+      });
+      const categoryRateRequired = validators.required(
+        intl.formatMessage({
+          id: 'EditListingPricingForm.category.rate.required',
+          // values: {animal},
+        })
+      );
+
       return (
         <Form onSubmit={handleSubmit} className={classes}>
           {updateListingError ? (
@@ -93,6 +110,21 @@ export const EditListingPricingFormComponent = props => (
               <FormattedMessage id="EditListingPricingForm.showListingFailed" />
             </p>
           ) : null}
+
+          {user_type==2?(
+            <CategoryField
+              id="rate"
+              name="rate"
+              className={css.category}
+              categories={rate}
+              intl={intl}
+              categoryLabel={categoryRateLabel}
+              categoryPlaceholder={categoryRatePlaceholder}
+              categoryRequired={categoryRateRequired}
+            />
+            ):null
+          }
+
           <FieldCurrencyInput
             id="price"
             name="price"
@@ -103,61 +135,6 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
-
-          {/* <FieldCurrencyInput
-            id="hprice"
-            name="hprice"
-            className={css.priceInput}
-            autoFocus
-            label={pricePerUnitMessage}
-            placeholder={pricePlaceholderMessage}
-            currencyConfig={config.currencyConfig}
-            validate={priceValidators}
-          />
-
-          <FieldCurrencyInput
-            id="dprice"
-            name="dprice"
-            className={css.priceInput}
-            autoFocus
-            label={pricePerUnitMessage}
-            placeholder={pricePlaceholderMessage}
-            currencyConfig={config.currencyConfig}
-            validate={priceValidators}
-          />
-
-          <FieldCurrencyInput
-            id="nprice"
-            name="nprice"
-            className={css.priceInput}
-            autoFocus
-            label={pricePerUnitMessage}
-            placeholder={pricePlaceholderMessage}
-            currencyConfig={config.currencyConfig}
-            validate={priceValidators}
-          />
-
-          <FieldCurrencyInput
-            id="wprice"
-            name="wprice"
-            className={css.priceInput}
-            autoFocus
-            label={pricePerUnitMessage}
-            placeholder={pricePlaceholderMessage}
-            currencyConfig={config.currencyConfig}
-            validate={priceValidators}
-          />
-
-          <FieldCurrencyInput
-            id="mprice"
-            name="mprice"
-            className={css.priceInput}
-            autoFocus
-            label={pricePerUnitMessage}
-            placeholder={pricePlaceholderMessage}
-            currencyConfig={config.currencyConfig}
-            validate={priceValidators}
-          /> */}
 
 
           <Button
