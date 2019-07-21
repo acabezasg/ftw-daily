@@ -68,8 +68,8 @@ const PropertyGroup = props => {
         var weight="";
         var weight_en="";
 
-        if(String(option.label).toLowerCase() == "other"){
-          weight_en = publicData.other;
+        if(String(option.key).toLowerCase() == "other"){
+          weight_en = publicData['other'];
         }else{
           size.forEach(function(e,i){
             if(String(e.key).toLowerCase() == String(publicData[option.key]).toLowerCase()){
@@ -86,7 +86,7 @@ const PropertyGroup = props => {
         console.log( 'size',size);
         console.log( 'weight_en,weight',weight_en,weight);
         return (
-          <Item key={`${id}.${option.key}`} label={""+ option.label +' => '+ weight_en } isSelected={option.isSelected} />
+          <Item key={`${id}.${option.key}`} label={String(option.label) +' => '+ String(weight_en) } isSelected={option.isSelected} />
         )
 
       })}
