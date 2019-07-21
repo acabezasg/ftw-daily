@@ -20,11 +20,13 @@ import facebookimg from './facebook.png';
 
 import css from './OrderTypesPage.css';
 
-const OrderTypesPage = () => {
+const OrderTypesPage = (props) => {
 
   const { siteTwitterHandle, siteFacebookPage } = config;
   const siteTwitterPage = twitterPageURL(siteTwitterHandle);
-
+  const draftId = '00000000-0000-0000-0000-000000000000';
+  const draftSlug = 'draft';
+  const type = props.params.type?props.params.type:'new';
   // prettier-ignore
   return (
     <StaticPage
@@ -58,17 +60,17 @@ const OrderTypesPage = () => {
 
               <div id="option-groups">
                 <div class="option-group" name="category">
-                <NamedLink name="NewListingPage">
+                <NamedLink name="EditListingPage" params={{ slug: draftSlug, id: draftId, type: type, tab: 'description_owner' }}>  
                     <SecondaryButton> 
                         Pet Owner
                     </SecondaryButton>
                   </NamedLink>
-                  <NamedLink name="NewListingPage">
+                  <NamedLink name="EditListingPage" params={{ slug: draftSlug, id: draftId, type: type, tab: 'description_sitter' }}>  
                     <SecondaryButton> 
                         Pet Sitter
                     </SecondaryButton>
                   </NamedLink>
-                  <NamedLink name="NewListingPage"> 
+                  <NamedLink name="EditListingPage" params={{ slug: draftSlug, id: draftId, type: type, tab: 'description_service' }}>  
                     <SecondaryButton> 
                         Pet Service
                     </SecondaryButton>

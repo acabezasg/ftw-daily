@@ -109,15 +109,12 @@ const EditListingDescriptionFormComponent = props => (
             validate={composeValidators(required(descriptionRequiredMessage))}
           />
 
-          {/* <FieldTextInput
+          <FieldTextInput
             id="user_type"
             name="user_type"
-            className={css.description}
+            className={css.hiden}
             type="text"
-            label=''
-            placeholder=''
-            
-          /> */}
+          />
 
           <Button
             className={css.submitButton}

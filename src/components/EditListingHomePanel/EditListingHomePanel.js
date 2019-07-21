@@ -20,6 +20,7 @@ const EditListingHomePanel = props => {
     panelUpdated, 
     updateInProgress,
     errors,
+    user_type,
   } = props;
 
   const FEATURES_NAME = 'amenities';
@@ -40,7 +41,7 @@ const EditListingHomePanel = props => {
 
   const {locations,equipments} = publicData;
   const initialValues = { locations,equipments };
-  console.log(initialValues);
+  
   // state = {
   //   selected:[...initialValues]
   // }
@@ -85,7 +86,7 @@ const EditListingHomePanel = props => {
         equipments={config.custom.equipments}
         name_equipments="equipments"
         name_locations="locations"
-        
+        user_type ={ user_type}
       />
     </div>
   );

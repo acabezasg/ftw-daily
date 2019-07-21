@@ -29,18 +29,7 @@ import css from './EditListingWizard.css';
 // Show availability calendar only if environment variable availabilityEnabled is true
 const availabilityMaybe = config.enableAvailability ? [AVAILABILITY] : [];
 
-// TODO: PHOTOS panel needs to be the last one since it currently contains PayoutDetailsForm modal
-// All the other panels can be reordered.
-export const TABS = [
-  DESCRIPTION,
-  FEATURES,
-  HOME,
-  ...availabilityMaybe,
-  LOCATION,
-  // PRICING,
-  PHOTOS,
-  POLICY,
-];
+
 
 // Tabs are horizontal in small screens
 const MAX_HORIZONTAL_NAV_SCREEN_WIDTH = 1023;
@@ -119,7 +108,7 @@ const tabCompleted = (tab, listing) => {
  *
  * @return object containing activity / editability of different tabs of this wizard
  */
-const tabsActive = (isNew, listing) => {
+const tabsActive = (isNew, listing,TABS) => {
   return TABS.reduce((acc, tab) => {
     const previousTabIndex = TABS.findIndex(t => t === tab) - 1;
     const isActive =
@@ -154,6 +143,8 @@ class EditListingWizard extends Component {
     this.handlePublishListing = this.handlePublishListing.bind(this);
     this.handlePayoutModalClose = this.handlePayoutModalClose.bind(this);
     this.handlePayoutSubmit = this.handlePayoutSubmit.bind(this);
+
+    
   }
 
   handleCreateFlowTabScrolling(shouldScroll) {
@@ -206,12 +197,62 @@ class EditListingWizard extends Component {
       onPayoutDetailsFormChange,
       checkFlag,
       handleChange,
+     
       ...rest
     } = this.props;
     const tab_ary = params.tab.split('_');
-    const user_type=(tab_ary.length == 2)? tab_ary[1]:null;
+    
+    var user_name;
+    var user_type;
+    if(tab_ary.length == 2){
+      
+      if(tab_ary[1] == "owner"){
+        user_name = tab_ary[1];
+        user_type = 0;
+      }else if(tab_ary[1] == "sitter"){
+        user_name = tab_ary[1];
+        user_type = 1;
+      }else if(tab_ary[1] == "service"){
+        user_name = tab_ary[1];
+        user_type = 2;
+      }
+    }else{
+      
+      user_type = listing.attributes.publicData.user_type;
+      if(user_type == 0){
+        user_name = "owner";
+      }else if(user_type == 1){
+        user_name = "sitter";
+      }else if(user_type == 2){
+        user_name = "service";
+      }
+    }
+    
+    // TODO: PHOTOS panel needs to be the last one since it currently contains PayoutDetailsForm modal
+    // All the other panels can be reordered.
+   
+    const TABS = user_type >0? [
+      DESCRIPTION,
+      FEATURES,
+      HOME,
+      ...availabilityMaybe,
+      LOCATION,
+      PRICING,
+      PHOTOS,
+      POLICY,
+    ]:
+    [
+      DESCRIPTION,
+      FEATURES,
+      HOME,
+      ...availabilityMaybe,
+      LOCATION,
+      PHOTOS,
+      POLICY,
+    ];
+   
     const selectedTab = tab_ary[0];
-    console.log('param',params);
+   
     const {category} = params;
     const isNewListingFlow = [LISTING_PAGE_PARAM_TYPE_NEW, LISTING_PAGE_PARAM_TYPE_DRAFT].includes(
       params.type
@@ -219,7 +260,7 @@ class EditListingWizard extends Component {
     const rootClasses = rootClassName || css.root;
     const classes = classNames(rootClasses, className);
     const currentListing = ensureListing(listing);
-    const tabsStatus = tabsActive(isNewListingFlow, currentListing);
+    const tabsStatus = tabsActive(isNewListingFlow, currentListing,TABS);
 
     // If selectedTab is not active, redirect to the beginning of wizard
     if (!tabsStatus[selectedTab]) {
@@ -253,11 +294,11 @@ class EditListingWizard extends Component {
 
     return (
       <div className={classes}>
-        <NamedLink name="OrderTypesPage">
+        {/* <NamedLink name="OrderTypesPage" params={{type:params.type}}>
           <SecondaryButton>    
-              Pet {user_type}
+              Pet {user_name}
           </SecondaryButton>
-        </NamedLink>
+        </NamedLink> */}
         <Tabs
           rootClassName={css.tabsContainer}
           navRootClassName={css.nav}
@@ -331,7 +372,7 @@ EditListingWizard.propTypes = {
     id: string.isRequired,
     slug: string.isRequired,
     type: oneOf(LISTING_PAGE_PARAM_TYPES).isRequired,
-    tab: oneOf(TABS).isRequired,
+    // tab: oneOf(TABS).isRequired,
   }).isRequired,
 
   // We cannot use propTypes.listing since the listing might be a draft.

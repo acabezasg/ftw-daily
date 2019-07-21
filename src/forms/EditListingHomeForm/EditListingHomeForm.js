@@ -53,7 +53,7 @@ export class EditListingHomeFormComponent extends Component {
           for(var i=1;i<5;i++){
             number.push({key:''+i,label:''});
           }
-          console.log(number);
+          
 
           const categoryBedroomLabel = intl.formatMessage({
             id: 'EditListingHomeForm.category.bedroom.label',

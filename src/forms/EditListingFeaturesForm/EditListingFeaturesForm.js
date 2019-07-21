@@ -6,8 +6,9 @@ import arrayMutators from 'final-form-arrays';
 import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
+
 import { maxLength, required, composeValidators } from '../../util/validators';
-import { Button, FieldCheckboxGroup, Form, CategoryField } from '../../components';
+import { Button, FieldCheckboxGroup, Form, CategoryField ,FieldTextInput} from '../../components';
 import config from '../../config';
 
 import css from '../EditListingDescriptionForm/EditListingDescriptionForm.css';
@@ -92,7 +93,7 @@ export class EditListingFeaturesFormComponent extends Component {
         updated,
         updateInProgress,
         fetchErrors,
-       
+        user_type,
        
       } = fieldRenderProps;
 
@@ -219,15 +220,15 @@ export class EditListingFeaturesFormComponent extends Component {
         })
       );
 
-      const categoryOthersLabel = intl.formatMessage({
+      const OtherLabelMessage = intl.formatMessage({
         id: 'EditListingFeaturesForm.category.other.label',
         // values: {animal},
       });
-      const categoryOthersPlaceholder = intl.formatMessage({
+      const OtherPlaceholderMessage = intl.formatMessage({
         id: 'EditListingFeaturesForm.category.other.placeholder',
         // values: {animal},
       });
-      const categoryOthersRequired = required(
+      const OtherRequiredMessage = required(
         intl.formatMessage({
           id: 'EditListingFeaturesForm.category.other.required',
           // values: {animal},
@@ -240,7 +241,7 @@ export class EditListingFeaturesFormComponent extends Component {
           // values: {animal},
         });
 
-
+        
 
 
       const { updateListingError, showListingsError } = fetchErrors || {};
@@ -302,10 +303,10 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {/* {this.state.checkFlag[1]?(
+            {this.state.checkFlag[1] && user_type?(
                 <CategoryField
-                id="reptile"
-                name="reptile"
+                id="rptile"
+                name="rptile"
                 className={css.category}
                 categories={categories[1].weight}
                 intl={intl}
@@ -315,7 +316,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[2]?(
+            {this.state.checkFlag[2] && user_type?(
                 <CategoryField
                 id="cat"
                 name="cat"
@@ -328,7 +329,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[3]?(
+            {this.state.checkFlag[3] && user_type?(
                 <CategoryField
                 id="farm"
                 name="farm"
@@ -341,7 +342,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[4]?(
+            {this.state.checkFlag[4] && user_type?(
                 <CategoryField
                 id="rabbit"
                 name="rabbit"
@@ -354,7 +355,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[5]?(
+            {this.state.checkFlag[5] && user_type?(
                 <CategoryField
                 id="bird"
                 name="bird"
@@ -367,7 +368,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[6]?(
+            {this.state.checkFlag[6] && user_type?(
                 <CategoryField
                 id="fish"
                 name="fish"
@@ -380,7 +381,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[7]?(
+            {this.state.checkFlag[7] && user_type?(
                 <CategoryField
                 id="horse"
                 name="horse"
@@ -390,22 +391,21 @@ export class EditListingFeaturesFormComponent extends Component {
                 categoryLabel={categoryHorseLabel}
                 categoryPlaceholder={categoryHorsePlaceholder}
                 categoryRequired={categoryHorseRequired}
-              />
+              /> 
               ):null
             }
             {this.state.checkFlag[8]?(
-                <CategoryField
+                <FieldTextInput
                 id="other"
                 name="other"
                 className={css.category}
-                categories={categories[8].weight}
-                intl={intl}
-                categoryLabel={categoryOthersLabel}
-                categoryPlaceholder={categoryOthersPlaceholder}
-                categoryRequired={categoryOthersRequired}
+                type="textarea"
+                label={OtherLabelMessage}
+                placeholder={OtherPlaceholderMessage}
+                validate={composeValidators(required(OtherRequiredMessage))}
               />
               ):null
-            } */}
+            }
          
   
 
@@ -457,3 +457,4 @@ EditListingFeaturesFormComponent.propTypes = {
 // const EditListingFeaturesForm = EditListingFeaturesFormComponent;
 export default compose(injectIntl)(EditListingFeaturesFormComponent);
 // export default EditListingFeaturesForm;
+

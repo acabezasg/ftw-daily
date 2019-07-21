@@ -6,12 +6,11 @@ import css from './ListingPage.css';
 
 const SectionHomeMaybe = props => {
   const { options, publicData } = props;
-  console.log('options',options);
   const { options1,options2} = options;
   if (!publicData) {
     return null;
   }
-  console.log('home public',publicData);
+ 
   const selectedOptions1 = publicData && publicData.equipments ? publicData.equipments : [];
   const selectedOptions2 = publicData && publicData.locations ? publicData.locations : [];
   return (

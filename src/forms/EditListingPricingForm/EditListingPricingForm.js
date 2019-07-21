@@ -29,6 +29,7 @@ export const EditListingPricingFormComponent = props => (
         updated,
         updateInProgress,
         fetchErrors,
+        user_type,
       } = fieldRenderProps;
 
       const unitType = config.bookingUnitType;
@@ -44,8 +45,9 @@ export const EditListingPricingFormComponent = props => (
         ? 'EditListingPricingForm.pricePerDay'
         : 'EditListingPricingForm.pricePerUnit';
 
+      const msg_key = user_type == 1?'EditListingPricingForm.pricePerNight':'EditListingPricingForm.pricePerHour';
       const pricePerUnitMessage = intl.formatMessage({
-        id: translationKey,
+        id: msg_key,
       });
 
       const pricePlaceholderMessage = intl.formatMessage({

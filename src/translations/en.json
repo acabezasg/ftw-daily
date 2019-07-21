@@ -150,7 +150,7 @@
   "EditListingDescriptionForm.titleRequired": "You need to add a name.",
   "EditListingDescriptionForm.updateFailed": "Failed to update listing. Please try again.",
 
-  "EditListingDescriptionPanel.createListingTitle": "About you and your feeling",
+  "EditListingDescriptionPanel.createListingTitle": "About You and Your Pets",
   "EditListingDescriptionPanel.title": "Edit descripttion of {listingTitle}",
 
 
@@ -173,9 +173,9 @@
   "EditListingFeaturesForm.category.cat.placeholder": "Choose the size of your cat",
   "EditListingFeaturesForm.category.cat.required": "You need to select a category for your cat.",
 
-  "EditListingFeaturesForm.category.reptiles.label": "Reptiles Size",
-  "EditListingFeaturesForm.category.reptiles.placeholder": "Choose the size of your reptiles",
-  "EditListingFeaturesForm.category.reptiles.required": "You need to select a category for your reptiles.",
+  "EditListingFeaturesForm.category.reptiles.label": "Rptiles Size",
+  "EditListingFeaturesForm.category.reptiles.placeholder": "Choose the size of your rptiles",
+  "EditListingFeaturesForm.category.reptiles.required": "You need to select a category for your rptiles.",
 
   "EditListingFeaturesForm.category.horse.label": "Horse Size",
   "EditListingFeaturesForm.category.horse.placeholder": "Choose the size of your horse",
@@ -204,7 +204,7 @@
   "EditListingFeaturesForm.showListingFailed": "Fetching listing data failed",
   "EditListingFeaturesForm.updateFailed": "Failed to update listing. Please try again.",
 
-  "EditListingFeaturesPanel.createListingTitle": "What animals do you have?",
+  "EditListingFeaturesPanel.createListingTitle": "What Pets do you have?",
   "EditListingFeaturesPanel.title": "Edit the pets of {listingTitle}",
 
 
@@ -218,7 +218,7 @@
   "EditListingHomeForm.homeTitle": "Please select all that apply",
   "EditListingHomeForm.title": "Please select all that apply",
 
-  "EditListingHomePanel.createListingTitle": "About your home and your surrounding",
+  "EditListingHomePanel.createListingTitle": "About your home and your surroundings",
   "EditListingHomePanel.title": "Edit home of {listingTitle}",
 
 
@@ -229,7 +229,7 @@
   "EditListingAvailabilityForm.updateFailed": "Failed to update listing. Please try again.",
 
   "EditListingAvailabilityPanel.title": "Edit the availability of {listingTitle}",
-  "EditListingAvailabilityPanel.createListingTitle": "When is it available?",
+  "EditListingAvailabilityPanel.createListingTitle": "Your Dates",
 
 
   "EditListingLocationForm.address": "Please enter your Town or Village",
@@ -241,7 +241,7 @@
   "EditListingLocationForm.showListingFailed": "Fetching listing data failed",
   "EditListingLocationForm.updateFailed": "Failed to update listing. Please try again.",
 
-  "EditListingLocationPanel.createListingTitle": "Where's your home?",
+  "EditListingLocationPanel.createListingTitle": "Where's your Location?",
   "EditListingLocationPanel.title": "Edit the location of {listingTitle}",
 
   "EditListingPage.loadingListingData": "Loading listing data…",
@@ -268,7 +268,7 @@
 
   "EditListingPricingForm.priceInputPlaceholder": "Choose your price…",
   "EditListingPricingForm.pricePerDay": "Price per day in euros",
-  "EditListingPricingForm.pricePerNight": "Price per hour in euros",
+  "EditListingPricingForm.pricePerNight": "Price per night in euros",
   "EditListingPricingForm.pricePerUnit": "Price per unit in euros",
   "EditListingPricingForm.pricePerHour": "Price per hour in euros",
   "EditListingPricingForm.priceRequired": "You need to add a valid price.",
@@ -278,8 +278,6 @@
   "EditListingPricingPanel.createListingTitle": "How much does it cost?",
   "EditListingPricingPanel.listingPriceCurrencyInvalid": "Listing currency is different from the marketplace currency. You cannot edit the price.",
   "EditListingPricingPanel.title": "Edit the pricing of {listingTitle}",
-
-
 
   "EditListingPoliciesForm.rulesLabel": "ID Verification",
   "EditListingPoliciesForm.rulesLabelSmall": "All Trust My Pet Sitter Owners and Sitters are ID verified.  It only takes a few minutes and helps keep all members of our community safe.",
