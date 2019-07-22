@@ -141,6 +141,10 @@
   "EditListingDescriptionForm.categoryLabel": "Sauna type",
   "EditListingDescriptionForm.categoryPlaceholder": "Choose the type of your sauna…",
   "EditListingDescriptionForm.categoryRequired": "You need to select a category for your sauna.",
+
+  "EditListingDescriptionForm.business": "Sauna type",
+  "EditListingDescriptionForm.businessPlaceholder": "Create a sub category in Pet Services",
+  "EditListingDescriptionForm.businessRequired": "Business description is required.",
   
   "EditListingDescriptionForm.createListingDraftError": "Failed to create a draft listing. Please try again.",
   
