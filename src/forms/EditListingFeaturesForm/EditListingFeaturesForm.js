@@ -29,7 +29,7 @@ export class EditListingFeaturesFormComponent extends Component {
     super(props);
     var key_ary = {
       'dog':0,
-      'rptile':1,
+      'reptiles':1,
       'farm':2,
       'cat':3,
       'rabbit':4,
@@ -306,8 +306,8 @@ export class EditListingFeaturesFormComponent extends Component {
             }
             {this.state.checkFlag[1] && user_type >1?(
                 <CategoryField
-                id="rptile"
-                name="rptile"
+                id="reptiles"
+                name="reptiles"
                 className={css.category}
                 categories={categories[1].weight}
                 intl={intl}
