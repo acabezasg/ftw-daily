@@ -6,8 +6,8 @@ import { ensureOwnListing } from '../../util/data';
 import { ListingLink } from '../../components';
 import { LISTING_STATE_DRAFT } from '../../util/types';
 import { EditListingDescriptionForm } from '../../forms';
-import config from '../../config';
 import css from './EditListingDescriptionPanel.css';
+import config from '../../config';
 
 const EditListingDescriptionPanel = props => {
   const {
@@ -28,13 +28,17 @@ const EditListingDescriptionPanel = props => {
   const { description, title, publicData } = currentListing.attributes;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
+  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const publish = isPublished ?"title.":"createListingTitle.";
+  const DescriptionPanelTitle = 'EditListingDescriptionPanel.' + publish + user_name;
+  const service = config.custom.service;
   const panelTitle = isPublished ? (
     <FormattedMessage
-      id="EditListingDescriptionPanel.title"
+      id={DescriptionPanelTitle}
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
   ) : (
-    <FormattedMessage id="EditListingDescriptionPanel.createListingTitle" />
+    <FormattedMessage id={DescriptionPanelTitle} />
   );
 
   return (
@@ -42,16 +46,17 @@ const EditListingDescriptionPanel = props => {
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingDescriptionForm
         className={css.form}
-        initialValues={{ title, description,user_type:user_type }}
+        initialValues={{ title, description,user_type,service: publicData.service }}
         saveActionMsg={submitButtonText}
         onSubmit={values => {
-          const { title, description,user_type } = values;
+          const { title, description, user_type, service } = values;
           const updateValues = {
             title: title.trim(),
             description:description,
             publicData: 
             { 
               user_type,
+              service,
             }
           };
 
@@ -62,6 +67,7 @@ const EditListingDescriptionPanel = props => {
         updateInProgress={updateInProgress}
         fetchErrors={errors}
         user_type ={ user_type}
+        service ={service}
       />
     </div>
   );

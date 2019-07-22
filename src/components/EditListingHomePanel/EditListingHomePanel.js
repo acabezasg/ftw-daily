@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, func, object, string, propTypes } from 'prop-types';
+import { bool, func, object, string } from 'prop-types';
 import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
 import { ensureListing } from '../../util/data';
@@ -23,40 +23,35 @@ const EditListingHomePanel = props => {
     user_type,
   } = props;
 
-  const FEATURES_NAME = 'amenities';
+  const HOME_NAME = 'home';
 
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureListing(listing);
   const { publicData } = currentListing.attributes;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
+  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const publish = isPublished ?"title.":"createListingTitle.";
+  const HomePanelTitle = 'EditListingHomePanel.' + publish + user_name;
   const panelTitle = isPublished ? (
     <FormattedMessage
-      id="EditListingHomePanel.title"
+      id={HomePanelTitle}
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
   ) : (
-    <FormattedMessage id="EditListingHomePanel.createListingTitle" />
+    <FormattedMessage id={HomePanelTitle} />
   );
-
-  const {locations,equipments} = publicData;
-  const initialValues = { locations,equipments };
   
-  // state = {
-  //   selected:[...initialValues]
-  // }
-  // function onClick(flag){
-  //   if()
-  // }
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingHomeForm
         className={css.form}
-        name={FEATURES_NAME}
+        name={HOME_NAME}
         initialValues={{ 
           locations: publicData.locations,
           equipments: publicData.equipments,
+          info: publicData.info,
           bedroom:publicData.bedroom,
           bathroom:publicData.bathroom,
         }} 
@@ -64,6 +59,7 @@ const EditListingHomePanel = props => {
           const { 
             locations = [],
             equipments = [],
+            info = [],
             bedroom,
             bathroom, 
           } = values;
@@ -72,6 +68,7 @@ const EditListingHomePanel = props => {
             publicData: { 
               locations,
               equipments,
+              info,
               bedroom,
               bathroom },
           };
@@ -84,6 +81,7 @@ const EditListingHomePanel = props => {
         fetchErrors={errors}
         locations={config.custom.locations}
         equipments={config.custom.equipments}
+        info={config.custom.info}
         name_equipments="equipments"
         name_locations="locations"
         user_type ={ user_type}

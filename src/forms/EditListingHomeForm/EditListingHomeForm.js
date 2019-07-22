@@ -36,6 +36,8 @@ export class EditListingHomeFormComponent extends Component {
             equipments,
             name_equipments,
             name_locations,
+            user_type,
+            info,
           } = fieldRenderProps;
 
           const errorMessage = updateError ? (
@@ -51,7 +53,7 @@ export class EditListingHomeFormComponent extends Component {
 
           var number = [];
           for(var i=1;i<5;i++){
-            number.push({key:''+i,label:''});
+            number.push({key:i,label:i});
           }
           
 
@@ -84,75 +86,70 @@ export class EditListingHomeFormComponent extends Component {
               // values: {animal},
             })
           );
-
+          
+          const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
           const homeTitle =
             intl.formatMessage({
-              id: 'EditListingHomeForm.homeTitle',
-              // values: {animal},
+              id: 'EditListingHomeForm.homeTitle.'+user_name,
             });
-          // return (
-          //   <Form className={classes} onSubmit={handleSubmit}>
-          //     {errorMessage}
-          //     {/* <div className={css.calendarWrapper}>
-          //       <ManageAvailabilityCalendar
-          //         availability={availability}
-          //         availabilityPlan={availabilityPlan}
-          //         listingId={listingId}
-          //       />
-          //     </div> */}
-
-          //     <Button
-          //       className={css.submitButton}
-          //       type="submit"
-          //       inProgress={submitInProgress}
-          //       disabled={submitDisabled}
-          //       ready={submitReady}
-          //     >
-          //       {saveActionMsg}
-          //     </Button>
-          //   </Form>
-          // );
+          
           return (
             <Form className={classes} onSubmit={handleSubmit}>
               {errorMessage}
               <h3>{homeTitle}</h3>
-              <FieldCheckboxGroup
-                className={css_des.features}
-                id={name_equipments}
-                name={name_equipments}
-                options={equipments}
+              
+              {
+                user_type==0?
+                (
+                  <div>
+                    <FieldCheckboxGroup
+                      className={css_des.features}
+                      id={name_equipments}
+                      name={name_equipments}
+                      options={equipments}
+                    />
+                    <br></br>
+                    <FieldCheckboxGroup
+                      className={css_des.features}
+                      id={name_locations}
+                      name={name_locations}
+                      options={locations}
 
-              />
-              <br></br>
-              <FieldCheckboxGroup
-                className={css_des.features}
-                id={name_locations}
-                name={name_locations}
-                options={locations}
+                    />
+                    <br></br>
+                    <CategoryField
+                      id="bedroom"
+                      name="bedroom"
+                      className={css.category}
+                      categories={number}
+                      intl={intl}
+                      categoryLabel={categoryBedroomLabel}
+                      categoryPlaceholder={categoryBedroomPlaceholder}
+                      categoryRequired={categoryBedroomRequired}
+                    />
 
-              />
-              <br></br>
-              <CategoryField
-                id="bedroom"
-                name="bedroom"
-                className={css.category}
-                categories={number}
-                intl={intl}
-                categoryLabel={categoryBedroomLabel}
-                categoryPlaceholder={categoryBedroomPlaceholder}
-                categoryRequired={categoryBedroomRequired}
-              />
-
-              <CategoryField
-                id="bathroom"
-                name="bathroom"
-                className={css.category}
-                categories={number}
-                intl={intl}
-                categoryLabel={categoryBathroomLabel}
-                categoryPlaceholder={categoryBathroomPlaceholder}
-                categoryRequired={categoryBathroomRequired}
-              />
+                    <CategoryField
+                      id="bathroom"
+                      name="bathroom"
+                      className={css.category}
+                      categories={number}
+                      intl={intl}
+                      categoryLabel={categoryBathroomLabel}
+                      categoryPlaceholder={categoryBathroomPlaceholder}
+                      categoryRequired={categoryBathroomRequired}
+                    />
+                  </div>
+                )
+                :
+                (
+                  <FieldCheckboxGroup
+                    className={css_des.features}
+                    id='info'
+                    name='info'
+                    options={info}
+                  />
+                )
+              }
 
               <Button
                 className={css.submitButton}

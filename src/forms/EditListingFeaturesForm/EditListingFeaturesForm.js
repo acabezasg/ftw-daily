@@ -30,11 +30,11 @@ export class EditListingFeaturesFormComponent extends Component {
     var key_ary = {
       'dog':0,
       'reptiles':1,
-      'farm_animals':2,
-      'cats':3,
-      'rabbits':4,
-      'pet_birds':5,
-      'aquarium_fish':6,
+      'farm':2,
+      'cat':3,
+      'rabbit':4,
+      'bird':5,
+      'fish':6,
       'horse':7,
       'other':8,
     }
@@ -68,13 +68,13 @@ export class EditListingFeaturesFormComponent extends Component {
   init(data,pet_ary,key_ary){
     if(pet_ary && pet_ary.length){
       pet_ary.forEach(function(f,i){
-        data[key_ary[f]] = !data[key_ary[f]]; 
+        data[key_ary[f]] = !data[key_ary[f]];
       })
     }
     return data;
   } 
   render(){
-    return(
+    return( 
       <FinalForm
 
     {...this.props}
@@ -235,9 +235,10 @@ export class EditListingFeaturesFormComponent extends Component {
         })
       );
 
+      const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
       const homeTitle =
         intl.formatMessage({
-          id: 'EditListingFeaturesForm.homeTitle',
+          id: 'EditListingFeaturesForm.homeTitle.'+user_name,
           // values: {animal},
         });
 
@@ -303,10 +304,10 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[1] && user_type?(
+            {this.state.checkFlag[1] && user_type >1?(
                 <CategoryField
-                id="rptile"
-                name="rptile"
+                id="reptiles"
+                name="reptiles"
                 className={css.category}
                 categories={categories[1].weight}
                 intl={intl}
@@ -316,25 +317,13 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[2] && user_type?(
-                <CategoryField
-                id="cat"
-                name="cat"
-                className={css.category}
-                categories={categories[2].weight}
-                intl={intl}
-                categoryLabel={categoryFarmAnimalsLabel}
-                categoryPlaceholder={categoryFarmAnimalsPlaceholder}
-                categoryRequired={categoryFarmAnimalsRequired}
-              />
-              ):null
-            }
-            {this.state.checkFlag[3] && user_type?(
+            
+            {this.state.checkFlag[2] && user_type >1?(
                 <CategoryField
                 id="farm"
                 name="farm"
                 className={css.category}
-                categories={categories[3].weight}
+                categories={categories[2].weight}
                 intl={intl}
                 categoryLabel={categoryCatLabel}
                 categoryPlaceholder={categoryCatPlaceholder}
@@ -342,7 +331,20 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[4] && user_type?(
+            {this.state.checkFlag[3] && user_type >1?(
+                <CategoryField
+                id="cat"
+                name="cat"
+                className={css.category}
+                categories={categories[3].weight}
+                intl={intl}
+                categoryLabel={categoryFarmAnimalsLabel}
+                categoryPlaceholder={categoryFarmAnimalsPlaceholder}
+                categoryRequired={categoryFarmAnimalsRequired}
+              />
+              ):null
+            }
+            {this.state.checkFlag[4] && user_type >1?(
                 <CategoryField
                 id="rabbit"
                 name="rabbit"
@@ -355,7 +357,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[5] && user_type?(
+            {this.state.checkFlag[5] && user_type >1?(
                 <CategoryField
                 id="bird"
                 name="bird"
@@ -368,7 +370,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[6] && user_type?(
+            {this.state.checkFlag[6] && user_type >1?(
                 <CategoryField
                 id="fish"
                 name="fish"
@@ -381,7 +383,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[7] && user_type?(
+            {this.state.checkFlag[7] && user_type >1?(
                 <CategoryField
                 id="horse"
                 name="horse"

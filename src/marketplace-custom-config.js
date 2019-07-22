@@ -24,8 +24,8 @@ export const amenities = [{
     ],
 },
 {
-    key: 'rptile',
-    label: 'Rptiles',
+    key: 'reptiles',
+    label: 'Reptiles',
     weight: [{
             key: 'giant',
             label: '(101+ lbs)',
@@ -221,11 +221,47 @@ export const locations = [
 { key: 'suburbs', label: 'Suburbs' },
 { key: 'rural', label: 'Rural Location' },
 ];
+export const info = [
+    { key: 'travel', label: 'Willing to travel	' },
+    { key: 'admin', label: 'Can Administer Meds' },
+    { key: 'children', label: 'Have children under 18' },
+    { key: 'car', label: 'Car Owner' },
+];
+
+export const service = [
+    { key: 'walking', label: 'Dog Walking' },
+    { key: 'surgeon', label: 'Veterinary Surgeons' },
+    { key: 'groomer', label: 'Pet Groomer' },
+    { key: 'store', label: 'Pet Store' },
+    { key: 'sitter', label: 'Drop in Sitter' },
+    { key: 'food', label: 'Food' },
+];
+
 export const size = [
-{ key: 'giant', label: 'Giant' },
-{ key: 'large', label: 'Large' },
-{ key: 'medium', label: 'Medium' },
-{ key: 'small', label: 'Small' },
+    {
+        key: 'giant',
+        label: 'giant (101+ lbs)',
+    },
+    {
+        key: 'large',
+        label: 'large (41-100 lbs)',
+    },
+    {
+        key: 'medium',
+        label: 'medium (101+ lbs)',
+    },
+    {
+        key: 'small',
+        label: 'small (0-15 lbs)',
+    },
+];
+
+export const rate = [
+    { key: 'h', label: 'Per hour' },
+    { key: 's', label: 'Per Session' },
+    { key: 'd', label: 'Per day' },
+    { key: 'n', label: 'Per night' },
+    { key: 'w', label: 'Per week' },
 ];
 
 // Price filter configuration

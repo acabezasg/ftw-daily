@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, func, object, string, propTypes,array } from 'prop-types';
+import { bool, func, object, string} from 'prop-types';
 import classNames from 'classnames';
 import { FormattedMessage } from 'react-intl';
 import { ensureListing } from '../../util/data';
@@ -8,7 +8,7 @@ import { LISTING_STATE_DRAFT } from '../../util/types';
 import { EditListingFeaturesForm } from '../../forms';
 import config from '../../config';
 import css from './EditListingFeaturesPanel.css';
-import { restElement } from '@babel/types';
+
 
 const EditListingFeaturesPanel = props => {
   const {
@@ -31,24 +31,19 @@ const EditListingFeaturesPanel = props => {
   const { publicData } = currentListing.attributes;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
+  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const publish = isPublished ?"title.":"createListingTitle.";
+  const FeaturesPanelTitle = 'EditListingFeaturesPanel.'+ publish + user_name;
+
   const panelTitle = isPublished ? (
     <FormattedMessage
-      id="EditListingFeaturesPanel.title"
+      id={FeaturesPanelTitle}
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
   ) : (
-    <FormattedMessage id="EditListingFeaturesPanel.createListingTitle" />
+    <FormattedMessage id={FeaturesPanelTitle} />
   );
 
-  const amenities = publicData && publicData.amenities;
-  const initialValues = { amenities };
- 
-  // state = {
-  //   selected:[...initialValues]
-  // }
-  // function onClick(flag){
-  //   if()
-  // }
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
@@ -59,7 +54,7 @@ const EditListingFeaturesPanel = props => {
         initialValues={{
           dog: publicData.dog,
           cat: publicData.cat,
-          rptile: publicData.rptile,
+          reptiles: publicData.reptiles,
           bird: publicData.bird,
           farm: publicData.farm,
           rabbit: publicData.rabbit,
@@ -73,7 +68,7 @@ const EditListingFeaturesPanel = props => {
             amenities = [],
             dog,
             cat,
-            rptile,
+            reptiles,
             bird,
             farm,
             rabbit,
@@ -86,7 +81,7 @@ const EditListingFeaturesPanel = props => {
             { amenities,
               dog,
               cat,
-              rptile,
+              reptiles,
               bird,
               farm,
               rabbit,

@@ -193,6 +193,7 @@ export class ListingPageComponent extends Component {
       amenitiesConfig,
       equipmentsConfig,
       locationsConfig,
+      infoConfig,
     } = this.props;
 
     const listingId = new UUID(rawParams.id);
@@ -431,7 +432,7 @@ export class ListingPageComponent extends Component {
                   />
                   <SectionDescriptionMaybe description={description} />
                   <SectionFeaturesMaybe options={amenitiesConfig} publicData={publicData} size={size}/>
-                  <SectionHomeMaybe options={{options1:equipmentsConfig,options2:locationsConfig}} publicData={publicData} />
+                  <SectionHomeMaybe options={{options1:equipmentsConfig,options2:locationsConfig,options3:infoConfig}} publicData={publicData} />
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}
@@ -492,6 +493,7 @@ ListingPageComponent.defaultProps = {
   amenitiesConfig: config.custom.amenities,
   equipmentsConfig: config.custom.equipments,
   locationsConfig: config.custom.locations,
+  infoConfig: config.custom.info,
 };
 
 ListingPageComponent.propTypes = {

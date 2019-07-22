@@ -202,6 +202,7 @@ class EditListingWizard extends Component {
     } = this.props;
     const tab_ary = params.tab.split('_');
     
+    const service = listing.attributes.publicData.service;
     var user_name;
     var user_type;
     if(tab_ary.length == 2){
@@ -231,12 +232,30 @@ class EditListingWizard extends Component {
     // TODO: PHOTOS panel needs to be the last one since it currently contains PayoutDetailsForm modal
     // All the other panels can be reordered.
    
-    const TABS = user_type >0? [
+    const TABS = user_type == 0? [
       DESCRIPTION,
       FEATURES,
       HOME,
-      ...availabilityMaybe,
       LOCATION,
+      ...availabilityMaybe,
+      PHOTOS,
+      POLICY,
+    ]:user_type == 1?
+    [
+      DESCRIPTION,
+      FEATURES,
+      HOME,
+      LOCATION,
+      ...availabilityMaybe,
+      PRICING,
+      PHOTOS,
+      POLICY,
+    ]:(service == "walking" || service == "sitter")?
+    [
+      DESCRIPTION,
+      FEATURES,
+      LOCATION,
+      ...availabilityMaybe,
       PRICING,
       PHOTOS,
       POLICY,
@@ -244,12 +263,11 @@ class EditListingWizard extends Component {
     [
       DESCRIPTION,
       FEATURES,
-      HOME,
-      ...availabilityMaybe,
       LOCATION,
+      ...availabilityMaybe,
+      PRICING, 
       PHOTOS,
-      POLICY,
-    ];
+    ]; 
    
     const selectedTab = tab_ary[0];
    
