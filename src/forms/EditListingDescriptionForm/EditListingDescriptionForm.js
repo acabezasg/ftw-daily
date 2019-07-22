@@ -105,7 +105,7 @@ const EditListingDescriptionFormComponent = props => (
           {errorMessageUpdateListing}
           {errorMessageShowListing}
           
-          {
+          {/* {
             user_type ==2?
             (
               <FieldTextInput
@@ -113,10 +113,12 @@ const EditListingDescriptionFormComponent = props => (
                 name="business"
                 className={css.title}
                 type="text"
+                label={titleMessage}
+                placeholder={titlePlaceholderMessage}
               />
               
             ):null
-          }
+          } */}
           {
             user_type == 2?
             (
