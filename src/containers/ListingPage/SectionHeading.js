@@ -17,7 +17,7 @@ const SectionHeading = props => {
     onContactUser,
   } = props;
 
-  const unitType = config.bookingUnitType;
+  const unitType = config.bookingUnitType; 
   const isNightly = unitType === LINE_ITEM_NIGHT;
   const isDaily = unitType === LINE_ITEM_DAY;
   const isHourly = unitType === LINE_ITEM_HOUR;
@@ -33,7 +33,7 @@ const SectionHeading = props => {
     : isWeekly
     ? 'ListingPage.perWeek'
     : 'ListingPage.perUnit';
-    
+
   return (
     <div className={css.sectionHeading}>
       <div className={css.desktopPriceContainer}>

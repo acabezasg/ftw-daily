@@ -17,7 +17,7 @@ const SectionHomeMaybe = props => {
   return (
     <div className={css.sectionFeatures}>
     {
-      publicData.user_type== 0?
+      publicData.user_type=== 0?
       (
         <div>
           <h2 className={css.featuresTitle}>
@@ -40,7 +40,7 @@ const SectionHomeMaybe = props => {
             flag = {2}
           />
         </div>
-      ):publicData.user_type == 1?
+      ):publicData.user_type === 1?
       (
         <PropertyGroup
             id="ListingPage.info"

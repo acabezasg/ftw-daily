@@ -64,7 +64,7 @@ class EditListingLocationPanel extends Component {
     const currentListing = ensureOwnListing(listing);
   
     const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-    const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+    const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
     const publish = isPublished ?"title.":"createListingTitle.";
     const LocationPanelTitle = 'EditListingLocationPanel.' + publish + user_name;
       

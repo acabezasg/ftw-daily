@@ -41,7 +41,7 @@ const EditListingAvailabilityPanel = props => {
     ],
   };
   const availabilityPlan = currentListing.attributes.availabilityPlan || defaultAvailabilityPlan;
-  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
   const publish = isPublished ?"title.":"createListingTitle.";
   const AvailabilityPanelTitle = 'EditListingAvailabilityPanel.'+ publish + user_name;
   return (

@@ -153,7 +153,7 @@ export const amenities = [{
 },
 {
     key: 'horse',
-    label: 'Horse',
+    label: 'Horses',
     weight: [{
             key: 'giant',
             label: '(101+ lbs)',

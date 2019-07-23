@@ -192,6 +192,7 @@ export class ListingPageComponent extends Component {
       fetchTimeSlotsError,
       categoriesConfig,
       amenitiesConfig,
+      servicesConfig,
       equipmentsConfig,
       locationsConfig,
       infoConfig,
@@ -240,7 +241,7 @@ export class ListingPageComponent extends Component {
       title = '',
       publicData,
     } = currentListing.attributes;
-
+    const user_type = publicData?publicData.user_type:null;
     const richTitle = (
       <span>
         {richText(title, {
@@ -431,8 +432,8 @@ export class ListingPageComponent extends Component {
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
                   />
-                  <SectionDescriptionMaybe description={description} />
-                  <SectionFeaturesMaybe options={amenitiesConfig} publicData={publicData}/>
+                  <SectionDescriptionMaybe description={description} user_type = {user_type} />
+                  <SectionFeaturesMaybe options={amenitiesConfig} publicData={publicData} servicesConfig = {servicesConfig} />
                   <SectionHomeMaybe options={{options1:equipmentsConfig,options2:locationsConfig,options3:infoConfig}}  publicData={publicData} />
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
@@ -492,6 +493,7 @@ ListingPageComponent.defaultProps = {
   sendEnquiryError: null,
   categoriesConfig: config.custom.categories,
   amenitiesConfig: config.custom.amenities,
+  servicesConfig: config.custom.service,
   equipmentsConfig: config.custom.equipments,
   locationsConfig: config.custom.locations,
   infoConfig: config.custom.info,

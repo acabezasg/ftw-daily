@@ -1,6 +1,4 @@
 import React from 'react';
-import config from '../../config';
-import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
 import {
   LayoutSingleColumn,
@@ -8,15 +6,15 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  ExternalLink,
+
 } from '../../components';
 
 import css from './PetServicesPage.css';
 import image from './signup.jpg';
 
 const PetServicesPage = () => {
-  const { siteTwitterHandle, siteFacebookPage } = config;
-  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
+  // const { siteTwitterHandle, siteFacebookPage } = config;
+  // const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
   // prettier-ignore
   return (
@@ -83,7 +81,7 @@ const PetServicesPage = () => {
                 </p>
 
                 <img className={css.coverImage} src={image} alt="Sign up image." />
-
+                
                 <p>
                   You'll land on our Sign Up page and can choose to sign up with Facebook, Linkedin or by Email.
                 </p>

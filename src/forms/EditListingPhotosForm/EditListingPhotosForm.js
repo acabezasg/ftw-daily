@@ -127,7 +127,7 @@ export class EditListingPhotosFormComponent extends Component {
             invalid || disabled || submitInProgress || imageUploadRequested || ready;
 
           const classes = classNames(css.root, className);
-          const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+          const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
           const addImagesTip =
             intl.formatMessage({
               id: 'EditListingPhotosForm.addImagesTip.'+user_name,

@@ -32,7 +32,7 @@ const EditListingPricingPanel = props => {
   const { price,publicData } = currentListing.attributes;
   const rate = config.custom.rate;
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
   const publish = isPublished ?"title.":"createListingTitle.";
   const PricingPanelTitle = 'EditListingPricingPanel.'+ publish + user_name;
   const panelTitle = isPublished ? (

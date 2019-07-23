@@ -4,7 +4,10 @@ import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
 import { intlShape, injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
+
 import { types as sdkTypes } from '../../util/sdkLoader';
+import { LISTING_STATE_DRAFT, LISTING_STATE_PENDING_APPROVAL, propTypes } from '../../util/types';
+import { ensureListing } from '../../util/data';
 import {
   LISTING_PAGE_PARAM_TYPE_DRAFT,
   LISTING_PAGE_PARAM_TYPE_NEW,
@@ -13,15 +16,12 @@ import {
   createSlug,
 } from '../../util/urlHelpers';
 
-import { LISTING_STATE_DRAFT, LISTING_STATE_PENDING_APPROVAL, propTypes } from '../../util/types';
-import { ensureOwnListing,ensureListing } from '../../util/data';
-
 import { getMarketplaceEntities } from '../../ducks/marketplaceData.duck';
 import { manageDisableScrolling, isScrollingDisabled } from '../../ducks/UI.duck';
 import { stripeAccountClearError, createStripeAccount } from '../../ducks/stripe.duck';
 import { EditListingWizard, NamedRedirect, Page } from '../../components';
 import { TopbarContainer } from '../../containers';
-
+import css from './EditListingPage.css';
 import {
   requestFetchBookings,
   requestFetchAvailabilityExceptions,
@@ -37,21 +37,14 @@ import {
   clearUpdatedTab,
 } from './EditListingPage.duck';
 
-import css from './EditListingPage.css';
-import config from '../../config';
+
+
 
 const { UUID } = sdkTypes;
 
 // N.B. All the presentational content needs to be extracted to their own components
 export class EditListingPageComponent extends Component {
   
-  constructor(props) {
-    super(props);
-    
-  }
-
-  
-
   render(){
     const {
       currentUser,

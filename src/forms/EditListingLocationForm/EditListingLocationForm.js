@@ -10,14 +10,9 @@ import {
   autocompletePlaceSelected,
   composeValidators,
 } from '../../util/validators';
-import {
-  ensureListing,
-  ensureOwnListing,
-  ensureUser,
-  userDisplayNameAsString,
-} from '../../util/data';
+import { ensureOwnListing } from '../../util/data';
 import config from '../../config';
-import { Form, LocationAutocompleteInputField, Button, FieldTextInput,GoogleMap ,FieldCurrencyInput} from '../../components';
+import { Form, LocationAutocompleteInputField, Button, FieldTextInput ,FieldCurrencyInput} from '../../components';
 
 import SectionMapMaybe  from '../../containers/ListingPage/SectionMapMaybe';
 import css from './EditListingLocationForm.css';
@@ -41,8 +36,8 @@ export const EditListingLocationFormComponent = props => (
         listing,
         user_type,
       } = fieldRenderProps;
-
-      const titleRequiredMessage = intl.formatMessage({ id: 'EditListingLocationForm.address' });
+      const user_name = user_type === 2? "service" : user_type === 1 ? "sitter" : "owner";
+      const titleRequiredMessage = intl.formatMessage({ id: 'EditListingLocationForm.address' + '.' + user_name });
       const addressPlaceholderMessage = intl.formatMessage({
         id: 'EditListingLocationForm.addressPlaceholder',
       });

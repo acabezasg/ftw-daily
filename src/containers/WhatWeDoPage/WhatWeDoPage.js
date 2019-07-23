@@ -1,9 +1,7 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { FacebookProvider, EmbeddedPost, Page } from 'react-facebook';
+import { FacebookProvider,Page } from 'react-facebook';
 import { Timeline } from 'react-twitter-widgets';
-import config from '../../config';
-import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
 import {
   LayoutSingleColumn,
@@ -11,7 +9,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  ExternalLink,
+  
 } from '../../components';
 
 import twitterimg from './twitter.png';
@@ -20,10 +18,6 @@ import facebookimg from './facebook.png';
 import css from './WhatWeDoPage.css';
 
 const WhatWeDoPage = () => {
-
-  const { siteTwitterHandle, siteFacebookPage } = config;
-  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
-
   // prettier-ignore
   return (
     <StaticPage

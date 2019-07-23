@@ -1,19 +1,17 @@
 import React,{Component} from 'react';
-import {arrayOf, bool, func, shape, string,array } from 'prop-types';
+import {arrayOf, bool, func, shape, string } from 'prop-types';
 import { compose } from 'redux';
 import { Form as FinalForm } from 'react-final-form';
 import arrayMutators from 'final-form-arrays';
-import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 
-import { maxLength, required, composeValidators } from '../../util/validators';
+import { required, composeValidators } from '../../util/validators';
 import { Button, FieldCheckboxGroup, Form, CategoryField ,FieldTextInput} from '../../components';
-import config from '../../config';
 
 import css from '../EditListingDescriptionForm/EditListingDescriptionForm.css';
-import { S_IFCHR } from 'constants';
-import { empty } from 'rxjs';
+
 
 // function getCategoryID(category,petCategory){
 //   const samelabel = 'EditListingFeaturesForm.category';
@@ -235,7 +233,7 @@ export class EditListingFeaturesFormComponent extends Component {
         })
       );
 
-      const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+      const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
       const homeTitle =
         intl.formatMessage({
           id: 'EditListingFeaturesForm.homeTitle.'+user_name,
@@ -264,18 +262,19 @@ export class EditListingFeaturesFormComponent extends Component {
       const submitInProgress = updateInProgress;
       const submitDisabled = disabled || submitInProgress;
       
-      function get_label(category,kind){
-        var str = 'EditListingFeaturesForm.category';
-        var res;
-        switch(kind){
-          case 0:  res = str+ '.' + category +'.' + 'label';
-          case 1:  res = str+ '.' + category +'.' + 'placeholder';
-          case 2:  res = str+ '.' + category +'.' + 'required';
-        }
-        return intl.formatMessage({
-          id: res,
-        });
-      }
+      // function get_label(category,kind){
+      //   var str = 'EditListingFeaturesForm.category';
+      //   var res;
+      //   switch(kind){
+      //     case 0:  res = str+ '.' + category +'.' + 'label'; break;
+      //     case 1:  res = str+ '.' + category +'.' + 'placeholder'; break;
+      //     case 2:  res = str+ '.' + category +'.' + 'required'; break;
+      //     default: break;
+      //   }
+      //   return intl.formatMessage({
+      //     id: res,
+      //   });
+      // }
       
       return (
         <Form className={classes} onSubmit={handleSubmit}>

@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import { arrayOf, bool, node, shape, string,func } from 'prop-types';
+import { arrayOf, bool, node, shape, string } from 'prop-types';
 import classNames from 'classnames';
 import { FieldArray } from 'react-final-form-arrays';
 import { FieldCheckbox, ValidationError } from '../../components';
@@ -16,7 +16,7 @@ import { FieldCheckbox, ValidationError } from '../../components';
 import css from './FieldCheckboxGroup.css';
 
 const FieldCheckboxRenderer = props => {
-  const { className, rootClassName, label, twoColumns,threeColumns, id, fields, options, meta,handleChange } = props;
+  const { className, rootClassName, label,threeColumns, id, fields, options, meta,handleChange } = props;
 
   const classes = classNames(rootClassName || css.root, className);
   // const listClasses = twoColumns ? classNames(css.list, css.twoColumns) : css.list;

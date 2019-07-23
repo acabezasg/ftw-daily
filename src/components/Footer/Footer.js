@@ -8,7 +8,7 @@ import {
   IconSocialMediaFacebook,
   IconSocialMediaInstagram,
   IconSocialMediaTwitter,
-  Logo,
+  // Logo,
   ExternalLink,
   NamedLink,
 } from '../../components';

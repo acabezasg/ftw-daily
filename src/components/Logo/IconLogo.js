@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import LogoImage from './mobilelogo.png';
 
 const IconLogo = props => {
-  const { className, ...rest } = props;
+  const { className } = props;
 
   return (
-    <img src={LogoImage} className={className} />
+    <img src={LogoImage} className={className} alt="Image doesn't exist"/>
   );
 };
 

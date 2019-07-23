@@ -58,28 +58,23 @@ const PropertyGroup = props => {
   const checked = checkSelected(options, selectedOptions);
   const weightIndexAry = ['giant','large','medium','small'];
   
-  return publicData !== null && flag == 3?(
+  return publicData !== null && flag === 3?(
     
     <ul className={listClasses}>
-      {console.log('publicData',publicData)}
-      {console.log('checked',checked)}
-      {console.log('options',options)}
+      
       {checked.map(option => {
         var weight=null;
         if(option.isSelected){
-          if(String(option.key).toLowerCase() == "other"){
+          if(String(option.key).toLowerCase() === "other"){
             weight = publicData['other'];
           }else{
             
             options.forEach(function(e,i){
               
-              if(String(e.key).toLowerCase() == String(option.key).toLowerCase()){
-               
+              if(String(e.key).toLowerCase() === String(option.key).toLowerCase()){
                 var weightLabel = publicData[option.key];
-                {console.log('weightLabel',weightLabel)}
                 if(weightLabel != null ){
                   var index = weightIndexAry.indexOf(weightLabel);
-                  {console.log('index',index,e.weight[index])}
                   weight = e.weight[index].key + e.weight[index].label;
                 }
                 
@@ -88,8 +83,8 @@ const PropertyGroup = props => {
           
           }
         }
-        console.log('weight',weight);
-        if(weight == null){
+       
+        if(weight === null){
           return (
             <Item key={`${id}.${option.key}`} label={String(option.label)} isSelected={option.isSelected} />
           )
@@ -100,25 +95,23 @@ const PropertyGroup = props => {
         }
       })}
     </ul>
-    
-   
   )
   :
   (
     <div>
       <ul className={listClasses}>
         {checked.map(option => {
-          console.log("loop",option.key,)
+          
           return (
             <Item key={`${id}.${option.key}`} label={option.label} isSelected={option.isSelected} />
           )
         })}
       </ul>
       {
-        flag == 2?(
-          <div>
-          {publicData.bedroom?(<div><label>Bedroom => {publicData.bedroom}</label></div>):null}
-          {publicData.bathroom?(<div><label>Bathroom => {publicData.bathroom}</label></div>):null}
+        flag === 2?(
+          <div className={css.infoPanel}>
+          {publicData.bedroom?(<div><label className={css.infoItem}><span className={ css.infoItemLabel }> Bedroom </span> { publicData.bedroom }</label></div>):null}
+          {publicData.bathroom?(<div><label className={css.infoItem}><span className={ css.infoItemLabel }> Bathroom </span> { publicData.bathroom }</label></div>):null}
           </div>
         ):null
       }

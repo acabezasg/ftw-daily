@@ -92,3 +92,15 @@
     );
   }
 }
+
+.infoPanel{
+  padding: 25px 15px 20px 15px;
+}
+.infoItem{
+  font-size: 18px 
+}
+
+.infoItemLabel{
+  padding: 3px;
+  font: bold 20px #4a4a4a;
+}

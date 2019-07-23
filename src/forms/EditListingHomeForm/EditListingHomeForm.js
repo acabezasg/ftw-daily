@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, func, object, string } from 'prop-types';
+import { bool, func, string } from 'prop-types';
 import { compose } from 'redux';
 import { Form as FinalForm } from 'react-final-form';
 import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
@@ -84,7 +84,7 @@ export class EditListingHomeFormComponent extends Component {
             })
           );
           
-          const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+          const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
           const homeTitle =
             intl.formatMessage({
               id: 'EditListingHomeForm.homeTitle.'+user_name,
@@ -96,7 +96,7 @@ export class EditListingHomeFormComponent extends Component {
               <h3>{homeTitle}</h3>
               
               {
-                user_type==0?
+                user_type===0?
                 (
                   <div>
                     <FieldCheckboxGroup

@@ -1,6 +1,4 @@
 import React from 'react';
-import config from '../../config';
-import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
 import {
   ContactForm,
@@ -10,14 +8,14 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  ExternalLink,
+  // ExternalLink,
 } from '../../components';
 
 import css from './ContactPage.css';
 
 const ContactPage = () => {
-  const { siteTwitterHandle, siteFacebookPage } = config;
-  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
+  // const { siteTwitterHandle, siteFacebookPage } = config;
+  // const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
   // prettier-ignore
   return (
