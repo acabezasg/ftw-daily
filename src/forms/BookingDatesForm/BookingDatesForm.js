@@ -58,6 +58,8 @@ export class BookingDatesFormComponent extends Component {
         </div>
       );
     }
+    console.log('unit-price vs config.currency => ', unitPrice.currency,config.currency);
+  
     if (unitPrice.currency !== config.currency) {
       return (
         <div className={classes}>

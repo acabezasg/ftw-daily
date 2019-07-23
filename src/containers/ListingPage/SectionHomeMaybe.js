@@ -37,7 +37,7 @@ const SectionHomeMaybe = props => {
             selectedOptions={selectedOptions2}
             twoColumns={true}
             publicData = {publicData}
-            flag = {false}
+            flag = {2}
           />
         </div>
       ):publicData.user_type == 1?

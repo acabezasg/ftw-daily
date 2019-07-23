@@ -31,7 +31,39 @@
   /* Class handle for primary button state styles */
 }
 .secondaryButton {
-  /* Class handle for secondary button state styles */
+  
+}
+.orderTypeButton{
+  
+  text-decoration: none !important;
+  &:hover{
+    background-color: #41a6df; 
+    color: #fff; 
+    border: none !important;
+    text-decoration: none !important;
+  }
+}
+.orderTypeButton_first{
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  text-decoration: none !important;
+  &:hover{
+    background-color: #41a6df; 
+    color: #fff; 
+    border: none !important;
+    text-decoration: none !important;
+  }
+}
+.orderTypeButton_last{
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  text-decoration: none !important;
+  &:hover{
+    background-color: #41a6df; 
+    color: #fff; 
+    border: none !important;
+    text-decoration: none !important;
+  }
 }
 
 .inProgress {

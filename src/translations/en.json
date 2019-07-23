@@ -266,7 +266,9 @@
   "EditListingAvailabilityForm.bookedDay": "Booked",
   "EditListingAvailabilityForm.updateFailed": "Failed to update listing. Please try again.",
 
-  "EditListingAvailabilityPanel.title": "Edit the availability of {listingTitle}",
+  "EditListingAvailabilityPanel.title.owner": "Edit the availability of {listingTitle}",
+  "EditListingAvailabilityPanel.title.sitter": "Edit the availability of {listingTitle}",
+  "EditListingAvailabilityPanel.title.service": "Edit the availability of {listingTitle}",
   "EditListingAvailabilityPanel.homeTitle.owner": "Edit the availability of {listingTitle}",
   "EditListingAvailabilityPanel.homeTitle.sitter": "Please select your available dates from the Calendar",
   "EditListingAvailabilityPanel.homeTitle.service": "Edit the availability of {listingTitle}",

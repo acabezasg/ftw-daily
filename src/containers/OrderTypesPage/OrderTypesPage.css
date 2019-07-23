@@ -178,6 +178,13 @@
   bottom: 2px;
 }
 
+.headTitle{
+  font-size: 30px;
+  color: #fff;
+}
+.headTitle .banner{
+  color:  #41a6df; 
+}
 @media (max-width: 750px) {
   .trustTw, .trustFb {
     width: 100% !important;

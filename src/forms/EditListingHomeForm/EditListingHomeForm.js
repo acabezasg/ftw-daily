@@ -5,9 +5,9 @@ import { Form as FinalForm } from 'react-final-form';
 import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
-import { maxLength, required, composeValidators } from '../../util/validators';
+import { required } from '../../util/validators';
 import { Button, FieldCheckboxGroup, Form, CategoryField } from '../../components';
-import ManageAvailabilityCalendar from './ManageAvailabilityCalendar';
+
 import css from './EditListingHomeForm.css';
 import css_des from '../EditListingDescriptionForm/EditListingDescriptionForm.css';
 
@@ -29,9 +29,6 @@ export class EditListingHomeFormComponent extends Component {
             updated,
             updateError,
             updateInProgress,
-            availability,
-            availabilityPlan,
-            listingId,
             locations,
             equipments,
             name_equipments,
@@ -179,7 +176,6 @@ EditListingHomeFormComponent.propTypes = {
   updated: bool.isRequired,
   updateError: propTypes.error,
   updateInProgress: bool.isRequired,
-  availability: object.isRequired,
 };
 
 export default compose(injectIntl)(EditListingHomeFormComponent);

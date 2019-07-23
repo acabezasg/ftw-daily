@@ -42,6 +42,7 @@ class PageComponent extends Component {
     // handling both dragover and drop events.
     document.addEventListener('dragover', preventDefault);
     document.addEventListener('drop', preventDefault);
+    
   }
 
   componentWillUnmount() {

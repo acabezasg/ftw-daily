@@ -27,7 +27,7 @@ import EditListingWizardTab, {
 import css from './EditListingWizard.css';
 
 // Show availability calendar only if environment variable availabilityEnabled is true
-const availabilityMaybe = config.enableAvailability ? [AVAILABILITY] : [];
+const availabilityMaybe = config.enableAvailability ? [AVAILABILITY] : [AVAILABILITY];
 
 
 

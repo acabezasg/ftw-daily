@@ -52,56 +52,77 @@ const Item = props => {
 };
 
 const PropertyGroup = props => {
-  const { rootClassName, className, id, options, selectedOptions, twoColumns,publicData, flag,size } = props;
+  const { rootClassName, className, id, options, selectedOptions, twoColumns,publicData, flag } = props;
   const classes = classNames(rootClassName || css.root, className);
   const listClasses = twoColumns ? classNames(classes, css.twoColumns) : classes;
-
   const checked = checkSelected(options, selectedOptions);
-  // const get_size = (key) => {
-  //   return 
-  // }
-  return publicData !== null && flag?(
+  const weightIndexAry = ['giant','large','medium','small'];
+  
+  return publicData !== null && flag == 3?(
+    
     <ul className={listClasses}>
-      
+      {console.log('publicData',publicData)}
+      {console.log('checked',checked)}
+      {console.log('options',options)}
       {checked.map(option => {
-        
-        var weight="";
-        var weight_en="";
-
-        if(String(option.key).toLowerCase() == "other"){
-          weight_en = publicData['other'];
-        }else{
-          size.forEach(function(e,i){
-            if(String(e.key).toLowerCase() == String(publicData[option.key]).toLowerCase()){
-              weight = e.label;
-              console.log('size',size,weight);
-              weight_en = publicData[option.key]?publicData[option.key]:'';
-              return;
-            }
-          })
-         
+        var weight=null;
+        if(option.isSelected){
+          if(String(option.key).toLowerCase() == "other"){
+            weight = publicData['other'];
+          }else{
+            
+            options.forEach(function(e,i){
+              
+              if(String(e.key).toLowerCase() == String(option.key).toLowerCase()){
+               
+                var weightLabel = publicData[option.key];
+                {console.log('weightLabel',weightLabel)}
+                if(weightLabel != null ){
+                  var index = weightIndexAry.indexOf(weightLabel);
+                  {console.log('index',index,e.weight[index])}
+                  weight = e.weight[index].key + e.weight[index].label;
+                }
+                
+              }
+            })
+          
+          }
         }
-        console.log('option',option);
-        console.log( 'publicData',publicData);
-        console.log( 'size',size);
-        console.log( 'weight_en,weight',weight_en,weight);
-        return (
-          <Item key={`${id}.${option.key}`} label={String(option.label) +' => '+ String(weight_en) + String(weight)} isSelected={option.isSelected} />
-        )
-
+        console.log('weight',weight);
+        if(weight == null){
+          return (
+            <Item key={`${id}.${option.key}`} label={String(option.label)} isSelected={option.isSelected} />
+          )
+        }else{
+          return (
+            <Item key={`${id}.${option.key}`} label={String(option.label) +' => '+ String(weight)} isSelected={option.isSelected} />
+          )
+        }
       })}
     </ul>
+    
+   
   )
   :
   (
-    <ul className={listClasses}>
-      {checked.map(option => {
-        console.log("loop",option.key,)
-        return (
-          <Item key={`${id}.${option.key}`} label={option.label} isSelected={option.isSelected} />
-        )
-      })}
-    </ul>
+    <div>
+      <ul className={listClasses}>
+        {checked.map(option => {
+          console.log("loop",option.key,)
+          return (
+            <Item key={`${id}.${option.key}`} label={option.label} isSelected={option.isSelected} />
+          )
+        })}
+      </ul>
+      {
+        flag == 2?(
+          <div>
+          {publicData.bedroom?(<div><label>Bedroom => {publicData.bedroom}</label></div>):null}
+          {publicData.bathroom?(<div><label>Bathroom => {publicData.bathroom}</label></div>):null}
+          </div>
+        ):null
+      }
+    </div>
   )
 };
 

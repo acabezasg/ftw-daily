@@ -37,7 +37,7 @@ class EditListingPhotosPanel extends Component {
     const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
     const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
     const publish = isPublished ?"title.":"createListingTitle.";
-    const PhotoPanelTitle = 'EditListingPhotoPanel.' + publish + user_name;
+    const PhotoPanelTitle = 'EditListingPhotosPanel.' + publish + user_name;
     const panelTitle = isPublished ? (
       <FormattedMessage
         id={PhotoPanelTitle}
@@ -61,7 +61,7 @@ class EditListingPhotosPanel extends Component {
           onSubmit={values => {
             const { addImage, ...updateValues } = values;
             onSubmit(updateValues);
-          }}
+          }} 
           onChange={onChange}
           onUpdateImageOrder={onUpdateImageOrder}
           onRemoveImage={onRemoveImage}
