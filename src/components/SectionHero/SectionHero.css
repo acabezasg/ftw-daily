@@ -96,7 +96,7 @@
 
   @media (--viewportMedium) {
     max-width: 100%;
-    margin: 0 0 45px 0;
+    margin: 30px 0 44px 0 !important;
   }
 }
 

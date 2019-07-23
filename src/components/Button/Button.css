@@ -9,6 +9,7 @@
 
 .primaryButtonRoot {
   @apply --marketplaceButtonStylesPrimary;
+  text-decoration: none !important;
 
   /* Clear padding that is set for link elements looking like buttons */
   padding: 0;
@@ -29,9 +30,13 @@
 
 .primaryButton {
   /* Class handle for primary button state styles */
+  text-decoration: none !important;
+}
+.orderTypeButton_first:active, .orderTypeButton_first:active, .orderTypeButton_first:focus {
+  text-decoration: none !important;
 }
 .secondaryButton {
-  
+  text-decoration: none !important;
 }
 .orderTypeButton{
   

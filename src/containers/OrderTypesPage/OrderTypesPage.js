@@ -45,7 +45,7 @@ const OrderTypesPage = (props) => {
 
           <div className={css.staticPageWrapper}>
             <div className={css.sectionContent}>
-              <h2 >Select category</h2>
+              <h2 >Select category:</h2>
   
               <div>
                 <div name="category">
