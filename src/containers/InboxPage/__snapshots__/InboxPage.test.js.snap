@@ -108,7 +108,7 @@ exports[`InboxPage matches snapshot 1`] = `
                   "lastTransitionedAt": 2017-01-15T00:00:00.000Z,
                   "lineItems": Array [
                     Object {
-                      "code": "line-item/night",
+                      "code": "n",
                       "includeFor": Array [
                         "customer",
                         "provider",
@@ -225,7 +225,7 @@ exports[`InboxPage matches snapshot 1`] = `
               }
             }
             type="order"
-            unitType="line-item/night"
+            unitType="n"
           />
         </li>
         <li
@@ -261,7 +261,7 @@ exports[`InboxPage matches snapshot 1`] = `
                   "lastTransitionedAt": 2016-01-15T00:00:00.000Z,
                   "lineItems": Array [
                     Object {
-                      "code": "line-item/night",
+                      "code": "n",
                       "includeFor": Array [
                         "customer",
                         "provider",
@@ -378,7 +378,7 @@ exports[`InboxPage matches snapshot 1`] = `
               }
             }
             type="order"
-            unitType="line-item/night"
+            unitType="n"
           />
         </li>
       </ul>
@@ -560,7 +560,7 @@ exports[`InboxPage matches snapshot 3`] = `
                   "lastTransitionedAt": 2017-01-15T00:00:00.000Z,
                   "lineItems": Array [
                     Object {
-                      "code": "line-item/night",
+                      "code": "n",
                       "includeFor": Array [
                         "customer",
                         "provider",
@@ -677,7 +677,7 @@ exports[`InboxPage matches snapshot 3`] = `
               }
             }
             type="sale"
-            unitType="line-item/night"
+            unitType="n"
           />
         </li>
         <li
@@ -713,7 +713,7 @@ exports[`InboxPage matches snapshot 3`] = `
                   "lastTransitionedAt": 2016-01-15T00:00:00.000Z,
                   "lineItems": Array [
                     Object {
-                      "code": "line-item/night",
+                      "code": "n",
                       "includeFor": Array [
                         "customer",
                         "provider",
@@ -830,7 +830,7 @@ exports[`InboxPage matches snapshot 3`] = `
               }
             }
             type="sale"
-            unitType="line-item/night"
+            unitType="n"
           />
         </li>
       </ul>

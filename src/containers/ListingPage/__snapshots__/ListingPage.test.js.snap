@@ -343,7 +343,7 @@ exports[`ListingPage matches snapshot 1`] = `
                 }
               />
             }
-            unitType="line-item/night"
+            unitType="n"
           />
         </div>
       </div>

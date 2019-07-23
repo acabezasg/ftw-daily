@@ -310,7 +310,7 @@ propTypes.stripeAccount = shape({
 
 export const LINE_ITEM_NIGHT = 'n';
 export const LINE_ITEM_DAY = 'd';
-export const LINE_ITEM_UNITS = 'u';
+export const LINE_ITEM_UNITS = 'u'; 
 export const LINE_ITEM_HOUR = 'h';
 export const LINE_ITEM_SESSION = 's';
 export const LINE_ITEM_WEEK = 'w';

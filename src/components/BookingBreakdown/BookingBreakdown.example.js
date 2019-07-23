@@ -65,7 +65,7 @@ export const Checkout = {
       payoutTotal: new Money(9000, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(2),
           unitPrice: new Money(4500, CURRENCY),
@@ -91,7 +91,7 @@ export const CustomerOrder = {
       payoutTotal: new Money(9000, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(2),
           unitPrice: new Money(4500, CURRENCY),
@@ -117,7 +117,7 @@ export const ProviderSale = {
       payoutTotal: new Money(7000, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(2),
           unitPrice: new Money(4500, CURRENCY),
@@ -150,7 +150,7 @@ export const ProviderSaleZeroCommission = {
       payoutTotal: new Money(9000, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(2),
           unitPrice: new Money(4500, CURRENCY),
@@ -183,7 +183,7 @@ export const ProviderSaleSingleNight = {
       payoutTotal: new Money(2500, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(1),
           unitPrice: new Money(4500, CURRENCY),
@@ -217,7 +217,7 @@ export const ProviderSalePreauthorized = {
       payoutTotal: new Money(2500, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(1),
           unitPrice: new Money(4500, CURRENCY),
@@ -251,7 +251,7 @@ export const ProviderSaleAccepted = {
       payoutTotal: new Money(2500, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(1),
           unitPrice: new Money(4500, CURRENCY),
@@ -285,7 +285,7 @@ export const ProviderSaleDeclined = {
       payoutTotal: new Money(2500, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(1),
           unitPrice: new Money(4500, CURRENCY),
@@ -319,7 +319,7 @@ export const ProviderSaleAutoDeclined = {
       payoutTotal: new Money(2500, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(1),
           unitPrice: new Money(4500, CURRENCY),
@@ -353,7 +353,7 @@ export const ProviderSaleDelivered = {
       payoutTotal: new Money(2500, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(1),
           unitPrice: new Money(4500, CURRENCY),
@@ -387,7 +387,7 @@ export const ProviderSaleCanceled = {
       payoutTotal: new Money(0, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(1),
           unitPrice: new Money(4500, CURRENCY),
@@ -395,7 +395,7 @@ export const ProviderSaleCanceled = {
           reversal: false,
         },
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(-1),
           unitPrice: new Money(4500, CURRENCY),
@@ -437,7 +437,7 @@ export const SingleDay = {
       payoutTotal: new Money(4500, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/day',
+          code: 'd',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(1),
           unitPrice: new Money(4500, CURRENCY),
@@ -463,7 +463,7 @@ export const MultipleDays = {
       payoutTotal: new Money(9000, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/day',
+          code: 'd',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(2),
           unitPrice: new Money(4500, CURRENCY),
@@ -515,7 +515,7 @@ export const CustomPricing = {
       payoutTotal: new Money(12600, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(2),
           unitPrice: new Money(4500, CURRENCY),
@@ -565,7 +565,7 @@ export const CustomPricingWithRefund = {
       payoutTotal: new Money(0, CURRENCY),
       lineItems: [
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(2),
           unitPrice: new Money(4500, CURRENCY),
@@ -573,7 +573,7 @@ export const CustomPricingWithRefund = {
           reversal: false,
         },
         {
-          code: 'line-item/night',
+          code: 'n',
           includeFor: ['customer', 'provider'],
           quantity: new Decimal(-2),
           unitPrice: new Money(4500, CURRENCY),

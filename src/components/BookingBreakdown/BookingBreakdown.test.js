@@ -47,7 +47,7 @@ describe('BookingBreakdown', () => {
           payoutTotal: new Money(2000, 'USD'),
           lineItems: [
             {
-              code: 'line-item/night',
+              code: 'n',
               includeFor: ['customer', 'provider'],
               quantity: new Decimal(2),
               lineTotal: new Money(2000, 'USD'),
@@ -76,7 +76,7 @@ describe('BookingBreakdown', () => {
           payoutTotal: new Money(2000, 'USD'),
           lineItems: [
             {
-              code: 'line-item/night',
+              code: 'n',
               includeFor: ['customer', 'provider'],
               quantity: new Decimal(2),
               lineTotal: new Money(2000, 'USD'),
@@ -105,7 +105,7 @@ describe('BookingBreakdown', () => {
           payoutTotal: new Money(1800, 'USD'),
           lineItems: [
             {
-              code: 'line-item/night',
+              code: 'n',
               includeFor: ['customer', 'provider'],
               quantity: new Decimal(2),
               lineTotal: new Money(2000, 'USD'),
@@ -141,7 +141,7 @@ describe('BookingBreakdown', () => {
           payoutTotal: new Money(0, 'USD'),
           lineItems: [
             {
-              code: 'line-item/night',
+              code: 'n',
               includeFor: ['customer', 'provider'],
               quantity: new Decimal(2),
               lineTotal: new Money(2000, 'USD'),
@@ -149,7 +149,7 @@ describe('BookingBreakdown', () => {
               reversal: false,
             },
             {
-              code: 'line-item/night',
+              code: 'n',
               includeFor: ['customer', 'provider'],
               quantity: new Decimal(-2),
               lineTotal: new Money(-2000, 'USD'),
