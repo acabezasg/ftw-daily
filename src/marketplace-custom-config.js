@@ -7,19 +7,19 @@ export const amenities = [{
     label: 'Dogs',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },
@@ -28,19 +28,19 @@ export const amenities = [{
     label: 'Reptiles',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },
@@ -49,19 +49,19 @@ export const amenities = [{
     label: 'Farm Animals',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },
@@ -70,19 +70,19 @@ export const amenities = [{
     label: 'Cats',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },
@@ -92,19 +92,19 @@ export const amenities = [{
     label: 'Rabbits',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },
@@ -114,19 +114,19 @@ export const amenities = [{
     label: 'Pet Birds',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },
@@ -135,19 +135,19 @@ export const amenities = [{
     label: 'Aquarium Fish',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },
@@ -156,19 +156,19 @@ export const amenities = [{
     label: 'Horses',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },
@@ -177,19 +177,19 @@ export const amenities = [{
     label: 'Other (Please state)',
     weight: [{
             key: 'giant',
-            label: '(101+ lbs)',
+            label: 'Giant (101+ lbs)',
         },
         {
             key: 'large',
-            label: '(41-100 lbs)',
+            label: 'Large (41-100 lbs)',
         },
         {
             key: 'medium',
-            label: '(101+ lbs)',
+            label: 'Medium (101+ lbs)',
         },
         {
             key: 'small',
-            label: '(0-15 lbs)',
+            label: 'Small (0-15 lbs)',
         },
     ],
 },

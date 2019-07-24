@@ -12,7 +12,7 @@ const SectionHomeMaybe = props => {
   }
  
   const selectedOptions1 = publicData && publicData.equipments ? publicData.equipments : [];
-  const selectedOptions2 = publicData && publicData.locations ? publicData.locations : [];
+  const selectedOptions2 = publicData && publicData.locations ? publicData.locations : []; 
   const selectedOptions3 = publicData && publicData.info ? publicData.info : [];
   return (
     <div className={css.sectionFeatures}>
@@ -42,14 +42,19 @@ const SectionHomeMaybe = props => {
         </div>
       ):publicData.user_type === 1?
       (
-        <PropertyGroup
-            id="ListingPage.info"
-            options={options3}
-            selectedOptions={selectedOptions3}
-            twoColumns={true}
-            publicData = {publicData}
-            flag = {false}
-          />
+        <div>
+          <h2 className={css.featuresTitle}>
+            <FormattedMessage id="ListingPage.usefulTitle" />
+          </h2>
+          <PropertyGroup
+              id="ListingPage.info"
+              options={options3}
+              selectedOptions={selectedOptions3}
+              twoColumns={true}
+              publicData = {publicData}
+              flag = {false}
+            />
+        </div>
       ):null
     }
     </div>

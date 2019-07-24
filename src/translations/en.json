@@ -512,6 +512,9 @@
   "ListingCard.unsupportedPriceTitle": "Unsupported currency ({currency})",
 
   "ListingPage.homeTitle": "About your home",
+  "ListingPage.usefulTitle": "Useful informations",
+  "ListingPage.serviceTitle": "About service",
+  "ListingPage.sizeTitle": "Dog sizes",
   "ListingPage.bookingSubTitle": "Start by choosing your dates.",
   "ListingPage.bookingTitle": "Book {title}",
   "ListingPage.closedListing": "This listing has been closed and can't be booked.",

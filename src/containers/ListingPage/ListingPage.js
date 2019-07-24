@@ -193,6 +193,7 @@ export class ListingPageComponent extends Component {
       categoriesConfig,
       amenitiesConfig,
       servicesConfig,
+      sizeConfig,
       equipmentsConfig,
       locationsConfig,
       infoConfig,
@@ -433,7 +434,7 @@ export class ListingPageComponent extends Component {
                     onContactUser={this.onContactUser}
                   />
                   <SectionDescriptionMaybe description={description} user_type = {user_type} />
-                  <SectionFeaturesMaybe options={amenitiesConfig} publicData={publicData} servicesConfig = {servicesConfig} />
+                  <SectionFeaturesMaybe options={{options1:servicesConfig,options2:amenitiesConfig,options3:sizeConfig}} publicData={publicData} />
                   <SectionHomeMaybe options={{options1:equipmentsConfig,options2:locationsConfig,options3:infoConfig}}  publicData={publicData} />
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
@@ -492,6 +493,7 @@ ListingPageComponent.defaultProps = {
   fetchTimeSlotsError: null,
   sendEnquiryError: null,
   categoriesConfig: config.custom.categories,
+  sizeConfig: config.custom.amenities[0].weight,
   amenitiesConfig: config.custom.amenities,
   servicesConfig: config.custom.service,
   equipmentsConfig: config.custom.equipments,

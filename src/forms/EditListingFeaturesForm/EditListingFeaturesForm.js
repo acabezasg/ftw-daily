@@ -291,7 +291,7 @@ export class EditListingFeaturesFormComponent extends Component {
           
           
           {this.state.checkFlag[0]?(
-                <CategoryField
+              <CategoryField
                 id="dog"
                 name="dog"
                 className={css.category}
@@ -303,7 +303,7 @@ export class EditListingFeaturesFormComponent extends Component {
               />
               ):null
             }
-            {this.state.checkFlag[1] && user_type >1?(
+            {/* {this.state.checkFlag[1] && user_type >1?(
                 <CategoryField
                 id="reptiles"
                 name="reptiles"
@@ -394,7 +394,7 @@ export class EditListingFeaturesFormComponent extends Component {
                 categoryRequired={categoryHorseRequired}
               /> 
               ):null
-            }
+            } */}
             {this.state.checkFlag[8]?(
                 <FieldTextInput
                 id="other"
