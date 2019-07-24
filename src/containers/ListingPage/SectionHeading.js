@@ -15,6 +15,7 @@ const SectionHeading = props => {
     hostLink,
     showContactUser,
     onContactUser,
+    user_type,
   } = props;
 
   const unitType = config.bookingUnitType; 
@@ -36,14 +37,20 @@ const SectionHeading = props => {
 
   return (
     <div className={css.sectionHeading}>
-      <div className={css.desktopPriceContainer}>
-        <div className={css.desktopPriceValue} title={priceTitle}>
-          {formattedPrice}
-        </div>
-        <div className={css.desktopPerUnit}>
-          <FormattedMessage id={unitTranslationKey} /> 
-        </div>
-      </div>
+      {
+        user_type != 0 ?
+        (
+          <div className={css.desktopPriceContainer}>
+            <div className={css.desktopPriceValue} title={priceTitle}>
+              {formattedPrice}
+            </div>
+            <div className={css.desktopPerUnit}>
+              <FormattedMessage id={unitTranslationKey} /> 
+            </div>
+          </div>              
+        )
+        :null
+      }
       <div className={css.heading}>
         <h1 className={css.title}>{richTitle}</h1>
         <div className={css.author}>
