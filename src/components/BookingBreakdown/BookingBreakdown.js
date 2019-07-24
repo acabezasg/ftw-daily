@@ -27,6 +27,7 @@ import LineItemUnknownItemsMaybe from './LineItemUnknownItemsMaybe';
 import css from './BookingBreakdown.css';
 
 export const BookingBreakdownComponent = props => {
+  console.log('props',props);
   const { rootClassName, className, userRole, unitType, transaction, booking, intl } = props;
 
   const isCustomer = userRole === 'customer';
@@ -44,42 +45,47 @@ export const BookingBreakdownComponent = props => {
     <div className={classes}>
       <LineItemUnitPriceMaybe transaction={transaction} unitType={unitType} intl={intl} />
       <LineItemBookingPeriod transaction={transaction} booking={booking} unitType={unitType} />
-      <LineItemUnitsMaybe transaction={transaction} unitType={unitType} />
+      <LineItemUnitsMaybe transaction={transaction} unitType={unitType}/>
 
-      <LineItemUnknownItemsMaybe transaction={transaction} intl={intl} />
-
-      <LineItemSubTotalMaybe
+      {/* <LineItemUnknownItemsMaybe transaction={transaction} intl={intl} unitType={unitType}/> */}
+     
+      {/* <LineItemSubTotalMaybe
         transaction={transaction}
         unitType={unitType}
         userRole={userRole}
         intl={intl}
+        
       />
-      <LineItemRefundMaybe transaction={transaction} intl={intl} />
+      <LineItemRefundMaybe transaction={transaction} intl={intl} unitType={unitType}/>
 
       <LineItemCustomerCommissionMaybe
         transaction={transaction}
         isCustomer={isCustomer}
         intl={intl}
+        unitType={unitType}
       />
       <LineItemCustomerCommissionRefundMaybe
         transaction={transaction}
         isCustomer={isCustomer}
         intl={intl}
+        unitType={unitType}
       />
 
       <LineItemProviderCommissionMaybe
         transaction={transaction}
         isProvider={isProvider}
         intl={intl}
+        unitType={unitType}
       />
-      <LineItemProviderCommissionRefundMaybe
+      <LineItemProviderCommissionRefundMaybe 
         transaction={transaction}
         isProvider={isProvider}
         intl={intl}
-      />
+        unitType={unitType}
+      /> */}
 
       <hr className={css.totalDivider} />
-      <LineItemTotalPrice transaction={transaction} isProvider={isProvider} intl={intl} />
+      <LineItemTotalPrice transaction={transaction} isProvider={isProvider} intl={intl} unitType={unitType} />
       {hasCommissionLineItem ? (
         <span className={css.feeInfo}>
           <FormattedMessage id="BookingBreakdown.commissionFeeNote" />
@@ -96,7 +102,7 @@ BookingBreakdownComponent.propTypes = {
   className: string,
 
   userRole: oneOf(['customer', 'provider']).isRequired,
-  unitType: propTypes.bookingUnitType.isRequired,
+  // unitType: propTypes.bookingUnitType.isRequired,
   transaction: propTypes.transaction.isRequired,
   booking: propTypes.booking.isRequired,
 

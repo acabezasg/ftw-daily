@@ -114,6 +114,22 @@ export const daysBetween = (startDate, endDate) => {
   return days;
 };
 
+export const hoursBetween = (startDate, endDate) => {
+  const days = moment(endDate).diff(startDate, 'days');
+  if (days < 0) {
+    throw new Error('End date cannot be before start date');
+  }
+  return days*24;
+};
+
+export const weeksBetween = (startDate, endDate) => {
+  const days = moment(endDate).diff(startDate, 'days');
+  if (days < 0) {
+    throw new Error('End date cannot be before start date');
+  }
+  return Number.ceil(days/7);
+};
+
 /**
  * Calculate the number of minutes between the given dates
  *

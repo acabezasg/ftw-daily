@@ -326,7 +326,7 @@ export const LINE_ITEMS = [
   LINE_ITEM_PROVIDER_COMMISSION,
 ];
 
-propTypes.bookingUnitType = oneOf([LINE_ITEM_NIGHT, LINE_ITEM_DAY, LINE_ITEM_UNITS]);
+propTypes.bookingUnitType = oneOf([LINE_ITEM_NIGHT,LINE_ITEM_HOUR,LINE_ITEM_WEEK, LINE_ITEM_DAY, LINE_ITEM_UNITS,LINE_ITEM_SESSION]);
 
 const requiredLineItemPropType = (props, propName, componentName) => {
   const prop = props[propName];

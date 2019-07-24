@@ -242,7 +242,9 @@ export class ListingPageComponent extends Component {
       title = '',
       publicData,
     } = currentListing.attributes;
+    console.log('attributes',currentListing.attributes);
     const user_type = publicData?publicData.user_type:null;
+    const rate = publicData?publicData.rate:config.bookingUnitType;
     const richTitle = (
       <span>
         {richText(title, {
@@ -373,14 +375,15 @@ export class ListingPageComponent extends Component {
         params={params}
         to={{ hash: '#host' }}
       >
-        {authorDisplayName}
+        {authorDisplayName} 
       </NamedLink>
     );
-
+    
+    const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
     const category =
-      publicData && publicData.category ? (
+      user_name ? (
         <span>
-          {categoryLabel(categoriesConfig, publicData.category)}
+          {user_name}
           <span className={css.separator}>•</span>
         </span>
       ) : null;
@@ -433,6 +436,7 @@ export class ListingPageComponent extends Component {
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
                     user_type = {user_type}
+                    rate = {rate}
                   />
                   <SectionDescriptionMaybe description={description} user_type = {user_type} />
                   <SectionFeaturesMaybe options={{options1:servicesConfig,options2:amenitiesConfig,options3:sizeConfig}} publicData={publicData} />
@@ -465,6 +469,8 @@ export class ListingPageComponent extends Component {
                   unitType={unitType}
                   onSubmit={handleBookingSubmit}
                   title={bookingTitle}
+                  user_type = {user_type}
+                  rate = {rate}
                   subTitle={bookingSubTitle}
                   authorDisplayName={authorDisplayName}
                   onManageDisableScrolling={onManageDisableScrolling}
@@ -511,7 +517,7 @@ ListingPageComponent.propTypes = {
     search: string,
   }).isRequired,
 
-  unitType: propTypes.bookingUnitType,
+  // unitType: propTypes.bookingUnitType,
   // from injectIntl
   intl: intlShape.isRequired,
 

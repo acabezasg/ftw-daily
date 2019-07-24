@@ -89,6 +89,7 @@ export class BookingDatesFormComponent extends Component {
             values,
             timeSlots,
             fetchTimeSlotsError,
+            perUnit,
           } = fieldRenderProps;
           const { startDate, endDate } = values && values.bookingDates ? values.bookingDates : {};
 
@@ -125,6 +126,7 @@ export class BookingDatesFormComponent extends Component {
                   quantity: 1,
                 }
               : null;
+          console.log('bookingData',bookingData);
           const bookingInfo = bookingData ? (
             <div className={css.priceBreakdownContainer}>
               <h3 className={css.priceBreakdownTitle}>
@@ -216,7 +218,7 @@ BookingDatesFormComponent.propTypes = {
   className: string,
   submitButtonWrapperClassName: string,
 
-  unitType: propTypes.bookingUnitType.isRequired,
+  // unitType: propTypes.bookingUnitType.isRequired,
   price: propTypes.money,
   isOwnListing: bool,
   timeSlots: arrayOf(propTypes.timeSlot),
