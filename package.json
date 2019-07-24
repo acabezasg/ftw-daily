@@ -29,7 +29,7 @@
     "helmet": "^3.18.0",
     "lodash": "^4.17.11",
     "mapbox-gl-multitouch": "^1.0.3",
-    "moment": "^2.22.2",
+    "moment": "^2.24.0",
     "object.entries": "^1.0.4",
     "object.values": "^1.0.4",
     "path-to-regexp": "^2.4.0",

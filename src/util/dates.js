@@ -127,7 +127,7 @@ export const weeksBetween = (startDate, endDate) => {
   if (days < 0) {
     throw new Error('End date cannot be before start date');
   }
-  return Number.ceil(days/7);
+  return Math.ceil(days/7);
 };
 
 /**

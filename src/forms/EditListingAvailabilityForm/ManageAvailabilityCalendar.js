@@ -42,7 +42,7 @@ const MIN_CELL_WIDTH = Math.floor(MIN_CONTENT_WIDTH / TABLE_COLUMNS); // 38
 const MAX_CONTENT_WIDTH_DESKTOP = 756;
 const MAX_CELL_WIDTH_DESKTOP = Math.floor(MAX_CONTENT_WIDTH_DESKTOP / TABLE_COLUMNS); // 108
 const VIEWPORT_LARGE = 1024;
-
+const _millisecond = 86400000;
 // Helper functions
 
 // Calculate the width for a calendar day (table cell)
@@ -213,6 +213,7 @@ class ManageAvailabilityCalendar extends Component {
       currentMonth: moment().startOf('month'),
       focused: true,
       date: null,
+      _renderFlag:false,
     };
 
     this.fetchMonthData = this.fetchMonthData.bind(this);
@@ -220,6 +221,7 @@ class ManageAvailabilityCalendar extends Component {
     this.onDateChange = this.onDateChange.bind(this);
     this.onFocusChange = this.onFocusChange.bind(this);
     this.onMonthClick = this.onMonthClick.bind(this);
+    this.setAvailabilityss = this.setAvailability.bind(this);
   }
 
   componentDidMount() {
@@ -306,8 +308,46 @@ class ManageAvailabilityCalendar extends Component {
   }
 
   onDateChange(date) {
-    this.setState({ date });
+    
+    // console.log('milli',date._d.getMilliseconds())
+    var flag = this.state._renderFlag;
+    
+    // if(!flag){
+    //   this.setState({ date });
+    //     console.log('first',flag,typeof(date),date);
+    //     this.setState({_renderFlag: !flag });
+    // }else{
+    //   console.log('process');
+    //   this.setState({_renderFlag: !flag });
+    //   var _date = this.state.date;
+    //   var _mstring_1 = this.getString(_date);
+    //   var _mstring_2 = this.getString(date);
+    //   var _mfirst = new Date(_mstring_1).getTime();
+    //   var _mlast = new Date(_mstring_2).getTime();
+      
+    //   if(_mlast < _mfirst) {
+    //     var temp;
+    //     temp = _mlast;
+    //     _mlast = _mfirst;
+    //     _mfirst=temp;
+        
+    //   }
 
+    //   for(var i = _mfirst; i <= _mlast; i += _millisecond){
+    //     var temp = new Date(i);
+    //     this.setAvailability(moment(temp));
+    //   }
+    //   this.setState({date:null});
+      
+    // }
+    this.setState({date:date});
+    this.setAvailability(date);
+    
+  }
+  getString(a){
+    return a._d.getYear() + '-' + a._d.getMonth() + '-'+ a._d.getDay();
+  }
+  setAvailability(date){
     const { availabilityPlan, availability } = this.props;
     const calendar = availability.calendar;
     // This component is for day/night based processes. If time-based process is used,

@@ -244,7 +244,7 @@ export class ListingPageComponent extends Component {
     } = currentListing.attributes;
     console.log('attributes',currentListing.attributes);
     const user_type = publicData?publicData.user_type:null;
-    const rate = publicData?publicData.rate:config.bookingUnitType;
+    const rate = publicData && publicData.rate?publicData.rate:config.bookingUnitType;
     const richTitle = (
       <span>
         {richText(title, {
