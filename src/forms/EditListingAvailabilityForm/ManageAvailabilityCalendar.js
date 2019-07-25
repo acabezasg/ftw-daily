@@ -409,7 +409,7 @@ class ManageAvailabilityCalendar extends Component {
       var _date = this.state.date;
       
       if(_date == date){
-        this.setAvailabilityEx(_date);
+        this.setAvailability(_date);
       }else{
         if(_date > date) {
           var temp;
