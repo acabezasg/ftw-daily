@@ -44,7 +44,8 @@ const MAX_CELL_WIDTH_DESKTOP = Math.floor(MAX_CONTENT_WIDTH_DESKTOP / TABLE_COLU
 const VIEWPORT_LARGE = 1024;
 const _millisecond = 86400000;
 // Helper functions
-
+const parentId = 'mother';
+const childTag = 'child';
 // Calculate the width for a calendar day (table cell)
 const dayWidth = (wrapperWidth, windowWith) => {
   if (windowWith >= VIEWPORT_LARGE) {
@@ -161,7 +162,7 @@ const dateModifiers = (availabilityPlan, exceptions, bookings, date) => {
   };
 };
 
-const renderDayContents = (calendar, availabilityPlan) => date => {
+const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,clickHandler) => date => {
   // This component is for day/night based processes. If time-based process is used,
   // you might want to deal with local dates using monthIdString instead of monthIdStringInUTC.
   const { exceptions = [], bookings = [] } = calendar[monthIdStringInUTC(date)] || {};
@@ -179,10 +180,11 @@ const renderDayContents = (calendar, availabilityPlan) => date => {
     [css.reserved]: isBooked,
     [css.exceptionError]: isFailed,
   });
-
+  
   return (
-    <div className={css.dayWrapper}>
-      <span className={dayClasses}>
+    renderFlag?(
+      <div className={classNames(css.dayWrapper,css.active)}>
+      <span className={dayClasses} id={date.unix()} onMouseEnter={enterHandler} onMouseDown={clickHandler}>
         {isInProgress ? (
           <IconSpinner rootClassName={css.inProgress} />
         ) : (
@@ -190,9 +192,26 @@ const renderDayContents = (calendar, availabilityPlan) => date => {
         )}
       </span>
     </div>
+    ):
+    (
+      <div className={css.dayWrapper}>
+        <span className={dayClasses} id={date.unix()} child='true' >
+          {isInProgress ? (
+            <IconSpinner rootClassName={css.inProgress} />
+          ) : (
+            <span className={css.dayNumber}>{date.format('D')}</span>
+          )}
+        </span>
+    </div>
+    )
   );
 };
-
+function toggleClass(emt){
+  console.log(emt);
+  if(emt){
+    emt.classList.toggle('hover');
+  }
+}
 const makeDraftException = (exceptions, start, end, seats) => {
   const draft = ensureAvailabilityException({ attributes: { start, end, seats } });
   return { availabilityException: draft };
@@ -214,16 +233,70 @@ class ManageAvailabilityCalendar extends Component {
       focused: true,
       date: null,
       _renderFlag:false,
+      startId:null,
+      hover:false,
     };
-
+    this.span = React.createRef();
     this.fetchMonthData = this.fetchMonthData.bind(this);
     this.onDayAvailabilityChange = this.onDayAvailabilityChange.bind(this);
     this.onDateChange = this.onDateChange.bind(this);
     this.onFocusChange = this.onFocusChange.bind(this);
     this.onMonthClick = this.onMonthClick.bind(this);
-    this.setAvailabilityss = this.setAvailability.bind(this);
+    this.mouseHandler = this.mouseHandler.bind(this);
+    this.clickHandler = this.clickHandler.bind(this);
+    this.setAvailabilityEx = this.setAvailabilityEx.bind(this);
   }
+  cleanHandler(){
+    var motherEmt = document.getElementById(parentId);
+      var childAry = motherEmt.querySelectorAll('span');
+      childAry.forEach(function(e){
+        if(e.hasAttribute('id')){
+          e.removeAttribute('style');
+        }
+      })
+  }
+  mouseHandler(e){
+    e.preventDefault();
+    var targetId = parseInt(e.target.id);
+    console.log('target_id,startId',targetId,this.state.startId);
+    
+    if(this.state._renderFlag && targetId >= this.state.startId){
+      var motherEmt = document.getElementById(parentId);
+      var childAry = motherEmt.querySelectorAll('span');
+      childAry.forEach(function(e){
+        if(e.hasAttribute('id')){
+          e.removeAttribute('style');
+        }
+      })
 
+      
+      var targetDate = moment.unix(targetId);
+      var startDate = moment.unix(this.state.startId);
+      var diff = targetDate.diff(startDate,'days');
+      console.log('diff_day',diff);
+      for(var i= 0;i<=diff;i++){
+        console.log('index',i);
+        var id = startDate.unix();
+        
+        var emt = motherEmt.querySelectorAll('span[id="'+String(id)+'"]');
+        console.log('emt_id,emt',id,emt);
+        if(emt.length){
+          emt.forEach(function(e){
+            e.style.backgroundColor = '#bfffd2';
+          })
+          
+        }
+        startDate.add('days',1);
+      }
+    }
+  }
+  
+  clickHandler(e){
+    
+    
+  }
+  
+  
   componentDidMount() {
     // Fetch month data if user have navigated to availability tab in EditListingWizard
     this.fetchMonthData(this.state.currentMonth);
@@ -312,37 +385,60 @@ class ManageAvailabilityCalendar extends Component {
     // console.log('milli',date._d.getMilliseconds())
     var flag = this.state._renderFlag;
     
-    // if(!flag){
-    //   this.setState({ date });
-    //     console.log('first',flag,typeof(date),date);
-    //     this.setState({_renderFlag: !flag });
-    // }else{
-    //   console.log('process');
-    //   this.setState({_renderFlag: !flag });
-    //   var _date = this.state.date;
-    //   var _mstring_1 = this.getString(_date);
-    //   var _mstring_2 = this.getString(date);
-    //   var _mfirst = new Date(_mstring_1).getTime();
-    //   var _mlast = new Date(_mstring_2).getTime();
+    if(!flag){
+      this.setState({ date });
+      const startId= date.unix();
+      this.setState({ startId: startId});
       
-    //   if(_mlast < _mfirst) {
-    //     var temp;
-    //     temp = _mlast;
-    //     _mlast = _mfirst;
-    //     _mfirst=temp;
-        
-    //   }
+      this.setState({_renderFlag: !flag });
+      
+      var motherEmt = document.getElementById(parentId);
+      var emt = motherEmt.querySelectorAll('span[id="'+String(startId)+'"]');
+       
+        if(emt.length){
+          emt.forEach(function(e){
+            e.style.backgroundColor = '#bfffd2';
+          })
+          
+        }
+      
 
-    //   for(var i = _mfirst; i <= _mlast; i += _millisecond){
-    //     var temp = new Date(i);
-    //     this.setAvailability(moment(temp));
-    //   }
-    //   this.setState({date:null});
+    }else{
+      console.log('process',flag,typeof(date),date);
+      this.setState({_renderFlag: !flag });
+      var _date = this.state.date;
       
-    // }
-    this.setState({date:date});
-    this.setAvailability(date);
-    
+      if(_date == date){
+        this.setAvailabilityEx(_date);
+      }else{
+        if(_date > date) {
+          var temp;
+          temp = _date;
+          _date = date;
+          date = temp;
+        }
+          var loop_num = date.diff(_date,'days');
+          console.log('day num',loop_num);
+          var temp = _date;
+        
+          for(var i = 0; i < loop_num; i++){
+            console.log('date',_date.format('YYYY-MM-DD'),i,temp.format('YYYY-MM-DD'));
+            _date.add('days', 1);
+            this.setAvailabilityEx(temp);
+          }
+          _date.subtract('days', loop_num);
+          this.setAvailabilityEx(_date);
+        
+      }
+ 
+      this.setState({date:null});
+      this.setState({ startId:null });
+      this.cleanHandler();
+    }
+  }
+  setStartEnd(_md1, _md2){
+
+    return _md1;
   }
   getString(a){
     return a._d.getYear() + '-' + a._d.getMonth() + '-'+ a._d.getDay();
@@ -366,6 +462,31 @@ class ManageAvailabilityCalendar extends Component {
     } else if (isBlocked) {
       // Unblock the date (seats = 1)
       this.onDayAvailabilityChange(date, 1, exceptions);
+    } else {
+      // Block the date (seats = 0)
+      this.onDayAvailabilityChange(date, 0, exceptions);
+    }
+  }
+
+  setAvailabilityEx(date){
+    const { availabilityPlan, availability } = this.props;
+    const calendar = availability.calendar;
+    // This component is for day/night based processes. If time-based process is used,
+    // you might want to deal with local dates using monthIdString instead of monthIdStringInUTC.
+    const { exceptions = [], bookings = [] } = calendar[monthIdStringInUTC(date)] || {};
+    const { isPast, isBlocked, isBooked, isInProgress } = dateModifiers(
+      availabilityPlan,
+      exceptions,
+      bookings,
+      date
+    );
+
+    if (isBooked || isPast || isInProgress) {
+      // Cannot allow or block a reserved or a past date or inProgress
+      return;
+    } else if (isBlocked) {
+      // Unblock the date (seats = 1)
+      this.onDayAvailabilityChange(date, 0, exceptions);
     } else {
       // Block the date (seats = 0)
       this.onDayAvailabilityChange(date, 0, exceptions);
@@ -445,7 +566,7 @@ class ManageAvailabilityCalendar extends Component {
         }}
       >
         {width > 0 ? (
-          <div style={{ width: `${calendarGridWidth}px` }}>
+          <div style={{ width: `${calendarGridWidth}px` }} id='mother' onMouseLeave={this.cleanHandler}>
             <DayPickerSingleDateController
               {...rest}
               ref={c => {
@@ -456,7 +577,7 @@ class ManageAvailabilityCalendar extends Component {
               navNext={<IconArrowHead direction="right" />}
               weekDayFormat="ddd"
               daySize={daySize}
-              renderDayContents={renderDayContents(calendar, availabilityPlan)}
+              renderDayContents={renderDayContents(calendar, availabilityPlan,this.state._renderFlag,this.mouseHandler,this.clickHandler)}
               focused={focused}
               date={date}
               onDateChange={this.onDateChange}
@@ -554,3 +675,4 @@ ManageAvailabilityCalendar.propTypes = {
 };
 
 export default ManageAvailabilityCalendar;
+

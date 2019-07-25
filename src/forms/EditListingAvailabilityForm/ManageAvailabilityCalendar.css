@@ -212,7 +212,9 @@
     background-color: var(--ManageAvailabilityCalendar_blockedColorHover);
   }
 }
-
+.hover{
+  background-color: green;
+}
 .reserved {
   background-color: var(--ManageAvailabilityCalendar_reservedColor);
 
