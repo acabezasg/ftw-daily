@@ -54,13 +54,10 @@ export class EditListingFeaturesFormComponent extends Component {
   handleChange = (i)=>{
     if(this.state.runFlag){
       const checkFlagAry = this.state.checkFlag.slice();
-      console.log('before',checkFlagAry,i);
       checkFlagAry[i] = !checkFlagAry[i];
       this.setState({checkFlag: checkFlagAry});
-      console.log('after',checkFlagAry); 
     }
     this.setState({runFlag: !this.state.runFlag});
-    console.log('runflag',this.state.runFlag); 
   }
   
   init(data,pet_ary,key_ary){
@@ -291,16 +288,16 @@ export class EditListingFeaturesFormComponent extends Component {
           
           
           {this.state.checkFlag[0]?(
-              <CategoryField
-                id="dog"
-                name="dog"
-                className={css.category}
-                categories={categories[0].weight}
-                intl={intl}
-                categoryLabel={categoryDogLabel}
-                categoryPlaceholder={categoryDogPlaceholder}
-                categoryRequired={categoryDogRequired}
-              />
+              <div>
+                <h3>{homeTitle}</h3>
+                <FieldCheckboxGroup
+                  id="dog"
+                  name="dog"
+                  className={css.features}
+                  options={categories[0].weight}
+                  intl={intl}
+                />
+              </div>
               ):null
             }
             {/* {this.state.checkFlag[1] && user_type >1?(

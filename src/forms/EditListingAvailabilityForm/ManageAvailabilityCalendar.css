@@ -4,8 +4,10 @@
   --ManageAvailabilityCalendar_gridColor: #e0e0e0;
   --ManageAvailabilityCalendar_availableColor: #ffffff;
   --ManageAvailabilityCalendar_availableColorHover: #fafafa;
-  --ManageAvailabilityCalendar_blockedColor: #ebebeb;
-  --ManageAvailabilityCalendar_blockedColorHover: #e6e6e6;
+  --ManageAvailabilityCalendar_outRangeColor: #ebebeb;
+  --ManageAvailabilityCalendar_outRangeColorHover: #e6e6e6;
+  --ManageAvailabilityCalendar_blockedColor: #f6dffc;
+  --ManageAvailabilityCalendar_blockedColorHover: #f8e8fc;
   --ManageAvailabilityCalendar_reservedColor: #e6fff0;
   --ManageAvailabilityCalendar_reservedColorHover: #e1faeb;
   --ManageAvailabilityCalendar_failedColor: #fff2f2;
@@ -171,10 +173,10 @@
 }
 
 .outsideRange {
-  background-color: var(--ManageAvailabilityCalendar_blockedColor);
+  background-color: var(--ManageAvailabilityCalendar_outRangeColor);
 
   &:hover {
-    background-color: var(--ManageAvailabilityCalendar_blockedColorHover);
+    background-color: var(--ManageAvailabilityCalendar_outRangeColorHover);
   }
 
   & .dayNumber {

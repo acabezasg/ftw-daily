@@ -94,15 +94,11 @@ const BookingPanel = props => {
   //   ? 'BookingPanel.perDay'
   //   : 'BookingPanel.perUnit';
     
-    console.log('rate',rate);
-    const isNightly = rate === LINE_ITEM_NIGHT;
-    const isDaily = rate === LINE_ITEM_DAY;
-    const isHourly = rate === LINE_ITEM_HOUR;
-    const isWeekly = rate === LINE_ITEM_WEEK;
-  
-  
-  
-  
+  const isNightly = rate === LINE_ITEM_NIGHT;
+  const isDaily = rate === LINE_ITEM_DAY;
+  const isHourly = rate === LINE_ITEM_HOUR;
+  const isWeekly = rate === LINE_ITEM_WEEK;
+
   const unitTranslationKey = isHourly
     ? 'BookingPanel.perHour'
     : isNightly
@@ -112,7 +108,7 @@ const BookingPanel = props => {
     : isWeekly
     ? 'BookingPanel.perWeek'
     : 'BookingPanel.perUnit';
-  console.log('pernight',unitTranslationKey);
+  
   const classes = classNames(rootClassName || css.root, className);
   const titleClasses = classNames(titleClassName || css.bookingTitle);
 

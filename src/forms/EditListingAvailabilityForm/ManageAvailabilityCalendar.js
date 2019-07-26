@@ -166,13 +166,15 @@ const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,cl
   // This component is for day/night based processes. If time-based process is used,
   // you might want to deal with local dates using monthIdString instead of monthIdStringInUTC.
   const { exceptions = [], bookings = [] } = calendar[monthIdStringInUTC(date)] || {};
+  
   const { isOutsideRange, isSameDay, isBlocked, isBooked, isInProgress, isFailed } = dateModifiers(
     availabilityPlan,
     exceptions,
     bookings,
     date
   );
-
+  
+    
   const dayClasses = classNames(css.default, {
     [css.outsideRange]: isOutsideRange,
     [css.today]: isSameDay,
@@ -180,6 +182,7 @@ const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,cl
     [css.reserved]: isBooked,
     [css.exceptionError]: isFailed,
   });
+ 
   
   return (
     renderFlag?(
@@ -206,12 +209,7 @@ const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,cl
     )
   );
 };
-function toggleClass(emt){
-  console.log(emt);
-  if(emt){
-    emt.classList.toggle('hover');
-  }
-}
+
 const makeDraftException = (exceptions, start, end, seats) => {
   const draft = ensureAvailabilityException({ attributes: { start, end, seats } });
   return { availabilityException: draft };
@@ -241,24 +239,24 @@ class ManageAvailabilityCalendar extends Component {
     this.onDayAvailabilityChange = this.onDayAvailabilityChange.bind(this);
     this.onDateChange = this.onDateChange.bind(this);
     this.onFocusChange = this.onFocusChange.bind(this);
+    this.cleanHandler = this.cleanHandler.bind(this);
     this.onMonthClick = this.onMonthClick.bind(this);
     this.mouseHandler = this.mouseHandler.bind(this);
-    this.clickHandler = this.clickHandler.bind(this);
     this.setAvailabilityEx = this.setAvailabilityEx.bind(this);
   }
   cleanHandler(){
     var motherEmt = document.getElementById(parentId);
-      var childAry = motherEmt.querySelectorAll('span');
-      childAry.forEach(function(e){
-        if(e.hasAttribute('id')){
-          e.removeAttribute('style');
-        }
-      })
+    var childAry = motherEmt.querySelectorAll('span');
+    childAry.forEach(function(e){
+      if(e.hasAttribute('id')){
+        e.removeAttribute('style');
+      }
+    })
+    this.setState({_renderFlag:false,startId:null});
   }
   mouseHandler(e){
     e.preventDefault();
     var targetId = parseInt(e.target.id);
-    console.log('target_id,startId',targetId,this.state.startId);
     
     if(this.state._renderFlag && targetId >= this.state.startId){
       var motherEmt = document.getElementById(parentId);
@@ -269,31 +267,22 @@ class ManageAvailabilityCalendar extends Component {
         }
       })
 
-      
       var targetDate = moment.unix(targetId);
       var startDate = moment.unix(this.state.startId);
       var diff = targetDate.diff(startDate,'days');
-      console.log('diff_day',diff);
+      
       for(var i= 0;i<=diff;i++){
-        console.log('index',i);
-        var id = startDate.unix();
-        
+        var id = startDate.unix();      
         var emt = motherEmt.querySelectorAll('span[id="'+String(id)+'"]');
-        console.log('emt_id,emt',id,emt);
+  
         if(emt.length){
           emt.forEach(function(e){
-            e.style.backgroundColor = '#bfffd2';
+            e.style.backgroundColor = '#f9edfc';
           })
-          
         }
         startDate.add('days',1);
       }
     }
-  }
-  
-  clickHandler(e){
-    
-    
   }
   
   
@@ -381,30 +370,23 @@ class ManageAvailabilityCalendar extends Component {
   }
 
   onDateChange(date) {
-    
-    // console.log('milli',date._d.getMilliseconds())
     var flag = this.state._renderFlag;
     
     if(!flag){
       this.setState({ date });
       const startId= date.unix();
       this.setState({ startId: startId});
-      
       this.setState({_renderFlag: !flag });
       
       var motherEmt = document.getElementById(parentId);
       var emt = motherEmt.querySelectorAll('span[id="'+String(startId)+'"]');
        
-        if(emt.length){
-          emt.forEach(function(e){
-            e.style.backgroundColor = '#bfffd2';
-          })
-          
-        }
-      
-
+      if(emt.length){
+        emt.forEach(function(e){
+          e.style.backgroundColor = '#f9edfc';
+        })
+      }
     }else{
-      console.log('process',flag,typeof(date),date);
       this.setState({_renderFlag: !flag });
       var _date = this.state.date;
       
@@ -418,11 +400,9 @@ class ManageAvailabilityCalendar extends Component {
           date = temp;
         }
           var loop_num = date.diff(_date,'days');
-          console.log('day num',loop_num);
           var temp = _date;
         
           for(var i = 0; i < loop_num; i++){
-            console.log('date',_date.format('YYYY-MM-DD'),i,temp.format('YYYY-MM-DD'));
             _date.add('days', 1);
             this.setAvailabilityEx(temp);
           }
@@ -436,19 +416,15 @@ class ManageAvailabilityCalendar extends Component {
       this.cleanHandler();
     }
   }
-  setStartEnd(_md1, _md2){
+  
 
-    return _md1;
-  }
-  getString(a){
-    return a._d.getYear() + '-' + a._d.getMonth() + '-'+ a._d.getDay();
-  }
   setAvailability(date){
     const { availabilityPlan, availability } = this.props;
     const calendar = availability.calendar;
     // This component is for day/night based processes. If time-based process is used,
     // you might want to deal with local dates using monthIdString instead of monthIdStringInUTC.
     const { exceptions = [], bookings = [] } = calendar[monthIdStringInUTC(date)] || {};
+    
     const { isPast, isBlocked, isBooked, isInProgress } = dateModifiers(
       availabilityPlan,
       exceptions,
@@ -544,6 +520,7 @@ class ManageAvailabilityCalendar extends Component {
     const calendarGridWidth = daySize * TABLE_COLUMNS + TABLE_BORDER;
 
     const calendar = availability.calendar;
+    console.log('availability',availability);
     const currentMonthData = calendar[monthIdString(currentMonth)];
     const {
       fetchExceptionsInProgress,

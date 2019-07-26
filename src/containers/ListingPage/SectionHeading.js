@@ -25,7 +25,7 @@ const SectionHeading = props => {
   const isDaily = unitType === LINE_ITEM_DAY;
   const isHourly = unitType === LINE_ITEM_HOUR;
   const isWeekly = unitType === LINE_ITEM_WEEK;
-  console.log('compare',isNightly,rate,LINE_ITEM_NIGHT);
+  
   
   const unitTranslationKey = isHourly
     ? 'ListingPage.perHour'

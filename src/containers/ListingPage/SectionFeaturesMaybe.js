@@ -13,9 +13,8 @@ const SectionFeaturesMaybe = props => {
   const keyWord = "dog";
   const selectedOptions1 = publicData && publicData.service ? [publicData.service] : [];
   const selectedOptions2 = publicData && publicData.amenities ? publicData.amenities : [];
-  console.log('public data',publicData);
-  console.log('size',selectedOptions2.dog);
-  const selectedOptions3 = selectedOptions2 ? [publicData.dog]: [];
+  
+  const selectedOptions3 = selectedOptions2 ? (typeof(publicData.dog) == 'string'?[publicData.dog]:publicData.dog): [];
   
   
   return (

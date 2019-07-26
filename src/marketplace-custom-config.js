@@ -258,7 +258,7 @@ export const size = [
 
 export const rate = [
     { key: 'h', label: 'Per hour' },
-    { key: 's', label: 'Per Session' },
+    // { key: 's', label: 'Per Session' },
     { key: 'd', label: 'Per day' },
     { key: 'n', label: 'Per night' },
     { key: 'w', label: 'Per week' },

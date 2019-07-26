@@ -1,9 +1,9 @@
 import React from 'react';
 import { FormattedMessage, FormattedHTMLMessage, FormattedDate } from 'react-intl';
 import moment from 'moment';
-import { LINE_ITEM_NIGHT, LINE_ITEM_DAY, propTypes } from '../../util/types';
-import { daysBetween, dateFromAPIToLocalNoon } from '../../util/dates';
-
+import { LINE_ITEM_NIGHT, LINE_ITEM_DAY,LINE_ITEM_UNITS,LINE_ITEM_WEEK,LINE_ITEM_HOUR, propTypes } from '../../util/types';
+import { daysBetween,hoursBetween,weeksBetween, dateFromAPIToLocalNoon } from '../../util/dates';
+import config from '../../config';
 import css from './BookingBreakdown.css';
 
 const BookingPeriod = props => {
@@ -50,8 +50,21 @@ const LineItemBookingPeriod = props => {
 
   const isNightly = unitType === LINE_ITEM_NIGHT;
   const isDaily = unitType === LINE_ITEM_DAY;
+  const isHourly = unitType === LINE_ITEM_HOUR;
+  const isWeekly = unitType === LINE_ITEM_WEEK;
+  
+  
+  const unitTranslationKey = isHourly
+    ? 'BookingBreakdown.hourCount'
+    : isNightly
+    ? 'BookingBreakdown.nightCount'
+    : isDaily
+    ? 'BookingBreakdown.dayCount'
+    : isWeekly
+    ? 'BookingBreakdown.weekCount'
+    : 'BookingBreakdown.unitCount';
 
-  const dayCount = daysBetween(localStartDate, localEndDateRaw);
+  const dayCount = isHourly?hoursBetween(localStartDate, localEndDateRaw,config.bookingHour):isWeekly?weeksBetween(localStartDate, localEndDateRaw):daysBetween(localStartDate, localEndDateRaw);
   const isSingleDay = !isNightly && dayCount === 1;
   const endDay = isNightly ? localEndDateRaw : moment(localEndDateRaw).subtract(1, 'days');
 
@@ -64,7 +77,7 @@ const LineItemBookingPeriod = props => {
 
   const unitCountMessage = (
     <FormattedHTMLMessage
-      id={isNightly ? 'BookingBreakdown.nightCount' : 'BookingBreakdown.dayCount'}
+      id={unitTranslationKey}
       values={{ count }}
     />
   );

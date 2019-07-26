@@ -462,21 +462,26 @@ export class ListingPageComponent extends Component {
                     onManageDisableScrolling={onManageDisableScrolling}
                   />
                 </div>
-                <BookingPanel
-                  className={css.bookingPanel}
-                  listing={currentListing}
-                  isOwnListing={isOwnListing}
-                  unitType={unitType}
-                  onSubmit={handleBookingSubmit}
-                  title={bookingTitle}
-                  user_type = {user_type}
-                  rate = {rate}
-                  subTitle={bookingSubTitle}
-                  authorDisplayName={authorDisplayName}
-                  onManageDisableScrolling={onManageDisableScrolling}
-                  timeSlots={timeSlots}
-                  fetchTimeSlotsError={fetchTimeSlotsError}
-                />
+                {
+                  user_type !== 0?
+                  (
+                    <BookingPanel
+                      className={css.bookingPanel}
+                      listing={currentListing}
+                      isOwnListing={isOwnListing}
+                      unitType={unitType}
+                      onSubmit={handleBookingSubmit}
+                      title={bookingTitle}
+                      user_type = {user_type}
+                      rate = {rate}
+                      subTitle={bookingSubTitle}
+                      authorDisplayName={authorDisplayName}
+                      onManageDisableScrolling={onManageDisableScrolling}
+                      timeSlots={timeSlots}
+                      fetchTimeSlotsError={fetchTimeSlotsError}
+                    />
+                  ):null
+                }
               </div>
             </div>
           </LayoutWrapperMain>
