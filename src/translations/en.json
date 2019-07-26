@@ -266,7 +266,9 @@
 
   "EditListingAvailabilityForm.fetchMonthDataFailed": "Oops, couldn't load data for {month}, please try again.",
   "EditListingAvailabilityForm.availableDay": "Available",
-  "EditListingAvailabilityForm.blockedDay": "Not available",
+  "EditListingAvailabilityForm.blockedDay.owner": "Required Dates",
+  "EditListingAvailabilityForm.blockedDay.sitter": "Not available",
+  "EditListingAvailabilityForm.blockedDay.service": "Not available",
   "EditListingAvailabilityForm.bookedDay": "Booked",
   "EditListingAvailabilityForm.updateFailed": "Failed to update listing. Please try again.",
 

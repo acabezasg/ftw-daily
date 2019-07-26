@@ -19,7 +19,7 @@ export class EditListingAvailabilityFormComponent extends Component {
           const {
             className,
             rootClassName,
-            disabled,
+            disabled, 
             handleSubmit,
             //intl,
             invalid,
@@ -31,6 +31,7 @@ export class EditListingAvailabilityFormComponent extends Component {
             availability,
             availabilityPlan,
             listingId,
+            user_name,
           } = fieldRenderProps;
 
           const errorMessage = updateError ? (
@@ -52,6 +53,7 @@ export class EditListingAvailabilityFormComponent extends Component {
                   availability={availability}
                   availabilityPlan={availabilityPlan}
                   listingId={listingId}
+                  user_name = {user_name}
                 />
               </div>
 

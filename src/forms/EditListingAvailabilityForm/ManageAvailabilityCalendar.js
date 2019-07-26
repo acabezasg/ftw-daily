@@ -525,6 +525,7 @@ class ManageAvailabilityCalendar extends Component {
       availabilityPlan,
       onMonthChanged,
       monthFormat,
+      user_name,
       ...rest
     } = this.props;
     const { focused, date, currentMonth } = this.state;
@@ -605,7 +606,7 @@ class ManageAvailabilityCalendar extends Component {
           <div className={css.legendRow}>
             <span className={css.legendBlockedColor} />
             <span className={css.legendText}>
-            Required Dates
+            <FormattedMessage id={"EditListingAvailabilityForm.blockedDay."+user_name} />
             </span>
           </div>
           <div className={css.legendRow}>

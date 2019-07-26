@@ -14,7 +14,16 @@
   /* Clear padding that is set for link elements looking like buttons */
   padding: 0;
 }
-
+.primaryButtonRootEx{
+  @apply --marketplaceButtonStylesPrimary;
+  text-decoration: none !important;
+  background-color: rgb(65, 166, 223);
+  /* Clear padding that is set for link elements looking like buttons */
+  &:hover{
+    background-color: rgb(75, 186, 243);
+  }
+  padding: 0;
+}
 .secondaryButtonRoot {
   @apply --marketplaceButtonStylesSecondary;
 

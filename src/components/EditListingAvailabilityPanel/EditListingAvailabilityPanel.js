@@ -78,6 +78,7 @@ const EditListingAvailabilityPanel = props => {
         name_location = {LOCATIONS_NAME}
         equipments={config.custom.equipments}
         locations={config.custom.locations}
+        user_name={user_name}
       />
     </div>
   );
