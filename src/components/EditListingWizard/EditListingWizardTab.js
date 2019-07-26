@@ -278,7 +278,7 @@ const EditListingWizardTab = props => {
         <EditListingAvailabilityPanel
           {...panelProps(AVAILABILITY)}
           availability={availability}
-          submitButtonText={intl.formatMessage({ id: submitButtonTranslationKey })}
+          submitButtonText={'Save Dates'}
           onSubmit={values => {
             onCompleteEditListingWizardTab(tab, values);
           }}

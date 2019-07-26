@@ -605,7 +605,7 @@ class ManageAvailabilityCalendar extends Component {
           <div className={css.legendRow}>
             <span className={css.legendBlockedColor} />
             <span className={css.legendText}>
-              <FormattedMessage id="EditListingAvailabilityForm.blockedDay" />
+              required dates
             </span>
           </div>
           <div className={css.legendRow}>

@@ -2,8 +2,8 @@
 
 :root {
   --ManageAvailabilityCalendar_gridColor: #e0e0e0;
-  --ManageAvailabilityCalendar_availableColor: #ffffff;
-  --ManageAvailabilityCalendar_availableColorHover: #fafafa;
+  --ManageAvailabilityCalendar_availableColor: #40A6DF;
+  --ManageAvailabilityCalendar_availableColorHover: #40A6DF;
   --ManageAvailabilityCalendar_outRangeColor: #ebebeb;
   --ManageAvailabilityCalendar_outRangeColorHover: #e6e6e6;
   --ManageAvailabilityCalendar_blockedColor: rgb(0, 72, 0);
