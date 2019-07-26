@@ -293,7 +293,7 @@ class ManageAvailabilityCalendar extends Component {
   
         if(emt.length){
           emt.forEach(function(e){
-            e.style.backgroundColor = '#40A6DF';
+            e.style.backgroundColor = '#4eb5ed';
           })
         }
         startDate.add('days',1);
@@ -399,7 +399,7 @@ class ManageAvailabilityCalendar extends Component {
        
       if(emt.length){
         emt.forEach(function(e){
-          e.style.backgroundColor = '#40A6DF';
+          e.style.backgroundColor = '#4eb5ed';
         })
       }
     }else{
@@ -605,7 +605,7 @@ class ManageAvailabilityCalendar extends Component {
           <div className={css.legendRow}>
             <span className={css.legendBlockedColor} />
             <span className={css.legendText}>
-              required dates
+            Required Dates
             </span>
           </div>
           <div className={css.legendRow}>
