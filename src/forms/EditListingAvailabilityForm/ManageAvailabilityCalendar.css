@@ -2,12 +2,12 @@
 
 :root {
   --ManageAvailabilityCalendar_gridColor: #e0e0e0;
-  --ManageAvailabilityCalendar_availableColor: #40A6DF;
-  --ManageAvailabilityCalendar_availableColorHover: #40A6DF;
+  --ManageAvailabilityCalendar_availableColor: #FFFFFF;
+  --ManageAvailabilityCalendar_availableColorHover: #FFFFFF;
   --ManageAvailabilityCalendar_outRangeColor: #ebebeb;
   --ManageAvailabilityCalendar_outRangeColorHover: #e6e6e6;
-  --ManageAvailabilityCalendar_blockedColor: rgb(0, 72, 0);
-  --ManageAvailabilityCalendar_blockedColorHover: rgb(0, 100, 0);
+  --ManageAvailabilityCalendar_blockedColor: #40A6DF;
+  --ManageAvailabilityCalendar_blockedColorHover: #40A6DF;
   --ManageAvailabilityCalendar_reservedColor: #e6fff0;
   --ManageAvailabilityCalendar_reservedColorHover: #e1faeb;
   --ManageAvailabilityCalendar_failedColor: #fff2f2;
