@@ -293,7 +293,7 @@ class ManageAvailabilityCalendar extends Component {
   
         if(emt.length){
           emt.forEach(function(e){
-            e.style.backgroundColor = '#e6fff0';
+            e.style.backgroundColor = 'rgb(0, 147, 0)';
           })
         }
         startDate.add('days',1);
@@ -399,7 +399,7 @@ class ManageAvailabilityCalendar extends Component {
        
       if(emt.length){
         emt.forEach(function(e){
-          e.style.backgroundColor = '#e6fff0';
+          e.style.backgroundColor = 'rgb(0, 200, 0)';
         })
       }
     }else{

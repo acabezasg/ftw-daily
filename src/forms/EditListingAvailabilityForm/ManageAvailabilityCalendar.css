@@ -6,8 +6,8 @@
   --ManageAvailabilityCalendar_availableColorHover: #fafafa;
   --ManageAvailabilityCalendar_outRangeColor: #ebebeb;
   --ManageAvailabilityCalendar_outRangeColorHover: #e6e6e6;
-  --ManageAvailabilityCalendar_blockedColor: #e6fff0;
-  --ManageAvailabilityCalendar_blockedColorHover: #e1faeb;
+  --ManageAvailabilityCalendar_blockedColor: rgb(0, 72, 0);
+  --ManageAvailabilityCalendar_blockedColorHover: rgb(0, 100, 0);
   --ManageAvailabilityCalendar_reservedColor: #e6fff0;
   --ManageAvailabilityCalendar_reservedColorHover: #e1faeb;
   --ManageAvailabilityCalendar_failedColor: #fff2f2;
@@ -209,7 +209,7 @@
 
 .blocked {
   background-color: var(--ManageAvailabilityCalendar_blockedColor);
-
+  color: rgb(230,230,230);
   &:hover {
     background-color: var(--ManageAvailabilityCalendar_blockedColorHover);
   }

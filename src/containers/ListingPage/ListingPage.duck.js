@@ -141,6 +141,7 @@ export const showListing = (listingId, isOwn = false) => (dispatch, getState, sd
       'variants.landscape-crop2x',
       'variants.landscape-crop4x',
       'variants.landscape-crop6x',
+      'availabilityPlan',
 
       // Social media
       'variants.facebook',
