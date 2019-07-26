@@ -18,7 +18,8 @@ import {
 import { DAYS_OF_WEEK } from '../../util/types';
 import { monthIdString, monthIdStringInUTC } from '../../util/dates';
 import { IconArrowHead, IconSpinner } from '../../components';
-
+import TimePicker  from './TimePicker';
+import config from '../../config';
 import css from './ManageAvailabilityCalendar.css';
 
 // Constants
@@ -33,7 +34,7 @@ const END_OF_RANGE_MOMENT = TODAY_MOMENT.clone()
 const END_OF_BOOKING_RANGE_MOMENT = TODAY_MOMENT.clone()
   .add(MAX_BOOKINGS_RANGE - 1, 'days')
   .startOf('day');
-
+const timePickerConfig = config.custom.timePickerConfig;
 // Constants for calculating day width (aka table cell dimensions)
 const TABLE_BORDER = 2;
 const TABLE_COLUMNS = 7;
@@ -46,6 +47,8 @@ const _millisecond = 86400000;
 // Helper functions
 const parentId = 'mother';
 const childTag = 'child';
+const FILTER_DROPDOWN_OFFSET = -14;
+const initialHourRange = {minHour:12, maxHour:14};
 // Calculate the width for a calendar day (table cell)
 const dayWidth = (wrapperWidth, windowWith) => {
   if (windowWith >= VIEWPORT_LARGE) {
@@ -174,7 +177,7 @@ const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,cl
     date
   );
   
-    
+  
   const dayClasses = classNames(css.default, {
     [css.outsideRange]: isOutsideRange,
     [css.today]: isSameDay,
@@ -183,6 +186,7 @@ const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,cl
     [css.exceptionError]: isFailed,
   });
  
+  
   
   return (
     renderFlag?(
@@ -233,6 +237,7 @@ class ManageAvailabilityCalendar extends Component {
       _renderFlag:false,
       startId:null,
       hover:false,
+      chosenDates:[],
     };
     this.span = React.createRef();
     this.fetchMonthData = this.fetchMonthData.bind(this);
@@ -244,6 +249,14 @@ class ManageAvailabilityCalendar extends Component {
     this.mouseHandler = this.mouseHandler.bind(this);
     this.setAvailabilityEx = this.setAvailabilityEx.bind(this);
   }
+  fillChosenDates(isBlocked,date){
+    if(isBlocked){
+      const _date = {year:date.year(),month:date.month(),day:date.date()};
+      this.setState(prevState=>({
+        chosenDates: [...prevState.chosenDates, _date]
+      }));
+    }
+  }
   cleanHandler(){
     var motherEmt = document.getElementById(parentId);
     var childAry = motherEmt.querySelectorAll('span');
@@ -253,6 +266,9 @@ class ManageAvailabilityCalendar extends Component {
       }
     })
     this.setState({_renderFlag:false,startId:null});
+  }
+  handleTime(){
+    alert('this');
   }
   mouseHandler(e){
     e.preventDefault();
@@ -277,7 +293,7 @@ class ManageAvailabilityCalendar extends Component {
   
         if(emt.length){
           emt.forEach(function(e){
-            e.style.backgroundColor = '#f9edfc';
+            e.style.backgroundColor = '#e6fff0';
           })
         }
         startDate.add('days',1);
@@ -383,7 +399,7 @@ class ManageAvailabilityCalendar extends Component {
        
       if(emt.length){
         emt.forEach(function(e){
-          e.style.backgroundColor = '#f9edfc';
+          e.style.backgroundColor = '#e6fff0';
         })
       }
     }else{
@@ -542,6 +558,13 @@ class ManageAvailabilityCalendar extends Component {
           this.dayPickerWrapper = c;
         }}
       >
+        {/* <TimePicker
+          id="ManageAvailability.timePicker"
+          onSubmit={this.handleTime}
+          {...config.custom.timePickerConfig}
+          initialValues={initialHourRange}
+          contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
+         /> */}
         {width > 0 ? (
           <div style={{ width: `${calendarGridWidth}px` }} id='mother' onMouseLeave={this.cleanHandler}>
             <DayPickerSingleDateController

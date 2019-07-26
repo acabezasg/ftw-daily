@@ -272,6 +272,14 @@ max: 1000,
 step: 5,
 };
 
+// Price filter configuration
+// Note: unlike most prices this is not handled in subunits
+export const timePickerConfig = {
+    min: 0,
+    max: 23,
+    step: 1,
+};
+
 // Activate booking dates filter on search page
 export const dateRangeFilterConfig = {
 active: true,

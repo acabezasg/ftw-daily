@@ -174,7 +174,7 @@ const SearchFiltersComponent = props => {
   ) : null;
 
   const priceFilterElement = priceFilter ? (
-    <PriceFilter
+    <PriceFilter 
       id="SearchFilters.priceFilter"
       urlParam={priceFilter.paramName}
       onSubmit={handlePrice}
