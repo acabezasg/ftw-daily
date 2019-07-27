@@ -58,7 +58,7 @@ export class BookingDatesFormComponent extends Component {
         </div>
       );
     }
-    console.log('unit-price vs config.currency => ', unitPrice.currency,config.currency);
+   
   
     if (unitPrice.currency !== config.currency) {
       return (
@@ -126,7 +126,7 @@ export class BookingDatesFormComponent extends Component {
                   quantity: 1,
                 }
               : null;
-          console.log('bookingData',bookingData);
+          
           const bookingInfo = bookingData ? (
             <div className={css.priceBreakdownContainer}>
               <h3 className={css.priceBreakdownTitle}>
@@ -190,7 +190,7 @@ export class BookingDatesFormComponent extends Component {
                 />
               </p>
               <div className={submitButtonClasses}>
-                <PrimaryButton blue={true} type="submit">
+                <PrimaryButton type="submit">
                   <FormattedMessage id="BookingDatesForm.requestToBook" />
                 </PrimaryButton>
               </div>

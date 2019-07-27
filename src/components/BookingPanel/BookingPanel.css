@@ -72,7 +72,7 @@
   @media (--viewportLarge) {
     display: block;
     margin-top: -2px;
-    margin-bottom: 33px;
+    margin-bottom: 15px;
   }
 }
 
@@ -189,7 +189,9 @@
     margin-bottom: 0;
   }
 }
-
+.bookPriceSpan{
+  font-size: 15px;
+}
 .bookButton {
   @apply --marketplaceButtonStylesPrimary;
 

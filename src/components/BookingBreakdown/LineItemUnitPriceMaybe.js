@@ -21,6 +21,16 @@ const LineItemUnitPriceMaybe = props => {
     ? 'BookingBreakdown.pricePerWeek'
     : 'BookingBreakdown.pricePerQuantity';
 
+  const unit = isNightly
+    ? 'night'
+    : isDaily
+    ? 'day'
+    : isHourly
+    ? 'hour'
+    : isWeekly
+    ? 'week'
+    : 'unit';
+
   const unitPurchase = transaction.attributes.lineItems.find(
     item => item.code === unitType && !item.reversal
   );
@@ -32,14 +42,14 @@ const LineItemUnitPriceMaybe = props => {
       <span className={css.itemLabel}>
         <FormattedMessage id={translationKey} />
       </span>
-      <span className={css.itemValue}>{formattedUnitPrice}</span>
+      <span className={css.itemValue}>{formattedUnitPrice}/{unit}</span>
     </div>
   ) : null;
 };
 
 LineItemUnitPriceMaybe.propTypes = {
   transaction: propTypes.transaction.isRequired,
-  // unitType: propTypes.bookingUnitType.isRequired,
+  unitType: propTypes.bookingUnitType.isRequired,
   intl: intlShape.isRequired,
 };
 

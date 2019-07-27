@@ -62,7 +62,8 @@ const EditListingPricingPanel = props => {
           publicData: { 
             rate,
           },
-          price:price
+          price:price,
+          
         };
         onSubmit(updatedValues);
       }}

@@ -46,10 +46,10 @@
   "BookingBreakdown.weekCount": "{count, number} {count, plural, one {weeek} other {weeeks}}",
   "BookingBreakdown.unitCount": "{count, number} {count, plural, one {unit} other {units}}",
 
-  "BookingBreakdown.pricePerDay": "Price per day",
-  "BookingBreakdown.pricePerNight": "Price per night",
-  "BookingBreakdown.pricePerHour": "Price per hour",
-  "BookingBreakdown.pricePerWeek": "Price per week",
+  "BookingBreakdown.pricePerDay": "Price",
+  "BookingBreakdown.pricePerNight": "Price",
+  "BookingBreakdown.pricePerHour": "Price",
+  "BookingBreakdown.pricePerWeek": "Price",
 
   "BookingBreakdown.pricePerQuantity": "Price per person",
   "BookingBreakdown.providerTotalCanceled": "Total price",
@@ -507,9 +507,9 @@
 
   "ListingPage.homeTitle": "About your home",
   "ListingPage.usefulTitle": "Useful informations",
-  "ListingPage.serviceTitle": "About service",
+  "ListingPage.serviceTitle": "Service Type",
   "ListingPage.sizeTitle": "Dog sizes",
-  "ListingPage.bookingSubTitle": "Dates required.",
+  "ListingPage.bookingSubTitle": "Select start date and end date.",
   "ListingPage.bookingTitle": "Book {title}",
   "ListingPage.closedListing": "This listing has been closed and can't be booked.",
   "ListingPage.contactUser": "Contact",

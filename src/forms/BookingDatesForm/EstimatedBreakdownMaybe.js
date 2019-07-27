@@ -40,7 +40,6 @@ import css from './BookingDatesForm.css';
 const { Money, UUID } = sdkTypes;
 
 const estimatedTotalPrice = (unitPrice, unitCount) => {
-  console.log('price','count',unitPrice, unitCount);
   const numericPrice = convertMoneyToNumber(unitPrice);
   const numericTotalPrice = new Decimal(numericPrice).times(unitCount).toNumber();
   return new Money(

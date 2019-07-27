@@ -10,7 +10,10 @@
 .primaryButtonRoot {
   @apply --marketplaceButtonStylesPrimary;
   text-decoration: none !important;
-
+  background-color: rgb(65, 166, 223);
+  &:hover{
+    background-color: rgb(75, 186, 243);
+  }
   /* Clear padding that is set for link elements looking like buttons */
   padding: 0;
 }

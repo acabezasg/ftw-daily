@@ -43,9 +43,9 @@ export const BookingBreakdownComponent = props => {
 
   return (
     <div className={classes}>
-      <LineItemUnitPriceMaybe transaction={transaction} unitType={unitType} intl={intl} />
+      <LineItemUnitPriceMaybe transaction={transaction} unitType={unitType} intl={intl} /> 
       <LineItemBookingPeriod transaction={transaction} booking={booking} unitType={unitType} />
-      <LineItemUnitsMaybe transaction={transaction} unitType={unitType}/>
+      {/* <LineItemUnitsMaybe transaction={transaction} unitType={unitType}/> */}
 
       {/* <LineItemUnknownItemsMaybe transaction={transaction} intl={intl} unitType={unitType}/> */}
      
@@ -102,7 +102,7 @@ BookingBreakdownComponent.propTypes = {
   className: string,
 
   userRole: oneOf(['customer', 'provider']).isRequired,
-  // unitType: propTypes.bookingUnitType.isRequired,
+  unitType: propTypes.bookingUnitType.isRequired,
   transaction: propTypes.transaction.isRequired,
   booking: propTypes.booking.isRequired,
 

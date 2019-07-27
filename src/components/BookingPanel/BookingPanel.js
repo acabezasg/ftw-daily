@@ -10,7 +10,7 @@ import { propTypes, LISTING_STATE_CLOSED, LINE_ITEM_NIGHT, LINE_ITEM_DAY,LINE_IT
 import { formatMoney } from '../../util/currency';
 import { parse, stringify } from '../../util/urlHelpers';
 import config from '../../config';
-import { ModalInMobile, Button } from '../../components';
+import { ModalInMobile, Button, PrimaryButton } from '../../components';
 import { BookingDatesForm } from '../../forms';
 
 import css from './BookingPanel.css';
@@ -128,11 +128,14 @@ const BookingPanel = props => {
             <FormattedMessage id="BookingPanel.hostedBy" values={{ name: authorDisplayName }} />
           </div>
         </div>
-
+        
         <div className={css.bookingHeading}>
           <h2 className={titleClasses}>{title}</h2>
-          {subTitleText ? <div className={css.bookingHelp}>{subTitleText}</div> : null}
+          <span className={css.bookPriceSpan}>Price: {formattedPrice}/<FormattedMessage id={unitTranslationKey} /></span>
+          
+          {/* {subTitleText ? <div className={css.bookingHelp}>{subTitleText}</div> : null} */}
         </div>
+        
         {showBookingDatesForm ? (
           <BookingDatesForm
             className={css.bookingForm}
