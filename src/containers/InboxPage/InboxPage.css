@@ -1,7 +1,7 @@
 @import '../../marketplace.css';
 
 .topbar {
-  z-index: 1; /* ensure that Topbar shadow overlays content background */
+  z-index: 2; /* ensure that Topbar shadow overlays content background */
 }
 
 .mobileTopbar {

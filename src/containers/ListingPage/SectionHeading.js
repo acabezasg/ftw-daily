@@ -15,18 +15,17 @@ const SectionHeading = props => {
     hostLink,
     showContactUser,
     onContactUser,
-    user_type, 
+    user_type,
     rate,
   } = props;
 
   const unitType = rate;
-  
+
   const isNightly = unitType === LINE_ITEM_NIGHT;
   const isDaily = unitType === LINE_ITEM_DAY;
   const isHourly = unitType === LINE_ITEM_HOUR;
   const isWeekly = unitType === LINE_ITEM_WEEK;
-  
-  
+
   const unitTranslationKey = isHourly
     ? 'ListingPage.perHour'
     : isNightly
@@ -36,27 +35,20 @@ const SectionHeading = props => {
     : isWeekly
     ? 'ListingPage.perWeek'
     : 'ListingPage.perUnit';
-  
-  
 
-  
-  console.log('price',formattedPrice,unitTranslationKey); 
+  console.log('price', formattedPrice, unitTranslationKey);
   return (
     <div className={css.sectionHeading}>
-      {
-        user_type != 0 ?
-        (
-          <div className={css.desktopPriceContainer}>
-            <div className={css.desktopPriceValue} title={priceTitle}>
-              {formattedPrice}
-            </div>
-            <div className={css.desktopPerUnit}>
-              <FormattedMessage id={unitTranslationKey} /> 
-            </div>
+      {user_type != 0 ? (
+        <div className={css.desktopPriceContainer}>
+          <div className={css.desktopPriceValue} title={priceTitle}>
+            {formattedPrice}
           </div>
-        )
-        :null
-      }
+          <div className={css.desktopPerUnit}>
+            <FormattedMessage id={unitTranslationKey} />
+          </div>
+        </div>
+      ) : null}
       <div className={css.heading}>
         <h1 className={css.title}>{richTitle}</h1>
         <div className={css.author}>

@@ -240,7 +240,7 @@ export class ListingPageComponent extends Component {
       geolocation = null,
       price = null,
       title = '',
-      publicData,
+      publicData
     } = currentListing.attributes;
     console.log('attributes',currentListing.attributes);
     const user_type = publicData?publicData.user_type:null;

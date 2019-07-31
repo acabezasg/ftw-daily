@@ -576,10 +576,10 @@
 @custom-media --viewportXLarge (min-width: 1921px);
 
 .SectionHero_heroMainTitle__3YHOS {
-    max-width: 100% !important;
-    text-align: center !important;
+  max-width: 100% !important;
+  text-align: center !important;
 }
 
 .SectionHero_heroButton__3j9FY {
-	background-color: #41a6df !important;
+  background-color: #41a6df !important;
 }

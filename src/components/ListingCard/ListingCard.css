@@ -9,7 +9,7 @@
   &:hover {
     text-decoration: none;
     transform: scale(1.02);
-    box-shadow: 4px 6px 25px 1px rgba(0,0,0,0.46);
+    box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.46);
   }
 }
 
@@ -44,7 +44,7 @@
   flex-direction: row;
   padding: 15px;
   background: #41a6df;
-  padding: 15px
+  padding: 15px;
 }
 
 .price {
@@ -127,4 +127,28 @@
   /* use break-word if available */
   word-break: break-word;
   hyphens: auto;
+}
+
+.cardCategory {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3px 10px;
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+.cardCategoryOwner {
+  color: white;
+}
+
+.cardCategorySitter {
+  color: white;
+}
+
+.cardCategoryService {
+  color: white;
 }

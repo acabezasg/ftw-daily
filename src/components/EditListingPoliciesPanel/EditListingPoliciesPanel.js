@@ -28,9 +28,9 @@ const EditListingPoliciesPanel = props => {
   const { publicData } = currentListing.attributes;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-  const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
-  const publish = isPublished ?"title.":"createListingTitle.";
-  const PoliciesPanelTitle = 'EditListingPoliciesPanel.'+ publish + user_name;
+  const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
+  const publish = isPublished ? 'title.' : 'createListingTitle.';
+  const PoliciesPanelTitle = 'EditListingPoliciesPanel.' + publish + user_name;
   const panelTitle = isPublished ? (
     <FormattedMessage
       id={PoliciesPanelTitle}
@@ -61,7 +61,7 @@ const EditListingPoliciesPanel = props => {
         updated={panelUpdated}
         updateInProgress={updateInProgress}
         fetchErrors={errors}
-        user_type ={ user_type}
+        user_type={user_type}
       />
     </div>
   );
