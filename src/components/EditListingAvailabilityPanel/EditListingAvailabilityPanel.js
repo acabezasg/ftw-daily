@@ -41,9 +41,9 @@ const EditListingAvailabilityPanel = props => {
     ],
   };
   const availabilityPlan = currentListing.attributes.availabilityPlan || defaultAvailabilityPlan;
-  const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
-  const publish = isPublished ?"title.":"createListingTitle.";
-  const AvailabilityPanelTitle = 'EditListingAvailabilityPanel.'+ publish + user_name;
+  const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
+  const publish = isPublished ? 'title.' : 'createListingTitle.';
+  const AvailabilityPanelTitle = 'EditListingAvailabilityPanel.' + publish + user_name;
   return (
     <div className={classes}>
       <h1 className={css.title}>
@@ -74,8 +74,8 @@ const EditListingAvailabilityPanel = props => {
         updated={panelUpdated}
         updateError={errors.updateListingError}
         updateInProgress={updateInProgress}
-        name_equipment = {EQUIPMENTS_NAME}
-        name_location = {LOCATIONS_NAME}
+        name_equipment={EQUIPMENTS_NAME}
+        name_location={LOCATIONS_NAME}
         equipments={config.custom.equipments}
         locations={config.custom.locations}
         user_name={user_name}

@@ -2,14 +2,14 @@
 
 :root {
   --ManageAvailabilityCalendar_gridColor: #e0e0e0;
-  --ManageAvailabilityCalendar_availableColor: #FFFFFF;
-  --ManageAvailabilityCalendar_availableColorHover: #FFFFFF;
+  --ManageAvailabilityCalendar_availableColor: #ffffff;
+  --ManageAvailabilityCalendar_availableColorHover: #ffffff;
   --ManageAvailabilityCalendar_outRangeColor: #ebebeb;
   --ManageAvailabilityCalendar_outRangeColorHover: #e6e6e6;
-  --ManageAvailabilityCalendar_blockedColor: #40A6DF;
+  --ManageAvailabilityCalendar_blockedColor: #40a6df;
   --ManageAvailabilityCalendar_blockedColorHover: #4eb5ed;
-  --ManageAvailabilityCalendar_reservedColor: #e6fff0;
-  --ManageAvailabilityCalendar_reservedColorHover: #e1faeb;
+  --ManageAvailabilityCalendar_reservedColor: red;
+  --ManageAvailabilityCalendar_reservedColorHover: red;
   --ManageAvailabilityCalendar_failedColor: #fff2f2;
 }
 
@@ -209,12 +209,12 @@
 
 .blocked {
   background-color: var(--ManageAvailabilityCalendar_blockedColor);
-  color: rgb(230,230,230);
+  color: rgb(230, 230, 230);
   &:hover {
     background-color: var(--ManageAvailabilityCalendar_blockedColorHover);
   }
 }
-.hover{
+.hover {
   background-color: green;
 }
 .reserved {

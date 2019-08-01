@@ -24,9 +24,6 @@ import {
   EditListingHomePanel,
 } from '../../components';
 
-
-
-
 export const AVAILABILITY = 'availability';
 export const DESCRIPTION = 'description';
 export const FEATURES = 'features';
@@ -46,7 +43,6 @@ export const SUPPORTED_TABS = [
   PRICING,
   PHOTOS,
   POLICY,
-  
 ];
 
 const pathParamsToNextTab = (params, tab, marketplaceTabs) => {
@@ -103,7 +99,7 @@ const EditListingWizardTab = props => {
     updatedTab,
     updateInProgress,
     intl,
-    user_type
+    user_type,
   } = props;
 
   const { type } = params;
@@ -163,7 +159,7 @@ const EditListingWizardTab = props => {
       user_type,
     };
   };
-  
+
   var submitButtonTranslationKey;
   switch (tab) {
     case DESCRIPTION: {
@@ -173,7 +169,7 @@ const EditListingWizardTab = props => {
       return (
         <EditListingDescriptionPanel
           {...panelProps(DESCRIPTION)}
-          submitButtonText={intl.formatMessage({ id: submitButtonTranslationKey})}
+          submitButtonText={intl.formatMessage({ id: submitButtonTranslationKey })}
           onSubmit={values => {
             onCompleteEditListingWizardTab(tab, values);
           }}
@@ -181,17 +177,16 @@ const EditListingWizardTab = props => {
       );
     }
     case FEATURES: {
-      if(isNewListingFlow){
-        if(user_type !==2){
+      if (isNewListingFlow) {
+        if (user_type !== 2) {
           submitButtonTranslationKey = 'EditListingWizard.saveNewFeatures';
-        }else{
+        } else {
           submitButtonTranslationKey = 'EditListingWizard.saveNewHome';
         }
-
-      }else{
-        if(user_type !== 2){
+      } else {
+        if (user_type !== 2) {
           submitButtonTranslationKey = 'EditListingWizard.saveEditFeatures';
-        }else{
+        } else {
           submitButtonTranslationKey = 'EditListingWizard.saveEditFeatures';
         }
       }
@@ -206,7 +201,7 @@ const EditListingWizardTab = props => {
       );
     }
     case HOME: {
-      submitButtonTranslationKey = isNewListingFlow 
+      submitButtonTranslationKey = isNewListingFlow
         ? 'EditListingWizard.saveNewHome'
         : 'EditListingWizard.saveEditHome';
       return (
@@ -237,8 +232,7 @@ const EditListingWizardTab = props => {
       submitButtonTranslationKey = isNewListingFlow
         ? 'EditListingWizard.saveNewLocation'
         : 'EditListingWizard.saveEditLocation';
-      
-      
+
       return (
         <EditListingLocationPanel
           {...panelProps(LOCATION)}
@@ -264,15 +258,14 @@ const EditListingWizardTab = props => {
       );
     }
     case AVAILABILITY: {
-      
-      if(user_type){
+      if (user_type) {
         submitButtonTranslationKey = isNewListingFlow
-        ? 'EditListingWizard.saveNewAvailability'
-        : 'EditListingWizard.saveEditAvailability';
-      }else{
+          ? 'EditListingWizard.saveNewAvailability'
+          : 'EditListingWizard.saveEditAvailability';
+      } else {
         submitButtonTranslationKey = isNewListingFlow
-        ? 'EditListingWizard.saveNewPricing'
-        : 'EditListingWizard.saveEditAvailability';
+          ? 'EditListingWizard.saveNewPricing'
+          : 'EditListingWizard.saveEditAvailability';
       }
       return (
         <EditListingAvailabilityPanel
@@ -366,8 +359,6 @@ EditListingWizardTab.propTypes = {
   updateInProgress: bool.isRequired,
 
   intl: intlShape.isRequired,
-
-  
 };
 
 export default EditListingWizardTab;
