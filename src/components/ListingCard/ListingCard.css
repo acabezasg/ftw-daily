@@ -135,20 +135,32 @@
   top: 0;
   left: 0;
   text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 3px 10px;
-  font-size: 15px;
-  border-radius: 2px;
+  color: #fff;
+  padding: 7px 20px 8px;
+  border-bottom-right-radius: 3px;
+  font-weight: 600;
+  background-image: linear-gradient(
+    to right top,
+    #41a6df,
+    #41a6df,
+    #41a6df,
+    #41a6df,
+    #41a6df,
+    #58a2e9,
+    #769cee,
+    #9595ee,
+    #ff65a6,
+    #ff65a6,
+    #ff6364,
+    #f77d0e
+  );
 }
 
-.cardCategoryOwner {
-  color: white;
-}
-
-.cardCategorySitter {
-  color: white;
-}
-
-.cardCategoryService {
-  color: white;
+.categoryImage {
+  height: 24px;
+  position: absolute;
+  transform: rotate(120deg);
+  left: -5px;
+  top: -5px;
+  z-index: 50;
 }
