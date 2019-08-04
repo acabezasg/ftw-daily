@@ -269,8 +269,6 @@ export const rate = [
   { key: 'h', label: 'Per hour' },
   { key: 'u', label: 'Per unit' },
   { key: 'd', label: 'Per day' },
-  { key: 'n', label: 'Per night' },
-  { key: 'w', label: 'Per week' },
 ];
 
 export const preferredLocations = [

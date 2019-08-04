@@ -136,9 +136,10 @@
   left: 0;
   text-transform: capitalize;
   color: #fff;
-  padding: 7px 20px 8px;
+  padding: 5px 18px;
   border-bottom-right-radius: 3px;
   font-weight: 600;
+  font-size: 16px;
   background-image: linear-gradient(
     to right top,
     #41a6df,

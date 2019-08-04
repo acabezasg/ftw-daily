@@ -120,6 +120,7 @@ export const ManageListingCardComponent = props => {
     actionsInProgressListingId,
     listing,
     onCloseListing,
+    onDeleteListing,
     onOpenListing,
     onToggleMenu,
     renderSizes,
@@ -217,21 +218,39 @@ export const ManageListingCardComponent = props => {
                 </div>
               </MenuLabel>
               <MenuContent rootClassName={css.menuContent}>
-                <MenuItem key="close-listing">
-                  <InlineTextButton
-                    rootClassName={menuItemClasses}
-                    onClick={event => {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      if (!actionsInProgressListingId) {
-                        onToggleMenu(null);
-                        onCloseListing(currentListing.id);
-                      }
-                    }}
-                  >
-                    <FormattedMessage id="ManageListingCard.closeListing" />
-                  </InlineTextButton>
-                </MenuItem>
+                {isDraft ? (
+                  <MenuItem key="delete-listing">
+                    <InlineTextButton
+                      rootClassName={menuItemClasses}
+                      onClick={event => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        if (!actionsInProgressListingId) {
+                          onToggleMenu(null);
+                          onDeleteListing(currentListing.id);
+                        }
+                      }}
+                    >
+                      <FormattedMessage id="ManageListingCard.deleteListing" />
+                    </InlineTextButton>
+                  </MenuItem>
+                ) : (
+                  <MenuItem key="close-listing">
+                    <InlineTextButton
+                      rootClassName={menuItemClasses}
+                      onClick={event => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        if (!actionsInProgressListingId) {
+                          onToggleMenu(null);
+                          onCloseListing(currentListing.id);
+                        }
+                      }}
+                    >
+                      <FormattedMessage id="ManageListingCard.closeListing" />
+                    </InlineTextButton>
+                  </MenuItem>
+                )}
               </MenuContent>
             </Menu>
           </div>
@@ -375,6 +394,7 @@ ManageListingCardComponent.propTypes = {
   isMenuOpen: bool.isRequired,
   actionsInProgressListingId: shape({ uuid: string.isRequired }),
   onCloseListing: func.isRequired,
+  onDeleteListing: func.isRequired,
   onOpenListing: func.isRequired,
   onToggleMenu: func.isRequired,
   availabilityEnabled: bool,

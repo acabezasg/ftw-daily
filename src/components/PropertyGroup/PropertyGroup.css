@@ -72,14 +72,14 @@
 }
 
 .notSelectedLabel {
-  color: var(--matterColorNegative);
+  color: #c3c3c3;
   position: relative;
 
   /* line-through */
   background-image: linear-gradient(
     transparent var(--PropertyGroup_lineThroughTopMobile),
-    var(--matterColorNegative) var(--PropertyGroup_lineThroughTopMobile),
-    var(--matterColorNegative) var(--PropertyGroup_lineThroughBottomMobile),
+    #c3c3c3 var(--PropertyGroup_lineThroughTopMobile),
+    #c3c3c3 var(--PropertyGroup_lineThroughBottomMobile),
     transparent var(--PropertyGroup_lineThroughBottomMobile)
   );
 
@@ -93,14 +93,14 @@
   }
 }
 
-.infoPanel{
+.infoPanel {
   padding: 25px 15px 20px 15px;
 }
-.infoItem{
-  font-size: 18px 
+.infoItem {
+  font-size: 18px;
 }
 
-.infoItemLabel{
+.infoItemLabel {
   padding: 3px;
   font: bold 20px #4a4a4a;
 }
