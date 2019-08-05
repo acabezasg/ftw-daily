@@ -14,6 +14,9 @@ import {
 import css from './OrderTypesPage.css';
 import cssButton from '../../components/Button/Button.css';
 
+import yoti from './yoti.png';
+import secured from './secured.jpg';
+
 const OrderTypesPage = (props) => {
   const draftId = '00000000-0000-0000-0000-000000000000';
   const draftSlug = 'draft';
@@ -40,6 +43,12 @@ const OrderTypesPage = (props) => {
 
             <div className={css.whatwedoTitle}>
               <div className={css.headTitle}>Choose your <span className={css.banner}> LISTING </span> Category</div>
+            </div>
+
+
+            <div className={css.whatwedoTitle}>
+              <img src={yoti} className={css.badgeImgs} /> <span className={css.badgeTextFirst}>Verified Listings</span>
+              <img src={secured} className={css.badgeImgs} /> <span className={css.badgeText}>Secure Bookings</span>
             </div>
           </div>
 

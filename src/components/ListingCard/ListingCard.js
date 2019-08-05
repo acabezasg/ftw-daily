@@ -104,7 +104,7 @@ export const ListingCardComponent = props => {
                 : `${css.cardCategory} ${css.cardCategoryService}`
             }
           >
-            <img src="https://i.imgur.com/9J9AEJC.png" className={css.categoryImage} />
+            
             {category}
           </div>
           <LazyImage

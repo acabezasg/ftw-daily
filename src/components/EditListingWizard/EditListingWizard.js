@@ -339,7 +339,7 @@ class EditListingWizard extends Component {
                 handlePublishListing={this.handlePublishListing}
                 fetchInProgress={fetchInProgress}
                 user_type = {user_type}
-              />
+              /> 
             );
           })}
         </Tabs>

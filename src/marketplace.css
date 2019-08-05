@@ -190,10 +190,6 @@
 
     /* Text */
     text-align: center;
-    text-decoration: none;
-
-    /* Effects */
-    transition: all var(--transitionStyleButton);
     cursor: pointer;
 
     &:hover,

@@ -13,6 +13,14 @@
   }
 }
 
+.root:hover .cardCategory {
+  background: #F77D0E;
+}
+
+.root:hover .info {
+  background: #F77D0E;
+}
+
 .threeToTwoWrapper {
   /* Layout */
   display: block;
@@ -140,21 +148,7 @@
   border-bottom-right-radius: 3px;
   font-weight: 600;
   font-size: 16px;
-  background-image: linear-gradient(
-    to right top,
-    #41a6df,
-    #41a6df,
-    #41a6df,
-    #41a6df,
-    #41a6df,
-    #58a2e9,
-    #769cee,
-    #9595ee,
-    #ff65a6,
-    #ff65a6,
-    #ff6364,
-    #f77d0e
-  );
+  background: #41A6DF;
 }
 
 .categoryImage {
