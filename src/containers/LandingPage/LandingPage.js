@@ -81,7 +81,7 @@ export const LandingPageComponent = props => {
 
             <p>We conduct stringent ID Verification checks to ensure the safety of your pets and your home</p>
 
-            <a href="#">Start Now</a>
+            <a href="signup">Start Now</a>
 
             </div>
 
@@ -91,7 +91,7 @@ export const LandingPageComponent = props => {
 
             <p>Make new friends among our community of like minded pet lovers, both near and far!</p>
 
-            <a href="#">Start Now</a>
+            <a href="signup">Start Now</a>
 
             </div>
 
@@ -172,7 +172,7 @@ export const LandingPageComponent = props => {
 
                </div>
 
-               <a href="#" id="how-button">Explore</a>
+               <a href="/s/listings" id="how-button">Explore</a>
 
               </div>
 
