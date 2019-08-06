@@ -1,4 +1,4 @@
-# Sharetribe Flex Template for Web
+# Trust My Pet Sitter Template
 
 [![CircleCI](https://circleci.com/gh/sharetribe/flex-template-web.svg?style=svg&circle-token=198451e83e5cecb0d662949260dbc3273ac44a67)](https://circleci.com/gh/sharetribe/flex-template-web)
 
