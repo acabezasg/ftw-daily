@@ -12,7 +12,7 @@ namely server side rendering and a custom CSS setup. The template is still in de
 Github repository to Heroku will make manual deploys easier.
 
 See the
-[How to deploy FTW to production](https://www.sharetribe.com/docs/guides/how-to-deploy-ftw-to-production/)
+[How to deploy TMPS to production](https://www.sharetribe.com/docs/guides/how-to-deploy-ftw-to-production/)
 guide in Flex Docs for more information.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
