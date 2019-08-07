@@ -68,6 +68,17 @@
   }
 }
 
+@media (min-width: 1280px) {
+.heroMainTitle {
+  margin-bottom: -16px !important;
+  font-size: 55px !important;
+}}
+
+@media (max-width: 1280px) {
+.heroMainTitle {
+  margin-bottom: 48px !important;
+}}
+
 .heroMainTitle {
   text-align: center;
   @apply --marketplaceHeroTitleFontStyles;
