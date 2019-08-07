@@ -173,7 +173,7 @@
   "EditListingDescriptionForm.titlePlaceholder.owner": "2 lovely dogs Sammy and Cleo in Manhattan?",
   "EditListingDescriptionForm.titlePlaceholder.sitter": "Marty and Sue ",
   "EditListingDescriptionForm.titlePlaceholder.service": "Kensington Veterinary Centre ",
-  "EditListingDescriptionForm.titleRequired": "You need to add a name.",
+  "EditListingDescriptionForm.titleRequired": "You need to add a heading.",
   "EditListingDescriptionForm.updateFailed": "Failed to update listing. Please try again.",
 
   "EditListingDescriptionPanel.createListingTitle.owner": "About you and your pets",
