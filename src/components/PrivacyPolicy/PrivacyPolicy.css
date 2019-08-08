@@ -16,11 +16,24 @@
   & .lastUpdated {
     @apply --marketplaceBodyFontStyles;
     margin-top: 0;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
 
     @media (--viewportMedium) {
       margin-top: 0;
-      margin-bottom: 54px;
+      margin-bottom: 30px;
     }
   }
+}
+
+.privacyul {
+  list-style: inherit !important;
+}
+
+li {
+  margin-bottom: 15px;
+  font-size: 16px !important;
+}
+
+.datecolor {
+  color: #41a6df;
 }
