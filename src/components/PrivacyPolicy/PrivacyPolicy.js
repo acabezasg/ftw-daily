@@ -29,19 +29,19 @@ const PrivacyPolicy = props => {
       <h2>Information we may collection from you: Please do not submit your personal information to us if you are not agreeable to our collection of it. By using our site you are agreeing that we may collect and process the following Information about you (without limitation):</h2>
       
       <ul className={css.privacyul}>
-        <li>Personal information such as name, address and contact details, property information, housesitting requirements, dates of availability etc that you provide by filling in forms on our site and otherwise by corresponding with us via or in connection with our site;</li>
-        <li>Other details of your visits to our site including, but not limited to, traffic data, search criteria, location data, weblogs and other communication data, and the resources that you access; and</li>
-        <li>Automatically collected data from your visits to the site, which may involve the use of cookies and web beacons which allow us to facilitate your convenient use of our site and to enhance user experience developments. (Please note that you may refuse to accept cookies by activating the setting on your browser which allows you to refuse the use of cookies. However, if you select this setting you may be unable to access certain parts of our site)</li>
+        <li className={css.privacyli}>Personal information such as name, address and contact details, property information, housesitting requirements, dates of availability etc that you provide by filling in forms on our site and otherwise by corresponding with us via or in connection with our site;</li>
+        <li className={css.privacyli}>Other details of your visits to our site including, but not limited to, traffic data, search criteria, location data, weblogs and other communication data, and the resources that you access; and</li>
+        <li className={css.privacyli}>Automatically collected data from your visits to the site, which may involve the use of cookies and web beacons which allow us to facilitate your convenient use of our site and to enhance user experience developments. (Please note that you may refuse to accept cookies by activating the setting on your browser which allows you to refuse the use of cookies. However, if you select this setting you may be unable to access certain parts of our site)</li>
       </ul>
 
       <h2>Uses made of your Information: We use Information held about you in the following ways:</h2>
       <ul className={css.privacyul}>
-         <li>To operate our site and carry out our obligations arising from our site.</li>
-         <li>To allow you to participate in interactive features of our site.</li>
-         <li>To provide you with information about us, our pet owners and pet sitting assignments that may be of interest to you, where you have consented to be contacted for such purposes.</li>
-         <li>To ensure that content from our site is presented in the most effective manner for you and for your computer.</li>
-         <li>To notify you about changes to our site.</li>
-         <li>As required in order to facilitate your use of any new services, applications or uses for any of your Information via our site, provided that we have obtained your opt-in consent before using the Information in that manner.</li>
+         <li className={css.privacyli}>To operate our site and carry out our obligations arising from our site.</li>
+         <li className={css.privacyli}>To allow you to participate in interactive features of our site.</li>
+         <li className={css.privacyli}>To provide you with information about us, our pet owners and pet sitting assignments that may be of interest to you, where you have consented to be contacted for such purposes.</li>
+         <li className={css.privacyli}>To ensure that content from our site is presented in the most effective manner for you and for your computer.</li>
+         <li className={css.privacyli}>To notify you about changes to our site.</li>
+         <li className={css.privacyli}>As required in order to facilitate your use of any new services, applications or uses for any of your Information via our site, provided that we have obtained your opt-in consent before using the Information in that manner.</li>
       </ul>
 
       <p>
@@ -55,9 +55,9 @@ const PrivacyPolicy = props => {
 
       <h2>Disclosure of your Information: We may only disclose your personal Information to third parties subject to the same restrictions as contained in this Privacy Policy to any member of our group, which means our subsidiaries, our ultimate holding company and its subsidiaries. We may also disclose your Information to third parties:</h2>
       <ul className={css.privacyul}>
-         <li>In the event that we sell or buy any business or assets, in which case we may disclose your Information in confidence to the prospective seller or buyer of such business or assets.</li>
-         <li>If we or substantially all of our assets are transferred to or acquired by a third party, in which case personal data held by us about our customers will be one of the transferred assets subject to the terms of this Privacy Policy.</li>
-         <li>If we are under a duty to disclose or share your Information in order to comply with any legal obligation, or in order to enforce or apply our terms and conditions other agreements; or to protect the rights, property, or safety of us, our customers, or others. This includes exchanging Information with other companies and organisations for the purposes of fraud protection and credit risk reduction.</li>
+         <li className={css.privacyli}>In the event that we sell or buy any business or assets, in which case we may disclose your Information in confidence to the prospective seller or buyer of such business or assets.</li>
+         <li className={css.privacyli}>If we or substantially all of our assets are transferred to or acquired by a third party, in which case personal data held by us about our customers will be one of the transferred assets subject to the terms of this Privacy Policy.</li>
+         <li className={css.privacyli}>If we are under a duty to disclose or share your Information in order to comply with any legal obligation, or in order to enforce or apply our terms and conditions other agreements; or to protect the rights, property, or safety of us, our customers, or others. This includes exchanging Information with other companies and organisations for the purposes of fraud protection and credit risk reduction.</li>
       </ul>
 
       <h2>Your rights:</h2>
