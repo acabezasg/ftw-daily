@@ -10,6 +10,7 @@ import {
   AboutPage,
   AuthenticationPage,
   CheckoutPage,
+  FeaturedOne,
   ContactDetailsPage,
   EditListingPage,
   EmailVerificationPage,

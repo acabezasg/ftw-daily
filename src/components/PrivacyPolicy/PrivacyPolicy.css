@@ -25,6 +25,12 @@
   }
 }
 
+@media (max-width: 700px) {
+  .lastUpdated {
+    margin-bottom: 20px !important;
+  }
+}
+
 .privacyul {
   list-style: inherit !important;
 }

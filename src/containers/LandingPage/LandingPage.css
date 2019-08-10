@@ -107,6 +107,14 @@
   margin-top: 0px;
 }
 
+.section:nth-of-type(4n) { 
+  background-color: #fcfcfc;
+ }
+
+.section:nth-of-type(3n) { 
+  background-color: #fff;
+ }
+
 /* A bar on top of light sections */
 .section:nth-of-type(2n) .sectionContent::before {
   background: var(--marketplaceColor);

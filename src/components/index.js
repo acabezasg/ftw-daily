@@ -69,6 +69,9 @@ export { default as ContactForm } from './ContactForm/ContactForm';
 // Google Map
 export { default as GoogleMap } from './GoogleMap/GoogleMap';
 
+// Section Featured
+export { default as SectionFeatured } from './SectionFeatured/SectionFeatured';
+
 // Layout helpers
 export { default as LayoutWrapperFooter } from './LayoutWrapperFooter/LayoutWrapperFooter';
 export { default as LayoutWrapperMain } from './LayoutWrapperMain/LayoutWrapperMain';

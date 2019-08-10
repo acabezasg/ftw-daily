@@ -10,6 +10,7 @@ import {
   Page,
   SectionHero,
   SectionLocations,
+  SectionFeatured,
   LayoutSingleColumn,
   LayoutWrapperTopbar,
   LayoutWrapperMain,
@@ -178,6 +179,11 @@ export const LandingPageComponent = props => {
 
             </li>
 
+            <li className={css.section}>
+              <div className={css.sectionContentFirstChild}>
+                <SectionFeatured />
+              </div>
+            </li>
 
           </ul>
         </LayoutWrapperMain>
