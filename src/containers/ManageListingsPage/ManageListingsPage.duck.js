@@ -53,9 +53,14 @@ const updateListingAttributes = (state, listingEntity) => {
     ...state.ownEntities.ownListing,
     [listingEntity.id.uuid]: updatedListing,
   };
+  if (listingEntity.attributes.deleted) {
+    delete ownListingEntities[listingEntity.id.uuid];
+    state.pagination.totalItems = state.pagination.totalItems - 1;
+  }
   return {
     ...state,
     ownEntities: { ...state.ownEntities, ownListing: ownListingEntities },
+    pagination: { ...state.pagination, totalItems: state.pagination.totalItems },
   };
 };
 
@@ -130,29 +135,29 @@ const manageListingsPageReducer = (state = initialState, action = {}) => {
       };
     }
 
-    // case DELETE_LISTING_REQUEST:
-    //   return {
-    //     ...state,
-    //     closingListing: payload.listingId,
-    //     closingListingError: null,
-    //   };
-    // case DELETE_LISTING_SUCCESS:
-    //   return {
-    //     ...updateListingAttributes(state, payload.data),
-    //     closingListing: null,
-    //   };
-    // case DELETE_LISTING_ERROR: {
-    //   // eslint-disable-next-line no-console
-    //   console.error(payload);
-    //   return {
-    //     ...state,
-    //     closingListing: null,
-    //     closingListingError: {
-    //       listingId: state.closingListing,
-    //       error: payload,
-    //     },
-    //   };
-    // }
+    case DELETE_LISTING_REQUEST:
+      return {
+        ...state,
+        closingListing: payload.listingId,
+        closingListingError: null,
+      };
+    case DELETE_LISTING_SUCCESS:
+      return {
+        ...updateListingAttributes(state, payload.data),
+        closingListing: null,
+      };
+    case DELETE_LISTING_ERROR: {
+      // eslint-disable-next-line no-console
+      console.error(payload);
+      return {
+        ...state,
+        closingListing: null,
+        closingListingError: {
+          listingId: state.closingListing,
+          error: payload,
+        },
+      };
+    }
 
     case ADD_OWN_ENTITIES:
       return merge(state, payload);
