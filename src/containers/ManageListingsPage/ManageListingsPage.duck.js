@@ -284,8 +284,8 @@ export const queryOwnListings = queryParams => (dispatch, getState, sdk) => {
 export const closeListing = listingId => (dispatch, getState, sdk) => {
   dispatch(closeListingRequest(listingId));
 
-  return sdk
-    .ownListingsdelete({ id: listingId }, { expand: true })
+  return sdk.ownListings
+    .close({ id: listingId }, { expand: true })
     .then(response => {
       dispatch(closeListingSuccess(response));
       return response;
