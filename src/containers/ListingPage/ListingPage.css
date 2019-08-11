@@ -355,6 +355,10 @@
   }
 }
 
+.author span {
+  text-transform: capitalize;
+}
+
 .author {
   width: 100%;
   @apply --marketplaceH4FontStyles;
