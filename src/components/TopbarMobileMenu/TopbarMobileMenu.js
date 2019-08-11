@@ -83,23 +83,15 @@ const TopbarMobileMenu = props => {
         </span>
 
         <InlineTextButton className={css.logoutButton}>
-          <a href="howitworks"><FormattedMessage id="How it Works" /></a>
+          <a className={css.inbox} href="/s/listings"><FormattedMessage id="Search Listings" /></a>
         </InlineTextButton>
 
         <InlineTextButton className={css.logoutButton}>
-          <a href="faq"><FormattedMessage id="Faq" /></a>
-        </InlineTextButton>
-
-        <InlineTextButton className={css.logoutButton}>
-          <a href="/s/listings"><FormattedMessage id="Listings" /></a>
-        </InlineTextButton>
-
-        <InlineTextButton className={css.logoutButton}>
-          <a href="contact"><FormattedMessage id="Contact" /></a>
+          <a className={css.inbox} href="contact"><FormattedMessage id="Contact" /></a>
         </InlineTextButton>
         
         <InlineTextButton rootClassName={css.logoutButton, css.logoutLast} onClick={onLogout}>
-          <FormattedMessage id="TopbarMobileMenu.logoutLink" />
+          <FormattedMessage className={css.inbox} id="TopbarMobileMenu.logoutLink" />
         </InlineTextButton>
 
         <NamedLink
@@ -130,7 +122,7 @@ const TopbarMobileMenu = props => {
         </NamedLink>
       </div>
       <div className={css.footer}>
-        <NamedLink className={css.createNewListingLink} name="NewListingPage">
+        <NamedLink className={css.createNewListingLink} name="OrderTypesPage" params={{type:'new'}}>
           <FormattedMessage id="TopbarMobileMenu.newListingLink" />
         </NamedLink>
       </div>
