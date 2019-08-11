@@ -924,6 +924,7 @@
   "SectionLocations.listingsInLocation": "Pet Sitters in {location}",
   "SectionFeatured.listingsInFeaturedCat": "{featuredcategory}",
   "SectionFeatured.listingsInFeatured": "{location}",
+  "SectionFeatured.featuredBadge": "{badge}",
   "SectionFeatured.title": "Featured Listings",
   "SectionLocations.title": "Latest Worldwide Listings",
   "SelectMultipleFilter.labelSelected": "{labelText} • {count}",

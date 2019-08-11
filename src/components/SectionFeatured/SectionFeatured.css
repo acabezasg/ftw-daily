@@ -52,6 +52,7 @@
 
 /* A wrapper for a responsive image that holds it's aspect ratio */
 .imageWrapper {
+  overflow: hidden;
   position: relative;
   width: 100%;
   border-radius: 4px;
@@ -67,6 +68,7 @@
 
 /* An image wrapper that defines the images aspect ratio */
 .aspectWrapper {
+  position: relative;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   padding-bottom: calc(6 / 13 * 100%); /* 13:6 Aspect Ratio */
@@ -161,14 +163,35 @@
   background: linear-gradient(-45deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
 }
 
-  .aspectWrapper img {
+.aspectWrapper img {
     z-index: -1;
-   }
+}
 
-   .linkText span {
+.linkText span {
     color: #4a4a4a;
-   }
+}
 
-   .location {
+.location {
     position: relative;
-    }
+}
+
+.location:hover .aspectWrapper {
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)) !important;
+}
+
+.categoryBadge {
+    background-color: #41a6df;
+    float: left;
+    position: absolute;
+    transform: rotate(45deg);
+    right: -64px;
+    top: 22px;
+    text-align: center;
+    width: 200px;
+    font-size: 15px;
+    margin: 0;
+    z-index: 999;
+    color: #fff;
+    font-weight: 500;
+    line-height: 28px;
+}

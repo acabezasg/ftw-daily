@@ -23,8 +23,7 @@
   });
 });
 
-
-      $( function() {
+  $( function() {
   $('#stickyul a').click( function() {
     $('#stickyul a').removeClass('selected');
     $(this).addClass('selected');

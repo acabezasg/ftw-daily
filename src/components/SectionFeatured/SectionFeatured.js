@@ -20,21 +20,28 @@ class LocationImage extends Component {
     return <img alt={alt} {...rest} />;
   }
 }
-const LazyImage = lazyLoadWithDimensions(LocationImage);
 
-  const locationLink = (name, image, searchQuery, categoryOne, categoryTwo, categoryThree, categoryFour) => {
+  const LazyImage = lazyLoadWithDimensions(LocationImage);
+  const locationLink = (name, image, searchQuery, categoryOne, categoryTwo, categoryThree, categoryFour, badge) => {
   const nameText = <span className={css.locationName}>{name}</span>;
   const featuredText = <span className={css.locationName}>{categoryOne}</span>;
   const featuredTextTwo = <span className={css.locationName}>{categoryTwo}</span>;
   const featuredTextThree = <span className={css.locationName}>{categoryThree}</span>;
   const featuredTextFour = <span className={css.locationName}>{categoryFour}</span>;
 
-
   return (
   <NamedLink name="SearchPage" to={{ search: searchQuery }} className={css.location}>
       <div className={css.imageWrapper}>
         <div className={css.aspectWrapper} id="wrapperAspect">
           <LazyImage src={image} alt={name} className={css.locationImage} />
+
+          <div className={css.categoryBadge}>
+                <FormattedMessage
+                id="SectionFeatured.featuredBadge" 
+                values={{ badge }}
+                />
+          </div>
+
         </div>
       <div className={css.linkText} id="textLink">
         <div className={css.featuredL}>
@@ -163,7 +170,8 @@ const SectionFeatured = props => {
           'Dogs',
           'Reptiles',
           'Giant',
-          'Large'
+          'Large',
+          'Sitter'
         )}
         {locationLink(
           'Services',
@@ -172,7 +180,8 @@ const SectionFeatured = props => {
           'Cats',
           'Sharks',
           'Pet Store',
-          'Giant'
+          'Giant',
+          'Services'
         )}
         {locationLink(
           'Ana Janne',
@@ -181,7 +190,8 @@ const SectionFeatured = props => {
           'Rabbits',
           'Horses',
           'Car',
-          '18+'
+          '18+',
+          'Owner'
         )}
       </div>
     </div>
