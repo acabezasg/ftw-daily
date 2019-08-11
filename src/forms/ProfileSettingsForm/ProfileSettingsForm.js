@@ -9,7 +9,15 @@ import { ensureCurrentUser } from '../../util/data';
 import { propTypes } from '../../util/types';
 import * as validators from '../../util/validators';
 import { isUploadImageOverLimitError } from '../../util/errors';
-import { Form, Avatar, Button, ImageFromFile, IconSpinner, FieldTextInput } from '../../components';
+import {
+  Form,
+  Avatar,
+  Button,
+  ImageFromFile,
+  FieldCheckboxGroup,
+  IconSpinner,
+  FieldTextInput,
+} from '../../components';
 
 import css from './ProfileSettingsForm.css';
 
@@ -296,10 +304,31 @@ class ProfileSettingsFormComponent extends Component {
                   label={bioLabel}
                   placeholder={bioPlaceholder}
                 />
-                <p className={css.bioInfo}>
-                  <FormattedMessage id="ProfileSettingsForm.bioInfo" />
-                </p>
               </div>
+
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <span>Preferred Locations (For Pet Owners Only)</span>
+                </h3>
+                <FieldCheckboxGroup
+                  id="preferredlocations"
+                  name="preferredlocations"
+                  label="Preferred Locations"
+                  options={[
+                    { key: 'UK', label: 'UK' },
+                    { key: 'USA', label: 'USA' },
+                    { key: 'Australia', label: 'Australia' },
+                    { key: 'Canada', label: 'Canada' },
+                    { key: 'France', label: 'France' },
+                    { key: 'Spain', label: 'Spain' },
+                    { key: 'Italy', label: 'Italy' },
+                    { key: 'Germany', label: 'Germany' },
+                    { key: 'India', label: 'India' },
+                    { key: 'China', label: 'China' },
+                  ]}
+                />
+              </div>
+
               {submitError}
               <Button
                 className={css.submitButton}

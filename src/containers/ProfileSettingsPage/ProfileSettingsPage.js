@@ -45,7 +45,8 @@ export class ProfileSettingsPageComponent extends Component {
     } = this.props;
 
     const handleSubmit = values => {
-      const { firstName, lastName, bio: rawBio } = values;
+      console.log(values);
+      const { firstName, lastName, bio: rawBio, preferredlocations } = values;
 
       // Ensure that the optional bio is a string
       const bio = rawBio || '';
@@ -54,6 +55,9 @@ export class ProfileSettingsPageComponent extends Component {
         firstName: firstName.trim(),
         lastName: lastName.trim(),
         bio,
+        publicData: {
+          preferredlocations,
+        },
       };
       const uploadedImage = this.props.image;
 
@@ -62,6 +66,8 @@ export class ProfileSettingsPageComponent extends Component {
         uploadedImage && uploadedImage.imageId && uploadedImage.file
           ? { ...profile, profileImageId: uploadedImage.imageId }
           : profile;
+
+      console.log(updatedValues);
 
       onUpdateProfile(updatedValues);
     };
@@ -154,6 +160,7 @@ ProfileSettingsPageComponent.propTypes = {
 
 const mapStateToProps = state => {
   const { currentUser } = state.user;
+  console.log(state.user);
   const {
     image,
     uploadImageError,
