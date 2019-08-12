@@ -70,6 +70,8 @@ const locationLink = (
 
       <ReactTooltip className={css.customTip} id={tipId} effect='solid'>
         <span className={css.tipColor}>
+        {/* <img className={css.yotismall} src={yotismall} /> 
+            <img className={css.yotismall} src={yotismall} /> */}  
         Yoti ID Verification
         </span>
       </ReactTooltip>
