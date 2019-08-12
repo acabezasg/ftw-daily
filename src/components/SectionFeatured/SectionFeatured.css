@@ -203,7 +203,7 @@
 .customTip {
  color: #fff !important;
  background-color: #41a6df !important;
- opacity: 1 !important;
+ opacity: 0.99 !important;
  margin-top: -11px !important;
 }
 
