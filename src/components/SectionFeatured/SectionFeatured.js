@@ -188,8 +188,8 @@ const SectionFeatured = props => {
           'Giant',
           'Large',
           'Sitter',
-          1,
-          'one'
+          '5d37b33f-0987-4eab-8c2f-3b42e075c1a4',
+          'pet-caring'
         )}
         {locationLink(
           'Services',
@@ -200,8 +200,8 @@ const SectionFeatured = props => {
           'Pet Store',
           'Giant',
           'Services',
-          2,
-          'two'
+          '5d37b0fe-9675-4784-9728-8307c110e03d',
+          'services'
         )}
         {locationLink(
           'Ana Janne',
@@ -212,8 +212,8 @@ const SectionFeatured = props => {
           'Car',
           '18+',
           'Owner',
-          3,
-          'three'
+          '5d387c50-3801-4f01-acfa-26c7cbd94f9e',
+          'ana-jane'
         )}
       </div>
     </div>
