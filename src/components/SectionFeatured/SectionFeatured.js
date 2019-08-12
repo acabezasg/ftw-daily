@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { lazyLoadWithDimensions } from '../../util/contextHelpers';
 import includes from 'lodash/includes';
+import ReactTooltip from 'react-tooltip'
 
 import { NamedLink } from '../../components';
 
@@ -13,6 +14,7 @@ import featuredOne from './images/featuredOne.jpg';
 import featuredTwo from './images/featuredTwo.jpg';
 import featuredThree from './images/featuredThree.png';
 import yoti from './images/yoti.png';
+import yotismall from './images/yotismall.png';
 
 class LocationImage extends Component {
   render() {
@@ -32,7 +34,8 @@ const locationLink = (
   categoryFour,
   badge,
   id,
-  slug
+  slug,
+  tipId
 ) => {
   const nameText = <span className={css.locationName}>{name}</span>;
   const featuredText = <span className={css.locationName}>{categoryOne}</span>;
@@ -42,6 +45,7 @@ const locationLink = (
 
   return (
     <NamedLink name="ListingPage" params={{ id, slug }} className={css.location}>
+
       <div className={css.imageWrapper}>
         <div className={css.aspectWrapper} id="wrapperAspect">
           <LazyImage src={image} alt={name} className={css.locationImage} />
@@ -58,10 +62,19 @@ const locationLink = (
               />
             </div>
 
-            <div className={css.nameYoti}>
-              <img className={css.yotiImg} src={yoti} />
-            </div>
-          </div>
+      <div className={css.nameYoti}>
+        <img data-tip data-for={tipId} className={css.yotiImg} src={yoti} />
+      </div>
+
+
+
+      <ReactTooltip className={css.customTip} id={tipId} effect='solid'>
+        <span className={css.tipColor}>
+        Yoti ID Verification
+        </span>
+      </ReactTooltip>
+
+        </div>
 
           <div className={css.featuredR}>
             <div className={css.featuredSorting}>
@@ -189,7 +202,8 @@ const SectionFeatured = props => {
           'Large',
           'Sitter',
           '5d37b33f-0987-4eab-8c2f-3b42e075c1a4',
-          'pet-caring'
+          'pet-caring',
+          'tipOne'
         )}
         {locationLink(
           'Services',
@@ -201,7 +215,8 @@ const SectionFeatured = props => {
           'Giant',
           'Services',
           '5d37b0fe-9675-4784-9728-8307c110e03d',
-          'services'
+          'services',
+          'tipTwo'
         )}
         {locationLink(
           'Ana Janne',
@@ -213,7 +228,8 @@ const SectionFeatured = props => {
           '18+',
           'Owner',
           '5d387c50-3801-4f01-acfa-26c7cbd94f9e',
-          'ana-jane'
+          'ana-jane',
+          'tipThree'
         )}
       </div>
     </div>

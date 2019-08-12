@@ -60,6 +60,10 @@
   z-index: 0;
 }
 
+.tipColor {
+  color: #fff !important;
+}
+
 .location:hover {
   transform: scale(1.03);
   box-shadow: none !important;
@@ -194,4 +198,36 @@
     color: #fff;
     font-weight: 500;
     line-height: 28px;
+}
+
+.customTip {
+ color: #fff !important;
+ background-color: #41a6df !important;
+ opacity: 1 !important;
+ margin-top: -11px !important;
+}
+
+.customTip:after {
+   border-top-color: #41a6df !important;
+   border-top-width: 7px !important;
+}
+
+.yotismall {
+    position: absolute;
+    height: 21px;
+    right: -10px;
+    top: 13px;
+    opacity: 0.7;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.yotismallLeft {
+    position: absolute;
+    height: 21px;
+    left: -10px;
+    top: 13px;
+    opacity: 0.7;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
 }

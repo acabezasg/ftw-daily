@@ -51,6 +51,7 @@
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.0",
     "react-tabs": "^3.0.0",
+    "react-tooltip": "^3.10.0",
     "react-topbar-progress-indicator": "^2.0.0",
     "react-twitter-widgets": "^1.7.1",
     "redux": "^4.0.1",
