@@ -62,7 +62,6 @@ export const LandingPageComponent = props => {
             <SectionHero className={css.hero} history={history} location={location} />
           </div>
           <ul className={css.sections}>
-
             <li className={css.section}>
               <div className={css.sectionContentFirstChild}>
                 <SectionFeatured />
@@ -74,118 +73,95 @@ export const LandingPageComponent = props => {
                 <SectionLocations />
               </div>
             </li>
-            
-            <li className={css.sections, css.whyUseBg}>
-            
-            <div className={css.sectionContent}>
 
-            <h1>Why use Trust My Pet Sitter?</h1>
+            <li className={(css.sections, css.whyUseBg)}>
+              <div className={css.sectionContent}>
+                <h1>Why use Trust My Pet Sitter?</h1>
 
-            <div className={css.whyUse}>
+                <div className={css.whyUse}>
+                  <div className={css.whyContainer}>
+                    <h2>In Safe Hands</h2>
 
-            <div className={css.whyContainer}>
+                    <p>
+                      We conduct stringent ID Verification checks to ensure the safety of your pets
+                      and your home
+                    </p>
 
-            <h2>In Safe Hands</h2>
+                    <a href="signup">Start Now</a>
+                  </div>
 
-            <p>We conduct stringent ID Verification checks to ensure the safety of your pets and your home</p>
+                  <div className={css.whyContainer}>
+                    <h2>Our Community</h2>
 
-            <a href="signup">Start Now</a>
+                    <p>
+                      Make new friends among our community of like minded pet lovers, both near and
+                      far!
+                    </p>
 
-            </div>
-
-            <div className={css.whyContainer}>
-            
-            <h2>Our Community</h2>
-
-            <p>Make new friends among our community of like minded pet lovers, both near and far!</p>
-
-            <a href="signup">Start Now</a>
-
-            </div>
-
-            </div>
-
-            </div>
-
+                    <a href="signup">Start Now</a>
+                  </div>
+                </div>
+              </div>
             </li>
 
             <li className={css.section}>
-
               <div id="how-padding" className={css.sectionContent}>
+                <div id="howitworks-title">
+                  <h1>Happy Pets = Happy Owners</h1>
+                </div>
 
-               <div id="howitworks-title">
-                
-               <h1>Happy Pets = Happy Owners</h1>
+                <div id="how-it-works">
+                  <div id="three-containers">
+                    <h2>Live-in Pet Sitter</h2>
 
-               </div>
+                    <ul id="howitworks-ul">
+                      <li>24/7 Pet Care</li>
+                      <li>1:1 Play and Attention</li>
+                      <li>Own safe environmente</li>
+                      <li>Your home cared for</li>
+                      <li>Vetted Pet Sitters</li>
+                      <li>Perfect for nervous dogs</li>
+                      <li>Daily pics and videos</li>
+                      <li>You select your ideal sitter</li>
+                    </ul>
+                  </div>
 
-               <div id="how-it-works">
+                  <div id="three-containers">
+                    <h2>Drop in Visits</h2>
 
-               <div id="three-containers">
+                    <ul id="howitworks-ul">
+                      <li>24/7 Pet Care</li>
+                      <li>1:1 Play and Attention</li>
+                      <li>Own safe environmente</li>
+                      <li>Your home cared for</li>
+                      <li>Vetted Pet Sitters</li>
+                      <li>Perfect for nervous dogs</li>
+                      <li>Daily pics and videos</li>
+                      <li>You select your ideal sitter</li>
+                    </ul>
+                  </div>
 
-               <h2>Live-in Pet Sitter</h2>
+                  <div id="three-containers">
+                    <h2>Dog Walkers</h2>
 
-               <ul id="howitworks-ul">
+                    <ul id="howitworks-ul">
+                      <li>24/7 Pet Care</li>
+                      <li>1:1 Play and Attention</li>
+                      <li>Own safe environmente</li>
+                      <li>Your home cared for</li>
+                      <li>Vetted Pet Sitters</li>
+                      <li>Perfect for nervous dogs</li>
+                      <li>Daily pics and videos</li>
+                      <li>You select your ideal sitter</li>
+                    </ul>
+                  </div>
+                </div>
 
-               <li>24/7 Pet Care</li>
-               <li>1:1 Play and Attention</li>
-               <li>Own safe environmente</li>
-               <li>Your home cared for</li>
-               <li>Vetted Pet Sitters</li>
-               <li>Perfect for nervous dogs</li>
-               <li>Daily pics and videos</li>
-               <li>You select your ideal sitter</li>
-
-               </ul>
-
-               </div>
-
-               <div id="three-containers">
-
-               <h2>Drop in Visits</h2>
-
-               <ul id="howitworks-ul">
-
-               <li>24/7 Pet Care</li>
-               <li>1:1 Play and Attention</li>
-               <li>Own safe environmente</li>
-               <li>Your home cared for</li>
-               <li>Vetted Pet Sitters</li>
-               <li>Perfect for nervous dogs</li>
-               <li>Daily pics and videos</li>
-               <li>You select your ideal sitter</li>
-
-               </ul>
-
-               </div>
-
-               <div id="three-containers">
-               
-               <h2>Dog Walkers</h2>
-
-               <ul id="howitworks-ul">
-
-               <li>24/7 Pet Care</li>
-               <li>1:1 Play and Attention</li>
-               <li>Own safe environmente</li>
-               <li>Your home cared for</li>
-               <li>Vetted Pet Sitters</li>
-               <li>Perfect for nervous dogs</li>
-               <li>Daily pics and videos</li>
-               <li>You select your ideal sitter</li>
-
-               </ul>
-
-               </div>
-
-               </div>
-
-               <a href="/s/listings" id="how-button">Explore</a>
-
+                <a href="/s/listings" id="how-button">
+                  Explore
+                </a>
               </div>
-
             </li>
-
           </ul>
         </LayoutWrapperMain>
         <LayoutWrapperFooter>

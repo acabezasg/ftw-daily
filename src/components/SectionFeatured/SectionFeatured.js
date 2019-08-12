@@ -30,22 +30,21 @@ const locationLink = (
   categoryTwo,
   categoryThree,
   categoryFour,
-  badge
+  badge,
+  id,
+  slug
 ) => {
   const nameText = <span className={css.locationName}>{name}</span>;
   const featuredText = <span className={css.locationName}>{categoryOne}</span>;
   const featuredTextTwo = <span className={css.locationName}>{categoryTwo}</span>;
   const featuredTextThree = <span className={css.locationName}>{categoryThree}</span>;
   const featuredTextFour = <span className={css.locationName}>{categoryFour}</span>;
-  const id = 1;
-  const slug = 'hi';
 
   return (
     <NamedLink name="ListingPage" params={{ id, slug }} className={css.location}>
       <div className={css.imageWrapper}>
         <div className={css.aspectWrapper} id="wrapperAspect">
           <LazyImage src={image} alt={name} className={css.locationImage} />
-
           <div className={css.categoryBadge}>
             <FormattedMessage id="SectionFeatured.featuredBadge" values={{ badge }} />
           </div>
@@ -188,7 +187,9 @@ const SectionFeatured = props => {
           'Reptiles',
           'Giant',
           'Large',
-          'Sitter'
+          'Sitter',
+          1,
+          'one'
         )}
         {locationLink(
           'Services',
@@ -198,7 +199,9 @@ const SectionFeatured = props => {
           'Sharks',
           'Pet Store',
           'Giant',
-          'Services'
+          'Services',
+          2,
+          'two'
         )}
         {locationLink(
           'Ana Janne',
@@ -208,7 +211,9 @@ const SectionFeatured = props => {
           'Horses',
           'Car',
           '18+',
-          'Owner'
+          'Owner',
+          3,
+          'three'
         )}
       </div>
     </div>
