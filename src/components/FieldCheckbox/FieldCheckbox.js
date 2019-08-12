@@ -34,9 +34,7 @@ IconCheckbox.defaultProps = { className: null };
 IconCheckbox.propTypes = { className: string };
 
 const FieldCheckboxComponent = props => {
-
   const { rootClassName, className, svgClassName, id, label, ...rest } = props;
-
 
   const classes = classNames(rootClassName || css.root, className);
   const checkboxProps = {
@@ -53,7 +51,7 @@ const FieldCheckboxComponent = props => {
   //   })
   //   this.onClick(this.state.check_flag);
   // }
-  
+
   return (
     <span
       className={classes}

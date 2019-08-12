@@ -67,21 +67,27 @@ export class ProfileSettingsPageComponent extends Component {
           ? { ...profile, profileImageId: uploadedImage.imageId }
           : profile;
 
-      console.log(updatedValues);
-
       onUpdateProfile(updatedValues);
     };
 
     const user = ensureCurrentUser(currentUser);
-    const { firstName, lastName, bio } = user.attributes.profile;
+    const { firstName, lastName, bio, publicData } = user.attributes.profile;
     const profileImageId = user.profileImage ? user.profileImage.id : null;
     const profileImage = image || { imageId: profileImageId };
+
+    console.log(publicData);
 
     const profileSettingsForm = user.id ? (
       <ProfileSettingsForm
         className={css.form}
         currentUser={currentUser}
-        initialValues={{ firstName, lastName, bio, profileImage: user.profileImage }}
+        initialValues={{
+          firstName,
+          lastName,
+          bio,
+          profileImage: user.profileImage,
+          preferredlocations: publicData.preferredlocations,
+        }}
         profileImage={profileImage}
         onImageUpload={e => onImageUploadHandler(e, onImageUpload)}
         uploadInProgress={uploadInProgress}
