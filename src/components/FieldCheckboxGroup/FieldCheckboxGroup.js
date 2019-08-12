@@ -16,13 +16,22 @@ import { FieldCheckbox, ValidationError } from '../../components';
 import css from './FieldCheckboxGroup.css';
 
 const FieldCheckboxRenderer = props => {
-  const { className, rootClassName, label,threeColumns, id, fields, options, meta,handleChange } = props;
+  const {
+    className,
+    rootClassName,
+    label,
+    threeColumns,
+    id,
+    fields,
+    options,
+    meta,
+    handleChange,
+  } = props;
 
   const classes = classNames(rootClassName || css.root, className);
   // const listClasses = twoColumns ? classNames(css.list, css.twoColumns) : css.list;
   const listClasses = threeColumns ? classNames(css.list, css.threeColumns) : css.list;
-  
-  
+
   return (
     <fieldset className={classes}>
       {label ? <legend>{label}</legend> : null}
@@ -30,9 +39,9 @@ const FieldCheckboxRenderer = props => {
         {options.map((option, index) => {
           // console.log('index',index);
           const fieldId = `${id}.${option.key}`;
-         
-          return (handleChange)? (
-            <li key={fieldId} className={css.item} onClick = {() => handleChange(index)}>
+
+          return handleChange ? (
+            <li key={fieldId} className={css.item} onClick={() => handleChange(index)}>
               <FieldCheckbox
                 id={fieldId}
                 name={fields.name}
@@ -40,8 +49,7 @@ const FieldCheckboxRenderer = props => {
                 value={option.key}
               />
             </li>
-          ):
-          (
+          ) : (
             <li key={fieldId} className={css.item}>
               <FieldCheckbox
                 id={fieldId}
@@ -80,11 +88,8 @@ FieldCheckboxRenderer.propTypes = {
 };
 
 const FieldCheckboxGroup = props => {
-  
-  return(
-    <FieldArray component={FieldCheckboxRenderer} {...props} />
-  )
-}
+  return <FieldArray component={FieldCheckboxRenderer} {...props} />;
+};
 
 // Name and component are required fields for FieldArray.
 // Component-prop we define in this file, name needs to be passed in
