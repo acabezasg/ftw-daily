@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  YotiPage,
   WhatWeDoPage,
   HowItWorksPage,
   ContactPage,
@@ -55,6 +56,12 @@ const RedirectToLandingPage = () => <NamedRedirect name="LandingPage" />;
 // See behaviour from Routes.js where Route is created.
 const routeConfiguration = () => {
   return [
+
+    {
+      path: '/yoti',
+      name: 'YotiPage',
+      component: YotiPage,
+    },
 
     {
       path: '/whatwedo',

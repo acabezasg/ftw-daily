@@ -63,10 +63,8 @@ const locationLink = (
             </div>
 
       <div className={css.nameYoti}>
-        <img data-tip data-for={tipId} className={css.yotiImg} src={yoti} />
+        <a href="/yoti"><img data-tip data-for={tipId} className={css.yotiImg} src={yoti} /></a>
       </div>
-
-
 
       <ReactTooltip className={css.customTip} id={tipId} effect='solid'>
         <span className={css.tipColor}>
