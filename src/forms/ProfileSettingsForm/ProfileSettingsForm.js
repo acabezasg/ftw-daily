@@ -29,7 +29,7 @@ class ProfileSettingsFormComponent extends Component {
     super(props);
 
     this.uploadDelayTimeoutId = null;
-    this.state = { uploadDelay: false };
+    this.state = { uploadDelay: false, submitDisabledCheck: true };
     this.submittedValues = {};
   }
 
@@ -183,6 +183,10 @@ class ProfileSettingsFormComponent extends Component {
           const submitDisabled =
             invalid || pristine || pristineSinceLastSubmit || uploadInProgress || submitInProgress;
 
+          const handleCheckboxChange = () => {
+            this.setState({ submitDisabledCheck: false });
+          };
+
           return (
             <Form
               className={classes}
@@ -326,6 +330,7 @@ class ProfileSettingsFormComponent extends Component {
                     { key: 'India', label: 'India' },
                     { key: 'China', label: 'China' },
                   ]}
+                  handleChange={handleCheckboxChange}
                 />
               </div>
 
@@ -334,7 +339,7 @@ class ProfileSettingsFormComponent extends Component {
                 className={css.submitButton}
                 type="submit"
                 inProgress={submitInProgress}
-                disabled={submitDisabled}
+                disabled={submitDisabled && this.state.submitDisabledCheck}
                 ready={pristineSinceLastSubmit}
               >
                 <FormattedMessage id="ProfileSettingsForm.saveChanges" />
