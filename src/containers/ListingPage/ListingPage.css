@@ -595,3 +595,11 @@
   word-break: break-word;
   hyphens: auto;
 }
+
+.prefLocationBadge {
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 50px;
+  margin: 10px;
+  background: #e3e3e3;
+}

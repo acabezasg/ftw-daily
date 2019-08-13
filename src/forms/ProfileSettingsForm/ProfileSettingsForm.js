@@ -312,7 +312,7 @@ class ProfileSettingsFormComponent extends Component {
 
               <div className={classNames(css.sectionContainer, css.lastSection)}>
                 <h3 className={css.sectionTitle}>
-                  <span>Preferred Locations (For Pet Owners Only)</span>
+                  <span>Preferred Locations (For Pet Sitters Only)</span>
                 </h3>
                 <FieldCheckboxGroup
                   id="preferredlocations"

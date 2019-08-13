@@ -52,6 +52,7 @@ import SectionHostMaybe from './SectionHostMaybe';
 import SectionRulesMaybe from './SectionRulesMaybe';
 import SectionMapMaybe from './SectionMapMaybe';
 import SectionHomeMaybe from './SectionHomeMaybe';
+import SectionPreferredLocations from './SectionPreferredLocations';
 import css from './ListingPage.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
@@ -89,7 +90,6 @@ export class ListingPageComponent extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onContactUser = this.onContactUser.bind(this);
     this.onSubmitEnquiry = this.onSubmitEnquiry.bind(this);
-    
   }
 
   handleSubmit(values) {
@@ -240,11 +240,11 @@ export class ListingPageComponent extends Component {
       geolocation = null,
       price = null,
       title = '',
-      publicData
+      publicData,
     } = currentListing.attributes;
-    console.log('attributes',currentListing.attributes);
-    const user_type = publicData?publicData.user_type:null;
-    const rate = publicData && publicData.rate?publicData.rate:config.bookingUnitType;
+
+    const user_type = publicData ? publicData.user_type : null;
+    const rate = publicData && publicData.rate ? publicData.rate : config.bookingUnitType;
     const richTitle = (
       <span>
         {richText(title, {
@@ -328,6 +328,12 @@ export class ListingPageComponent extends Component {
     const currentAuthor = authorAvailable ? currentListing.author : null;
     const ensuredAuthor = ensureUser(currentAuthor);
 
+    const preferredLocations = ensuredAuthor.attributes.profile.publicData
+      ? ensuredAuthor.attributes.profile.publicData.preferredlocations
+        ? ensuredAuthor.attributes.profile.publicData.preferredlocations
+        : null
+      : null;
+
     // When user is banned or deleted the listing is also deleted.
     // Because listing can be never showed with banned or deleted user we don't have to provide
     // banned or deleted display names for the function
@@ -375,19 +381,18 @@ export class ListingPageComponent extends Component {
         params={params}
         to={{ hash: '#host' }}
       >
-        {authorDisplayName} 
+        {authorDisplayName}
       </NamedLink>
     );
-    
-    const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
-    const category =
-      user_name ? (
-        <span>
-          {user_name}
-          <span className={css.separator}>•</span>
-        </span>
-      ) : null;
-    
+
+    const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
+    const category = user_name ? (
+      <span>
+        {user_name}
+        <span className={css.separator}>•</span>
+      </span>
+    ) : null;
+
     return (
       <Page
         title={schemaTitle}
@@ -435,12 +440,30 @@ export class ListingPageComponent extends Component {
                     hostLink={hostLink}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
-                    user_type = {user_type}
-                    rate = {rate}
+                    user_type={user_type}
+                    rate={rate}
                   />
-                  <SectionDescriptionMaybe description={description} user_type = {user_type} />
-                  <SectionFeaturesMaybe options={{options1:servicesConfig,options2:amenitiesConfig,options3:sizeConfig}} publicData={publicData} />
-                  <SectionHomeMaybe options={{options1:equipmentsConfig,options2:locationsConfig,options3:infoConfig}}  publicData={publicData} />
+                  <SectionDescriptionMaybe description={description} user_type={user_type} />
+                  <SectionFeaturesMaybe
+                    options={{
+                      options1: servicesConfig,
+                      options2: amenitiesConfig,
+                      options3: sizeConfig,
+                    }}
+                    publicData={publicData}
+                  />
+                  <SectionHomeMaybe
+                    options={{
+                      options1: equipmentsConfig,
+                      options2: locationsConfig,
+                      options3: infoConfig,
+                    }}
+                    publicData={publicData}
+                  />
+                  <SectionPreferredLocations
+                    preferredLocations={preferredLocations}
+                    publicData={publicData}
+                  />
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}
@@ -462,26 +485,23 @@ export class ListingPageComponent extends Component {
                     onManageDisableScrolling={onManageDisableScrolling}
                   />
                 </div>
-                {
-                  user_type !== 0?
-                  (
-                    <BookingPanel
-                      className={css.bookingPanel}
-                      listing={currentListing}
-                      isOwnListing={isOwnListing}
-                      unitType={unitType}
-                      onSubmit={handleBookingSubmit}
-                      title={bookingTitle}
-                      user_type = {user_type}
-                      rate = {rate}
-                      subTitle={bookingSubTitle}
-                      authorDisplayName={authorDisplayName}
-                      onManageDisableScrolling={onManageDisableScrolling}
-                      timeSlots={timeSlots}
-                      fetchTimeSlotsError={fetchTimeSlotsError}
-                    />
-                  ):null
-                }
+                {user_type !== 0 ? (
+                  <BookingPanel
+                    className={css.bookingPanel}
+                    listing={currentListing}
+                    isOwnListing={isOwnListing}
+                    unitType={unitType}
+                    onSubmit={handleBookingSubmit}
+                    title={bookingTitle}
+                    user_type={user_type}
+                    rate={rate}
+                    subTitle={bookingSubTitle}
+                    authorDisplayName={authorDisplayName}
+                    onManageDisableScrolling={onManageDisableScrolling}
+                    timeSlots={timeSlots}
+                    fetchTimeSlotsError={fetchTimeSlotsError}
+                  />
+                ) : null}
               </div>
             </div>
           </LayoutWrapperMain>
