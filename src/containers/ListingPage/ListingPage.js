@@ -38,6 +38,7 @@ import {
   LayoutWrapperFooter,
   Footer,
   BookingPanel,
+  Button,
 } from '../../components';
 import { TopbarContainer, NotFoundPage } from '../../containers';
 
@@ -89,6 +90,7 @@ export class ListingPageComponent extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onContactUser = this.onContactUser.bind(this);
+    this.onProceedLogin = this.onProceedLogin.bind(this);
     this.onSubmitEnquiry = this.onSubmitEnquiry.bind(this);
   }
 
@@ -132,6 +134,18 @@ export class ListingPageComponent extends Component {
         {}
       )
     );
+  }
+
+  onProceedLogin() {
+    const { currentUser, history, callSetInitialValues, params, location } = this.props;
+
+    if (!currentUser) {
+      const state = { from: `${location.pathname}${location.search}${location.hash}` };
+
+      history.push(createResourceLocatorString('LoginPage', routeConfiguration(), {}, {}), state);
+    } else {
+      this.setState({ enquiryModalOpen: true });
+    }
   }
 
   onContactUser() {
@@ -485,7 +499,7 @@ export class ListingPageComponent extends Component {
                     onManageDisableScrolling={onManageDisableScrolling}
                   />
                 </div>
-                {user_type !== 0 ? (
+                {currentUser && user_type !== 0 ? (
                   <BookingPanel
                     className={css.bookingPanel}
                     listing={currentListing}
@@ -501,7 +515,13 @@ export class ListingPageComponent extends Component {
                     timeSlots={timeSlots}
                     fetchTimeSlotsError={fetchTimeSlotsError}
                   />
-                ) : null}
+                ) : (
+                  <div className={css.bookingPanel}>
+                    <Button onClick={this.onProceedLogin}>
+                      <span>Login to Proceed</span>
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           </LayoutWrapperMain>
