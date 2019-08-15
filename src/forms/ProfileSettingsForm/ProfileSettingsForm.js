@@ -48,6 +48,21 @@ class ProfileSettingsFormComponent extends Component {
     window.clearTimeout(this.blurTimeoutId);
   }
 
+  componentDidMount() {
+    window.Yoti.Share.init({
+      elements: [
+        {
+          domId: 'yoti-button',
+          scenarioId: '8284ca81-3469-4272-91b6-2635014181db',
+          clientSdkId: 'd3dd97cd-10eb-4ea5-9ab4-97bd6acfd172',
+          button: {
+            label: 'Yoti Verification',
+          },
+        },
+      ],
+    });
+  }
+
   render() {
     return (
       <FinalForm
@@ -195,10 +210,12 @@ class ProfileSettingsFormComponent extends Component {
                 handleSubmit(e);
               }}
             >
+              <div id="yoti-button" />
               <div className={css.sectionContainer}>
                 <h3 className={css.sectionTitle}>
                   <FormattedMessage id="ProfileSettingsForm.yourProfilePicture" />
                 </h3>
+
                 <Field
                   accept={ACCEPT_IMAGES}
                   id="profileImage"
@@ -265,6 +282,7 @@ class ProfileSettingsFormComponent extends Component {
                     );
                   }}
                 </Field>
+
                 <div className={css.tip}>
                   <FormattedMessage id="ProfileSettingsForm.tip" />
                 </div>
