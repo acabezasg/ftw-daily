@@ -192,20 +192,13 @@ app.get('*', (req, res) => {
   });
 
   if (req.url.startsWith('/yoti-verified')) {
-    // return res.send('Hello');
-    // console.log('yes');
-
-    yotiClient
-      .getActivityDetails(
-        'HmqmeRgW7aBdDHFr-FmBAeJ3NTVfHMy5WNA8DcRu-If8Q9Q2tr5Q_vbVxA58TBnzntz2ooqdd0mpxwvuPROOGkex3rEhuOTcsUWEnKx8VlYzyT93vrIz0o8O2anAyG4zBfZHEZdvzUYSDKi2dXzgd3mqPp2C3s3ise5WDsKVkPZhBiRubwE7N0C9PDeVRdzD6FEoYoM27Nz1iK0eXcuJYeoPUHYnNx_d_qsozVJzk5n2-JVT0NCv6klX9vDeFnQ9WPnwdPSPBEQviExlliGoQnjVSjLaxZPTy4JS-4Z-OkJg_IV47uuYPT83RTIUrpmjQ6JFDutxayPzgKe8OdT3rg=='
-      )
-      .then(() => {
-        sdk.currentUser.updateProfile({
-          privateData: {
-            yotiVerified: 'YES',
-          },
-        });
+    yotiClient.getActivityDetails(req.params.token).then(() => {
+      sdk.currentUser.updateProfile({
+        privateData: {
+          yotiVerified: 'YES',
+        },
       });
+    });
   }
 
   // Until we have a better plan for caching dynamic content and we
