@@ -38,6 +38,7 @@ const fs = require('fs');
 const log = require('./log');
 const { sitemapStructure } = require('./sitemap');
 const csp = require('./csp');
+const url = require('url');
 
 const buildPath = path.resolve(__dirname, '..', 'build');
 const env = process.env.REACT_APP_ENV;
@@ -192,7 +193,7 @@ app.get('*', (req, res) => {
   });
 
   if (req.url.startsWith('/yoti-verified')) {
-    yotiClient.getActivityDetails(req.params.token).then(() => {
+    yotiClient.getActivityDetails(url.parse(req.url, true).query.token).then(() => {
       sdk.currentUser.updateProfile({
         privateData: {
           yotiVerified: 'YES',
