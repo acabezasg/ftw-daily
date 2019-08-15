@@ -156,7 +156,7 @@ app.get('*', (req, res) => {
     return res.status(200).send({ status: 'ok' });
   }
 
-  if (req.url === '/yoti-verified') {
+  if (req.url === '/yoti-verified/*') {
     return res.status(404).send('OK');
   }
 
