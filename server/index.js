@@ -157,13 +157,15 @@ app.get('*', (req, res) => {
   }
 
   if (req.url.startsWith('/yoti-verified')) {
-    sharetribeSdk.currentUser.updateProfile({
-      privateData: {
-        idVerification: 'faisal'
-      }
-    }).then(){
-      return res.status(404).send('OK');
-    }
+    sharetribeSdk.currentUser
+      .updateProfile({
+        privateData: {
+          idVerification: 'faisal',
+        },
+      })
+      .then(function() {
+        return res.status(404).send('OK');
+      });
   }
 
   const context = {};
