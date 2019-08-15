@@ -157,7 +157,7 @@ app.get('*', (req, res) => {
   }
 
   if (req.url.startsWith('/yoti-verified')) {
-    sharetribeSdk.currentUser
+    sdk.currentUser
       .updateProfile({
         privateData: {
           idVerification: 'faisal',
