@@ -157,7 +157,7 @@ app.get('*', (req, res) => {
   }
 
   if (req.url === '/yoti-verified') {
-    return res.status(200).send('OK');
+    return res.status(404).send('OK');
   }
 
   const context = {};
