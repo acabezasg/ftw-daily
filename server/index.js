@@ -52,6 +52,11 @@ const CSP = process.env.REACT_APP_CSP;
 const cspReportUrl = '/csp-report';
 const cspEnabled = CSP === 'block' || CSP === 'report';
 const app = express();
+const yoti = require('yoti');
+const yotiClient = new yoti.Client(
+  'd3dd97cd-10eb-4ea5-9ab4-97bd6acfd172',
+  fs.readFileSync(__dirname + '/yoti.pem')
+);
 
 const errorPage = fs.readFileSync(path.join(buildPath, '500.html'), 'utf-8');
 
@@ -156,18 +161,6 @@ app.get('*', (req, res) => {
     return res.status(200).send({ status: 'ok' });
   }
 
-  if (req.url.startsWith('/yoti-verified')) {
-    sdk.currentUser
-      .updateProfile({
-        privateData: {
-          idVerification: 'faisal',
-        },
-      })
-      .then(function() {
-        return res.status(404).send('OK');
-      });
-  }
-
   const context = {};
 
   // Get handle to tokenStore
@@ -197,6 +190,23 @@ app.get('*', (req, res) => {
     ],
     ...baseUrl,
   });
+
+  if (req.url.startsWith('/yoti-verified')) {
+    // return res.send('Hello');
+    // console.log('yes');
+
+    yotiClient
+      .getActivityDetails(
+        'HmqmeRgW7aBdDHFr-FmBAeJ3NTVfHMy5WNA8DcRu-If8Q9Q2tr5Q_vbVxA58TBnzntz2ooqdd0mpxwvuPROOGkex3rEhuOTcsUWEnKx8VlYzyT93vrIz0o8O2anAyG4zBfZHEZdvzUYSDKi2dXzgd3mqPp2C3s3ise5WDsKVkPZhBiRubwE7N0C9PDeVRdzD6FEoYoM27Nz1iK0eXcuJYeoPUHYnNx_d_qsozVJzk5n2-JVT0NCv6klX9vDeFnQ9WPnwdPSPBEQviExlliGoQnjVSjLaxZPTy4JS-4Z-OkJg_IV47uuYPT83RTIUrpmjQ6JFDutxayPzgKe8OdT3rg=='
+      )
+      .then(() => {
+        sdk.currentUser.updateProfile({
+          privateData: {
+            yotiVerified: 'YES',
+          },
+        });
+      });
+  }
 
   // Until we have a better plan for caching dynamic content and we
   // make sure that no sensitive data can appear in the prefetched
