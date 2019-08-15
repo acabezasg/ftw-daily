@@ -156,6 +156,10 @@ app.get('*', (req, res) => {
     return res.status(200).send({ status: 'ok' });
   }
 
+  if (req.url === '/yoti-verified') {
+    return res.status(200).send('OK');
+  }
+
   const context = {};
 
   // Get handle to tokenStore
