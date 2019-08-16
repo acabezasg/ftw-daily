@@ -50,7 +50,7 @@ class ProfileSettingsFormComponent extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.currentUser.attributes.profile.publicData.yotiVerified == 'YES') {
+    if (this.props.currentUser.attributes.profile.publicData.yotiVerified != 'YES') {
       window.Yoti.Share.init({
         elements: [
           {
