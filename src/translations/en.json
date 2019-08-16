@@ -359,7 +359,7 @@
   "EditListingPoliciesForm.maxLength": "Must be {maxLength} characters or less",
   "EditListingPoliciesForm.rulesRequired": "You need to add an ID.",
 
-  "EditListingPoliciesPanel.createListingTitle.owner": "Time to verify your ID.",
+  "EditListingPoliciesPanel.createListingTitle.owner": "Unverified accounts aren't allowed to post Listings. Please verify your account to proceed.",
   "EditListingPoliciesPanel.title.owner": "Edit ID verification of {listingTitle}",
   "EditListingPoliciesPanel.createListingTitle.sitter": "ID Verification",
   "EditListingPoliciesPanel.title.sitter": "Edit ID verification of {listingTitle}",
