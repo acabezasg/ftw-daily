@@ -10,7 +10,7 @@ import { ensureCurrentUser, ensureUser } from '../../util/data';
 import { withViewport } from '../../util/contextHelpers';
 import { isScrollingDisabled } from '../../ducks/UI.duck';
 import { getMarketplaceEntities } from '../../ducks/marketplaceData.duck';
-import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
+import YotiVerifiedProfile from '../../components/YotiVerifiedProfile/YotiVerifiedProfile.js';
 import {
   Page,
   LayoutSideNavigation,
@@ -105,11 +105,6 @@ export class ProfilePageComponent extends Component {
         </h1>
         {editLinkMobile}
         {editLinkDesktop}
-        {profileUser.attributes.profile.publicData ? (
-          profileUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
-            <YotiVerified />
-          ) : null
-        ) : null}
       </div>
     );
 
@@ -193,6 +188,13 @@ export class ProfilePageComponent extends Component {
       <div>
         <h1 className={css.desktopHeading}>
           <FormattedMessage id="ProfilePage.desktopHeading" values={{ name: displayName }} />
+
+          {profileUser.attributes.profile.publicData ? (
+          profileUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
+            <YotiVerifiedProfile />
+          ) : null
+        ) : null}
+
         </h1>
         {hasBio ? <p className={css.bio}>{bio}</p> : null}
         {hasListings ? (

@@ -1,6 +1,5 @@
 .yotiVerified {
-  float: right;
-  margin-top: 40px;
+ float: right;
 }
 
 .yotiVerified img {
@@ -9,7 +8,9 @@
 
 .yotiVerified span {
   position: relative;
-  top: 3px;
+  top: 2px;
   font-weight: 700;
   margin-left: 4px;
+  font-size: 20px;
+  letter-spacing: -0.1px;
 }
