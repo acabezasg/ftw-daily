@@ -10,6 +10,7 @@ import { ensureCurrentUser, ensureUser } from '../../util/data';
 import { withViewport } from '../../util/contextHelpers';
 import { isScrollingDisabled } from '../../ducks/UI.duck';
 import { getMarketplaceEntities } from '../../ducks/marketplaceData.duck';
+import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
 import {
   Page,
   LayoutSideNavigation,
@@ -73,6 +74,7 @@ export class ProfilePageComponent extends Component {
     } = this.props;
     const ensuredCurrentUser = ensureCurrentUser(currentUser);
     const profileUser = ensureUser(user);
+    console.log(profileUser);
     const isCurrentUser =
       ensuredCurrentUser.id && profileUser.id && ensuredCurrentUser.id.uuid === profileUser.id.uuid;
     const displayName = profileUser.attributes.profile.displayName;
@@ -80,6 +82,7 @@ export class ProfilePageComponent extends Component {
     const hasBio = !!bio;
     const hasListings = listings.length > 0;
     const isMobileLayout = viewport.width < MAX_MOBILE_SCREEN_WIDTH;
+    console.log(profileUser.attributes.profile);
 
     const editLinkMobile = isCurrentUser ? (
       <NamedLink className={css.editLinkMobile} name="ProfileSettingsPage">
@@ -102,6 +105,11 @@ export class ProfilePageComponent extends Component {
         </h1>
         {editLinkMobile}
         {editLinkDesktop}
+        {profileUser.attributes.profile.publicData ? (
+          profileUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
+            <YotiVerified />
+          ) : null
+        ) : null}
       </div>
     );
 

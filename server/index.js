@@ -195,7 +195,7 @@ app.get('*', (req, res) => {
   if (req.url.startsWith('/yoti-verified')) {
     yotiClient.getActivityDetails(url.parse(req.url, true).query.token).then(() => {
       sdk.currentUser.updateProfile({
-        privateData: {
+        publicData: {
           yotiVerified: 'YES',
         },
       });

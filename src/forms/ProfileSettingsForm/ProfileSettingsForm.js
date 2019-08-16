@@ -9,6 +9,7 @@ import { ensureCurrentUser } from '../../util/data';
 import { propTypes } from '../../util/types';
 import * as validators from '../../util/validators';
 import { isUploadImageOverLimitError } from '../../util/errors';
+import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
 import {
   Form,
   Avatar,
@@ -49,18 +50,20 @@ class ProfileSettingsFormComponent extends Component {
   }
 
   componentDidMount() {
-    window.Yoti.Share.init({
-      elements: [
-        {
-          domId: 'yoti-button',
-          scenarioId: '8284ca81-3469-4272-91b6-2635014181db',
-          clientSdkId: 'd3dd97cd-10eb-4ea5-9ab4-97bd6acfd172',
-          button: {
-            label: 'Yoti Verification',
+    if (!this.props.currentUser.attributes.profile.publicData.yotiVerified == 'YES') {
+      window.Yoti.Share.init({
+        elements: [
+          {
+            domId: 'yoti-button',
+            scenarioId: '8284ca81-3469-4272-91b6-2635014181db',
+            clientSdkId: 'd3dd97cd-10eb-4ea5-9ab4-97bd6acfd172',
+            button: {
+              label: 'Yoti Verification',
+            },
           },
-        },
-      ],
-    });
+        ],
+      });
+    }
   }
 
   render() {
@@ -210,7 +213,12 @@ class ProfileSettingsFormComponent extends Component {
                 handleSubmit(e);
               }}
             >
-              <div id="yoti-button" />
+              {!currentUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
+                <div id="yoti-button" />
+              ) : (
+                <YotiVerified />
+              )}
+
               <div className={css.sectionContainer}>
                 <h3 className={css.sectionTitle}>
                   <FormattedMessage id="ProfileSettingsForm.yourProfilePicture" />
