@@ -54,6 +54,7 @@ import SectionRulesMaybe from './SectionRulesMaybe';
 import SectionMapMaybe from './SectionMapMaybe';
 import SectionHomeMaybe from './SectionHomeMaybe';
 import SectionPreferredLocations from './SectionPreferredLocations';
+import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
 import css from './ListingPage.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
@@ -446,6 +447,11 @@ export class ListingPageComponent extends Component {
               <div className={css.contentContainer}>
                 <SectionAvatar user={currentAuthor} params={params} />
                 <div className={css.mainContent}>
+                  {ensuredAuthor.attributes.profile.publicData ? (
+                    ensuredAuthor.attributes.profile.publicData.yotiVerified == 'YES' ? (
+                      <YotiVerified />
+                    ) : null
+                  ) : null}
                   <SectionHeading
                     priceTitle={priceTitle}
                     formattedPrice={formattedPrice}
