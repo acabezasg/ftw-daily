@@ -8,6 +8,8 @@ import { propTypes } from '../../util/types';
 import { maxLength, required, composeValidators } from '../../util/validators';
 import { Form, Button, FieldTextInput } from '../../components';
 
+import NamedLink from '../../components/NamedLink/NamedLink';
+
 import css from './EditListingPoliciesForm.css';
 const RULES_MAX_LENGTH = 20;
 export const EditListingPoliciesFormComponent = props => (
@@ -25,7 +27,10 @@ export const EditListingPoliciesFormComponent = props => (
         updated,
         updateInProgress,
         fetchErrors,
+        currentUser,
       } = fieldRenderProps;
+
+      console.log('Umair', currentUser);
 
       const rulesLabelMessage = intl.formatMessage({
         id: 'EditListingPoliciesForm.rulesLabel',
@@ -39,7 +44,7 @@ export const EditListingPoliciesFormComponent = props => (
       const maxLengthMessage = intl.formatMessage(
         { id: 'EditListingPoliciesForm.maxLength' },
         {
-          maxLength: RULES_MAX_LENGTH, 
+          maxLength: RULES_MAX_LENGTH,
         }
       );
       const maxLength60Message = maxLength(maxLengthMessage, RULES_MAX_LENGTH);
@@ -66,26 +71,43 @@ export const EditListingPoliciesFormComponent = props => (
           {errorMessage}
           {errorMessageShowListing}
 
-          <FieldTextInput
-            id="identify"
-            name="identify"
-            className={css.policy}
-            type="textarea"
-            label={rulesLabelMessage}
-            placeholder={rulesPlaceholderMessage}
-            maxLength={RULES_MAX_LENGTH}
-            validate={composeValidators(required(rulesRequiredMessage), maxLength60Message)}
-          />
-
-          <Button
-            className={css.submitButton}
-            type="submit"
-            inProgress={submitInProgress}
-            disabled={submitDisabled}
-            ready={submitReady}
-          >
-            {saveActionMsg}
-          </Button>
+          {currentUser ? (
+            currentUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
+              <Button
+                className={css.submitButton}
+                type="submit"
+                inProgress={submitInProgress}
+                disabled={submitDisabled}
+                ready={submitReady}
+              >
+                {saveActionMsg}
+              </Button>
+            ) : (
+              <NamedLink name="ProfileSettingsPage">
+                <Button
+                  className={css.submitButton}
+                  type="submit"
+                  inProgress={submitInProgress}
+                  disabled={submitDisabled}
+                  ready={submitReady}
+                >
+                  Go to Profile
+                </Button>
+              </NamedLink>
+            )
+          ) : (
+            <NamedLink name="ProfileSettingsPage">
+              <Button
+                className={css.submitButton}
+                type="submit"
+                inProgress={submitInProgress}
+                disabled={submitDisabled}
+                ready={submitReady}
+              >
+                Go to Profile
+              </Button>
+            </NamedLink>
+          )}
         </Form>
       );
     }}

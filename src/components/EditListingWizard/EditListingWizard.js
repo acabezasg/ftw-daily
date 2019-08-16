@@ -12,7 +12,7 @@ import {
 } from '../../util/urlHelpers';
 import { ensureListing, ensureCurrentUser } from '../../util/data';
 import { PayoutDetailsForm } from '../../forms';
-import { Modal, NamedRedirect,Tabs } from '../../components';
+import { Modal, NamedRedirect, Tabs } from '../../components';
 
 import EditListingWizardTab, {
   AVAILABILITY,
@@ -29,8 +29,6 @@ import css from './EditListingWizard.css';
 // Show availability calendar only if environment variable availabilityEnabled is true
 const availabilityMaybe = config.enableAvailability ? [AVAILABILITY] : [AVAILABILITY];
 
-
-
 // Tabs are horizontal in small screens
 const MAX_HORIZONTAL_NAV_SCREEN_WIDTH = 1023;
 
@@ -38,23 +36,23 @@ const tabLabel = (intl, tab, user_name = null) => {
   let key = null;
   user_name = String(user_name);
   if (tab === DESCRIPTION) {
-    key = 'EditListingWizard.tabLabelDescription'+'.'+ user_name;
+    key = 'EditListingWizard.tabLabelDescription' + '.' + user_name;
   } else if (tab === FEATURES) {
-    key = 'EditListingWizard.tabLabelFeatures'+'.'+ user_name;
+    key = 'EditListingWizard.tabLabelFeatures' + '.' + user_name;
   } else if (tab === POLICY) {
-    key = 'EditListingWizard.tabLabelPolicy'+'.'+ user_name;
+    key = 'EditListingWizard.tabLabelPolicy' + '.' + user_name;
   } else if (tab === LOCATION) {
-    key = 'EditListingWizard.tabLabelLocation'+'.'+ user_name;
+    key = 'EditListingWizard.tabLabelLocation' + '.' + user_name;
   } else if (tab === PRICING) {
-    key = 'EditListingWizard.tabLabelPricing'+'.'+ user_name;
+    key = 'EditListingWizard.tabLabelPricing' + '.' + user_name;
   } else if (tab === AVAILABILITY) {
-    key = 'EditListingWizard.tabLabelAvailability'+'.'+ user_name;
+    key = 'EditListingWizard.tabLabelAvailability' + '.' + user_name;
   } else if (tab === PHOTOS) {
-    key = 'EditListingWizard.tabLabelPhotos'+'.'+ user_name;
+    key = 'EditListingWizard.tabLabelPhotos' + '.' + user_name;
   } else if (tab === HOME) {
-    key = 'EditListingWizard.tabLabelHome'+'.'+ user_name;
+    key = 'EditListingWizard.tabLabelHome' + '.' + user_name;
   }
-    return intl.formatMessage({ id: key }); 
+  return intl.formatMessage({ id: key });
 };
 
 /**
@@ -107,7 +105,7 @@ const tabCompleted = (tab, listing) => {
  *
  * @return object containing activity / editability of different tabs of this wizard
  */
-const tabsActive = (isNew, listing,TABS) => {
+const tabsActive = (isNew, listing, TABS) => {
   return TABS.reduce((acc, tab) => {
     const previousTabIndex = TABS.findIndex(t => t === tab) - 1;
     const isActive =
@@ -142,8 +140,6 @@ class EditListingWizard extends Component {
     this.handlePublishListing = this.handlePublishListing.bind(this);
     this.handlePayoutModalClose = this.handlePayoutModalClose.bind(this);
     this.handlePayoutSubmit = this.handlePayoutSubmit.bind(this);
-
-    
   }
 
   handleCreateFlowTabScrolling(shouldScroll) {
@@ -196,86 +192,56 @@ class EditListingWizard extends Component {
       onPayoutDetailsFormChange,
       checkFlag,
       handleChange,
-     
+
       ...rest
     } = this.props;
     const tab_ary = params.tab.split('_');
-    
+
     const service = listing.attributes.publicData.service;
     var user_name;
     var user_type;
-    if(tab_ary.length === 2){
-      
-      if(tab_ary[1] === "owner"){
+    if (tab_ary.length === 2) {
+      if (tab_ary[1] === 'owner') {
         user_name = tab_ary[1];
         user_type = 0;
-      }else if(tab_ary[1] === "sitter"){
+      } else if (tab_ary[1] === 'sitter') {
         user_name = tab_ary[1];
         user_type = 1;
-      }else if(tab_ary[1] === "service"){
+      } else if (tab_ary[1] === 'service') {
         user_name = tab_ary[1];
         user_type = 2;
       }
-    }else{
-      
+    } else {
       user_type = listing.attributes.publicData.user_type;
-      if(user_type === 0){
-        user_name = "owner";
-      }else if(user_type === 1){
-        user_name = "sitter";
-      }else if(user_type === 2){
-        user_name = "service";
+      if (user_type === 0) {
+        user_name = 'owner';
+      } else if (user_type === 1) {
+        user_name = 'sitter';
+      } else if (user_type === 2) {
+        user_name = 'service';
       }
     }
-    
+
     // TODO: PHOTOS panel needs to be the last one since it currently contains PayoutDetailsForm modal
     // All the other panels can be reordered.
-   
-    const TABS = user_type === 0? [
-      DESCRIPTION,
-      FEATURES,
-      HOME,
-      LOCATION,
-      ...availabilityMaybe,
-      PHOTOS,
-      POLICY,
-    ]:user_type === 1?
-    [
-      DESCRIPTION,
-      FEATURES,
-      HOME,
-      LOCATION,
-      ...availabilityMaybe,
-      PRICING,
-      PHOTOS,
-      POLICY,
-    ]:(service === "walking" || service === "sitter")?
-    [
-      DESCRIPTION,
-      FEATURES,
-      LOCATION,
-      ...availabilityMaybe,
-      PRICING,
-      PHOTOS,
-      POLICY,
-    ]:
-    [
-      DESCRIPTION,
-      FEATURES,
-      LOCATION,
-      ...availabilityMaybe,
-      PRICING, 
-      PHOTOS,
-    ]; 
-   
+
+    const TABS =
+      user_type === 0
+        ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PHOTOS, POLICY]
+        : user_type === 1
+        ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PRICING, PHOTOS, POLICY]
+        : service === 'walking' || service === 'sitter'
+        ? [DESCRIPTION, FEATURES, LOCATION, ...availabilityMaybe, PRICING, PHOTOS, POLICY]
+        : [DESCRIPTION, FEATURES, LOCATION, ...availabilityMaybe, PRICING, PHOTOS];
+
     const selectedTab = tab_ary[0];
     const isNewListingFlow = [LISTING_PAGE_PARAM_TYPE_NEW, LISTING_PAGE_PARAM_TYPE_DRAFT].includes(
       params.type
-    ); 
+    );
     const rootClasses = rootClassName || css.root;
     const classes = classNames(rootClasses, className);
     const currentListing = ensureListing(listing);
-    const tabsStatus = tabsActive(isNewListingFlow, currentListing,TABS);
+    const tabsStatus = tabsActive(isNewListingFlow, currentListing, TABS);
 
     // If selectedTab is not active, redirect to the beginning of wizard
     if (!tabsStatus[selectedTab]) {
@@ -325,7 +291,7 @@ class EditListingWizard extends Component {
                 {...rest}
                 key={tab}
                 tabId={`${id}_${tab}`}
-                tabLabel={tabLabel(intl, tab,user_name)}
+                tabLabel={tabLabel(intl, tab, user_name)}
                 tabLinkProps={tabLink(tab)}
                 selected={selectedTab === tab}
                 disabled={isNewListingFlow && !tabsStatus[tab]}
@@ -338,8 +304,8 @@ class EditListingWizard extends Component {
                 handleCreateFlowTabScrolling={this.handleCreateFlowTabScrolling}
                 handlePublishListing={this.handlePublishListing}
                 fetchInProgress={fetchInProgress}
-                user_type = {user_type}
-              /> 
+                user_type={user_type}
+              />
             );
           })}
         </Tabs>
@@ -423,8 +389,6 @@ EditListingWizard.propTypes = {
 
   // from injectIntl
   intl: intlShape.isRequired,
-
-  
 };
 
 export default compose(

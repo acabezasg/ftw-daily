@@ -21,6 +21,7 @@ const EditListingPoliciesPanel = props => {
     updateInProgress,
     errors,
     user_type,
+    currentUser,
   } = props;
 
   const classes = classNames(rootClassName || css.root, className);
@@ -31,7 +32,8 @@ const EditListingPoliciesPanel = props => {
   const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
   const publish = isPublished ? 'title.' : 'createListingTitle.';
   const PoliciesPanelTitle = 'EditListingPoliciesPanel.' + publish + user_name;
-  const panelTitle = isPublished ? (
+
+  let panelTitle = isPublished ? (
     <FormattedMessage
       id={PoliciesPanelTitle}
       values={{ listingTitle: <ListingLink listing={listing} /> }}
@@ -39,6 +41,10 @@ const EditListingPoliciesPanel = props => {
   ) : (
     <FormattedMessage id={PoliciesPanelTitle} />
   );
+
+  if (currentUser.attributes.profile.publicData.yotiVerified == 'YES') {
+    panelTitle = 'You are Already Verified';
+  }
 
   return (
     <div className={classes}>
@@ -62,6 +68,7 @@ const EditListingPoliciesPanel = props => {
         updateInProgress={updateInProgress}
         fetchErrors={errors}
         user_type={user_type}
+        currentUser={currentUser}
       />
     </div>
   );
