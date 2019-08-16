@@ -34,7 +34,7 @@
 
 .sectionTitle {
   /* Font */
-  color: var(--matterColorAnti);
+  color: #000;
 
   margin-top: 0;
   margin-bottom: 12px;

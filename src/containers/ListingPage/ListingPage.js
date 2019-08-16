@@ -39,6 +39,7 @@ import {
   Footer,
   BookingPanel,
   Button,
+  YotiVerifiedListing,
 } from '../../components';
 import { TopbarContainer, NotFoundPage } from '../../containers';
 
@@ -449,7 +450,7 @@ export class ListingPageComponent extends Component {
                 <div className={css.mainContent}>
                   {ensuredAuthor.attributes.profile.publicData ? (
                     ensuredAuthor.attributes.profile.publicData.yotiVerified == 'YES' ? (
-                      <YotiVerified />
+                      <YotiVerifiedListing />
                     ) : null
                   ) : null}
                   <SectionHeading
