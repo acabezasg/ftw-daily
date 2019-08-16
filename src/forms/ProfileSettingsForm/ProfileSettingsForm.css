@@ -315,3 +315,8 @@
 .submitButton {
   margin-top: 24px;
 }
+
+
+iframe[title='Yoti - Modal']{
+  z-index: 10;
+}
