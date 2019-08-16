@@ -213,7 +213,7 @@ class ProfileSettingsFormComponent extends Component {
                 handleSubmit(e);
               }}
             >
-              {!currentUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
+              {currentUser.attributes.profile.publicData.yotiVerified != 'YES' ? (
                 <div id="yoti-button" />
               ) : (
                 <YotiVerified />
