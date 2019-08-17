@@ -506,22 +506,27 @@ export class ListingPageComponent extends Component {
                     onManageDisableScrolling={onManageDisableScrolling}
                   />
                 </div>
-                {currentUser && user_type !== 0 ? (
-                  <BookingPanel
-                    className={css.bookingPanel}
-                    listing={currentListing}
-                    isOwnListing={isOwnListing}
-                    unitType={unitType}
-                    onSubmit={handleBookingSubmit}
-                    title={bookingTitle}
-                    user_type={user_type}
-                    rate={rate}
-                    subTitle={bookingSubTitle}
-                    authorDisplayName={authorDisplayName}
-                    onManageDisableScrolling={onManageDisableScrolling}
-                    timeSlots={timeSlots}
-                    fetchTimeSlotsError={fetchTimeSlotsError}
-                  />
+
+                {currentUser ? (
+                  user_type !== 0 ? (
+                    <BookingPanel
+                      className={css.bookingPanel}
+                      listing={currentListing}
+                      isOwnListing={isOwnListing}
+                      unitType={unitType}
+                      onSubmit={handleBookingSubmit}
+                      title={bookingTitle}
+                      user_type={user_type}
+                      rate={rate}
+                      subTitle={bookingSubTitle}
+                      authorDisplayName={authorDisplayName}
+                      onManageDisableScrolling={onManageDisableScrolling}
+                      timeSlots={timeSlots}
+                      fetchTimeSlotsError={fetchTimeSlotsError}
+                    />
+                  ) : (
+                    <div className={css.bookingPanel} />
+                  )
                 ) : (
                   <div className={css.bookingPanel}>
                     <Button onClick={this.onProceedLogin}>
