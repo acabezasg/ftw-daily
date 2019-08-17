@@ -72,6 +72,11 @@ export { default as GoogleMap } from './GoogleMap/GoogleMap';
 // Section Featured
 export { default as SectionFeatured } from './SectionFeatured/SectionFeatured';
 
+// Yoti Listing and Profile
+
+export { default as YotiVerifiedListing } from './YotiVerifiedListing/YotiVerifiedListing';
+export { default as YotiVerifiedProfile } from './YotiVerifiedProfile/YotiVerifiedProfile';
+
 // Layout helpers
 export { default as LayoutWrapperFooter } from './LayoutWrapperFooter/LayoutWrapperFooter';
 export { default as LayoutWrapperMain } from './LayoutWrapperMain/LayoutWrapperMain';

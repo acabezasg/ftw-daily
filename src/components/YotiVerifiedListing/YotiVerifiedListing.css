@@ -1,0 +1,15 @@
+.yotiVerified {
+  float: right;
+  margin-top: 40px;
+}
+
+.yotiVerified img {
+  width: 50px;
+}
+
+.yotiVerified span {
+  position: relative;
+  top: 3px;
+  font-weight: 700;
+  margin-left: 4px;
+}

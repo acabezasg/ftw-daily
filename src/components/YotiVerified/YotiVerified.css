@@ -6,3 +6,10 @@
 .yotiVerified img {
   width: 50px;
 }
+
+.yotiVerified span {
+	position: relative;
+	top: 2px;
+	font-weight: 700;
+	margin-left: 4px;
+}

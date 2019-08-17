@@ -43,12 +43,13 @@ const EditListingPoliciesPanel = props => {
   );
 
   if (currentUser.attributes.profile.publicData.yotiVerified == 'YES') {
-    panelTitle = 'You are Already Verified';
+    panelTitle = 'Your account is already verified';
   }
 
   return (
     <div className={classes}>
-      <h1 className={css.title}>{panelTitle}</h1>
+      <h1 className={css.title}>YOTI ID Verification</h1>
+      {panelTitle}.
       <EditListingPoliciesForm
         className={css.form}
         publicData={publicData}
