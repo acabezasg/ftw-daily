@@ -412,7 +412,6 @@ export class ListingPageComponent extends Component {
 
     const idVerify = (
       <span>
-        <span className={css.separator}>•</span>
         {ensuredAuthor.attributes.profile.publicData ? (
         ensuredAuthor.attributes.profile.publicData.yotiVerified == 'YES' ? (
           <YotiVerifiedListing />
