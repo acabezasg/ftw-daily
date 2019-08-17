@@ -13,6 +13,7 @@ const SectionHeading = props => {
     richTitle,
     category,
     hostLink,
+    idVerify,
     showContactUser,
     onContactUser,
     user_type,
@@ -54,6 +55,7 @@ const SectionHeading = props => {
         <div className={css.author}>
           {category}
           <FormattedMessage id="ListingPage.hostedBy" values={{ name: hostLink }} />
+          {idVerify}
           {showContactUser ? (
             <span className={css.contactWrapper}>
               <span className={css.separator}>•</span>

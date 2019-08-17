@@ -390,6 +390,7 @@ export class ListingPageComponent extends Component {
       { title, price: formattedPrice, siteTitle }
     );
 
+
     const hostLink = (
       <NamedLink
         className={css.authorNameLink}
@@ -408,6 +409,17 @@ export class ListingPageComponent extends Component {
         <span className={css.separator}>•</span>
       </span>
     ) : null;
+
+    const idVerify = (
+      <span>
+        <span className={css.separator}>•</span>
+        {ensuredAuthor.attributes.profile.publicData ? (
+        ensuredAuthor.attributes.profile.publicData.yotiVerified == 'YES' ? (
+          <YotiVerifiedListing />
+        ) : null
+        ) : null}
+      </span>
+    );
 
     return (
       <Page
@@ -448,17 +460,13 @@ export class ListingPageComponent extends Component {
               <div className={css.contentContainer}>
                 <SectionAvatar user={currentAuthor} params={params} />
                 <div className={css.mainContent}>
-                  {ensuredAuthor.attributes.profile.publicData ? (
-                    ensuredAuthor.attributes.profile.publicData.yotiVerified == 'YES' ? (
-                      <YotiVerifiedListing />
-                    ) : null
-                  ) : null}
                   <SectionHeading
                     priceTitle={priceTitle}
                     formattedPrice={formattedPrice}
                     richTitle={richTitle}
                     category={category}
                     hostLink={hostLink}
+                    idVerify={idVerify}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
                     user_type={user_type}

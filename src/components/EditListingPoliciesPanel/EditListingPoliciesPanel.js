@@ -49,7 +49,7 @@ const EditListingPoliciesPanel = props => {
   return (
     <div className={classes}>
       <h1 className={css.title}>YOTI ID Verification</h1>
-      {panelTitle}.
+      {panelTitle}
       <EditListingPoliciesForm
         className={css.form}
         publicData={publicData}

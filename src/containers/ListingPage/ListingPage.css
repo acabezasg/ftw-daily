@@ -597,9 +597,10 @@
 }
 
 .prefLocationBadge {
-  display: inline-block;
-  padding: 5px 20px;
-  border-radius: 50px;
-  margin: 10px;
-  background: #e3e3e3;
+   font-size: 20px;
+   display: inline-block;
+   padding: 4px 15px 5px;
+   border-radius: 50px;
+   margin: 10px;
+   background: #e3e3e3;
 }

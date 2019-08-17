@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { lazyLoadWithDimensions } from '../../util/contextHelpers';
 import includes from 'lodash/includes';
-import ReactTooltip from 'react-tooltip'
+import ReactTooltip from 'react-tooltip';
 
 import { NamedLink } from '../../components';
 
