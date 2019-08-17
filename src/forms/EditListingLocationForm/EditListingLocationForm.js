@@ -115,25 +115,6 @@ export const EditListingLocationFormComponent = props => (
             placeholder={buildingPlaceholderMessage}
           /> */}
 
-          <FieldCheckboxGroup
-            className={css.building}
-            id="buliding"
-            name="building"
-            label="Preferred Locations"
-            options={[
-              { key: 'UK', label: 'UK' },
-              { key: 'USA', label: 'USA' },
-              { key: 'Australia', label: 'Australia' },
-              { key: 'Canada', label: 'Canada' },
-              { key: 'France', label: 'France' },
-              { key: 'Spain', label: 'Spain' },
-              { key: 'Italy', label: 'Italy' },
-              { key: 'Germany', label: 'Germany' },
-              { key: 'India', label: 'India' },
-              { key: 'China', label: 'China' }
-            ]}
-          />
-
           {!user_type ? (
             <FieldCurrencyInput
               id="price"

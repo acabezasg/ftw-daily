@@ -51,7 +51,7 @@ class ProfileSettingsFormComponent extends Component {
 
   componentDidMount() {
     if (this.props.currentUser.attributes.profile.publicData.yotiVerified != 'YES') {
-      window.Yoti.Share.init({
+      this.yotiInstance = window.Yoti.Share.init({
         elements: [
           {
             domId: 'yoti-button',
@@ -63,6 +63,12 @@ class ProfileSettingsFormComponent extends Component {
           },
         ],
       });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.yotiInstance) {
+      this.yotiInstance.destroy();
     }
   }
 
