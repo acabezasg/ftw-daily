@@ -12,7 +12,7 @@ import css from './SectionFeatured.css';
 
 import featuredOne from './images/featuredOne.jpg';
 import featuredTwo from './images/featuredTwo.jpg';
-import featuredThree from './images/featuredThree.png';
+import featuredThree from './images/featuredThree.jpg';
 import yoti from './images/yoti.png';
 import yotismall from './images/yotismall.png';
 import verified from './images/verified.png';
@@ -192,7 +192,7 @@ const SectionFeatured = props => {
       </div>
       <div className={css.locations}>
         {locationLink(
-          'Pet Caring',
+          'Caring Pet',
           featuredOne,
           'linkone',
           'Dogs',
@@ -200,33 +200,33 @@ const SectionFeatured = props => {
           'Giant',
           'Large',
           'Sitter',
-          '5d37b33f-0987-4eab-8c2f-3b42e075c1a4',
-          'pet-caring',
+          '5d594729-bc39-467e-be27-098dc62d8f18',
+          'caring-pet',
           'tipOne'
         )}
         {locationLink(
-          'Services',
+          'Dream Walk',
           featuredTwo,
           '?linktwo',
           'Cats',
-          'Sharks',
+          'Rabbits',
           'Pet Store',
           'Giant',
           'Services',
-          '5d37b0fe-9675-4784-9728-8307c110e03d',
-          'services',
+          '5d594796-53ad-46a2-8401-1217c05cbb03',
+          'dream-walk',
           'tipTwo'
         )}
         {locationLink(
           'Ana Janne',
           featuredThree,
           '?linkthree',
-          'Rabbits',
+          'Cats',
           'Horses',
-          'Car',
-          '18+',
+          'Parking',
+          'Garden',
           'Owner',
-          '5d387c50-3801-4f01-acfa-26c7cbd94f9e',
+          '5d594601-5576-4969-b9f1-6df55dd92c13',
           'ana-jane',
           'tipThree'
         )}
