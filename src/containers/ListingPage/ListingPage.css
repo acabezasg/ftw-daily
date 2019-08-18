@@ -605,6 +605,12 @@
    background: #e3e3e3;
 }
 
+.prefLocationBadge:hover {
+   color: #fff;
+   background: #41a6df;
+   cursor: pointer;
+}
+
 .bookingHeading {
   display: none;
 
