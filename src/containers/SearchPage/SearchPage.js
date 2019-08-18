@@ -61,7 +61,7 @@ export class SearchPageComponent extends Component {
 
     return {
       categoryFilter: {
-        paramName: 'pub_category',
+        paramName: 'pub_user_type',
         options: categories,
       },
       amenitiesFilter: {

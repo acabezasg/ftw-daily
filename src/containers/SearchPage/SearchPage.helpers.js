@@ -18,7 +18,7 @@ export const validURLParamForExtendedData = (paramName, paramValue, filters) => 
   // resolve configuration for this filter
   const filterConfig = filtersArray.find(f => f.paramName === paramName);
 
-  const valueArray = paramValue ? paramValue.split(',') : [];
+  const valueArray = paramValue ? String(paramValue).split(',') : [];
 
   if (filterConfig && valueArray.length > 0) {
     const { min, max, active } = filterConfig.config || {};

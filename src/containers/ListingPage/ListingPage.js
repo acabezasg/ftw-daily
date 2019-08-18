@@ -392,7 +392,6 @@ export class ListingPageComponent extends Component {
       { title, price: formattedPrice, siteTitle }
     );
 
-
     const hostLink = (
       <NamedLink
         className={css.authorNameLink}
@@ -403,10 +402,8 @@ export class ListingPageComponent extends Component {
         {authorDisplayName}
       </NamedLink>
     );
-    
-    const stripe = (
-    <img src={stripeimg} />
-    )
+
+    const stripe = <img src={stripeimg} />;
 
     const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
     const category = user_name ? (
@@ -419,9 +416,9 @@ export class ListingPageComponent extends Component {
     const idVerify = (
       <span>
         {ensuredAuthor.attributes.profile.publicData ? (
-        ensuredAuthor.attributes.profile.publicData.yotiVerified == 'YES' ? (
-          <YotiVerifiedListing />
-        ) : null
+          ensuredAuthor.attributes.profile.publicData.yotiVerified == 'YES' ? (
+            <YotiVerifiedListing />
+          ) : null
         ) : null}
       </span>
     );
@@ -541,10 +538,15 @@ export class ListingPageComponent extends Component {
                   ) : (
                     <div className={css.bookingPanel}>
                       <div className={css.bookingHeading}>
-                      <h2 className={css.bookingTitle}>Make contact with <span className={css.username}>{authorDisplayName}</span></h2>
+                        <h2 className={css.bookingTitle}>
+                          Make contact with{' '}
+                          <span className={css.username}>{authorDisplayName}</span>
+                        </h2>
                       </div>
-                      <p className={css.smallPrint}><span>Contact Pet Owner directly</span></p>
-                      <Button>Send Message</Button>
+                      <p className={css.smallPrint}>
+                        <span>Contact Pet Owner directly</span>
+                      </p>
+                      <Button onClick={this.onContactUser}>Send Message</Button>
                     </div>
                   )
                 ) : (
