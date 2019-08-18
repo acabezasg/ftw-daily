@@ -112,3 +112,12 @@
     padding-top: 11px;
   }
 }
+
+.backButtonContainer {
+  position: absolute;
+}
+
+.backButtonContainer button {
+  margin: 20px;
+  min-height: 40px;
+}

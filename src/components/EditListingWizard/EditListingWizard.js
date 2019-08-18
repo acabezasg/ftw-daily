@@ -12,7 +12,7 @@ import {
 } from '../../util/urlHelpers';
 import { ensureListing, ensureCurrentUser } from '../../util/data';
 import { PayoutDetailsForm } from '../../forms';
-import { Modal, NamedRedirect, Tabs } from '../../components';
+import { Modal, NamedRedirect, NamedLink, Tabs, SecondaryButton } from '../../components';
 
 import EditListingWizardTab, {
   AVAILABILITY,
@@ -275,11 +275,16 @@ class EditListingWizard extends Component {
 
     return (
       <div className={classes}>
-        {/* <NamedLink name="OrderTypesPage" params={{type:params.type}}>
-          <SecondaryButton>    
-              Pet {user_name}
-          </SecondaryButton>
-        </NamedLink> */}
+        <div rootClassName={css.tabsContainer}>
+          <NamedLink
+            className={css.backButtonContainer}
+            name="OrderTypesPage"
+            params={{ type: params.type }}
+          >
+            <SecondaryButton>Go Back</SecondaryButton>
+          </NamedLink>
+        </div>
+
         <Tabs
           rootClassName={css.tabsContainer}
           navRootClassName={css.nav}
