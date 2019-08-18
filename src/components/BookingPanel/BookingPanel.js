@@ -14,6 +14,7 @@ import { ModalInMobile, Button, PrimaryButton } from '../../components';
 import { BookingDatesForm } from '../../forms';
 
 import css from './BookingPanel.css';
+import stripeimg from './stripe.png';
 
 // This defines when ModalInMobile shows content as Modal
 const MODAL_BREAKPOINT = 1023;
@@ -68,6 +69,7 @@ const BookingPanel = props => {
     intl,
     rate,
     user_type,
+    stripe
   } = props;
 
   const price = listing.attributes.price;
@@ -172,6 +174,7 @@ const BookingPanel = props => {
             <FormattedMessage id="BookingPanel.closedListingButtonText" />
           </div>
         )}
+        <img src={stripeimg} />
       </div>
     </div>
   );

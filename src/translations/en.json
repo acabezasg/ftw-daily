@@ -70,7 +70,7 @@
   "BookingDatesForm.ownListing": "You won't be able to book your own listing.",
   "BookingDatesForm.placeholder": "mm/dd/yyyy",
   "BookingDatesForm.priceBreakdownTitle": "Booking breakdown",
-  "BookingDatesForm.requestToBook": "Contact",
+  "BookingDatesForm.requestToBook": "Request to Book",
   "BookingDatesForm.requiredDate": "Oops, make sure your date is correct!",
   "BookingDatesForm.timeSlotsError": "Loading listing availability failed. Please refresh the page.",
   "BookingDatesForm.youWontBeChargedInfo": "You won't be charged yet",

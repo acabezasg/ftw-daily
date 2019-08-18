@@ -58,6 +58,8 @@ import SectionPreferredLocations from './SectionPreferredLocations';
 import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
 import css from './ListingPage.css';
 
+import stripeimg from './stripe.png';
+
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
 
 const { UUID } = sdkTypes;
@@ -401,6 +403,10 @@ export class ListingPageComponent extends Component {
         {authorDisplayName}
       </NamedLink>
     );
+    
+    const stripe = (
+    <img src={stripeimg} />
+    )
 
     const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
     const category = user_name ? (
@@ -528,6 +534,7 @@ export class ListingPageComponent extends Component {
                       subTitle={bookingSubTitle}
                       authorDisplayName={authorDisplayName}
                       onManageDisableScrolling={onManageDisableScrolling}
+                      stripe={stripe}
                       timeSlots={timeSlots}
                       fetchTimeSlotsError={fetchTimeSlotsError}
                     />
