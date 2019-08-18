@@ -19,10 +19,17 @@
  background-color: #41a6df !important;
  opacity: 0.99 !important;
  margin-top: -12px !important;
- padding: 12px 21px !important;
+ padding: 10px 21px 13px !important;
 }
 
 .customTip:after {
  border-top-color: #41a6df !important;
  border-top-width: 7px !important;
+}
+
+.verifiedImg {
+  width: 17px !important;
+  margin-left: 3px;
+  position: relative !important;
+  bottom: 2px !important;
 }

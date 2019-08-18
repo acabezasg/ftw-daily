@@ -359,12 +359,12 @@
   "EditListingPoliciesForm.maxLength": "Must be {maxLength} characters or less",
   "EditListingPoliciesForm.rulesRequired": "You need to add an ID.",
 
-  "EditListingPoliciesPanel.createListingTitle.owner": "Unverified accounts aren't allowed to post Listings. Please verify your account to proceed.",
-  "EditListingPoliciesPanel.title.owner": "Edit ID verification of {listingTitle}",
+  "EditListingPoliciesPanel.createListingTitle.owner": "{listingTitle} listing isn't YOTI verified. Please go to your profile and verify your identity to proceed posting your listing.",
+  "EditListingPoliciesPanel.title.owner": "{listingTitle} listing isn't verified. Please go to your profile and verify your identity to proceed.",
   "EditListingPoliciesPanel.createListingTitle.sitter": "ID Verification",
-  "EditListingPoliciesPanel.title.sitter": "Edit ID verification of {listingTitle}",
+  "EditListingPoliciesPanel.title.sitter": "{listingTitle} listing isn't YOTI verified. Please go to your profile and verify your identity to proceed posting your listing.",
   "EditListingPoliciesPanel.createListingTitle.service": "ID Verification",
-  "EditListingPoliciesPanel.title.service": "Edit ID verification of {listingTitle}",
+  "EditListingPoliciesPanel.title.service": "{listingTitle} listing isn't YOTI verified. Please go to your profile and verify your identity to proceed posting your listing.",
 
   "EditListingWizard.saveEditDescription": "Save Description",
   "EditListingWizard.saveEditFeatures": "Save Pet Types",

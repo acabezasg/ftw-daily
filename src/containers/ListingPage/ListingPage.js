@@ -532,7 +532,13 @@ export class ListingPageComponent extends Component {
                       fetchTimeSlotsError={fetchTimeSlotsError}
                     />
                   ) : (
-                    <div className={css.bookingPanel} />
+                    <div className={css.bookingPanel}>
+                      <div className={css.bookingHeading}>
+                      <h2 className={css.bookingTitle}>Make contact with <span className={css.username}>{authorDisplayName}</span></h2>
+                      </div>
+                      <p className={css.smallPrint}><span>Contact Pet Owner directly</span></p>
+                      <Button>Send Message</Button>
+                    </div>
                   )
                 ) : (
                   <div className={css.bookingPanel}>

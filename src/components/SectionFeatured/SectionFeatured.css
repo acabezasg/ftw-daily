@@ -231,3 +231,10 @@
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
 }
+
+.verifiedImg {
+  width: 16px !important;
+  margin-left: 3px;
+  position: relative !important;
+  bottom: 3.7px !important;
+}

@@ -31,3 +31,10 @@
  border-top-color: #41a6df !important;
  border-top-width: 7px !important;
 }
+
+.verifiedImg {
+  width: 17px !important;
+  margin-left: 3px;
+  position: relative !important;
+  bottom: 2px !important;
+}

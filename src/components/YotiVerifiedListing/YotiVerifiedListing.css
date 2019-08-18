@@ -28,3 +28,10 @@
 .separatorVerified {
  margin: 0 6px;
 }
+
+.verifiedImg {
+  width: 17px !important;
+  margin-left: 3px;
+  position: relative !important;
+  bottom: 2px !important;
+}

@@ -15,6 +15,7 @@ import featuredTwo from './images/featuredTwo.jpg';
 import featuredThree from './images/featuredThree.png';
 import yoti from './images/yoti.png';
 import yotismall from './images/yotismall.png';
+import verified from './images/verified.png';
 
 class LocationImage extends Component {
   render() {
@@ -66,11 +67,9 @@ const locationLink = (
         <a href="/yoti"><img data-tip data-for={tipId} className={css.yotiImg} src={yoti} /></a>
       </div>
 
-      <ReactTooltip className={css.customTip} id={tipId} effect='solid'>
-        <span className={css.tipColor}>
-        {/* <img className={css.yotismall} src={yotismall} /> 
-            <img className={css.yotismall} src={yotismall} /> */}  
-        Yoti ID Verification
+      <ReactTooltip className={css.customTip} effect='solid' id={tipId}>
+        <span className={css.tipColor}>  
+        Verified by YOTI <img className={css.verifiedImg} src={verified} />
         </span>
       </ReactTooltip>
 
