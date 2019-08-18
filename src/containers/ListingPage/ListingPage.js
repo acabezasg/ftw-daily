@@ -391,7 +391,7 @@ export class ListingPageComponent extends Component {
       { id: 'ListingPage.schemaTitle' },
       {
         title,
-        price: currentListing.attributes.publicData.user_type ? formattedPrice : null,
+        price: currentListing.attributes.publicData.user_type ? formattedPrice : 'Pet Owner',
         siteTitle,
       }
     );
