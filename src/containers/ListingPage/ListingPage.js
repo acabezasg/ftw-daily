@@ -389,7 +389,11 @@ export class ListingPageComponent extends Component {
     const siteTitle = config.siteTitle;
     const schemaTitle = intl.formatMessage(
       { id: 'ListingPage.schemaTitle' },
-      { title, price: formattedPrice, siteTitle }
+      {
+        title,
+        price: currentListing.attributes.publicData.user_type ? formattedPrice : null,
+        siteTitle,
+      }
     );
 
     const hostLink = (
