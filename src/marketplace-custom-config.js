@@ -206,9 +206,9 @@ export const amenities = [
 ];
 
 export const categories = [
-  { key: 'petowners', label: 'Pet Owners' },
-  { key: 'petsitter', label: 'Pet Sitter' },
-  { key: 'petservices', label: 'Pet Services' },
+  { key: '0', label: 'Pet Owners' },
+  { key: '1', label: 'Pet Sitter' },
+  { key: '2', label: 'Pet Services' },
 ];
 
 export const equipments = [
