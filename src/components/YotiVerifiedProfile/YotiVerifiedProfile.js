@@ -9,13 +9,15 @@ class YotiVerifiedProfile extends Component {
   render() {
     return (
       <span className={css.yotiVerified}>
-        <img data-tip src={yoti} />
-          <ReactTooltip className={css.customTip} effect='solid'>
-            <span className={css.tipColor}>  
-            Verified by YOTI <img className={css.verifiedImg} src={verified} />
-            </span>
-          </ReactTooltip>
-        <span>Verified</span>
+        <span data-tip>
+          <img src={yoti} />
+            <ReactTooltip className={css.customTip} effect='solid'>
+              <span className={css.tipColor}>  
+              Verified by YOTI <img className={css.verifiedImg} src={verified} />
+              </span>
+            </ReactTooltip>
+          <span>Verified</span>
+        </span>
       </span>
     );
   }

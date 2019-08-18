@@ -11,6 +11,7 @@ import { Form, Button, FieldTextInput } from '../../components';
 import NamedLink from '../../components/NamedLink/NamedLink';
 
 import css from './EditListingPoliciesForm.css';
+
 const RULES_MAX_LENGTH = 20;
 export const EditListingPoliciesFormComponent = props => (
   <FinalForm

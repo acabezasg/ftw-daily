@@ -10,13 +10,15 @@ class YotiVerifiedListing extends Component {
     return (
       <span className={css.yotiVerified}>
       <span className={css.separatorVerified}>•</span>
-        <img data-tip src={yoti} />
+      <span data-tip>
+        <img src={yoti} />
         <ReactTooltip className={css.customTip} effect='solid'>
         <span className={css.tipColor}>  
         Verified by YOTI <img className={css.verifiedImg} src={verified} />
         </span>
       </ReactTooltip>
         <span className={css.verified}>Verified</span>
+      </span>
       </span>
     );
   }

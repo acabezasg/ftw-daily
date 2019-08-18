@@ -10,7 +10,7 @@
 .yotiVerified span {
 	position: relative;
 	top: 2px;
-	font-weight: 700;
+	font-weight: 500;
 	margin-left: 4px;
 }
 
@@ -28,8 +28,25 @@
 }
 
 .verifiedImg {
-  width: 17px !important;
+  width: 13px !important;
   margin-left: 3px;
   position: relative !important;
-  bottom: 2px !important;
+  bottom: 1px !important;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.yotiContainer {
+  position: inherit !important;
+  top: 0px !important;
+  font-weight: inherit !important;
+  margin-left: 0px !important;
 }

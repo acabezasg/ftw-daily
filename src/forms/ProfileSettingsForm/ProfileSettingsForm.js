@@ -220,7 +220,12 @@ class ProfileSettingsFormComponent extends Component {
               }}
             >
               {currentUser.attributes.profile.publicData.yotiVerified != 'YES' ? (
-                <div id="yoti-button" />
+                <div>
+                  <div>
+                    <h3 className={css.yotiTitle}>Verify your identity</h3>
+                  </div>
+                    <div id="yoti-button" />
+                </div>
               ) : (
                 <YotiVerified />
               )}

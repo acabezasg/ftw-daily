@@ -17,6 +17,7 @@ import { richText } from '../../util/richText';
 import { createSlug } from '../../util/urlHelpers';
 import config from '../../config';
 import { NamedLink, ResponsiveImage } from '../../components';
+import { YotiVerifiedListingPage } from '../../components';
 
 import css from './ListingCard.css';
 
@@ -107,6 +108,7 @@ export const ListingCardComponent = props => {
             
             {category}
           </div>
+          <YotiVerifiedListingPage />
           <LazyImage
             rootClassName={css.rootForImage}
             alt={title}

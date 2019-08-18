@@ -319,3 +319,17 @@
 iframe[title='Yoti - Modal'] {
   z-index: 10;
 }
+
+.yotiTitle {
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.yotiButton {
+  cursor: pointer;
+}
