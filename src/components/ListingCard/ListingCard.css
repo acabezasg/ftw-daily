@@ -21,6 +21,24 @@
   background: #F77D0E;
 }
 
+.root:hover .yotiBadge {
+  background: #F77D0E;
+}
+
+.yotiBadge {
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   right: 0;
+   text-transform: capitalize;
+   color: #fff;
+   padding: 5px 18px;
+   border-bottom-right-radius: 3px;
+   font-weight: 600;
+   font-size: 16px;
+   background: #41A6DF;
+}
+
 .threeToTwoWrapper {
   /* Layout */
   display: block;
@@ -160,10 +178,9 @@
   z-index: 50;
 }
 
-.yotiBadge {
-  width: 50px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  z-index: 999;
+.verifiedBy {
+  height: 16px;
+  margin-right: 7px;
+  position: relative;
+  bottom: 3.71px;
 }

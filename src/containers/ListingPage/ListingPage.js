@@ -396,6 +396,17 @@ export class ListingPageComponent extends Component {
       }
     );
 
+    const makeContact = (
+      <NamedLink
+        className={css.authorNameLink}
+        name="ListingPage"
+        params={params}
+        to={{ hash: '#host' }}
+      >
+        {authorDisplayName}
+      </NamedLink>
+      );
+
     const hostLink = (
       <NamedLink
         className={css.authorNameLink}
@@ -548,7 +559,7 @@ export class ListingPageComponent extends Component {
                       <div className={css.bookingHeading}>
                         <h2 className={css.bookingTitle}>
                           Make contact with{' '}
-                          <span className={css.username}>{authorDisplayName}</span>
+                          <span className={css.username}>{makeContact}</span>
                         </h2>
                       </div>
                       <p className={css.smallPrint}>

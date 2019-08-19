@@ -76,7 +76,6 @@ export { default as SectionFeatured } from './SectionFeatured/SectionFeatured';
 
 export { default as YotiVerifiedListing } from './YotiVerifiedListing/YotiVerifiedListing';
 export { default as YotiVerifiedProfile } from './YotiVerifiedProfile/YotiVerifiedProfile';
-export { default as YotiVerifiedListingPage } from './YotiVerifiedListingPage/YotiVerifiedListingPage';
 
 // Layout helpers
 export { default as LayoutWrapperFooter } from './LayoutWrapperFooter/LayoutWrapperFooter';
