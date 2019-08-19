@@ -20,6 +20,7 @@ import { NamedLink, ResponsiveImage } from '../../components';
 import { YotiVerifiedListingPage } from '../../components';
 
 import css from './ListingCard.css';
+import verified from './images/verified.png';
 
 const MIN_LENGTH_FOR_LONG_WORDS = 10;
 
@@ -111,7 +112,10 @@ export const ListingCardComponent = props => {
 
           {author.attributes.profile.publicData ? (
           author.attributes.profile.publicData.yotiVerified == 'YES' ? (
-            <YotiVerifiedListingPage />
+            <span className={css.yotiBadge}>
+              <img className={css.verifiedBy} src={verified} />
+              ID Verified
+            </span>
           ) : null
         ) : null}
 
