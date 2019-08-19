@@ -11,11 +11,14 @@ import {
 } from '../../components';
 
 import yoti from './yotilogo.png';
-import idphoto from './idphoto.png';
-import birth from './birth.png';
-import name from './name.png';
+import idphoto from './profile.svg';
+import birth from './dateofbirth.svg';
+import email from './email.svg';
+import phone from './phone.svg';
+import yotiscan from './yoti.png';
+import document from './document.svg';
+import name from './name.svg';
 import scan from './scan.png';
-import qrcode from './qrcode.png';
 import one from './1.png';
 import two from './2.png';
 import three from './3.png';
@@ -55,21 +58,23 @@ const YotiPage = () => {
       <div className={css.whatwedoLeft}>
 
           <h2 className={css.h2FirstChild}>
-            Confirm your identity
+            What is Yoti and how do we use it?
           </h2>
 
           <p>
-           We use our identity partner Yoti to confirm your identity. To share your details with us please scan the QR code below with the Yoti app. Or for more detailed instructions, click on ‘How to create a Yoti account' below and follow the steps.
+           We use our identity partner Yoti to confirm your identity. Pet Owners and Pet Sitters won't be able to post listing if they aren't Yoti verified. That way we are making our users feel more secured using our services. In the explanation below we explain how verifing your identity works.
           </p>
 
          <div className={css.yotiVerify}>
          <div className={css.yotiLeft}>
          <img src={yoti} className={css.yotiImg} />
-         <p className={css.lastP}><strong className={css.yotiworld}>Yoti World</strong><br />is asking you to share</p>
+         <p className={css.lastP}><strong className={css.yotiworld}>Yoti World</strong><br />will ask you to share</p>
          
          <ul className={css.yotiUl}>
            <li className={css.yotiLi}><img src={idphoto} className={css.yotiIcons} />ID Photo</li><hr />
            <li className={css.yotiLi}><img src={name} className={css.yotiIcons} />Full Name</li><hr />
+           <li className={css.yotiLi}><img src={phone} className={css.yotiIcons} />Your Number</li><hr />
+           <li className={css.yotiLi}><img src={email} className={css.yotiIcons} />Email Address</li><hr />
            <li className={css.yotiLi}><img src={birth} className={css.yotiIcons} />Date of Birth</li>
          </ul>
 
@@ -78,7 +83,7 @@ const YotiPage = () => {
          <div className={css.yotiRight}>
          <img src={scan} className={css.scanImg} />
          <p className={css.lastPP}><strong className={css.yotiworld}>Scan with</strong><br />the <span className={css.scanwith}>YOTI</span> App</p>
-         <img src={qrcode} className={css.qrCode} />
+         <img src={yotiscan} className={css.qrCode} />
          </div>
          </div>
 

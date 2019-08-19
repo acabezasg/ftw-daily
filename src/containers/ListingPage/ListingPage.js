@@ -550,10 +550,15 @@ export class ListingPageComponent extends Component {
                   ) : (
                     <div className={css.bookingPanel}>
                       {currentListing.attributes.publicData.requiredDates ? (
-                        <p>
-                          Required Dates:
-                          {currentListing.attributes.publicData.requiredDates}
-                        </p>
+                        <div>
+                          <h2>
+                            Required Dates
+                          </h2>
+                          <p>
+                            {currentListing.attributes.publicData.requiredDates}
+                          </p>
+                          <hr className={css.divhr} />
+                        </div>
                       ) : null}
 
                       <div className={css.bookingHeading}>

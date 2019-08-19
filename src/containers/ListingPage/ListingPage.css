@@ -748,3 +748,9 @@
     margin-bottom: 25px;
   }
 }
+
+.divhr {
+  margin: 27px 0px 23px;
+  border-color: #e7e7e7;
+  opacity: 0.5;
+}

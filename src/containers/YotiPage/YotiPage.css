@@ -293,7 +293,7 @@
 
 .qrCode {
   position: relative;
-  bottom: 5px;
+  top: 15px;
 }
 
 .lastPP {
