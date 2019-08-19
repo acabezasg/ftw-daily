@@ -64,6 +64,7 @@ const EditListingAvailabilityPanel = props => {
       <EditListingAvailabilityForm
         className={css.form}
         listingId={currentListing.id}
+        publicData={currentListing.attributes.publicData}
         initialValues={{ availabilityPlan }}
         availability={availability}
         availabilityPlan={availabilityPlan}
@@ -73,7 +74,7 @@ const EditListingAvailabilityPanel = props => {
         onSubmit={() => {
           if (user_name == 'owner') {
             if (requiredDates) {
-              onSubmit({ publicData: { requiredDates } });
+              onSubmit({ availabilityPlan, publicData: { requiredDates } });
             }
           } else {
             onSubmit({ availabilityPlan });

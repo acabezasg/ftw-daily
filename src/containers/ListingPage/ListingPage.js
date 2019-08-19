@@ -98,6 +98,43 @@ export class ListingPageComponent extends Component {
     this.onSubmitEnquiry = this.onSubmitEnquiry.bind(this);
   }
 
+  formatDateHelper(date) {
+    var monthNames = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+
+    return day + ' ' + monthNames[monthIndex] + ' ' + year;
+  }
+
+  formattedDate(dateString) {
+    let dateArray = dateString.split('to');
+    let finalDateString = '';
+    if (dateArray.length > 1) {
+      finalDateString = `${this.formatDateHelper(
+        new Date(dateArray[0])
+      )} to ${this.formatDateHelper(new Date(dateArray[1]))}`;
+    } else {
+      finalDateString = `${this.formatDateHelper(new Date(dateArray[0]))}`;
+    }
+
+    return finalDateString;
+  }
+
   handleSubmit(values) {
     const {
       history,
@@ -405,7 +442,7 @@ export class ListingPageComponent extends Component {
       >
         {authorDisplayName}
       </NamedLink>
-      );
+    );
 
     const hostLink = (
       <NamedLink
@@ -551,11 +588,9 @@ export class ListingPageComponent extends Component {
                     <div className={css.bookingPanel}>
                       {currentListing.attributes.publicData.requiredDates ? (
                         <div>
-                          <h2>
-                            Required Dates
-                          </h2>
+                          <h2>Required Dates</h2>
                           <p>
-                            {currentListing.attributes.publicData.requiredDates}
+                            {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
                           </p>
                           <hr className={css.divhr} />
                         </div>
@@ -563,8 +598,7 @@ export class ListingPageComponent extends Component {
 
                       <div className={css.bookingHeading}>
                         <h2 className={css.bookingTitle}>
-                          Make contact with{' '}
-                          <span className={css.username}>{makeContact}</span>
+                          Make contact with <span className={css.username}>{makeContact}</span>
                         </h2>
                       </div>
                       <p className={css.smallPrint}>

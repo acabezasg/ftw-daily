@@ -56,26 +56,32 @@ export class EditListingAvailabilityFormComponent extends Component {
                     onUpdate={value => {
                       this.props.setRequiredDates(value);
                     }}
+                    publicData={this.props.publicData}
+                    submitInProgress={submitInProgress}
+                    submitDisabled={submitDisabled}
+                    submitReady={submitReady}
+                    saveActionMsg={saveActionMsg}
                   />
                 ) : (
-                  <ManageAvailabilityCalendar
-                    availability={availability}
-                    availabilityPlan={availabilityPlan}
-                    listingId={listingId}
-                    user_name={user_name}
-                  />
+                  <div>
+                    <ManageAvailabilityCalendar
+                      availability={availability}
+                      availabilityPlan={availabilityPlan}
+                      listingId={listingId}
+                      user_name={user_name}
+                    />
+                    <Button
+                      className={css.submitButton}
+                      type="submit"
+                      inProgress={submitInProgress}
+                      disabled={submitDisabled}
+                      ready={submitReady}
+                    >
+                      {saveActionMsg}
+                    </Button>
+                  </div>
                 )}
               </div>
-
-              <Button
-                className={css.submitButton}
-                type="submit"
-                inProgress={submitInProgress}
-                disabled={submitDisabled}
-                ready={submitReady}
-              >
-                {saveActionMsg}
-              </Button>
             </Form>
           );
         }}
