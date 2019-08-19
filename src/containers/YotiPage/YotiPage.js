@@ -62,7 +62,7 @@ const YotiPage = () => {
           </h2>
 
           <p>
-           We use our identity partner Yoti to confirm your identity. Pet Owners and Pet Sitters won't be able to post listing if they aren't Yoti verified. That way we are making our users feel more secured using our services. In the explanation below we explain how verifing your identity works.
+           We use our identity partner Yoti to confirm your identity. Pet Owners and Pet Sitters are only allowed to post listings after they pass the <strong>Yoti Identity Verification</strong>. That way we are making our users feel more secured using our services. In the explanation below we explain how verifing your identity works.
           </p>
 
          <div className={css.yotiVerify}>
@@ -86,7 +86,6 @@ const YotiPage = () => {
          <img src={yotiscan} className={css.qrCode} />
          </div>
          </div>
-
       </div>
 
       <div className={css.whatwedoRight}>
@@ -115,17 +114,15 @@ const YotiPage = () => {
       </div>
 
     </div>
-        
-        </div>
 
-    <div className={css.trustFollow}>
+        <div className={css.contentdown}>
+          <p>
+            To verify your account and all your future listings with Yoti simple <a href="/profile-settings">Go to Profile</a> and click <strong>Yoti Verification</strong> button.
+          </p>
 
-    <div className={css.followLeft}>
-    
-    </div>
-        
-      <div className={css.followRight}>
-
+          <p className={css.morespace}>
+            After you followed the steps above and passed the verification, you will get the <strong>ID Verified</strong> badge and you will be able to post new listings.
+          </p>
         </div>
 
       </div>

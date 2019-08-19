@@ -258,7 +258,7 @@
 }
 
 .yotiLeft, .yotiRight {
-  padding: 25px 75px;
+  padding: 15px 75px 20px;
 }
 
 .yotiUl {
@@ -340,4 +340,13 @@
 .nameYoti, .yotiImg {
   z-index: 9999 !important;
   position: relative;
+}
+
+.contentdown {
+  margin-top: -15px !important;
+  width: 70%;
+}
+
+.morespace {
+  margin-bottom: 90px;
 }
