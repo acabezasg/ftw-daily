@@ -7,6 +7,8 @@ import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { Form, Button } from '../../components';
 
+import Calendar from '../../components/Calendar/Calendar.js';
+
 import ManageAvailabilityCalendar from './ManageAvailabilityCalendar';
 import css from './EditListingAvailabilityForm.css';
 
@@ -19,7 +21,7 @@ export class EditListingAvailabilityFormComponent extends Component {
           const {
             className,
             rootClassName,
-            disabled, 
+            disabled,
             handleSubmit,
             //intl,
             invalid,
@@ -49,12 +51,20 @@ export class EditListingAvailabilityFormComponent extends Component {
             <Form className={classes} onSubmit={handleSubmit}>
               {errorMessage}
               <div className={css.calendarWrapper}>
-                <ManageAvailabilityCalendar
-                  availability={availability}
-                  availabilityPlan={availabilityPlan}
-                  listingId={listingId}
-                  user_name = {user_name}
-                />
+                {user_name == 'owner' ? (
+                  <Calendar
+                    onUpdate={value => {
+                      this.props.setRequiredDates(value);
+                    }}
+                  />
+                ) : (
+                  <ManageAvailabilityCalendar
+                    availability={availability}
+                    availabilityPlan={availabilityPlan}
+                    listingId={listingId}
+                    user_name={user_name}
+                  />
+                )}
               </div>
 
               <Button

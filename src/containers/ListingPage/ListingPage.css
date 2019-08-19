@@ -597,18 +597,18 @@
 }
 
 .prefLocationBadge {
-   font-size: 20px;
-   display: inline-block;
-   padding: 4px 15px 5px;
-   border-radius: 50px;
-   margin: 10px;
-   background: #e3e3e3;
+  font-size: 20px;
+  display: inline-block;
+  padding: 4px 15px 5px;
+  border-radius: 50px;
+  margin: 10px;
+  background: #e3e3e3;
 }
 
 .prefLocationBadge:hover {
-   color: #fff;
-   background: #41a6df;
-   cursor: pointer;
+  color: #fff;
+  background: #41a6df;
+  cursor: pointer;
 }
 
 .bookingHeading {
@@ -681,7 +681,6 @@
     margin-bottom: 5px;
   }
 }
-
 
 .bookingHeading {
   display: none;

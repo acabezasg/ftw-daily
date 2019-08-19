@@ -538,6 +538,13 @@ export class ListingPageComponent extends Component {
                     />
                   ) : (
                     <div className={css.bookingPanel}>
+                      {currentListing.attributes.publicData.requiredDates ? (
+                        <p>
+                          Required Dates:
+                          {currentListing.attributes.publicData.requiredDates}
+                        </p>
+                      ) : null}
+
                       <div className={css.bookingHeading}>
                         <h2 className={css.bookingTitle}>
                           Make contact with{' '}

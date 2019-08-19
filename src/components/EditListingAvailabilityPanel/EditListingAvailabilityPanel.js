@@ -6,6 +6,7 @@ import { ensureOwnListing } from '../../util/data';
 import { LISTING_STATE_DRAFT } from '../../util/types';
 import { ListingLink } from '../../components';
 import { EditListingAvailabilityForm } from '../../forms';
+import Calendar from '../../components/Calendar/Calendar.js';
 import config from '../../config';
 import css from './EditListingAvailabilityPanel.css';
 
@@ -31,19 +32,23 @@ const EditListingAvailabilityPanel = props => {
   const defaultAvailabilityPlan = {
     type: 'availability-plan/day',
     entries: [
-      { dayOfWeek: 'mon', seats: 1 },
-      { dayOfWeek: 'tue', seats: 1 },
-      { dayOfWeek: 'wed', seats: 1 },
-      { dayOfWeek: 'thu', seats: 1 },
-      { dayOfWeek: 'fri', seats: 1 },
-      { dayOfWeek: 'sat', seats: 1 },
-      { dayOfWeek: 'sun', seats: 1 },
+      { dayOfWeek: 'mon', seats: 0 },
+      { dayOfWeek: 'tue', seats: 0 },
+      { dayOfWeek: 'wed', seats: 0 },
+      { dayOfWeek: 'thu', seats: 0 },
+      { dayOfWeek: 'fri', seats: 0 },
+      { dayOfWeek: 'sat', seats: 0 },
+      { dayOfWeek: 'sun', seats: 0 },
     ],
   };
   const availabilityPlan = currentListing.attributes.availabilityPlan || defaultAvailabilityPlan;
+
+  let requiredDates = false;
+
   const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
   const publish = isPublished ? 'title.' : 'createListingTitle.';
   const AvailabilityPanelTitle = 'EditListingAvailabilityPanel.' + publish + user_name;
+
   return (
     <div className={classes}>
       <h1 className={css.title}>
@@ -62,12 +67,17 @@ const EditListingAvailabilityPanel = props => {
         initialValues={{ availabilityPlan }}
         availability={availability}
         availabilityPlan={availabilityPlan}
+        setRequiredDates={value => {
+          requiredDates = value;
+        }}
         onSubmit={() => {
-          // We save the default availability plan
-          // I.e. this listing is available every night.
-          // Exceptions are handled with live edit through a calendar,
-          // which is visible on this panel.
-          onSubmit({ availabilityPlan });
+          if (user_name == 'owner') {
+            if (requiredDates) {
+              onSubmit({ publicData: { requiredDates } });
+            }
+          } else {
+            onSubmit({ availabilityPlan });
+          }
         }}
         onChange={onChange}
         saveActionMsg={submitButtonText}

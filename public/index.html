@@ -19,6 +19,7 @@
 
     <!-- Start Favicons from https://realfavicongenerator.net/ -->
     <link rel="stylesheet" href="%PUBLIC_URL%/static/css/customIndex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.2/flatpickr.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
@@ -27,6 +28,7 @@
     <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
     <meta name="theme-color" content="#c0392b">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.2/flatpickr.min.js"></script>
     <script>
       // // Initialize and add the map
       // function initMap() {
@@ -112,6 +114,12 @@
                url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff') format('woff');
           font-weight: 700; /* Bold */
           font-style: normal;
+      }
+
+      .flatpickr-calendar .numInputWrapper{
+        position: absolute;
+        top: 20%;
+        margin-left:20%;
       }
 	 
     </style>

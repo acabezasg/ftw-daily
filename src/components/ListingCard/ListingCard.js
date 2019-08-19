@@ -105,15 +105,14 @@ export const ListingCardComponent = props => {
                 : `${css.cardCategory} ${css.cardCategoryService}`
             }
           >
-            
             {category}
           </div>
 
           {author.attributes.profile.publicData ? (
-          author.attributes.profile.publicData.yotiVerified == 'YES' ? (
-            <YotiVerifiedListingPage />
-          ) : null
-        ) : null}
+            author.attributes.profile.publicData.yotiVerified == 'YES' ? (
+              <YotiVerifiedListingPage />
+            ) : null
+          ) : null}
 
           <LazyImage
             rootClassName={css.rootForImage}
