@@ -608,7 +608,6 @@
 .prefLocationBadge:hover {
    color: #fff;
    background: #41a6df;
-   cursor: pointer;
 }
 
 .bookingHeading {
@@ -729,7 +728,7 @@
   }
 }
 
-.username {
+.username a {
   color: #41a6df !important;
 }
 
