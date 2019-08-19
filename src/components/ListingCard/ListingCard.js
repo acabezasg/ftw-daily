@@ -108,7 +108,13 @@ export const ListingCardComponent = props => {
             
             {category}
           </div>
-          <YotiVerifiedListingPage />
+
+          {author.attributes.profile.publicData ? (
+          author.attributes.profile.publicData.yotiVerified == 'YES' ? (
+            <YotiVerifiedListingPage />
+          ) : null
+        ) : null}
+
           <LazyImage
             rootClassName={css.rootForImage}
             alt={title}
