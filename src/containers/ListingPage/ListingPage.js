@@ -407,8 +407,6 @@ export class ListingPageComponent extends Component {
       </NamedLink>
     );
 
-    const stripe = <img src={stripeimg} />;
-
     const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
     const category = user_name ? (
       <span>
@@ -535,7 +533,6 @@ export class ListingPageComponent extends Component {
                       subTitle={bookingSubTitle}
                       authorDisplayName={authorDisplayName}
                       onManageDisableScrolling={onManageDisableScrolling}
-                      stripe={stripe}
                       timeSlots={timeSlots}
                       fetchTimeSlotsError={fetchTimeSlotsError}
                     />

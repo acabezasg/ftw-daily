@@ -13,6 +13,7 @@ import { Form, PrimaryButton, FieldDateRangeInput } from '../../components';
 import EstimatedBreakdownMaybe from './EstimatedBreakdownMaybe';
 
 import css from './BookingDatesForm.css';
+import stripe from './stripe.png';
 
 export class BookingDatesFormComponent extends Component {
   constructor(props) {
@@ -193,6 +194,10 @@ export class BookingDatesFormComponent extends Component {
                 <PrimaryButton type="submit">
                   <FormattedMessage id="BookingDatesForm.requestToBook" />
                 </PrimaryButton>
+                <hr className={css.stripeHr} />
+                <a href="https://stripe.com" target="_blank">
+                <img className={css.stripeImg} src={stripe} />
+                </a>
               </div>
             </Form>
           );

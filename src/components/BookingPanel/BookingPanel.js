@@ -174,7 +174,6 @@ const BookingPanel = props => {
             <FormattedMessage id="BookingPanel.closedListingButtonText" />
           </div>
         )}
-        <img src={stripeimg} />
       </div>
     </div>
   );
