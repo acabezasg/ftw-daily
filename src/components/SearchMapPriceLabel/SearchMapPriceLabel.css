@@ -107,15 +107,15 @@
 }
 
 .paw {
-   background-image: url('./pawdark.png');
-   width: 30px;
-   height: 30px;
-   display: block;
-   background-size: cover;
-   background-repeat: no-repeat;
+  background-image: url('./pawdark.png');
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.priceLabel:hover .paw {
-	background-image: url('./pawwhite.png');
+.priceLabel:hover .paw,
+.priceLabelActive .paw {
+  background-image: url('./pawwhite.png');
 }
-
