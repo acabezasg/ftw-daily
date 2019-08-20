@@ -7,8 +7,6 @@ import { formatMoney } from '../../util/currency';
 import { ensureListing } from '../../util/data';
 import config from '../../config';
 
-import paw from './paw.png';
-
 import css from './SearchMapPriceLabel.css';
 
 class SearchMapPriceLabel extends Component {
@@ -40,7 +38,7 @@ class SearchMapPriceLabel extends Component {
     let altformattedPrice = formattedPrice;
 
     if (currentListing.attributes.publicData.user_type == 0) {
-      altformattedPrice = <img className={css.paw} src={paw} />;
+      altformattedPrice = <div className={css.paw} />;
     }
 
     return (

@@ -64,7 +64,7 @@ const locationLink = (
             </div>
 
       <div className={css.nameYoti}>
-        <a href="/yoti"><img data-tip data-for={tipId} className={css.yotiImg} src={yoti} /></a>
+        <NamedLink name="YotiPage"><img data-tip data-for={tipId} className={css.yotiImg} src={yoti} /></NamedLink>
       </div>
 
       <ReactTooltip className={css.customTip} effect='solid' id={tipId}>

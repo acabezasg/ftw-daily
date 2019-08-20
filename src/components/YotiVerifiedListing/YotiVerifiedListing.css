@@ -35,3 +35,9 @@
   position: relative !important;
   bottom: 1px !important;
 }
+
+.removelink {
+	text-decoration: none !important;
+	color: #000;
+}
+

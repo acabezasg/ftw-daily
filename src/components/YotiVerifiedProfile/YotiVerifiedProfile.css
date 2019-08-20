@@ -38,3 +38,8 @@
   position: relative !important;
   bottom: 2px !important;
 }
+
+.removelink {
+  text-decoration: none !important;
+  color: #000;
+}

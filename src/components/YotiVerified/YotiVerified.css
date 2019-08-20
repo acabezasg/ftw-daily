@@ -50,3 +50,9 @@
   font-weight: inherit !important;
   margin-left: 0px !important;
 }
+
+.removelink {
+  text-decoration: none !important;
+  color: #000;
+}
+

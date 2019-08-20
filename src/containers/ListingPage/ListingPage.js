@@ -118,7 +118,7 @@ export class ListingPageComponent extends Component {
     var monthIndex = date.getMonth();
     var year = date.getFullYear();
 
-    return day + ' ' + monthNames[monthIndex] + ' ' + year;
+    return monthNames[monthIndex] + ' ' + day + ', ' + year;
   }
 
   formattedDate(dateString) {
