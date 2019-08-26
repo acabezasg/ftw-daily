@@ -157,6 +157,8 @@
 
 /* Inbox */
 .inboxLink {
+  overflow: hidden;
+  white-space: nowrap;
   @apply --TopbarDesktop_linkHover;
   @apply --marketplaceH4FontStyles;
   height: 100%;

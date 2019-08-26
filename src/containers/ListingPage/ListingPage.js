@@ -524,6 +524,14 @@ export class ListingPageComponent extends Component {
                     user_type={user_type}
                     rate={rate}
                   />
+                  {currentListing.attributes.publicData.requiredDates ? (
+                        <div className={css.reqdates}>
+                          <h2 className={css.reqTitle}>Required Dates</h2>
+                          <p>
+                            {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                          </p>
+                        </div>
+                      ) : null}
                   <SectionDescriptionMaybe description={description} user_type={user_type} />
                   <SectionFeaturesMaybe
                     options={{
@@ -587,7 +595,7 @@ export class ListingPageComponent extends Component {
                   ) : (
                     <div className={css.bookingPanel}>
                       {currentListing.attributes.publicData.requiredDates ? (
-                        <div>
+                        <div className={css.required}>
                           <h2>Required Dates</h2>
                           <p>
                             {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
@@ -604,7 +612,10 @@ export class ListingPageComponent extends Component {
                       <p className={css.smallPrint}>
                         <span>Contact Pet Owner directly</span>
                       </p>
-                      <Button onClick={this.onContactUser}>Send Message</Button>
+                      <Button className={css.sendbtn} onClick={this.onContactUser}>Send Message</Button>
+                      <div className={css.openBookingFormMobile}>
+                      <Button className={css.sendbtn2} onClick={this.onContactUser}>Send Message</Button>
+                      </div>
                     </div>
                   )
                 ) : (

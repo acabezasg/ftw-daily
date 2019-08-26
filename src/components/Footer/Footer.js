@@ -85,9 +85,9 @@ const Footer = props => {
             <div className={css.infoLinks}>
               <ul className={css.list}>
                 <li className={css.listItem}>
-                  <NamedLink name="OrderTypesPage" params={{type:'new'}} className={css.link}>
-                    <FormattedMessage id="Footer.toNewListingPage" />
-                  </NamedLink>
+                  <a className={css.link} href="https://help.trustmypetsitter.com/blog/">
+                     Blog
+                  </a>
                 </li>
                 <li className={css.listItem}>
                   <NamedLink name="WhatWeDoPage" className={css.link}>
