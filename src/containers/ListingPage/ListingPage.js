@@ -59,6 +59,7 @@ import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
 import css from './ListingPage.css';
 
 import stripeimg from './stripe.png';
+import calendar from './calendar.svg'
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
 
@@ -596,19 +597,18 @@ export class ListingPageComponent extends Component {
                     <div className={css.bookingPanel}>
                       {currentListing.attributes.publicData.requiredDates ? (
                         <div className={css.required}>
-                          <h2>Required Dates</h2>
-                          <p>
-                            {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                      <div className={css.bookingHeading}>
+                        <h2 className={css.bookingTitle}>
+                          Contact <span className={css.username}>{makeContact}</span>
+                        </h2>
+                      </div>
+                          <p className={css.bookingTime}>
+                            <img src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
                           </p>
                           <hr className={css.divhr} />
                         </div>
                       ) : null}
 
-                      <div className={css.bookingHeading}>
-                        <h2 className={css.bookingTitle}>
-                          Make contact with <span className={css.username}>{makeContact}</span>
-                        </h2>
-                      </div>
                       <p className={css.smallPrint}>
                         <span>Contact Pet Owner directly</span>
                       </p>

@@ -699,6 +699,11 @@
   margin-bottom: 9px;
 }
 
+.bookingTime {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .bookingHelp {
   display: none;
   @apply --marketplaceH5FontStyles;
@@ -832,4 +837,10 @@
   .reqdates {
     padding: 0px !important;
   }
+}
+
+.required img {
+  position: relative;
+  bottom: 1.5px;
+  margin-right: 7px;
 }
