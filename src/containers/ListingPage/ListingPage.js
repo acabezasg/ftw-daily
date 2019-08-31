@@ -621,7 +621,7 @@ export class ListingPageComponent extends Component {
                 ) : (
                   <div className={css.bookingPanel}>
                     <Button onClick={this.onProceedLogin}>
-                      <span>Login to Proceed</span>
+                      <span>Login to proceed</span>
                     </Button>
                   </div>
                 )}
