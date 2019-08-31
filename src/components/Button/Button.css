@@ -7,12 +7,16 @@
   padding: 0;
 }
 
+
+
 .primaryButtonRoot {
   @apply --marketplaceButtonStylesPrimary;
   text-decoration: none !important;
   background-color: rgb(65, 166, 223);
   &:hover{
-    background-color: rgb(75, 186, 243);
+  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+  color: #fff;
+  text-decoration: none !important;
   }
   /* Clear padding that is set for link elements looking like buttons */
   padding: 0;

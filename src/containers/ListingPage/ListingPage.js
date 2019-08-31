@@ -529,7 +529,7 @@ export class ListingPageComponent extends Component {
                         <div className={css.reqdates}>
                           <h2 className={css.reqTitle}>Required Dates</h2>
                           <p>
-                            {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                            <img className={css.mobileDates} src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
                           </p>
                         </div>
                       ) : null}
@@ -603,7 +603,7 @@ export class ListingPageComponent extends Component {
                         </h2>
                       </div>
                           <p className={css.bookingTime}>
-                            <img src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                            <img className={css.pcDates} src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
                           </p>
                           <hr className={css.divhr} />
                         </div>

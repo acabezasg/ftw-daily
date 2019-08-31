@@ -79,7 +79,7 @@
   "BookingDateRangeFilter.labelSelectedPlain": "{dates}",
   "BookingDateRangeFilter.labelSelectedPopup": "{dates}",
   "BookingPanel.closedListingButtonText": "Sorry, this listing has been closed.",
-  "BookingPanel.ctaButtonMessage": "Contact",
+  "BookingPanel.ctaButtonMessage": "Request to Book",
   "BookingPanel.hostedBy": "{name}",
   "BookingPanel.perDay": "day",
   "BookingPanel.perNight": "night",

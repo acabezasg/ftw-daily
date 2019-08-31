@@ -234,8 +234,8 @@
 
 .yotiTitle {
     text-align: center;
-    margin-bottom: 65px !important;
-    margin-top: inherit !important;
+    margin-bottom: 65px;
+    margin-top: inherit;
 }
 
 .yotiLeft, .yotiRight {
@@ -350,3 +350,9 @@
 .morespace {
   margin-bottom: 90px;
 }
+
+@media (max-width: 600px) {
+.yotiTitle {
+  margin-bottom: 50px;
+  margin-top: -20px;
+} }

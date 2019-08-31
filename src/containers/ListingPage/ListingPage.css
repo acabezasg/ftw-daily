@@ -701,7 +701,6 @@
 
 .bookingTime {
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .bookingHelp {
@@ -816,6 +815,12 @@
   }
 }
 
+.sendbtn:hover, .bookingPanel button:hover {
+  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+  color: #fff;
+  text-decoration: none !important;
+}
+
 .reqdates {
   padding: 0 24px;
   margin-bottom: 35px;
@@ -841,6 +846,36 @@
 
 .required img {
   position: relative;
-  bottom: 1.5px;
+  bottom: 2px;
   margin-right: 7px;
+}
+
+.bookingTime:hover .pcDates {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.mobileDates {
+  margin-right: 7px;
+  position: relative;
+  bottom: 2.6px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
