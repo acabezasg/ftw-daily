@@ -89,22 +89,23 @@
 
     #back-to-top {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 9999;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    line-height: 38px;
-    color: #fff;
-    cursor: pointer;
-    border: 0;
-    border-radius: 2px;
-    text-decoration: none;
-    transition: opacity 0.2s ease-out;
-    opacity: 0 ;
+    right: 10px;
+    top: 45%;
+    width: 70px;
     background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
-    font-size: 21px;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+    padding: 2px 10px 10px 10px;
+    }
+
+    .backToTopContent {
+    text-align: center;
+    }
+
+    .backToTopContent img {
+    height: 15px;
+    width: 15px;
     }
 
     #back-to-top:hover {
