@@ -87,8 +87,15 @@
 
     /* FOOTER */
 
+    @media (max-width: 760px) {
+      #back-to-top {
+        display: none;
+      }
+    }
+    
     #back-to-top {
     position: fixed;
+    text-align: center;
     right: 10px;
     top: 45%;
     width: 70px;
@@ -97,10 +104,6 @@
     cursor: pointer;
     opacity: 0;
     padding: 2px 10px 10px 10px;
-    }
-
-    .backToTopContent {
-    text-align: center;
     }
 
     .backToTopContent img {

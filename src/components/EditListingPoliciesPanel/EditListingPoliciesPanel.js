@@ -42,14 +42,21 @@ const EditListingPoliciesPanel = props => {
     <FormattedMessage id={PoliciesPanelTitle} />
   );
 
+  let panelSubTitle = isPublished ? (
+    <span>Please go to your profile and verify your identity to proceed posting your listing.</span>
+  ) : (
+    <span>Please go to your profile and verify your identity to proceed posting your listing.</span>
+  );
+
+
   if (currentUser.attributes.profile.publicData.yotiVerified == 'YES') {
-    panelTitle = 'Your account is already verified';
+    panelSubTitle = 'Your account is already verified';
   }
 
   return (
     <div className={classes}>
-      <h1 className={css.title}>YOTI ID Verification</h1>
-      {panelTitle}
+      <h1 className={css.title}>{panelTitle}</h1>
+      {panelSubTitle}
       <EditListingPoliciesForm
         className={css.form}
         publicData={publicData}

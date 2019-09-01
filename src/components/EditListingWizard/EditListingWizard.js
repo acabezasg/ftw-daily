@@ -275,7 +275,8 @@ class EditListingWizard extends Component {
 
     return (
       <div className={classes}>
-        <div rootClassName={css.tabsContainer}>
+        <div rootClassName={css.tabsContainer}
+             className={css.buttonContainer}>
           <NamedLink
             className={css.backButtonContainer}
             name="OrderTypesPage"

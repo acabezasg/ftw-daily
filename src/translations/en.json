@@ -359,12 +359,12 @@
   "EditListingPoliciesForm.maxLength": "Must be {maxLength} characters or less",
   "EditListingPoliciesForm.rulesRequired": "You need to add an ID.",
 
-  "EditListingPoliciesPanel.createListingTitle.owner": "Please go to your profile and verify your identity to proceed posting your listing.",
-  "EditListingPoliciesPanel.title.owner": "{listingTitle} listing isn't verified. Please go to your profile and verify your identity to proceed.",
-  "EditListingPoliciesPanel.createListingTitle.sitter": "Please go to your profile and verify your identity to proceed posting your listing.",
-  "EditListingPoliciesPanel.title.sitter": "{listingTitle} listing isn't YOTI verified. Please go to your profile and verify your identity to proceed posting your listing.",
-  "EditListingPoliciesPanel.createListingTitle.service": "Please go to your profile and verify your identity to proceed posting your listing.",
-  "EditListingPoliciesPanel.title.service": "Please go to your profile and verify your identity to proceed posting your listing.",
+  "EditListingPoliciesPanel.createListingTitle.owner": "Verify identity with YOTI",
+  "EditListingPoliciesPanel.title.owner": "Edit verification of {listingTitle}",
+  "EditListingPoliciesPanel.createListingTitle.sitter": "Verify identity with YOTI",
+  "EditListingPoliciesPanel.title.sitter": "Edit verification of {listingTitle}",
+  "EditListingPoliciesPanel.createListingTitle.service": "Verify identity with YOTI",
+  "EditListingPoliciesPanel.title.service": "Edit verification of {listingTitle}",
 
   "EditListingWizard.saveEditDescription": "Save Description",
   "EditListingWizard.saveEditFeatures": "Save Pet Types",
@@ -373,7 +373,7 @@
   "EditListingWizard.saveEditLocation": "Save Location",
   "EditListingWizard.saveEditPricing": "Save Price",
   "EditListingWizard.saveEditPhotos": "Save Photos",
-  "EditListingWizard.saveEditPolicies": "Save Verify",
+  "EditListingWizard.saveEditPolicies": "Save Verification",
 
   "EditListingWizard.saveNewDescription": "Next: Pet Types",
   "EditListingWizard.saveNewFeatures": "Next: Home",
