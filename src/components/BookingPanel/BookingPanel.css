@@ -129,6 +129,12 @@
   }
 }
 
+@media (max-width: 1023px) {
+.bookingDatesSubmitButtonWrapper {
+  padding: 0 24px;
+}
+}
+
 .openBookingForm {
   /* Ensure that mobile button is over Footer too */
   z-index: 9;

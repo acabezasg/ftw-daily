@@ -39,9 +39,7 @@ const WhatWeDoPage = () => {
         <div className={css.whatwedoBg}>
 
         <div className={css.whatwedoTitle}>
-          <div className={css.reveal}><div className={css.revealContent}><h2>What.</h2></div></div>
-          <div className={css.reveal}><div className={css.revealContent}><h2>We.</h2></div></div>
-          <div className={css.reveal}><div className={css.revealContent}><h2>Do.</h2></div></div>
+          <h2>What.</h2> <h2>We.</h2> <h2>Do.</h2>
         </div> 
 
         </div>

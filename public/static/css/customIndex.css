@@ -1,3 +1,7 @@
+    .react-switch {
+    display: none;
+    }
+
     body {
     overflow-x: hidden !important;
     background: #F7F7F7;

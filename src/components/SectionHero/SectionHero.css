@@ -127,3 +127,11 @@
   color: #fff;
   text-decoration: none !important;
 }
+
+.seperatorText {
+  margin: 32px 20px 50px;
+  padding: 0px;
+  text-align: center;
+  font-weight: 800;
+  color: #fff;
+}

@@ -195,8 +195,11 @@ export class BookingDatesFormComponent extends Component {
                   <FormattedMessage id="BookingDatesForm.requestToBook" />
                 </PrimaryButton>
                 <hr className={css.stripeHr} />
-                <a href="https://stripe.com" target="_blank">
+                <a className={css.submitHref} href="https://stripe.com" target="_blank">
                 <img className={css.stripeImg} src={stripe} />
+                <p class={css.smallPrint}>
+                <span>Powered by Stripe</span>
+                </p>
                 </a>
               </div>
             </Form>
