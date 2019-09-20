@@ -80,6 +80,7 @@
 }}
 
 .heroMainTitle {
+  margin-top: 0;
   text-align: center;
   @apply --marketplaceHeroTitleFontStyles;
   color: var(--matterColorLight);
