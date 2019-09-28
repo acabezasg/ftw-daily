@@ -3,9 +3,6 @@
   "version": "3.1.0",
   "private": true,
   "license": "Apache-2.0",
-  "engines": {
-    "node": "10.3.0"
-  },
   "dependencies": {
     "@mapbox/polyline": "^1.0.0",
     "@sentry/browser": "4.5.1",
