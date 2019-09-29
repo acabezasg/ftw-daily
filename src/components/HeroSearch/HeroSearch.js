@@ -21,8 +21,12 @@ class HeroSearch extends Component {
   handleSubmit() {
     if (this.state.active && this.state.location && this.state.date) {
       const { date, location, active } = this.state;
+      if (date[0].getDate() == date[1].getDate()) {
+        date[1].setDate(date[1].getDate() + 1);
+      }
       date[0] = `${date[0].getFullYear()}-${date[0].getMonth() + 1}-${date[0].getDate()}`;
       date[1] = `${date[1].getFullYear()}-${date[1].getMonth() + 1}-${date[1].getDate()}`;
+
       const category = {
         owner: 0,
         sitter: 1,
@@ -90,7 +94,10 @@ class HeroSearch extends Component {
           <Flatpickr
             placeholder="Pick a date"
             className={css.flatpickr}
-            options={{ mode: 'range' }}
+            options={{
+              mode: 'range',
+              minDate: new Date(),
+            }}
             onChange={date => {
               this.setState({ date });
             }}
