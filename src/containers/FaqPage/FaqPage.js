@@ -1,6 +1,4 @@
 import React from 'react';
-import config from '../../config';
-import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
 import {
   LayoutSingleColumn,
@@ -8,14 +6,13 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  ExternalLink,
+
 } from '../../components';
 
 import css from './FaqPage.css';
 
 const FaqPage = () => {
-  const { siteTwitterHandle, siteFacebookPage } = config;
-  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
+  
 
   // prettier-ignore
   return (

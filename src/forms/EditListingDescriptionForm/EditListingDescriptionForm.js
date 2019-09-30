@@ -19,7 +19,7 @@ const EditListingDescriptionFormComponent = props => (
     {...props}
     render={fieldRenderProps => {
       const {
-        categories,
+        
         className,
         disabled,
         handleSubmit,
@@ -33,7 +33,7 @@ const EditListingDescriptionFormComponent = props => (
         user_type,
         service,
       } = fieldRenderProps;
-      const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+      const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
       const titleMessage = intl.formatMessage({ id: 'EditListingDescriptionForm.title.'+user_name });
       const titlePlaceholderMessage = intl.formatMessage({
         id: 'EditListingDescriptionForm.titlePlaceholder.'+user_name,
@@ -120,7 +120,7 @@ const EditListingDescriptionFormComponent = props => (
             ):null
           } */}
           {
-            user_type == 2?
+            user_type === 2?
             (
               <CategoryField
                 id="service"

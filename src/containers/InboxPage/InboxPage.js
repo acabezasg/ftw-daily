@@ -207,7 +207,7 @@ BookingInfoMaybe.propTypes = {
   intl: intlShape.isRequired,
   isOrder: bool.isRequired,
   tx: propTypes.transaction.isRequired,
-  unitType: propTypes.bookingUnitType.isRequired,
+  // unitType: propTypes.bookingUnitType.isRequired,
 };
 
 export const InboxItem = props => {
@@ -267,7 +267,7 @@ export const InboxItem = props => {
 };
 
 InboxItem.propTypes = {
-  unitType: propTypes.bookingUnitType.isRequired,
+  // unitType: propTypes.bookingUnitType.isRequired,
   type: oneOf(['order', 'sale']).isRequired,
   tx: propTypes.transaction.isRequired,
   intl: intlShape.isRequired,
@@ -427,7 +427,7 @@ InboxPageComponent.propTypes = {
     tab: string.isRequired,
   }).isRequired,
 
-  unitType: propTypes.bookingUnitType,
+  // unitType: propTypes.bookingUnitType,
   currentUser: propTypes.currentUser,
   fetchInProgress: bool.isRequired,
   fetchOrdersOrSalesError: propTypes.error,

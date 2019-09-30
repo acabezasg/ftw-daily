@@ -110,7 +110,7 @@
 
 .listingsTitle {
   @apply --marketplaceH3FontStyles;
-  color: var(--matterColorAnti);
+  color: #000;
   margin-bottom: 0;
 
   @media (--viewportMedium) {

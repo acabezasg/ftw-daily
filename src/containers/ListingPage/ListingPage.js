@@ -38,6 +38,8 @@ import {
   LayoutWrapperFooter,
   Footer,
   BookingPanel,
+  Button,
+  YotiVerifiedListing,
 } from '../../components';
 import { TopbarContainer, NotFoundPage } from '../../containers';
 
@@ -52,7 +54,12 @@ import SectionHostMaybe from './SectionHostMaybe';
 import SectionRulesMaybe from './SectionRulesMaybe';
 import SectionMapMaybe from './SectionMapMaybe';
 import SectionHomeMaybe from './SectionHomeMaybe';
+import SectionPreferredLocations from './SectionPreferredLocations';
+import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
 import css from './ListingPage.css';
+
+import stripeimg from './stripe.png';
+import calendar from './calendar.svg'
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
 
@@ -88,7 +95,45 @@ export class ListingPageComponent extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onContactUser = this.onContactUser.bind(this);
+    this.onProceedLogin = this.onProceedLogin.bind(this);
     this.onSubmitEnquiry = this.onSubmitEnquiry.bind(this);
+  }
+
+  formatDateHelper(date) {
+    var monthNames = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+
+    return monthNames[monthIndex] + ' ' + day + ', ' + year;
+  }
+
+  formattedDate(dateString) {
+    let dateArray = dateString.split('to');
+    let finalDateString = '';
+    if (dateArray.length > 1) {
+      finalDateString = `${this.formatDateHelper(
+        new Date(dateArray[0])
+      )} to ${this.formatDateHelper(new Date(dateArray[1]))}`;
+    } else {
+      finalDateString = `${this.formatDateHelper(new Date(dateArray[0]))}`;
+    }
+
+    return finalDateString;
   }
 
   handleSubmit(values) {
@@ -131,6 +176,18 @@ export class ListingPageComponent extends Component {
         {}
       )
     );
+  }
+
+  onProceedLogin() {
+    const { currentUser, history, callSetInitialValues, params, location } = this.props;
+
+    if (!currentUser) {
+      const state = { from: `${location.pathname}${location.search}${location.hash}` };
+
+      history.push(createResourceLocatorString('LoginPage', routeConfiguration(), {}, {}), state);
+    } else {
+      this.setState({ enquiryModalOpen: true });
+    }
   }
 
   onContactUser() {
@@ -191,6 +248,8 @@ export class ListingPageComponent extends Component {
       fetchTimeSlotsError,
       categoriesConfig,
       amenitiesConfig,
+      servicesConfig,
+      sizeConfig,
       equipmentsConfig,
       locationsConfig,
       infoConfig,
@@ -240,6 +299,8 @@ export class ListingPageComponent extends Component {
       publicData,
     } = currentListing.attributes;
 
+    const user_type = publicData ? publicData.user_type : null;
+    const rate = publicData && publicData.rate ? publicData.rate : config.bookingUnitType;
     const richTitle = (
       <span>
         {richText(title, {
@@ -323,6 +384,12 @@ export class ListingPageComponent extends Component {
     const currentAuthor = authorAvailable ? currentListing.author : null;
     const ensuredAuthor = ensureUser(currentAuthor);
 
+    const preferredLocations = ensuredAuthor.attributes.profile.publicData
+      ? ensuredAuthor.attributes.profile.publicData.preferredlocations
+        ? ensuredAuthor.attributes.profile.publicData.preferredlocations
+        : null
+      : null;
+
     // When user is banned or deleted the listing is also deleted.
     // Because listing can be never showed with banned or deleted user we don't have to provide
     // banned or deleted display names for the function
@@ -360,7 +427,22 @@ export class ListingPageComponent extends Component {
     const siteTitle = config.siteTitle;
     const schemaTitle = intl.formatMessage(
       { id: 'ListingPage.schemaTitle' },
-      { title, price: formattedPrice, siteTitle }
+      {
+        title,
+        price: currentListing.attributes.publicData.user_type ? formattedPrice : 'Pet Owner',
+        siteTitle,
+      }
+    );
+
+    const makeContact = (
+      <NamedLink
+        className={css.authorNameLink}
+        name="ListingPage"
+        params={params}
+        to={{ hash: '#host' }}
+      >
+        {authorDisplayName}
+      </NamedLink>
     );
 
     const hostLink = (
@@ -374,14 +456,24 @@ export class ListingPageComponent extends Component {
       </NamedLink>
     );
 
-    const category =
-      publicData && publicData.category ? (
-        <span>
-          {categoryLabel(categoriesConfig, publicData.category)}
-          <span className={css.separator}>•</span>
-        </span>
-      ) : null;
-    const size = config.custom.size;
+    const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
+    const category = user_name ? (
+      <span>
+        {user_name}
+        <span className={css.separator}>•</span>
+      </span>
+    ) : null;
+
+    const idVerify = (
+      <span>
+        {ensuredAuthor.attributes.profile.publicData ? (
+          ensuredAuthor.attributes.profile.publicData.yotiVerified == 'YES' ? (
+            <YotiVerifiedListing />
+          ) : null
+        ) : null}
+      </span>
+    );
+
     return (
       <Page
         title={schemaTitle}
@@ -427,12 +519,41 @@ export class ListingPageComponent extends Component {
                     richTitle={richTitle}
                     category={category}
                     hostLink={hostLink}
+                    idVerify={idVerify}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
+                    user_type={user_type}
+                    rate={rate}
                   />
-                  <SectionDescriptionMaybe description={description} />
-                  <SectionFeaturesMaybe options={amenitiesConfig} publicData={publicData} size={size}/>
-                  <SectionHomeMaybe options={{options1:equipmentsConfig,options2:locationsConfig,options3:infoConfig}} publicData={publicData} />
+                  {currentListing.attributes.publicData.requiredDates ? (
+                        <div className={css.reqdates}>
+                          <h2 className={css.reqTitle}>Required Dates</h2>
+                          <p>
+                            <img className={css.mobileDates} src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                          </p>
+                        </div>
+                      ) : null}
+                  <SectionDescriptionMaybe description={description} user_type={user_type} />
+                  <SectionFeaturesMaybe
+                    options={{
+                      options1: servicesConfig,
+                      options2: amenitiesConfig,
+                      options3: sizeConfig,
+                    }}
+                    publicData={publicData}
+                  />
+                  <SectionHomeMaybe
+                    options={{
+                      options1: equipmentsConfig,
+                      options2: locationsConfig,
+                      options3: infoConfig,
+                    }}
+                    publicData={publicData}
+                  />
+                  <SectionPreferredLocations
+                    preferredLocations={preferredLocations}
+                    publicData={publicData}
+                  />
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}
@@ -454,19 +575,56 @@ export class ListingPageComponent extends Component {
                     onManageDisableScrolling={onManageDisableScrolling}
                   />
                 </div>
-                <BookingPanel
-                  className={css.bookingPanel}
-                  listing={currentListing}
-                  isOwnListing={isOwnListing}
-                  unitType={unitType}
-                  onSubmit={handleBookingSubmit}
-                  title={bookingTitle}
-                  subTitle={bookingSubTitle}
-                  authorDisplayName={authorDisplayName}
-                  onManageDisableScrolling={onManageDisableScrolling}
-                  timeSlots={timeSlots}
-                  fetchTimeSlotsError={fetchTimeSlotsError}
-                />
+
+                {currentUser ? (
+                  user_type !== 0 ? (
+                    <BookingPanel
+                      className={css.bookingPanel}
+                      listing={currentListing}
+                      isOwnListing={isOwnListing}
+                      unitType={unitType}
+                      onSubmit={handleBookingSubmit}
+                      title={bookingTitle}
+                      user_type={user_type}
+                      rate={rate}
+                      subTitle={bookingSubTitle}
+                      authorDisplayName={authorDisplayName}
+                      onManageDisableScrolling={onManageDisableScrolling}
+                      timeSlots={timeSlots}
+                      fetchTimeSlotsError={fetchTimeSlotsError}
+                    />
+                  ) : (
+                    <div className={css.bookingPanel}>
+                      {currentListing.attributes.publicData.requiredDates ? (
+                        <div className={css.required}>
+                      <div className={css.bookingHeading}>
+                        <h2 className={css.bookingTitle}>
+                          Contact <span className={css.username}>{makeContact}</span>
+                        </h2>
+                      </div>
+                          <p className={css.bookingTime}>
+                            <img className={css.pcDates} src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                          </p>
+                          <hr className={css.divhr} />
+                        </div>
+                      ) : null}
+
+                      <p className={css.smallPrint}>
+                        <span>Contact Pet Owner directly</span>
+                      </p>
+                      <Button className={css.sendbtn} onClick={this.onContactUser}>Send Message</Button>
+                      <div className={css.openBookingFormMobile}>
+                      <Button className={css.sendbtn2} onClick={this.onContactUser}>Send Message</Button>
+                      </div>
+                    </div>
+                  )
+                ) : (
+                  <div className={css.bookingPanel}>
+                    <Button onClick={this.onProceedLogin}>
+                      <span>Login to proceed</span>
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           </LayoutWrapperMain>
@@ -490,7 +648,9 @@ ListingPageComponent.defaultProps = {
   fetchTimeSlotsError: null,
   sendEnquiryError: null,
   categoriesConfig: config.custom.categories,
+  sizeConfig: config.custom.amenities[0].weight,
   amenitiesConfig: config.custom.amenities,
+  servicesConfig: config.custom.service,
   equipmentsConfig: config.custom.equipments,
   locationsConfig: config.custom.locations,
   infoConfig: config.custom.info,
@@ -505,7 +665,7 @@ ListingPageComponent.propTypes = {
     search: string,
   }).isRequired,
 
-  unitType: propTypes.bookingUnitType,
+  // unitType: propTypes.bookingUnitType,
   // from injectIntl
   intl: intlShape.isRequired,
 

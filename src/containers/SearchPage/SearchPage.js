@@ -14,7 +14,7 @@ import { parse, stringify } from '../../util/urlHelpers';
 import { propTypes } from '../../util/types';
 import { getListingsById } from '../../ducks/marketplaceData.duck';
 import { manageDisableScrolling, isScrollingDisabled } from '../../ducks/UI.duck';
-import { SearchMap, ModalInMobile, Page } from '../../components';
+import { SearchMap, ModalInMobile, Page, SwitchButton } from '../../components';
 import { TopbarContainer } from '../../containers';
 
 import { searchListings, searchMapListings, setActiveListing } from './SearchPage.duck';
@@ -61,7 +61,7 @@ export class SearchPageComponent extends Component {
 
     return {
       categoryFilter: {
-        paramName: 'pub_category',
+        paramName: 'pub_user_type',
         options: categories,
       },
       amenitiesFilter: {
@@ -132,6 +132,8 @@ export class SearchPageComponent extends Component {
     this.setState({ isMobileModalOpen: false });
   }
 
+  state = { showing: true };
+
   render() {
     const {
       intl,
@@ -152,6 +154,8 @@ export class SearchPageComponent extends Component {
       latlng: ['origin'],
       latlngBounds: ['bounds'],
     });
+
+    const { showing } = this.state;
 
     const filters = this.filters();
 
@@ -188,6 +192,8 @@ export class SearchPageComponent extends Component {
     // N.B. openMobileMap button is sticky.
     // For some reason, stickyness doesn't work on Safari, if the element is <button>
     /* eslint-disable jsx-a11y/no-static-element-interactions */
+
+
     return (
       <Page
         scrollingDisabled={scrollingDisabled}
@@ -201,6 +207,11 @@ export class SearchPageComponent extends Component {
           currentSearchParams={urlQueryParams}
         />
         <div className={css.container}>
+
+          <span onClick={() => this.setState({ showing: !showing })}>
+            <SwitchButton />
+          </span>
+
           <MainPanel
             urlQueryParams={validQueryParams}
             listings={listings}
@@ -222,6 +233,8 @@ export class SearchPageComponent extends Component {
               dateRangeFilter: filters.dateRangeFilter,
             }}
           />
+
+          { !showing ? 
           <ModalInMobile
             className={css.mapPanel}
             id="SearchPage.map"
@@ -249,6 +262,8 @@ export class SearchPageComponent extends Component {
               ) : null}
             </div>
           </ModalInMobile>
+          : null
+                }
         </div>
       </Page>
     );
@@ -366,8 +381,15 @@ SearchPage.loadData = (params, search) => {
     page,
     perPage: RESULT_PAGE_SIZE,
     include: ['author', 'images'],
-    'fields.listing': ['title', 'geolocation', 'price'],
-    'fields.user': ['profile.displayName', 'profile.abbreviatedName'],
+    'fields.listing': [
+      'title',
+      'title',
+      'geolocation',
+      'price',
+      'publicData.rate',
+      'publicData.user_type',
+    ],
+    'fields.user': ['profile.displayName', 'profile.abbreviatedName', 'profile.publicData'],
     'fields.image': ['variants.landscape-crop', 'variants.landscape-crop2x'],
     'limit.images': 1,
   });

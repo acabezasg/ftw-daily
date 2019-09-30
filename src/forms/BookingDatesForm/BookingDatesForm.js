@@ -13,6 +13,7 @@ import { Form, PrimaryButton, FieldDateRangeInput } from '../../components';
 import EstimatedBreakdownMaybe from './EstimatedBreakdownMaybe';
 
 import css from './BookingDatesForm.css';
+import stripe from './stripe.png';
 
 export class BookingDatesFormComponent extends Component {
   constructor(props) {
@@ -58,6 +59,8 @@ export class BookingDatesFormComponent extends Component {
         </div>
       );
     }
+   
+  
     if (unitPrice.currency !== config.currency) {
       return (
         <div className={classes}>
@@ -87,6 +90,7 @@ export class BookingDatesFormComponent extends Component {
             values,
             timeSlots,
             fetchTimeSlotsError,
+            perUnit,
           } = fieldRenderProps;
           const { startDate, endDate } = values && values.bookingDates ? values.bookingDates : {};
 
@@ -123,6 +127,7 @@ export class BookingDatesFormComponent extends Component {
                   quantity: 1,
                 }
               : null;
+          
           const bookingInfo = bookingData ? (
             <div className={css.priceBreakdownContainer}>
               <h3 className={css.priceBreakdownTitle}>
@@ -189,6 +194,13 @@ export class BookingDatesFormComponent extends Component {
                 <PrimaryButton type="submit">
                   <FormattedMessage id="BookingDatesForm.requestToBook" />
                 </PrimaryButton>
+                <hr className={css.stripeHr} />
+                <a className={css.submitHref} href="https://stripe.com" target="_blank">
+                <img className={css.stripeImg} src={stripe} />
+                <p class={css.smallPrint}>
+                <span>Powered by Stripe</span>
+                </p>
+                </a>
               </div>
             </Form>
           );
@@ -214,7 +226,7 @@ BookingDatesFormComponent.propTypes = {
   className: string,
   submitButtonWrapperClassName: string,
 
-  unitType: propTypes.bookingUnitType.isRequired,
+  // unitType: propTypes.bookingUnitType.isRequired,
   price: propTypes.money,
   isOwnListing: bool,
   timeSlots: arrayOf(propTypes.timeSlot),

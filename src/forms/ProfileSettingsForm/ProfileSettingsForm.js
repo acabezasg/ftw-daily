@@ -9,7 +9,16 @@ import { ensureCurrentUser } from '../../util/data';
 import { propTypes } from '../../util/types';
 import * as validators from '../../util/validators';
 import { isUploadImageOverLimitError } from '../../util/errors';
-import { Form, Avatar, Button, ImageFromFile, IconSpinner, FieldTextInput } from '../../components';
+import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
+import {
+  Form,
+  Avatar,
+  Button,
+  ImageFromFile,
+  FieldCheckboxGroup,
+  IconSpinner,
+  FieldTextInput,
+} from '../../components';
 
 import css from './ProfileSettingsForm.css';
 
@@ -21,7 +30,7 @@ class ProfileSettingsFormComponent extends Component {
     super(props);
 
     this.uploadDelayTimeoutId = null;
-    this.state = { uploadDelay: false };
+    this.state = { uploadDelay: false, submitDisabledCheck: true };
     this.submittedValues = {};
   }
 
@@ -38,6 +47,29 @@ class ProfileSettingsFormComponent extends Component {
 
   componentWillUnmount() {
     window.clearTimeout(this.blurTimeoutId);
+  }
+
+  componentDidMount() {
+    if (this.props.currentUser.attributes.profile.publicData.yotiVerified != 'YES') {
+      this.yotiInstance = window.Yoti.Share.init({
+        elements: [
+          {
+            domId: 'yoti-button',
+            scenarioId: '8284ca81-3469-4272-91b6-2635014181db',
+            clientSdkId: 'd3dd97cd-10eb-4ea5-9ab4-97bd6acfd172',
+            button: {
+              label: 'Yoti Verification',
+            },
+          },
+        ],
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.yotiInstance) {
+      this.yotiInstance.destroy();
+    }
   }
 
   render() {
@@ -175,6 +207,10 @@ class ProfileSettingsFormComponent extends Component {
           const submitDisabled =
             invalid || pristine || pristineSinceLastSubmit || uploadInProgress || submitInProgress;
 
+          const handleCheckboxChange = () => {
+            this.setState({ submitDisabledCheck: false });
+          };
+
           return (
             <Form
               className={classes}
@@ -183,10 +219,22 @@ class ProfileSettingsFormComponent extends Component {
                 handleSubmit(e);
               }}
             >
+              {currentUser.attributes.profile.publicData.yotiVerified != 'YES' ? (
+                <div>
+                  <div>
+                    <h3 className={css.yotiTitle}>Verify your identity</h3>
+                  </div>
+                    <div id="yoti-button" />
+                </div>
+              ) : (
+                <YotiVerified />
+              )}
+
               <div className={css.sectionContainer}>
                 <h3 className={css.sectionTitle}>
                   <FormattedMessage id="ProfileSettingsForm.yourProfilePicture" />
                 </h3>
+
                 <Field
                   accept={ACCEPT_IMAGES}
                   id="profileImage"
@@ -253,6 +301,7 @@ class ProfileSettingsFormComponent extends Component {
                     );
                   }}
                 </Field>
+
                 <div className={css.tip}>
                   <FormattedMessage id="ProfileSettingsForm.tip" />
                 </div>
@@ -296,16 +345,38 @@ class ProfileSettingsFormComponent extends Component {
                   label={bioLabel}
                   placeholder={bioPlaceholder}
                 />
-                <p className={css.bioInfo}>
-                  <FormattedMessage id="ProfileSettingsForm.bioInfo" />
-                </p>
               </div>
+
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <span>Preferred Locations (For Pet Sitters Only)</span>
+                </h3>
+                <FieldCheckboxGroup
+                  id="preferredlocations"
+                  name="preferredlocations"
+                  label="Preferred Locations"
+                  options={[
+                    { key: 'UK', label: 'UK' },
+                    { key: 'USA', label: 'USA' },
+                    { key: 'Australia', label: 'Australia' },
+                    { key: 'Canada', label: 'Canada' },
+                    { key: 'France', label: 'France' },
+                    { key: 'Spain', label: 'Spain' },
+                    { key: 'Italy', label: 'Italy' },
+                    { key: 'Germany', label: 'Germany' },
+                    { key: 'India', label: 'India' },
+                    { key: 'China', label: 'China' },
+                  ]}
+                  handleChange={handleCheckboxChange}
+                />
+              </div>
+
               {submitError}
               <Button
                 className={css.submitButton}
                 type="submit"
                 inProgress={submitInProgress}
-                disabled={submitDisabled}
+                disabled={submitDisabled && this.state.submitDisabledCheck}
                 ready={pristineSinceLastSubmit}
               >
                 <FormattedMessage id="ProfileSettingsForm.saveChanges" />

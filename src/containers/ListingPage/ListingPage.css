@@ -63,7 +63,7 @@
   width: calc(100% - 26px);
   color: var(--matterColorNegative);
   background-color: var(--matterColor);
-  z-index: 1; /* bring on top of mobile image */
+  z-index: 2; /* bring on top of mobile image */
 
   /* Action bar prevents the image click events going to the parent and
    should not show a pointer */
@@ -355,6 +355,10 @@
   }
 }
 
+.author span {
+  text-transform: capitalize;
+}
+
 .author {
   width: 100%;
   @apply --marketplaceH4FontStyles;
@@ -404,6 +408,7 @@
   /* Font */
   @apply --marketplaceH3FontStyles;
   color: #000;
+  font-size: 24px;
 
   margin-top: 0;
   margin-bottom: 13px;
@@ -427,6 +432,7 @@
   /* Font */
   @apply --marketplaceH3FontStyles;
   color: #000;
+  font-size: 24px;
 
   margin-top: 0;
   margin-bottom: 16px;
@@ -461,6 +467,7 @@
 
 .locationTitle {
   /* Font */
+  font-size: 24px !important;
   @apply --marketplaceH3FontStyles;
   color: #000;
 
@@ -487,6 +494,7 @@
 .reviewsHeading {
   @apply --marketplaceH3FontStyles;
   color: #000;
+  font-size: 24px;
 
   margin: 52px 0 20px 0;
 
@@ -514,8 +522,9 @@
 .yourHostHeading {
   @apply --marketplaceH3FontStyles;
   color: #000;
+  font-size: 24px;
 
-  margin: 54px 0 23px 0;
+  margin: 54px 0 24px 0;
 
   @media (--viewportMedium) {
     margin: 53px 0 27px 0;
@@ -585,4 +594,288 @@
   /* use break-word if available */
   word-break: break-word;
   hyphens: auto;
+}
+
+.prefLocationBadge {
+  font-size: 20px;
+  display: inline-block;
+  padding: 4px 15px 5px;
+  border-radius: 50px;
+  margin: 10px;
+  background: #e3e3e3;
+}
+
+.prefLocationBadge:hover {
+  color: #fff;
+  background: #41a6df;
+}
+
+.bookingHeading {
+  display: none;
+
+  @media (--viewportLarge) {
+    display: block;
+    margin-top: -2px;
+    margin-bottom: 15px;
+  }
+}
+
+.bookingTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  /* Font */
+  color: var(--matterColor);
+
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.modalContainer {
+  @apply --marketplaceModalInMobileBaseStyles;
+
+  height: 100vh;
+
+  @media (--viewportMedium) {
+    flex-basis: 576px;
+    height: 100%;
+    padding: var(--modalPaddingMedium);
+    background-color: var(--matterColorLight);
+    margin-top: 12.5vh;
+    margin-bottom: 12.5vh;
+  }
+
+  @media (--viewportLarge) {
+    padding: 0;
+    background-color: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.modalHeading {
+  margin-top: 89px;
+  margin-bottom: 36px;
+  padding: 0 24px;
+
+  @media (--viewportMedium) {
+    padding: 0;
+  }
+
+  @media (--viewportLarge) {
+    display: none;
+  }
+}
+
+.title {
+  /* Font */
+  @apply --marketplaceH1FontStyles;
+  color: var(--matterColor);
+
+  /* Layout */
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.bookingHeading {
+  display: none;
+
+  @media (--viewportLarge) {
+    display: block;
+    margin-top: -2px;
+    margin-bottom: 15px;
+  }
+}
+
+.bookingTitle {
+  /* Font */
+  color: var(--matterColor);
+
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.bookingTime {
+  white-space: nowrap;
+}
+
+.bookingHelp {
+  display: none;
+  @apply --marketplaceH5FontStyles;
+
+  @media (--viewportMedium) {
+    color: var(--matterColor);
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.bookingForm {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 84px 0;
+
+  @media (--viewportMedium) {
+    margin: 0;
+    min-height: 400px;
+  }
+
+  @media (--viewportLarge) {
+    min-width: 312px;
+    min-height: auto;
+  }
+}
+
+.username a {
+  color: #41a6df !important;
+}
+
+.smallPrint {
+  @apply --marketplaceTinyFontStyles;
+  color: var(--matterColorAnti);
+  text-align: center;
+  margin: auto 24px 20px 24px;
+  flex-shrink: 0;
+
+  @media (--viewportMedium) {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  @media (--viewportLarge) {
+    margin-top: 18px;
+    margin-bottom: 25px;
+  }
+}
+
+.divhr {
+  margin: 27px 0px 23px;
+  border-color: #e7e7e7;
+  opacity: 0.5;
+}
+
+.openBookingForm {
+  /* Ensure that mobile button is over Footer too */
+  z-index: 9;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 18px 24px 18px 16px;
+  background-color: var(--matterColorLight);
+  box-shadow: var(--boxShadowTop);
+  display: flex;
+
+  /* Contain repainting to this component only */
+  /* 3D painting container helps scrolling */
+  transform: translate3d(0, 0, 0);
+
+  @media (--viewportMedium) {
+    padding: 18px 60px 18px 60px;
+  }
+
+  @media (--viewportLarge) {
+    display: none;
+  }
+}
+
+.openBookingFormMobile {
+  /* Ensure that mobile button is over Footer too */
+  z-index: 9;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 18px 24px 18px 16px;
+  background-color: var(--matterColorLight);
+  box-shadow: var(--boxShadowTop);
+  text-align: center;
+
+  /* Contain repainting to this component only */
+  /* 3D painting container helps scrolling */
+  transform: translate3d(0, 0, 0);
+
+  @media (--viewportMedium) {
+  padding: 18px 60px 18px 60px;
+  }
+
+  @media (--viewportLarge) {
+  display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sendbtn, .smallPrint, .divhr, .required {
+  display: none;
+  }
+}
+
+.sendbtn:hover, .bookingPanel button:hover {
+  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.reqdates {
+  padding: 0 24px;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 1024px) {
+.reqdates {
+  display: none;
+}}
+
+.reqTitle {
+  color: #000;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+@media (min-width: 760px) {
+  .reqdates {
+    padding: 0px !important;
+  }
+}
+
+.required img {
+  position: relative;
+  bottom: 2px;
+  margin-right: 7px;
+}
+
+.bookingTime:hover .pcDates {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.mobileDates {
+  margin-right: 7px;
+  position: relative;
+  bottom: 2.6px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

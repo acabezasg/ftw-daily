@@ -38,6 +38,7 @@ const fs = require('fs');
 const log = require('./log');
 const { sitemapStructure } = require('./sitemap');
 const csp = require('./csp');
+const url = require('url');
 
 const buildPath = path.resolve(__dirname, '..', 'build');
 const env = process.env.REACT_APP_ENV;
@@ -52,6 +53,11 @@ const CSP = process.env.REACT_APP_CSP;
 const cspReportUrl = '/csp-report';
 const cspEnabled = CSP === 'block' || CSP === 'report';
 const app = express();
+const yoti = require('yoti');
+const yotiClient = new yoti.Client(
+  'd3dd97cd-10eb-4ea5-9ab4-97bd6acfd172',
+  fs.readFileSync(__dirname + '/yoti.pem')
+);
 
 const errorPage = fs.readFileSync(path.join(buildPath, '500.html'), 'utf-8');
 
@@ -185,6 +191,16 @@ app.get('*', (req, res) => {
     ],
     ...baseUrl,
   });
+
+  if (req.url.startsWith('/yoti-verified')) {
+    yotiClient.getActivityDetails(url.parse(req.url, true).query.token).then(() => {
+      sdk.currentUser.updateProfile({
+        publicData: {
+          yotiVerified: 'YES',
+        },
+      });
+    });
+  }
 
   // Until we have a better plan for caching dynamic content and we
   // make sure that no sensitive data can appear in the prefetched

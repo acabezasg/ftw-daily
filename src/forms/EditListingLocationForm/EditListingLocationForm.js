@@ -10,16 +10,18 @@ import {
   autocompletePlaceSelected,
   composeValidators,
 } from '../../util/validators';
-import {
-  ensureListing,
-  ensureOwnListing,
-  ensureUser,
-  userDisplayNameAsString,
-} from '../../util/data';
+import { ensureOwnListing } from '../../util/data';
 import config from '../../config';
-import { Form, LocationAutocompleteInputField, Button, FieldTextInput,GoogleMap ,FieldCurrencyInput} from '../../components';
+import {
+  Form,
+  LocationAutocompleteInputField,
+  FieldCheckboxGroup,
+  Button,
+  FieldTextInput,
+  FieldCurrencyInput,
+} from '../../components';
 
-import SectionMapMaybe  from '../../containers/ListingPage/SectionMapMaybe';
+import SectionMapMaybe from '../../containers/ListingPage/SectionMapMaybe';
 import css from './EditListingLocationForm.css';
 
 export const EditListingLocationFormComponent = props => (
@@ -41,8 +43,10 @@ export const EditListingLocationFormComponent = props => (
         listing,
         user_type,
       } = fieldRenderProps;
-
-      const titleRequiredMessage = intl.formatMessage({ id: 'EditListingLocationForm.address' });
+      const user_name = user_type === 2 ? 'service' : user_type === 1 ? 'sitter' : 'owner';
+      const titleRequiredMessage = intl.formatMessage({
+        id: 'EditListingLocationForm.address' + '.' + user_name,
+      });
       const addressPlaceholderMessage = intl.formatMessage({
         id: 'EditListingLocationForm.addressPlaceholder',
       });
@@ -75,11 +79,10 @@ export const EditListingLocationFormComponent = props => (
       const submitReady = updated && pristine;
       const submitInProgress = updateInProgress;
       const submitDisabled = invalid || disabled || submitInProgress;
-      
-      
+
       const currentListing = ensureOwnListing(listing);
       const { geolocation, publicData } = currentListing.attributes;
-      
+
       return (
         <Form className={classes} onSubmit={handleSubmit}>
           {errorMessage}
@@ -103,24 +106,23 @@ export const EditListingLocationFormComponent = props => (
             )}
           />
 
-          <FieldTextInput
+          {/* <FieldTextInput
             className={css.building}
             type="text"
             name="building"
             id="building"
             label={buildingMessage}
             placeholder={buildingPlaceholderMessage}
-          />
-          {
-            !user_type?(
-              <FieldCurrencyInput
-                id="price"
-                name="price"
-                currencyConfig={config.currencyConfig}
-                className={css.hiden}
-              />
-            ):null
-          }
+          /> */}
+
+          {!user_type ? (
+            <FieldCurrencyInput
+              id="price"
+              name="price"
+              currencyConfig={config.currencyConfig}
+              className={css.hiden}
+            />
+          ) : null}
           <SectionMapMaybe
             geolocation={geolocation}
             publicData={publicData}

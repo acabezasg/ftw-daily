@@ -3,7 +3,6 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import createReducer from './reducers';
 import * as analytics from './analytics/analytics';
-import config from './config';
 
 /**
  * Create a new store with the given initial state. Adds Redux

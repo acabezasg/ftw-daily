@@ -22,6 +22,7 @@ import { TopbarContainer } from '../../containers';
 import {
   closeListing,
   openListing,
+  deleteListing,
   getOwnListingsById,
   queryOwnListings,
 } from './ManageListingsPage.duck';
@@ -51,6 +52,7 @@ export class ManageListingsPageComponent extends Component {
       listings,
       onCloseListing,
       onOpenListing,
+      onDeleteListing,
       openingListing,
       openingListingError,
       pagination,
@@ -143,6 +145,7 @@ export class ManageListingsPageComponent extends Component {
                     onToggleMenu={this.onToggleMenu}
                     onCloseListing={onCloseListing}
                     onOpenListing={onOpenListing}
+                    onDeleteListing={onDeleteListing}
                     hasOpeningError={openingErrorListingId.uuid === l.id.uuid}
                     hasClosingError={closingErrorListingId.uuid === l.id.uuid}
                     renderSizes={renderSizes}
@@ -229,6 +232,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   onCloseListing: listingId => dispatch(closeListing(listingId)),
   onOpenListing: listingId => dispatch(openListing(listingId)),
+  onDeleteListing: listingId => dispatch(deleteListing(listingId)),
 });
 
 const ManageListingsPage = compose(

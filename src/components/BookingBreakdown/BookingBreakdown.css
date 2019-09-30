@@ -90,6 +90,7 @@
 
 .totalPrice {
   @apply --marketplaceBodyFontStyles;
+  font-size:17px;
   font-weight: var(--fontWeightSemiBold);
   margin: 0 0 0 10px;
   padding-top: 4px;

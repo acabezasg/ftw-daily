@@ -26,12 +26,12 @@
       {{#each tx-line-items}}
         {{#contains include-for "provider"}}
           <tr>
-            {{#eq "line-item/day" code}}
+            {{#eq "d" code}}
             <td>{{> format-money money=unit-price}} &times; {{number quantity}} {{inflect quantity "day" "days"}}</td>
             <td style="text-align: right; padding-left: 20px">{{> format-money money=line-total}}</td>
             {{/eq}}
 
-            {{#eq "line-item/night" code}}
+            {{#eq "n" code}}
             <td>{{> format-money money=unit-price}} &times; {{number quantity}} {{inflect quantity "night" "nights"}}</td>
             <td style="text-align: right; padding-left: 20px">{{> format-money money=line-total}}</td>
             {{/eq}}

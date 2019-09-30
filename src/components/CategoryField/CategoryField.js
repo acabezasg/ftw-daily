@@ -1,9 +1,5 @@
 import React from 'react';
-import { required } from '../../util/validators';
 import { FieldSelect } from '../../components';
-
-
-
 
 const CategoryField = props => {
   const { name, id, categories, className, categoryLabel, categoryPlaceholder, categoryRequired} = props;

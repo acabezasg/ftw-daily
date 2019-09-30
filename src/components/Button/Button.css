@@ -7,13 +7,30 @@
   padding: 0;
 }
 
+
+
 .primaryButtonRoot {
   @apply --marketplaceButtonStylesPrimary;
-
+  text-decoration: none !important;
+  background-color: rgb(65, 166, 223);
+  &:hover{
+  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+  color: #fff;
+  text-decoration: none !important;
+  }
   /* Clear padding that is set for link elements looking like buttons */
   padding: 0;
 }
-
+.primaryButtonRootEx{
+  @apply --marketplaceButtonStylesPrimary;
+  text-decoration: none !important;
+  background-color: rgb(65, 166, 223);
+  /* Clear padding that is set for link elements looking like buttons */
+  &:hover{
+    background-color: rgb(75, 186, 243);
+  }
+  padding: 0;
+}
 .secondaryButtonRoot {
   @apply --marketplaceButtonStylesSecondary;
 
@@ -29,9 +46,45 @@
 
 .primaryButton {
   /* Class handle for primary button state styles */
+  text-decoration: none !important;
+}
+.orderTypeButton_first:active, .orderTypeButton_first:active, .orderTypeButton_first:focus {
+  text-decoration: none !important;
 }
 .secondaryButton {
-  /* Class handle for secondary button state styles */
+  text-decoration: none !important;
+}
+.orderTypeButton{
+  
+  text-decoration: none !important;
+  &:hover{
+    background-color: #41a6df; 
+    color: #fff; 
+    border: none !important;
+    text-decoration: none !important;
+  }
+}
+.orderTypeButton_first{
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  text-decoration: none !important;
+  &:hover{
+    background-color: #41a6df; 
+    color: #fff; 
+    border: none !important;
+    text-decoration: none !important;
+  }
+}
+.orderTypeButton_last{
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  text-decoration: none !important;
+  &:hover{
+    background-color: #41a6df; 
+    color: #fff; 
+    border: none !important;
+    text-decoration: none !important;
+  }
 }
 
 .inProgress {

@@ -12,12 +12,15 @@
     <!--!googleAnalyticsScript-->
 
     <script src="%PUBLIC_URL%/static/progressbar/pace.js"></script>
+    <script src="https://www.yoti.com/share/client/"></script>
     <link href="%PUBLIC_URL%/static/progressbar/css/progressbar.css" rel="stylesheet" />
 
     <link rel="manifest" href="%PUBLIC_URL%/static/manifest.json">
 
     <!-- Start Favicons from https://realfavicongenerator.net/ -->
+    <link rel="stylesheet" href="https://res.cloudinary.com/dtyofozjx/raw/upload/v1568988443/style_fw2gps.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/static/css/customIndex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.2/flatpickr.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
@@ -26,14 +29,45 @@
     <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
     <meta name="theme-color" content="#c0392b">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.2/flatpickr.min.js"></script>
+    <script>
+      // // Initialize and add the map
+      // function initMap() {
+      //   // The location of Uluru
+      //   var uluru = {lat: -25.344, lng: 131.036};
+      //   // The map, centered at Uluru
+      //   var map = new google.maps.Map(
+      //       document.getElementById('map'), {zoom: 4, center: uluru});
+      //   // The marker, positioned at Uluru
+      //   var marker = new google.maps.Marker({position: uluru, map: map});
+      // }
+      function myMap() {
+        var mapProp= {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      }
     </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    api_key = AIzaSyDDtsDdiFwnaIJY80F-5calOZyFFPXHfSQ
+    -->
+    <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDtsDdiFwnaIJY80F-5calOZyFFPXHfSQ&callback=myMap">
+    </script> -->
+    <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+    </script> -->
     <!-- End Favicons -->
 
     <!--!link-->
 
-    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+    <a href="#" id="back-to-top" title="Back to top" class="show">
+	    <img src="/static/images/arrow-up.png">
+    </a>
 
     <style>
      /**
@@ -83,6 +117,12 @@
                url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff') format('woff');
           font-weight: 700; /* Bold */
           font-style: normal;
+      }
+
+      .flatpickr-calendar .numInputWrapper{
+        position: absolute;
+        top: 20%;
+        margin-left:20%;
       }
 	 
     </style>
@@ -185,7 +225,7 @@
       mapbox-sdk.min.js is included from static folder for CSP purposes.
       We didn't bundle it to the main app since it would unnecessarily slow down initial rendering.
     -->
-    <script src="%PUBLIC_URL%/static/scripts/custom/smooth-scroll.js"></script>
+    <script src="%PUBLIC_URL%/static/scripts/custom/custom.js"></script>
     <script src="%PUBLIC_URL%/static/scripts/mapbox/mapbox-sdk.min.js"></script>
     <script src="%PUBLIC_URL%/static/scripts/custom/locationHover.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel="stylesheet" />

@@ -21,6 +21,7 @@ const EditListingPoliciesPanel = props => {
     updateInProgress,
     errors,
     user_type,
+    currentUser,
   } = props;
 
   const classes = classNames(rootClassName || css.root, className);
@@ -28,10 +29,11 @@ const EditListingPoliciesPanel = props => {
   const { publicData } = currentListing.attributes;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
-  const publish = isPublished ?"title.":"createListingTitle.";
-  const PoliciesPanelTitle = 'EditListingPoliciesPanel.'+ publish + user_name;
-  const panelTitle = isPublished ? (
+  const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
+  const publish = isPublished ? 'title.' : 'createListingTitle.';
+  const PoliciesPanelTitle = 'EditListingPoliciesPanel.' + publish + user_name;
+
+  let panelTitle = isPublished ? (
     <FormattedMessage
       id={PoliciesPanelTitle}
       values={{ listingTitle: <ListingLink listing={listing} /> }}
@@ -40,9 +42,21 @@ const EditListingPoliciesPanel = props => {
     <FormattedMessage id={PoliciesPanelTitle} />
   );
 
+  let panelSubTitle = isPublished ? (
+    <span>Please go to your profile and verify your identity to proceed posting your listing.</span>
+  ) : (
+    <span>Please go to your profile and verify your identity to proceed posting your listing.</span>
+  );
+
+
+  if (currentUser.attributes.profile.publicData.yotiVerified == 'YES') {
+    panelSubTitle = 'Your account is already verified';
+  }
+
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
+      {panelSubTitle}
       <EditListingPoliciesForm
         className={css.form}
         publicData={publicData}
@@ -61,7 +75,8 @@ const EditListingPoliciesPanel = props => {
         updated={panelUpdated}
         updateInProgress={updateInProgress}
         fetchErrors={errors}
-        user_type ={ user_type}
+        user_type={user_type}
+        currentUser={currentUser}
       />
     </div>
   );

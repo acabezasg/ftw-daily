@@ -30,16 +30,16 @@ const sortSearchByDistance = false;
 //
 // In a way, 'processAlias' defines which transaction process (or processes)
 // this particular web application is able to handle.
-const bookingProcessAlias = 'sca-preauth-nightly-booking/release-1';
+const bookingProcessAlias = 'preauth-with-nightly-booking/release-1';
 
 // The transaction line item code for the main unit type in bookings.
 //
-// Possible values: ['line-item/night', 'line-item/day', 'line-item/units';]
+// Possible values: ['n', 'd', 'line-item/units';]
 //
 // Note: translations will use different translation keys for night, day or unit
 // depending on the value chosen.
-const bookingUnitType = 'line-item/night';
-
+const bookingUnitType = 'n';
+const bookingHour = 2;
 // Should the application fetch available time slots (currently defined as
 // start and end dates) to be shown on listing page.
 const enableAvailability = process.env.REACT_APP_AVAILABILITY_ENABLED === 'true';
@@ -185,6 +185,7 @@ const config = {
   locale,
   bookingProcessAlias,
   bookingUnitType,
+  bookingHour,
   enableAvailability,
   dayCountAvailableForBooking,
   i18n,

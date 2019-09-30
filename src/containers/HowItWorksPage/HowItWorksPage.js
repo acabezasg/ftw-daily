@@ -1,6 +1,4 @@
 import React from 'react';
-import config from '../../config';
-import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
 import {
   LayoutSingleColumn,
@@ -8,7 +6,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  ExternalLink,
+ 
 } from '../../components';
 
 import css from './HowItWorksPage.css';
@@ -20,15 +18,9 @@ import how4 from './images/how-4.jpg';
 import how5 from './images/how-5.jpg';
 import divider from './images/div-img.png';
 
-console.log(how1);
-console.log(how2);
-console.log(how3);
-console.log(how4);
-console.log(how5);
-
 const HowItWorksPage = () => {
-  const { siteTwitterHandle, siteFacebookPage } = config;
-  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
+  // const { siteTwitterHandle, siteFacebookPage } = config;
+  // const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
   // prettier-ignore
   return (

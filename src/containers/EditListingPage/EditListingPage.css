@@ -1,7 +1,7 @@
 @import '../../marketplace.css';
 
 .topbar {
-  z-index: 1;
+  z-index: 2;
 }
 
 .mobileTopbar {

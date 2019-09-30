@@ -48,12 +48,15 @@ const EnquiryFormComponent = props => (
       const submitInProgress = inProgress;
       const submitDisabled = submitInProgress;
 
+
+
       return (
         <Form className={classes} onSubmit={handleSubmit}>
           <IconEnquiry className={css.icon} />
           <h2 className={css.heading}>
             <FormattedMessage id="EnquiryForm.heading" values={{ listingTitle }} />
           </h2>
+
           <FieldTextInput
             className={css.field}
             type="textarea"

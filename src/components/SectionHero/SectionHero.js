@@ -2,7 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { NamedLink } from '../../components';
+import { NamedLink, HeroSearch } from '../../components';
 
 import css from './SectionHero.css';
 
@@ -17,19 +17,8 @@ const SectionHero = props => {
         <h1 className={css.heroMainTitle}>
           <FormattedMessage id="SectionHero.title" />
         </h1>
-        <h2 className={css.heroSubTitle}>
-          <FormattedMessage id="SectionHero.subTitle" />
-        </h2>
-        <NamedLink
-          name="SearchPage"
-          to={{
-            search:
-              '?bounds=',
-          }}
-          className={css.heroButton}
-        >
-          <FormattedMessage id="SectionHero.browseButton" />
-        </NamedLink>
+        <p className={css.seperatorText}>I'm looking for</p>
+        <HeroSearch />
       </div>
     </div>
   );

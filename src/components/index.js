@@ -11,6 +11,7 @@
  */
 
 // Icons
+export { default as SwitchButton } from './SwitchButton/SwitchButton';
 export { default as IconAdd } from './IconAdd/IconAdd';
 export { default as IconArrowHead } from './IconArrowHead/IconArrowHead';
 export { default as IconBannedUser } from './IconBannedUser/IconBannedUser';
@@ -68,6 +69,14 @@ export { default as ContactForm } from './ContactForm/ContactForm';
 
 // Google Map
 export { default as GoogleMap } from './GoogleMap/GoogleMap';
+
+// Section Featured
+export { default as SectionFeatured } from './SectionFeatured/SectionFeatured';
+
+// Yoti Listing and Profile
+
+export { default as YotiVerifiedListing } from './YotiVerifiedListing/YotiVerifiedListing';
+export { default as YotiVerifiedProfile } from './YotiVerifiedProfile/YotiVerifiedProfile';
 
 // Layout helpers
 export { default as LayoutWrapperFooter } from './LayoutWrapperFooter/LayoutWrapperFooter';
@@ -171,5 +180,6 @@ export { default as Topbar } from './Topbar/Topbar';
 export { default as TopbarDesktop } from './TopbarDesktop/TopbarDesktop';
 export { default as TopbarMobileMenu } from './TopbarMobileMenu/TopbarMobileMenu';
 export { default as TransactionPanel } from './TransactionPanel/TransactionPanel';
-
-export { default as ButtonsComponent} from './Button/Button.example';
+export { default as HeroSearch } from './HeroSearch/HeroSearch';
+export { default as ButtonsComponent } from './Button/Button.example';
+export { default as DatePick } from './DatePick/DatePick';

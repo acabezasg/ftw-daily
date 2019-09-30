@@ -1,0 +1,45 @@
+.yotiVerified {
+ float: right;
+}
+
+.yotiVerified img {
+  width: 50px;
+}
+
+.yotiVerified span {
+  position: relative;
+  top: 2px;
+  font-weight: 700;
+  margin-left: 4px;
+  font-size: 20px;
+  letter-spacing: -0.1px;
+}
+
+.customTip {
+ color: #fff !important;
+ background-color: #41a6df !important;
+ opacity: 0.99 !important;
+ margin-top: -12px !important;
+ padding: 0px 15px 2.5px !important;
+}
+
+.customTip span {
+ font-size: 16px !important;
+}
+
+.customTip:after {
+ border-top-color: #41a6df !important;
+ border-top-width: 7px !important;
+}
+
+.verifiedImg {
+  width: 17px !important;
+  margin-left: 3px;
+  position: relative !important;
+  bottom: 2px !important;
+}
+
+.removelink {
+  text-decoration: none !important;
+  color: #000;
+}

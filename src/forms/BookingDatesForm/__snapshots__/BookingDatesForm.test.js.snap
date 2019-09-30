@@ -30,6 +30,6 @@ exports[`BookingDatesForm matches snapshot without selected dates 1`] = `
       "currency": "USD",
     }
   }
-  unitType="line-item/night"
+  unitType="n"
 />
 `;

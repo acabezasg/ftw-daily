@@ -70,7 +70,14 @@ Button.propTypes = {
 export default Button;
 
 export const PrimaryButton = props => {
-  const classes = classNames(props.rootClassName || css.primaryButtonRoot, css.primaryButton);
+  var classes;
+  if(props && props.blue){
+    classes = classNames(props.rootClassName || css.primaryButtonRootEx, css.primaryButton);
+    
+  }else{
+    classes = classNames(props.rootClassName || css.primaryButtonRoot, css.primaryButton);
+  }
+  
   return <Button {...props} rootClassName={classes} />;
 };
 PrimaryButton.displayName = 'PrimaryButton';

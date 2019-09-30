@@ -6,14 +6,15 @@ import { arrayOf, bool, func, node, oneOfType, shape, string } from 'prop-types'
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import omit from 'lodash/omit';
-import { propTypes, LISTING_STATE_CLOSED, LINE_ITEM_NIGHT, LINE_ITEM_DAY } from '../../util/types';
+import { propTypes, LISTING_STATE_CLOSED, LINE_ITEM_NIGHT, LINE_ITEM_DAY,LINE_ITEM_HOUR,LINE_ITEM_WEEK,LINE_ITEM_UNIT } from '../../util/types';
 import { formatMoney } from '../../util/currency';
 import { parse, stringify } from '../../util/urlHelpers';
 import config from '../../config';
-import { ModalInMobile, Button } from '../../components';
+import { ModalInMobile, Button, PrimaryButton } from '../../components';
 import { BookingDatesForm } from '../../forms';
 
 import css from './BookingPanel.css';
+import stripeimg from './stripe.png';
 
 // This defines when ModalInMobile shows content as Modal
 const MODAL_BREAKPOINT = 1023;
@@ -66,6 +67,9 @@ const BookingPanel = props => {
     history,
     location,
     intl,
+    rate,
+    user_type,
+    stripe
   } = props;
 
   const price = listing.attributes.price;
@@ -74,6 +78,7 @@ const BookingPanel = props => {
   const showBookingDatesForm = hasListingState && !isClosed;
   const showClosedListingHelpText = listing.id && isClosed;
   const { formattedPrice, priceTitle } = priceData(price, intl);
+  
   const isBook = !!parse(location.search).book;
 
   const subTitleText = !!subTitle
@@ -82,15 +87,30 @@ const BookingPanel = props => {
     ? intl.formatMessage({ id: 'BookingPanel.subTitleClosedListing' })
     : null;
 
-  const isNightly = unitType === LINE_ITEM_NIGHT;
-  const isDaily = unitType === LINE_ITEM_DAY;
+  // const isNightly = unitType === LINE_ITEM_NIGHT;
+  // const isDaily = unitType === LINE_ITEM_DAY;
 
-  const unitTranslationKey = isNightly
+  // const unitTranslationKey = isNightly
+  //   ? 'BookingPanel.perNight'
+  //   : isDaily
+  //   ? 'BookingPanel.perDay'
+  //   : 'BookingPanel.perUnit';
+    
+  const isNightly = rate === LINE_ITEM_NIGHT;
+  const isDaily = rate === LINE_ITEM_DAY;
+  const isHourly = rate === LINE_ITEM_HOUR;
+  const isWeekly = rate === LINE_ITEM_WEEK;
+
+  const unitTranslationKey = isHourly
+    ? 'BookingPanel.perHour'
+    : isNightly
     ? 'BookingPanel.perNight'
     : isDaily
     ? 'BookingPanel.perDay'
+    : isWeekly
+    ? 'BookingPanel.perWeek'
     : 'BookingPanel.perUnit';
-
+  
   const classes = classNames(rootClassName || css.root, className);
   const titleClasses = classNames(titleClassName || css.bookingTitle);
 
@@ -110,16 +130,19 @@ const BookingPanel = props => {
             <FormattedMessage id="BookingPanel.hostedBy" values={{ name: authorDisplayName }} />
           </div>
         </div>
-
+        
         <div className={css.bookingHeading}>
           <h2 className={titleClasses}>{title}</h2>
-          {subTitleText ? <div className={css.bookingHelp}>{subTitleText}</div> : null}
+          <span className={css.bookPriceSpan}>Price: {formattedPrice}/<FormattedMessage id={unitTranslationKey} /></span>
+          
+          {/* {subTitleText ? <div className={css.bookingHelp}>{subTitleText}</div> : null} */}
         </div>
+        
         {showBookingDatesForm ? (
           <BookingDatesForm
             className={css.bookingForm}
             submitButtonWrapperClassName={css.bookingDatesSubmitButtonWrapper}
-            unitType={unitType}
+            unitType={rate} 
             onSubmit={onSubmit}
             price={price}
             isOwnListing={isOwnListing}
@@ -128,6 +151,7 @@ const BookingPanel = props => {
           />
         ) : null}
       </ModalInMobile>
+     
       <div className={css.openBookingForm}>
         <div className={css.priceContainer}>
           <div className={css.priceValue} title={priceTitle}>
@@ -172,7 +196,7 @@ BookingPanel.propTypes = {
   titleClassName: string,
   listing: oneOfType([propTypes.listing, propTypes.ownListing]),
   isOwnListing: bool,
-  unitType: propTypes.bookingUnitType,
+  // unitType: propTypes.bookingUnitType,
   onSubmit: func.isRequired,
   title: oneOfType([node, string]).isRequired,
   subTitle: oneOfType([node, string]),

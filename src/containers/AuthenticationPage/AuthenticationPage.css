@@ -92,7 +92,7 @@
   @apply --marketplaceModalCloseStyles;
 
   /* This is not a real modal, z-index should not be modal's z-index */
-  z-index: 1;
+  z-index: 2;
 }
 
 .closeText {

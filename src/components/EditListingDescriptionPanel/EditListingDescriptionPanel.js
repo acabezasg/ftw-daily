@@ -28,7 +28,7 @@ const EditListingDescriptionPanel = props => {
   const { description, title, publicData } = currentListing.attributes;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-  const user_name = user_type == 0?"owner":user_type == 1?"sitter":"service";
+  const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
   const publish = isPublished ?"title.":"createListingTitle.";
   const DescriptionPanelTitle = 'EditListingDescriptionPanel.' + publish + user_name;
   const service = config.custom.service;

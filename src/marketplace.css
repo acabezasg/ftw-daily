@@ -190,10 +190,6 @@
 
     /* Text */
     text-align: center;
-    text-decoration: none;
-
-    /* Effects */
-    transition: all var(--transitionStyleButton);
     cursor: pointer;
 
     &:hover,
@@ -217,12 +213,12 @@
   --marketplaceButtonStylesPrimary {
     @apply --marketplaceButtonStyles;
 
-    background-color: var(--successColor);
+    background-color: rgb(65, 166, 223);
     color: var(--matterColorLight);
 
     &:hover,
     &:focus {
-      background-color: var(--successColorDark);
+      background-color: rgb(65, 166, 223);
     }
     &:disabled {
       background-color: var(--matterColorNegative);
@@ -576,10 +572,10 @@
 @custom-media --viewportXLarge (min-width: 1921px);
 
 .SectionHero_heroMainTitle__3YHOS {
-    max-width: 100% !important;
-    text-align: center !important;
+  max-width: 100% !important;
+  text-align: center !important;
 }
 
 .SectionHero_heroButton__3j9FY {
-	background-color: #41a6df !important;
+  background-color: #41a6df !important;
 }

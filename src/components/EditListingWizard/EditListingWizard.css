@@ -112,3 +112,36 @@
     padding-top: 11px;
   }
 }
+
+.backButtonContainer {
+  text-decoration: none !important;
+  position: absolute;
+}
+
+.backButtonContainer button {
+  margin: 20px;
+  min-height: 40px;
+}
+
+.backButtonContainer button {
+  background-color: #41a6df !important;
+  color: #fff !important;
+}
+
+@media (max-width: 1023px) {
+  .backButtonContainer {
+  position: relative;
+}
+
+.backButtonContainer button {
+  margin: 0px; 
+}
+
+.tabsContainer:nth-child(1) {
+  padding: 15px;
+}
+
+.buttonContainer {
+  padding: 15px;
+}
+}

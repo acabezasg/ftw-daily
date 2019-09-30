@@ -9,8 +9,34 @@
   &:hover {
     text-decoration: none;
     transform: scale(1.02);
-    box-shadow: 4px 6px 25px 1px rgba(0,0,0,0.46);
+    box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.46);
   }
+}
+
+.root:hover .cardCategory {
+  background: #F77D0E;
+}
+
+.root:hover .info {
+  background: #F77D0E;
+}
+
+.root:hover .yotiBadge {
+  background: #F77D0E;
+}
+
+.yotiBadge {
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   right: 0;
+   text-transform: capitalize;
+   color: #fff;
+   padding: 5px 18px;
+   border-bottom-right-radius: 3px;
+   font-weight: 600;
+   font-size: 16px;
+   background: #41A6DF;
 }
 
 .threeToTwoWrapper {
@@ -44,7 +70,7 @@
   flex-direction: row;
   padding: 15px;
   background: #41a6df;
-  padding: 15px
+  padding: 15px;
 }
 
 .price {
@@ -127,4 +153,34 @@
   /* use break-word if available */
   word-break: break-word;
   hyphens: auto;
+}
+
+.cardCategory {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 5px 18px;
+  border-bottom-right-radius: 3px;
+  font-weight: 600;
+  font-size: 16px;
+  background: #41A6DF;
+}
+
+.categoryImage {
+  height: 24px;
+  position: absolute;
+  transform: rotate(120deg);
+  left: -5px;
+  top: -5px;
+  z-index: 50;
+}
+
+.verifiedBy {
+  height: 16px;
+  margin-right: 7px;
+  position: relative;
+  bottom: 3.71px;
 }

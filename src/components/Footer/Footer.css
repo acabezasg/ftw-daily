@@ -133,7 +133,7 @@
 
 .organizationCopyright {
   @apply --marketplaceTinyFontStyles;
-  margin-top: 26px;
+  margin-top: 23px;
   color: #ffff;
 }
 
@@ -232,7 +232,7 @@
   display: none;
   flex-basis: 109px;
   margin-right: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 
   @media (--viewportMedium) {
     display: flex;

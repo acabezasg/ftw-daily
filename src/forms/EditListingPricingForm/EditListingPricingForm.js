@@ -47,7 +47,7 @@ export const EditListingPricingFormComponent = props => (
         ? 'EditListingPricingForm.pricePerDay'
         : 'EditListingPricingForm.pricePerUnit';
 
-      const msg_key = user_type == 1?'EditListingPricingForm.pricePerNight':'EditListingPricingForm.pricePerHour';
+      const msg_key = user_type === 1?'EditListingPricingForm.pricePerNight':'EditListingPricingForm.pricePerHour';
       const pricePerUnitMessage = intl.formatMessage({
         id: msg_key,
       });
@@ -111,7 +111,7 @@ export const EditListingPricingFormComponent = props => (
             </p>
           ) : null}
 
-          {user_type==2?(
+          {user_type===2?(
             <CategoryField
               id="rate"
               name="rate"

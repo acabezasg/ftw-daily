@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  YotiPage,
   WhatWeDoPage,
   HowItWorksPage,
   ContactPage,
@@ -10,6 +11,7 @@ import {
   AboutPage,
   AuthenticationPage,
   CheckoutPage,
+  FeaturedOne,
   ContactDetailsPage,
   EditListingPage,
   EmailVerificationPage,
@@ -32,7 +34,6 @@ import {
   OrderTypesPage,
 } from './containers';
 
-
 // routeConfiguration needs to initialize containers first
 // Otherwise, components will import form container eventually and
 // at that point css bundling / imports will happen in wrong order.
@@ -54,6 +55,11 @@ const RedirectToLandingPage = () => <NamedRedirect name="LandingPage" />;
 // See behaviour from Routes.js where Route is created.
 const routeConfiguration = () => {
   return [
+    {
+      path: '/yoti',
+      name: 'YotiPage',
+      component: YotiPage,
+    },
 
     {
       path: '/whatwedo',
@@ -79,7 +85,7 @@ const routeConfiguration = () => {
       component: FaqPage,
     },
 
-      {
+    {
       path: '/pet-sitter-faq',
       name: 'PetSittersPage',
       component: PetSittersPage,
@@ -188,7 +194,7 @@ const routeConfiguration = () => {
           params={{ slug: draftSlug, id: draftId, type: 'new', tab: 'description_sitter' }}
         />
       ),
-    }, 
+    },
     {
       path: '/l/new',
       name: 'NewListingPage-service',
@@ -214,7 +220,6 @@ const routeConfiguration = () => {
       component: props => <EditListingPage {...props} />,
       loadData: EditListingPage.loadData,
     },
-   
 
     // Canonical path should be after the `/l/new` path since they
     // conflict and `new` is not a valid listing UUID.
@@ -381,6 +386,13 @@ const routeConfiguration = () => {
       name: 'NotFoundPage',
       component: props => <NotFoundPage {...props} />,
     },
+    {
+      path: '/yoti-verified',
+      name: 'ProfileSettingsPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: props => <NamedRedirect name="ProfileSettingsPage" {...props} />,
+    },
 
     // Do not change this path!
     //
@@ -402,7 +414,6 @@ const routeConfiguration = () => {
       component: props => <EmailVerificationPage {...props} />,
       loadData: EmailVerificationPage.loadData,
     },
-
 
     {
       path: '/ordertype/:type',

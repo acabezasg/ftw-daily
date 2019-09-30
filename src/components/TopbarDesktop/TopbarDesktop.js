@@ -16,6 +16,13 @@ import {
 } from '../../components';
 import { TopbarSearchForm } from '../../forms';
 
+import home from './home.png';
+import listing from './listing.png';
+import inbox from './inbox.png';
+import create from './create.png';
+import signup from './signup.png';
+import login from './login.png';
+
 import css from './TopbarDesktop.css';
 
 const TopbarDesktop = props => {
@@ -54,7 +61,7 @@ const TopbarDesktop = props => {
       params={{ tab: currentUserHasListings ? 'sales' : 'orders' }}
     >
       <span className={css.inbox}>
-        <FormattedMessage id="TopbarDesktop.inbox" />
+        <img src={inbox} className={css.topbariconTwo} /> <FormattedMessage id="TopbarDesktop.inbox" />
         {notificationDot}
       </span>
     </NamedLink>
@@ -112,7 +119,7 @@ const TopbarDesktop = props => {
   const signupLink = isAuthenticated ? null : (
     <NamedLink name="SignupPage" className={css.signupLink}>
       <span className={css.signup}>
-        <FormattedMessage id="TopbarDesktop.signup" />
+        <img src={signup} className={css.topbariconTwo} /> <FormattedMessage id="TopbarDesktop.signup" />
       </span>
     </NamedLink>
   );
@@ -120,7 +127,7 @@ const TopbarDesktop = props => {
   const loginLink = isAuthenticated ? null : (
     <NamedLink name="LoginPage" className={css.loginLink}>
       <span className={css.login}>
-        <FormattedMessage id="TopbarDesktop.login" />
+        <img src={login} className={css.topbariconTwo} /> <FormattedMessage id="TopbarDesktop.login" />
       </span>
     </NamedLink>
   );
@@ -138,7 +145,7 @@ const TopbarDesktop = props => {
 
     <NamedLink className={css.createListingLink} name="LandingPage">
       <span className={css.signup}>
-        <FormattedMessage id="Home" />
+        <img src={home} className={css.topbaricon} /> <FormattedMessage id="Home" />
       </span>
     </NamedLink>
 
@@ -153,7 +160,7 @@ const TopbarDesktop = props => {
 
     <NamedLink className={css.createListingLink} name="SearchListingsPage">
       <span className={css.signup}>
-        <FormattedMessage id="Listings" />
+        <img src={listing} className={css.topbariconTwo} /> <FormattedMessage id="Listings" />
       </span>
     </NamedLink>
 
@@ -177,7 +184,7 @@ const TopbarDesktop = props => {
 
       <NamedLink className={css.createListingLink} name="OrderTypesPage" params={{type:'new'}}> 
         <span className={css.createListing}>
-          <FormattedMessage id="TopbarDesktop.createListing" />
+          <img src={create} className={css.topbariconTwo} /> <FormattedMessage id="TopbarDesktop.createListing" />
         </span>
       </NamedLink>
 
