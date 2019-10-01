@@ -149,13 +149,14 @@
 }
 
 .heroHalf {
-  width: 50%;
+  width: 60%;
 }
 
 .imageHalf {
-  width: 50%;
+  width: 40%;
   position: relative;
   top: 10px;
+  margin-left: 35px;
 }
 
 .imageHalf .imageImg {
