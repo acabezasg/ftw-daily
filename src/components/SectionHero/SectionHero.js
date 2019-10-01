@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import { NamedLink, HeroSearch } from '../../components';
 
 import css from './SectionHero.css';
+import dogimg from './images/dog.png';
 
 const SectionHero = props => {
   const { rootClassName, className } = props;
@@ -14,11 +15,16 @@ const SectionHero = props => {
   return (
     <div className={classes}>
       <div className={css.heroContent}>
+        <div className={css.heroHalf}>
         <h1 className={css.heroMainTitle}>
-          <FormattedMessage id="SectionHero.title" />
+          <span>Find Trusted <br />Pet Sitters and Services</span>
         </h1>
-        <p className={css.seperatorText}>I'm looking for</p>
+        <p className={css.seperatorText}>Local, National and International Pet Sitting</p>
         <HeroSearch />
+        </div>
+        <div className={css.imageHalf}>
+          <img className={css.imageImg} src={dogimg} />
+        </div>
       </div>
     </div>
   );

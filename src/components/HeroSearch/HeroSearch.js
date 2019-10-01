@@ -55,7 +55,7 @@ class HeroSearch extends Component {
             }}
           >
             <div className={css.ownerImg}></div>
-            <p>Pet Owner</p>
+            <p>Find a<br />House Sit</p>
           </div>
 
           <div
@@ -67,7 +67,7 @@ class HeroSearch extends Component {
             }}
           >
             <div className={css.sitterImg}></div>
-            <p>Pet Sitter</p>
+            <p>Find a<br />Pet Sitter</p>
           </div>
 
           <div
@@ -79,7 +79,7 @@ class HeroSearch extends Component {
             }}
           >
             <div className={css.serviceImg}></div>
-            <p>Pet Service</p>
+            <p>Find a<br />Pet Service</p>
           </div>
         </div>
         <div className={css.HeroMain}>

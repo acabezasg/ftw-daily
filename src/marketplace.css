@@ -22,14 +22,15 @@
   /* Full screen Background image located in root-folder/src/assets */
   --backgroundImage: {
     /* Gradient direction and overlaying the black color on top of the image for better readability */
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-      url('../../assets/background-1440.jpg');
-
-    /* Add loading color for the div */
-    background-color: var(--matterColor);
+    background-image: linear-gradient(to bottom, #41a6df, #41a6df, #41a6df, #41a6df, #41a6df, #5face2, #76b1e5, #8ab7e7, #aec5eb, #ccd4ef, #e4e5f3, #f7f7f7);
 
     /* Cover the whole screen with the background image */
     background-size: cover;
+
+    /* Previous BG with Gradient
+      background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+      url('../../assets/background-1440.jpg');
+    */
 
     /* Align the image within the container */
     background-position: center center;
@@ -264,7 +265,7 @@
     border: none;
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    border-bottom-color: var(--marketplaceColor);
+    border-bottom-color: #fff;
     border-radius: 0;
 
     &::placeholder {

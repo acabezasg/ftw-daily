@@ -9,7 +9,6 @@
   width: 30%;
   background: #fff;
   border-radius: 5px;
-  padding: 16px 0px;
   cursor: pointer;
   transition-timing-function: ease-in;
   /* Quick on the way out */
@@ -17,18 +16,18 @@
 }
 
 .goBtn {
-  background: #41a6df;
+  background: #e9e9e9;
   border: 0;
-  color: #fff;
+  color: #4a4a4a;
   padding: 10px 30px;
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 9999;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   cursor: pointer;
   font-weight: 700;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .goBtn span {
@@ -37,19 +36,20 @@
 }
 
 .goBtn:hover {
-  background: #fff;
-  color: #4a4a4a;
+  color: #41a6df;
 }
 
 .HeroPick p {
   font-weight: 700;
-  margin-top: 0;
+  margin: 0;
+  padding: 0 0 24px;
 }
 
 .HeroPick .ownerImg {
   content: url(./images/owner.png);
   display: block;
-  margin: 16px auto;
+  margin: 0 auto;
+  padding: 24px 0 12px;
 }
 
 .HeroPick:hover .ownerImg,
@@ -69,8 +69,8 @@
 
 .HeroPick .serviceImg {
   content: url(./images/service.png);
-  display: block;
-  margin: 16px auto;
+  margin: 0 auto;
+  padding: 24px 0 12px;
 }
 
 .HeroPick:hover .serviceImg,
@@ -80,8 +80,8 @@
 
 .HeroPick .sitterImg {
   content: url(./images/sitter.png);
-  display: block;
-  margin: 16px auto;
+  margin: 0 auto;
+  padding: 24px 0 12px;
 }
 
 .HeroPick:hover .sitterImg,
@@ -90,7 +90,7 @@
 }
 
 .HeroMain {
-  margin: 44px 20px;
+  margin: 44px 10px;
   position: relative;
 }
 
@@ -124,19 +124,32 @@
 .HeroAutocomplete {
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: #41a6df;
-  height: 60px;
+  border-bottom-color: #fff;
+  height: 44px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.HeroAutocomplete:hover, .HeroAutocomplete:focus {
+  border-bottom-color: #4a4a4a;
+  outline: none;
 }
 
 .HeroAutocomplete div:first-child {
   background-color: transparent;
   color: #fff !important;
+  height: 44px;
 }
 
 .flatpickr {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 380px;
-  color: #fff;
+  width: 62%;
+  color: #4a4a4a;
+  background-image: url(https://i.imgur.com/LTsuzzu.png);
+  background-position: 0px 6px;
+  padding-left: 35px;
 }
+
+
