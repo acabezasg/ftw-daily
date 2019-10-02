@@ -22,8 +22,6 @@
   /* Full screen Background image located in root-folder/src/assets */
   --backgroundImage: {
     /* Gradient direction and overlaying the black color on top of the image for better readability */
-    /* background-image: linear-gradient(to bottom, #41a6df, #41a6df, #41a6df, #41a6df, #41a6df, #5face2, #76b1e5, #8ab7e7, #aec5eb, #ccd4ef, #e4e5f3, #f7f7f7); */
-
     background-color: #41a6df;
 
     /* Cover the whole screen with the background image */
