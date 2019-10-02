@@ -46,6 +46,7 @@ class HeroSearch extends Component {
     return (
       <div>
         <div className={css.HeroSearch}>
+{/*
           <div
             className={`${css.HeroPick} ${
               this.state.active == 'owner' ? css.HeroPickActive : null
@@ -81,6 +82,9 @@ class HeroSearch extends Component {
             <div className={css.serviceImg}></div>
             <p>Find a<br />Pet Service</p>
           </div>
+          
+          */}
+
         </div>
         <div className={css.HeroMain}>
           {/* <input className={css.HeroInput} type="search" placeholder="e.g London, New York..." /> */}

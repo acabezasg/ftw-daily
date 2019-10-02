@@ -132,16 +132,18 @@
 }
 
 .seperatorText {
-  margin: 32px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 43px 20px;
   padding: 0px;
   text-align: center;
-  font-weight: 800;
   color: #fff;
+  margin-bottom: 3px;
 }
 
 .heroMainTitle {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  letter-spacing: -2px;
 }
 
 .heroContent {
@@ -149,6 +151,52 @@
 }
 
 .heroHalf {
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
+}
+
+.searchHero {
+  display: flex;
+  width: 100%;
+  padding-top: 43px;
+}
+
+.inputContainer {
+  width: 30%;
+  flex: 0 0 30%;
+  padding: 0px 10px;
+}
+
+.submitContainer {
+  width: 10%;
+  flex: 0 0 10%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.submitContainer a {
+  background: #41a6df;
+  color: #fff;
+  text-decoration: none !important;
+  padding: 8px 15px;
+  border-radius: 3px;
+}
+
+.submitContainer a:hover {
+  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+}
+
+.inputContainer input {
+  background: #fff;
+  color: #4a4a4a;
+  padding: 8px 0px 10px 15px;
+  border-radius: 3px;
+}
+
+.inputContainer input::placeholder {
+  color: #c3c3c3;
+}
+
+.inputContainer input:hover, .inputContainer:focus {
+  border-bottom-color: #41a6df;
 }
