@@ -133,17 +133,18 @@
 
 .seperatorText {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   margin: 43px 20px;
   padding: 0px;
   text-align: center;
   color: #fff;
   margin-bottom: 3px;
+  letter-spacing: 1px;
 }
 
 .heroMainTitle {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .heroContent {
@@ -175,8 +176,8 @@
 }
 
 .submitContainer a {
-  background: #41a6df;
-  color: #fff;
+  background: #fff;
+  color: #4a4a4a;
   text-decoration: none !important;
   padding: 8px 15px;
   border-radius: 3px;
@@ -184,6 +185,7 @@
 
 .submitContainer a:hover {
   background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+  color: #fff;
 }
 
 .inputContainer input {
@@ -194,9 +196,18 @@
 }
 
 .inputContainer input::placeholder {
-  color: #c3c3c3;
+  color: #c3c3c3
 }
 
 .inputContainer input:hover, .inputContainer:focus {
   border-bottom-color: #41a6df;
+}
+
+.testing {
+  background: #41a6df !important;
+  color: #4a4a4a;
+}
+
+.testing::placeholder {
+  color: #fff !important;
 }

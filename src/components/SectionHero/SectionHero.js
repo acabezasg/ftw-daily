@@ -21,7 +21,7 @@ const SectionHero = props => {
         <h1 className={css.heroMainTitle}>
           <span>Love Pets ♥ Love Travel</span>
         </h1>
-        <p className={css.seperatorText}>For all pets, not just dogs</p>
+        <p className={css.seperatorText}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
         {/*
 
@@ -32,7 +32,7 @@ const SectionHero = props => {
         <div className={css.searchHero}>
 
           <div className={css.inputContainer}>
-          <input type="text" placeholder="Find a Pet Sitter" />
+          <input className={css.testing} type="text" placeholder="Find a Pet Sitter" />
           </div>
 
           <div className={css.inputContainer}>
