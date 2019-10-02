@@ -9,7 +9,7 @@ class HeroImages extends React.Component {
     this.state = {
       images: [
         "https://i.imgur.com/vETpfvn.png",
-        "https://i.imgur.com/zttlel6.png"
+        "https://i.imgur.com/YagmVls.png"
       ],
       selectedImage: "https://i.imgur.com/vETpfvn.png"
     };

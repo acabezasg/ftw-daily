@@ -22,7 +22,8 @@
   /* Full screen Background image located in root-folder/src/assets */
   --backgroundImage: {
     /* Gradient direction and overlaying the black color on top of the image for better readability */
-    background-color: #41a6df;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+      url('https://i.imgur.com/fyUzND5.png');
 
     /* Cover the whole screen with the background image */
     background-size: cover;

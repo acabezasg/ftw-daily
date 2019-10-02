@@ -21,9 +21,10 @@ const SectionHero = props => {
         <p className={css.seperatorText}>Local, National and International Pet Sitting</p>
         <HeroSearch />
         </div>
-
+{/*
           <HeroImages />
-
+          
+*/}
       </div>
     </div>
   );
