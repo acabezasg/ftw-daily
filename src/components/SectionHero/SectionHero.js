@@ -31,20 +31,9 @@ const SectionHero = props => {
 
         <div className={css.searchHero}>
 
-          <div className={css.inputContainer}>
-          <input className={css.testing} type="text" placeholder="Find a Pet Sitter" />
-          </div>
-
-          <div className={css.inputContainer}>
-          <input type="text" placeholder="Find Homes to Sit" />
-          </div>
-
-          <div className={css.inputContainer}>
-          <DayPickerInput placeholder="Enter Dates" onDayChange={day => console.log(day)} />
-          </div>
-
-          <div className={css.submitContainer}>
-          <a>Search</a>
+         <div className={css.submitContainer}>
+            <a href="/s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a href="/s?pub_user_type=0">Find Homes to Sit</a>
           </div>
 
         </div>
@@ -61,7 +50,7 @@ const SectionHero = props => {
        <Helmet>
           <style>{`
 .DayPickerInput-OverlayWrapper {
-  bottom: 390px !important;
+  bottom: 385px !important;
 }
 `}</style>
         </Helmet>

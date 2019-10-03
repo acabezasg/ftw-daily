@@ -70,7 +70,8 @@ export { default as ContactForm } from './ContactForm/ContactForm';
 // Google Map
 export { default as GoogleMap } from './GoogleMap/GoogleMap';
 
-// Hero Images
+// Slider Section
+export { default as SliderSection } from './SliderSection/SliderSection';
 // Google Map
 export { default as HeroImages } from './HeroImages/HeroImages';
 
