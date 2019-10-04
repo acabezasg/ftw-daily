@@ -96,6 +96,8 @@ const SearchFiltersComponent = props => {
     ? initialValue(urlQueryParams, categoryFilter.paramName)
     : null;
 
+  const initialService = initialValue(urlQueryParams, 'pub_service');
+
   const initialPriceRange = priceFilter
     ? initialPriceRangeValue(urlQueryParams, priceFilter.paramName)
     : null;
@@ -174,7 +176,7 @@ const SearchFiltersComponent = props => {
   ) : null;
 
   const priceFilterElement = priceFilter ? (
-    <PriceFilter 
+    <PriceFilter
       id="SearchFilters.priceFilter"
       urlParam={priceFilter.paramName}
       onSubmit={handlePrice}
@@ -218,6 +220,23 @@ const SearchFiltersComponent = props => {
     <div className={classes}>
       <div className={css.filters}>
         {categoryFilterElement}
+        <SelectSingleFilter
+          urlParam="pub_service"
+          label="Service Type"
+          onSelect={handleSelectOption}
+          showAsPopup
+          options={[
+            { key: 'Choose the service', label: 'Choose the service' },
+            { key: 'Dog Walking', label: 'Dog Walking' },
+            { key: 'Veterinary Surgeons', label: 'Veterinary Surgeons' },
+            { key: 'Pet Groomer', label: 'Pet Groomer' },
+            { key: 'Pet Store', label: 'Pet Store' },
+            { key: 'Drop in Sitter', label: 'Drop in Sitter' },
+            { key: 'Food', label: 'Food' },
+          ]}
+          initialValue={initialService}
+          contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
+        />
         {amenitiesFilterElement}
         {priceFilterElement}
         {dateRangeFilterElement}
