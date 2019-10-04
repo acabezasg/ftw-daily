@@ -98,6 +98,7 @@
     }
     
     #back-to-top {
+    display: none !important;
     position: fixed;
     text-align: center;
     right: 10px;
@@ -199,3 +200,5 @@
         z-index: 1;
         }
     }
+
+    

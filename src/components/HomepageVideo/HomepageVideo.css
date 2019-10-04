@@ -1,0 +1,35 @@
+@import '../../marketplace.css';
+
+.videoContainer {
+    height: auto;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 57px;
+}
+
+.title {
+  @apply --marketplaceH1FontStyles;
+
+  margin-top: 0;
+  text-align: center;
+  max-width: 100%;
+
+  @media (--viewportMedium) {
+    margin-bottom: 23px;
+  }
+}
+
+.subContainer {
+  text-align: center;
+  margin: -10px 0;
+}
+
+.videoSub {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 0px;
+  text-align: center;
+  color: #4a4a4a;
+  letter-spacing: 0.5px;
+}

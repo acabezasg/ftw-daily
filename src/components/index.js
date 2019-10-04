@@ -187,4 +187,4 @@ export { default as TopbarMobileMenu } from './TopbarMobileMenu/TopbarMobileMenu
 export { default as TransactionPanel } from './TransactionPanel/TransactionPanel';
 export { default as HeroSearch } from './HeroSearch/HeroSearch';
 export { default as ButtonsComponent } from './Button/Button.example';
-export { default as DatePick } from './DatePick/DatePick';
+export { default as HomepageVideo } from './HomepageVideo/HomepageVideo';
