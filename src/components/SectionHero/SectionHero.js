@@ -29,14 +29,12 @@ const SectionHero = props => {
 
         */}
 
-        <div className={css.searchHero}>
 
          <div className={css.submitContainer}>
+         
             <a href="/s?pub_user_type=1">Find a Pet Sitter</a> 
             <a href="/s?pub_user_type=0">Find Homes to Sit</a>
           </div>
-
-        </div>
 
         </div>
 

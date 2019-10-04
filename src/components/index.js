@@ -46,6 +46,7 @@ export { default as RangeSlider } from './RangeSlider/RangeSlider';
 export { default as ResponsiveImage } from './ResponsiveImage/ResponsiveImage';
 export { default as UserDisplayName } from './UserDisplayName/UserDisplayName';
 export { default as ValidationError } from './ValidationError/ValidationError';
+export { default as SliderHero } from './SliderHero/SliderHero';
 
 /**
  * Composite components
@@ -70,8 +71,6 @@ export { default as ContactForm } from './ContactForm/ContactForm';
 // Google Map
 export { default as GoogleMap } from './GoogleMap/GoogleMap';
 
-// Slider Section
-export { default as SliderSection } from './SliderSection/SliderSection';
 // Google Map
 export { default as HeroImages } from './HeroImages/HeroImages';
 

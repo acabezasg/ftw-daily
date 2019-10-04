@@ -1,0 +1,89 @@
+.carouselHero {
+	height: 100vh;
+	width: 100%;
+	display:inline-block;
+}
+
+.carouselHero:after {
+	content:'';
+	position:absolute;
+	left:0; top:0;
+	width:100%; height:100%;
+	display:inline-block;
+	background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)) /* W3C */
+}
+
+.carouselHero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.carouselCaption {
+	position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.carouselCaption h1 {
+	font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 56px;
+    line-height: 72px;
+    letter-spacing: -1.5px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carouselCaption p {
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 43px 20px;
+    padding: 0px;
+    text-align: center;
+    color: #fff;
+    margin: 5px 0 4px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.submitContainer {
+    width: 100%;
+    text-align: center;
+    padding-top: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.submitContainer a {
+    background: #fff;
+    color: #4a4a4a;
+    font-weight: 600;
+    text-decoration: none !important;
+    padding: 10px 40px;
+    border-radius: 3px;
+    margin: 0 10px;
+}
+
+.submitContainer a:hover {
+    background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .carouselCaption p {
+    	font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 520px) {
+
+}

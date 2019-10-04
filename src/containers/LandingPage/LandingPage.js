@@ -16,6 +16,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
+  SliderHero
 } from '../../components';
 import { TopbarContainer } from '../../containers';
 
@@ -58,12 +59,16 @@ export const LandingPageComponent = props => {
           <TopbarContainer />
         </LayoutWrapperTopbar>
         <LayoutWrapperMain>
+        
+{/* 
           <div className={css.heroContainer}>
             <SectionHero className={css.hero} history={history} location={location} />
           </div>
+*/}  
+
+          <SliderHero />
 
           <ul className={css.sections}>  
-               
             <li className={css.section}>
               <div className={css.sectionContentFirstChild}>
                 <SectionFeatured />
