@@ -226,12 +226,12 @@ const SearchFiltersComponent = props => {
           onSelect={handleSelectOption}
           showAsPopup
           options={[
-            { key: 'Dog Walking', label: 'Dog Walking' },
-            { key: 'Veterinary Surgeons', label: 'Veterinary Surgeons' },
-            { key: 'Pet Groomer', label: 'Pet Groomer' },
-            { key: 'Pet Store', label: 'Pet Store' },
-            { key: 'Drop in Sitter', label: 'Drop in Sitter' },
-            { key: 'Food', label: 'Food' },
+            { key: 'walking', label: 'Dog Walking' },
+            { key: 'surgeon', label: 'Veterinary Surgeons' },
+            { key: 'groomer', label: 'Pet Groomer' },
+            { key: 'store', label: 'Pet Store' },
+            { key: 'sitter', label: 'Drop in Sitter' },
+            { key: 'food', label: 'Food' },
           ]}
           initialValue={initialService}
           contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
