@@ -2,13 +2,8 @@
 
 .root {
   width: 100%;
-  position: relative;
+  position: absolute;
   top: 0;
   z-index: var(--zIndexTopbar);
 }
 
-@media (min-width: 992px) {
-  .root {
-  	position: absolute;
-  }
-}

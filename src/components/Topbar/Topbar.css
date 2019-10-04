@@ -38,7 +38,7 @@
   /* shadows */
   box-shadow: var(--boxShadow);
 
-  @media (--viewportMedium) {
+  @media (--viewportPcMenu) {
     display: none;
   }
 }
@@ -133,7 +133,7 @@
 .desktop {
   display: none;
 
-  @media (--viewportMedium) {
+  @media (--viewportPcMenu) {
     display: block;
   }
 }

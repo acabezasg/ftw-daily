@@ -193,3 +193,9 @@
     position: absolute;
     z-index: 9;
     }
+
+    @media (max-width: 992px) {
+    .carousel {
+        z-index: 1;
+        }
+    }

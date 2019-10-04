@@ -80,10 +80,12 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+    .carouselCaption h1, .carouselCaption p {
+        white-space: inherit;
+    }
 
-}
-
-@media (max-width: 520px) {
-
+    .carouselCaption p {
+        padding: 0px 15px;
+    }
 }

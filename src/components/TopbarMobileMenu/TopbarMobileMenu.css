@@ -39,6 +39,7 @@
   padding: 24px;
   background-color: var(--matterColorLight);
   box-shadow: var(--boxShadowTop);
+  z-index: 9999;
 }
 
 .avatar {

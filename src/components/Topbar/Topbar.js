@@ -25,7 +25,7 @@ import MenuIcon from './MenuIcon';
 import SearchIcon from './SearchIcon';
 import css from './Topbar.css';
 
-const MAX_MOBILE_SCREEN_WIDTH = 768;
+const MAX_MOBILE_SCREEN_WIDTH = 992;
 
 const redirectToURLWithModalState = (props, modalStateParam) => {
   const { history, location } = props;
