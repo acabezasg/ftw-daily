@@ -226,7 +226,6 @@ const SearchFiltersComponent = props => {
           onSelect={handleSelectOption}
           showAsPopup
           options={[
-            { key: 'Choose the service', label: 'Choose the service' },
             { key: 'Dog Walking', label: 'Dog Walking' },
             { key: 'Veterinary Surgeons', label: 'Veterinary Surgeons' },
             { key: 'Pet Groomer', label: 'Pet Groomer' },
