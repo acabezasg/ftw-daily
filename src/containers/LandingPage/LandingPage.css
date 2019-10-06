@@ -227,3 +227,12 @@
 .sectionContent {
   padding: 0 36px 0 36px;
 }}
+
+.howSection {
+  margin: 65px 110px;
+}
+
+.howSection img {
+  height: 100%;
+  width: 100%;
+}
