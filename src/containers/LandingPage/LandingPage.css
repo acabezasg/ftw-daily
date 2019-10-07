@@ -108,12 +108,12 @@
 }
 
 .section:nth-of-type(1n) { 
-  background-color: #f7f7f7;
+  background-color: #fff;
   margin-top: -1px;
  }
 
 .section:nth-of-type(2n) { 
-  background-color: #fff;
+  background-color: #f7f7f7;
  }
 
  .section:nth-child(4) { 
@@ -227,3 +227,12 @@
 .sectionContent {
   padding: 0 36px 0 36px;
 }}
+
+.howSection {
+  margin: 65px 110px;
+}
+
+.howSection img {
+  height: 100%;
+  width: 100%;
+}

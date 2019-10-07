@@ -16,12 +16,14 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  SliderHero
+  SliderHero,
+  HomepageVideo
 } from '../../components';
 import { TopbarContainer } from '../../containers';
 
 import facebookImage from '../../assets/saunatimeFacebook-1200x630.jpg';
 import twitterImage from '../../assets/saunatimeTwitter-600x314.jpg';
+import howImage from './howitworks.png';
 import css from './LandingPage.css';
 
 export const LandingPageComponent = props => {
@@ -68,7 +70,81 @@ export const LandingPageComponent = props => {
 
           <SliderHero />
 
-          <ul className={css.sections}>  
+          <ul className={css.sections}> 
+
+            <li className={css.section}>
+              <div className={css.sectionContentFirstChild}>
+                <HomepageVideo />
+              </div>
+            </li>
+
+            
+
+
+
+
+
+
+            <li className={css.section}>
+              <div id="how-padding" className={css.sectionContent}>
+                <div id="howitworks-title">
+                  <h1>Steps to use TMPS</h1>
+                </div>
+
+                <div id="how-it-works">
+                  <div id="three-containers">
+                    <h2>Step 1</h2>
+
+                    <ul id="howitworks-ul">
+                      <li>First Step</li>
+                      <li>Second Step</li>
+                      <li>Third Step</li>
+                      <li>Forth Step</li>
+                      <li>Fifth Step</li>
+                    </ul>
+                  </div>
+
+                  <div id="three-containers">
+                    <h2>Step 2</h2>
+
+                    <ul id="howitworks-ul">
+                      <li>First Step</li>
+                      <li>Second Step</li>
+                      <li>Third Step</li>
+                      <li>Forth Step</li>
+                      <li>Fifth Step</li>
+                    </ul>
+                  </div>
+
+                  <div id="three-containers">
+                    <h2>Step 2</h2>
+
+                    <ul id="howitworks-ul">
+                      <li>First Step</li>
+                      <li>Second Step</li>
+                      <li>Third Step</li>
+                      <li>Forth Step</li>
+                      <li>Fifth Step</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <a href="/s/listings" id="how-button">
+                  Explore Steps
+                </a>
+              </div>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
             <li className={css.section}>
               <div className={css.sectionContentFirstChild}>
                 <SectionFeatured />

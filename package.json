@@ -76,6 +76,7 @@
     "smoothscroll-polyfill": "^0.4.0",
     "source-map-support": "^0.5.9",
     "url": "^0.11.0",
+    "video-react": "^0.14.1",
     "yoti": "^3.6.0"
   },
   "devDependencies": {

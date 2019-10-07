@@ -65,13 +65,13 @@
 
 .desktopInput::placeholder {
   color: #b2b2b2 !important;
+  font-size: 19px;
 }
 
 .desktopIcon {
   height: var(--topbarHeightDesktop);
   border: none;
   padding-top: 1px;
-
   display: flex;
   width: 24px;
   align-self: stretch;
@@ -81,7 +81,7 @@
 }
 
 .desktopInput {
-  height: 44px;
+  height: 72px;
   border-radius: 5px;
   flex-grow: 1;
   color: #4a4a4a;
@@ -157,9 +157,9 @@
   position: absolute;
   width: 100%;
   padding-bottom: var(--locationAutocompleteBottomPadding);
-  bottom: 60px;
+  top: 50px;
   left: 0;
-  background-image: linear-gradient(to right top, #41a6df, #41a6df, #41a6df, #41a6df, #41a6df, #60ace3, #78b2e6, #8cb9e9, #b2c8ef, #d1d9f4, #eaebf9, #ffffff);
+  background-color: #41a6df;
   border-bottom-left-radius: var(--borderRadius);
   border-bottom-right-radius: var(--borderRadius);
   box-shadow: var(--boxShadowPopup);
