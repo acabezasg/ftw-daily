@@ -77,7 +77,7 @@ const SearchFiltersComponent = props => {
     intl,
     isService,
     setAsService,
-    removeAsService
+    removeAsService,
   } = props;
 
   const hasNoResult = listingsAreLoaded && resultsCount === 0;
@@ -128,7 +128,7 @@ const SearchFiltersComponent = props => {
     if (urlParam == 'pub_user_type' && option != 2) {
       delete queryParams.pub_service;
       removeAsService();
-    }else{
+    } else {
       setAsService();
     }
 
@@ -231,7 +231,7 @@ const SearchFiltersComponent = props => {
       <div className={css.filters}>
         {categoryFilterElement}
 
-        {isService ? (
+        {isService || urlQueryParams.pub_user_type == 2 ? (
           <SelectSingleFilter
             urlParam="pub_service"
             label="Service Type"

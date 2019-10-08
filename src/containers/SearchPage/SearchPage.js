@@ -41,7 +41,6 @@ export class SearchPageComponent extends Component {
     this.state = {
       isSearchMapOpenOnMobile: props.tab === 'map',
       isMobileModalOpen: false,
-      isService: false,
     };
 
     this.searchMapListingsInProgress = false;
