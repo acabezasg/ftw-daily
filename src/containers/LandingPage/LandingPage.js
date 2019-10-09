@@ -17,7 +17,8 @@ import {
   LayoutWrapperFooter,
   Footer,
   SliderHero,
-  HomepageVideo
+  HomepageVideo,
+  Stepper
 } from '../../components';
 import { TopbarContainer } from '../../containers';
 
@@ -78,72 +79,11 @@ export const LandingPageComponent = props => {
               </div>
             </li>
 
-            
-
-
-
-
-
-
             <li className={css.section}>
-              <div id="how-padding" className={css.sectionContent}>
-                <div id="howitworks-title">
-                  <h1>Steps to use TMPS</h1>
-                </div>
-
-                <div id="how-it-works">
-                  <div id="three-containers">
-                    <h2>Step 1</h2>
-
-                    <ul id="howitworks-ul">
-                      <li>First Step</li>
-                      <li>Second Step</li>
-                      <li>Third Step</li>
-                      <li>Forth Step</li>
-                      <li>Fifth Step</li>
-                    </ul>
-                  </div>
-
-                  <div id="three-containers">
-                    <h2>Step 2</h2>
-
-                    <ul id="howitworks-ul">
-                      <li>First Step</li>
-                      <li>Second Step</li>
-                      <li>Third Step</li>
-                      <li>Forth Step</li>
-                      <li>Fifth Step</li>
-                    </ul>
-                  </div>
-
-                  <div id="three-containers">
-                    <h2>Step 2</h2>
-
-                    <ul id="howitworks-ul">
-                      <li>First Step</li>
-                      <li>Second Step</li>
-                      <li>Third Step</li>
-                      <li>Forth Step</li>
-                      <li>Fifth Step</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <a href="/s/listings" id="how-button">
-                  Explore Steps
-                </a>
+              <div className={css.sectionContent}>
+                <Stepper />
               </div>
             </li>
-
-
-
-
-
-
-
-
-
-
 
             <li className={css.section}>
               <div className={css.sectionContentFirstChild}>

@@ -188,3 +188,4 @@ export { default as TransactionPanel } from './TransactionPanel/TransactionPanel
 export { default as HeroSearch } from './HeroSearch/HeroSearch';
 export { default as ButtonsComponent } from './Button/Button.example';
 export { default as HomepageVideo } from './HomepageVideo/HomepageVideo';
+export { default as Stepper } from './Stepper/Stepper';
