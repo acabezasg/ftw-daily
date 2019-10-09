@@ -91,11 +91,6 @@ export const LandingPageComponent = props => {
               </div>
             </li>
 */}  
-            <li className={css.section}>
-              <div className={css.sectionContent}>
-                <SectionLocations />
-              </div>
-            </li>
 
             <li className={(css.sections, css.whyUseBg)}>
               <div className={css.sectionContent}>
@@ -126,6 +121,13 @@ export const LandingPageComponent = props => {
                 </div>
               </div>
             </li>
+            
+            <li className={css.section}>
+              <div className={css.sectionContent}>
+                <SectionLocations />
+              </div>
+            </li>
+
 {/*
             <li className={css.section}>
               <div id="how-padding" className={css.sectionContent}>
