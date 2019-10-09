@@ -17,7 +17,7 @@ import css from './SearchPage.css';
 class MainPanel extends Component {
   constructor(props) {
     super(props);
-    this.state = { isSearchFiltersPanelOpen: false };
+    this.state = { isSearchFiltersPanelOpen: false, isService: false };
   }
 
   render() {
@@ -73,6 +73,14 @@ class MainPanel extends Component {
       ? Object.values(secondaryFilters).map(f => f.paramName)
       : [];
 
+    const setAsService = () => {
+      this.setState({ isService: true });
+    };
+
+    const removeAsService = () => {
+      this.setState({ isService: false });
+    };
+
     return (
       <div className={classes}>
         <SearchFilters
@@ -83,6 +91,9 @@ class MainPanel extends Component {
           searchInProgress={searchInProgress}
           searchListingsError={searchListingsError}
           onManageDisableScrolling={onManageDisableScrolling}
+          isService={this.state.isService}
+          setAsService={setAsService}
+          removeAsService={removeAsService}
           {...searchFiltersPanelProps}
           {...primaryFilters}
         />

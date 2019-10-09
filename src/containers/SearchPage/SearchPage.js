@@ -193,7 +193,6 @@ export class SearchPageComponent extends Component {
     // For some reason, stickyness doesn't work on Safari, if the element is <button>
     /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-
     return (
       <Page
         scrollingDisabled={scrollingDisabled}
@@ -207,7 +206,6 @@ export class SearchPageComponent extends Component {
           currentSearchParams={urlQueryParams}
         />
         <div className={css.container}>
-
           <span onClick={() => this.setState({ showing: !showing })}>
             <SwitchButton />
           </span>
@@ -234,36 +232,35 @@ export class SearchPageComponent extends Component {
             }}
           />
 
-          { !showing ? 
-          <ModalInMobile
-            className={css.mapPanel}
-            id="SearchPage.map"
-            isModalOpenOnMobile={this.state.isSearchMapOpenOnMobile}
-            onClose={() => this.setState({ isSearchMapOpenOnMobile: false })}
-            showAsModalMaxWidth={MODAL_BREAKPOINT}
-            onManageDisableScrolling={onManageDisableScrolling}
-          >
-            <div className={css.mapWrapper}>
-              {shouldShowSearchMap ? (
-                <SearchMap
-                  reusableContainerClassName={css.map}
-                  activeListingId={activeListingId}
-                  bounds={bounds}
-                  center={origin}
-                  isSearchMapOpenOnMobile={this.state.isSearchMapOpenOnMobile}
-                  location={location}
-                  listings={mapListings || []}
-                  onMapMoveEnd={this.onMapMoveEnd}
-                  onCloseAsModal={() => {
-                    onManageDisableScrolling('SearchPage.map', false);
-                  }}
-                  messages={intl.messages}
-                />
-              ) : null}
-            </div>
-          </ModalInMobile>
-          : null
-                }
+          {!showing ? (
+            <ModalInMobile
+              className={css.mapPanel}
+              id="SearchPage.map"
+              isModalOpenOnMobile={this.state.isSearchMapOpenOnMobile}
+              onClose={() => this.setState({ isSearchMapOpenOnMobile: false })}
+              showAsModalMaxWidth={MODAL_BREAKPOINT}
+              onManageDisableScrolling={onManageDisableScrolling}
+            >
+              <div className={css.mapWrapper}>
+                {shouldShowSearchMap ? (
+                  <SearchMap
+                    reusableContainerClassName={css.map}
+                    activeListingId={activeListingId}
+                    bounds={bounds}
+                    center={origin}
+                    isSearchMapOpenOnMobile={this.state.isSearchMapOpenOnMobile}
+                    location={location}
+                    listings={mapListings || []}
+                    onMapMoveEnd={this.onMapMoveEnd}
+                    onCloseAsModal={() => {
+                      onManageDisableScrolling('SearchPage.map', false);
+                    }}
+                    messages={intl.messages}
+                  />
+                ) : null}
+              </div>
+            </ModalInMobile>
+          ) : null}
         </div>
       </Page>
     );

@@ -75,6 +75,9 @@ const SearchFiltersComponent = props => {
     searchFiltersPanelSelectedCount,
     history,
     intl,
+    isService,
+    setAsService,
+    removeAsService,
   } = props;
 
   const hasNoResult = listingsAreLoaded && resultsCount === 0;
@@ -121,6 +124,13 @@ const SearchFiltersComponent = props => {
     const queryParams = option
       ? { ...urlQueryParams, [urlParam]: option }
       : omit(urlQueryParams, urlParam);
+
+    if (urlParam == 'pub_user_type' && option != 2) {
+      delete queryParams.pub_service;
+      removeAsService();
+    } else {
+      setAsService();
+    }
 
     history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, queryParams));
   };
@@ -220,22 +230,26 @@ const SearchFiltersComponent = props => {
     <div className={classes}>
       <div className={css.filters}>
         {categoryFilterElement}
-        <SelectSingleFilter
-          urlParam="pub_service"
-          label="Service Type"
-          onSelect={handleSelectOption}
-          showAsPopup
-          options={[
-            { key: 'walking', label: 'Dog Walking' },
-            { key: 'surgeon', label: 'Veterinary Surgeons' },
-            { key: 'groomer', label: 'Pet Groomer' },
-            { key: 'store', label: 'Pet Store' },
-            { key: 'sitter', label: 'Drop in Sitter' },
-            { key: 'food', label: 'Food' },
-          ]}
-          initialValue={initialService}
-          contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
-        />
+
+        {isService || urlQueryParams.pub_user_type == 2 ? (
+          <SelectSingleFilter
+            urlParam="pub_service"
+            label="Service Type"
+            onSelect={handleSelectOption}
+            showAsPopup
+            options={[
+              { key: 'walking', label: 'Dog Walking' },
+              { key: 'surgeon', label: 'Veterinary Surgeons' },
+              { key: 'groomer', label: 'Pet Groomer' },
+              { key: 'store', label: 'Pet Store' },
+              { key: 'sitter', label: 'Drop in Sitter' },
+              { key: 'food', label: 'Food' },
+            ]}
+            initialValue={initialService}
+            contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
+          />
+        ) : null}
+
         {amenitiesFilterElement}
         {priceFilterElement}
         {dateRangeFilterElement}
