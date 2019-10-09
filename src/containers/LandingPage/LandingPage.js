@@ -18,7 +18,8 @@ import {
   Footer,
   SliderHero,
   HomepageVideo,
-  Stepper
+  Stepper,
+  Stepper2
 } from '../../components';
 import { TopbarContainer } from '../../containers';
 
@@ -82,6 +83,12 @@ export const LandingPageComponent = props => {
             <li className={css.section}>
               <div className={css.sectionContent}>
                 <Stepper />
+              </div>
+            </li>
+
+            <li className={css.section}>
+              <div className={css.sectionContent}>
+                <Stepper2 />
               </div>
             </li>
 

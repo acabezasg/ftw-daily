@@ -189,3 +189,4 @@ export { default as HeroSearch } from './HeroSearch/HeroSearch';
 export { default as ButtonsComponent } from './Button/Button.example';
 export { default as HomepageVideo } from './HomepageVideo/HomepageVideo';
 export { default as Stepper } from './Stepper/Stepper';
+export { default as Stepper2 } from './Stepper2/Stepper2';
