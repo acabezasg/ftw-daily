@@ -9,6 +9,7 @@ import Check from '@material-ui/icons/Check';
 import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
 import BookIcon from '@material-ui/icons/Payment';
 import PetsIcon from '@material-ui/icons/Pets';
+import FaceOutlined from '@material-ui/icons/FaceOutlined';
 import SentimentSatisfiedAltOutlinedIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
 import EventAvailableOutlinedIcon from '@material-ui/icons/EventAvailableOutlined';
 import StepConnector from '@material-ui/core/StepConnector';
@@ -134,7 +135,7 @@ function ColorlibStepIcon(props) {
   const { active, completed } = props;
 
   const icons = {
-    1: <OpenInBrowserIcon />,
+    1: <FaceOutlined />,
     2: <EventAvailableOutlinedIcon />,
     3: <SentimentSatisfiedAltOutlinedIcon />,
   };
@@ -171,7 +172,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return [(<span className={css.stepTitle}>Choose Pet Sitter</span>), (<span className={css.stepTitle}>Make a Booking</span>), (<span className={css.stepTitle}>Pets are Happy at Home</span>)];
+  return [(<span className={css.stepTitle}>Choose Pet Sitter</span>), (<span className={css.stepTitle}>Book Pet Sitter</span>), (<span className={css.stepTitle}>Pets are Happy at Home</span>)];
 }
 
 function getStepContent(step) {
@@ -179,10 +180,9 @@ function getStepContent(step) {
     case 0:
       return (<p>We offer a wider choice of local, national and international pet sitters.</p>);
     case 1:
-      return (<p>Make a booking and pay online. All bookings
-      are covered by 24/7 Veterinary Advice and Emergency Insurance.</p>);
+      return (<p>Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7 Vet Advice and Emergency Insurance.</p>);
     case 2:
-      return (<p>Your Pets stay safe in their own familiar enviroment.</p>);
+      return (<p>Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar space.</p>);
     default:
       return 'Unknown step';
   }

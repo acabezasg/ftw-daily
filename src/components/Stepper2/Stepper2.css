@@ -3,7 +3,7 @@
 }
 
 .class {
-	background: #f7f7f7 !important;
+	background: transparent !important;
 }
 
 .flexContainer {
@@ -39,6 +39,7 @@
 }
 
 .flexItem span {
+	color: #fff;
 	position: relative;
     float: left;
     top: 50%;
@@ -48,6 +49,7 @@
 
 .stepTitle {
 	font-weight: 600;
+	color: #fff;
 }
 
 .flexItem:nth-child(1), .flexItem:nth-child(2) {

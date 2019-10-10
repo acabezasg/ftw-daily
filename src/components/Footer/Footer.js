@@ -85,28 +85,28 @@ const Footer = props => {
             <div className={css.infoLinks}>
               <ul className={css.list}>
                 <li className={css.listItem}>
-                  <a className={css.link} href="https://help.trustmypetsitter.com/blog/">
-                     Blog
-                  </a>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink name="WhatWeDoPage" className={css.link}>
-                    <FormattedMessage id="Footer.toWhatWeDoPage" />
+                  <NamedLink name="PrivacyPolicyPage" className={css.link}>
+                    Privacy
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
-                  <NamedLink name="HowItWorksPage" className={css.link}>
-                    <FormattedMessage id="Footer.toHowItWorksPage" />
+                  <NamedLink name="TermsOfServicePage" className={css.link}>
+                    Terms
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
+                  <a href="https://help.trustmypetsitter.com/blog/" className={css.link}>
+                    Blog
+                  </a>
+                </li>
+                <li className={css.listItem}>
+                  <NamedLink name="ContactPage" className={css.link}>
+                    <FormattedMessage id="Footer.toContactPage" />
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
                   <NamedLink name="FaqPage" className={css.link}>
                     <FormattedMessage id="Footer.toFAQPage" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink name="ContactPage" className={css.link}>
-                    <FormattedMessage id="Footer.toContactPage" />
                   </NamedLink>
                 </li>
               </ul>

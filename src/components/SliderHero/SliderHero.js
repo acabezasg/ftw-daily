@@ -150,7 +150,7 @@ const SliderHero = () => (
      <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>24/7 and 1:1 Care</h1>
+        <h1 style={styles.fadeInUp}>24/7 Care and 1:1 Attention</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>

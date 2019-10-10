@@ -23,6 +23,7 @@
 }
 
 .sectionContent {
+  background-size: cover;
   margin: var(--LandingPage_sectionMarginTop) 24px 51px 24px;
 
   @media (--viewportMedium) {

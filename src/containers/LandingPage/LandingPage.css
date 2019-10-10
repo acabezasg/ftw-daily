@@ -10,7 +10,7 @@
     since browsers support CSS Properties already.
  */
 
-  --LandingPage_sectionMarginTop: 40px;
+  --LandingPage_sectionMarginTop: 145px;
   --LandingPage_sectionMarginTopMedium: 60px;
   --LandingPage_sectionMarginTopLarge: 94px;
 }
@@ -112,8 +112,10 @@
   margin-top: -1px;
  }
 
-.section:nth-of-type(2n) { 
-  background-color: #f7f7f7;
+.section:nth-child(2) { 
+  background: url(https://i.imgur.com/PrL2UOe.png);
+  background-size: cover;
+  background-position: center;
  }
 
  .section:nth-child(4) { 
@@ -240,4 +242,5 @@
 .howtitle {
   text-align: center;
   margin-bottom: 40px;
+  color: #fff;
 }
