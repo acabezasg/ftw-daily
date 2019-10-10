@@ -47,7 +47,7 @@ const SliderHero = () => (
     <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Changing the way Pet Lovers<br />think about travel</h1>
+        <h1 style={styles.fadeInUp}>Love Pets ♥ Love Travel</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>
@@ -71,7 +71,7 @@ const SliderHero = () => (
       <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Changing the way Pet Lovers<br />think about travel</h1>
+        <h1 style={styles.fadeInUp}>Pets are Happiest at Home</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>
@@ -96,7 +96,7 @@ const SliderHero = () => (
       <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Changing the way Pet Lovers<br />think about travel</h1>
+        <h1 style={styles.fadeInUp}>Our Professional Sitters come to you</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>
@@ -126,7 +126,7 @@ const SliderHero = () => (
      <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Changing the way Pet Lovers<br />think about travel</h1>
+        <h1 style={styles.fadeInUp}>For short and long term sits</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>
@@ -150,7 +150,7 @@ const SliderHero = () => (
      <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Changing the way Pet Lovers<br />think about travel</h1>
+        <h1 style={styles.fadeInUp}>24/7 and 1:1 Care</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>

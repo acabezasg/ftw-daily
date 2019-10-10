@@ -19,7 +19,7 @@ const SectionHero = props => {
       <div className={css.heroContent}>
         <div className={css.heroHalf}>
         <h1 className={css.heroMainTitle}>
-          <span>Changing the way Pet Lovers think about travel</span>
+          <span>Love Pets ♥ Love Travel</span>
         </h1>
         <p className={css.seperatorText}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
