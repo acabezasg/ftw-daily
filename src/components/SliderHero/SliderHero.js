@@ -3,6 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { render } from "react-dom";
 import { fadeInUp, fadeInLeft, fadeInRight } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
+import { NamedLink } from '../../components';
 
 import css from './SliderHero.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
