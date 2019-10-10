@@ -217,13 +217,13 @@ export default function CustomizedSteppers() {
       </Stepper>
       <div className={css.flexContainer}>
         <div className={css.flexItem}>
-        <span>Browse and contact Pet Sitter to find your pets perfect match.</span>
+        <span> We offer a wider choice of local, national and international pet sitters.</span>
         </div>
         <div className={css.flexItem}>
-        <span>Make a booking and pay online. All bookings are covered by 24/7 Veterinary Advice and Emergency Insurance.</span>
+        <span>Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7 Vet Advice and Emergency Insurance.</span>
         </div>
         <div className={css.flexItem}>
-        <span>Your Pets stay safe in their own familiar enviroment.</span>
+        <span>Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar space.</span>
         </div>
       </div>
     <div className={css.lastbtn}>

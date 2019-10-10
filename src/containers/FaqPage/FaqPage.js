@@ -6,6 +6,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
+  NamedLink
 
 } from '../../components';
 
@@ -33,29 +34,29 @@ const FaqPage = () => {
     <LayoutWrapperMain className={css.staticPageWrapper}>
       <div className={css.sectionContent}>
       
-      <a href="/pet-owner-faq"> 
+      <NamedLink name="PetOwnersPage">
        <div className={css.faqBg} id="faqBg">
         <div className={css.spanContainer} id="spanContainer">
          <span>Pet <span className={css.spanMain}>Owners</span> Corner</span>
         </div>
        </div>
-      </a>
+      </NamedLink>
 
-      <a href="/pet-sitter-faq"> 
+      <NamedLink name="PetSittersPage"> 
        <div className={css.faqBg2} id="faqBg2">
         <div className={css.spanContainer} id="spanContainer2">
          <span>Pet <span className={css.spanMain}>Sitter</span> Corner</span>
         </div>
        </div>
-      </a>
+      </NamedLink>
 
-      <a href="/pet-services-faq"> 
+      <NamedLink name="PetServicesPage"> 
        <div className={css.faqBg3} id="faqBg3">
         <div className={css.spanContainer} id="spanContainer3">
          <span>Pet <span className={css.spanMain}>Services</span> Corner</span>
         </div>
        </div>
-      </a>
+      </NamedLink>
        
        </div>
       </LayoutWrapperMain>

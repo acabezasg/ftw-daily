@@ -52,7 +52,7 @@ const SliderHero = () => (
 
          <div className={css.submitContainer}>
          
-            <a style={stylesLeft.fadeInLeft} href="/s?pub_user_type=1">Find a Pet Sitter</a> 
+            <NamedLink style={stylesLeft.fadeInLeft} name="SearchPetSitter">Find a Pet Sitter</NamedLink> 
             <a style={stylesRight.fadeInRight} href="/s?pub_user_type=0">Find Homes to Sit</a>
 
           </div>
