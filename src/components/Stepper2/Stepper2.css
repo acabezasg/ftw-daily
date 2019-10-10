@@ -9,13 +9,45 @@
 .flexContainer {
 	text-align: center;
 	display: flex;
+	margin-top: 25px;
+}
+
+.lastbtn {
+	margin-top: 55px;
+	text-align: center;
+}
+
+.signUp {
+	background-color: rgb(65,166,223);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.signUp:hover {
+    background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+    color: #fff;
+    text-decoration: none !important;
 }
 
 .flexItem {
 	width: 33%;
 	flex: 0 0 33%;
 	text-align: center;
-	padding: 30px;
+	padding: 15px 30px;
+}
+
+.flexItem span {
+	position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stepTitle {
+	font-weight: 600;
 }
 
 .flexItem:nth-child(1), .flexItem:nth-child(2) {

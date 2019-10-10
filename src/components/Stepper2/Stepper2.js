@@ -86,14 +86,14 @@ const ColorlibConnector = withStyles({
   },
   active: {
     '& $line': {
-      backgroundImage:
-        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)',
+      background:
+        '#41a6df',
     },
   },
   completed: {
     '& $line': {
-      backgroundImage:
-        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)',
+      background:
+        '#41a6df',
     },
   },
   line: {
@@ -117,13 +117,13 @@ const useColorlibStepIconStyles = makeStyles({
     alignItems: 'center',
   },
   active: {
-    backgroundImage:
-      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
+    background:
+      '#41a6df',
     boxShadow: '0 4px 10px 0 rgba(0,0,0,.25)',
   },
   completed: {
-    backgroundImage:
-      'linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)',
+    background:
+      '#41a6df',
   },
 });
 
@@ -169,7 +169,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return ['Browse Pet Sitters', 'Make a Booking', 'Your Pets stay safe'];
+  return [(<span className={css.stepTitle}>Browse Pet Sitters</span>), (<span className={css.stepTitle}>Make a Booking</span>), (<span className={css.stepTitle}>Your Pets stay safe</span>)];
 }
 
 function getStepContent(step) {
@@ -224,6 +224,9 @@ export default function CustomizedSteppers() {
         <span>Your Pets stay safe in their own familiar enviroment.</span>
         </div>
       </div>
+    <div className={css.lastbtn}>
+      <a className={css.signUp} href="signup">Start Now</a>
+    </div>
     </div>
   );
 }
