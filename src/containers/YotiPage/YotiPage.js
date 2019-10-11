@@ -58,7 +58,7 @@ const YotiPage = () => {
       <div className={css.whatwedoLeft}>
 
           <h2 className={css.h2FirstChild}>
-            What is Yoti and how do we use it?
+            What is YOTI and how do we use it?
           </h2>
 
           <p>
@@ -120,8 +120,22 @@ const YotiPage = () => {
             To verify your account and all your future listings with Yoti simply <a href="profile-settings">Go to your Profile</a> and click the Yoti Verification button.
           </p>
 
-          <p className={css.morespace}>
+          <p>
             After you have followed the steps above and passed the verification, your profile will show an ID Verified badge and you will be able to post new listings.
+          </p>
+
+          <h2>Why Trust My Pet Sitter chose YOTI.com as our Digital ID Partner?</h2>
+
+          <p>
+            YOTI is a biometric identity app. It works by allowing you to set up a trusted, genuine and verified digital identity. The biometrics are a key part of making sure we keep out fake identities and documents. The biometrics also make sure that it really is you taking actions in the app.
+          </p>
+
+          <p>
+            The way YOTI build their solutions is different to other tech companies. With YOTI, you are in full control of your data. Your personal details are encrypted into unreadable data that can only be unlocked by your YOTI app. Nobody else can access or decipher it, not even their staff.
+          </p>
+
+          <p>
+            YOTI cannot mine and sell your data to third parties, nor share any details without your approval. You’re in control to securely share specific details, never your whole identity.
           </p>
         </div>
 
