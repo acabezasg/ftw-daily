@@ -114,11 +114,10 @@ export const LandingPageComponent = props => {
                     <h2>Our Community</h2>
 
                     <p>
-                      Make new friends among our community of like minded pet lovers, both near and
-                      far!
+                      We use industry leading ID verification to confirm the identity of both our Pet Sitters and Pet Owners
                     </p>
 
-                    <NamedLink name="SignupPage">Start Now</NamedLink>
+                    <NamedLink name="YotiPage">Learn More</NamedLink>
                   </div>
                 </div>
               </div>

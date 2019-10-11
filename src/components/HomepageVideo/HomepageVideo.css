@@ -1,8 +1,16 @@
 @import '../../marketplace.css';
 
+@media (min-width: 650px) {
 .videoContainer {
     height: auto;
     width: 600px;
+    margin: 0 auto;
+    margin-top: 57px;
+}
+}
+
+.videoContainer {
+    height: auto;
     margin: 0 auto;
     margin-top: 57px;
 }
