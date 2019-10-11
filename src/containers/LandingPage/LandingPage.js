@@ -103,21 +103,21 @@ export const LandingPageComponent = props => {
                     <h2>In Safe Hands</h2>
 
                     <p>
-                      We conduct stringent ID Verification checks to ensure the safety of your pets
+                      We use industry leading ID verification to confirm the identity of both our Pet Sitters and Pet Owners
                       and your home
                     </p>
 
-                    <NamedLink name="SignupPage">Start Now</NamedLink>
+                    <NamedLink name="YotiPage">Learn More</NamedLink>
                   </div>
 
                   <div className={css.whyContainer}>
                     <h2>Our Community</h2>
 
                     <p>
-                      We use industry leading ID verification to confirm the identity of both our Pet Sitters and Pet Owners
+                      Make new friends among our community of like minded pet lovers, who come from Local, National and International Locations
                     </p>
 
-                    <NamedLink name="YotiPage">Learn More</NamedLink>
+                    <NamedLink name="SignupPage">Start Now</NamedLink>
                   </div>
                 </div>
               </div>

@@ -124,6 +124,8 @@ const YotiPage = () => {
             After you have followed the steps above and passed the verification, your profile will show an ID Verified badge and you will be able to post new listings.
           </p>
 
+          <hr />
+
           <h2>Why Trust My Pet Sitter chose YOTI.com as our Digital ID Partner?</h2>
 
           <p>
