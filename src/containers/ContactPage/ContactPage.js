@@ -8,6 +8,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
+  Map
   // ExternalLink,
 } from '../../components';
 
@@ -41,6 +42,7 @@ const ContactPage = () => {
           <ContactForm />
 
           <GoogleMap />
+          <Map />
 
           </div>
 

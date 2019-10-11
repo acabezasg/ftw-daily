@@ -69,7 +69,7 @@
 /* Square corners for the last section if it's even */
 .section:nth-of-type(2n):last-of-type {
   @media (--viewportMedium) {
-    border-radius: 4px 4px 0 0;
+    
   }
 }
 
@@ -77,11 +77,12 @@
 .section:nth-of-type(2n) {
   background-color: var(--matterColorLight);
   @media (--viewportMedium) {
-    border-radius: 4px;
+    
   }
 }
 
 .sectionContent {
+  position: relative;
   margin: var(--LandingPage_sectionMarginTop) 24px 51px 24px;
 
   @media (--viewportMedium) {
@@ -113,10 +114,21 @@
  }
 
 .section:nth-child(2) { 
-  background: url(https://i.imgur.com/PrL2UOe.png);
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
+  url(https://i.imgur.com/IQEzaom.png);
   background-size: cover;
   background-position: center;
+  position: relative;
  }
+
+.section:nth-child(2):before {
+  content: "";
+  position: absolute;
+  width : 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(6px);
+}
 
  .section:nth-child(4) { 
   background-color: #f7f7f7;

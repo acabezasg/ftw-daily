@@ -18,7 +18,8 @@ import {
   Footer,
   SliderHero,
   HomepageVideo,
-  Stepper2
+  Stepper2,
+  NamedLink
 } from '../../components';
 import { TopbarContainer } from '../../containers';
 
@@ -106,7 +107,7 @@ export const LandingPageComponent = props => {
                       and your home
                     </p>
 
-                    <a href="signup">Start Now</a>
+                    <NamedLink name="SignupPage">Start Now</NamedLink>
                   </div>
 
                   <div className={css.whyContainer}>
@@ -117,7 +118,7 @@ export const LandingPageComponent = props => {
                       far!
                     </p>
 
-                    <a href="signup">Start Now</a>
+                    <NamedLink name="SignupPage">Start Now</NamedLink>
                   </div>
                 </div>
               </div>

@@ -17,6 +17,19 @@
 	text-align: center;
 }
 
+.lastbtn a {
+	background-color: #fff;
+    color: rgb(65,166,223);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.lastbtn a:hover {
+	background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
 .signUp {
 	background-color: rgb(65,166,223);
     color: #fff;

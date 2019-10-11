@@ -15,6 +15,7 @@ import EventAvailableOutlinedIcon from '@material-ui/icons/EventAvailableOutline
 import StepConnector from '@material-ui/core/StepConnector';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { NamedLink } from '../../components';
 import css from './Stepper2.css';
 
 const QontoConnector = withStyles({
@@ -227,7 +228,7 @@ export default function CustomizedSteppers() {
         </div>
       </div>
     <div className={css.lastbtn}>
-      <a className={css.signUp} href="signup">Start Now</a>
+      <NamedLink name="SignupPage">Start Now</NamedLink>
     </div>
     </div>
   );

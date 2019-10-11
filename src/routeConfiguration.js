@@ -136,6 +136,12 @@ const routeConfiguration = () => {
       component: props => <SearchPage {...props} tab="listings" />,
       loadData: SearchPage.loadData,
     },
+        {
+      path: '/s/?pub_user_type=0',
+      name: 'SearchPetOwner',
+      component: props => <SearchPage {...props} tab="listings" />,
+      loadData: SearchPage.loadData,
+    },
     {
       path: '/s/map',
       name: 'SearchMapPage',
