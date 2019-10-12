@@ -218,7 +218,7 @@ export default function CustomizedSteppers() {
       </Stepper>
       <div className={css.flexContainer}>
         <div className={css.flexItem}>
-        <span> We offer a wider choice of local, national and international pet sitters.</span>
+        <span>Trust My Pet Sitter introduces a wider choice of local, national and international pet sitters.</span>
         </div>
         <div className={css.flexItem}>
         <span>Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7 Vet Advice and Emergency Insurance.</span>
