@@ -83,7 +83,33 @@ export const LandingPageComponent = props => {
             <li className={css.section}>
               <div className={css.sectionContent}>
               <h1 className={css.howtitle}>How it Works</h1>
+
                 <Stepper2 />
+
+            <div className={css.firstchistepper}>
+              <span className={css.step}>1</span>
+              <h2>Choose Pet Sitter</h2>
+              <p>Trust My Pet Sitter introduces a wider choice of local, national and international pet sitters.</p>
+            </div>
+
+            <div className={css.mobileStepper}>
+              <span className={css.step}>2</span>
+              <h2>Book Pet Sitter</h2>
+              <p>Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7 Vet Advice and Emergency Insurance</p>
+            </div>
+
+            <div className={css.mobileStepper}>
+              <span className={css.step}>3</span>
+              <h2>Pets are Happy at Home</h2>
+              <p>Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar space.</p>
+            
+            <div className={css.mobbt}>
+              <a href="/signup">Start Now</a>
+            </div>
+          </div>
+
+
+
               </div>
             </li>
 {/* 

@@ -8,17 +8,17 @@
 }
 
 .sectionContent {
-  margin: 140px 24px 51px 24px;
+    margin: 70px 20px;
 
   @media (--viewportMedium) {
     max-width: 100%;
-    margin: 140px 24px 60px 24px;
+    margin: 80px 100px;
   }
 
   @media (--viewportLarge) {
     max-width: 1128px;
     padding: 0 36px 0 36px;
-    margin: 140px auto 90px auto;
+    margin: 80px 100px;
   }
 
   @media (--viewportXLarge) {
@@ -26,6 +26,7 @@
     padding: 0;
   }
 }
+
 
 .leftAnchors {
 	width: 20%;
@@ -202,4 +203,10 @@ input[type='checkbox'] {
 
 .sectionContent a {
   text-decoration: none !important;
+}
+
+@media (max-width: 650px) {
+  .pageInfo {
+    display: none !important;
+  }
 }

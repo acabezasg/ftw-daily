@@ -2,6 +2,12 @@
 	text-align: center;
 }
 
+@media (max-width: 700px) {
+	.root {
+		display: none;
+	}
+}
+
 .class {
 	background: transparent !important;
 }
@@ -67,4 +73,10 @@
 
 .flexItem:nth-child(1), .flexItem:nth-child(2) {
 	border-right: 1px solid rgb(255,255,255,.5);
+}
+
+@media (max-width: 700px) {
+  .disable {
+    display: none;
+  }
 }

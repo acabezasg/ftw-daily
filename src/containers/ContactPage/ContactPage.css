@@ -7,11 +7,11 @@
 .staticPageWrapper {
   width: calc(100% - 48px);
   max-width: 1056px;
-  margin: 120px auto;
+  margin: 60px auto;
 
   @media (--viewportMedium) {
     width: calc(100% - 72px);
-    margin: 120px auto 120px;
+    margin: 60px auto 100px;
   }
 }
 

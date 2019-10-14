@@ -113,6 +113,17 @@
   margin-top: -1px;
  }
 
+@media (max-width: 700px) {
+ .section:nth-child(2) {
+  background-image: inherit !important;
+  background-color: #f7f7f7;
+ }
+ 
+.howtitle {
+  color: #4a4a4a !important;
+  margin: 50px 0 !important;
+  }}
+
 .section:nth-child(2) { 
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
   url(https://i.imgur.com/IQEzaom.png);
@@ -256,3 +267,50 @@
   margin-bottom: 24px;
   color: #fff;
 }
+
+.step {
+  background: #41a6df;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 3.6em;
+  margin-right: 5px;
+  text-align: center;
+  font-size: 21px;
+  width: 3.6em;
+}
+
+.mobbt {
+  position: relative;
+  top: 15px;
+}
+
+.mobbt a {
+  background-color: #fff;
+  color: rgb(65,166,223);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.mobileStepper {
+  text-align: center;
+}
+
+.mobileStepper p, .firstchistepper p {
+  padding: 10px 0 40px;
+}
+
+.firstchistepper {
+  padding-top: 15px;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .mobileStepper, .firstchistepper {
+    display: none;
+  }
+}
+

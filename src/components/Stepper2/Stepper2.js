@@ -208,7 +208,7 @@ export default function CustomizedSteppers() {
 
   return (
     <div className={classes.root}>
-
+     <div className={css.disable}>
       <Stepper className={css.class} alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
         {steps.map(label => (
           <Step key={label}>
@@ -229,6 +229,7 @@ export default function CustomizedSteppers() {
       </div>
     <div className={css.lastbtn}>
       <NamedLink name="SignupPage">Start Now</NamedLink>
+    </div>
     </div>
     </div>
   );
