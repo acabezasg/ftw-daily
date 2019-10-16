@@ -90,14 +90,12 @@ const ColorlibConnector = withStyles({
   },
   active: {
     '& $line': {
-      background:
-        '#41a6df',
+      background: '#41a6df',
     },
   },
   completed: {
     '& $line': {
-      background:
-        '#41a6df',
+      background: '#41a6df',
     },
   },
   line: {
@@ -121,13 +119,11 @@ const useColorlibStepIconStyles = makeStyles({
     alignItems: 'center',
   },
   active: {
-    background:
-      '#41a6df',
+    background: '#41a6df',
     boxShadow: '0 4px 10px 0 rgba(0,0,0,.25)',
   },
   completed: {
-    background:
-      '#41a6df',
+    background: '#41a6df',
   },
 });
 
@@ -173,17 +169,31 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return [(<span className={css.stepTitle}>Choose Pet Sitter</span>), (<span className={css.stepTitle}>Book Pet Sitter</span>), (<span className={css.stepTitle}>Pets are Happy at Home</span>)];
+  return [
+    <span className={css.stepTitle}>Choose Pet Sitter</span>,
+    <span className={css.stepTitle}>Book Pet Sitter</span>,
+    <span className={css.stepTitle}>Pets are Happy at Home</span>,
+  ];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return (<p>We offer a wider choice of local, national and international pet sitters.</p>);
+      return <p>We offer a wider choice of local, national and international pet sitters.</p>;
     case 1:
-      return (<p>Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7 Vet Advice and Emergency Insurance.</p>);
+      return (
+        <p>
+          Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7
+          Vet Advice and Emergency Insurance.
+        </p>
+      );
     case 2:
-      return (<p>Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar space.</p>);
+      return (
+        <p>
+          Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar
+          space.
+        </p>
+      );
     default:
       return 'Unknown step';
   }
@@ -208,29 +218,43 @@ export default function CustomizedSteppers() {
 
   return (
     <div className={classes.root}>
-     <div className={css.disable}>
-      <Stepper className={css.class} alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
-        {steps.map(label => (
-          <Step key={label}>
-            <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-      <div className={css.flexContainer}>
-        <div className={css.flexItem}>
-        <span>Trust My Pet Sitter introduces a wider choice of local, national and international pet sitters.</span>
+      <div className={css.disable}>
+        <Stepper
+          className={css.class}
+          alternativeLabel
+          activeStep={activeStep}
+          connector={<ColorlibConnector />}
+        >
+          {steps.map(label => (
+            <Step key={label}>
+              <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+            </Step>
+          ))}
+        </Stepper>
+        <div className={css.flexContainer}>
+          <div className={css.flexItem}>
+            <span>
+              Trust My Pet Sitter introduces a wider choice of local, national and international pet
+              sitters.
+            </span>
+          </div>
+          <div className={css.flexItem}>
+            <span>
+              Book your Pet Sitter using our secure payment provider. All bookings are covered by
+              24/7 Vet Advice and Emergency Insurance.
+            </span>
+          </div>
+          <div className={css.flexItem}>
+            <span>
+              Your Pet stays home with our verified Pet Sitter, happy and secure in their own
+              familiar space.
+            </span>
+          </div>
         </div>
-        <div className={css.flexItem}>
-        <span>Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7 Vet Advice and Emergency Insurance.</span>
-        </div>
-        <div className={css.flexItem}>
-        <span>Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar space.</span>
+        <div className={css.lastbtn}>
+          <NamedLink name="SignupPage">Start Now</NamedLink>
         </div>
       </div>
-    <div className={css.lastbtn}>
-      <NamedLink name="SignupPage">Start Now</NamedLink>
-    </div>
-    </div>
     </div>
   );
 }
