@@ -230,7 +230,7 @@
 .inProgress {
   width: 12px;
   height: 12px;
-  stroke: var(--matterColor);
+  stroke: #fff;
   stroke-width: 3px;
 }
 
