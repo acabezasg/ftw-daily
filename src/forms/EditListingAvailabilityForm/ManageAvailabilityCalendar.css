@@ -142,6 +142,10 @@
   }
 }
 
+.CalendarDay__selected .dayNumber:after {
+  background: red !important;
+}
+
 .dayWrapper {
   position: relative;
   width: 100%;
@@ -198,7 +202,7 @@
     /* underline */
     &:after {
       position: absolute;
-      content: '';
+      content: ;
       height: 2px;
       width: 100%;
       right: 0;
@@ -230,7 +234,7 @@
 .inProgress {
   width: 12px;
   height: 12px;
-  stroke: #fff;
+  stroke: var(--matterColor);
   stroke-width: 3px;
 }
 
