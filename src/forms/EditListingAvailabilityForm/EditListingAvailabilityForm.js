@@ -7,8 +7,6 @@ import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { Form, Button } from '../../components';
 
-import Calendar from '../../components/Calendar/Calendar.js';
-
 import ManageAvailabilityCalendar from './ManageAvailabilityCalendar';
 import css from './EditListingAvailabilityForm.css';
 
@@ -33,7 +31,6 @@ export class EditListingAvailabilityFormComponent extends Component {
             availability,
             availabilityPlan,
             listingId,
-            user_name,
           } = fieldRenderProps;
 
           const errorMessage = updateError ? (
@@ -51,37 +48,22 @@ export class EditListingAvailabilityFormComponent extends Component {
             <Form className={classes} onSubmit={handleSubmit}>
               {errorMessage}
               <div className={css.calendarWrapper}>
-                {user_name == 'owner' ? (
-                  <Calendar
-                    onUpdate={value => {
-                      this.props.setRequiredDates(value);
-                    }}
-                    publicData={this.props.publicData}
-                    submitInProgress={submitInProgress}
-                    submitDisabled={submitDisabled}
-                    submitReady={submitReady}
-                    saveActionMsg={saveActionMsg}
-                  />
-                ) : (
-                  <div>
-                    <ManageAvailabilityCalendar
-                      availability={availability}
-                      availabilityPlan={availabilityPlan}
-                      listingId={listingId}
-                      user_name={user_name}
-                    />
-                    <Button
-                      className={css.submitButton}
-                      type="submit"
-                      inProgress={submitInProgress}
-                      disabled={submitDisabled}
-                      ready={submitReady}
-                    >
-                      {saveActionMsg}
-                    </Button>
-                  </div>
-                )}
+                <ManageAvailabilityCalendar
+                  availability={availability}
+                  availabilityPlan={availabilityPlan}
+                  listingId={listingId}
+                />
               </div>
+
+              <Button
+                className={css.submitButton}
+                type="submit"
+                inProgress={submitInProgress}
+                disabled={submitDisabled}
+                ready={submitReady}
+              >
+                {saveActionMsg}
+              </Button>
             </Form>
           );
         }}
