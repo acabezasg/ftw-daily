@@ -82,7 +82,7 @@ const estimatedTransaction = (unitType, bookingStart, bookingEnd, unitPrice, qua
     ? weeksBetween(bookingStart, bookingEnd)
     : isUnit
     ? quantity
-    : null;
+    : quantity;
 
   const totalPrice = estimatedTotalPrice(unitPrice, unitCount);
 
