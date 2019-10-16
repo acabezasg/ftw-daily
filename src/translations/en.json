@@ -21,6 +21,8 @@
   "AuthenticationPage.fixEmailLinkText": "Fix it",
   "AuthenticationPage.loginFailed": "The email and password you entered did not match our records. Please double-check and try again.",
   "AuthenticationPage.loginLinkText": "Login",
+  "EditListingAvailabilityForm.pastDate": "Past Dates",
+  "EditListingAvailabilityForm.blockedDay": "Not Available",
   "AuthenticationPage.resendEmail": "Didn't get the email? {resendEmailLink}.",
   "AuthenticationPage.resendEmailLinkText": "Resend it",
   "AuthenticationPage.resendFailed": "Resending verification email failed. Please try again.",
@@ -265,7 +267,7 @@
   "EditListingHomePanel.title.service": "Edit home of {listingTitle}",
 
   "EditListingAvailabilityForm.fetchMonthDataFailed": "Oops, couldn't load data for {month}, please try again.",
-  "EditListingAvailabilityForm.availableDay": "Not Required",
+  "EditListingAvailabilityForm.availableDay": "Available",
   "EditListingAvailabilityForm.blockedDay.owner": "Not yet booked",
   "EditListingAvailabilityForm.blockedDay.sitter": "Not available",
   "EditListingAvailabilityForm.blockedDay.service": "Not available",

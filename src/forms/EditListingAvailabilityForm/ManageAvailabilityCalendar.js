@@ -18,8 +18,7 @@ import {
 import { DAYS_OF_WEEK } from '../../util/types';
 import { monthIdString, monthIdStringInUTC } from '../../util/dates';
 import { IconArrowHead, IconSpinner } from '../../components';
-import TimePicker  from './TimePicker';
-import config from '../../config';
+
 import css from './ManageAvailabilityCalendar.css';
 
 // Constants
@@ -34,7 +33,7 @@ const END_OF_RANGE_MOMENT = TODAY_MOMENT.clone()
 const END_OF_BOOKING_RANGE_MOMENT = TODAY_MOMENT.clone()
   .add(MAX_BOOKINGS_RANGE - 1, 'days')
   .startOf('day');
-const timePickerConfig = config.custom.timePickerConfig;
+
 // Constants for calculating day width (aka table cell dimensions)
 const TABLE_BORDER = 2;
 const TABLE_COLUMNS = 7;
@@ -43,12 +42,9 @@ const MIN_CELL_WIDTH = Math.floor(MIN_CONTENT_WIDTH / TABLE_COLUMNS); // 38
 const MAX_CONTENT_WIDTH_DESKTOP = 756;
 const MAX_CELL_WIDTH_DESKTOP = Math.floor(MAX_CONTENT_WIDTH_DESKTOP / TABLE_COLUMNS); // 108
 const VIEWPORT_LARGE = 1024;
-const _millisecond = 86400000;
+
 // Helper functions
-const parentId = 'mother';
-const childTag = 'child';
-const FILTER_DROPDOWN_OFFSET = -14;
-const initialHourRange = {minHour:12, maxHour:14};
+
 // Calculate the width for a calendar day (table cell)
 const dayWidth = (wrapperWidth, windowWith) => {
   if (windowWith >= VIEWPORT_LARGE) {
@@ -165,19 +161,17 @@ const dateModifiers = (availabilityPlan, exceptions, bookings, date) => {
   };
 };
 
-const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,clickHandler) => date => {
+const renderDayContents = (calendar, availabilityPlan) => date => {
   // This component is for day/night based processes. If time-based process is used,
   // you might want to deal with local dates using monthIdString instead of monthIdStringInUTC.
   const { exceptions = [], bookings = [] } = calendar[monthIdStringInUTC(date)] || {};
-  
   const { isOutsideRange, isSameDay, isBlocked, isBooked, isInProgress, isFailed } = dateModifiers(
     availabilityPlan,
     exceptions,
     bookings,
     date
   );
-  
-  
+
   const dayClasses = classNames(css.default, {
     [css.outsideRange]: isOutsideRange,
     [css.today]: isSameDay,
@@ -185,13 +179,10 @@ const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,cl
     [css.reserved]: isBooked,
     [css.exceptionError]: isFailed,
   });
- 
-  
-  
+
   return (
-    renderFlag?(
-      <div className={classNames(css.dayWrapper,css.active)}>
-      <span className={dayClasses} id={date.unix()} onMouseEnter={enterHandler} onMouseDown={clickHandler}>
+    <div className={css.dayWrapper}>
+      <span className={dayClasses}>
         {isInProgress ? (
           <IconSpinner rootClassName={css.inProgress} />
         ) : (
@@ -199,18 +190,6 @@ const renderDayContents = (calendar, availabilityPlan,renderFlag,enterHandler,cl
         )}
       </span>
     </div>
-    ):
-    (
-      <div className={css.dayWrapper}>
-        <span className={dayClasses} id={date.unix()} child='true' >
-          {isInProgress ? (
-            <IconSpinner rootClassName={css.inProgress} />
-          ) : (
-            <span className={css.dayNumber}>{date.format('D')}</span>
-          )}
-        </span>
-    </div>
-    )
   );
 };
 
@@ -234,74 +213,15 @@ class ManageAvailabilityCalendar extends Component {
       currentMonth: moment().startOf('month'),
       focused: true,
       date: null,
-      _renderFlag:false,
-      startId:null,
-      hover:false,
-      chosenDates:[],
     };
-    this.span = React.createRef();
+
     this.fetchMonthData = this.fetchMonthData.bind(this);
     this.onDayAvailabilityChange = this.onDayAvailabilityChange.bind(this);
     this.onDateChange = this.onDateChange.bind(this);
     this.onFocusChange = this.onFocusChange.bind(this);
-    this.cleanHandler = this.cleanHandler.bind(this);
     this.onMonthClick = this.onMonthClick.bind(this);
-    this.mouseHandler = this.mouseHandler.bind(this);
-    this.setAvailabilityEx = this.setAvailabilityEx.bind(this);
   }
-  fillChosenDates(isBlocked,date){
-    if(isBlocked){
-      const _date = {year:date.year(),month:date.month(),day:date.date()};
-      this.setState(prevState=>({
-        chosenDates: [...prevState.chosenDates, _date]
-      }));
-    }
-  }
-  cleanHandler(){
-    var motherEmt = document.getElementById(parentId);
-    var childAry = motherEmt.querySelectorAll('span');
-    childAry.forEach(function(e){
-      if(e.hasAttribute('id')){
-        e.removeAttribute('style');
-      }
-    })
-    this.setState({_renderFlag:false,startId:null});
-  }
-  handleTime(){
-    alert('this');
-  }
-  mouseHandler(e){
-    e.preventDefault();
-    var targetId = parseInt(e.target.id);
-    
-    if(this.state._renderFlag && targetId >= this.state.startId){
-      var motherEmt = document.getElementById(parentId);
-      var childAry = motherEmt.querySelectorAll('span');
-      childAry.forEach(function(e){
-        if(e.hasAttribute('id')){
-          e.removeAttribute('style');
-        }
-      })
 
-      var targetDate = moment.unix(targetId);
-      var startDate = moment.unix(this.state.startId);
-      var diff = targetDate.diff(startDate,'days');
-      
-      for(var i= 0;i<=diff;i++){
-        var id = startDate.unix();      
-        var emt = motherEmt.querySelectorAll('span[id="'+String(id)+'"]');
-  
-        if(emt.length){
-          emt.forEach(function(e){
-            e.style.backgroundColor = '#4eb5ed';
-          })
-        }
-        startDate.add('days',1);
-      }
-    }
-  }
-  
-  
   componentDidMount() {
     // Fetch month data if user have navigated to availability tab in EditListingWizard
     this.fetchMonthData(this.state.currentMonth);
@@ -386,61 +306,13 @@ class ManageAvailabilityCalendar extends Component {
   }
 
   onDateChange(date) {
-    var flag = this.state._renderFlag;
-    
-    if(!flag){
-      this.setState({ date });
-      const startId= date.unix();
-      this.setState({ startId: startId});
-      this.setState({_renderFlag: !flag });
-      
-      var motherEmt = document.getElementById(parentId);
-      var emt = motherEmt.querySelectorAll('span[id="'+String(startId)+'"]');
-       
-      if(emt.length){
-        emt.forEach(function(e){
-          e.style.backgroundColor = '#4eb5ed';
-        })
-      }
-    }else{
-      this.setState({_renderFlag: !flag });
-      var _date = this.state.date;
-      
-      if(_date == date){
-        this.setAvailability(_date);
-      }else{
-        if(_date > date) {
-          var temp;
-          temp = _date;
-          _date = date;
-          date = temp;
-        }
-          var loop_num = date.diff(_date,'days');
-          var temp = _date;
-        
-          for(var i = 0; i < loop_num; i++){
-            _date.add('days', 1);
-            this.setAvailabilityEx(temp);
-          }
-          _date.subtract('days', loop_num);
-          this.setAvailabilityEx(_date);
-        
-      }
- 
-      this.setState({date:null});
-      this.setState({ startId:null });
-      this.cleanHandler();
-    }
-  }
-  
+    this.setState({ date });
 
-  setAvailability(date){
     const { availabilityPlan, availability } = this.props;
     const calendar = availability.calendar;
     // This component is for day/night based processes. If time-based process is used,
     // you might want to deal with local dates using monthIdString instead of monthIdStringInUTC.
     const { exceptions = [], bookings = [] } = calendar[monthIdStringInUTC(date)] || {};
-    
     const { isPast, isBlocked, isBooked, isInProgress } = dateModifiers(
       availabilityPlan,
       exceptions,
@@ -454,31 +326,6 @@ class ManageAvailabilityCalendar extends Component {
     } else if (isBlocked) {
       // Unblock the date (seats = 1)
       this.onDayAvailabilityChange(date, 1, exceptions);
-    } else {
-      // Block the date (seats = 0)
-      this.onDayAvailabilityChange(date, 0, exceptions);
-    }
-  }
-
-  setAvailabilityEx(date){
-    const { availabilityPlan, availability } = this.props;
-    const calendar = availability.calendar;
-    // This component is for day/night based processes. If time-based process is used,
-    // you might want to deal with local dates using monthIdString instead of monthIdStringInUTC.
-    const { exceptions = [], bookings = [] } = calendar[monthIdStringInUTC(date)] || {};
-    const { isPast, isBlocked, isBooked, isInProgress } = dateModifiers(
-      availabilityPlan,
-      exceptions,
-      bookings,
-      date
-    );
-
-    if (isBooked || isPast || isInProgress) {
-      // Cannot allow or block a reserved or a past date or inProgress
-      return;
-    } else if (isBlocked) {
-      // Unblock the date (seats = 1)
-      this.onDayAvailabilityChange(date, 0, exceptions);
     } else {
       // Block the date (seats = 0)
       this.onDayAvailabilityChange(date, 0, exceptions);
@@ -525,7 +372,6 @@ class ManageAvailabilityCalendar extends Component {
       availabilityPlan,
       onMonthChanged,
       monthFormat,
-      user_name,
       ...rest
     } = this.props;
     const { focused, date, currentMonth } = this.state;
@@ -537,7 +383,6 @@ class ManageAvailabilityCalendar extends Component {
     const calendarGridWidth = daySize * TABLE_COLUMNS + TABLE_BORDER;
 
     const calendar = availability.calendar;
-    console.log('availability',availability);
     const currentMonthData = calendar[monthIdString(currentMonth)];
     const {
       fetchExceptionsInProgress,
@@ -559,15 +404,8 @@ class ManageAvailabilityCalendar extends Component {
           this.dayPickerWrapper = c;
         }}
       >
-        {/* <TimePicker
-          id="ManageAvailability.timePicker"
-          onSubmit={this.handleTime}
-          {...config.custom.timePickerConfig}
-          initialValues={initialHourRange}
-          contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
-         /> */}
         {width > 0 ? (
-          <div style={{ width: `${calendarGridWidth}px` }} id='mother' onMouseLeave={this.cleanHandler}>
+          <div style={{ width: `${calendarGridWidth}px` }}>
             <DayPickerSingleDateController
               {...rest}
               ref={c => {
@@ -578,7 +416,7 @@ class ManageAvailabilityCalendar extends Component {
               navNext={<IconArrowHead direction="right" />}
               weekDayFormat="ddd"
               daySize={daySize}
-              renderDayContents={renderDayContents(calendar, availabilityPlan,this.state._renderFlag,this.mouseHandler,this.clickHandler)}
+              renderDayContents={renderDayContents(calendar, availabilityPlan)}
               focused={focused}
               date={date}
               onDateChange={this.onDateChange}
@@ -606,13 +444,19 @@ class ManageAvailabilityCalendar extends Component {
           <div className={css.legendRow}>
             <span className={css.legendBlockedColor} />
             <span className={css.legendText}>
-            <FormattedMessage id={"EditListingAvailabilityForm.blockedDay."+user_name} />
+              <FormattedMessage id="EditListingAvailabilityForm.blockedDay" />
             </span>
           </div>
           <div className={css.legendRow}>
             <span className={css.legendReservedColor} />
             <span className={css.legendText}>
               <FormattedMessage id="EditListingAvailabilityForm.bookedDay" />
+            </span>
+          </div>
+          <div className={css.legendRow}>
+            <span className={css.legendPastColor} />
+            <span className={css.legendText}>
+              <FormattedMessage id="EditListingAvailabilityForm.pastDate" />
             </span>
           </div>
         </div>
@@ -676,4 +520,3 @@ ManageAvailabilityCalendar.propTypes = {
 };
 
 export default ManageAvailabilityCalendar;
-
