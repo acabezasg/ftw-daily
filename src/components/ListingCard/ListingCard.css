@@ -13,18 +13,6 @@
   }
 }
 
-.root:hover .cardCategory {
-  background: #F77D0E;
-}
-
-.root:hover .info {
-  background: #F77D0E;
-}
-
-.root:hover .yotiBadge {
-  background: #F77D0E;
-}
-
 .yotiBadge {
    position: absolute;
    z-index: 1;

@@ -5,18 +5,15 @@ import clsx from 'clsx';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import Check from '@material-ui/icons/Check';
-import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
-import BookIcon from '@material-ui/icons/Payment';
-import PetsIcon from '@material-ui/icons/Pets';
-import FaceOutlined from '@material-ui/icons/FaceOutlined';
-import SentimentSatisfiedAltOutlinedIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
-import EventAvailableOutlinedIcon from '@material-ui/icons/EventAvailableOutlined';
 import StepConnector from '@material-ui/core/StepConnector';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { NamedLink } from '../../components';
 import css from './Stepper2.css';
+import { FaSearchLocation } from 'react-icons/fa';
+import { FaCalendarCheck } from 'react-icons/fa';
+import { FaSmileBeam } from 'react-icons/fa';
+import { IconContext } from "react-icons";
 
 const QontoConnector = withStyles({
   alternativeLabel: {
@@ -74,7 +71,7 @@ function QontoStepIcon(props) {
         [classes.active]: active,
       })}
     >
-      {completed ? <Check className={classes.completed} /> : <div className={classes.circle} />}
+      {completed ? <FaSmileBeam className={classes.completed} /> : <div className={classes.circle} />}
     </div>
   );
 }
@@ -132,9 +129,9 @@ function ColorlibStepIcon(props) {
   const { active, completed } = props;
 
   const icons = {
-    1: <FaceOutlined />,
-    2: <EventAvailableOutlinedIcon />,
-    3: <SentimentSatisfiedAltOutlinedIcon />,
+    1: <FaSearchLocation size={27} />,
+    2: <FaCalendarCheck size={27} />,
+    3: <FaSmileBeam size={27} />,
   };
 
   return (
