@@ -866,6 +866,7 @@ body.video-react-full-window .video-react-fullscreen {
   width: auto;
   padding-left: 1em;
   padding-right: 1em;
+  font-family: 'Raleway', sans-serif;
 }
 .video-react .video-react-time-divider {
   line-height: 3em;

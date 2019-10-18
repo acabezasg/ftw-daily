@@ -12,7 +12,7 @@ import { NamedLink } from '../../components';
 import css from './Stepper2.css';
 import { FaSearchLocation } from 'react-icons/fa';
 import { FaCalendarCheck } from 'react-icons/fa';
-import { FaSmileBeam } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
 const QontoConnector = withStyles({
@@ -71,7 +71,7 @@ function QontoStepIcon(props) {
         [classes.active]: active,
       })}
     >
-      {completed ? <FaSmileBeam className={classes.completed} /> : <div className={classes.circle} />}
+      {completed ? <FaHome className={classes.completed} /> : <div className={classes.circle} />}
     </div>
   );
 }
@@ -108,8 +108,8 @@ const useColorlibStepIconStyles = makeStyles({
     backgroundColor: '#ccc',
     zIndex: 1,
     color: '#fff',
-    width: 50,
-    height: 50,
+    width: 55,
+    height: 55,
     display: 'flex',
     borderRadius: '50%',
     justifyContent: 'center',
@@ -130,8 +130,8 @@ function ColorlibStepIcon(props) {
 
   const icons = {
     1: <FaSearchLocation size={27} />,
-    2: <FaCalendarCheck size={27} />,
-    3: <FaSmileBeam size={27} />,
+    2: <FaCalendarCheck size={27} className={css.calendarIcon} />,
+    3: <FaHome size={28} />,
   };
 
   return (
