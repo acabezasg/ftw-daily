@@ -1,12 +1,13 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { StaticPage, TopbarContainer } from '../../containers';
+import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
+  NamedLink,
   
 } from '../../components';
 
@@ -117,7 +118,7 @@ const YotiPage = () => {
 
         <div className={css.contentdown}>
           <p>
-            To verify your account and all your future listings with Yoti simply <a href="profile-settings">Go to your Profile</a> and click the Yoti Verification button.
+            To verify your account and all your future listings with Yoti simply <NamedLink name="ProfileSettingsPage">Go to your Profile</NamedLink> and click the Yoti Verification button.
           </p>
 
           <p>
