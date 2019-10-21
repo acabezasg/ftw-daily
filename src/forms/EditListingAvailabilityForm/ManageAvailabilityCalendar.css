@@ -3,7 +3,7 @@
 :root {
   --ManageAvailabilityCalendar_gridColor: #e0e0e0;
   --ManageAvailabilityCalendar_availableColor: #41a6df;
-  --ManageAvailabilityCalendar_availableColorHover: #41a6df;
+  --ManageAvailabilityCalendar_availableColorHover: #5fafff;
   --ManageAvailabilityCalendar_blockedColor: #fff;
   --ManageAvailabilityCalendar_blockedColorHover: #41a6df;
   --ManageAvailabilityCalendar_reservedColor: #e6fff0;
@@ -224,9 +224,11 @@
 }
 
 .reserved {
+  color: #4a4a4a;
   background-color: var(--ManageAvailabilityCalendar_reservedColor);
 
   &:hover {
+    color: #4a4a4a !important;
     background-color: var(--ManageAvailabilityCalendar_reservedColorHover);
   }
 }
