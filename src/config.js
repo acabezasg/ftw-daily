@@ -34,11 +34,11 @@ const bookingProcessAlias = 'preauth-with-nightly-booking/release-1';
 
 // The transaction line item code for the main unit type in bookings.
 //
-// Possible values: ['n', 'd', 'line-item/units';]
+// Possible values: ['line-item/night', 'line-item/day', 'line-item/units';]
 //
 // Note: translations will use different translation keys for night, day or unit
 // depending on the value chosen.
-const bookingUnitType = 'line-item/day';
+const bookingUnitType = 'line-item/night';
 
 const bookingHour = 2;
 // Should the application fetch available time slots (currently defined as
