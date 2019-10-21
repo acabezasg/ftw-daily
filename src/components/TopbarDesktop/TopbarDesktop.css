@@ -180,6 +180,7 @@
 .inbox {
   @apply --TopbarDesktop_label;
   position: relative;
+  color: #000000;
 }
 
 .notificationDot {

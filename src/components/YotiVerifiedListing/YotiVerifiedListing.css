@@ -1,3 +1,7 @@
+.yotiVerified a:hover {
+  color: #41a6df !important;
+}
+
 .yotiVerified img {
   width: 28px;
 }

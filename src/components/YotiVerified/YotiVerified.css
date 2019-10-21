@@ -1,3 +1,7 @@
+.yotiVerified a:hover {
+  color: #41a6df !important;
+}
+
 .yotiVerified {
   margin-top: 10px;
   margin-bottom: 50px;
@@ -54,5 +58,9 @@
 .removelink {
   text-decoration: none !important;
   color: #000;
+}
+
+.removeLink:hover {
+  color: #41a6df !important;
 }
 
