@@ -9,8 +9,6 @@ import config from '../../config';
 import routeConfiguration from '../../routeConfiguration';
 import { pathByRouteName, findRouteByRouteName } from '../../util/routes';
 import { propTypes, LINE_ITEM_NIGHT, LINE_ITEM_DAY, DATE_TYPE_DATE } from '../../util/types';
-import { nightsBetween, daysBetween } from '../../util/dates';
-import { types as sdkTypes } from '../../util/sdkLoader';
 import {
   ensureListing,
   ensureCurrentUser,
@@ -59,8 +57,6 @@ import { storeData, storedData, clearData } from './CheckoutPageSessionHelpers';
 import css from './CheckoutPage.css';
 
 const STORAGE_KEY = 'CheckoutPage';
-
-const { Money } = sdkTypes;
 
 // Stripe PaymentIntent statuses, where user actions are already completed
 // https://stripe.com/docs/payments/payment-intents/status
@@ -195,43 +191,14 @@ export class CheckoutPageComponent extends Component {
       // Fetch speculated transaction for showing price in booking breakdown
       // NOTE: if unit type is line-item/units, quantity needs to be added.
       // The way to pass it to checkout page is through pageData.bookingData
-      fetchSpeculatedTransaction(
-        this.customPricingParams({
-          listing,
-          bookingStart: bookingStartForAPI,
-          bookingEnd: bookingEndForAPI,
-        })
-      );
+      fetchSpeculatedTransaction({
+        listingId,
+        bookingStart: bookingStartForAPI,
+        bookingEnd: bookingEndForAPI,
+      });
     }
 
     this.setState({ pageData: pageData || {}, dataLoaded: true });
-  }
-
-  customPricingParams(params) {
-    const { bookingStart, bookingEnd, listing, ...rest } = params;
-    const { amount, currency } = listing.attributes.price;
-
-    const unitType = config.bookingUnitType;
-    const isNightly = unitType === LINE_ITEM_NIGHT;
-
-    const quantity = isNightly
-      ? nightsBetween(bookingStart, bookingEnd)
-      : daysBetween(bookingStart, bookingEnd);
-
-    return {
-      listingId: listing.id,
-      bookingStart,
-      bookingEnd,
-      lineItems: [
-        {
-          code: unitType,
-          unitPrice: new Money(amount, currency),
-          quantity,
-        },
-      ],
-      cardToken: 'tok_mastercard',
-      ...rest,
-    };
   }
 
   handlePaymentIntent(handlePaymentParams) {
@@ -403,12 +370,12 @@ export class CheckoutPageComponent extends Component {
         ? { setupPaymentMethodForSaving: true }
         : {};
 
-    const orderParams = this.customPricingParams({
-      listing: pageData.listing,
+    const orderParams = {
+      listingId: pageData.listing.id,
       bookingStart: tx.booking.attributes.start,
       bookingEnd: tx.booking.attributes.end,
       ...optionalPaymentParams,
-    });
+    };
 
     return handlePaymentIntentCreation(orderParams);
   }
