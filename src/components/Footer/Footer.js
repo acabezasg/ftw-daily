@@ -8,6 +8,8 @@ import {
   IconSocialMediaFacebook,
   IconSocialMediaInstagram,
   IconSocialMediaTwitter,
+  IconSocialMediaPinterest,
+  IconSocialMediaLinkedin,
   // Logo,
   ExternalLink,
   NamedLink,
@@ -240,7 +242,33 @@ const Footer = props => {
               </ul>
             </div>
             <div className={css.extraLinks}>
-              <div className={css.someLinks}>{socialMediaLinks}</div>
+              <div className={css.someLinks}>{socialMediaLinks}
+              
+              <ExternalLink
+                href="https://instagram.com/trustmypetsitter"
+                className={css.icon}
+                title="Go to Instagram page"
+              >
+                  <IconSocialMediaInstagram />
+              </ExternalLink>
+
+              <ExternalLink
+                href="https://pinterest.com/trustmypetsitter"
+                className={css.icon}
+                title="Go to Pinterest page"
+              >
+                <IconSocialMediaPinterest />
+              </ExternalLink>
+
+              <ExternalLink
+                href="https://linkedin.com/company/19270133"
+                className={css.icon}
+                title="Go to Linkedin page"
+              >
+                <IconSocialMediaLinkedin />
+              </ExternalLink>
+
+              </div>
               <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
                   <li>
