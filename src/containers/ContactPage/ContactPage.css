@@ -92,6 +92,7 @@
 .contentWrapper textarea {
   padding: 0;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .staticPageWrapper h1 {

@@ -4,6 +4,6 @@
   fill: #fff;
   transition: var(--transitionStyleButton);
   &:hover {
-    fill: #5851db; 
+    fill: #FF0000;
   }
 }

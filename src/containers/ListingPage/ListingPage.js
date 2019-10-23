@@ -42,7 +42,7 @@ import {
   YotiVerifiedListing,
 } from '../../components';
 import { TopbarContainer, NotFoundPage } from '../../containers';
-
+import ReactTooltip from 'react-tooltip';
 import { sendEnquiry, loadData, setInitialValues } from './ListingPage.duck';
 import SectionImages from './SectionImages';
 import SectionAvatar from './SectionAvatar';
@@ -525,8 +525,9 @@ export class ListingPageComponent extends Component {
                     user_type={user_type}
                     rate={rate}
                   />
+
                   {currentListing.attributes.publicData.requiredDates ? (
-                        <div className={css.reqdates}>
+                        <div className={css.reqdates} data-tip>
                           <h2 className={css.reqTitle}>Required Dates</h2>
                           <p>
                             <img className={css.mobileDates} src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
@@ -602,9 +603,19 @@ export class ListingPageComponent extends Component {
                           Contact <span className={css.username}>{makeContact}</span>
                         </h2>
                       </div>
-                          <p className={css.bookingTime}>
+                          <p className={css.bookingTime} data-tip='' data-for='test'>
                             <img className={css.pcDates} src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
                           </p>
+          <ReactTooltip
+           id='test'
+           className={css.customTip} 
+           effect='solid'>
+            <span className={css.tipColor}>  
+              Pet Owner is seeking a
+              Pet Sitter for these dates.
+              Are you available? Send a Message!
+            </span>
+           </ReactTooltip>
                           <hr className={css.divhr} />
                         </div>
                       ) : null}
