@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios"; // For making client request.
+import css from './ContactForm.css';
 
 class ContactForm extends React.Component {
   constructor(props){
@@ -31,7 +32,7 @@ class ContactForm extends React.Component {
   render() {
     return (
 
-      <form onSubmit={this.handleForm}>
+      <form className={css.contactForm} onSubmit={this.handleForm}>
         <label htmlFor="name">Name</label>
         <input required type="text" id="name" name="name" onChange={this.handleFields} value={this.state.name} />
 

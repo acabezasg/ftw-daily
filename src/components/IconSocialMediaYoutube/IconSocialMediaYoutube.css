@@ -1,0 +1,9 @@
+@import '../../marketplace.css';
+
+.root {
+  fill: #fff;
+  transition: var(--transitionStyleButton);
+  &:hover {
+    fill: #FF0000;
+  }
+}

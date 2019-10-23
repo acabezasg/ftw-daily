@@ -10,6 +10,7 @@ import {
   IconSocialMediaTwitter,
   IconSocialMediaPinterest,
   IconSocialMediaLinkedin,
+  IconSocialMediaYoutube,
   // Logo,
   ExternalLink,
   NamedLink,
@@ -251,7 +252,6 @@ const Footer = props => {
               >
                   <IconSocialMediaInstagram />
               </ExternalLink>
-
               <ExternalLink
                 href="https://pinterest.com/trustmypetsitter"
                 className={css.icon}
@@ -266,6 +266,14 @@ const Footer = props => {
                 title="Go to Linkedin page"
               >
                 <IconSocialMediaLinkedin />
+              </ExternalLink>
+
+              <ExternalLink
+                href="https://youtube.com/channel/UCz2CW5OD_eaeIxiNars87aQ"
+                className={css.icon}
+                title="Go to Youtube channel"
+              >
+                <IconSocialMediaYoutube />
               </ExternalLink>
 
               </div>

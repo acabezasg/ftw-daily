@@ -12,6 +12,9 @@ import config from '../../config';
 import { Form, PrimaryButton, FieldTextInput } from '../../components';
 import StripePaymentAddress from './StripePaymentAddress';
 import css from './StripePaymentForm.css';
+import stripe from './stripe.png';
+import ReactTooltip from 'react-tooltip';
+import { ExternalLink } from '../../components';
 
 /**
  * Translate a Stripe API error object.
@@ -243,6 +246,23 @@ class StripePaymentForm extends Component {
       <Form className={classes} onSubmit={handleSubmit}>
         {billingDetailsNeeded ? (
           <React.Fragment>
+
+           <ExternalLink href="https://stripe.com">
+            <img src={stripe} data-tip className={css.stripeImg} />
+           </ExternalLink>
+
+           <ReactTooltip 
+           className={css.customTip} 
+           effect='solid'>
+            <span className={css.tipColor}>  
+              Stripe is the best software
+              platform for running an internet
+              business. They handle billions of dollars
+              every year for forward-thinking businesses
+              around the world.
+            </span>
+           </ReactTooltip>
+  
             <h3 className={css.paymentHeading}>
               <FormattedMessage id="StripePaymentForm.paymentHeading" />
             </h3>
