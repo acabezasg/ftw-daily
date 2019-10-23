@@ -158,9 +158,9 @@ const BookingPanel = props => {
               <div className={css.bookingHelp}>{subTitleText}</div>
             ) : null
           ) : (
-            <div className={css.bookingPanel}>
+            <div>
               {listing.attributes.publicData.requiredDates ? (
-                <div className={css.required}>
+                <div className={css.requiredDates}>
                   <p data-tip="" data-for="test">
                     <img src={calendar} />
                     {formattedDate(listing.attributes.publicData.requiredDates)}
