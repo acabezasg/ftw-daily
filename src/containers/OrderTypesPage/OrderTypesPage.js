@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { StaticPage, TopbarContainer } from '../../containers';
-import { NamedLink ,SecondaryButton } from '../../components';
+import { NamedLink, SecondaryButton } from '../../components';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -10,17 +9,16 @@ import {
   Footer,
 } from '../../components';
 
-
 import css from './OrderTypesPage.css';
 import cssButton from '../../components/Button/Button.css';
 
 import yoti from './yoti.png';
 import secured from './secured.png';
 
-const OrderTypesPage = (props) => {
+const OrderTypesPage = props => {
   const draftId = '00000000-0000-0000-0000-000000000000';
   const draftSlug = 'draft';
-  const type = props.params.type?props.params.type:'new';
+  const type = props.params.type ? props.params.type : 'new';
   // prettier-ignore
   return (
     <StaticPage
@@ -68,11 +66,11 @@ const OrderTypesPage = (props) => {
                         Pet Sitter
                     </SecondaryButton>
                   </NamedLink>
-                  <NamedLink className={css.choose} name="EditListingPage" params={{ slug: draftSlug, id: draftId, type: type, tab: 'description_service' }}>  
+                  {/* <NamedLink className={css.choose} name="EditListingPage" params={{ slug: draftSlug, id: draftId, type: type, tab: 'description_service' }}>  
                     <SecondaryButton className={cssButton.orderTypeButton_last}> 
                         Pet Service
                     </SecondaryButton>
-                  </NamedLink>
+                  </NamedLink> */}
                 </div>
               </div>
               
@@ -88,5 +86,3 @@ const OrderTypesPage = (props) => {
 };
 
 export default OrderTypesPage;
-
-

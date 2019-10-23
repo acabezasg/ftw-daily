@@ -227,11 +227,11 @@ class EditListingWizard extends Component {
 
     const TABS =
       user_type === 0
-        ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PHOTOS, POLICY]
+        ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PHOTOS]
         : user_type === 1
-        ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PRICING, PHOTOS, POLICY]
+        ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PRICING, PHOTOS]
         : service === 'walking' || service === 'sitter'
-        ? [DESCRIPTION, FEATURES, LOCATION, ...availabilityMaybe, PRICING, PHOTOS, POLICY]
+        ? [DESCRIPTION, FEATURES, LOCATION, ...availabilityMaybe, PRICING, PHOTOS]
         : [DESCRIPTION, FEATURES, LOCATION, ...availabilityMaybe, PRICING, PHOTOS];
 
     const selectedTab = tab_ary[0];
@@ -275,8 +275,7 @@ class EditListingWizard extends Component {
 
     return (
       <div className={classes}>
-        <div rootClassName={css.tabsContainer}
-             className={css.buttonContainer}>
+        <div rootClassName={css.tabsContainer} className={css.buttonContainer}>
           <NamedLink
             className={css.backButtonContainer}
             name="OrderTypesPage"

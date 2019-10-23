@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import { FormattedMessage, intlShape } from 'react-intl';
+import { FormattedMessage, intlShape } from '../../util/reactIntl';
 import Decimal from 'decimal.js';
 import { formatMoney } from '../../util/currency';
 import config from '../../config';
@@ -81,12 +81,15 @@ const LineItemSubTotalMaybe = props => {
   const formattedSubTotal = subTotalLineItems.length > 0 ? formatMoney(intl, subTotal) : null;
 
   return formattedSubTotal && showSubTotal ? (
-    <div className={css.subTotalLineItem}>
-      <span className={css.itemLabel}>
-        <FormattedMessage id="BookingBreakdown.subTotal" />
-      </span>
-      <span className={css.itemValue}>{formattedSubTotal}</span>
-    </div>
+    <>
+      <hr className={css.totalDivider} />
+      <div className={css.subTotalLineItem}>
+        <span className={css.itemLabel}>
+          <FormattedMessage id="BookingBreakdown.subTotal" />
+        </span>
+        <span className={css.itemValue}>{formattedSubTotal}</span>
+      </div>
+    </>
   ) : null;
 };
 

@@ -40,7 +40,7 @@ const bookingProcessAlias = 'preauth-with-nightly-booking/release-1';
 // depending on the value chosen.
 const bookingUnitType = 'line-item/night';
 
-const bookingHour = 2;
+const bookingHour = 1;
 // Should the application fetch available time slots (currently defined as
 // start and end dates) to be shown on listing page.
 const enableAvailability = process.env.REACT_APP_AVAILABILITY_ENABLED === 'true';

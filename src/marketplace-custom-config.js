@@ -208,7 +208,7 @@ export const amenities = [
 export const categories = [
   { key: '0', label: 'Pet Owners' },
   { key: '1', label: 'Pet Sitter' },
-  { key: '2', label: 'Pet Services' },
+  // { key: '2', label: 'Pet Services' },
 ];
 
 export const equipments = [
@@ -281,7 +281,7 @@ export const preferredLocations = [
 // Note: unlike most prices this is not handled in subunits
 export const priceFilterConfig = {
   min: 0,
-  max: 1000,
+  max: 100,
   step: 5,
 };
 

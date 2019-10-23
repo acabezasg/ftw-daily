@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import { oneOf, string } from 'prop-types';
-import { FormattedMessage, intlShape, injectIntl } from 'react-intl';
+import { FormattedMessage, intlShape, injectIntl } from '../../util/reactIntl';
 import classNames from 'classnames';
 import {
   propTypes,
@@ -12,8 +12,8 @@ import {
   LINE_ITEM_PROVIDER_COMMISSION,
 } from '../../util/types';
 
-import LineItemUnitPriceMaybe from './LineItemUnitPriceMaybe';
 import LineItemBookingPeriod from './LineItemBookingPeriod';
+import LineItemBasePriceMaybe from './LineItemBasePriceMaybe';
 import LineItemUnitsMaybe from './LineItemUnitsMaybe';
 import LineItemSubTotalMaybe from './LineItemSubTotalMaybe';
 import LineItemCustomerCommissionMaybe from './LineItemCustomerCommissionMaybe';
@@ -27,8 +27,16 @@ import LineItemUnknownItemsMaybe from './LineItemUnknownItemsMaybe';
 import css from './BookingBreakdown.css';
 
 export const BookingBreakdownComponent = props => {
-  console.log('props',props);
-  const { rootClassName, className, userRole, unitType, transaction, booking, intl } = props;
+  const {
+    rootClassName,
+    className,
+    userRole,
+    unitType,
+    transaction,
+    booking,
+    intl,
+    dateType,
+  } = props;
 
   const isCustomer = userRole === 'customer';
   const isProvider = userRole === 'provider';
@@ -41,51 +49,83 @@ export const BookingBreakdownComponent = props => {
 
   const classes = classNames(rootClassName || css.root, className);
 
+  /**
+   * BookingBreakdown contains different line items:
+   *
+   * LineItemBookingPeriod: prints booking start and booking end types. Prop dateType
+   * determines if the date and time or only the date is shown
+   *
+   * LineItemUnitsMaybe: if he unitType is line-item/unit print the name and
+   * quantity of the unit
+   *
+   * LineItemBasePriceMaybe: prints the base price calculation for the listing, e.g.
+   * "$150.00 * 2 nights $300"
+   *
+   * LineItemUnitPriceMaybe: prints just the unit price, e.g. "Price per night $32.00".
+   * This line item is not used by default in the BookingBreakdown.
+   *
+   * LineItemUnknownItemsMaybe: prints the line items that are unknown. In ideal case there
+   * should not be unknown line items. If you are using custom pricing, you should create
+   * new custom line items if you need them.
+   *
+   * LineItemSubTotalMaybe: prints subtotal of line items before possible
+   * commission or refunds
+   *
+   * LineItemRefundMaybe: prints the amount of refund
+   *
+   * LineItemCustomerCommissionMaybe: prints the amount of customer commission
+   * The default transaction process used by FTW doesn't include the customer commission.
+   *
+   * LineItemCustomerCommissionRefundMaybe: prints the amount of refunded customer commission
+   *
+   * LineItemProviderCommissionMaybe: prints the amount of provider commission
+   *
+   * LineItemProviderCommissionRefundMaybe: prints the amount of refunded provider commission
+   *
+   * LineItemTotalPrice: prints total price of the transaction
+   *
+   */
+
   return (
     <div className={classes}>
-      <LineItemUnitPriceMaybe transaction={transaction} unitType={unitType} intl={intl} /> 
-      <LineItemBookingPeriod transaction={transaction} booking={booking} unitType={unitType} />
-      {/* <LineItemUnitsMaybe transaction={transaction} unitType={unitType}/> */}
+      <LineItemBookingPeriod booking={booking} unitType={unitType} dateType={dateType} />
+      <LineItemUnitsMaybe transaction={transaction} unitType={unitType} />
 
-      {/* <LineItemUnknownItemsMaybe transaction={transaction} intl={intl} unitType={unitType}/> */}
-     
-      {/* <LineItemSubTotalMaybe
+      <LineItemBasePriceMaybe transaction={transaction} unitType={unitType} intl={intl} />
+      <LineItemUnknownItemsMaybe transaction={transaction} intl={intl} />
+
+      <LineItemSubTotalMaybe
         transaction={transaction}
         unitType={unitType}
         userRole={userRole}
         intl={intl}
-        
       />
-      <LineItemRefundMaybe transaction={transaction} intl={intl} unitType={unitType}/>
+      <LineItemRefundMaybe transaction={transaction} intl={intl} />
 
       <LineItemCustomerCommissionMaybe
         transaction={transaction}
         isCustomer={isCustomer}
         intl={intl}
-        unitType={unitType}
       />
       <LineItemCustomerCommissionRefundMaybe
         transaction={transaction}
         isCustomer={isCustomer}
         intl={intl}
-        unitType={unitType}
       />
 
       <LineItemProviderCommissionMaybe
         transaction={transaction}
         isProvider={isProvider}
         intl={intl}
-        unitType={unitType}
       />
-      <LineItemProviderCommissionRefundMaybe 
+      <LineItemProviderCommissionRefundMaybe
         transaction={transaction}
         isProvider={isProvider}
         intl={intl}
-        unitType={unitType}
-      /> */}
+      />
 
-      <hr className={css.totalDivider} />
-      <LineItemTotalPrice transaction={transaction} isProvider={isProvider} intl={intl} unitType={unitType} />
+      <LineItemTotalPrice transaction={transaction} isProvider={isProvider} intl={intl} />
+
       {hasCommissionLineItem ? (
         <span className={css.feeInfo}>
           <FormattedMessage id="BookingBreakdown.commissionFeeNote" />
@@ -95,7 +135,7 @@ export const BookingBreakdownComponent = props => {
   );
 };
 
-BookingBreakdownComponent.defaultProps = { rootClassName: null, className: null };
+BookingBreakdownComponent.defaultProps = { rootClassName: null, className: null, dateType: null };
 
 BookingBreakdownComponent.propTypes = {
   rootClassName: string,
@@ -105,6 +145,7 @@ BookingBreakdownComponent.propTypes = {
   unitType: propTypes.bookingUnitType.isRequired,
   transaction: propTypes.transaction.isRequired,
   booking: propTypes.booking.isRequired,
+  dateType: propTypes.dateType,
 
   // from injectIntl
   intl: intlShape.isRequired,
