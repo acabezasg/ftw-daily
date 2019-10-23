@@ -151,7 +151,7 @@ const BookingPanel = props => {
           </div>
         </div>
 
-        <div className={css.bookingHeading}>
+        <div className={css.bookingHeadingOwner}>
           <h2 className={titleClasses}>{title}</h2>
           {isNotOwnerListing ? (
             subTitleText ? (
@@ -159,13 +159,14 @@ const BookingPanel = props => {
             ) : null
           ) : (
             <div>
+            <p className={css.ownerSubtitle}>Get in touch with the Pet Owner</p>
               {listing.attributes.publicData.requiredDates ? (
-                <div className={css.requiredDates}>
-                  <p data-tip="" data-for="test">
+                <div className={css.requiredDates} data-tip="" data-for="test">
+                  <p className={css.bookingReq}>
                     <img src={calendar} />
                     {formattedDate(listing.attributes.publicData.requiredDates)}
                   </p>
-                  <ReactTooltip id="test" effect="solid">
+                  <ReactTooltip className={css.customTip} id="test" effect="solid">
                     <span>
                       Pet Owner is seeking a Pet Sitter for these dates. Are you available? Send a
                       Message!
