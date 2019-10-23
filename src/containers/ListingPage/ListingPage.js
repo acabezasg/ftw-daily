@@ -59,7 +59,7 @@ import YotiVerified from '../../components/YotiVerified/YotiVerified.js';
 import css from './ListingPage.css';
 
 import stripeimg from './stripe.png';
-import calendar from './calendar.svg'
+import calendar from './calendar.svg';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
 
@@ -527,13 +527,14 @@ export class ListingPageComponent extends Component {
                   />
 
                   {currentListing.attributes.publicData.requiredDates ? (
-                        <div className={css.reqdates} data-tip>
-                          <h2 className={css.reqTitle}>Required Dates</h2>
-                          <p>
-                            <img className={css.mobileDates} src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
-                          </p>
-                        </div>
-                      ) : null}
+                    <div className={css.reqdates} data-tip>
+                      <h2 className={css.reqTitle}>Required Dates</h2>
+                      <p>
+                        <img className={css.mobileDates} src={calendar} />
+                        {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                      </p>
+                    </div>
+                  ) : null}
                   <SectionDescriptionMaybe description={description} user_type={user_type} />
                   <SectionFeaturesMaybe
                     options={{
@@ -598,24 +599,21 @@ export class ListingPageComponent extends Component {
                     <div className={css.bookingPanel}>
                       {currentListing.attributes.publicData.requiredDates ? (
                         <div className={css.required}>
-                      <div className={css.bookingHeading}>
-                        <h2 className={css.bookingTitle}>
-                          Contact <span className={css.username}>{makeContact}</span>
-                        </h2>
-                      </div>
-                          <p className={css.bookingTime} data-tip='' data-for='test'>
-                            <img className={css.pcDates} src={calendar} />{this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                          <div className={css.bookingHeading}>
+                            <h2 className={css.bookingTitle}>
+                              Contact <span className={css.username}>{makeContact}</span>
+                            </h2>
+                          </div>
+                          <p className={css.bookingTime} data-tip="" data-for="test">
+                            <img className={css.pcDates} src={calendar} />
+                            {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
                           </p>
-          <ReactTooltip
-           id='test'
-           className={css.customTip} 
-           effect='solid'>
-            <span className={css.tipColor}>  
-              Pet Owner is seeking a
-              Pet Sitter for these dates.
-              Are you available? Send a Message!
-            </span>
-           </ReactTooltip>
+                          <ReactTooltip id="test" className={css.customTip} effect="solid">
+                            <span className={css.tipColor}>
+                              Pet Owner is seeking a Pet Sitter for these dates. Are you available?
+                              Send a Message!
+                            </span>
+                          </ReactTooltip>
                           <hr className={css.divhr} />
                         </div>
                       ) : null}
@@ -623,9 +621,13 @@ export class ListingPageComponent extends Component {
                       <p className={css.smallPrint}>
                         <span>Contact Pet Owner directly</span>
                       </p>
-                      <Button className={css.sendbtn} onClick={this.onContactUser}>Send Message</Button>
+                      <Button className={css.sendbtn} onClick={this.onContactUser}>
+                        Send Message
+                      </Button>
                       <div className={css.openBookingFormMobile}>
-                      <Button className={css.sendbtn2} onClick={this.onContactUser}>Send Message</Button>
+                        <Button className={css.sendbtn2} onClick={this.onContactUser}>
+                          Send Message
+                        </Button>
                       </div>
                     </div>
                   )

@@ -12,6 +12,9 @@ import config from '../../config';
 import { ModalInMobile, Button } from '../../components';
 import { BookingDatesForm } from '../../forms';
 
+import ReactTooltip from 'react-tooltip';
+import calendar from '../../containers/ListingPage/calendar.svg';
+
 import css from './BookingPanel.css';
 
 // This defines when ModalInMobile shows content as Modal
@@ -94,6 +97,43 @@ const BookingPanel = props => {
   const classes = classNames(rootClassName || css.root, className);
   const titleClasses = classNames(titleClassName || css.bookingTitle);
 
+  const formatDateHelper = date => {
+    var monthNames = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+
+    return monthNames[monthIndex] + ' ' + day + ', ' + year;
+  };
+
+  const formattedDate = dateString => {
+    let dateArray = dateString.split('to');
+    let finalDateString = '';
+    if (dateArray.length > 1) {
+      finalDateString = `${formatDateHelper(new Date(dateArray[0]))} to ${formatDateHelper(
+        new Date(dateArray[1])
+      )}`;
+    } else {
+      finalDateString = `${formatDateHelper(new Date(dateArray[0]))}`;
+    }
+
+    return finalDateString;
+  };
+
   return (
     <div className={classes}>
       <ModalInMobile
@@ -117,7 +157,24 @@ const BookingPanel = props => {
             subTitleText ? (
               <div className={css.bookingHelp}>{subTitleText}</div>
             ) : null
-          ) : null}
+          ) : (
+            <div className={css.bookingPanel}>
+              {listing.attributes.publicData.requiredDates ? (
+                <div className={css.required}>
+                  <p data-tip="" data-for="test">
+                    <img src={calendar} />
+                    {formattedDate(listing.attributes.publicData.requiredDates)}
+                  </p>
+                  <ReactTooltip id="test" effect="solid">
+                    <span>
+                      Pet Owner is seeking a Pet Sitter for these dates. Are you available? Send a
+                      Message!
+                    </span>
+                  </ReactTooltip>
+                </div>
+              ) : null}
+            </div>
+          )}
         </div>
         {showBookingDatesForm && isNotOwnerListing ? (
           <BookingDatesForm
