@@ -71,9 +71,7 @@ const BookingPanel = props => {
   const hasListingState = !!listing.attributes.state;
   const isClosed = hasListingState && listing.attributes.state === LISTING_STATE_CLOSED;
   const showBookingDatesForm = hasListingState && !isClosed;
-
   const isNotOwnerListing = listing.attributes.publicData.user_type != 0;
-
   const showClosedListingHelpText = listing.id && isClosed;
   const { formattedPrice, priceTitle } = priceData(price, intl);
   const isBook = !!parse(location.search).book;
@@ -121,7 +119,6 @@ const BookingPanel = props => {
             ) : null
           ) : null}
         </div>
-
         {showBookingDatesForm && isNotOwnerListing ? (
           <BookingDatesForm
             className={css.bookingForm}
@@ -156,11 +153,9 @@ const BookingPanel = props => {
               <FormattedMessage id="BookingPanel.ctaButtonMessage" />
             </Button>
           ) : (
-            null(
-              <div className={css.closedListingButton}>
-                <FormattedMessage id="BookingPanel.closedListingButtonText" />
-              </div>
-            )
+            <div className={css.closedListingButton}>
+              <FormattedMessage id="BookingPanel.closedListingButtonText" />
+            </div>
           )}
         </div>
       ) : null}
