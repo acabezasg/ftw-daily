@@ -19,4 +19,5 @@ yarn-error.log
 *.txt
 *.docx 
 process
+server/yoti.pem
 
