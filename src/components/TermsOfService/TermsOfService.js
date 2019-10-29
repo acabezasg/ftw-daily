@@ -11,7 +11,7 @@ const TermsOfService = props => {
   // prettier-ignore
   return (
     <div className={classes}>
-      <p className={css.lastUpdated}>Last updated: <span className={css.datecolor}>August 12, 2019</span></p>
+      <p className={css.lastUpdated}>Last updated: <span className={css.datecolor}>October 29, 2019</span></p>
 
       <h2>Terms of Use</h2>
       
