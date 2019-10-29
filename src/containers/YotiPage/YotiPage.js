@@ -62,7 +62,7 @@ const YotiPage = () => {
             What is YOTI and how do we use it?
           </h2>
 
-          <p>
+          <p> 
            We use our identity partner Yoti to confirm your identity. Pet Owners and Pet Sitters are only allowed to post listings after they pass the Yoti Identity Verification.  This enables our users to feel more secure when using Trust My Pet Sitter. In the section below you can see how it works. 
           </p>
 
