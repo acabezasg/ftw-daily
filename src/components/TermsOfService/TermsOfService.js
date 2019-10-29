@@ -114,7 +114,7 @@ const TermsOfService = props => {
       <h2>Fees and payments</h2>
 
       <p>
-         1. Pet Sitters may set the price of their Pet Sitter Services ("Booking Fee's") within the parameters permitted by the Service. A fee equal to 10% of the Booking Fee (the "Sitter Service Fee") will be subtracted from the Booking Fee before payment to the Pet Sitter. Pet Owners pay the amount requested by the Pet Sitter, and do not pay a booking fee. Pet Services are charged a fee equal to 10% of the Booking Fee (the "Services Service Fee") will be subtraced from the Booking Fee before payment to the Pet Service Provider.
+         1. Pet Sitters may set the price of their Pet Sitter Services ("Booking Fee's") within the parameters permitted by the Service. A fee equal to 20% of the Booking Fee (the "Sitter Service Fee") will be subtracted from the Booking Fee before payment to the Pet Sitter. Pet Owners pay the amount requested by the Pet Sitter, plus 10% Service Fee. Pet Services are charged a fee equal to 10% of the Booking Fee (the "Services Service Fee") will be subtraced from the Booking Fee before payment to the Pet Service Provider.
       </p>
 
       <p>
