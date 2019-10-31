@@ -12,13 +12,13 @@
 
   @media (--viewportMedium) {
     max-width: 100%;
-    margin: 80px 100px;
+    margin: 80px auto 100px;
   }
 
   @media (--viewportLarge) {
     max-width: 1128px;
     padding: 0 36px 0 36px;
-    margin: 80px 100px;
+    margin: 80px auto 100px;
   }
 
   @media (--viewportXLarge) {

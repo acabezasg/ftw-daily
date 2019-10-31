@@ -23,41 +23,41 @@
 
 @media (max-width: 992px) {
 	.card_image_container {
-		margin: 0 !important;
+	  margin: 0 !important;
 	}
 	.card {
-		padding: 0 !important;
+	  padding: 0 !important;
 	}
 	.container {
-		display: block !important;
+	  display: block !important;
 	}
 	.card_content {
-		margin-top: 0 !important;
-		background: #41a6df;
-		padding: 10px 0 15px;
+	  margin-top: 0 !important;
+	  background: #41a6df;
+	  padding: 10px 0 15px;
 	}
 	.card_content p {
-		margin: 0;
-        padding: 0;
+      margin: 0;
+      padding: 0;
 	}
 	.card_title {
-		margin-bottom: 5px;
+	  margin-bottom: 5px;
 	}
 	.card_svg {
-		display: none;
+	  display: none;
 	}
 	.pressTitle2 {
-    margin-top: 40px !important; 
-    margin-bottom: 25px;
+      margin-top: 40px !important; 
+      margin-bottom: 25px;
     }
     .pressSub {
-    margin-bottom: 35px !important;
+      margin-bottom: 35px !important;
     }
     .pressTitle {
-    margin-bottom: 35px;
+      margin-bottom: 35px;
     }
     .card_image_container {
-	opacity: 1 !important;
+	  opacity: 1 !important;
     }
 }
 .pressTitle {

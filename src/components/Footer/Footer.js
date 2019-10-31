@@ -16,6 +16,7 @@ import {
   NamedLink,
 } from '../../components';
 
+import googlePlay from './images/google.png';
 import css from './Footer.css';
 
 const renderSocialMediaLinks = intl => {
@@ -279,16 +280,11 @@ const Footer = props => {
               </div>
               <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
-                  <li>
-                    <NamedLink name="TermsOfServicePage" className={css.legalLink}>
-                      <FormattedMessage id="Footer.termsOfUse" />
-                    </NamedLink>
-                  </li>
-                  <li>
-                    <NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
-                      <FormattedMessage id="Footer.privacyPolicy" />
-                    </NamedLink>
-                  </li>
+                  <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter" className={css.playIcon}>
+                      <div className={css.googleShape}></div>
+                      <span>Get it on<br />Google Play</span>
+                  </ExternalLink>
+                  
                 </ul>
               </div>
             </div>

@@ -356,3 +356,31 @@
   color: #fff !important;
 }
 
+.playIcon {
+  display: flex;
+  text-decoration: none !important;
+}
+
+.playIcon span {
+  font-size: 12px;
+  line-height: 15px;
+  padding-left: 5px;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.googleShape {
+  background: url(images/google.png);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.playIcon:hover .googleShape {
+  background: url(images/googlehover.png);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
