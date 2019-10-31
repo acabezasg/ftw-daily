@@ -19,52 +19,18 @@
     padding: 0;
   }
 }
-
 .pressTitle {
   text-align: center;
   margin-top: 0;
 }
-
 img {
   max-width: 100%;
 }
-
-.strike {
-    display: block;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap; 
-}
-
-.strike > h1 {
-    position: relative;
-    display: inline-block;
-}
-
-.strike > h1:before,
-.strike > h1:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 9999px;
-    height: 4px;
-    background: #41a6df;
-}
-
-.strike > h1:before {
-    right: 100%;
-}
-
-.strike > h1:after {
-    left: 100%;
-}
-
 .container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-
 .card {
   position: relative;
   background: #41a6df;
@@ -75,16 +41,21 @@ img {
   color: #aaa;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3), 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  text-decoration: none !important;
 }
-
-.card:nth-child(2) {
-  margin: 0 40px;
-}
-
 .card:hover {
   cursor: pointer;
   transform: scale(1.05);
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.4), 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.card:nth-child(2) {
+  margin: 0 40px;
+}
+.card_image_container {
+	opacity: 0.8;
+}
+.card:hover .card_image_container {
+	opacity: 1;
 }
 .card_image_container {
   margin: -2rem -2rem 1rem -2rem;
@@ -130,6 +101,36 @@ img {
 .pressSub:nth-of-type(2) {
   margin-bottom: 16px;
   text-align: left;
+}
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+.strike > h1 {
+    position: relative;
+    display: inline-block;
+}
+.strike > h1:before,
+.strike > h1:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 4px;
+    background: #41a6df;
+}
+.strike > h1:before {
+    right: 100%;
+}
+.strike > h1:after {
+    left: 100%;
+}
+
+.linkedinExternal {
+	text-decoration: none !important;
 }
 
 @keyframes LineFadeIn {

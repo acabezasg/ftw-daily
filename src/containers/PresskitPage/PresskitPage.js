@@ -7,6 +7,7 @@ import {
   LayoutWrapperFooter,
   Footer,
   NamedLink,
+  ExternalLink,
   
 } from '../../components';
 
@@ -40,7 +41,7 @@ const PresskitPage = () => {
         Trust My Pet Sitter founders <strong>Angela Fagan</strong>, <strong>Sinead</strong> and <strong>Shamus Fitzsimons</strong> built a pet care app that connects pet owners with pet sitters based on what’s most important to them.
       </p>
 <div className={css.container}>
-  <div className={css.card}>
+  <ExternalLink className={css.card} href="https://www.linkedin.com/in/shamus-fitzsimons-trustmypetsitter/">
      <div className={css.card_image_container}>
        <img className={css.card_image} src={shamus} />
     </div>
@@ -56,9 +57,9 @@ const PresskitPage = () => {
      <p>CCO and 
      Co- Founder</p>
     </div>
-  </div>
+    </ExternalLink>
 
-  <div className={css.card}>
+    <ExternalLink className={css.card} href="https://www.linkedin.com/in/angela-fagan/">
      <div className={css.card_image_container}>
        <img className={css.card_image} src={angela} />
     </div>
@@ -73,9 +74,9 @@ const PresskitPage = () => {
        <h1 className={css.card_title}>Angela Fagan</h1>
      <p>CEO and Co-Founder</p>
     </div>
-  </div>
+    </ExternalLink>
 
-  <div className={css.card}>
+    <ExternalLink className={css.card} href="https://www.linkedin.com/in/sinead-fitzsimons-9249a9195/">
      <div className={css.card_image_container}>
        <img className={css.card_image} src={sinead} />
     </div>
@@ -90,7 +91,8 @@ const PresskitPage = () => {
        <h1 className={css.card_title}>Sinead Fitzsimons</h1>
      <p>Co-Founder</p>
     </div>
-  </div>
+    </ExternalLink>
+
 </div>
     <div className={css.strike}>
       <h1 className={css.pressTitle2}>Our Story</h1>
