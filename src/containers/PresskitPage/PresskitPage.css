@@ -29,6 +29,36 @@ img {
   max-width: 100%;
 }
 
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+.strike > h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > h1:before,
+.strike > h1:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 4px;
+    background: #41a6df;
+}
+
+.strike > h1:before {
+    right: 100%;
+}
+
+.strike > h1:after {
+    left: 100%;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -36,7 +66,6 @@ img {
 }
 
 .card {
-  margin: 0 20px;
   position: relative;
   background: #41a6df;
   width: 33%;
@@ -47,6 +76,11 @@ img {
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3), 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
+
+.card:nth-child(2) {
+  margin: 0 40px;
+}
+
 .card:hover {
   cursor: pointer;
   transform: scale(1.05);
@@ -69,7 +103,7 @@ img {
 }
 .card_content {
   text-align: center;
-  margin-top: -2.3rem;
+  margin-top: -2.5rem;
   opacity: 0;
   animation: ContentFadeIn .8s 1.6s forwards;
 }
@@ -87,14 +121,15 @@ img {
   top: 125px;
 }
 
-.pressTitle:nth-of-type(2) {
-	margin-top: 50px;
-	margin-bottom: 50px;
+.pressTitle2 {
+  text-align: center;
+  margin-top: 50px;
+  padding: 0 60px;
 }
 
 .pressSub:nth-of-type(2) {
-	margin-bottom: 16px;
-	text-align: left;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 @keyframes LineFadeIn {

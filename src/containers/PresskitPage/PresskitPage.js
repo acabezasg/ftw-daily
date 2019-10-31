@@ -35,7 +35,6 @@ const PresskitPage = () => {
         <LayoutWrapperMain>
 
     <div className={css.sectionContent}>
-
       <h1 className={css.pressTitle}>The Pet Team</h1>
       <p className={css.pressSub}>
         Trust My Pet Sitter founders <strong>Angela Fagan</strong>, <strong>Sinead</strong> and <strong>Shamus Fitzsimons</strong> built a pet care app that connects pet owners with pet sitters based on what’s most important to them.
@@ -93,7 +92,9 @@ const PresskitPage = () => {
     </div>
   </div>
 </div>
-      <h1 className={css.pressTitle}>Our Story</h1>
+    <div className={css.strike}>
+      <h1 className={css.pressTitle2}>Our Story</h1>
+     </div>
       <p className={css.pressSub}>
         Founders <strong>Angela Fagan</strong>, <strong>Shamus</strong> and <strong>Sinead Fitzsimons</strong> created Trust My Pet Sitter after struggling to find suitable care for their pets when travelling.  With 3 dogs and 2 cats it wasn’t always easy to find a family member or friend to watch them.  Often planned getaways were put on hold as suitable arrangement couldn’t be found - Kennels and Catteries were not an option, as the pets were too precious to be caged. They tried sending the dogs to a dog boarder, being looked after in someone else’s house, but that just left them unsettled in an unfamiliar environment with strange pets. The Cats had someone pop in to feed them, but they got lonely after a few days and were very grumpy on their return!
       </p>
