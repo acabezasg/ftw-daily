@@ -1,7 +1,8 @@
 @import '../../marketplace.css';
 
 .sectionContent {
-  margin: 100px 20px;
+  margin: 60px auto 80px;
+  padding: 0 36px 0 36px;
 
   @media (--viewportMedium) {
     width: 100%;
@@ -9,15 +10,55 @@
   }
 
   @media (--viewportLarge) {
-    width: 1128px;
+    width: 1024px;
     padding: 0 36px 0 36px;
     margin: 60px auto 80px;
   }
 
   @media (--viewportXLarge) {
-    width: 1056px;
+    width: 1024px;
     padding: 0;
   }
+}
+
+@media (max-width: 992px) {
+	.card_image_container {
+		margin: 0 !important;
+	}
+	.card {
+		padding: 0 !important;
+	}
+	.container {
+		display: block !important;
+	}
+	.card_content {
+		margin-top: 0 !important;
+		background: #41a6df;
+		padding: 10px 0 15px;
+	}
+	.card_content p {
+		margin: 0;
+        padding: 0;
+	}
+	.card_title {
+		margin-bottom: 5px;
+	}
+	.card_svg {
+		display: none;
+	}
+	.pressTitle2 {
+    margin-top: 40px !important; 
+    margin-bottom: 25px;
+    }
+    .pressSub {
+    margin-bottom: 35px !important;
+    }
+    .pressTitle {
+    margin-bottom: 35px;
+    }
+    .card_image_container {
+	opacity: 1 !important;
+    }
 }
 .pressTitle {
   text-align: center;
