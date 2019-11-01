@@ -129,6 +129,7 @@
 .organizationDescription {
   @apply --marketplaceTinyFontStyles;
   color: #fff;
+  margin: 32px 0 34px !important;
 }
 
 .organizationCopyright {
@@ -383,4 +384,9 @@
   height: 30px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.googleBold {
+  padding-left: 0 !important;
+  font-weight: 700;
 }

@@ -36,6 +36,12 @@
 	  background: #41a6df;
 	  padding: 10px 0 15px;
 	}
+  .card_image,
+  .card_content,
+  .card_line {
+    animation: none !important;
+    opacity: 1 !important;
+  }
 	.card_content p {
       margin: 0;
       padding: 0;
