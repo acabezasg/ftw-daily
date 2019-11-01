@@ -122,7 +122,7 @@ const YotiPage = () => {
           </p>
 
           <p>
-            After you have followed the steps above and passed the verification, your profile will show an ID Verified badge and you will be able to post new listings.
+            In order to display the ID verified badge on your listing you need to complete YOTI verification, it only takes a few minutes and helps to keep our community safe. Listngs without verification may be removed.
           </p>
 
           <hr />

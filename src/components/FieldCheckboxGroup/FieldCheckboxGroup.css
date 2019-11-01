@@ -35,3 +35,18 @@
         padding: 4px 0;
     }
 }
+
+.customTip {
+ color: #fff !important;
+ background-color: #41a6df !important;
+ opacity: 0.99 !important;
+ margin-top: -5px !important;
+ padding: 10px 21px 13px !important;
+ text-align: center;
+ width: 250px;
+}
+
+.customTip:after {
+ border-top-color: #41a6df !important;
+ border-top-width: 7px !important;
+}

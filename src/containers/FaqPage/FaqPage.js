@@ -45,11 +45,11 @@ const FaqPage = () => {
       <NamedLink name="PetSittersPage"> 
        <div className={css.faqBg2} id="faqBg2">
         <div className={css.spanContainer} id="spanContainer2">
-         <span>Pet <span className={css.spanMain}>Sitter</span> Corner</span>
+         <span>Pet <span className={css.spanMain}>Sitters</span> Corner</span>
         </div>
        </div>
       </NamedLink>
-
+{/* 
       <NamedLink name="PetServicesPage"> 
        <div className={css.faqBg3} id="faqBg3">
         <div className={css.spanContainer} id="spanContainer3">
@@ -57,7 +57,7 @@ const FaqPage = () => {
         </div>
        </div>
       </NamedLink>
-       
+*/} 
        </div>
       </LayoutWrapperMain>
 

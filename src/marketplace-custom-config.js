@@ -6,22 +6,27 @@ export const amenities = [
   {
     key: 'dog',
     label: 'Dogs',
+    tip: 'breed',
     weight: [
       {
         key: 'giant',
         label: 'Giant (101+ lbs)',
+        tip: 'Akitas, Bernese Mountain Dog, Bullmastiff etc...',
       },
       {
         key: 'large',
         label: 'Large (41-100 lbs)',
+        tip: 'German Shepherd, Retriever, Siberian Husky, Weimaraner etc...'
       },
       {
         key: 'medium',
-        label: 'Medium (101+ lbs)',
+        label: 'Medium (15-41 lbs)',
+        tip: 'Whippet, Staffordshire Bull Terrier, Spaniel, Border Collie etc...',
       },
       {
         key: 'small',
         label: 'Small (0-15 lbs)',
+        tip: 'Pomeranian, Pug, Yorkshire Terrier, Papillion etc...',
       },
     ],
   },

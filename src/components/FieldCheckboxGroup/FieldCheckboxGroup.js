@@ -12,7 +12,7 @@ import { arrayOf, bool, node, shape, string } from 'prop-types';
 import classNames from 'classnames';
 import { FieldArray } from 'react-final-form-arrays';
 import { FieldCheckbox, ValidationError } from '../../components';
-
+import ReactTooltip from 'react-tooltip';
 import css from './FieldCheckboxGroup.css';
 
 const FieldCheckboxRenderer = props => {
@@ -39,7 +39,7 @@ const FieldCheckboxRenderer = props => {
         {options.map((option, index) => {
           // console.log('index',index);
           const fieldId = `${id}.${option.key}`;
-
+          const tip = `${option.tip}`;
           return handleChange ? (
             <li key={fieldId} className={css.item} onClick={() => handleChange(index)}>
               <FieldCheckbox
@@ -50,13 +50,18 @@ const FieldCheckboxRenderer = props => {
               />
             </li>
           ) : (
-            <li key={fieldId} className={css.item}>
+            <li data-tip="" data-for={fieldId} key={fieldId} className={css.item}>
               <FieldCheckbox
                 id={fieldId}
                 name={fields.name}
                 label={option.label}
                 value={option.key}
               />
+            <ReactTooltip id={fieldId} className={css.customTip} effect="solid">
+              <span className={css.tipColor}>
+                {tip}
+              </span>
+            </ReactTooltip>
             </li>
           );
         })}
