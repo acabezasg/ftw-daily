@@ -32,6 +32,7 @@ import {
   TermsOfServicePage,
   TransactionPage,
   OrderTypesPage,
+  PresskitPage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -60,47 +61,45 @@ const routeConfiguration = () => {
       name: 'YotiPage',
       component: YotiPage,
     },
-
     {
       path: '/whatwedo',
       name: 'WhatWeDoPage',
       component: WhatWeDoPage,
     },
-
     {
       path: '/howitworks',
       name: 'HowItWorksPage',
       component: HowItWorksPage,
     },
-
     {
       path: '/contact',
       name: 'ContactPage',
       component: ContactPage,
     },
-
     {
       path: '/faq',
       name: 'FaqPage',
       component: FaqPage,
     },
-
     {
       path: '/pet-sitter-faq',
       name: 'PetSittersPage',
       component: PetSittersPage,
     },
-
     {
       path: '/pet-services-faq',
       name: 'PetServicesPage',
       component: PetServicesPage,
     },
-
     {
       path: '/pet-owner-faq',
       name: 'PetOwnersPage',
       component: PetOwnersPage,
+    },
+    {
+      path: '/presskit',
+      name: 'PresskitPage',
+      component: PresskitPage,
     },
     {
       path: '/',

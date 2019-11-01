@@ -90,14 +90,10 @@ const TopbarMobileMenu = props => {
           <a className={css.inbox} href="/s/listings"><FormattedMessage id="Search Listings" /></a>
         </InlineTextButton>
 
-        <InlineTextButton className={css.logoutButton}>
+        <InlineTextButton rootClassName={css.logoutButton, css.logoutLast}>
           <a className={css.inbox} href="contact"><FormattedMessage id="Contact" /></a>
         </InlineTextButton>
-        
-        <InlineTextButton rootClassName={css.logoutButton, css.logoutLast} onClick={onLogout}>
-          <FormattedMessage className={css.inbox} id="TopbarMobileMenu.logoutLink" />
-        </InlineTextButton>
-
+ 
         <NamedLink
           className={classNames(css.inbox, currentPageClass('InboxPage'))}
           name="InboxPage"
@@ -124,6 +120,10 @@ const TopbarMobileMenu = props => {
         >
           <FormattedMessage id="TopbarMobileMenu.accountSettingsLink" />
         </NamedLink>
+
+        <InlineTextButton rootClassName={css.logoutButton, css.lastlogout} onClick={onLogout}>
+          <FormattedMessage className={css.inbox} id="TopbarMobileMenu.logoutLink" />
+        </InlineTextButton>
       </div>
       <div className={css.footer}>
         <NamedLink className={css.createNewListingLink} name="OrderTypesPage" params={{type:'new'}}>

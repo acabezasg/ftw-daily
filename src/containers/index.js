@@ -31,3 +31,4 @@ export { default as StyleguidePage } from './StyleguidePage/StyleguidePage';
 export { default as TermsOfServicePage } from './TermsOfServicePage/TermsOfServicePage';
 export { default as TopbarContainer } from './TopbarContainer/TopbarContainer';
 export { default as TransactionPage } from './TransactionPage/TransactionPage';
+export { default as PresskitPage } from './PresskitPage/PresskitPage';

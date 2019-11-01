@@ -16,6 +16,7 @@ import {
   NamedLink,
 } from '../../components';
 
+import googlePlay from './images/google.png';
 import css from './Footer.css';
 
 const renderSocialMediaLinks = intl => {
@@ -103,6 +104,11 @@ const Footer = props => {
                   </a>
                 </li>
                 <li className={css.listItem}>
+                  <NamedLink name="PresskitPage" className={css.link}>
+                    <FormattedMessage id="Footer.toPresskitPage" />
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
                   <NamedLink name="ContactPage" className={css.link}>
                     <FormattedMessage id="Footer.toContactPage" />
                   </NamedLink>
@@ -176,6 +182,18 @@ const Footer = props => {
                     <FormattedMessage id="Footer.searchRiyadh" />
                   </NamedLink>
                 </li>
+                <li className={css.listItem}>
+                  <NamedLink
+                    name="SearchPage"
+                    to={{
+                      search:
+                        '?address=Split-Dalmatia%20County%2C%20Croatia&bounds=43.973851%2C17.448944%2C42.72%2C15.09',
+                    }}
+                    className={css.link}
+                  >
+                    <FormattedMessage id="Footer.searchSplit" />
+                  </NamedLink>
+                </li>
               </ul>
             </div>
             <div className={css.searchesExtra}>
@@ -240,6 +258,18 @@ const Footer = props => {
                     <FormattedMessage id="Footer.searchMoscow" />
                   </NamedLink>
                 </li>
+                <li className={css.listItem}>
+                  <NamedLink
+                    name="SearchPage"
+                    to={{
+                      search:
+                        '?address=Berlin%2C%20Germany&bounds=52.674917%2C13.760469%2C52.338242%2C13.088333',
+                    }}
+                    className={css.link}
+                  >
+                    <FormattedMessage id="Footer.searchBerlin" />
+                  </NamedLink>
+                </li>
               </ul>
             </div>
             <div className={css.extraLinks}>
@@ -279,16 +309,11 @@ const Footer = props => {
               </div>
               <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
-                  <li>
-                    <NamedLink name="TermsOfServicePage" className={css.legalLink}>
-                      <FormattedMessage id="Footer.termsOfUse" />
-                    </NamedLink>
-                  </li>
-                  <li>
-                    <NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
-                      <FormattedMessage id="Footer.privacyPolicy" />
-                    </NamedLink>
-                  </li>
+                  <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter" className={css.playIcon}>
+                      <div className={css.googleShape}></div>
+                      <span>Get it on<br /><span className={css.googleBold}>Google Play</span></span>
+                  </ExternalLink>
+                  
                 </ul>
               </div>
             </div>

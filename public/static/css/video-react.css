@@ -402,8 +402,7 @@ body.video-react-full-window .video-react-fullscreen {
 .video-react .video-react-big-play-button:focus {
   outline: 0;
   border-color: #fff;
-  background-color: #73859f;
-  background-color: rgba(115, 133, 159, 0.5);
+  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
   -webkit-transition: all 0s;
   -moz-transition: all 0s;
   -o-transition: all 0s;
