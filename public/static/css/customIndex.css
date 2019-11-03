@@ -201,3 +201,26 @@
         }
     }
 
+    .inlineStep {
+        margin-top: -15px;
+        
+    }
+
+    .articleButton {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    color: #41a6df !important;
+    border: none !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    display: flex;
+    outline: 0 !important;
+    position: relative;
+}
+
+.articleButton:hover {
+  text-decoration: underline !important;
+  text-underline-position: under !important;
+  background: none !important;
+}

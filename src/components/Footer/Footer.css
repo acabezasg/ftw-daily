@@ -129,7 +129,7 @@
 .organizationDescription {
   @apply --marketplaceTinyFontStyles;
   color: #fff;
-  margin: 32px 0 35px !important;
+  margin: 21px 0 !important;
 }
 
 .organizationCopyright {

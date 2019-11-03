@@ -34,7 +34,6 @@ const PresskitPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain>
-
     <div className={css.sectionContent}>
       <h1 className={css.pressTitle}>The Pet Team</h1>
       <p className={css.pressSub}>

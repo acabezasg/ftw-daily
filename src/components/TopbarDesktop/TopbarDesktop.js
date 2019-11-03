@@ -13,6 +13,7 @@ import {
   MenuContent,
   MenuItem,
   NamedLink,
+  SideHelp,
 } from '../../components';
 import { TopbarSearchForm } from '../../forms';
 
@@ -187,6 +188,8 @@ const TopbarDesktop = props => {
           <img src={create} className={css.topbariconTwo} /> <FormattedMessage id="TopbarDesktop.createListing" />
         </span>
       </NamedLink>
+
+      <SideHelp />
 
       {profileMenu}
       {signupLink}

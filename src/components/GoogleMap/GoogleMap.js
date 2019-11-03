@@ -5,7 +5,14 @@ import css from './GoogleMap.css';
 export class GoogleMap extends Component {
   render() {
     return (
-      <Map className={css.googleMap} google={this.props.google} zoom={14}>
+      <Map 
+      initialCenter={{
+        lat: 51.495899,
+        lng: -0.2275376
+        }}
+      className={css.googleMap}
+      google={this.props.google}
+      zoom={11}>
  
         <Marker onClick={this.onMarkerClick}
                 name={'Current location'} />

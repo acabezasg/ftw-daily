@@ -185,7 +185,7 @@ class TopbarComponent extends Component {
         : null,
     };
 
-    const classes = classNames(rootClassName || css.root, className);
+    const classes = classNames(rootClassName || css.root, css.topmenu, className);
 
     return (
       <div className={classes}>

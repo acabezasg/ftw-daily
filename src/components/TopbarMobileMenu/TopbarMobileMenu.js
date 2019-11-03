@@ -83,15 +83,15 @@ const TopbarMobileMenu = props => {
         </span>
 
         <InlineTextButton className={css.logoutButton}>
-          <a className={css.inbox} href="./">Home</a>
+          <NamedLink className={css.inbox} name="LandingPage">Home</NamedLink>
         </InlineTextButton>
 
         <InlineTextButton className={css.logoutButton}>
-          <a className={css.inbox} href="/s/listings"><FormattedMessage id="Search Listings" /></a>
+          <NamedLink className={css.inbox} name="SearchListingsPage"><FormattedMessage id="Listings" /></NamedLink>
         </InlineTextButton>
 
         <InlineTextButton rootClassName={css.logoutButton, css.logoutLast}>
-          <a className={css.inbox} href="contact"><FormattedMessage id="Contact" /></a>
+          <NamedLink className={css.inbox} name="ContactPage"><FormattedMessage id="Contact" /></NamedLink>
         </InlineTextButton>
  
         <NamedLink

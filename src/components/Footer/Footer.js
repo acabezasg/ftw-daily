@@ -113,11 +113,6 @@ const Footer = props => {
                     <FormattedMessage id="Footer.toContactPage" />
                   </NamedLink>
                 </li>
-                <li className={css.listItem}>
-                  <NamedLink name="FaqPage" className={css.link}>
-                    <FormattedMessage id="Footer.toFAQPage" />
-                  </NamedLink>
-                </li>
               </ul>
             </div>
             <div className={css.searches}>
@@ -182,18 +177,6 @@ const Footer = props => {
                     <FormattedMessage id="Footer.searchRiyadh" />
                   </NamedLink>
                 </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Split-Dalmatia%20County%2C%20Croatia&bounds=43.973851%2C17.448944%2C42.72%2C15.09',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchSplit" />
-                  </NamedLink>
-                </li>
               </ul>
             </div>
             <div className={css.searchesExtra}>
@@ -256,18 +239,6 @@ const Footer = props => {
                     className={css.link}
                   >
                     <FormattedMessage id="Footer.searchMoscow" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Berlin%2C%20Germany&bounds=52.674917%2C13.760469%2C52.338242%2C13.088333',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchBerlin" />
                   </NamedLink>
                 </li>
               </ul>
