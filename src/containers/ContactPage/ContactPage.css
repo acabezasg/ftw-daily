@@ -87,12 +87,14 @@
 
 .contentWrapper input {
   margin-bottom: 30px;
+  font-size: 17px;
 }
 
 .contentWrapper textarea {
   padding: 0;
   margin-bottom: 30px;
   margin-top: 10px;
+  font-size: 17px;
 }
 
 .staticPageWrapper h1 {
