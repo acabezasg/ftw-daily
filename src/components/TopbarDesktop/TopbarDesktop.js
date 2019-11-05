@@ -61,7 +61,7 @@ const TopbarDesktop = props => {
       name="InboxPage"
       params={{ tab: currentUserHasListings ? 'sales' : 'orders' }}
     >
-      <span className={css.inbox}>
+      <span className={css.signup}>
         <img src={inbox} className={css.topbariconTwo} /> <FormattedMessage id="TopbarDesktop.inbox" />
         {notificationDot}
       </span>
