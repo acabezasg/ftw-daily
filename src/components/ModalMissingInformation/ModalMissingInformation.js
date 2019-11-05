@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import { bool, func, string } from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
@@ -85,7 +86,19 @@ class ModalMissingInformation extends Component {
       if (emailVerificationNeeded) {
         this.setState({ showMissingInformationReminder: EMAIL_VERIFICATION });
       } else if (stripeAccountNeeded) {
-        //this.setState({ showMissingInformationReminder: STRIPE_ACCOUNT });
+        if (localStorage.getItem('notificationShownTime')) {
+          if (
+            moment
+              .duration(moment().diff(moment(localStorage.getItem('notificationShownTime'))))
+              .hours() != 0
+          ) {
+            this.setState({ showMissingInformationReminder: STRIPE_ACCOUNT });
+            localStorage.setItem('notificationShownTime', moment());
+          }
+        } else {
+          this.setState({ showMissingInformationReminder: STRIPE_ACCOUNT });
+          localStorage.setItem('notificationShownTime', moment());
+        }
       }
     }
   }
