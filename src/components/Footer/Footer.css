@@ -309,14 +309,12 @@
 }
 
 .organizationCopyrightMobile {
+  text-align: center;
+  width: 100%;
   /* Font */
   @apply --marketplaceTinyFontStyles;
   color: var(--matterColorAnti);
   transition: var(--transitionStyleButton);
-
-  /* Tell parent component how much space this one prefers */
-  flex-basis: 172px;
-
   margin-top: 0;
   margin-bottom: 0;
 
@@ -328,6 +326,7 @@
 
 .tosAndPrivacyMobile {
   flex-basis: 172px;
+  display: none;
 }
 
 .privacy {
@@ -356,6 +355,25 @@
 .legalLink {
   color: #fff !important;
 }
+
+.playIconMobile {
+  display: flex;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.playIconMobile span {
+  font-size: 12px;
+  line-height: 15px;
+  padding-left: 5px;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+@media (min-width: 768px) {
+  .playIconMobile {
+  display: none;
+}}
 
 .playIcon {
   display: flex;

@@ -66,7 +66,39 @@ const Footer = props => {
     <div className={classes}>
       <div className={css.topBorderWrapper}>
         <div className={css.content}>
-          <div className={css.someLiksMobile}>{socialMediaLinks}</div>
+          <div className={css.someLiksMobile}>
+            {socialMediaLinks}
+              <ExternalLink
+                href="https://instagram.com/trustmypetsitter"
+                className={css.icon}
+                title="Go to Instagram page"
+              >
+                  <IconSocialMediaInstagram />
+              </ExternalLink>
+              <ExternalLink
+                href="https://pinterest.com/trustmypetsitter"
+                className={css.icon}
+                title="Go to Pinterest page"
+              >
+                <IconSocialMediaPinterest />
+              </ExternalLink>
+
+              <ExternalLink
+                href="https://linkedin.com/company/19270133"
+                className={css.icon}
+                title="Go to Linkedin page"
+              >
+                <IconSocialMediaLinkedin />
+              </ExternalLink>
+
+              <ExternalLink
+                href="https://youtube.com/channel/UCz2CW5OD_eaeIxiNars87aQ"
+                className={css.icon}
+                title="Go to Youtube channel"
+              >
+                <IconSocialMediaYoutube />
+              </ExternalLink>
+          </div>
           <div className={css.links}>
             <div className={css.organization} id="organization">
               <div className={css.footerTitleContainer}> 
@@ -117,31 +149,7 @@ const Footer = props => {
             </div>
             <div className={css.searches}>
               <ul className={css.list}>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Helsinki%2C%20Finland&bounds=60.2978389%2C25.254484899999966%2C59.9224887%2C24.782875800000056&origin=60.16985569999999%2C24.93837910000002',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchHelsinki" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=New%20York%20City%2C%20New%20York%2C%20United%20States%20of%20America&bounds=40.917576401307%2C-73.7008392055224%2C40.477399%2C-74.2590879797556',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchNewYork" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
+              <li className={css.listItem}>
                   <NamedLink
                     name="SearchPage"
                     to={{
@@ -158,11 +166,11 @@ const Footer = props => {
                     name="SearchPage"
                     to={{
                       search:
-                        '?address=Madrid%2C%20Spain&bounds=41.165845%2C-3.052983%2C39.88472%2C-4.579076',
+                        '?address=Edinburgh%2C%20Scotland%2C%20United%20Kingdom&bounds=56.0126298325265%2C-3.07495122820668%2C55.8187943486294%2C-3.44953251894456',
                     }}
                     className={css.link}
                   >
-                    <FormattedMessage id="Footer.searchMadrid" />
+                    <FormattedMessage id="Footer.searchEdinburgh" />
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
@@ -170,17 +178,53 @@ const Footer = props => {
                     name="SearchPage"
                     to={{
                       search:
-                        '?address=Riyadh%2C%20Saudi%20Arabia&bounds=27.532635%2C48.304576%2C19.256913%2C41.976177',
+                        '?address=New%20York%20City%2C%20New%20York%2C%20United%20States%20of%20America&bounds=40.917576401307%2C-73.7008392055224%2C40.477399%2C-74.2590879797556',
                     }}
                     className={css.link}
                   >
-                    <FormattedMessage id="Footer.searchRiyadh" />
+                    <FormattedMessage id="Footer.searchNewYork" />
+                  </NamedLink>
+                </li>
+                 <li className={css.listItem}>
+                  <NamedLink
+                    name="SearchPage"
+                    to={{
+                      search:
+                        '?address=Los%20Angeles%2C%20California%2C%20United%20States%20of%20America&bounds=34.161440999758%2C-118.121305008073%2C33.9018913203336%2C-118.521456965901',
+                    }}
+                    className={css.link}
+                  >
+                    <FormattedMessage id="Footer.searchLosAngeles" />
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
+                  <NamedLink
+                    name="SearchPage"
+                    to={{
+                      search:
+                        '?address=San%20Francisco%2C%20California%2C%20United%20States%20of%20America&bounds=37.8324430069081%2C-122.354995082683%2C37.6044780500533%2C-122.517910874663',
+                    }}
+                    className={css.link}
+                  >
+                    <FormattedMessage id="Footer.searchSanFrancisco" />
                   </NamedLink>
                 </li>
               </ul>
             </div>
             <div className={css.searchesExtra}>
               <ul className={css.list}>
+              <li className={css.listItem}>
+                  <NamedLink
+                    name="SearchPage"
+                    to={{
+                      search:
+                        '?address=Rome%2C%20Italy&bounds=42.295977%2C13.296344%2C41.307874%2C11.64446',
+                    }}
+                    className={css.link}
+                  >
+                    <FormattedMessage id="Footer.searchRome" />
+                  </NamedLink>
+                </li>
                 <li className={css.listItem}>
                   <NamedLink
                     name="SearchPage"
@@ -198,11 +242,23 @@ const Footer = props => {
                     name="SearchPage"
                     to={{
                       search:
-                        '?address=Buenos%20Aires%2C%20Argentina&bounds=-34.2611895%2C-58.105691%2C-34.774928%2C-58.560532',
+                        '?address=Madrid%2C%20Spain&bounds=41.165845%2C-3.052983%2C39.88472%2C-4.579076',
                     }}
                     className={css.link}
                   >
-                    <FormattedMessage id="Footer.searchBuenos" />
+                    <FormattedMessage id="Footer.searchMadrid" />
+                  </NamedLink>
+                </li> 
+                <li className={css.listItem}>
+                  <NamedLink
+                    name="SearchPage"
+                    to={{
+                      search:
+                        '?address=Toronto%2C%20Ontario%2C%20Canada&bounds=43.8554654957061%2C-79.1134670108977%2C43.5603428815601%2C-79.639302406235',
+                    }}
+                    className={css.link}
+                  >
+                    <FormattedMessage id="Footer.searchToronto" />
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
@@ -210,39 +266,16 @@ const Footer = props => {
                     name="SearchPage"
                     to={{
                       search:
-                        '?address=Milan%2C%20Province%20of%20Milan%2C%20Italy&bounds=45.535879%2C9.278131%2C45.386746%2C9.041552',
+                        '?address=Sydney%2C%20New%20South%20Wales%2C%20Australia&bounds=-33.578140996%2C151.343020992%2C-34.118344992%2C150.520928608',
                     }}
                     className={css.link}
                   >
-                    <FormattedMessage id="Footer.searchMilan" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Ontario%2C%20Canada&bounds=56.959311%2C-74.320106%2C41.676428%2C-95.153671',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchOntario" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Moscow%2C%20Russia&bounds=56.020768%2C37.962469%2C55.490567%2C37.129646',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchMoscow" />
+                    <FormattedMessage id="Footer.searchSydney" />
                   </NamedLink>
                 </li>
               </ul>
             </div>
+        
             <div className={css.extraLinks}>
               <div className={css.someLinks}>{socialMediaLinks}
               
@@ -288,7 +321,12 @@ const Footer = props => {
                 </ul>
               </div>
             </div>
+                      <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter" className={css.playIconMobile}>
+                <div className={css.googleShape}></div>
+                    <span>Get it on<br /><span className={css.googleBold}>Google Play</span></span>
+             </ExternalLink>
           </div>
+
           <div className={css.copyrightAndTermsMobile}>
             <NamedLink name="LandingPage" className={css.organizationCopyrightMobile}>
               <FormattedMessage id="Footer.copyright" />
