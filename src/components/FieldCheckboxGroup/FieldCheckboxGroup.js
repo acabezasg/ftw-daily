@@ -57,11 +57,11 @@ const FieldCheckboxRenderer = props => {
                 label={option.label}
                 value={option.key}
               />
-            <ReactTooltip id={fieldId} className={css.customTip} effect="solid">
-              <span className={css.tipColor}>
-                {tip}
-              </span>
-            </ReactTooltip>
+              {option.tip ? (
+                <ReactTooltip id={fieldId} className={css.customTip} effect="solid">
+                  <span className={css.tipColor}>{tip}</span>
+                </ReactTooltip>
+              ) : null}
             </li>
           );
         })}

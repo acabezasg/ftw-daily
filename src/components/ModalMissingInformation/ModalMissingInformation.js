@@ -86,19 +86,19 @@ class ModalMissingInformation extends Component {
       if (emailVerificationNeeded) {
         this.setState({ showMissingInformationReminder: EMAIL_VERIFICATION });
       } else if (stripeAccountNeeded) {
-        if (localStorage.getItem('notificationShownTime')) {
-          if (
-            moment
-              .duration(moment().diff(moment(localStorage.getItem('notificationShownTime'))))
-              .hours() != 0
-          ) {
-            this.setState({ showMissingInformationReminder: STRIPE_ACCOUNT });
-            localStorage.setItem('notificationShownTime', moment());
-          }
-        } else {
-          this.setState({ showMissingInformationReminder: STRIPE_ACCOUNT });
-          localStorage.setItem('notificationShownTime', moment());
-        }
+        // if (localStorage.getItem('notificationShownTime')) {
+        //   if (
+        //     moment
+        //       .duration(moment().diff(moment(localStorage.getItem('notificationShownTime'))))
+        //       .hours() != 0
+        //   ) {
+        //     this.setState({ showMissingInformationReminder: STRIPE_ACCOUNT });
+        //     localStorage.setItem('notificationShownTime', moment());
+        //   }
+        // } else {
+        //   this.setState({ showMissingInformationReminder: STRIPE_ACCOUNT });
+        //   localStorage.setItem('notificationShownTime', moment());
+        // }
       }
     }
   }
