@@ -1,0 +1,257 @@
+.staticPageWrapper {
+  margin: 0 auto;
+}
+
+.banner {
+  background: #41a6df;
+  display: flex;
+}
+
+.bannerContent {
+  width: calc(100% - 420px);
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+}
+
+.bannerContent div {
+  width: 50%;
+}
+
+.helpTitle {
+  font-family: Helvetica Neue LT, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: -.025rem;
+  color: #fff;
+  text-shadow: 1px 1px 1px #444;
+  white-space: nowrap;
+}
+
+.bannerRight {
+  position: relative;
+}
+
+.helpImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reccArticles {
+  margin: 0 auto;
+}
+
+.skinWrapper {
+  padding: 40px 0;
+  width: calc(100% - 420px);
+  margin: 0 auto;
+}
+
+.showArticles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.activeArticle {
+  width: 33%;
+  padding: 0px 10px;
+}
+
+.activeArticle:nth-child(1) {
+  padding-left: 0 !important;
+}
+
+.activeArticle:nth-child(3) {
+  padding-right: 0 !important;
+}
+
+.articleInside h3 {
+  margin: 10px 0;
+}
+
+.articleInside p {
+  margin: 13px 0 3px !important;
+  word-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-height: 2.75em !important;
+  -webkit-line-clamp: 2 !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.articleInside a {
+  margin: 0 !important;
+  padding: 0 !important;
+  word-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+  overflow: hidden !important;
+  max-height: 2.75em !important;
+  color: #41a6df !important;
+}
+
+.arroW {
+  height: 10px;
+  position: relative;
+  bottom: 0.6px;
+  margin-left: 8px;
+}
+
+.reccArticles h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.helpDivider {
+  margin: 40px 0;
+}
+
+.skinWrapper h2 {
+  font-weight: 700;
+}
+
+.skinWrapper h3 {
+  font-weight: 600;
+  color: #484848 !important;
+}
+
+.imageTips {
+  display: flex;
+}
+
+.imageItem {
+  width: 50%;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e4e4e4;
+  padding: 20px 0;
+}
+
+.imageItem:nth-child(1) {
+  margin-right: 8px;
+}
+
+.imageItem:nth-child(2) {
+  margin-left: 8px;
+}
+
+.imageItem:hover {
+  cursor: pointer;
+  border-color: #41a6df;
+}
+
+.imageContainer,
+.textContainer {
+  width: 50%;
+  position: relative;
+}
+
+.textMove {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 5px;
+}
+
+@media (min-width: 1480px) {
+  .textMove {
+    padding: 0 10px;
+  }
+}
+
+.textMove p {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+}
+
+.articleInside a:hover {
+  text-decoration: underline !important;
+}
+
+.articleInside:hover h3,
+.articleInside:hover p,
+.articleInside:hover a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.imageItem:hover h3,
+.imageItem:hover p {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.topicsTitle {
+  padding-top: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+.topics {
+  display: flex;
+}
+
+.topicsMain {
+  width: 25%;
+}
+
+.topicsMain:nth-child(2) {
+  padding: 0 10px;
+}
+
+.topicsMain:nth-child(3) {
+  padding: 0 10px;
+}
+
+.iconTopic img {
+  height: 50px;
+}
+
+.topicsMain h3 {
+  margin: 0;
+  padding-top: 20px;
+}
+
+.topicsMain ul {
+  padding-top: 20px;
+}
+
+.topicsMain ul li {
+  margin-bottom: 10px;
+  letter-spacing: -0.1px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+  color: #484848 !important;
+}
+
+.topicsMain ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.controls {
+  position: relative;
+  left: 3px;
+}

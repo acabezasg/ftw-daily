@@ -1,5 +1,5 @@
 export { default as YotiPage } from './YotiPage/YotiPage';
-export { default as WhatWeDoPage } from './WhatWeDoPage/WhatWeDoPage';
+export { default as QuestionPage } from './QuestionPage/QuestionPage';
 export { default as HowItWorksPage } from './HowItWorksPage/HowItWorksPage';
 export { default as ContactPage } from './ContactPage/ContactPage';
 export { default as AboutPage } from './AboutPage/AboutPage';
@@ -32,3 +32,4 @@ export { default as TermsOfServicePage } from './TermsOfServicePage/TermsOfServi
 export { default as TopbarContainer } from './TopbarContainer/TopbarContainer';
 export { default as TransactionPage } from './TransactionPage/TransactionPage';
 export { default as PresskitPage } from './PresskitPage/PresskitPage';
+export { default as HelpCenter } from './HelpCenter/HelpCenter';

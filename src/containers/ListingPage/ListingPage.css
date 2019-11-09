@@ -391,6 +391,10 @@
   color: var(--matterColor);
 }
 
+.authorNameLink:hover {
+  color: #41a6df !important;
+}
+
 .contactWrapper {
   display: none;
 

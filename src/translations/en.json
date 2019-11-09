@@ -548,7 +548,7 @@
   "ListingPage.rulesTitle": "Dog size",
   "ListingPage.schemaTitle": "{title} - {price} | {siteTitle}",
   "ListingPage.viewImagesButton": "View photos ({count})",
-  "ListingPage.yourHostHeading": "Personal informations",
+  "ListingPage.yourHostHeading": "Profile",
 
   "LocationAutocompleteInput.currentLocation": "Current location",
   "LocationSearchForm.placeholder": "e.g London...",

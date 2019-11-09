@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   YotiPage,
-  WhatWeDoPage,
+  QuestionPage,
   HowItWorksPage,
   ContactPage,
   FaqPage,
@@ -33,6 +33,7 @@ import {
   TransactionPage,
   OrderTypesPage,
   PresskitPage,
+  HelpCenter,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -62,9 +63,9 @@ const routeConfiguration = () => {
       component: YotiPage,
     },
     {
-      path: '/whatwedo',
-      name: 'WhatWeDoPage',
-      component: WhatWeDoPage,
+      path: '/question',
+      name: 'QuestionPage',
+      component: QuestionPage,
     },
     {
       path: '/howitworks',
@@ -80,6 +81,11 @@ const routeConfiguration = () => {
       path: '/faq',
       name: 'FaqPage',
       component: FaqPage,
+    },
+    {
+      path: '/helpcenter',
+      name: 'HelpCenter',
+      component: HelpCenter,
     },
     {
       path: '/pet-sitter-faq',
