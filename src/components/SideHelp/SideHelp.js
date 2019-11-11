@@ -51,6 +51,11 @@ class SideHelp extends React.Component {
       linear: false,
       animation: true
     })
+
+        this.stepper2 = new Stepper(document.querySelector('#stepper2'), {
+      linear: false,
+      animation: true
+    })
   }
 
   onSubmit(e) {
@@ -82,12 +87,16 @@ class SideHelp extends React.Component {
             </a>
           </div>
 
+
+<div className={css.helpT}>
+  <h4 className={css.helpMainTitle}>Recommended Articles</h4>
+</div>
+
        <div id="stepper1" class="bs-stepper">
           <div class="bs-stepper-header">
           </div>
           <div className={css.helpContent}>
               <div id="test-l-1" class="content">
-                  <h4 className={css.helpMainTitle}>Recommended Articles</h4>
                   <h3 className={css.articleTitle}>How do I create an account?</h3>
                   <p className={css.articleParagraph}>Just click the Sign Up button below or the link on the Navigation Bar above. You'll land on our Sign Up page and can choose to sign up with Facebook, Linkedin or by Email.</p>
                 <button className={css.articleButton} onClick={() => this.stepper.next()}>Read More <img className={css.readmoreImg} src={arrowRight} /></button> 
@@ -108,8 +117,35 @@ class SideHelp extends React.Component {
               </div>
           </div>
         </div>              
+
+        <div id="stepper2" class="bs-stepper">
+          <div class="bs-stepper-header">
+          </div>
+          <div className={css.helpContent}>
+              <div id="test-l-1" class="content">
+                  <h3 className={css.articleTitle}>How do I find homes and Pets to Sit?</h3>
+                  <p className={css.articleParagraph}>You can browse Pet Owners who have placed a listing in area or country specific
+locations.</p>
+                <button className={css.articleButton} onClick={() => this.stepper2.next()}>Read More <img className={css.readmoreImg} src={arrowRight} /></button> 
+              </div>
+              <div id="test-l-2" class="content">
+               <div class="step inlineStep" data-target="#test-l-1">
+              <button class="step-trigger articleButton">
+              <img className={css.backImg} src={arrowLeft} /> Back
+              </button>
+            </div>
+              <h3 className={css.insideTitle}>How do I create an account?</h3>
+                <p className={css.insideP}>Just click the <NamedLink className={css.insideLinks} name="SignupPage">Sign Up</NamedLink> button below or the link on the Navigation Bar above.</p>
+                <p className={css.insideP}>You'll land on our Sign Up page and can choose to sign up with Facebook, Linkedin or by Email.</p>
+                <p className={css.insideP}>We'll send you an email to guide you through the process. It's easy and only takes a few minutes from start to finish.</p>
+            <div style={{display: "none"}} class="step" data-target="#test-l-2">
+              <button class="step-trigger"></button>
+            </div>
+              </div>
+          </div>
+        </div>              
         <div className={css.sidefooter}>
-          <NamedLink name="FaqPage" className={css.helpcenter}>
+          <NamedLink name="HelpCenter" className={css.helpcenter}>
             <span>Visit the Help Center</span>
           </NamedLink>
         </div>

@@ -157,6 +157,18 @@
 .helpContent {
   width: 100%;
   padding: 32px;
+  padding-bottom: 0;
+}
+
+.helpT {
+  width: 100%;
+  padding: 32px;
+  padding-bottom: 0;
+  margin-bottom: -16px;
+}
+
+.helpT h4 {
+  margin: 0 !important;
 }
 
 .backImg {
