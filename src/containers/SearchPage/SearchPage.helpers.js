@@ -14,6 +14,7 @@ import routeConfiguration from '../../routeConfiguration';
  * @param {Object} filters Filters configuration
  */
 export const validURLParamForExtendedData = (paramName, paramValue, filters) => {
+  paramValue = String(paramValue);
   const filtersArray = Object.values(filters);
   // resolve configuration for this filter
   const filterConfig = filtersArray.find(f => f.paramName === paramName);
