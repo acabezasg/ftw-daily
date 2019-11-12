@@ -44,8 +44,6 @@ const QuestionPage = () => {
 
       <TabList className={css.whatwedoLeft}>
 
-
-
         <div id="openOne" className={css.wrapCollabsible}>
             <input id="collapsible1" className={css.toggle} type="checkbox" />
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Getting started</span></label>
@@ -64,11 +62,9 @@ const QuestionPage = () => {
                 <a>How do I make a booking?</a>
               </div></Tab>
 
-
               </div>
             </div>
           </div>
-
 
           <div id="openTwo" className={css.wrapCollabsible}>
             <input id="collapsible2" className={css.toggle} type="checkbox" />
