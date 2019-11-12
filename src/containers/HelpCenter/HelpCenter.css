@@ -38,6 +38,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 100px;
 }
 
 .reccArticles {
@@ -126,6 +127,7 @@
 .skinWrapper h3 {
   font-weight: 600;
   color: #484848 !important;
+  padding-right: 10px;
 }
 
 .imageTips {
@@ -254,4 +256,55 @@
 .controls {
   position: relative;
   left: 3px;
+}
+
+@media (max-width: 1124px) {
+  .bannerContent {
+    width: 90%;
+  }
+  .skinWrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .activeArticle {
+    width: 100%;
+    padding: 0;
+  }
+  .imageTips {
+    flex-wrap: wrap;
+  }
+  .imageItem {
+    width: 100%;
+    margin: 10px 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .bannerContent {
+    width: 100%;
+    padding: 60px 20px;
+  }
+  .topics {
+    flex-wrap: wrap;
+  }
+  .topicsMain {
+    width: 50%;
+    padding: 10px 0;
+  }
+  .topicsMain:nth-child(2),
+  .topicsMain:nth-child(3) {
+    padding: 10px 0;
+  }
+  .bannerContent div {
+    width: 100%;
+    text-align: center;
+  }
+  .bannerContent {
+    flex-wrap: wrap;
+  }
+  .bannerRight {
+    display: none;
+  }
 }

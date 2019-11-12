@@ -60,11 +60,12 @@
 
 .sidefooter {
   text-align: center;
-  width: 100%;
-  position: absolute;
+  width: inherit;
+  position: fixed;
   bottom: 0;
   border-top: 1px solid rgb(235, 235, 235);
   padding: 20px;
+  background: #fff;
 }
 
 .helptitle {
@@ -189,6 +190,7 @@
   font-size: 16px !important;
   line-height: 1.375em !important;
   font-weight: 400;
+  color: rgb(72, 72, 72) !important;
 }
 
 .insideLinks:hover {
@@ -579,5 +581,24 @@
       background-color: var(--matterColorDark);
     }
   }
+}
+
+.helpContent h4 {
+  font-weight: 600;
+  color: #484848 !important;
+  font-size: 20px;
+}
+
+.dotted {
+  padding-left: 25px;
+  list-style: inherit !important;
+}
+
+.dotted li {
+  font-size: 16px !important;
+  line-height: 1.375em !important;
+  font-weight: 400;
+  margin: 16px 0;
+  color: rgb(72, 72, 72) !important;
 }
 

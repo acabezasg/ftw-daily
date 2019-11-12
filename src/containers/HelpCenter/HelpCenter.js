@@ -10,12 +10,13 @@ import {
 } from '../../components';
 
 import css from './HelpCenter.css';
-import doghelp from './images/doghelp.png';
 import arrowRight from './images/arrowright.png';
 import flag from './images/flag.png';
 import controls from './images/controls.png';
 import shield from './images/shield.png';
 import community from './images/community.png';
+import help from './images/help.png';
+import sitters from './images/sitters.png';
 
 const HelpCenter = () => {
   
@@ -41,12 +42,11 @@ const HelpCenter = () => {
     <div className={css.bannerContent}>
       <div className={css.bannerTitle}>
         <span className={css.helpTitle}>
-        Hi,<br />
-        how can we help you?
+        How can we help?
         </span>
       </div>
       <div className={css.bannerRight}>
-        <img src={doghelp} className={css.helpImage} />
+        <img src={help} className={css.helpImage} />
       </div>
     </div>
   </div>
@@ -89,11 +89,11 @@ const HelpCenter = () => {
     <div className={css.imageTips}>
       <div className={css.imageItem}>
         <div className={css.imageContainer}>
-          <img src="https://a0.muscache.com/pictures/7e9ddf18-ed1a-45ce-885d-40bdece3eb63.jpg" />
+          <img src={sitters} />
         </div>
         <div className={css.textContainer}>
           <div className={css.textMove}>
-            <h3>Booking</h3>
+            <h3>Find a Pet Sitter</h3>
             <p>Get help with booking Pet Sitters and
               finding the perfect match.
             </p>
@@ -106,7 +106,7 @@ const HelpCenter = () => {
         </div>
         <div className={css.textContainer}>
           <div className={css.textMove}>
-            <h3>Payments</h3>
+            <h3>Find Pets and Homes to look after</h3>
             <p>Get help with setting up payments and
               withdrawling your funds.
             </p>
