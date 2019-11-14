@@ -42,13 +42,11 @@ const QuestionPage = () => {
 </div>
     <div className={css.goFlex}>
 
-      <TabList className={css.whatwedoLeft}>
+      <div className={css.whatwedoLeft}>
 
-        <div id="openOne" className={css.wrapCollabsible}>
-            <input id="collapsible1" className={css.toggle} type="checkbox" />
+            <TabList>
+
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Getting started</span></label>
-            <div className={css.collapsibleContent}>
-              <div className={css.contentInner}>
               
               <Tab><div className={css.collapseItem}>
                 <a>How do I find a pet sitter?</a>
@@ -62,15 +60,7 @@ const QuestionPage = () => {
                 <a>How do I make a booking?</a>
               </div></Tab>
 
-              </div>
-            </div>
-          </div>
-
-          <div id="openTwo" className={css.wrapCollabsible}>
-            <input id="collapsible2" className={css.toggle} type="checkbox" />
-            <label for="collapsible2" className={css.lblToggle}><span className={css.collapsibleTitle}>Your account</span></label>
-            <div className={css.collapsibleContent}>
-              <div className={css.contentInner}>
+            <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Your account</span></label>
               
               <Tab><div className={css.collapseItem}>
                 <a>Managing your account</a>
@@ -86,17 +76,9 @@ const QuestionPage = () => {
 
               <div className={css.collapseItem}>
                 <a>Closing your account</a>
-              </div>
+              </div>  
 
-              </div>
-            </div>
-          </div>
-
-          <div id="openThree" className={css.wrapCollabsible}>
-            <input id="collapsible3" className={css.toggle} type="checkbox" />
-            <label for="collapsible3" className={css.lblToggle}><span className={css.collapsibleTitle}>Our community</span></label>
-            <div className={css.collapsibleContent}>
-              <div className={css.contentInner}>
+              <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Our community</span></label>
               
               <div className={css.collapseItem}>
                 <a>Accessibility</a>
@@ -110,16 +92,8 @@ const QuestionPage = () => {
                 <a>Promoting on socials</a>
               </div>
 
-              </div>
-            </div>
-          </div>
-
-
-     <div id="openForth" className={css.wrapCollabsible}>
-            <input id="collapsible4" className={css.toggle} type="checkbox" />
+    
             <label for="collapsible4" className={css.lblToggle}><span className={css.collapsibleTitle}>Trust and security</span></label>
-            <div className={css.collapsibleContent}>
-              <div className={css.contentInner}>
               
               <div className={css.collapseItem}>
                 <a>Ways of security</a>
@@ -137,11 +111,9 @@ const QuestionPage = () => {
                 <a>Payment informations</a>
               </div>
 
-              </div>
-            </div>
-          </div>
+            </TabList>
 
-      </TabList>
+      </div>
 
       <div className={css.whatwedoRight}>
        <TabPanel>
@@ -255,6 +227,12 @@ detailed searches.</p>
         <TabPanel>
           <h2>
             How Do I make a booking?
+          </h2>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>
+            How Do I make a bsadasaooking?
           </h2>
         </TabPanel>
 

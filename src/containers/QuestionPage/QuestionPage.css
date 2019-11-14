@@ -311,6 +311,7 @@ input[type='checkbox'] {
 }
 
 .lblToggle::before {
+  display: none !important;
   content: ' ';
   display: inline-block;
   border-top: 5px solid transparent;

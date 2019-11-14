@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
+import { Player, BigPlayButton } from 'video-react';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -15,6 +16,13 @@ import css from './PresskitPage.css';
 import angela from './team/angela.jpg';
 import sinead from './team/sinead.jpg';
 import shamus from './team/shamus.jpg';
+import poster from './tmpsposter.png';
+import video from './tmps.mp4';
+import download from './download.png';
+import phone from './phone.png';
+import follow from './follow.png';
+import notes from './notes.png';
+import arrow from './right-arrow.png';
 
 const PresskitPage = () => {
   // prettier-ignore
@@ -108,9 +116,79 @@ const PresskitPage = () => {
       <p>
         Trust My Pet Sitter have teamed up with PawSquad which lets you video call or text chat with a UK-registered vet absolutely free at any time of day or night, 365 days a year. They have also teamed with YOTI to verify identity across 130 countries within minutes, helping to keep the Trust My Pet Sitter community safe and identifiable. 
       </p>
-      <p>
+      <p className={css.nobttm}>
         Trust My Pet Sitter is a Scottish based company.  For press inquiries, please contact <a href="mailto:angela@trustmypetsitter.com">Angela Fagan</a>.
       </p>
+
+      <div className={css.strike}>
+      <h1 className={css.pressTitle2}>How it Works</h1>
+      <div className={css.pressFlex}>
+
+        <div className={css.videoSide}>
+       <Player
+      playsInline
+      poster={poster}
+      src={video}>
+      <BigPlayButton position="center" />
+      </Player>
+        </div>
+
+        <div className={css.videoSide}>
+       <Player
+      playsInline
+      poster={poster}
+      src={video}>
+      <BigPlayButton position="center" />
+      </Player>
+        </div>        
+
+      </div>
+
+      <div className={css.linksFlex}>
+
+        <div className={css.linkItem}>
+        <div className={css.logo}>
+          <img src={download} />
+        </div>
+          <a href="">Download our Logo</a>
+        </div>
+
+        <div className={css.linkItem}>
+        <div className={css.logo}>
+          <img src={phone} />
+        </div>
+          <a href="">App Preview</a>
+        </div>
+
+        <div className={css.linkItem}>
+        <div className={css.logo}>
+          <img src={follow} />
+        </div>
+          <a href="">Follow Us</a>
+        </div>
+
+        <div className={css.linkItem}>
+        <div className={css.logo}>
+          <img src={notes} />
+        </div>
+          <a href="">Launch Posts</a>
+        </div>
+
+      </div>
+
+      <div className={css.strike}>
+      <h1 className={css.pressTitle2}>Press Releases</h1>
+      </div>
+
+      <p className={css.release}>
+        <ExternalLink href="http://www.releasewire.com/press-releases/mother-and-daughter-entrepreneurs-angela-fagan-and-sinead-fitzsimons-launch-trust-my-pet-sitter-the-pet-care-app-1264866.htm">
+        Mother and Daughter Entrepreneurs 
+        <img className={css.arr} src={arrow} />
+        </ExternalLink>
+      </p>
+
+     </div>
+
       </div>
 
       </LayoutWrapperMain>
