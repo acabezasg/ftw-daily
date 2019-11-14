@@ -23,6 +23,7 @@ import phone from './phone.png';
 import follow from './follow.png';
 import notes from './notes.png';
 import arrow from './right-arrow.png';
+import release from './release.pdf';
 
 const PresskitPage = () => {
   // prettier-ignore
@@ -150,28 +151,28 @@ const PresskitPage = () => {
         <div className={css.logo}>
           <img src={download} />
         </div>
-          <a href="">Download our Logo</a>
+          <ExternalLink href="https://drive.google.com/drive/folders/1K40b_P-YN6SdUFVSuG0IIcvxzRid7WsW?usp=sharing">Download our Logo</ExternalLink>
         </div>
 
         <div className={css.linkItem}>
         <div className={css.logo}>
           <img src={phone} />
         </div>
-          <a href="">App Preview</a>
+          <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter&hl=sr">App Preview</ExternalLink>
         </div>
 
         <div className={css.linkItem}>
         <div className={css.logo}>
           <img src={follow} />
         </div>
-          <a href="">Follow Us</a>
+          <ExternalLink href="https://www.instagram.com/trustmypetsitter/">Follow Us</ExternalLink>
         </div>
 
         <div className={css.linkItem}>
         <div className={css.logo}>
           <img src={notes} />
         </div>
-          <a href="">Launch Posts</a>
+          <ExternalLink href="https://drive.google.com/drive/folders/18zrQ-0DKNR52wzLiHGcGgVBwI2pfv9Ju?usp=sharing">Launch Posts</ExternalLink>
         </div>
 
       </div>
@@ -181,7 +182,7 @@ const PresskitPage = () => {
       </div>
 
       <p className={css.release}>
-        <ExternalLink href="http://www.releasewire.com/press-releases/mother-and-daughter-entrepreneurs-angela-fagan-and-sinead-fitzsimons-launch-trust-my-pet-sitter-the-pet-care-app-1264866.htm">
+        <ExternalLink href={release} download>
         Mother and Daughter Entrepreneurs 
         <img className={css.arr} src={arrow} />
         </ExternalLink>
