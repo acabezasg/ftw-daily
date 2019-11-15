@@ -25,6 +25,7 @@ import follow from './follow.png';
 import notes from './notes.png';
 import arrow from './right-arrow.png';
 import release from './release.pdf';
+import petowner from './petowner.png';
 
 const PresskitPage = () => {
   // prettier-ignore
@@ -138,7 +139,7 @@ const PresskitPage = () => {
         <div className={css.videoSide}>
        <Player
       playsInline
-      poster={poster}
+      poster={petowner}
       src={video}>
       <BigPlayButton position="center" />
       </Player>
