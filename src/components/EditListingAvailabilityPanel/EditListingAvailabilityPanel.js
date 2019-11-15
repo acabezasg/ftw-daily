@@ -29,7 +29,8 @@ const EditListingAvailabilityPanel = props => {
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-  const defaultAvailabilityPlan = {
+
+  const defaultAvailabilityPlanSitter = {
     type: 'availability-plan/day',
     entries: [
       { dayOfWeek: 'mon', seats: 1 },
@@ -41,7 +42,26 @@ const EditListingAvailabilityPanel = props => {
       { dayOfWeek: 'sun', seats: 1 },
     ],
   };
-  const availabilityPlan = currentListing.attributes.availabilityPlan || defaultAvailabilityPlan;
+
+  const defaultAvailabilityPlanOwner = {
+    type: 'availability-plan/day',
+    entries: [
+      { dayOfWeek: 'mon', seats: 0 },
+      { dayOfWeek: 'tue', seats: 0 },
+      { dayOfWeek: 'wed', seats: 0 },
+      { dayOfWeek: 'thu', seats: 0 },
+      { dayOfWeek: 'fri', seats: 0 },
+      { dayOfWeek: 'sat', seats: 0 },
+      { dayOfWeek: 'sun', seats: 0 },
+    ],
+  };
+
+  const availabilityPlan =
+    currentListing.attributes.availabilityPlan || user_type === 0
+      ? defaultAvailabilityPlanOwner
+      : defaultAvailabilityPlanSitter;
+
+  const exceptionID = currentListing.attributes.publicData.exceptionID || null;
 
   let requiredDates = false;
 
@@ -74,7 +94,7 @@ const EditListingAvailabilityPanel = props => {
         onSubmit={() => {
           if (user_name == 'owner') {
             if (requiredDates) {
-              onSubmit({ availabilityPlan, publicData: { requiredDates } });
+              onSubmit({ availabilityPlan, publicData: { requiredDates, exceptionID } });
             }
           } else {
             onSubmit({ availabilityPlan });

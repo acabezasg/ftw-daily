@@ -622,27 +622,34 @@ export function requestUpdateListing(tab, data) {
   return (dispatch, getState, sdk) => {
     dispatch(updateListing(data));
     const { id } = data;
-    let updateResponse;
-    return sdk.ownListings
-      .update(data)
-      .then(response => {
-        updateResponse = response;
-        const payload = {
-          id,
-          include: ['author', 'images'],
-          'fields.image': ['variants.landscape-crop', 'variants.landscape-crop2x'],
-        };
-        return dispatch(requestShowListing(payload));
-      })
-      .then(() => {
-        dispatch(markTabUpdated(tab));
-        dispatch(updateListingSuccess(updateResponse));
-        return updateResponse;
-      })
-      .catch(e => {
-        log.error(e, 'update-listing-failed', { listingData: data });
-        return dispatch(updateListingError(storableError(e)));
-      });
+    if (data.publicData) {
+      if (data.publicData.requiredDates) {
+        if (data.publicData.exceptionID) {
+          return sdk.availabilityExceptions
+            .delete(
+              {
+                id: new UUID(data.publicData.exceptionID),
+              },
+              {
+                expand: false,
+              }
+            )
+            .then(() => {
+              return createException(sdk, tab, data, dispatch);
+            })
+            .catch(e => {
+              log.error(e, 'update-listing-failed', { listingData: data });
+              return dispatch(updateListingError(storableError(e)));
+            });
+        } else {
+          return createException(sdk, tab, data, dispatch);
+        }
+      } else {
+        return update(sdk, tab, data, dispatch);
+      }
+    } else {
+      return update(sdk, tab, data, dispatch);
+    }
   };
 }
 
@@ -663,4 +670,57 @@ export function loadData(params) {
     };
     return dispatch(requestShowListing(payload));
   };
+}
+
+function update(sdk, tab, data, dispatch) {
+  let updateResponse;
+  const { id } = data;
+  return sdk.ownListings
+    .update(data)
+    .then(response => {
+      updateResponse = response;
+      const payload = {
+        id,
+        include: ['author', 'images'],
+        'fields.image': ['variants.landscape-crop', 'variants.landscape-crop2x'],
+      };
+      return dispatch(requestShowListing(payload));
+    })
+    .then(() => {
+      dispatch(markTabUpdated(tab));
+      dispatch(updateListingSuccess(updateResponse));
+      return updateResponse;
+    })
+    .catch(e => {
+      log.error(e, 'update-listing-failed', { listingData: data });
+      return dispatch(updateListingError(storableError(e)));
+    });
+}
+
+function createException(sdk, tab, data, dispatch) {
+  const { id } = data;
+  let dates = data.publicData.requiredDates.split('to');
+  let from = new Date(dates[0].trim());
+  let fromTemp = new Date(from);
+  let to = dates[1] ? new Date(dates[1].trim()) : fromTemp;
+  return sdk.availabilityExceptions
+    .create(
+      {
+        listingId: id,
+        start: from,
+        end: new Date(to.setDate(to.getDate() + 1)),
+        seats: 1,
+      },
+      {
+        expand: true,
+      }
+    )
+    .then(res => {
+      data.publicData.exceptionID = res.data.data.id.uuid;
+      return update(sdk, tab, data, dispatch);
+    })
+    .catch(e => {
+      log.error(e, 'update-listing-failed', { listingData: data });
+      return dispatch(updateListingError(storableError(e)));
+    });
 }
