@@ -18,6 +18,7 @@ import sinead from './team/sinead.jpg';
 import shamus from './team/shamus.jpg';
 import poster from './tmpsposter.png';
 import video from './tmps.mp4';
+import petsitter from './petsitter.mp4';
 import download from './download.png';
 import phone from './phone.png';
 import follow from './follow.png';
@@ -129,7 +130,7 @@ const PresskitPage = () => {
        <Player
       playsInline
       poster={poster}
-      src={video}>
+      src={petsitter}>
       <BigPlayButton position="center" />
       </Player>
         </div>
