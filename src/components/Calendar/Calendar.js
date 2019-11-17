@@ -14,6 +14,8 @@ class Calendar extends Component {
       mode: 'range',
       dateFormat: 'Y-m-d',
       defaultDate,
+      minDate: 'today',
+      maxDate: new Date().fp_incr(100),
     });
   }
   render() {
