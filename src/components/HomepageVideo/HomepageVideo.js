@@ -3,8 +3,10 @@ import { Player, BigPlayButton } from 'video-react';
 import { FormattedMessage } from 'react-intl';
 
 import css from "./HomepageVideo.css"; 
-import poster from './tmpsposter.png';
-import video from './tmps.mp4';
+import petowner from "./assets/petowner.png";
+import petsitter from "./assets/petsitter.png";
+import petownerVideo from "./assets/tmps.mp4";
+import petsitterVideo from "./assets/petsitter.mp4";
 
 class HomepageVideo extends Component {
   render() {
@@ -19,14 +21,27 @@ class HomepageVideo extends Component {
     <span className={css.videoSub}>Pets stay at home | No Kennels | No Catteries | No strange places | Just familiarity, routine and 1 : 1 attention!</span>
     </div>
 </div>
+  <div className={css.homepageFlex}>
+
     <div className={css.videoContainer}>
        <Player
       playsInline
-      poster={poster}
-      src={video}>
+      poster={petsitter}
+      src={petsitterVideo}>
       <BigPlayButton position="center" />
       </Player>
     </div>
+
+    <div className={css.videoContainer}>
+       <Player
+      playsInline
+      poster={petowner}
+      src={petownerVideo}>
+      <BigPlayButton position="center" />
+      </Player>
+    </div>
+
+  </div>
 </div>
     );
   }

@@ -12,7 +12,25 @@
 .videoContainer {
     height: auto;
     margin: 0 auto;
-    margin-top: 57px;
+    width: 50%;
+}
+
+@media (max-width: 700px) {
+  .videoContainer {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .videoContainer:nth-child(1) {
+    margin-bottom: 10px;
+  }
+}
+
+.videoContainer:nth-child(1) {
+  padding-right: 5px;
+}
+
+.videoContainer:nth-child(2) {
+  padding-left: 5px;
 }
 
 .title {
@@ -41,3 +59,10 @@
   color: #4a4a4a;
   letter-spacing: 0.5px;
 }
+
+.homepageFlex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 57px;
+}
+
