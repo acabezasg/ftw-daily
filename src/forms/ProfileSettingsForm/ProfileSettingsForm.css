@@ -381,14 +381,13 @@ iframe[title='Yoti - Modal'] {
 }
 
 .contentinner p, .mobileHelp { 
-  word-wrap: break-word !important;
+  word-wrap: break-word;
   font-size: 18px !important;
   font-weight: 400 !important;
   line-height: 1.375em !important;
   color: #4a4a4a !important;
   text-overflow: ellipsis !important;
   max-height: 2.75em !important;
-  display: -webkit-box !important;
   -webkit-box-orient: vertical !important;
 }
 
@@ -397,7 +396,9 @@ iframe[title='Yoti - Modal'] {
 }
 
 .str, .strr {
-  width: 120px;
+  width: 110px;
+  position: relative;
+  bottom: 3px;
 }
 
 .yoticont {
@@ -407,12 +408,6 @@ iframe[title='Yoti - Modal'] {
 }
 
 @media (max-width: 800px) {
-  .contentinner p {
-    margin-bottom: 45px !important;
-  }
-  .yoticont p:nth-of-type(3) {
-    margin-bottom: 20px !important;
-  }
   .yoticont {
     margin-top: -26px;
     margin-bottom: 1px;
@@ -425,7 +420,20 @@ iframe[title='Yoti - Modal'] {
   display: none !important;
 }
 
+@media (min-width: 620px) {
+  .forMob {
+    display: none;
+  }
+}
+
 @media (max-width: 620px) {
+  .forMob {
+    display: block !important;
+  }
+  .CsS,
+  .forPc {
+    display: none !important;
+  }
   .needHelp {
     display: none;
   }
@@ -438,23 +446,51 @@ iframe[title='Yoti - Modal'] {
   }
 }
 
-@media (min-width: 620px) {
-  .storePc {
-    display: none;
+@media (max-width: 850px) {
+  .yoticont {
+    margin: 0 !important;
   }
-  .storeMobile {
-    display: block;
+}
+
+@media (max-width: 480px) {
+  .yoticont {
+    margin: 23px 0 0 !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .CsS {
+    margin-bottom: 25px !important;
+  }
+  .forMob {
+    margin-bottom: 25px !important;
+  }
+}
+
+@media (min-width: 1240px) {
+  .yoticont {
+    display: none;
   }
   .removePP {
   margin-top: -3px;
-}
+  }
+  .CsS {
+    margin-top: -5px;
+  }
+  .noWrap {
+    white-space: nowrap !important;
+  }
+  .strr {
+    margin-left: 10px;
+  }
 }
 
-@media (max-width: 620px) {
-  .storePc {
+@media (max-width: 1240px) {
+  .yoticont {
     display: block;
   }
-  .storeMobile {
+  .noWrap .str,
+  .noWrap .strr {
     display: none;
   }
 }

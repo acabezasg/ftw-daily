@@ -59,15 +59,11 @@ const YotiPage = () => {
       <div className={css.whatwedoLeft}>
 
           <h2 className={css.h2FirstChild}>
-            What is Yoti?
+            What is Yoti and how do we use it?
           </h2>
 
-          <p> 
-           We use our identity partner Yoti to confirm your identity. Pet Owners and Pet Sitters are only allowed to post listings after they pass the Yoti Identity Verification.  This enables our users to feel more secure when using Trust My Pet Sitter.
-          </p>
-
            <p>
-            To verify your account and all your future listings with Yoti simply <NamedLink name="ProfileSettingsPage">Go to your Profile</NamedLink> and click the Yoti Verification button.
+            We use our identity partner Yoti to confirm your identity. To verify your account and all your future listings with Yoti simply <NamedLink name="ProfileSettingsPage">Go to your Profile</NamedLink> and click the Yoti Verification button.
           </p>
 
           <p>
@@ -88,6 +84,10 @@ const YotiPage = () => {
 
           <p>
             Yoti cannot mine and sell your data to third parties, nor share any details without your approval. You’re in control to securely share specific details, never your whole identity.
+          </p>
+
+          <p>
+            <ExternalLink href="https://www.yoti.com">Learn more about Yoti</ExternalLink>
           </p>
 
       </div>

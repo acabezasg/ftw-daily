@@ -234,28 +234,36 @@ class ProfileSettingsFormComponent extends Component {
                   </div>
 
 <div className={css.contentinner}>
-    <p><img src={number} className={css.numb} />
-        Download the free Yoti app and follow the set-up instructions.
+    <p className={css.noWrap}><img src={number} className={css.numb} />
+        Download the free Yoti app and follow the set-up instructions
+        <img className={css.strr} src={googlestore} />
+        <img className={css.str} src={appstore} />
+
     </p>
     <div className={css.yoticont}>
-        <div className={css.storePc}>
-            <ExternalLink href="https://play.google.com/store/apps/details?id=com.yoti.mobile.android.live&hl=sr">
-                <img className={css.strr} src={googlestore} />
-            </ExternalLink>
-            <ExternalLink href="https://apps.apple.com/gb/app/yoti-your-digital-identity/id983980808">
-                <img className={css.str} src={appstore} />
-            </ExternalLink>
-        </div>
         <div className={css.storeMobile}>
+          <ExternalLink href="https://play.google.com/store/apps/details?id=com.yoti.mobile.android.live&hl=sr">
             <img className={css.strr} src={googlestore} />
+          </ExternalLink>
+          <ExternalLink href="https://apps.apple.com/gb/app/yoti-your-digital-identity/id983980808">
             <img className={css.str} src={appstore} />
+          </ExternalLink>
         </div>
     </div>
-    <p><img src={two} className={css.numb} />
-        Add your ID document. Wait a few minutes for your account to be verified and approved.
+    <p className={css.CsS}><img src={two} className={css.numb} />
+    Add your ID document. Wait a few minutes for your account to be verified and approved.
     </p>
-    <p className={css.removePP}><img src={three} className={css.numb} />
-        Once approved, click on the 'Yoti verification' button below and scan the QR code with the Yoti app.
+
+    <p className={css.forMob}><img src={two} className={css.numb} />
+    Add your ID document. You will be verified in minutes.
+    </p>
+
+    <p className={css.forPc}><img src={three} className={css.numb} />
+    Once approved, click on the 'Yoti verification' button below and scan the QR code with the Yoti app.
+    </p>
+
+    <p className={css.forMob}><img src={three} className={css.numb} />
+    Tap the Yoti Verification button below and Share details
     </p>
 </div>
 <div className={css.yotiBtn1}>

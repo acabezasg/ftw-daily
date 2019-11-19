@@ -45,6 +45,8 @@ const PawSquadPage = () => {
     <p>
     When you join the Trust My Pet Sitter Community all Pet Sitter bookings are covered by our 24/7 Vet Advice Line.  Trust My Pet Sitter have teamed up with PawSquad, the UK’s leading online veterinary consultation service.
     </p>
+
+    <hr className={css.divLine} />
     
     <div className={css.pawEx}>
     <img src={pawexplanation} />
