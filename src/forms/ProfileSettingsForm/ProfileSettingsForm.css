@@ -333,3 +333,131 @@ iframe[title='Yoti - Modal'] {
 .yotiButton {
   cursor: pointer;
 }
+
+.howverify {
+  position: relative;
+  bottom: 2px;
+  letter-spacing: -0.2px !important;
+}
+
+.yotiContainer {
+  height: 120px;
+  width: auto;
+  padding-top: 10px;
+}
+
+.needHelp {
+  color: #b2b2b2;
+  position: relative;
+  top: 18px;
+  right: 85px;
+  font-size: 17px;
+  max-height: 25px;
+}
+
+.customTip {
+ color: #fff !important;
+ background-color: #41a6df !important;
+ opacity: 0.99 !important;
+ margin-top: -12px !important;
+ padding: 10px 21px 13px !important;
+ text-align: center;
+}
+
+.customTip:after {
+ border-top-color: #41a6df !important;
+ border-top-width: 7px !important;
+}
+
+.yotiBtn1 {
+  display: flex;
+}
+
+.numb {
+  height: 28px;
+  margin-right: 10px;
+  position: relative;
+  bottom: 4px;
+}
+
+.contentinner p, .mobileHelp {
+  word-wrap: break-word !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+  color: #4a4a4a !important;
+  text-overflow: ellipsis !important;
+  max-height: 2.75em !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.strr {
+  margin-right: 10px;
+}
+
+.str, .strr {
+  width: 120px;
+}
+
+.yoticont {
+  margin-left: 38px;
+  margin-top: -14px;
+  margin-bottom: -3px;
+}
+
+@media (max-width: 800px) {
+  .contentinner p {
+    margin-bottom: 45px !important;
+  }
+  .yoticont p:nth-of-type(3) {
+    margin-bottom: 20px !important;
+  }
+  .yoticont {
+    margin-top: -26px;
+    margin-bottom: 1px;
+    margin-left: 0;
+    text-align: center;
+}
+}
+
+.mobileHelp {
+  display: none !important;
+}
+
+@media (max-width: 620px) {
+  .needHelp {
+    display: none;
+  }
+  .yotiContainer {
+    height: 60px;
+  }
+  .mobileHelp {
+    display: block !important;
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: 620px) {
+  .storePc {
+    display: none;
+  }
+  .storeMobile {
+    display: block;
+  }
+  .removePP {
+  margin-top: -3px;
+}
+}
+
+@media (max-width: 620px) {
+  .storePc {
+    display: block;
+  }
+  .storeMobile {
+    display: none;
+  }
+}
+.toolEmail {
+  color: #fff !important;
+}

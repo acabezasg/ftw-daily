@@ -33,8 +33,8 @@
 }
 
 .numbers {
-  height: 30px;
-  margin-right: 10px;
+  height: 16px;
+  margin-right: 3px;
   position: relative;
   bottom: 2px;
 }
@@ -332,7 +332,13 @@
 }
 
 .addspace {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.addspace:hover {
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -369,4 +375,32 @@
 .yotiTitle {
   margin-bottom: 50px;
   margin-top: -20px;
-} }
+  }   
+}
+
+.arrowImg {
+  background: url('./arrowr.png');
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+
+.addspace:hover .arrowImg {
+  background: url('./arrowrr.png');
+}
+
+.arrowTxt {
+  padding-left: 20px;
+}
+
+.aText {
+  color: #212529;
+}
+
+.aText:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
