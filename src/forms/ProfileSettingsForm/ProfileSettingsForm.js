@@ -233,51 +233,42 @@ class ProfileSettingsFormComponent extends Component {
                     <h3 className={css.yotiTitle}>Verify your identity</h3>
                   </div>
 
-    <div className={css.contentinner}>
-      <p><img src={number} className={css.numb} />
+<div className={css.contentinner}>
+    <p><img src={number} className={css.numb} />
         Download the free Yoti app and follow the set-up instructions.
-      </p>
-
-        <div className={css.yoticont}>
-
+    </p>
+    <div className={css.yoticont}>
         <div className={css.storePc}>
-        <ExternalLink href="https://play.google.com/store/apps/details?id=com.yoti.mobile.android.live&hl=sr">
-        <img className={css.strr} src={googlestore} />
-        </ExternalLink>
-
-        <ExternalLink href="https://apps.apple.com/gb/app/yoti-your-digital-identity/id983980808">
-        <img className={css.str} src={appstore} />
-        </ExternalLink>
+            <ExternalLink href="https://play.google.com/store/apps/details?id=com.yoti.mobile.android.live&hl=sr">
+                <img className={css.strr} src={googlestore} />
+            </ExternalLink>
+            <ExternalLink href="https://apps.apple.com/gb/app/yoti-your-digital-identity/id983980808">
+                <img className={css.str} src={appstore} />
+            </ExternalLink>
         </div>
-
         <div className={css.storeMobile}>
-        <img className={css.strr} src={googlestore} />
-        <img className={css.str} src={appstore} />
+            <img className={css.strr} src={googlestore} />
+            <img className={css.str} src={appstore} />
         </div>
-
-        </div>
-
-      <p><img src={two} className={css.numb} />
-        Add your ID document. Wait a few minutes for your account to be verified and approved.
-      </p>
-
-      <p className={css.removePP}><img src={three} className={css.numb} />
-        Once approved, click on the 'Yoti verification' button below and scan the QR code with the Yoti app.
-      </p>
     </div>
-
-  <div className={css.yotiBtn1}>
-      <div className={css.yotiContainer} id="yoti-button" /> 
-      <span className={css.needHelp} data-tip>Need help?</span>
-      <ReactTooltip className={css.customTip} effect='solid'>
-        <span className={css.tipColor}>  
-        Need any help to create your Yoti?<br />Email <strong className={css.toolEmail}>help@yoti.com</strong>
-        </span>
-      </ReactTooltip>
-
-                   </div>
-      <p className={css.mobileHelp}>Need any help? email <strong><i>help@yoti.com</i></strong></p>
-                </div>
+    <p><img src={two} className={css.numb} />
+        Add your ID document. Wait a few minutes for your account to be verified and approved.
+    </p>
+    <p className={css.removePP}><img src={three} className={css.numb} />
+        Once approved, click on the 'Yoti verification' button below and scan the QR code with the Yoti app.
+    </p>
+</div>
+<div className={css.yotiBtn1}>
+    <div className={css.yotiContainer} id="yoti-button" />
+        <span className={css.needHelp} data-tip>Need help?</span>
+        <ReactTooltip className={css.customTip} effect='solid'>
+            <span className={css.tipColor}>  
+            Need any help to create your Yoti?<br />Email <strong className={css.toolEmail}>help@yoti.com</strong>
+            </span>
+        </ReactTooltip>
+    </div>
+    <p className={css.mobileHelp}>Need any help? email <strong><i>help@yoti.com</i></strong></p>
+</div>
               ) : (
                 <YotiVerified />
               )}

@@ -34,6 +34,7 @@ import {
   OrderTypesPage,
   PresskitPage,
   HelpCenter,
+  PawSquadPage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -86,6 +87,11 @@ const routeConfiguration = () => {
       path: '/helpcenter',
       name: 'HelpCenter',
       component: HelpCenter,
+    },
+    {
+      path: '/pawsquad',
+      name: 'PawSquadPage',
+      component: PawSquadPage,
     },
     {
       path: '/pet-sitter-faq',

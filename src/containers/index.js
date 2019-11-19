@@ -33,3 +33,4 @@ export { default as TopbarContainer } from './TopbarContainer/TopbarContainer';
 export { default as TransactionPage } from './TransactionPage/TransactionPage';
 export { default as PresskitPage } from './PresskitPage/PresskitPage';
 export { default as HelpCenter } from './HelpCenter/HelpCenter';
+export { default as PawSquadPage } from './PawSquadPage/PawSquadPage';

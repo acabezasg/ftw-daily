@@ -142,7 +142,7 @@ export const LandingPageComponent = props => {
                       We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful
                     </p>
 
-                    <NamedLink name="YotiPage">Learn More</NamedLink>
+                    <NamedLink name="YotiPage">Join Now</NamedLink>
                   </div>
 
                  <div className={css.whyContainer}>
@@ -152,7 +152,7 @@ export const LandingPageComponent = props => {
                       We have teamed up with PawSquad to provide active Pet Sitters with free 24/7 access to a UK qualified Vet
                     </p>
 
-                    <NamedLink name="YotiPage">Learn More</NamedLink>
+                    <NamedLink name="PawSquadPage">Learn More</NamedLink>
                   </div>
 
                   <div className={css.whyContainer}>
