@@ -9,7 +9,7 @@ import verified from './verified.png';
 class YotiVerifiedProfile extends Component {
   render() {
     return (
-      <span className={css.yotiVerified}>
+      <div className={css.yotiVerified}>
         <NamedLink className={css.removelink} name="YotiPage">
           <span data-tip>
             <img src={yoti} />
@@ -21,7 +21,7 @@ class YotiVerifiedProfile extends Component {
             <span>Verified</span>
           </span>
         </NamedLink>
-      </span>
+      </div>
     );
   }
 }

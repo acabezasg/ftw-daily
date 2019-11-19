@@ -36,7 +36,7 @@
   flex-shrink: 0;
 
   @media (--viewportLarge) {
-    margin: 0 96px 44px 0;
+    margin: 0 96px 20px 0;
   }
 }
 
@@ -71,6 +71,7 @@
 
   @media (--viewportLarge) {
     display: inline;
+    margin-top: 10px;
   }
 }
 
@@ -92,7 +93,7 @@
     margin: 4px 0 51px 0;
   }
   @media (--viewportLarge) {
-    margin: 0 0 56px 0;
+    margin: 0 0 30px 0;
     max-width: 600px;
   }
 }
@@ -104,7 +105,7 @@
   padding-bottom: 23px;
 
   @media (--viewportMedium) {
-    padding-bottom: 22px;
+    padding-bottom: 10px;
   }
 }
 
@@ -114,11 +115,11 @@
   margin-bottom: 0;
 
   @media (--viewportMedium) {
-    margin-top: 48px;
+    margin-top: 30px;
     margin-bottom: 8px;
   }
   @media (--viewportLarge) {
-    margin-top: 58px;
+    margin-top: 30px;
     margin-bottom: 8px;
   }
 }
@@ -180,7 +181,7 @@
 }
 
 .desktopReviews {
-  margin-top: 28px;
+  margin-top: 0px;
 
   @media (--viewportMedium) {
     margin-bottom: 48px;
@@ -199,4 +200,8 @@
 
 .desktopReviewsTabNav {
   margin-bottom: 32px;
+}
+
+.YotiMobile {
+  display: flex;
 }

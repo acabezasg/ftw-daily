@@ -102,7 +102,23 @@ export class ProfilePageComponent extends Component {
           {displayName ? (
             <FormattedMessage id="ProfilePage.mobileHeading" values={{ name: displayName }} />
           ) : null}
+
+
+       {profileUser.attributes.profile.publicData ? (
+          profileUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
+            <YotiVerifiedProfile />
+          ) : null
+        ) : null}
+      
         </h1>
+
+
+       {profileUser.attributes.profile.publicData ? (
+          profileUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
+            <YotiVerifiedProfile />
+          ) : null
+        ) : null}
+
         {editLinkMobile}
         {editLinkDesktop}
       </div>
@@ -188,13 +204,6 @@ export class ProfilePageComponent extends Component {
       <div>
         <h1 className={css.desktopHeading}>
           <FormattedMessage id="ProfilePage.desktopHeading" values={{ name: displayName }} />
-
-          {profileUser.attributes.profile.publicData ? (
-          profileUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
-            <YotiVerifiedProfile />
-          ) : null
-        ) : null}
-
         </h1>
         {hasBio ? <p className={css.bio}>{bio}</p> : null}
         {hasListings ? (
