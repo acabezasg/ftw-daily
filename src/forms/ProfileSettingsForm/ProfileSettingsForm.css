@@ -380,7 +380,7 @@ iframe[title='Yoti - Modal'] {
   bottom: 4px;
 }
 
-.contentinner p, .mobileHelp {
+.contentinner p, .mobileHelp { 
   word-wrap: break-word !important;
   font-size: 18px !important;
   font-weight: 400 !important;
