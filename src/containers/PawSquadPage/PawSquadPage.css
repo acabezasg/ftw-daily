@@ -61,3 +61,9 @@
 .divLine {
   margin: 30px 0 35px;
 }
+
+@media (max-width: 450px) {
+  .divLine {
+    margin: 40px 0 15px;
+  }
+}
