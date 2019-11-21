@@ -579,7 +579,7 @@ export class ListingPageComponent extends Component {
                 </div>
 
                 {currentUser ? (
-                  user_type !== 0 ? (
+                  user_type == 1 ? (
                     <BookingPanel
                       className={css.bookingPanel}
                       listing={currentListing}
@@ -619,7 +619,11 @@ export class ListingPageComponent extends Component {
                       ) : null}
 
                       <p className={css.smallPrint}>
-                        <span>Contact Pet Owner directly</span>
+                        {
+                          user_type == 0 ? <span>Contact Pet Owner directly</span> :
+                          <span>Contact Pet Service directly</span>
+                        }
+                        
                       </p>
                       <Button className={css.sendbtn} onClick={this.onContactUser}>
                         Send Message
