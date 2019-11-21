@@ -125,12 +125,12 @@ const SearchFiltersComponent = props => {
       ? { ...urlQueryParams, [urlParam]: option }
       : omit(urlQueryParams, urlParam);
 
-    // if (urlParam == 'pub_user_type' && option != 2) {
-    //   delete queryParams.pub_service;
-    //   removeAsService();
-    // } else {
-    //   setAsService();
-    // }
+    if (urlParam == 'pub_user_type' && option != 2) {
+      delete queryParams.pub_service;
+      removeAsService();
+    } else {
+      setAsService();
+    }
 
     history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, queryParams));
   };
@@ -231,7 +231,7 @@ const SearchFiltersComponent = props => {
       <div className={css.filters}>
         {categoryFilterElement}
 
-        {/* {isService || urlQueryParams.pub_user_type == 2 ? (
+        {isService || urlQueryParams.pub_user_type == 2 ? (
           <SelectSingleFilter
             urlParam="pub_service"
             label="Service Type"
@@ -248,7 +248,7 @@ const SearchFiltersComponent = props => {
             initialValue={initialService}
             contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
           />
-        ) : null} */}
+        ) : null}
 
         {amenitiesFilterElement}
         {priceFilterElement}

@@ -66,11 +66,11 @@ const OrderTypesPage = props => {
                         Pet Sitter
                     </SecondaryButton>
                   </NamedLink>
-                  {/* <NamedLink className={css.choose} name="EditListingPage" params={{ slug: draftSlug, id: draftId, type: type, tab: 'description_service' }}>  
+                  <NamedLink className={css.choose} name="EditListingPage" params={{ slug: draftSlug, id: draftId, type: type, tab: 'description_service' }}>  
                     <SecondaryButton className={cssButton.orderTypeButton_last}> 
                         Pet Service
                     </SecondaryButton>
-                  </NamedLink> */}
+                  </NamedLink>
                 </div>
               </div>
               

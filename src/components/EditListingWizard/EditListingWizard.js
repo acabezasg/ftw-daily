@@ -232,8 +232,8 @@ class EditListingWizard extends Component {
         : user_type === 1
         ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PRICING, PHOTOS]
         : service === 'walking' || service === 'sitter'
-        ? [DESCRIPTION, FEATURES, LOCATION, ...availabilityMaybe, PRICING, PHOTOS]
-        : [DESCRIPTION, FEATURES, LOCATION, ...availabilityMaybe, PRICING, PHOTOS];
+        ? [DESCRIPTION, FEATURES, LOCATION, PRICING, PHOTOS]
+        : [DESCRIPTION, FEATURES, LOCATION, PRICING, PHOTOS];
 
     const selectedTab = tab_ary[0];
     const isNewListingFlow = [LISTING_PAGE_PARAM_TYPE_NEW, LISTING_PAGE_PARAM_TYPE_DRAFT].includes(

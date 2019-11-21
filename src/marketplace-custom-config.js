@@ -213,7 +213,7 @@ export const amenities = [
 export const categories = [
   { key: '0', label: 'Pet Owners' },
   { key: '1', label: 'Pet Sitter' },
-  // { key: '2', label: 'Pet Services' },
+  { key: '2', label: 'Pet Services' },
 ];
 
 export const equipments = [
