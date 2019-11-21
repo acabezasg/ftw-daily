@@ -46,10 +46,106 @@ const QuestionPage = () => {
 
             <TabList>
 
-            <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Getting started</span></label>
-              
+            <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Pet Sitter Questions</span></label>
+
+             <Tab><div className={css.collapseItem}>
+                <a>How much should I pay someone to pet/houesit?</a>
+              </div></Tab>
+
               <Tab><div className={css.collapseItem}>
-                <a>How do I find a pet sitter?</a>
+                <a>What is a professional pet / housesitter?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>Do Pet Sitters get paid?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How much does it cost to join Trust My Pet Sitter?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>What are your Service Fees?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How much should I charge for house sitting and pet sitting?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>Do pet sitters stay overnight?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>Is pet sitting safe?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How do I know I can trust a pet sitter in my home?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>What are the rules for house sitting?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>Do Housesitters pay utilities?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>What does a pet sitter do?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>What should I ask a Pet Owner before accepting a Pet Sitting job?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>What should I know before Pet Sitting?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>Do Cats need a Pet Sitter?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>Do Pet / House sitters need insurance?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>What if my pet needs a vet when I am away from home?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How much do pet sitters charge per hour?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>Can I make a career from Pet Sitting?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How do I prepare for a Pet Sitter coming to my home?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How do I prepare for a Pet Sit?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>What is hte minimum age for a pet sitting?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How do I create an account?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How do I find a Pet Sitter?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>Can I choose my own Pet Sitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -57,8 +153,14 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I make a booking?</a>
+                <a>Can I work for more then one pet sitting company?</a>
               </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>How do I get paid?</a>
+              </div></Tab>
+
+
 
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Your account</span></label>
               

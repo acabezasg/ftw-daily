@@ -17,6 +17,7 @@ import shield from './images/shield.png';
 import community from './images/community.png';
 import help from './images/help.png';
 import sitters from './images/sitters.png';
+import homes from './images/homes.png';
 
 const HelpCenter = () => {
   
@@ -102,7 +103,7 @@ const HelpCenter = () => {
       </div>
       <div className={css.imageItem}>
         <div className={css.imageContainer}>
-          <img src="https://a0.muscache.com/pictures/7e9ddf18-ed1a-45ce-885d-40bdece3eb63.jpg" />
+          <img src={homes} />
         </div>
         <div className={css.textContainer}>
           <div className={css.textMove}>
