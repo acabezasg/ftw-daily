@@ -55,9 +55,13 @@ const SliderHero = () => (
          
             <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
             <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
 
           </div>
+
+        <div className={css.submitContainer}>
+          <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+        </div>
     </StyleRoot>
 
       </div>
@@ -80,9 +84,14 @@ const SliderHero = () => (
          
             <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
             <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
 
           </div>
+
+        <div className={css.submitContainer}>
+          <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+        </div>
+
     </StyleRoot>
 
       </div>
@@ -102,12 +111,17 @@ const SliderHero = () => (
         <h1 style={styles.fadeInUp}>Our Professional Sitters come to you</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
-         <div className={css.submitContainer}>
+          <div className={css.submitContainer}>
          
             <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
             <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+
           </div>
+
+        <div className={css.submitContainer}>
+          <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+        </div>
     </StyleRoot>
 
       </div>
@@ -126,12 +140,17 @@ const SliderHero = () => (
         <h1 style={styles.fadeInUp}>For short and long term sits</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
-         <div className={css.submitContainer}>
+          <div className={css.submitContainer}>
          
             <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
             <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+
           </div>
+
+        <div className={css.submitContainer}>
+          <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+        </div>
     </StyleRoot>
 
       </div>
@@ -150,11 +169,17 @@ const SliderHero = () => (
         <h1 style={styles.fadeInUp}>24/7 Care and 1:1 Attention</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
-         <div className={css.submitContainer}>
+          <div className={css.submitContainer}>
+         
             <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
             <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+
           </div>
+
+        <div className={css.submitContainer}>
+          <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+        </div>
     </StyleRoot>
 
       </div>

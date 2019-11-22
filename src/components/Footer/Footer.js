@@ -17,6 +17,7 @@ import {
 } from '../../components';
 
 import googlePlay from './images/google.png';
+import googlePlayBadge from './images/google-play-badge.png';
 import css from './Footer.css';
 
 const renderSocialMediaLinks = intl => {
@@ -314,8 +315,7 @@ const Footer = props => {
               <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
                   <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter" className={css.playIcon}>
-                      <div className={css.googleShape}></div>
-                      <span>Get it on<br /><span className={css.googleBold}>Google Play</span></span>
+                      <img src={googlePlayBadge} />
                   </ExternalLink>
                   
                 </ul>
