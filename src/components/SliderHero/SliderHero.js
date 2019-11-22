@@ -55,6 +55,7 @@ const SliderHero = () => (
          
             <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
             <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
 
           </div>
     </StyleRoot>
@@ -77,8 +78,9 @@ const SliderHero = () => (
 
          <div className={css.submitContainer}>
          
-            <NamedLink style={stylesLeft.fadeInLeft} name="SearchPetSitter">Find a Pet Sitter</NamedLink> 
-            <NamedLink style={stylesRight.fadeInRight} name="SearchPetOwner">Find Homes to Sit</NamedLink>
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
 
           </div>
     </StyleRoot>
@@ -102,20 +104,14 @@ const SliderHero = () => (
 
          <div className={css.submitContainer}>
          
-            <NamedLink style={stylesLeft.fadeInLeft} name="SearchPetSitter">Find a Pet Sitter</NamedLink> 
-            <NamedLink style={stylesRight.fadeInRight} name="SearchPetOwner">Find Homes to Sit</NamedLink>
-
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
           </div>
     </StyleRoot>
 
       </div>
     </Carousel.Item>
-
-
-
-
-
-
 
     <Carousel.Item>
     <div className={css.carouselHero}>
@@ -132,9 +128,9 @@ const SliderHero = () => (
 
          <div className={css.submitContainer}>
          
-            <NamedLink style={stylesLeft.fadeInLeft} name="SearchPetSitter">Find a Pet Sitter</NamedLink> 
-            <NamedLink style={stylesRight.fadeInRight} name="SearchPetOwner">Find Homes to Sit</NamedLink>
-
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
           </div>
     </StyleRoot>
 
@@ -155,23 +151,14 @@ const SliderHero = () => (
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>
-         
-            <NamedLink style={stylesLeft.fadeInLeft} name="SearchPetSitter">Find a Pet Sitter</NamedLink> 
-            <NamedLink style={stylesRight.fadeInRight} name="SearchPetOwner">Find Homes to Sit</NamedLink>
-
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
+            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
           </div>
     </StyleRoot>
 
       </div>
     </Carousel.Item>
-
-
-
-
-
-
-
-
 
   </Carousel>
 );

@@ -142,7 +142,7 @@ export const LandingPageComponent = props => {
                       We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful
                     </p>
 
-                    <NamedLink name="YotiPage">Join Now</NamedLink>
+                    <NamedLink name="SignupPage">Join Now</NamedLink>
                   </div>
 
                  <div className={css.whyContainer}>

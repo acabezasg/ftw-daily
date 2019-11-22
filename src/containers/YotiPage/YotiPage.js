@@ -28,6 +28,7 @@ import four from './4.png';
 import appstore from './appstore.png';
 import googlestore from './googlestore.png';
 import css from './YotiPage.css';
+import rotate from './rotate.png';
 
 const YotiPage = () => {
   // prettier-ignore
@@ -88,6 +89,7 @@ const YotiPage = () => {
 
           <p>
             <ExternalLink href="https://www.yoti.com">Learn more about Yoti</ExternalLink>
+            <NamedLink className={css.joinNow} name="SignupPage">Join Now<img src={rotate} className={css.imgRotate} /></NamedLink>
           </p>
 
       </div>

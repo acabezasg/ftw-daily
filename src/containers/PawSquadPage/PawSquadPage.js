@@ -63,7 +63,10 @@ const PawSquadPage = () => {
     <p>
     As soon as the Pet Sit starts then our Pet Sitters will be automatically covered by the PawSquad service for the duration of the booking. 
     </p>
-
+    
+    <p className={css.joinNow}>
+    <NamedLink name="SignupPage">Join Now</NamedLink>
+    </p>
     </div>
 
       </LayoutWrapperMain>

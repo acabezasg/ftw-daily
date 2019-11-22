@@ -89,7 +89,7 @@ const routeConfiguration = () => {
       component: HelpCenter,
     },
     {
-      path: '/pawsquad',
+      path: '/virtualvet',
       name: 'PawSquadPage',
       component: PawSquadPage,
     },
