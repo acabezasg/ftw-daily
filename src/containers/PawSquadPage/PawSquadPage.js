@@ -6,6 +6,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
+  ExternalLink,
   NamedLink,
   
 } from '../../components';
@@ -62,6 +63,10 @@ const PawSquadPage = () => {
 
     <p>
     As soon as the Pet Sit starts then our Pet Sitters will be automatically covered by the PawSquad service for the duration of the booking. 
+    </p>
+
+    <p>
+    <ExternalLink href="https://www.pawsquad.com">Learn more about PawSquad</ExternalLink>
     </p>
     
     <p className={css.joinNow}>

@@ -235,7 +235,7 @@ class ProfileSettingsFormComponent extends Component {
 
 <div className={css.contentinner}>
     <p className={css.noWrap}><img src={number} className={css.numb} />
-        Download the free Yoti app and follow the set-up instructions
+        Download the free Yoti app and follow the set-up instructions.
         <img className={css.strr} src={googlestore} />
         <img className={css.str} src={appstore} />
 
@@ -263,7 +263,7 @@ class ProfileSettingsFormComponent extends Component {
     </p>
 
     <p className={css.forMob}><img src={three} className={css.numb} />
-    Tap the Yoti Verification button below and Share details
+    Tap the Yoti Verification button below and Share details.
     </p>
 </div>
 <div className={css.yotiBtn1}>
