@@ -129,6 +129,7 @@ const SearchFiltersComponent = props => {
       delete queryParams.pub_service;
       removeAsService();
     } else {
+      delete queryParams.dates;
       setAsService();
     }
 
@@ -252,7 +253,9 @@ const SearchFiltersComponent = props => {
 
         {amenitiesFilterElement}
         {priceFilterElement}
-        {dateRangeFilterElement}
+        {
+            !isService && urlQueryParams.pub_user_type != 2 ? dateRangeFilterElement : null
+        }
         {toggleSearchFiltersPanelButton}
       </div>
 
