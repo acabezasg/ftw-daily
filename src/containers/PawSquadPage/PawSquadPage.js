@@ -56,7 +56,7 @@ const PawSquadPage = () => {
     <h2>How it Works</h2>
 
     <p>
-    PawSquad lets you video call or text chat with a UK-registered vet free at any time or day or night, 365 days a year. Our Pet Sitters enjoy the peace of mind of always having a ‘vet in their pocket’, during every Pet Sitting experience, no matter where you are in the world!
+    PawSquad lets you video call or text chat with a UK-registered vet free at any time or day or night, 365 days a year. Our Pet Sitters enjoy the peace of mind of always having a ‘vet in their pocket’, during every  Pet Sitting experience, no matter where they are in the world!
     </p>
 
     <h2>Getting Started</h2>
