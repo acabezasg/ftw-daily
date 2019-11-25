@@ -81,7 +81,7 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I know I can trust a pet sitter in my home?</a>
+                <a>How Do I Find a Pet Services?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -287,6 +287,40 @@ const QuestionPage = () => {
 
           </h2>
           <p>At Trust My Pet Sitter we use industry leading ID verification to confirm the identity of both our Pet Sitters and Pet Owners.</p><p>We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful.</p><p>In addition, we provide 24/7/365 Virtual Vet Advice to every active Pet Sitter no matter where they are in the world – a Vet always on hand to provide help and assistance. Our safety pack is completed with Public Liability Insurance.</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>
+            How Do I Find a Pet Services?
+          </h2>
+          <p>You can browse Pet Services who have placed a listing in area or country specific locations.</p>
+          <p>Get started by clicking the link on the home page “Find Pet Services” and you will then be redirected to the Trust My Pet Sitter key search page.</p>
+          <h3>The Key Search Page</h3>
+
+          <p>The Key Search Page allows you to select single or multiple options to find the Pet Services you need. You can search by:</p>
+
+          <ul className={css.mainUL}>
+            <li><strong>Location</strong> – in the top search bar locate the magnifying glass search icon and free type if you want to find pet services who are in a specific location. </li>
+            <li><strong>Category</strong> – Select the Category button from the top toolbar and choose Pet Services</li>
+          </ul>
+
+          <h3>Next choose your Service Type:</h3>
+
+          <ul className={css.mainUL}>
+            <li>Dog Walkers</li>
+            <li>Veterinary Surgeons</li>
+            <li>Pet Groomer</li>
+            <li>Pet Store</li>
+            <li>Drop in Sitters</li>
+          </ul>
+
+          <p><strong>Pet Types</strong> – You can choose to search by Pet Type, if none are chosen all Pet Types will be displayed in the search results and location map. Pet Types are Dog, Cat, Reptiles, Farm Animals, Rabbits, Pet Birds, Aquarium Fish, Horses or other.</p>
+          <p><strong>Price Range</strong> – When Pet Services create their listing they are asked to provide their rates. You can choose to search Pet Services by rates by using the toggle to select the maximum rate you are prepared to pay.  For the widest display leave the search toggle at the default maximum.</p>
+
+          <h3>Map Search</h3>
+
+          <p>You can also search for Pet Services who are in a specific map location. The map is shown on the right hand of the listing displays. For example, click on a price and the listing will pop up as a thumbnail image, if the Pet Service is of interest you can click on the image and it will load the main listing for you to browse suitability.</p>
+
         </TabPanel>
 
       </div>
