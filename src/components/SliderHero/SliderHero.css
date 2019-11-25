@@ -88,6 +88,12 @@
     margin: 0 10px;
 }
 
+@media (min-width: 822px) {
+    .submitContainer a {
+        white-space: nowrap !important;
+    }
+}
+
 .submitContainer a:hover {
     background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
     color: #fff;
