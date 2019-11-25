@@ -22,15 +22,19 @@
 }
 
 .customTip {
- color: #fff !important;
- background-color: #41a6df !important;
- opacity: 0.99 !important;
- margin-top: -12px !important;
- padding: 0px 15px 2.5px !important;
+  color: #fff !important;
+  background-color: #41a6df !important;
+  opacity: .99 !important;
+  margin-top: -10px !important;
+  padding: 10px !important;
 }
 
 .customTip span {
  font-size: 16px !important;
+}
+
+.tipColor {
+  top: 0px !important;
 }
 
 .customTip:after {

@@ -48,14 +48,14 @@ const SliderHero = () => (
     <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>The 5* Community for <br />Pet Owners and Sitters</h1>
+        <h1 style={styles.fadeInUp}>For Pet Parents Everywhere</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>
          
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
-            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
+            <a href="s?pub_user_type=0">Find Homes to Sit</a> 
 
           </div>
 
@@ -81,10 +81,9 @@ const SliderHero = () => (
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>
-         
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
-            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
+            <a href="s?pub_user_type=0">Find Homes to Sit</a> 
 
           </div>
 
@@ -113,9 +112,9 @@ const SliderHero = () => (
 
           <div className={css.submitContainer}>
          
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
-            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
+            <a href="s?pub_user_type=0">Find Homes to Sit</a> 
 
           </div>
 
@@ -142,9 +141,9 @@ const SliderHero = () => (
 
           <div className={css.submitContainer}>
          
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
-            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
+            <a href="s?pub_user_type=0">Find Homes to Sit</a> 
 
           </div>
 
@@ -171,9 +170,9 @@ const SliderHero = () => (
 
           <div className={css.submitContainer}>
          
-            <a style={stylesLeft.fadeInLeft} href="s?pub_user_type=1">Find a Pet Sitter</a> 
-            <a style={stylesRight.fadeInRight} href="s?pub_user_type=0">Find Homes to Sit</a>
-            <a className={css.btnPc} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+            <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
+            <a href="s?pub_user_type=0">Find Homes to Sit</a> 
 
           </div>
 
