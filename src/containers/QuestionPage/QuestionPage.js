@@ -49,7 +49,7 @@ const QuestionPage = () => {
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Pet Sitter Questions</span></label>
 
              <Tab><div className={css.collapseItem}>
-                <a>How much should I pay someone to pet/houesit?</a>
+                <a>How much should I pay someone to pet / houesit?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -57,11 +57,11 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Do Pet Sitters get paid?</a>
+                <a>How much should I pay someone to watch my pet?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How much does it cost to join Trust My Pet Sitter?</a>
+                <a>Do Pet Sitters get paid?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -220,122 +220,73 @@ const QuestionPage = () => {
       <div className={css.whatwedoRight}>
        <TabPanel>
           <h2>
-            How Do I Find a Pet Sitter?
+            How much should I pay someone to pet / housesit?
           </h2>
-
-          <p>
-            You can browse available Pet Sitters who have expressed a preference to provide
-            services in your area, region or country.
-          </p>
-
-          <p>
-            To get started just click the link on the home page “Find a Pet Sitter” and you will
-            then be redirected to the Trust My Pet Sitter key search page.
-          </p>
-
-          <h3>
-            The Key Search Page
-          </h3>
-
-          <p>The Key Search Page allows you to select single 
-          or multiple options to find compatible Pet Sitters. You can search by:
-          </p>
-
-          <ul className={css.dotted}>
-            <li><strong>Location</strong> – in the top search bar locate the magnifying glass search icon and
-free type if you want to find pet sitters who are in a specific location. This is
-especially useful for finding local sitters, so for example typing “Edinburgh”
-would locate</li>
-            <li><strong>Category</strong> – Select the Category button from the top toolbar and choose to
-search for Pet Sitters. The results displayed will show your selection of Pet
-Sitters and if no selection is made then both categories will be displayed in
-the search results and location map.</li>
-            <li><strong>Pet Types</strong> – You can choose to search by Pet Type, if none are chosen all Pet
-Types will be displayed in the search results and location map. Pet Types are
-Dog, Cat, Reptiles, Farm Animals, Rabbits, Pet Birds, Aquarium Fish, Horses or
-other.</li>
-            <li><strong>Price Range</strong> – When Pet Sitters created their listing, they are asked to provide
-their price per night to look after your pets in their own home. You can choose 
-to search Pet Sitters by their nightly rate by using the toggle to select the
-maximum nightly rate you are prepared to pay.</li>
-
-            <li><strong>Dates</strong> – You can search for Pet Sitters who have expressed availability dates.</li>
-          </ul>
-
-          <h3>
-          Map Search
-          </h3>
-
-          <p>You can also search for Pet Sitters who are in a specific map location. The map is
-shown on the right hand of the listing displays and Pet Sitters cost per night is
-shown on their location. For example, click on a price per night and the listing will
-pop up as a thumbnail image, if the Pet Sitter is of interest you can click on the
-image and it will load the main listing for you to browse suitability.</p>
-
-<p>You can use the + and – buttons on the map to zoom in and out for more detailed
-searches.</p>
+          <p>Professional Pet Sitters set their own nightly rate and can charge anywhere from $20 up to $75 per night depending upon their skills, experience and your requirements.</p><p>If you like a Pet Sitters profile but consider their nightly price too high, you can always send them a message and find out if they will consider negotiating the price.</p>
         </TabPanel>
 
         <TabPanel>
           <h2>
-            How Do I Find Homes and Pets to Sit?
+            What is a professional pet / housesitter?
           </h2>
+          <p>A professional pet and house sitter is someone who considers this role their primary job.  As part of their duties looking after your pets and your home they are paid a rate agreed before the Pet and House sit commences.</p><p>They should not be confused with pet boarders who look after dogs in their home, or drop in sitters who visit but do not stay overnight.  Trust My Pet Sitters always stay in the pets home and have a pre-agreement with the Pet Owners to the duties and expectations whilst in situ.</p>    
+        </TabPanel>
 
+        <TabPanel>
+          <h2>
+            How much should I pay someone to watch my pet?
+          </h2>
+          <p>At Trust My Pet Sitter our sitters set their nightly rate, based on their skills and experience.</p><p>The average rate for Pet Sitters is from $20 to around $75 per night, but you can negotiate and choose the best pet sitter who matches your budget and expectations.</p>
+        </TabPanel>
 
-          <p>
-            You can browse Pet Owners who have placed a listing in area or country specific
-locations. Get started by clicking the link on the home page “Find Homes to Sit” and
-you will then be redirected to the Trust My Pet Sitter key search page.
-          </p>
+        <TabPanel>
+          <h2>
+            Do Pet Sitters get paid?
+          </h2>
+          <p>At Trust My Pet Sitters our sitters set their nightly rate, based on their skills and experience.</p><p>The average rate for Pet Sitters is from $20 to around $75 per night, but Pet Owners may negotiate and choose the best pet sitter who matches their budget and expectations.</p>
+        </TabPanel>
 
-          <h3>
-            The Key Search Page
-          </h3>
+        <TabPanel>
+          <h2>
+            What are your Service Fees?
+          </h2>
+          <p>To help operate the Trust My Pet Sitter platform, including services like Pet Advice Line, Insurance,  customer support and credit card processing, we charge a service fee when a booking is confirmed.</p>
 
-          <p>The Key Search Page allows you to select single 
-          or multiple options to find compatible Pet Sitters. You can search by:
-          </p>
+          <p><strong>Pet Sitter Service Fee</strong></p>
 
-          <ul className={css.dotted}>
-            <li><strong>Location</strong> – in the top search bar locate the magnifying glass search icon and
-free type if you want to find pet owners who are in a specific location. This is
-especially useful for finding local owners, so for example typing “Edinburgh” would locate all Pet Owners who gave their home location as Edinburgh or
-nearby.</li>
-            <li><strong>Category</strong> – Select the Category button from the top toolbar and choose to
-search for Pet Owners. The results displayed will show your selection of Pet
-Owners and if no selection is made then both categories will be displayed in
-the search results and location map.</li>
-            <li><strong>Pet Types</strong> – You can choose to search by Pet Type, if none are chosen all Pet
-Types will be displayed in the search results and location map. Pet Types are
-Dog, Cat, Reptiles, Farm Animals, Rabbits, Pet Birds, Aquarium Fish, Horses or
-other.</li>
-          </ul>
+          <p>This fee is 20% of the booking subtotal which is deducted from the final pay-out.  For example, if you charge $20 per night, then Trust My Pet Sitter will pay you 80% of the booking total on completion of the Pet Sit.</p>
 
-          <h3>
-          Map Search
-          </h3>
+          <p><strong>Pet Owner Service Fee</strong></p>
 
-          <p>You can also search for Pet Owners who are in a specific map location. The
-map is shown on the right hand of the listing displays and Pet Owners Paw
-Prints mark their location. For example, click on a paw print and the listing
-will pop up as a thumbnail image, if the Pet Owner is of interest you can click
-on the image and it will load the main listing for you to browse suitability.</p>
+          <p>This fee is 10% for Pet Owners which is charged in addition to the Pet Sitter fee.  For example, if your Pet Sitter charges $20 per night, then Trust My Pet Sitter will charge $22 per night. This fee is calculated from the booking subtotal and is automatically added to the booking total.</p>
 
-<p>You can use the + and – buttons on the map to zoom in and out for more
-detailed searches.</p>
+          <p><strong>Pet Services Fee</strong></p>
+
+          <p>Pet Services are not charged a service fee to receive contact from Pet Owners via the Trust My Pet Sitter Platform.</p>
 
         </TabPanel>
 
         <TabPanel>
           <h2>
-            How Do I make a booking?
+            How much should I charge for house sitting and pet sitting?
           </h2>
+          <p>How much you choose to charge for House and pet sitting is entirely up to you. You should consider your level of pet experience and expectations.</p><p>The average nightly rate varies greatly but the norm would be considered anywhere from $20 to $75, again depending on experience, the type and number of pets to be looked after.</p>
         </TabPanel>
 
         <TabPanel>
           <h2>
-            How Do I make a bsadasaooking?
+            Do pet sitters stay overnight?
+
           </h2>
+          <p>At Trust My Pet Sitter our Pet Sitters watch your pets at home. Our pets always stay at home, not in someone else’s!  Pet Sitters provide 1:1 care and attention looking after your pets in their own  space, in their own environment with familiar routines.</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>
+            Is pet sitting safe?
+
+          </h2>
+          <p>At Trust My Pet Sitter we use industry leading ID verification to confirm the identity of both our Pet Sitters and Pet Owners.</p><p>We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful.</p><p>In addition, we provide 24/7/365 Virtual Vet Advice to every active Pet Sitter no matter where they are in the world – a Vet always on hand to provide help and assistance. Our safety pack is completed with Public Liability Insurance.</p>
         </TabPanel>
 
       </div>
