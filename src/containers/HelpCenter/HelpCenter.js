@@ -18,6 +18,7 @@ import community from './images/community.png';
 import help from './images/help.png';
 import sitters from './images/sitters.png';
 import homes from './images/homes.png';
+import service from './images/service.png';
 
 const HelpCenter = () => {
   
@@ -59,8 +60,7 @@ const HelpCenter = () => {
       <div className={css.activeArticle}>
         <div className={css.articleInside}>
           <h3>How do I find the right Pet Sitter?</h3>
-          <p>You can browse available Pet Sitters who have expressed
-            a preference to provide services in your area, region or country.
+          <p>You can browse Pet Owners who have placed a listing in area or country specific locations. Get started by clicking the link on the home page “Find Homes to Sit” and you will then be redirected to the Trust My Pet Sitter key search page.
           </p>
           <a>Read More<img class={css.arroW} src={arrowRight} /></a>
         </div>
@@ -77,10 +77,8 @@ const HelpCenter = () => {
       </div>
       <div className={css.activeArticle}>
         <div className={css.articleInside}>
-          <h3>How do I make a Pet Sitter booking?</h3>
-          <p>You can browse Pet Owners who have placed a listing in 
-            area or country specific locations. Get started by 
-            clicking the link on the home page “Find Homes to Sit”
+          <h3>How are Pet Sitter and Owners verified?</h3>
+          <p>From your payment details to your private conversations, all your information on our platform is encrypted, safe, and secure.
           </p>
           <a>Read More<img class={css.arroW} src={arrowRight} /></a>
         </div>
@@ -95,8 +93,21 @@ const HelpCenter = () => {
         <div className={css.textContainer}>
           <div className={css.textMove}>
             <h3>Find a Pet Sitter</h3>
-            <p>Get help with booking Pet Sitters and
+            <p>Get help
               finding the perfect match.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={css.imageItem}>
+        <div className={css.imageContainer}>
+          <img src={service} />
+        </div>
+        <div className={css.textContainer}>
+          <div className={css.textMove}>
+            <h3>Find a Pet Service</h3>
+            <p>Get great 
+            deals hiring Pet Services.
             </p>
           </div>
         </div>
@@ -107,9 +118,9 @@ const HelpCenter = () => {
         </div>
         <div className={css.textContainer}>
           <div className={css.textMove}>
-            <h3>Find Pets and Homes to look after</h3>
-            <p>Get help with setting up payments and
-              withdrawling your funds.
+            <h3>Find a Pet Owner</h3>
+            <p>Get help 
+            with setting up payments.
             </p>
           </div>
         </div>
