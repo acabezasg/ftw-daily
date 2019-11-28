@@ -16,8 +16,8 @@ import controls from './images/controls.png';
 import shield from './images/shield.png';
 import community from './images/community.png';
 import help from './images/help.png';
-import sitters from './images/sitters.png';
-import homes from './images/homes.png';
+import sitters from './images/sitters.jpg';
+import homes from './images/homes.jpg';
 import service from './images/service.png';
 
 const HelpCenter = () => {

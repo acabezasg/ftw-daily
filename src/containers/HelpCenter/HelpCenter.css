@@ -296,11 +296,7 @@
   }
   .topicsMain {
     width: 50%;
-    padding: 10px 0;
-  }
-  .topicsMain:nth-child(2),
-  .topicsMain:nth-child(3) {
-    padding: 10px 0;
+    padding: 10px;
   }
   .bannerContent div {
     width: 100%;
