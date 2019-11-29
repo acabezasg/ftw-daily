@@ -17,7 +17,7 @@ const ACCEPT_IMAGES = 'image/*';
 export class EditListingPhotosFormComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { imageUploadRequested: false};
+    this.state = { imageUploadRequested: false, planId : null, memberShip: null};
     this.onImageUploadHandler = this.onImageUploadHandler.bind(this);
     this.submittedImages = [];
   }
@@ -37,6 +37,22 @@ export class EditListingPhotosFormComponent extends Component {
   }
 
   componentDidMount() {
+    let planId,memberShip;
+    switch(this.props.user_type){
+      case 0 :
+          planId = "pet_owner";
+          memberShip = "petOwnerMembership"
+      case 1: 
+          planId = "test-plan";
+          memberShip = "petSitterMembership"
+      case 2:
+          planId = "pet-services";
+          memberShip = "petServiceMembership"             
+    }
+    this.setState({planId,memberShip});
+    if(this.props.currentUser && this.props.currentUser.attributes.profile.publicData[memberShip]){
+        return;
+    }
     const el = document.createElement('script');
     el.onload = () => {
       window.Chargebee.init({
@@ -49,6 +65,7 @@ export class EditListingPhotosFormComponent extends Component {
           step: (value) => {
             if(value=='thankyou_screen'){
                 document.getElementById('cb-container').remove();
+                this.props.onPaidMembership({[this.state.memberShip] : true})
             }
           }
         }
@@ -237,7 +254,7 @@ export class EditListingPhotosFormComponent extends Component {
                 className={css.submitButton}
                 type="submit"
                 data-cb-type="checkout"
-                data-cb-plan-id="test-plan"
+                data-cb-plan-id={this.state.planId}
                 inProgress={submitInProgress}
                 disabled={submitDisabled}
                 ready={submitReady}

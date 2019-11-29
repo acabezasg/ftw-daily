@@ -28,6 +28,8 @@ class EditListingPhotosPanel extends Component {
       onSubmit,
       onRemoveImage,
       user_type,
+      currentUser,
+      onPaidMembership
     } = this.props;
 
     const rootClass = rootClassName || css.root;
@@ -69,6 +71,8 @@ class EditListingPhotosPanel extends Component {
           updated={panelUpdated}
           updateInProgress={updateInProgress}
           user_type ={ user_type}
+          currentUser={currentUser}
+          onPaidMembership={onPaidMembership}
         />
       </div>
     );
