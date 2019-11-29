@@ -34,7 +34,7 @@
 }
 
 .tipColor {
-  top: 0px !important;
+  top: -1px !important;
 }
 
 .customTip:after {

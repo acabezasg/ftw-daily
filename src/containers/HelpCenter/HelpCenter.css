@@ -8,7 +8,7 @@
 }
 
 .bannerContent {
-  width: calc(100% - 420px);
+  width: 80%;
   margin: 0 auto;
   padding: 60px 0;
   display: flex;
@@ -47,13 +47,25 @@
 
 .skinWrapper {
   padding: 40px 0;
-  width: calc(100% - 420px);
+  width: 80%;
   margin: 0 auto;
 }
 
 .showArticles {
   display: flex;
   flex-wrap: wrap;
+}
+
+@media (max-width: 1124px) and (min-width: 800px) {
+  .skinWrapper {
+    width: 90% !important;
+  }
+  .bannerContent {
+    widows: 90% !important;
+  }
+  .imageItem {
+    padding: 40px 0;
+  }
 }
 
 .activeArticle {
@@ -135,7 +147,7 @@
 }
 
 .imageItem {
-  width: 50%;
+  width: 33%;
   display: flex;
   border-radius: 5px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
@@ -143,12 +155,8 @@
   padding: 20px 0;
 }
 
-.imageItem:nth-child(1) {
-  margin-right: 8px;
-}
-
 .imageItem:nth-child(2) {
-  margin-left: 8px;
+  margin: 0 15px;
 }
 
 .imageItem:hover {
@@ -258,12 +266,9 @@
   left: 3px;
 }
 
-@media (max-width: 1124px) {
-  .bannerContent {
-    width: 90%;
-  }
-  .skinWrapper {
-    width: 90%;
+@media (max-width: 1240px) and (min-width: 800px) {
+  .imageItem {
+    padding: 30px 0;
   }
 }
 
@@ -291,11 +296,7 @@
   }
   .topicsMain {
     width: 50%;
-    padding: 10px 0;
-  }
-  .topicsMain:nth-child(2),
-  .topicsMain:nth-child(3) {
-    padding: 10px 0;
+    padding: 10px !important;
   }
   .bannerContent div {
     width: 100%;

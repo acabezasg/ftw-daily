@@ -41,7 +41,6 @@
 }
 
 .mobileHeading {
-  flex-shrink: 0;
   margin: 47px 0 0 0;
 
   @media (--viewportMedium) {
@@ -51,6 +50,16 @@
     display: none;
   }
 }
+
+.yotiMob {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+.yotiPc {
+  display: none;
+}}
 
 .editLinkMobile {
   margin-top: 17px;

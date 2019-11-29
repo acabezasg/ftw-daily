@@ -103,21 +103,23 @@ export class ProfilePageComponent extends Component {
             <FormattedMessage id="ProfilePage.mobileHeading" values={{ name: displayName }} />
           ) : null}
 
-
+      <div className={css.yotiMob}>
        {profileUser.attributes.profile.publicData ? (
           profileUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
             <YotiVerifiedProfile />
           ) : null
         ) : null}
+      </div>
       
         </h1>
 
-
+      <div className={css.yotiPc}>
        {profileUser.attributes.profile.publicData ? (
           profileUser.attributes.profile.publicData.yotiVerified == 'YES' ? (
             <YotiVerifiedProfile />
           ) : null
         ) : null}
+      </div>
 
         {editLinkMobile}
         {editLinkDesktop}

@@ -85,7 +85,7 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What are the rules for house sitting?</a>
+                <a>How much does it cost to join Trust My Pet Sitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -321,6 +321,14 @@ const QuestionPage = () => {
 
           <p>You can also search for Pet Services who are in a specific map location. The map is shown on the right hand of the listing displays. For example, click on a price and the listing will pop up as a thumbnail image, if the Pet Service is of interest you can click on the image and it will load the main listing for you to browse suitability.</p>
 
+        </TabPanel>
+
+        <TabPanel>
+        <h2>How much does it cost to join Trust My Pet Sitter?</h2>
+
+        <p>Trust My Pet Sitter charges a small membership fee to cover our Insurance, Pet Support Advice Line and support staff.</p>
+
+        <p>You can review the latest membership fees at: <NamedLink name="LandingPage">Membership Page</NamedLink></p>
         </TabPanel>
 
       </div>
