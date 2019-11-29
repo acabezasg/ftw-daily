@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { LISTING_STATE_DRAFT } from '../../util/types';
 import { EditListingPhotosForm } from '../../forms';
-import { ensureOwnListing } from '../../util/data';
+import { ensureOwnListing, ensureCurrentUser } from '../../util/data';
 import { ListingLink } from '../../components';
 
 import css from './EditListingPhotosPanel.css';

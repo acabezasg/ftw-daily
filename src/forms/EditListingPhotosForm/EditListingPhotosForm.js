@@ -17,7 +17,7 @@ const ACCEPT_IMAGES = 'image/*';
 export class EditListingPhotosFormComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { imageUploadRequested: false };
+    this.state = { imageUploadRequested: false};
     this.onImageUploadHandler = this.onImageUploadHandler.bind(this);
     this.submittedImages = [];
   }
@@ -34,6 +34,28 @@ export class EditListingPhotosFormComponent extends Component {
           this.setState({ imageUploadRequested: false });
         });
     }
+  }
+
+  componentDidMount() {
+    const el = document.createElement('script');
+    el.onload = () => {
+      window.Chargebee.init({
+        "site": "trustmypetsitter-test"
+      });
+      window.Chargebee.registerAgain();
+      window.Chargebee.getInstance().setCheckoutCallbacks(()=> {
+        // you can define a custom callbacks based on cart object
+        return {
+          step: (value) => {
+            if(value=='thankyou_screen'){
+                document.getElementById('cb-container').remove();
+            }
+          }
+        }
+      });
+    };
+    el.setAttribute('src', 'https://js.chargebee.com/v2/chargebee.js');
+    document.body.appendChild(el);
   }
 
   render() {
@@ -214,12 +236,15 @@ export class EditListingPhotosFormComponent extends Component {
               <Button
                 className={css.submitButton}
                 type="submit"
+                data-cb-type="checkout"
+                data-cb-plan-id="test-plan"
                 inProgress={submitInProgress}
                 disabled={submitDisabled}
                 ready={submitReady}
               >
                 {saveActionMsg}
               </Button>
+
             </Form>
           );
         }}
