@@ -65,6 +65,7 @@ export class EditListingPhotosFormComponent extends Component {
           step: (value) => {
             if(value=='thankyou_screen'){
                 document.getElementById('cb-container').remove();
+                document.body.style.overflow = "auto";
                 this.props.onPaidMembership({[this.state.memberShip] : true})
             }
           }
