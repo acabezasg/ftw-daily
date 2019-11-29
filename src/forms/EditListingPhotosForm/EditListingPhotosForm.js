@@ -42,13 +42,17 @@ export class EditListingPhotosFormComponent extends Component {
       case 0 :
           planId = "pet_owner";
           memberShip = "petOwnerMembership"
+          break;
       case 1: 
           planId = "test-plan";
           memberShip = "petSitterMembership"
+          break;
       case 2:
           planId = "pet-services";
-          memberShip = "petServiceMembership"             
+          memberShip = "petServiceMembership"    
+          break;         
     }
+    console.log(this.props.user_type);
     this.setState({planId,memberShip});
     if(this.props.currentUser && this.props.currentUser.attributes.profile.publicData[memberShip]){
         return;
