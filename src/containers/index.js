@@ -34,3 +34,5 @@ export { default as TransactionPage } from './TransactionPage/TransactionPage';
 export { default as PresskitPage } from './PresskitPage/PresskitPage';
 export { default as HelpCenter } from './HelpCenter/HelpCenter';
 export { default as PawSquadPage } from './PawSquadPage/PawSquadPage';
+export { default as PaymentPage } from './PaymentPage/PaymentPage';
+ 

@@ -35,6 +35,7 @@ import {
   PresskitPage,
   HelpCenter,
   PawSquadPage,
+  PaymentPage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -92,6 +93,11 @@ const routeConfiguration = () => {
       path: '/virtualvet',
       name: 'PawSquadPage',
       component: PawSquadPage,
+    },
+    {
+      path: '/payment',
+      name: 'PaymentPage',
+      component: PaymentPage,
     },
     {
       path: '/pet-sitter-faq',
