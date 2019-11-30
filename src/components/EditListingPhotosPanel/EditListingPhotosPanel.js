@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { LISTING_STATE_DRAFT } from '../../util/types';
 import { EditListingPhotosForm } from '../../forms';
-import { ensureOwnListing } from '../../util/data';
+import { ensureOwnListing, ensureCurrentUser } from '../../util/data';
 import { ListingLink } from '../../components';
 
 import css from './EditListingPhotosPanel.css';
@@ -28,6 +28,8 @@ class EditListingPhotosPanel extends Component {
       onSubmit,
       onRemoveImage,
       user_type,
+      currentUser,
+      onPaidMembership
     } = this.props;
 
     const rootClass = rootClassName || css.root;
@@ -69,6 +71,8 @@ class EditListingPhotosPanel extends Component {
           updated={panelUpdated}
           updateInProgress={updateInProgress}
           user_type ={ user_type}
+          currentUser={currentUser}
+          onPaidMembership={onPaidMembership}
         />
       </div>
     );

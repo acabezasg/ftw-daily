@@ -17,7 +17,7 @@ const ACCEPT_IMAGES = 'image/*';
 export class EditListingPhotosFormComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { imageUploadRequested: false };
+    this.state = { imageUploadRequested: false, planId : null, memberShip: null};
     this.onImageUploadHandler = this.onImageUploadHandler.bind(this);
     this.submittedImages = [];
   }
@@ -34,6 +34,50 @@ export class EditListingPhotosFormComponent extends Component {
           this.setState({ imageUploadRequested: false });
         });
     }
+  }
+
+  componentDidMount() {
+    let planId,memberShip;
+    switch(this.props.user_type){
+      case 0 :
+          planId = "pet_owner";
+          memberShip = "petOwnerMembership"
+          break;
+      case 1: 
+          planId = "test-plan";
+          memberShip = "petSitterMembership"
+          break;
+      case 2:
+          planId = "pet-services";
+          memberShip = "petServiceMembership"    
+          break;         
+    }
+    console.log(this.props.user_type);
+    this.setState({planId,memberShip});
+    if(this.props.currentUser && this.props.currentUser.attributes.profile.publicData[memberShip]){
+        return;
+    }
+    const el = document.createElement('script');
+    el.onload = () => {
+      window.Chargebee.init({
+        "site": "trustmypetsitter-test"
+      });
+      window.Chargebee.registerAgain();
+      window.Chargebee.getInstance().setCheckoutCallbacks(()=> {
+        // you can define a custom callbacks based on cart object
+        return {
+          step: (value) => {
+            if(value=='thankyou_screen'){
+                document.getElementById('cb-container').remove();
+                document.body.style.overflow = "auto";
+                this.props.onPaidMembership({[this.state.memberShip] : true})
+            }
+          }
+        }
+      });
+    };
+    el.setAttribute('src', 'https://js.chargebee.com/v2/chargebee.js');
+    document.body.appendChild(el);
   }
 
   render() {
@@ -214,12 +258,15 @@ export class EditListingPhotosFormComponent extends Component {
               <Button
                 className={css.submitButton}
                 type="submit"
+                data-cb-type="checkout"
+                data-cb-plan-id={this.state.planId}
                 inProgress={submitInProgress}
                 disabled={submitDisabled}
                 ready={submitReady}
               >
                 {saveActionMsg}
               </Button>
+
             </Form>
           );
         }}

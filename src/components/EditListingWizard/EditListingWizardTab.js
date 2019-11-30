@@ -101,6 +101,7 @@ const EditListingWizardTab = props => {
     intl,
     user_type,
     currentUser,
+    onPaidMembership
   } = props;
 
   const { type } = params;
@@ -299,6 +300,7 @@ const EditListingWizardTab = props => {
             onCompleteEditListingWizardTab(tab, values);
           }}
           onUpdateImageOrder={onUpdateImageOrder}
+          onPaidMembership={onPaidMembership}
         />
       );
     }

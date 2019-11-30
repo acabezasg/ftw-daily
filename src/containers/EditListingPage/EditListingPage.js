@@ -19,6 +19,7 @@ import {
 import { getMarketplaceEntities } from '../../ducks/marketplaceData.duck';
 import { manageDisableScrolling, isScrollingDisabled } from '../../ducks/UI.duck';
 import { stripeAccountClearError, createStripeAccount } from '../../ducks/stripe.duck';
+import {updateUserMembership} from '../../ducks/user.duck';
 import { EditListingWizard, NamedRedirect, Page } from '../../components';
 import { TopbarContainer } from '../../containers';
 import css from './EditListingPage.css';
@@ -70,8 +71,9 @@ export class EditListingPageComponent extends Component {
       page,
       params,
       scrollingDisabled,
+      onPaidMembership
     } = this.props;
-  
+
     const { id, type } = params;
     
     const isNewURI = type === LISTING_PAGE_PARAM_TYPE_NEW;
@@ -195,6 +197,7 @@ export class EditListingPageComponent extends Component {
             onManageDisableScrolling={onManageDisableScrolling}
             updatedTab={page.updatedTab}
             updateInProgress={page.updateInProgress || page.createListingDraftInProgress}
+            onPaidMembership={onPaidMembership}
 
            
           />
@@ -297,6 +300,7 @@ const mapDispatchToProps = dispatch => ({
   onUpdateImageOrder: imageOrder => dispatch(updateImageOrder(imageOrder)),
   onRemoveListingImage: imageId => dispatch(removeListingImage(imageId)),
   onChange: () => dispatch(clearUpdatedTab()),
+  onPaidMembership : values => dispatch(updateUserMembership(values))
 });
 
 // Note: it is important that the withRouter HOC is **outside** the
