@@ -29,7 +29,7 @@
   display: grid;
   grid-template-areas:
     'main right';
-  grid-gap: 50px;
+  grid-gap: 100px;
   padding: 10px;
   grid-auto-columns: 1fr;
 }
@@ -37,6 +37,10 @@
 .item1 h2,
 .item2 h2 {
   color: #425168;
+}
+
+.item2 h2 {
+  margin-top: 19px;
 }
 
 .Chargebee img {
@@ -179,3 +183,54 @@
 
 .item1 { grid-area: main; border-radius: 10px; }
 .item2 { grid-area: right; }
+
+.whybuy ul {
+  text-align: left;
+
+}
+
+.whybuy ul li {
+  margin-bottom: 15px;
+  color: #425168;
+  white-space: nowrap;
+}
+
+.whybuy ul li:last-child {
+  margin-bottom: 0 !important;
+}
+
+.whybuy ul li img {
+  height: 20px;
+  padding-right: 5px;
+  position: relative;
+  bottom: 2.5px;
+}
+
+/* Media */
+
+@media (max-width: 992px) {
+  .gridContainer {
+    grid-gap: 50px;
+  }
+  .item1 {
+    padding: 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    display: inherit;
+  }
+}
+
+@media (max-width: 520px) {
+  .sectionContent {
+    padding: 0;
+  }
+  .item1 {
+    margin-bottom: 2rem;
+  }
+  .item2 h2 {
+    margin-bottom: 1.5rem;
+  }
+}

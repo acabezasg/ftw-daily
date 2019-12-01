@@ -16,6 +16,7 @@ import crown from './images/crown.png';
 import card from './images/card.png';
 import vet from './images/vet2.png';
 import listing from './images/checklist.png';
+import checkmark from './images/checkmark.png';
 import css from './PaymentPage.css';
 
 const PaymentPage = () => {
@@ -54,7 +55,7 @@ const PaymentPage = () => {
            </div>
 
            <div className={css.getHelp}>
-              <p>Need help? <NamedLink name="PaymentPage">Send us a message</NamedLink> or call on <NamedLink name="PaymentPage">020 3826 8628</NamedLink></p>
+              <p>Need help? <NamedLink name="ContactPage">Send us a message</NamedLink></p>
            </div>
 
       </div>  
@@ -62,26 +63,17 @@ const PaymentPage = () => {
            <h2>Why go Premium?</h2>
 
 <div className={css.whybuy}>
-  <div className={css.whyCont}>
-    <img src={listing} />
-  </div>
-  <div className={css.whyItem}>
-    <h3>Unlimited listings</h3>
-    <p>Post unlimited listings about your service</p>
-  </div>
+  <ul>
+     <li><img src={checkmark} /> Create your profile</li>
+     <li><img src={checkmark} /> Show in local pet listing searches</li>
+     <li><img src={checkmark} /> Show in Category search listings</li>
+     <li><img src={checkmark} /> Receive Messages from Pet Parents</li>
+     <li><img src={checkmark} /> Send Messages to Pet Parents</li>
+     <li><img src={checkmark} /> Secure online messaging</li>
+     <li><img src={checkmark} /> No additional fees</li>
+     <li><img src={checkmark} /> 30 day money back guarantee</li>
+  </ul>
 </div>
-
-<div className={css.whybuy}>
-  <div className={css.whyCont}>
-    <img src={vet} />
-  </div>
-  <div className={css.whyItem}>
-    <h3>Virtual Vet</h3>
-    <p>Get covered with 24/7 access to a UK qualified Vet</p>
-  </div>
-</div>
-
-<p className={css.morereasons}>More reasons to go Premium</p>
 
      </div>
     </div>
