@@ -75,7 +75,6 @@
     "react-topbar-progress-indicator": "^2.0.0",
     "react-twitter-widgets": "^1.7.1",
     "react-use": "^13.10.0",
-    "react-use-window-size": "^1.0.1",
     "react-web-tabs": "^1.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
