@@ -77,7 +77,7 @@ const SliderHero = () => (
       <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Pets are Happiest at Home</h1>
+        <h1 style={styles.fadeInUp}>Watch pets in their own home</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
          <div className={css.submitContainer}>
@@ -165,7 +165,7 @@ const SliderHero = () => (
      <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>24/7 Care and 1:1 Attention</h1>
+        <h1 style={styles.fadeInUp}>Dog Walking and Care</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
           <div className={css.submitContainer}>

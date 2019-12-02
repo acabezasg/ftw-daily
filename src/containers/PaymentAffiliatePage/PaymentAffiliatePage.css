@@ -28,8 +28,7 @@
 .gridContainer {
   display: grid;
   grid-template-areas:
-    'main right';
-  grid-gap: 100px;
+    'main';
   padding: 10px;
   grid-auto-columns: 1fr;
 }
@@ -39,12 +38,16 @@
   color: #425168;
 }
 
-.item1 {
-  box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.25)
-}
-
 .item2 h2 {
   margin-top: 19px;
+}
+
+.item1 {
+  margin: 0 auto;
+  width: 400px;
+  position: relative;
+  z-index: 3;
+  box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.25);
 }
 
 .Chargebee img {
@@ -55,11 +58,11 @@
 
 .item1 p {
   color: #425168;
-  font-size: 30px !important;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 8px;
   padding-top: 0px;
+  font-size: 16px !important;
+  font-weight: 400 !important;
 }
 
 .getHelp {
@@ -82,7 +85,7 @@
 }
 
 .firstRow {
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .item1 p:nth-of-type(2) {
@@ -93,13 +96,14 @@
 }
 
 .Chargebee {
-  font-size: 18px;
+  font-size: 15px !important;
+  font-weight: 400 !important;
   background: #41a6df;
   border-radius: 5px;
   color: #fff;
   height: 50px;
-  line-height: 47px;
-  width: 250px;
+  line-height: 49px;
+  width: 40%;
   margin: 0 auto;
 }
 
@@ -180,9 +184,9 @@
 }
 
 .gridContainer > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px;
 }
 
 .item1 { grid-area: main; border-radius: 10px; }
@@ -212,29 +216,8 @@
 
 /* Media */
 
-@media (max-width: 992px) {
-  .gridContainer {
-    grid-gap: 50px;
-  }
+@media (max-width: 600px) {
   .item1 {
-    padding: 30px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .gridContainer {
-    display: inherit;
-  }
-}
-
-@media (max-width: 520px) {
-  .sectionContent {
-    padding: 0;
-  }
-  .item1 {
-    margin-bottom: 2rem;
-  }
-  .item2 h2 {
-    margin-bottom: 1.5rem;
+    width: auto;
   }
 }

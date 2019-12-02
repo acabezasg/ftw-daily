@@ -35,4 +35,7 @@ export { default as PresskitPage } from './PresskitPage/PresskitPage';
 export { default as HelpCenter } from './HelpCenter/HelpCenter';
 export { default as PawSquadPage } from './PawSquadPage/PawSquadPage';
 export { default as PaymentPage } from './PaymentPage/PaymentPage';
+export { default as PaymentSitterPage } from './PaymentSitterPage/PaymentSitterPage';
+export { default as PaymentOwnerPage } from './PaymentOwnerPage/PaymentOwnerPage';
+export { default as PaymentAffiliatePage } from './PaymentAffiliatePage/PaymentAffiliatePage';
  

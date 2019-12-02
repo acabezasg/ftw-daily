@@ -36,6 +36,9 @@ import {
   HelpCenter,
   PawSquadPage,
   PaymentPage,
+  PaymentSitterPage,
+  PaymentOwnerPage,
+  PaymentAffiliatePage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -95,9 +98,24 @@ const routeConfiguration = () => {
       component: PawSquadPage,
     },
     {
-      path: '/payment',
+      path: '/payment-service',
       name: 'PaymentPage',
       component: PaymentPage,
+    },
+    {
+      path: '/payment-sitter',
+      name: 'PaymentSitterPage',
+      component: PaymentSitterPage,
+    },
+    {
+      path: '/payment-owner',
+      name: 'PaymentOwnerPage',
+      component: PaymentOwnerPage,
+    },
+    {
+      path: '/payment-success',
+      name: 'PaymentAffiliatePage',
+      component: PaymentAffiliatePage,
     },
     {
       path: '/pet-sitter-faq',

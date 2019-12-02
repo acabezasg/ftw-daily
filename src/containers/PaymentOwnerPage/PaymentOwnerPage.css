@@ -21,8 +21,17 @@
   }
 }
 
+.item1 {
+  box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.25)
+}
+
 .PaymentWrapper {
   background: #EBF1FA;
+}
+
+.whybuy ul a:hover {
+  text-decoration: none;
+  color: #438cb5 !important;
 }
 
 .gridContainer {
@@ -32,15 +41,12 @@
   grid-gap: 100px;
   padding: 10px;
   grid-auto-columns: 1fr;
+  align-items: start;
 }
 
 .item1 h2,
 .item2 h2 {
   color: #425168;
-}
-
-.item1 {
-  box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.25)
 }
 
 .item2 h2 {
@@ -130,7 +136,11 @@
 }
 
 .whybuy {
-  display: flex;
+  text-align: left;
+}
+
+.whybuy h3 {
+  color: #425168 !important;
 }
 
 .whyCont {

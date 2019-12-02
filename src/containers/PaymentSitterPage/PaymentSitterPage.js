@@ -17,18 +17,18 @@ import card from './images/card.png';
 import vet from './images/vet2.png';
 import listing from './images/checklist.png';
 import checkmark from './images/checkmark.png';
-import css from './PaymentPage.css';
+import css from './PaymentSitterPage.css';
 
-const PaymentPage = () => {
+const PaymentSitterPage = () => {
   // prettier-ignore
   return (
     <StaticPage
       title="Buy Membership and Go Premium | Trust My Pet Sitter"
       schema={{
         '@context': 'http://schema.org',
-        '@type': 'PaymentPage',
+        '@type': 'PaymentSitterPage',
         description: 'PawSquad',
-        name: 'PaymentPage',
+        name: 'PaymentSitterPage',
       }}
     >
       <LayoutSingleColumn>
@@ -60,18 +60,27 @@ const PaymentPage = () => {
 
       </div>  
      <div className={css.item2}>
-           <h2>Pet Services – Go Premium</h2>
+           <h2>Pet Sitters - Go Premium</h2>
 
 <div className={css.whybuy}>
+  <h3>Whilst looking after Pets:</h3>
   <ul>
-     <li><img src={checkmark} /> Create your profile</li>
-     <li><img src={checkmark} /> Show in local pet listing searches</li>
-     <li><img src={checkmark} /> Show in Category search listings</li>
-     <li><img src={checkmark} /> Receive Messages from Pet Parents</li>
-     <li><img src={checkmark} /> Send Messages to Pet Parents</li>
-     <li><img src={checkmark} /> Secure online messaging</li>
-     <li><img src={checkmark} /> No additional fees</li>
-     <li><img src={checkmark} /> 30 day money back guarantee</li>
+     <li><img src={checkmark} /> 24/7 Virtual Vet Advice wherever you are</li>
+  </ul>
+
+  <h3>After Sign up:</h3>
+  <ul>
+     <li><img src={checkmark} /> 30-day money back guarantee</li>
+     <li><img src={checkmark} /> ID verification provided by <ExternalLink href="https://www.yoti.com/blog/trust-my-pet-sitter-verifies-accounts-with-yoti">Yoti.com</ExternalLink></li>
+     <li><img src={checkmark} /> Send messages to Pet Owners</li>
+     <li><img src={checkmark} /> Complete your booking and secure payment
+</li>
+  </ul>
+
+  <h3>Anytime:</h3>
+  <ul>
+     <li><img src={checkmark} /> Create your online Profile</li>
+     <li><img src={checkmark} /> Receive messages from Pet Owners</li>
   </ul>
 </div>
 
@@ -89,6 +98,6 @@ const PaymentPage = () => {
   );
 };
 
-export default PaymentPage;
+export default PaymentSitterPage;
 
 

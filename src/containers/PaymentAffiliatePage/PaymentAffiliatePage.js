@@ -1,5 +1,7 @@
 import React from 'react';
 import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
+import Confetti from 'react-confetti';
+import useWindowSize from 'react-use/lib/useWindowSize';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -17,18 +19,20 @@ import card from './images/card.png';
 import vet from './images/vet2.png';
 import listing from './images/checklist.png';
 import checkmark from './images/checkmark.png';
-import css from './PaymentPage.css';
+import css from './PaymentAffiliatePage.css';
 
-const PaymentPage = () => {
+
+const PaymentAffiliatePage = () => {
+  const { width, height } = useWindowSize();
   // prettier-ignore
   return (
     <StaticPage
       title="Buy Membership and Go Premium | Trust My Pet Sitter"
       schema={{
         '@context': 'http://schema.org',
-        '@type': 'PaymentPage',
+        '@type': 'PaymentAffiliatePage',
         description: 'PawSquad',
-        name: 'PaymentPage',
+        name: 'PaymentAffiliatePage',
       }}
     >
       <LayoutSingleColumn>
@@ -37,6 +41,8 @@ const PaymentPage = () => {
         </LayoutWrapperTopbar>
 
   <LayoutWrapperMain className={css.PaymentWrapper}>
+    <Confetti width={width}
+      height={height} />
   
     <div className={css.sectionContent}>
 
@@ -44,38 +50,11 @@ const PaymentPage = () => {
       <div className={css.item1}>
         <div className={css.firstRow}>
            <img src={crown} />
-           <h2>Go Premium now</h2>
+           <h2>You are Premium now!</h2>
            <img className={css.lineImg} src={line} />
         </div>
-           <p>just <span>$10</span> per month</p>
-           <p>(pay $120 annually)</p>
-
-           <div className={css.Chargebee}>
-            <img src={card} />Pay with card
-           </div>
-
-           <div className={css.getHelp}>
-              <p>Need help? <NamedLink name="ContactPage">Send us a message</NamedLink></p>
-           </div>
-
+        <p>Enjoy your <strong>Premium</strong> account. We will redirect you in a few seconds.</p>
       </div>  
-     <div className={css.item2}>
-           <h2>Pet Services – Go Premium</h2>
-
-<div className={css.whybuy}>
-  <ul>
-     <li><img src={checkmark} /> Create your profile</li>
-     <li><img src={checkmark} /> Show in local pet listing searches</li>
-     <li><img src={checkmark} /> Show in Category search listings</li>
-     <li><img src={checkmark} /> Receive Messages from Pet Parents</li>
-     <li><img src={checkmark} /> Send Messages to Pet Parents</li>
-     <li><img src={checkmark} /> Secure online messaging</li>
-     <li><img src={checkmark} /> No additional fees</li>
-     <li><img src={checkmark} /> 30 day money back guarantee</li>
-  </ul>
-</div>
-
-     </div>
     </div>
 
     </div>
@@ -89,6 +68,6 @@ const PaymentPage = () => {
   );
 };
 
-export default PaymentPage;
+export default PaymentAffiliatePage;
 
 
