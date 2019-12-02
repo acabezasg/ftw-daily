@@ -1,7 +1,5 @@
 import React from 'react';
 import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
-import Confetti from 'react-confetti';
-import useWindowSize from 'react-use/lib/useWindowSize';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -23,7 +21,6 @@ import css from './PaymentAffiliatePage.css';
 
 
 const PaymentAffiliatePage = () => {
-  const { width, height } = useWindowSize();
   // prettier-ignore
   return (
     <StaticPage
@@ -41,8 +38,6 @@ const PaymentAffiliatePage = () => {
         </LayoutWrapperTopbar>
 
   <LayoutWrapperMain className={css.PaymentWrapper}>
-    <Confetti width={width}
-      height={height} />
   
     <div className={css.sectionContent}>
 
