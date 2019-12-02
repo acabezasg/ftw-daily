@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
+import Confetti from 'react-confetti';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -38,6 +39,7 @@ const PaymentAffiliatePage = () => {
         </LayoutWrapperTopbar>
 
   <LayoutWrapperMain className={css.PaymentWrapper}>
+    <Confetti />
   
     <div className={css.sectionContent}>
 
