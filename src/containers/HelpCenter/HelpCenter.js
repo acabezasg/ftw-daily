@@ -44,7 +44,7 @@ const HelpCenter = () => {
     <div className={css.bannerContent}>
       <div className={css.bannerTitle}>
         <span className={css.helpTitle}>
-        How can we help?
+        Your Questions
         </span>
       </div>
       <div className={css.bannerRight}>
@@ -94,7 +94,7 @@ const HelpCenter = () => {
           <div className={css.textMove}>
             <h3>Find a Pet Sitter</h3>
             <p>Get help
-              finding the perfect match.
+              finding the perfect match for your pet.
             </p>
           </div>
         </div>
@@ -106,8 +106,7 @@ const HelpCenter = () => {
         <div className={css.textContainer}>
           <div className={css.textMove}>
             <h3>Find a Pet Service</h3>
-            <p>Get great 
-            deals hiring Pet Services.
+            <p>Search for Pet Services by price, category or location.
             </p>
           </div>
         </div>
@@ -119,14 +118,13 @@ const HelpCenter = () => {
         <div className={css.textContainer}>
           <div className={css.textMove}>
             <h3>Find a Pet Owner</h3>
-            <p>Get help 
-            with setting up payments.
+            <p>Search for Pet Owners looking for Sitters and Services
             </p>
           </div>
         </div>
       </div>
     </div>
-    <h2 className={css.topicsTitle}>Topics you may find helpful</h2>
+    <h2 className={css.topicsTitle}>Topics you may find useful</h2>
 
     <div className={css.topics}>
 
@@ -137,10 +135,10 @@ const HelpCenter = () => {
        <div className={css.topicContent}>
          <h3>Getting started</h3>
         <ul>
-          <li>Starting your career</li>
-          <li>Pet Sitters</li>
-          <li>Creating account</li>
-          <li>General questions</li>
+          <li>What is Trust My Pet Sitter and how does it work?</li>
+          <li>Join Up</li>
+          <li>Verify your emailt</li>
+          <li>Create your first posting</li>
         </ul>
        </div>
     </div>
@@ -152,10 +150,10 @@ const HelpCenter = () => {
        <div className={css.topicContent}>
          <h3>Your account</h3>
         <ul>
-          <li>Managing your account</li>
-          <li>ID Verification</li>
-          <li>Account security</li>
-          <li>Closing your account</li>
+          <li>Managing your profile</li>
+          <li>Membership options</li>
+          <li>Managing your options</li>
+          <li>Cancel my membership</li>
         </ul>
        </div>
     </div>
@@ -168,9 +166,9 @@ const HelpCenter = () => {
          <h3>Our Community</h3>
         <ul>
           <li>Accessibility</li>
-          <li>Local communities</li>
-          <li>Pet community</li>
-          <li>Promoting on socials</li>
+          <li>Promoting on Social</li>
+          <li>Responsibilities</li>
+          <li>Security</li>
         </ul>
        </div>
     </div>
@@ -182,10 +180,10 @@ const HelpCenter = () => {
        <div className={css.topicContent}>
          <h3>Trust and safety</h3>
         <ul>
-          <li>Ways of security</li>
-          <li>Yoti identity checker</li>
-          <li>Prevent fraud</li>
-          <li>Payment informations</li>
+          <li>ID Verification</li>
+          <li>Insurance backed guarantee</li>
+          <li>Payment Information</li>
+          <li>Secure Messaging Platform</li>
         </ul>
        </div>
     </div>

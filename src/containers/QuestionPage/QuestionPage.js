@@ -89,6 +89,14 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
+                <a>How do I know I can trust a pet sitter in my home?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>What are the rules for pet and house sitting?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
                 <a>Do Housesitters pay utilities?</a>
               </div></Tab>
 
@@ -101,15 +109,7 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What should I know before Pet Sitting?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
                 <a>Do Cats need a Pet Sitter?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>Do Pet / House sitters need insurance?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -329,6 +329,51 @@ const QuestionPage = () => {
         <p>Trust My Pet Sitter charges a small membership fee to cover our Insurance, Pet Support Advice Line and support staff.</p>
 
         <p>You can review the latest membership fees at: <NamedLink name="LandingPage">Membership Page</NamedLink></p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>How do I know I can trust a pet sitter in my home?</h2>
+
+          <p>At Trust My Pet Sitter we conduct ID verification provided by YOTI.com for all of our Pet Sitters.  In addition, Trust My Pet Sitter provides an Insurance backed guarantee for Pet Owners homes.</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>What are the rules for pet and house sitting?</h2>
+
+          <p>When you undertake a pet and house sitting assignment the Pet Owner will provide you with a guide to looking after their pet and home, which sets out what they expect from pet feeding times to walking and looking after.</p>
+
+          <p>You should always try to fully understand the expectations of the Pet Owner and ask any questions if you are unsure.  We always suggest that you have the contact details of the local vets as well as the pet insurance details just in case you need them.</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>Do Housesitters pay utilities?</h2>
+          
+          <p>Pet and House sitters are contracted by the Owners to look after pets and homes whilst they are away.  At Trust My Pet Sitter we recommend that the Pet Sitter does not pay utility bills or any other charges relating to the running of the home.  </p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>What does a pet sitter do?</h2>
+
+          <p>Pet Sitters provide daily care for pets while their owners are away from home.  At Trust My Pet Sitter all our sitters stay in the home of the owner, so the pets remain in their own familiar environment following normal routines.</p>
+
+          <p>In addition to caring for pets, pet sitters may also provide basic services for the pet owner such as such as light gardening.  The Pet Owner and Pet Sitter agree expectations prior to agreeing to the pet sit.</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>What should I ask a Pet Owner before accepting a Pet Sitting job?</h2>
+          
+          <p>Before accepting a Pet Sitting job you should ensure that you have a good expectation of what is required from you.</p> <p>How many pets are there?  Do any of them have special needs? Pets temperament? Any medical issues or allergies? Are the pets insured and up to date with vaccinations? The daily routine for walking and feeding? </p><p>These are some of the questions you may want to consider, and ask the owner to write down in their Pet Owners Manual to ensure there are no surprises during your stay.
+</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>Do Cats need a Pet Sitter?</h2>
+
+          <p>If you are a Cat Parent, you will know that although they can seem aloof they really do love their humans! Most cats do not cope well in a Cattery and find the experience upsetting.</p>
+
+          <p>If you go out of town for a few days or on vacation many people think they’ll be fine with someone popping in to fill up some food and water, but that’s not the case.  Things can go wrong in a house with a pet left alone – whether it is a medical emergency, flood or fire – cats still need looked after.  Also, it can be stressful for a cat to find themselves in a quiet empty home when they are used to the routine of family life. </p>
+
+          <p> An empty home can cause confusion and anxiety and lead to stress.  A Pet Sitter offers 1:1 care, attention and routine for your cats, and can send you daily updates on their feline adventures!</p>
         </TabPanel>
 
       </div>

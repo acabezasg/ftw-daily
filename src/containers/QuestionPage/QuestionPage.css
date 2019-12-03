@@ -12,6 +12,16 @@
   }
 }
 
+@media (min-width: 992px) {
+  .topicsMain ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
+
 @media (max-width: 992px) {
   .whatwedoWrapper {
     width: 100% !important;
