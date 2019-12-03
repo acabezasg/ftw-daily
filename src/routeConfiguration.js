@@ -35,7 +35,7 @@ import {
   PresskitPage,
   HelpCenter,
   PawSquadPage,
-  PaymentPage,
+  PaymentServicePage,
   PaymentSitterPage,
   PaymentOwnerPage,
   PaymentAffiliatePage,
@@ -99,8 +99,8 @@ const routeConfiguration = () => {
     },
     {
       path: '/payment-service',
-      name: 'PaymentPage',
-      component: PaymentPage,
+      name: 'PaymentServicePage',
+      component: PaymentServicePage,
     },
     {
       path: '/payment-sitter',
@@ -171,7 +171,7 @@ const routeConfiguration = () => {
       component: props => <SearchPage {...props} tab="listings" />,
       loadData: SearchPage.loadData,
     },
-        {
+    {
       path: '/s?pub_user_type=0',
       name: 'SearchPetOwner',
       component: props => <SearchPage {...props} tab="listings" />,

@@ -8,7 +8,6 @@ import {
   Footer,
   ExternalLink,
   NamedLink,
-  
 } from '../../components';
 
 import line from './images/sketch.svg';
@@ -19,8 +18,7 @@ import listing from './images/checklist.png';
 import checkmark from './images/checkmark.png';
 import css from './PaymentAffiliatePage.css';
 
-
-const PaymentAffiliatePage = () => {
+const PaymentAffiliatePage = props => {
   // prettier-ignore
   return (
     <StaticPage
@@ -64,5 +62,3 @@ const PaymentAffiliatePage = () => {
 };
 
 export default PaymentAffiliatePage;
-
-

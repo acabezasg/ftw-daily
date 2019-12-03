@@ -29,16 +29,16 @@ class EditListingPhotosPanel extends Component {
       onRemoveImage,
       user_type,
       currentUser,
-      onPaidMembership
     } = this.props;
 
     const rootClass = rootClassName || css.root;
     const classes = classNames(rootClass, className);
     const currentListing = ensureOwnListing(listing);
 
-    const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-    const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
-    const publish = isPublished ?"title.":"createListingTitle.";
+    const isPublished =
+      currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
+    const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
+    const publish = isPublished ? 'title.' : 'createListingTitle.';
     const PhotoPanelTitle = 'EditListingPhotosPanel.' + publish + user_name;
     const panelTitle = isPublished ? (
       <FormattedMessage
@@ -63,16 +63,15 @@ class EditListingPhotosPanel extends Component {
           onSubmit={values => {
             const { addImage, ...updateValues } = values;
             onSubmit(updateValues);
-          }} 
+          }}
           onChange={onChange}
           onUpdateImageOrder={onUpdateImageOrder}
           onRemoveImage={onRemoveImage}
           saveActionMsg={submitButtonText}
           updated={panelUpdated}
           updateInProgress={updateInProgress}
-          user_type ={ user_type}
+          user_type={user_type}
           currentUser={currentUser}
-          onPaidMembership={onPaidMembership}
         />
       </div>
     );

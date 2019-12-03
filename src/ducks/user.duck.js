@@ -354,10 +354,16 @@ export const sendVerificationEmail = () => (dispatch, getState, sdk) => {
     .catch(e => dispatch(sendVerificationEmailError(storableError(e))));
 };
 
-export const updateUserMembership =  (values) => {
+export const updateUserMembership = values => {
   return (dispatch, getState, sdk) => {
-    sdk.currentUser.updateProfile({
-      publicData: values
-    })
-  }
-}
+    return sdk.currentUser.updateProfile({
+      publicData: values,
+    });
+  };
+};
+
+export const getUser = () => {
+  return (dispatch, getState, sdk) => {
+    return sdk.currentUser.show();
+  };
+};

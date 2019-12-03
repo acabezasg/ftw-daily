@@ -19,9 +19,9 @@ import card from './images/card.png';
 import vet from './images/vet2.png';
 import listing from './images/checklist.png';
 import checkmark from './images/checkmark.png';
-import css from './PaymentOwnerPage.css';
+import css from './PaymentServicePage.css';
 
-export class PaymentOwnerPage extends Component {
+export class PaymentServicePage extends Component {
   constructor(props) {
     super(props);
     this.state = { didPay: false };
@@ -38,7 +38,7 @@ export class PaymentOwnerPage extends Component {
         return {
           step: value => {
             if (value == 'thankyou_screen') {
-              this.props.dispatch(updateUserMembership({ petOwnerMembership: true })).then(() => {
+              this.props.dispatch(updateUserMembership({ petServiceMembership: true })).then(() => {
                 document.getElementById('cb-container').remove();
                 document.body.style.overflow = 'auto';
                 this.setState({ didPay: true });
@@ -60,9 +60,9 @@ export class PaymentOwnerPage extends Component {
         title="Buy Membership and Go Premium | Trust My Pet Sitter"
         schema={{
           '@context': 'http://schema.org',
-          '@type': 'PaymentOwnerPage',
+          '@type': 'PaymentServicePage',
           description: 'PawSquad',
-          name: 'PaymentOwnerPage',
+          name: 'PaymentServicePage',
         }}
       >
         <LayoutSingleColumn>
@@ -82,12 +82,12 @@ export class PaymentOwnerPage extends Component {
                   <p>
                     just <span>$10</span> per month
                   </p>
-                  <p>(pay $120 annually)</p>
+                  <p>(cancel anytime)</p>
 
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="pet_owner"
+                    data-cb-plan-id="pet-services"
                   >
                     <img src={card} />
                     Pay with card
@@ -100,48 +100,30 @@ export class PaymentOwnerPage extends Component {
                   </div>
                 </div>
                 <div className={css.item2}>
-                  <h2>Pet Owners - Go Premium</h2>
+                  <h2>Pet Services – Go Premium</h2>
 
                   <div className={css.whybuy}>
-                    <h3>Whilst under our Pet Sitter Care:</h3>
                     <ul>
                       <li>
-                        <img src={checkmark} /> 24/7 Virtual Vet Advice wherever you are
+                        <img src={checkmark} /> Create your profile
                       </li>
                       <li>
-                        <img src={checkmark} /> Home covered by Insurance Backed Guarantee
-                      </li>
-                    </ul>
-
-                    <h3>After Sign up:</h3>
-                    <ul>
-                      <li>
-                        <img src={checkmark} /> 30-day money back guarantee
+                        <img src={checkmark} /> Show in local pet listing searches
                       </li>
                       <li>
-                        <img src={checkmark} /> ID verification provided by{' '}
-                        <ExternalLink href="https://www.yoti.com/blog/trust-my-pet-sitter-verifies-accounts-with-yoti">
-                          Yoti.com
-                        </ExternalLink>
-                      </li>
-                    </ul>
-
-                    <h3>Anytime:</h3>
-                    <ul>
-                      <li>
-                        <img src={checkmark} /> Create your online Profile
+                        <img src={checkmark} /> Show in Category search listings
                       </li>
                       <li>
-                        <img src={checkmark} /> Receive messages from Sitters
+                        <img src={checkmark} /> Receive Messages from Pet Parents
                       </li>
                       <li>
-                        <img src={checkmark} /> Send messages to Pet Sitters
+                        <img src={checkmark} /> Send Messages to Pet Parents
                       </li>
                       <li>
-                        <img src={checkmark} /> Send messages to Pet Services
+                        <img src={checkmark} /> Secure online messaging
                       </li>
                       <li>
-                        <img src={checkmark} /> Pay securely within our platform
+                        <img src={checkmark} /> No additional fees
                       </li>
                     </ul>
                   </div>
@@ -167,4 +149,4 @@ const mapDispatchToProps = dispatch => ({});
 // lifecycle hook.
 //
 // See: https://github.com/ReactTraining/react-router/issues/4671
-export default compose(connect(mapDispatchToProps))(PaymentOwnerPage);
+export default compose(connect(mapDispatchToProps))(PaymentServicePage);

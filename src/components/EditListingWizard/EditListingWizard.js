@@ -397,7 +397,4 @@ EditListingWizard.propTypes = {
   intl: intlShape.isRequired,
 };
 
-export default compose(
-  withViewport,
-  injectIntl
-)(EditListingWizard);
+export default compose(withViewport, injectIntl)(EditListingWizard);

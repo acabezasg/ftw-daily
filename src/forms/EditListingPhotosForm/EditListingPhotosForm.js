@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { nonEmptyArray, composeValidators } from '../../util/validators';
 import { isUploadImageOverLimitError } from '../../util/errors';
-import { AddImages, Button, Form, ValidationError } from '../../components';
+import { AddImages, Button, Form, ValidationError, NamedRedirect } from '../../components';
 
 import css from './EditListingPhotosForm.css';
 
@@ -17,7 +17,7 @@ const ACCEPT_IMAGES = 'image/*';
 export class EditListingPhotosFormComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { imageUploadRequested: false, planId : null, memberShip: null};
+    this.state = { imageUploadRequested: false, redirectPage: null, redirect: null };
     this.onImageUploadHandler = this.onImageUploadHandler.bind(this);
     this.submittedImages = [];
   }
@@ -37,51 +37,34 @@ export class EditListingPhotosFormComponent extends Component {
   }
 
   componentDidMount() {
-    let planId,memberShip;
-    switch(this.props.user_type){
-      case 0 :
-          planId = "pet_owner";
-          memberShip = "petOwnerMembership"
-          break;
-      case 1: 
-          planId = "test-plan";
-          memberShip = "petSitterMembership"
-          break;
+    let memberShip, redirectPage;
+    switch (this.props.user_type) {
+      case 0:
+        memberShip = 'petOwnerMembership';
+        redirectPage = 'PaymentOwnerPage';
+        break;
+      case 1:
+        memberShip = 'petSitterMembership';
+        redirectPage = 'PaymentSitterPage';
+        break;
       case 2:
-          planId = "pet-services";
-          memberShip = "petServiceMembership"    
-          break;         
+        memberShip = 'petServiceMembership';
+        redirectPage = 'PaymentServicePage';
+        break;
     }
-    console.log(this.props.user_type);
-    this.setState({planId,memberShip});
-    if(this.props.currentUser && this.props.currentUser.attributes.profile.publicData[memberShip]){
-        return;
+
+    if (
+      !(this.props.currentUser && this.props.currentUser.attributes.profile.publicData[memberShip])
+    ) {
+      //localStorage.setItem('redirectData', window.location.href);
+      this.setState({ redirectPage });
     }
-    const el = document.createElement('script');
-    el.onload = () => {
-      window.Chargebee.init({
-        "site": "trustmypetsitter-test"
-      });
-      window.Chargebee.registerAgain();
-      window.Chargebee.getInstance().setCheckoutCallbacks(()=> {
-        // you can define a custom callbacks based on cart object
-        return {
-          step: (value) => {
-            if(value=='thankyou_screen'){
-                document.getElementById('cb-container').remove();
-                document.body.style.overflow = "auto";
-                this.props.onPaidMembership({[this.state.memberShip] : true})
-            }
-          }
-        }
-      });
-    };
-    el.setAttribute('src', 'https://js.chargebee.com/v2/chargebee.js');
-    document.body.appendChild(el);
   }
 
   render() {
-    return (
+    return this.state.redirect ? (
+      <NamedRedirect name={this.state.redirectPage}></NamedRedirect>
+    ) : (
       <FinalForm
         {...this.props}
         onImageUploadHandler={this.onImageUploadHandler}
@@ -171,17 +154,21 @@ export class EditListingPhotosFormComponent extends Component {
             invalid || disabled || submitInProgress || imageUploadRequested || ready;
 
           const classes = classNames(css.root, className);
-          const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
-          const addImagesTip =
-            intl.formatMessage({
-              id: 'EditListingPhotosForm.addImagesTip.'+user_name,
-            });
+          const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
+          const addImagesTip = intl.formatMessage({
+            id: 'EditListingPhotosForm.addImagesTip.' + user_name,
+          });
           return (
             <Form
               className={classes}
               onSubmit={e => {
-                this.submittedImages = images;
-                handleSubmit(e);
+                e.preventDefault();
+                if (this.state.redirectPage) {
+                  this.setState({ redirect: true });
+                } else {
+                  this.submittedImages = images;
+                  handleSubmit(e);
+                }
               }}
             >
               {updateListingError ? (
@@ -258,15 +245,12 @@ export class EditListingPhotosFormComponent extends Component {
               <Button
                 className={css.submitButton}
                 type="submit"
-                data-cb-type="checkout"
-                data-cb-plan-id={this.state.planId}
                 inProgress={submitInProgress}
                 disabled={submitDisabled}
                 ready={submitReady}
               >
                 {saveActionMsg}
               </Button>
-
             </Form>
           );
         }}

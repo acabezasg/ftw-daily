@@ -19,7 +19,7 @@ import {
 import { getMarketplaceEntities } from '../../ducks/marketplaceData.duck';
 import { manageDisableScrolling, isScrollingDisabled } from '../../ducks/UI.duck';
 import { stripeAccountClearError, createStripeAccount } from '../../ducks/stripe.duck';
-import {updateUserMembership} from '../../ducks/user.duck';
+import { getUser } from '../../ducks/user.duck';
 import { EditListingWizard, NamedRedirect, Page } from '../../components';
 import { TopbarContainer } from '../../containers';
 import css from './EditListingPage.css';
@@ -38,15 +38,11 @@ import {
   clearUpdatedTab,
 } from './EditListingPage.duck';
 
-
-
-
 const { UUID } = sdkTypes;
 
 // N.B. All the presentational content needs to be extracted to their own components
 export class EditListingPageComponent extends Component {
-  
-  render(){
+  render() {
     const {
       currentUser,
       createStripeAccountError,
@@ -71,30 +67,29 @@ export class EditListingPageComponent extends Component {
       page,
       params,
       scrollingDisabled,
-      onPaidMembership
     } = this.props;
 
     const { id, type } = params;
-    
+
     const isNewURI = type === LISTING_PAGE_PARAM_TYPE_NEW;
     const isDraftURI = type === LISTING_PAGE_PARAM_TYPE_DRAFT;
-  
+
     const listingId = page.submittedListingId || (id ? new UUID(id) : null);
     const currentListing = ensureListing(getOwnListing(listingId));
     const { state: currentListingState } = currentListing.attributes;
-    
+
     const isPastDraft = currentListingState && currentListingState !== LISTING_STATE_DRAFT;
     const shouldRedirect = (isNewURI || isDraftURI) && listingId && isPastDraft;
     const showForm = isNewURI || currentListing.id;
-  
+
     if (shouldRedirect) {
       const isPendingApproval =
         currentListing && currentListingState === LISTING_STATE_PENDING_APPROVAL;
-  
+
       // If page has already listingId (after submit) and current listings exist
       // redirect to listing page
       const listingSlug = currentListing ? createSlug(currentListing.attributes.title) : null;
-  
+
       const redirectProps = isPendingApproval
         ? {
             name: 'ListingPageVariant',
@@ -111,7 +106,7 @@ export class EditListingPageComponent extends Component {
               slug: listingSlug,
             },
           };
-  
+
       return <NamedRedirect {...redirectProps} />;
     } else if (showForm) {
       const {
@@ -131,33 +126,29 @@ export class EditListingPageComponent extends Component {
       };
       const newListingPublished =
         isDraftURI && currentListing && currentListingState !== LISTING_STATE_DRAFT;
-  
+
       // Show form if user is posting a new listing or editing existing one
       const disableForm = page.redirectToListing && !showListingsError;
-  
+
       // Images are passed to EditListingForm so that it can generate thumbnails out of them
       const currentListingImages =
         currentListing && currentListing.images ? currentListing.images : [];
-  
+
       // Images not yet connected to the listing
       const imageOrder = page.imageOrder || [];
       const unattachedImages = imageOrder.map(i => page.images[i]);
-  
+
       const allImages = currentListingImages.concat(unattachedImages);
       const removedImageIds = page.removedImageIds || [];
       const images = allImages.filter(img => {
         return !removedImageIds.includes(img.id);
       });
-  
+
       const title =
         isNewURI || isDraftURI
           ? intl.formatMessage({ id: 'EditListingPage.titleCreateListing' })
           : intl.formatMessage({ id: 'EditListingPage.titleEditListing' });
-  
-      
-      
-      
-  
+
       return (
         <Page title={title} scrollingDisabled={scrollingDisabled}>
           <TopbarContainer
@@ -166,7 +157,7 @@ export class EditListingPageComponent extends Component {
             desktopClassName={css.desktopTopbar}
             mobileClassName={css.mobileTopbar}
           />
-          <EditListingWizard 
+          <EditListingWizard
             id="EditListingWizard"
             className={css.wizard}
             params={params}
@@ -197,9 +188,6 @@ export class EditListingPageComponent extends Component {
             onManageDisableScrolling={onManageDisableScrolling}
             updatedTab={page.updatedTab}
             updateInProgress={page.updateInProgress || page.createListingDraftInProgress}
-            onPaidMembership={onPaidMembership}
-
-           
           />
         </Page>
       );
@@ -214,8 +202,7 @@ export class EditListingPageComponent extends Component {
       );
     }
   }
-  
-};
+}
 
 EditListingPageComponent.defaultProps = {
   createStripeAccountError: null,
@@ -300,7 +287,6 @@ const mapDispatchToProps = dispatch => ({
   onUpdateImageOrder: imageOrder => dispatch(updateImageOrder(imageOrder)),
   onRemoveListingImage: imageId => dispatch(removeListingImage(imageId)),
   onChange: () => dispatch(clearUpdatedTab()),
-  onPaidMembership : values => dispatch(updateUserMembership(values))
 });
 
 // Note: it is important that the withRouter HOC is **outside** the
@@ -311,10 +297,7 @@ const mapDispatchToProps = dispatch => ({
 // See: https://github.com/ReactTraining/react-router/issues/4671
 const EditListingPage = compose(
   withRouter,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )
+  connect(mapStateToProps, mapDispatchToProps)
 )(injectIntl(EditListingPageComponent));
 
 EditListingPage.loadData = loadData;
