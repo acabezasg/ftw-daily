@@ -48,7 +48,7 @@ const PaymentPage = () => {
            <img className={css.lineImg} src={line} />
         </div>
            <p>just <span>$10</span> per month</p>
-           <p>(pay $120 annually)</p>
+           <p>(cancel anytime)</p>
 
            <div className={css.Chargebee}>
             <img src={card} />Pay with card
@@ -71,7 +71,6 @@ const PaymentPage = () => {
      <li><img src={checkmark} /> Send Messages to Pet Parents</li>
      <li><img src={checkmark} /> Secure online messaging</li>
      <li><img src={checkmark} /> No additional fees</li>
-     <li><img src={checkmark} /> 30 day money back guarantee</li>
   </ul>
 </div>
 

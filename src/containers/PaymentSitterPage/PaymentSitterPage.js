@@ -47,8 +47,8 @@ const PaymentSitterPage = () => {
            <h2>Go Premium now</h2>
            <img className={css.lineImg} src={line} />
         </div>
-           <p>just <span>$10</span> per month</p>
-           <p>(pay $120 annually)</p>
+           <p>just <span>$49.99</span> per year</p>
+           <p>(pay $4 per month)</p>
 
            <div className={css.Chargebee}>
             <img src={card} />Pay with card
