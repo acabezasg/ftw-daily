@@ -34,6 +34,12 @@
   list-style: inherit;
 }
 
+.whatwedoRight {
+  position: sticky;
+  top: 25px;
+  align-self: flex-start;
+}
+
 .mainUL li {
 
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;

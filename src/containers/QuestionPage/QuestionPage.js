@@ -10,6 +10,7 @@ import {
   LayoutWrapperFooter,
   Footer,
   NamedLink,
+  ExternalLink,
   
 } from '../../components';
 
@@ -113,6 +114,10 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
+                <a>Do Pet / Housesitters need insurance?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
                 <a>What if my pet needs a vet when I am away from home?</a>
               </div></Tab>
 
@@ -121,11 +126,7 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Can I make a career from Pet Sitting?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>How do I prepare for a Pet Sitter coming to my home?</a>
+                <a>Can I make a career from pet sitting?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -374,6 +375,39 @@ const QuestionPage = () => {
           <p>If you go out of town for a few days or on vacation many people think they’ll be fine with someone popping in to fill up some food and water, but that’s not the case.  Things can go wrong in a house with a pet left alone – whether it is a medical emergency, flood or fire – cats still need looked after.  Also, it can be stressful for a cat to find themselves in a quiet empty home when they are used to the routine of family life. </p>
 
           <p> An empty home can cause confusion and anxiety and lead to stress.  A Pet Sitter offers 1:1 care, attention and routine for your cats, and can send you daily updates on their feline adventures!</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>Do Pet / Housesitters need insurance?</h2>
+
+          <p>At Trust My Pet Sitter we provide all or our premium pet owner members with an insurance backed guarantee. You can read more about it here.</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>What if my pet needs a vet when I am away from home?</h2>
+
+          <p>At Trust My Pet Sitter all our Pet Sitters are provided with access to PawSquad a 24/7 Virtual Vet staffed with UK qualified Veterinary Surgeons for the duration of their pet sit.</p>
+
+          <p>Our Vets offer advice no matter where our sitters are located. Visit this <ExternalLink href="https://www.trustmypetsitter.com/virtualvet">link</ExternalLink> to find out more.
+</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>How much do pet sitters charge per hour?</h2>
+
+          <p>Professional Pet Sitters set their own nightly rate and can charge anywhere from $20 up to $75 per night depending upon their skills, experience and your requirements.</p>
+
+          <p>If you like a Pet Sitters profile but consider their nightly price too high, you can always send them a message and find out if they will consider negotiating the price.  </p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>Can I make a career from pet sitting?</h2>
+
+          <p>Do you have a passion for pets? Are you interested in a career change, a new business opportunity, recently retired, an animal lover who thinks this could be the best job ever!</p>
+
+          <p>In order to become a professional Pet Sitter, you need to have a love of animals, be industrious, responsible and able to self-manage.  For those interested in entering the professional pet-sitting industry, there's never been a better time than now.  Pet Owners who love to travel were often hindered by outdated pet caring such as kennels or catteries, and many did not holiday or vacation after becoming a pet parent.  
+</p>
+          <p>As Pet Parents continue to grow Pet ownership remains high and the popularity of pets continues to grow globally, and so the demand for professional pet sitters continues to grow.</p>
         </TabPanel>
 
       </div>

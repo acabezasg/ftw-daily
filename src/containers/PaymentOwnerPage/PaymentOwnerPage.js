@@ -80,9 +80,9 @@ export class PaymentOwnerPage extends Component {
                     <img className={css.lineImg} src={line} />
                   </div>
                   <p>
-                    just <span>$10</span> per month
+                    just <span>$49.99</span> per year
                   </p>
-                  <p>(pay $120 annually)</p>
+                  <p>(pay $4 per month)</p>
 
                   <div
                     className={css.Chargebee}

@@ -137,7 +137,7 @@ const HelpCenter = () => {
         <ul>
           <li>What is Trust My Pet Sitter and how does it work?</li>
           <li>Join Up</li>
-          <li>Verify your emailt</li>
+          <li>Verify your email</li>
           <li>Create your first posting</li>
         </ul>
        </div>
