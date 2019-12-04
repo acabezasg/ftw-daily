@@ -39,7 +39,8 @@ export class PaymentOwnerPage extends Component {
           step: value => {
             if (value == 'thankyou_screen') {
               this.props.dispatch(updateUserMembership({ petOwnerMembership: true })).then(() => {
-                document.getElementById('cb-container').remove();
+                document.getElementById('cb-container') &&
+                  document.getElementById('cb-container').remove();
                 document.body.style.overflow = 'auto';
                 this.setState({ didPay: true });
               });

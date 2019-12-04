@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { array, bool, func, shape, string } from 'prop-types';
 import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { getUser } from '../../ducks/user.duck';
 import { Form as FinalForm, Field } from 'react-final-form';
 import { FormattedMessage, intlShape, injectIntl } from 'react-intl';
 import isEqual from 'lodash/isEqual';
@@ -17,7 +19,12 @@ const ACCEPT_IMAGES = 'image/*';
 export class EditListingPhotosFormComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { imageUploadRequested: false, redirectPage: null, redirect: null };
+    this.state = {
+      imageUploadRequested: false,
+      redirectPage: null,
+      redirect: null,
+      userFetched: false,
+    };
     this.onImageUploadHandler = this.onImageUploadHandler.bind(this);
     this.submittedImages = [];
   }
@@ -53,12 +60,18 @@ export class EditListingPhotosFormComponent extends Component {
         break;
     }
 
-    if (
-      !(this.props.currentUser && this.props.currentUser.attributes.profile.publicData[memberShip])
-    ) {
-      //localStorage.setItem('redirectData', window.location.href);
-      this.setState({ redirectPage });
-    }
+    this.props
+      .dispatch(getUser())
+      .then(response => {
+        let currentUser = response.data.data;
+        if (!currentUser.attributes.profile.publicData[memberShip]) {
+          localStorage.setItem('redirectPath', new URL(window.location.href).pathname);
+          this.setState({ redirectPage });
+        }
+      })
+      .finally(() => {
+        this.setState({ userFetched: true });
+      });
   }
 
   render() {
@@ -163,11 +176,13 @@ export class EditListingPhotosFormComponent extends Component {
               className={classes}
               onSubmit={e => {
                 e.preventDefault();
-                if (this.state.redirectPage) {
-                  this.setState({ redirect: true });
-                } else {
-                  this.submittedImages = images;
-                  handleSubmit(e);
+                if (this.state.userFetched) {
+                  if (this.state.redirectPage) {
+                    this.setState({ redirect: true });
+                  } else {
+                    this.submittedImages = images;
+                    handleSubmit(e);
+                  }
                 }
               }}
             >
@@ -280,4 +295,6 @@ EditListingPhotosFormComponent.propTypes = {
   onRemoveImage: func.isRequired,
 };
 
-export default compose(injectIntl)(EditListingPhotosFormComponent);
+const mapDispatchToProps = dispatch => ({});
+
+export default compose(connect(mapDispatchToProps), injectIntl)(EditListingPhotosFormComponent);

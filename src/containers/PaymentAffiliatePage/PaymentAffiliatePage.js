@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
 import {
   LayoutSingleColumn,
@@ -12,53 +12,72 @@ import {
 
 import line from './images/sketch.svg';
 import crown from './images/crown.png';
-import card from './images/card.png';
-import vet from './images/vet2.png';
-import listing from './images/checklist.png';
-import checkmark from './images/checkmark.png';
+import { Redirect } from 'react-router-dom';
 import css from './PaymentAffiliatePage.css';
 
-const PaymentAffiliatePage = props => {
-  // prettier-ignore
-  return (
-    <StaticPage
-      title="Buy Membership and Go Premium | Trust My Pet Sitter"
-      schema={{
-        '@context': 'http://schema.org',
-        '@type': 'PaymentAffiliatePage',
-        description: 'PawSquad',
-        name: 'PaymentAffiliatePage',
-      }}
-    >
-      <LayoutSingleColumn>
-        <LayoutWrapperTopbar>
-          <TopbarContainer />
-        </LayoutWrapperTopbar>
+export class PaymentAffiliatePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { readyToRedirect: false };
+  }
 
-  <LayoutWrapperMain className={css.PaymentWrapper}>
-  
-    <div className={css.sectionContent}>
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ readyToRedirect: true });
+    }, 5000);
+  }
 
-    <div className={css.gridContainer}>
-      <div className={css.item1}>
-        <div className={css.firstRow}>
-           <img src={crown} />
-           <h2>You are Premium now!</h2>
-           <img className={css.lineImg} src={line} />
-        </div>
-        <p>Enjoy your <strong>Premium</strong> account. We will redirect you in a few seconds.</p>
-      </div>  
-    </div>
+  render() {
+    return (
+      <div>
+        {localStorage.getItem('redirectPath') && this.state.readyToRedirect ? (
+          <Redirect to={localStorage.getItem('redirectPath')}></Redirect>
+        ) : null}
+        <StaticPage
+          title="Buy Membership and Go Premium | Trust My Pet Sitter"
+          schema={{
+            '@context': 'http://schema.org',
+            '@type': 'PaymentAffiliatePage',
+            description: 'PawSquad',
+            name: 'PaymentAffiliatePage',
+          }}
+        >
+          <LayoutSingleColumn>
+            <LayoutWrapperTopbar>
+              <TopbarContainer />
+            </LayoutWrapperTopbar>
 
-    </div>
-      </LayoutWrapperMain>
+            <LayoutWrapperMain className={css.PaymentWrapper}>
+              <img
+                src="https://shareasale.com/sale.cfm?amount={{tracking_pixel_code.invoice_amount}}&v=1.0&tracking={{tracking_pixel_code.invoice_id}}&transtype=sale&merchantID=86799"
+                width="1"
+                height="1"
+              />
+              <div className={css.sectionContent}>
+                <div className={css.gridContainer}>
+                  <div className={css.item1}>
+                    <div className={css.firstRow}>
+                      <img src={crown} />
+                      <h2>You are Premium now!</h2>
+                      <img className={css.lineImg} src={line} />
+                    </div>
+                    <p>
+                      Enjoy your <strong>Premium</strong> account. We will redirect you in a few
+                      seconds.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </LayoutWrapperMain>
 
-        <LayoutWrapperFooter>
-          <Footer />
-        </LayoutWrapperFooter>
-      </LayoutSingleColumn>
-    </StaticPage>
-  );
-};
+            <LayoutWrapperFooter>
+              <Footer />
+            </LayoutWrapperFooter>
+          </LayoutSingleColumn>
+        </StaticPage>
+      </div>
+    );
+  }
+}
 
 export default PaymentAffiliatePage;
