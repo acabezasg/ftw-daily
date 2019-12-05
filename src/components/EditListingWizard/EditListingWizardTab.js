@@ -231,9 +231,15 @@ const EditListingWizardTab = props => {
       );
     }
     case LOCATION: {
-      submitButtonTranslationKey = isNewListingFlow
-        ? 'EditListingWizard.saveNewLocation'
-        : 'EditListingWizard.saveEditLocation';
+      if (user_type != 2) {
+        submitButtonTranslationKey = isNewListingFlow
+          ? 'EditListingWizard.saveNewLocation'
+          : 'EditListingWizard.saveEditLocation';
+      } else {
+        submitButtonTranslationKey = isNewListingFlow
+          ? 'EditListingWizard.saveNewLocationService'
+          : 'EditListingWizard.saveEditLocation';
+      }
 
       return (
         <EditListingLocationPanel

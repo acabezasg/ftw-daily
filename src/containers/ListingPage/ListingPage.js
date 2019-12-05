@@ -595,7 +595,9 @@ export class ListingPageComponent extends Component {
                       timeSlots={timeSlots}
                       fetchTimeSlotsError={fetchTimeSlotsError}
                     />
-                  ) : (
+                  ) : currentUser.attributes.profile.publicData.petOwnerMembership ||
+                    currentUser.attributes.profile.publicData.petSitterMembership ||
+                    currentUser.attributes.profile.publicData.petServiceMembership ? (
                     <div className={css.bookingPanel}>
                       {currentListing.attributes.publicData.requiredDates ? (
                         <div className={css.required}>
@@ -619,11 +621,11 @@ export class ListingPageComponent extends Component {
                       ) : null}
 
                       <p className={css.smallPrint}>
-                        {
-                          user_type == 0 ? <span>Contact Pet Owner directly</span> :
+                        {user_type == 0 ? (
+                          <span>Contact Pet Owner directly</span>
+                        ) : (
                           <span>Contact Pet Service directly</span>
-                        }
-                        
+                        )}
                       </p>
                       <Button className={css.sendbtn} onClick={this.onContactUser}>
                         Send Message
@@ -634,7 +636,7 @@ export class ListingPageComponent extends Component {
                         </Button>
                       </div>
                     </div>
-                  )
+                  ) : null
                 ) : (
                   <div className={css.bookingPanel}>
                     <Button onClick={this.onProceedLogin}>
@@ -773,10 +775,7 @@ const mapDispatchToProps = dispatch => ({
 // See: https://github.com/ReactTraining/react-router/issues/4671
 const ListingPage = compose(
   withRouter,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  ),
+  connect(mapStateToProps, mapDispatchToProps),
   injectIntl
 )(ListingPageComponent);
 
