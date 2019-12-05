@@ -231,7 +231,7 @@ const EditListingWizardTab = props => {
       );
     }
     case LOCATION: {
-      if (user_type != 2) {
+      if (user_type == 1) {
         submitButtonTranslationKey = isNewListingFlow
           ? 'EditListingWizard.saveNewLocation'
           : 'EditListingWizard.saveEditLocation';
