@@ -39,6 +39,7 @@ import {
   PaymentSitterPage,
   PaymentOwnerPage,
   PaymentAffiliatePage,
+  PetOwnerQuestions,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -126,6 +127,11 @@ const routeConfiguration = () => {
       path: '/pet-services-faq',
       name: 'PetServicesPage',
       component: PetServicesPage,
+    },
+    {
+      path: '/pet-owner-questions',
+      name: 'PetOwnerQuestions',
+      component: PetOwnerQuestions
     },
     {
       path: '/pet-owner-faq',

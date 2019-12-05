@@ -38,4 +38,4 @@ export { default as PaymentServicePage } from './PaymentServicePage/PaymentServi
 export { default as PaymentSitterPage } from './PaymentSitterPage/PaymentSitterPage';
 export { default as PaymentOwnerPage } from './PaymentOwnerPage/PaymentOwnerPage';
 export { default as PaymentAffiliatePage } from './PaymentAffiliatePage/PaymentAffiliatePage';
- 
+export { default as PetOwnerQuestions } from './PetOwnerQuestions/PetOwnerQuestions';
