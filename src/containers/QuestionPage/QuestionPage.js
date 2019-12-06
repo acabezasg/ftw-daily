@@ -39,7 +39,7 @@ const QuestionPage = () => {
 
     <Tabs className={css.whatwedoWrapper}>
 <div className={css.goBack}>
-<NamedLink name="HelpCenter" className={css.backUrl}>Help Center</NamedLink> <img src={arrow} />
+<NamedLink name="HelpCenter" className={css.backUrl}>Help Center</NamedLink> <img src={arrow} /> <span className={css.backUrl}>Pet Sitter Questions</span>
 </div>
     <div className={css.goFlex}>
 
@@ -48,18 +48,6 @@ const QuestionPage = () => {
             <TabList>
 
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Pet Sitter Questions</span></label>
-
-             <Tab><div className={css.collapseItem}>
-                <a>How much should I pay someone to pet / houesit?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>What is a professional pet / housesitter?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>How much should I pay someone to watch my pet?</a>
-              </div></Tab>
 
               <Tab><div className={css.collapseItem}>
                 <a>Do Pet Sitters get paid?</a>
@@ -82,15 +70,7 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How Do I Find a Pet Services?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
                 <a>How much does it cost to join Trust My Pet Sitter?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>How do I know I can trust a pet sitter in my home?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -122,11 +102,11 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How much do pet sitters charge per hour?</a>
+                <a>Can I make a career from pet sitting?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Can I make a career from pet sitting?</a>
+                <a>How much do pet sitters charge per hour?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -134,23 +114,11 @@ const QuestionPage = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What is hte minimum age for a pet sitting?</a>
+                <a>What is the minimum age for a pet sitting?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
                 <a>How do I create an account?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>How do I find a Pet Sitter?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>Can I choose my own Pet Sitter?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>How do I find homes and pets to sit?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -161,84 +129,11 @@ const QuestionPage = () => {
                 <a>How do I get paid?</a>
               </div></Tab>
 
-
-
-            <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Your account</span></label>
-              
-              <Tab><div className={css.collapseItem}>
-                <a>Managing your account</a>
-              </div></Tab>
-
-              <div className={css.collapseItem}>
-                <a>ID Verification</a>
-              </div>
-
-              <div className={css.collapseItem}>
-                <a>Account security</a>
-              </div>
-
-              <div className={css.collapseItem}>
-                <a>Closing your account</a>
-              </div>  
-
-              <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Our community</span></label>
-              
-              <div className={css.collapseItem}>
-                <a>Accessibility</a>
-              </div>
-
-              <div className={css.collapseItem}>
-                <a>Local communities</a>
-              </div>
-
-              <div className={css.collapseItem}>
-                <a>Promoting on socials</a>
-              </div>
-
-    
-            <label for="collapsible4" className={css.lblToggle}><span className={css.collapsibleTitle}>Trust and security</span></label>
-              
-              <div className={css.collapseItem}>
-                <a>Ways of security</a>
-              </div>
-
-              <div className={css.collapseItem}>
-                <a>Yoti identity checker</a>
-              </div>
-
-              <div className={css.collapseItem}>
-                <a>Prevent fraud</a>
-              </div>
-
-              <div className={css.collapseItem}>
-                <a>Payment informations</a>
-              </div>
-
             </TabList>
 
       </div>
 
       <div className={css.whatwedoRight}>
-       <TabPanel>
-          <h2>
-            How much should I pay someone to pet / housesit?
-          </h2>
-          <p>Professional Pet Sitters set their own nightly rate and can charge anywhere from $20 up to $75 per night depending upon their skills, experience and your requirements.</p><p>If you like a Pet Sitters profile but consider their nightly price too high, you can always send them a message and find out if they will consider negotiating the price.</p>
-        </TabPanel>
-
-        <TabPanel>
-          <h2>
-            What is a professional pet / housesitter?
-          </h2>
-          <p>A professional pet and house sitter is someone who considers this role their primary job.  As part of their duties looking after your pets and your home they are paid a rate agreed before the Pet and House sit commences.</p><p>They should not be confused with pet boarders who look after dogs in their home, or drop in sitters who visit but do not stay overnight.  Trust My Pet Sitters always stay in the pets home and have a pre-agreement with the Pet Owners to the duties and expectations whilst in situ.</p>    
-        </TabPanel>
-
-        <TabPanel>
-          <h2>
-            How much should I pay someone to watch my pet?
-          </h2>
-          <p>At Trust My Pet Sitter our sitters set their nightly rate, based on their skills and experience.</p><p>The average rate for Pet Sitters is from $20 to around $75 per night, but you can negotiate and choose the best pet sitter who matches your budget and expectations.</p>
-        </TabPanel>
 
         <TabPanel>
           <h2>
@@ -256,14 +151,6 @@ const QuestionPage = () => {
           <p><strong>Pet Sitter Service Fee</strong></p>
 
           <p>This fee is 20% of the booking subtotal which is deducted from the final pay-out.  For example, if you charge $20 per night, then Trust My Pet Sitter will pay you 80% of the booking total on completion of the Pet Sit.</p>
-
-          <p><strong>Pet Owner Service Fee</strong></p>
-
-          <p>This fee is 10% for Pet Owners which is charged in addition to the Pet Sitter fee.  For example, if your Pet Sitter charges $20 per night, then Trust My Pet Sitter will charge $22 per night. This fee is calculated from the booking subtotal and is automatically added to the booking total.</p>
-
-          <p><strong>Pet Services Fee</strong></p>
-
-          <p>Pet Services are not charged a service fee to receive contact from Pet Owners via the Trust My Pet Sitter Platform.</p>
 
         </TabPanel>
 
@@ -291,51 +178,11 @@ const QuestionPage = () => {
         </TabPanel>
 
         <TabPanel>
-          <h2>
-            How Do I Find a Pet Services?
-          </h2>
-          <p>You can browse Pet Services who have placed a listing in area or country specific locations.</p>
-          <p>Get started by clicking the link on the home page “Find Pet Services” and you will then be redirected to the Trust My Pet Sitter key search page.</p>
-          <h3>The Key Search Page</h3>
-
-          <p>The Key Search Page allows you to select single or multiple options to find the Pet Services you need. You can search by:</p>
-
-          <ul className={css.mainUL}>
-            <li><strong>Location</strong> – in the top search bar locate the magnifying glass search icon and free type if you want to find pet services who are in a specific location. </li>
-            <li><strong>Category</strong> – Select the Category button from the top toolbar and choose Pet Services</li>
-          </ul>
-
-          <h3>Next choose your Service Type:</h3>
-
-          <ul className={css.mainUL}>
-            <li>Dog Walkers</li>
-            <li>Veterinary Surgeons</li>
-            <li>Pet Groomer</li>
-            <li>Pet Store</li>
-            <li>Drop in Sitters</li>
-          </ul>
-
-          <p><strong>Pet Types</strong> – You can choose to search by Pet Type, if none are chosen all Pet Types will be displayed in the search results and location map. Pet Types are Dog, Cat, Reptiles, Farm Animals, Rabbits, Pet Birds, Aquarium Fish, Horses or other.</p>
-          <p><strong>Price Range</strong> – When Pet Services create their listing they are asked to provide their rates. You can choose to search Pet Services by rates by using the toggle to select the maximum rate you are prepared to pay.  For the widest display leave the search toggle at the default maximum.</p>
-
-          <h3>Map Search</h3>
-
-          <p>You can also search for Pet Services who are in a specific map location. The map is shown on the right hand of the listing displays. For example, click on a price and the listing will pop up as a thumbnail image, if the Pet Service is of interest you can click on the image and it will load the main listing for you to browse suitability.</p>
-
-        </TabPanel>
-
-        <TabPanel>
         <h2>How much does it cost to join Trust My Pet Sitter?</h2>
 
         <p>Trust My Pet Sitter charges a small membership fee to cover our Insurance, Pet Support Advice Line and support staff.</p>
 
         <p>You can review the latest membership fees at: <NamedLink name="LandingPage">Membership Page</NamedLink></p>
-        </TabPanel>
-
-        <TabPanel>
-          <h2>How do I know I can trust a pet sitter in my home?</h2>
-
-          <p>At Trust My Pet Sitter we conduct ID verification provided by YOTI.com for all of our Pet Sitters.  In addition, Trust My Pet Sitter provides an Insurance backed guarantee for Pet Owners homes.</p>
         </TabPanel>
 
         <TabPanel>
@@ -393,14 +240,6 @@ const QuestionPage = () => {
         </TabPanel>
 
         <TabPanel>
-          <h2>How much do pet sitters charge per hour?</h2>
-
-          <p>Professional Pet Sitters set their own nightly rate and can charge anywhere from $20 up to $75 per night depending upon their skills, experience and your requirements.</p>
-
-          <p>If you like a Pet Sitters profile but consider their nightly price too high, you can always send them a message and find out if they will consider negotiating the price.  </p>
-        </TabPanel>
-
-        <TabPanel>
           <h2>Can I make a career from pet sitting?</h2>
 
           <p>Do you have a passion for pets? Are you interested in a career change, a new business opportunity, recently retired, an animal lover who thinks this could be the best job ever!</p>
@@ -409,6 +248,16 @@ const QuestionPage = () => {
 </p>
           <p>As Pet Parents continue to grow Pet ownership remains high and the popularity of pets continues to grow globally, and so the demand for professional pet sitters continues to grow.</p>
         </TabPanel>
+
+        <TabPanel>
+          <h2>How much do pet sitters charge per hour?</h2>
+
+          <p>Professional Pet Sitters set their own nightly rate and can charge anywhere from $20 up to $75 per night depending upon their skills, experience and your requirements.</p>
+
+          <p>If you like a Pet Sitters profile but consider their nightly price too high, you can always send them a message and find out if they will consider negotiating the price.  </p>
+        </TabPanel>
+
+        
 
       </div>
 

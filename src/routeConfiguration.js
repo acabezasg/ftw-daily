@@ -40,6 +40,8 @@ import {
   PaymentOwnerPage,
   PaymentAffiliatePage,
   PetOwnerQuestions,
+  PetServicesQuestions,
+
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -69,7 +71,7 @@ const routeConfiguration = () => {
       component: YotiPage,
     },
     {
-      path: '/question',
+      path: '/pet-sitter-questions',
       name: 'QuestionPage',
       component: QuestionPage,
     },
@@ -132,6 +134,11 @@ const routeConfiguration = () => {
       path: '/pet-owner-questions',
       name: 'PetOwnerQuestions',
       component: PetOwnerQuestions
+    },
+    {
+      path: '/pet-service-questions',
+      name: 'PetServicesQuestions',
+      component: PetServicesQuestions
     },
     {
       path: '/pet-owner-faq',

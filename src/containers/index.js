@@ -39,3 +39,4 @@ export { default as PaymentSitterPage } from './PaymentSitterPage/PaymentSitterP
 export { default as PaymentOwnerPage } from './PaymentOwnerPage/PaymentOwnerPage';
 export { default as PaymentAffiliatePage } from './PaymentAffiliatePage/PaymentAffiliatePage';
 export { default as PetOwnerQuestions } from './PetOwnerQuestions/PetOwnerQuestions';
+export { default as PetServicesQuestions } from './PetServicesQuestions/PetServicesQuestions';
