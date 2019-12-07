@@ -37,7 +37,7 @@ const QuestionPage = () => {
 
         <LayoutWrapperMain>
 
-    <Tabs className={css.whatwedoWrapper}>
+    <Tabs className={css.sectionContent}>
 <div className={css.goBack}>
 <NamedLink name="HelpCenter" className={css.backUrl}>Help Center</NamedLink> <img src={arrow} /> <span className={css.backUrl}>Pet Sitter Questions</span>
 </div>
@@ -50,83 +50,83 @@ const QuestionPage = () => {
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Pet Sitter Questions</span></label>
 
               <Tab><div className={css.collapseItem}>
-                <a>Do Pet Sitters get paid?</a>
+                <a>1. Do Pet Sitters get paid?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What are your Service Fees?</a>
+                <a>2. What are your Service Fees?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How much should I charge for house sitting and pet sitting?</a>
+                <a>3. How much should I charge for house sitting and pet sitting?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Do pet sitters stay overnight?</a>
+                <a>4. Do pet sitters stay overnight?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Is pet sitting safe?</a>
+                <a>5. Is pet sitting safe?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How much does it cost to join Trust My Pet Sitter?</a>
+                <a>6. How much does it cost to join Trust My Pet Sitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What are the rules for pet and house sitting?</a>
+                <a>7. What are the rules for pet and house sitting?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Do Housesitters pay utilities?</a>
+                <a>8. Do Housesitters pay utilities?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What does a pet sitter do?</a>
+                <a>9. What does a pet sitter do?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What should I ask a Pet Owner before accepting a Pet Sitting job?</a>
+                <a>10. What should I ask a Pet Owner before accepting a Pet Sitting job?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Do Cats need a Pet Sitter?</a>
+                <a>11. Do Cats need a Pet Sitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Do Pet / Housesitters need insurance?</a>
+                <a>12. Do Pet / Housesitters need insurance?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What if my pet needs a vet when I am away from home?</a>
+                <a>13. What if my pet needs a vet when I am away from home?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Can I make a career from pet sitting?</a>
+                <a>14. Can I make a career from pet sitting?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How much do pet sitters charge per hour?</a>
+                <a>15. How much do pet sitters charge per hour?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I prepare for a Pet Sit?</a>
+                <a>16. How do I prepare for a Pet Sit?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What is the minimum age for a pet sitting?</a>
+                <a>17. What is the minimum age for a pet sitting?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I create an account?</a>
+                <a>18. How do I create an account?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Can I work for more then one pet sitting company?</a>
+                <a>19. Can I work for more then one pet sitting company?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I get paid?</a>
+                <a>20. How do I get paid?</a>
               </div></Tab>
 
             </TabList>
@@ -174,7 +174,13 @@ const QuestionPage = () => {
             Is pet sitting safe?
 
           </h2>
-          <p>At Trust My Pet Sitter we use industry leading ID verification to confirm the identity of both our Pet Sitters and Pet Owners.</p><p>We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful.</p><p>In addition, we provide 24/7/365 Virtual Vet Advice to every active Pet Sitter no matter where they are in the world – a Vet always on hand to provide help and assistance. Our safety pack is completed with Public Liability Insurance.</p>
+          <p>At Trust My Pet Sitter we use Yoti to confirm the identity of both our Pet Sitters and Pet Owners.</p>
+
+          <p>We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful.</p>
+
+          <p>In addition, we provide 24/7/365 Virtual Vet Advice to every active Pet Sitter no matter where they are in the world – a Vet always on hand to provide help and assistance. </p>
+
+          <p>Our safety pack is completed with an Insurance backed guarantee for your home.</p>
         </TabPanel>
 
         <TabPanel>
@@ -257,7 +263,67 @@ const QuestionPage = () => {
           <p>If you like a Pet Sitters profile but consider their nightly price too high, you can always send them a message and find out if they will consider negotiating the price.  </p>
         </TabPanel>
 
-        
+        <TabPanel>
+
+          <h2>How do I prepare for a Pet Sit?</h2>
+
+          <p>As a Pet Sitter you should ensure that you have all the details needed to look after pets safely.  When you have confirmed the booking with the Pet Owner and prior to your sit you can ask them to prepare the information that you will need during your booking. So, for example:</p>
+
+          <ul className={css.mainUL}>
+            <li>If their pets are on medication, the procedures required and how often.  The Pet Owner should leave detailed instructions on its use and how it’s administered.</li>
+            <li>Are the pets ID tagged and/or microchipped? If your pet has a chip, is it registered with the correct address and telephone number.</li>
+            <li>Ask the owner to let their vet know in advance that they will be out of town and that a pet sitter will be caring for your pets. Some sitters will ask Owners to fill out a form detailing the type of care they’d like their pet to receive if they cannot be reached.</li>
+            <li>Is the Pet Insured?  If so, ask for the Pet Insurance details to be left in the information pack just in case it is needed.</li>
+          </ul>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>What is the minimum age for a pet sitting?</h2>
+
+          <p>At Trust My Pet Sitter the minimum age to sign up and join our platform is 18 years old.   </p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>How do I create an account?</h2>
+
+          <p>To create an account with Trust My Pet Sitter you must be at least 18 years old and be in possession of an ID verifiable document such as a Driving Licence, Passport or ID Card.</p>
+
+          <p>To get started just select the “Sign Up” icon in the Navigation Bar and follow the steps shown on the screen:</p>
+
+          <ul className={css.mainUL}>
+            <li>Email Address</li>
+            <li>First Name</li>
+            <li>Last Name</li>
+            <li>Password</li>
+          </ul>
+
+          <p>Click the Accept Terms and Conditions to join as a user.  You cannot send or receive messages from members until you complete the “Create a Post” user journey.</p>
+
+          <p>To Create a Post select the “Create a Post” icon in the Navigation Bar and complete the steps for your chosen Category:</p>
+          
+          <ul className={css.mainUL}>
+            <li>Pet Owner</li>
+            <li>Pet Sitter</li>
+            <li>Pet Services</li>
+          </ul>
+          
+          <p>When you have completed the Post details you will be a full member of our community and able to converse using our secure messaging platform</p>
+         
+        </TabPanel>
+
+        <TabPanel>
+          <h2>Can I work for more than one pet sitting company?</h2>
+
+          <p>Yes, you can work for more than one pet sitting company or person if you are self-employed or a contractor.</p>
+
+          <p>As a self employed individual or company you can choose who to select as your pet care suppliers, one may be better for dog walking contracts, another for pop in visits and another for overnight stays.  It is entirely your choice to pick which Pet Sitting companies you prefer and accept work from.</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>How do I get paid?</h2>
+
+          <p>When your booking is confirmed your Pet Owner will have paid your fee to ensure that you now have a financial commitment from them.  Your fee will be paid on completion of your Pet Sitting assignment directly into the bank account you set up in your profile.  Our payments are handled by Stripe, a PCI Service Provider Level 1 which is the highest grade of payment processing security.</p>
+        </TabPanel>
 
       </div>
 

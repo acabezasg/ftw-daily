@@ -36,7 +36,7 @@ const PetOwnerQuestions = () => {
 
         <LayoutWrapperMain>
 
-    <Tabs className={css.whatwedoWrapper}>
+    <Tabs className={css.sectionContent}>
 <div className={css.goBack}>
 <NamedLink name="HelpCenter" className={css.backUrl}>Help Center</NamedLink> <img src={arrow} /> <span className={css.backUrl}>Pet Owner Questions</span> 
 </div>
@@ -49,55 +49,59 @@ const PetOwnerQuestions = () => {
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Pet Owner Questions</span></label>
 
              <Tab><div className={css.collapseItem}>
-                <a>What is a professional pet / housesitter?</a>
+                <a>1. What is a professional pet / housesitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-               <a>How much should I pay someone to watch my pet?</a>
+               <a>2. How much should I pay someone to watch my pet?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-              <a>What are your Service Fees?</a>
+              <a>3. What are your Service Fees?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-              <a>Do Pet Sitters stay overnight?</a>
+              <a>4. Do Pet Sitters stay overnight?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-              <a>Is Pet Sitting safe?</a>
+              <a>5. Is Pet Sitting safe?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-              <a>How Do I Find a Pet Services?</a>
+              <a>6. How Do I Find a Pet Services?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-              <a>How much does it cost to join Trust My Pet Sitter?</a>
+              <a>7. How much does it cost to join Trust My Pet Sitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I know I can trust a pet sitter in my home?</a>
+                <a>8. How do I know I can trust a pet sitter in my home?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>What if my pet needs a vet when I am away from home?</a>
+                <a>9. What if my pet needs a vet when I am away from home?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How much do pet sitters charge per hour?</a>
+                <a>10. How much do pet sitters charge per hour?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I find a Pet Sitter?</a>
+                <a>11. How do I create an account?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>Can I choose my own Pet Sitter?</a>
+                <a>12. How do I find a Pet Sitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I find homes and pets to sit?</a>
+                <a>13. Can I choose my own Pet Sitter?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>14. How do I find homes and pets to sit?</a>
               </div></Tab>
 
             </TabList>
@@ -210,6 +214,34 @@ const PetOwnerQuestions = () => {
           <p>Professional Pet Sitters set their own nightly rate and can charge anywhere from $20 up to $75 per night depending upon their skills, experience and your requirements.</p>
 
           <p>If you like a Pet Sitters profile but consider their nightly price too high, you can always send them a message and find out if they will consider negotiating the price.  </p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>How do I create an account?</h2>
+
+          <p>To create an account with Trust My Pet Sitter you must be at least 18 years old and be in possession of an ID verifiable document such as a Driving Licence, Passport or ID Card.</p>
+
+          <p>To get started just select the “Sign Up” icon in the Navigation Bar and follow the steps shown on the screen:</p>
+
+          <ul className={css.mainUL}>
+            <li>Email Address</li>
+            <li>First Name</li>
+            <li>Last Name</li>
+            <li>Password</li>
+          </ul>
+
+          <p>Click the Accept Terms and Conditions to join as a user.  You cannot send or receive messages from members until you complete the “Create a Post” user journey.</p>
+
+          <p>To Create a Post select the “Create a Post” icon in the Navigation Bar and complete the steps for your chosen Category:</p>
+          
+          <ul className={css.mainUL}>
+            <li>Pet Owner</li>
+            <li>Pet Sitter</li>
+            <li>Pet Services</li>
+          </ul>
+          
+          <p>When you have completed the Post details you will be a full member of our community and able to converse using our secure messaging platform</p>
+         
         </TabPanel>
 
 

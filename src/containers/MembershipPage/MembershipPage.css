@@ -1,0 +1,150 @@
+@import '../../marketplace.css';
+
+.sectionContent {
+  margin: 80px auto 80px;
+  padding: 0 36px 0 36px;
+
+  @media (--viewportMedium) {
+    width: 100%;
+    margin: 80px auto 80px;
+  }
+
+  @media (--viewportLarge) {
+    width: 1024px;
+    padding: 0 36px 0 36px;
+    margin: 80px auto 80px;
+  }
+
+  @media (--viewportXLarge) {
+    width: 1024px;
+    padding: 0;
+  }
+}
+
+.mBanner {
+  background: linear-gradient(to right, #0c2340, #243f63);
+  padding-bottom: 300px;
+}
+
+.mMain {
+  width: 100%;
+}
+
+.mWrapper {
+  display: flex;
+}
+
+.mWrapper > div {
+  max-width: 33%;
+  flex: 0 0 33%;
+  box-shadow: 0px 8px 44px -10px rgba(0,22,89,0.2);
+  margin: 0 15px;
+  background-color: #fff;
+  padding: 20px 20px 50px;
+  border-radius: 4px;
+  border-top: 6px solid;
+  border-top-color: #41a6df;
+}
+
+.mWrapper > div > h3 {
+  color: #41a6df !important;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+}
+
+.getPlan {
+  text-align: center;
+}
+
+.getPlan a {
+  background: #ffd04d;
+  padding: 8px 15px 11px;
+  color: #425168 !important; 
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.getPlan img {
+  height: 20px;
+  padding-right: 8px;
+  position: relative;
+  bottom: 4.1px;
+}
+
+.getPlan a:hover {
+  background: rgb(236, 196, 0);
+  color: #fff !important;
+}
+
+.mWrapper > div > div:nth-of-type(1) {
+  text-align: center;
+}
+
+.currency {
+  position: relative;
+  top: -27px;
+  padding-right: 5px;
+}
+
+.block {
+  display: block;
+  height: 1px;
+  max-width: 55px;
+  margin: 25px auto;
+  border-top: 2px dashed #eaeaea;
+}
+
+.month {
+  color: #808f96;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.bigNum {
+  font-size: 60px;
+}
+
+.mWrapper > div > p {
+  color: #808f96;
+  font-weight: 300;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.plans {
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.plans img {
+  height: 17px;
+  padding-right: 5px;
+  position: relative;
+  bottom: 5px;
+}
+
+.offer {
+  color: #96a4b9 !important;
+  font-size: 13px !important;
+  margin-top: 0 !important;
+}
+
+.plans li {
+  color: #425168;
+  font-weight: 300;
+  font-size: 17px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.plans li:last-child {
+  font-weight: 300;
+  font-size: 17px;
+  margin-bottom: 0 !important;
+}

@@ -1,3 +1,5 @@
+@import '../../marketplace.css';
+
 .pageTitle {
   text-align: center;
 }
@@ -9,6 +11,12 @@
 
   @media (--viewportMedium) {
     width: calc(100% - 72px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .sectionContent {
+    padding: 30px;
   }
 }
 

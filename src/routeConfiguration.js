@@ -41,6 +41,7 @@ import {
   PaymentAffiliatePage,
   PetOwnerQuestions,
   PetServicesQuestions,
+  MembershipPage,
 
 } from './containers';
 
@@ -154,6 +155,11 @@ const routeConfiguration = () => {
       path: '/',
       name: 'LandingPage',
       component: props => <LandingPage {...props} />,
+    },
+    {
+      path: '/membership',
+      name: 'MembershipPage',
+      component: MembershipPage,
     },
     {
       path: '/about',

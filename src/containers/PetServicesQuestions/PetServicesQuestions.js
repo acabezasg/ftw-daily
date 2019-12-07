@@ -37,7 +37,7 @@ const PetServicesQuestions = () => {
 
         <LayoutWrapperMain>
 
-    <Tabs className={css.whatwedoWrapper}>
+    <Tabs className={css.sectionContent}>
 <div className={css.goBack}>
 <NamedLink name="HelpCenter" className={css.backUrl}>Help Center</NamedLink> <img src={arrow} /> <span className={css.backUrl}>Pet Service Questions</span>
 </div>
@@ -50,15 +50,15 @@ const PetServicesQuestions = () => {
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Pet Service Questions</span></label>
 
               <Tab><div className={css.collapseItem}>
-                <a>What are your Service Fees?</a>
+                <a>1. What are your Service Fees?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How much does it cost to join Trust My Pet Sitter?</a>
+                <a>2. How much does it cost to join Trust My Pet Sitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>How do I create an account?</a>
+                <a>3. How do I create an account?</a>
               </div></Tab>
 
             </TabList>
@@ -88,9 +88,33 @@ const PetServicesQuestions = () => {
         </TabPanel>
 
         <TabPanel>
-        <h2>How do I create an account?</h2>
+          <h2>How do I create an account?</h2>
 
+          <p>To create an account with Trust My Pet Sitter you must be at least 18 years old and be in possession of an ID verifiable document such as a Driving Licence, Passport or ID Card.</p>
+
+          <p>To get started just select the “Sign Up” icon in the Navigation Bar and follow the steps shown on the screen:</p>
+
+          <ul className={css.mainUL}>
+            <li>Email Address</li>
+            <li>First Name</li>
+            <li>Last Name</li>
+            <li>Password</li>
+          </ul>
+
+          <p>Click the Accept Terms and Conditions to join as a user.  You cannot send or receive messages from members until you complete the “Create a Post” user journey.</p>
+
+          <p>To Create a Post select the “Create a Post” icon in the Navigation Bar and complete the steps for your chosen Category:</p>
+          
+          <ul className={css.mainUL}>
+            <li>Pet Owner</li>
+            <li>Pet Sitter</li>
+            <li>Pet Services</li>
+          </ul>
+          
+          <p>When you have completed the Post details you will be a full member of our community and able to converse using our secure messaging platform</p>
+         
         </TabPanel>
+
 
       </div>
 
