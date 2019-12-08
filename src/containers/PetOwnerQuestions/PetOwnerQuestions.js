@@ -36,6 +36,12 @@ const PetOwnerQuestions = () => {
 
         <LayoutWrapperMain>
 
+          <div className={css.questionMain}>
+            <div className={css.sectionContent}>
+              <h3>Pet Owner Questions</h3>
+            </div>
+          </div>
+
     <Tabs className={css.sectionContent}>
 <div className={css.goBack}>
 <NamedLink name="HelpCenter" className={css.backUrl}>Help Center</NamedLink> <img src={arrow} /> <span className={css.backUrl}>Pet Owner Questions</span> 
@@ -69,7 +75,7 @@ const PetOwnerQuestions = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-              <a>6. How Do I Find a Pet Services?</a>
+              <a>6. How Do I Find Pet Services near me?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
@@ -98,10 +104,6 @@ const PetOwnerQuestions = () => {
 
               <Tab><div className={css.collapseItem}>
                 <a>13. Can I choose my own Pet Sitter?</a>
-              </div></Tab>
-
-              <Tab><div className={css.collapseItem}>
-                <a>14. How do I find homes and pets to sit?</a>
               </div></Tab>
 
             </TabList>
@@ -146,14 +148,17 @@ const PetOwnerQuestions = () => {
         <TabPanel>
           <h2>
             Is pet sitting safe?
-
           </h2>
-          <p>At Trust My Pet Sitter we use industry leading ID verification to confirm the identity of both our Pet Sitters and Pet Owners.</p><p>We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful.</p><p>In addition, we provide 24/7/365 Virtual Vet Advice to every active Pet Sitter no matter where they are in the world – a Vet always on hand to provide help and assistance. Our safety pack is completed with Public Liability Insurance.</p>
-        </TabPanel>
+          
+          <p>At Trust My Pet Sitter we use Yoti to confirm the identity of both our Pet Sitters and Pet Owners</p>
+          <p>We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful.</p>
+          <p>In addition, we provide 24/7/365 Virtual Vet Advice to every active Pet Sitter no matter where they are in the world – a Vet always on hand to provide help and assistance.</p>
+          <p>Our safety pack is completed with an Insurance backed guarantee for your home.</p>
+  </TabPanel>
 
         <TabPanel>
           <h2>
-            How Do I Find a Pet Services?
+          How Do I Find Pet Services near me?
           </h2>
           <p>You can browse Pet Services who have placed a listing in area or country specific locations.</p>
           <p>Get started by clicking the link on the home page “Find Pet Services” and you will then be redirected to the Trust My Pet Sitter key search page.</p>
@@ -242,6 +247,14 @@ const PetOwnerQuestions = () => {
           
           <p>When you have completed the Post details you will be a full member of our community and able to converse using our secure messaging platform</p>
          
+        </TabPanel>
+
+        <TabPanel>
+          <h2>How do I find a Pet Sitter?</h2>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>Can I choose my own Pet Sitter?</h2>
         </TabPanel>
 
 

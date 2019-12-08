@@ -1,20 +1,61 @@
+@import '../../marketplace.css';
+
+.sectionContent {
+  margin: 80px auto 80px;
+  padding: 0 36px 0 36px;
+
+  @media (--viewportMedium) {
+    width: 100%;
+    margin: 80px auto 80px;
+  }
+
+  @media (--viewportLarge) {
+    max-width: 1128px;
+    padding: 0 36px 0 36px;
+    margin: 80px auto 80px;
+  }
+
+  @media (--viewportXLarge) {
+    max-width: 1128px;
+    padding: 0;
+  }
+}
+
+.skinWrapper {
+  margin: 60px auto 60px;
+  padding: 0 36px 0 36px;
+
+  @media (--viewportMedium) {
+    width: 100%;
+    margin: 60px auto 60px;
+  }
+
+  @media (--viewportLarge) {
+    max-width: 1128px;
+    padding: 0 36px 0 36px;
+    margin: 60px auto 60px;
+  }
+
+  @media (--viewportXLarge) {
+    max-width: 1128px;
+    padding: 0;
+  }
+}
+
 .staticPageWrapper {
   margin: 0 auto;
 }
 
 .banner {
-  background: #41a6df;
+  background: #1da1f2;
   display: flex;
 }
 
-.bannerContent {
-  width: 80%;
-  margin: 0 auto;
-  padding: 60px 0;
+.sectionContent {
   display: flex;
 }
 
-.bannerContent div {
+.sectionContent div {
   width: 50%;
 }
 
@@ -42,17 +83,16 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
   }
+  .imageItem {
+    padding: 40px 0 !important;
+  }
 }
 
 .helpTitle {
-  font-family: Helvetica Neue LT, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 2.2rem;
-  letter-spacing: -.025rem;
-  color: #fff;
-  text-shadow: 1px 1px 1px #444;
-  white-space: nowrap;
+  color: #fff !important;
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 7px;
 }
 
 .bannerRight {
@@ -71,24 +111,12 @@
   margin: 0 auto;
 }
 
-.skinWrapper {
-  padding: 40px 0;
-  width: 80%;
-  margin: 0 auto;
-}
-
 .showArticles {
   display: flex;
   flex-wrap: wrap;
 }
 
 @media (max-width: 1124px) and (min-width: 800px) {
-  .skinWrapper {
-    width: 90% !important;
-  }
-  .bannerContent {
-    widows: 90% !important;
-  }
   .imageItem {
     padding: 40px 0;
   }
@@ -313,10 +341,6 @@
 }
 
 @media (max-width: 600px) {
-  .bannerContent {
-    width: 100%;
-    padding: 60px 20px;
-  }
   .topics {
     flex-wrap: wrap;
   }
@@ -324,11 +348,11 @@
     width: 50%;
     padding: 10px !important;
   }
-  .bannerContent div {
+  .sectionContent div {
     width: 100%;
     text-align: center;
   }
-  .bannerContent {
+  .sectionContent {
     flex-wrap: wrap;
   }
   .bannerRight {

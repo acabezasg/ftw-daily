@@ -1,6 +1,31 @@
 @import '../../marketplace.css';
 
 .sectionContent {
+  margin: -200px auto 80px;
+  padding: 0 36px 0 36px;
+
+  @media (--viewportMedium) {
+    width: 100%;
+    margin: -200px auto 80px;
+  }
+
+  @media (--viewportLarge) {
+    width: 1024px;
+    padding: 0 36px 0 36px;
+    margin: -200px auto 80px;
+  }
+
+  @media (--viewportXLarge) {
+    width: 1024px;
+    padding: 0;
+  }
+}
+
+.whyWrapper {
+  background: #EBF1FA;
+}
+
+.whyContent {
   margin: 80px auto 80px;
   padding: 0 36px 0 36px;
 
@@ -21,8 +46,24 @@
   }
 }
 
+.extend {
+  color: #fff !important;
+  text-shadow: 1px 1px 1px #444;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.whyTitle {
+  text-align: center;
+  font-size: 40px;
+}
+
 .mBanner {
-  background: linear-gradient(to right, #0c2340, #243f63);
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%), url(dog.jpg);
+  background-size: cover;
+  background-position: center;
   padding-bottom: 300px;
 }
 
@@ -32,18 +73,78 @@
 
 .mWrapper {
   display: flex;
+  justify-content: center;
 }
 
 .mWrapper > div {
   max-width: 33%;
   flex: 0 0 33%;
-  box-shadow: 0px 8px 44px -10px rgba(0,22,89,0.2);
+  box-shadow: 0px 8px 44px -10px rgba(0,22,89,0.3);
   margin: 0 15px;
   background-color: #fff;
   padding: 20px 20px 50px;
   border-radius: 4px;
   border-top: 6px solid;
   border-top-color: #41a6df;
+}
+
+@media (max-width: 700px) {
+  .mWrapper > div {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+    margin-bottom: 40px;
+  }
+  .mWrapper > div:last-child {
+    margin-bottom: 0 !important;
+  }
+  .mWrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 512px) {
+  .extend,
+  .whyTitle {
+    line-height: 45px;
+  }
+  .whyFlex > div {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-bottom: 40px !important;
+  }
+  .whyFlex > div:last-child {
+    margin-bottom: 0 !important;
+  }
+  .whyFlex {
+    flex-wrap: wrap;
+  }
+}
+
+.whyFlex {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.whyFlex > div {
+  text-align: center;
+  max-width: 33%;
+  flex: 0 0 33%;
+  margin: 0 15px;
+}
+
+.whyFlex > div > p {
+  color: #425168;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.whyFlex > div > h3 {
+  font-size: 22px;
+}
+
+.whyFlex > div > img {
+  height: 70px;
 }
 
 .mWrapper > div > h3 {
@@ -75,6 +176,7 @@
 .getPlan a:hover {
   background: rgb(236, 196, 0);
   color: #fff !important;
+  text-decoration: none; 
 }
 
 .mWrapper > div > div:nth-of-type(1) {

@@ -41,11 +41,11 @@ const HelpCenter = () => {
 
 <LayoutWrapperMain className={css.staticPageWrapper}>
   <div className={css.banner}>
-    <div className={css.bannerContent}>
+    <div className={css.sectionContent}>
       <div className={css.bannerTitle}>
-        <span className={css.helpTitle}>
+        <h3 className={css.helpTitle}>
         Your Questions
-        </span>
+        </h3>
       </div>
       <div className={css.bannerRight}>
         <img src={help} className={css.helpImage} />

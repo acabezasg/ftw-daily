@@ -14,6 +14,23 @@
   }
 }
 
+.questionMain {
+  height: 190px;
+  background: #1da1f2;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.questionMain > .sectionContent > h3 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 60px;
+  color: #fff !important;
+  font-size: 35px;
+}
+
 @media (max-width: 1024px) {
   .sectionContent {
     padding: 30px;

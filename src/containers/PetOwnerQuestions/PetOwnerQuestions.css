@@ -14,6 +14,23 @@
   }
 }
 
+.questionMain {
+  height: 190px;
+  background: #1da1f2;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.questionMain > .sectionContent > h3 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 60px;
+  color: #fff !important;
+  font-size: 35px;
+}
+
 @media (max-width: 1024px) {
   .sectionContent {
     padding: 30px;
@@ -172,21 +189,21 @@
 }
 
 .sectionContent {
-  margin: var(--LandingPage_sectionMarginTop) 24px 51px 24px;
+  margin: 60px auto 60px;
 
   @media (--viewportMedium) {
-    max-width: 100%;
-    margin: var(--LandingPage_sectionMarginTopMedium) 24px 60px 24px;
+    max-width: 1024px;
+    margin: 60px auto 60px;
   }
 
   @media (--viewportLarge) {
     max-width: 1128px;
     padding: 0 36px 0 36px;
-    margin: 50px auto 35px auto;
+    margin: 60px auto 60px;
   }
 
   @media (--viewportXLarge) {
-    max-width: 1056px;
+    max-width: 1024px;
     padding: 0;
   }
 }

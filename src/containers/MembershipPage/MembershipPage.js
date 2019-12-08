@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
-import { Player, BigPlayButton } from 'video-react';
+import classNames from 'classnames';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -14,8 +14,13 @@ import {
 
 import css from './MembershipPage.css';
 import check from './check.png';
+import verification from './verification.png';
+import message from './message.png';
+import virtualvet from './virtualvet.png';
+import premium from './premium.png';
 
 const MembershipPage = () => {
+
   // prettier-ignore
   return (
     <StaticPage
@@ -37,9 +42,10 @@ const MembershipPage = () => {
         <div className={css.mBanner}></div>
 
     <div className={css.sectionContent}>
+      <h3 className={css.extend}>Extend your experience</h3>
        <div className={css.mMain}>
          <div className={css.mWrapper}>
-         <div>
+          <div>
             <h3>Pet Owner</h3>
             <p>Plan for all pet owners</p>
             <div className={css.price}>
@@ -62,12 +68,12 @@ const MembershipPage = () => {
               <li><img src={check} /> Create your online Profile</li>
             </ul>
             <div className={css.getPlan}>
-              <a><img src="https://i.imgur.com/JO1N5iZ.png" />Go Premium</a>
+              <NamedLink name="PaymentOwnerPage"><img src={premium} />Go Premium</NamedLink>
             </div>
           </div>
           <div>
             <h3>Pet Sitter</h3>
-            <p>Plan for all pet owners</p>
+            <p>Plan for all pet sitters</p>
             <div className={css.price}>
              <span className={css.currency}>
               $
@@ -88,12 +94,12 @@ const MembershipPage = () => {
               <li><img src={check} /> Create your online Profile</li>
             </ul>
             <div className={css.getPlan}>
-              <a><img src="https://i.imgur.com/JO1N5iZ.png" />Go Premium</a>
+            <NamedLink name="PaymentSitterPage"><img src={premium}  />Go Premium</NamedLink>
             </div>
           </div>
           <div>
             <h3>Pet Service</h3>
-            <p>Plan for all pet owners</p>
+            <p>Plan for all pet services</p>
             <div className={css.price}>
              <span className={css.currency}>
               $
@@ -114,12 +120,35 @@ const MembershipPage = () => {
               <li><img src={check} /> Create your online Profile</li>
             </ul>
             <div className={css.getPlan}>
-              <a><img src="https://i.imgur.com/JO1N5iZ.png" />Go Premium</a>
+            <NamedLink name="PaymentServicePage"><img src={premium}  />Go Premium</NamedLink>
             </div>
           </div>
           </div>
        </div>
     </div>
+
+  <div className={css.whyWrapper}>
+    <div className={css.whyContent}>
+      <h3 className={css.whyTitle}>Why go Premium?</h3>
+      <div className={css.whyFlex}>
+        <div>
+          <img src={message} />
+          <h3>Send messages</h3>
+          <p>Get in touch with our worldwide users anytime.</p>
+        </div>
+        <div>
+          <img src={virtualvet} />
+          <h3>24/7 Virtual Vet</h3>
+          <p>Get covered by professional vets all the time.</p>
+        </div>
+        <div>
+          <img src={verification} />
+          <h3>ID Verification</h3>
+          <p>Your account will become verified with the badge.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
       </LayoutWrapperMain>
 
