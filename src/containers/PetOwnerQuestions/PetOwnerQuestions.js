@@ -16,6 +16,7 @@ import {
 
 import arrow from './arrow.png';
 import css from './PetOwnerQuestions.css';
+import logo from './logo.png';
 
 const PetOwnerQuestions = () => {
   // prettier-ignore
@@ -36,11 +37,12 @@ const PetOwnerQuestions = () => {
 
         <LayoutWrapperMain>
 
-          <div className={css.questionMain}>
-            <div className={css.sectionContent}>
-              <h3>Pet Owner Questions</h3>
-            </div>
-          </div>
+  <div className={css.questionMain}>
+    <div className={css.pageContent}>
+      <div><h3 className={css.helpTitle}>Pet Owner Questions</h3></div>
+      <div className={css.logoWrap}><img src={logo} /></div>
+    </div>
+  </div>
 
     <Tabs className={css.sectionContent}>
 <div className={css.goBack}>

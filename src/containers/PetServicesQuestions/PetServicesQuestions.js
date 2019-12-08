@@ -15,7 +15,7 @@ import {
 } from '../../components';
 
 import arrow from './arrow.png';
-
+import logo from './logo.png';
 import css from './PetServicesQuestions.css';
 
 const PetServicesQuestions = () => {
@@ -37,11 +37,12 @@ const PetServicesQuestions = () => {
 
         <LayoutWrapperMain>
 
-        <div className={css.questionMain}>
-            <div className={css.sectionContent}>
-              <h3>Pet Service Questions</h3>
-            </div>
-          </div>
+  <div className={css.questionMain}>
+    <div className={css.pageContent}>
+      <div><h3 className={css.helpTitle}>Pet Service Questions</h3></div>
+      <div className={css.logoWrap}><img src={logo} /></div>
+    </div>
+  </div>
 
     <Tabs className={css.sectionContent}>
 <div className={css.goBack}>

@@ -15,7 +15,7 @@ import flag from './images/flag.png';
 import controls from './images/controls.png';
 import shield from './images/shield.png';
 import community from './images/community.png';
-import help from './images/help.png';
+import logo from './images/logo.png';
 import sitters from './images/sitters.jpg';
 import homes from './images/homes.jpg';
 import service from './images/service.png';
@@ -40,16 +40,10 @@ const HelpCenter = () => {
         </LayoutWrapperTopbar>
 
 <LayoutWrapperMain className={css.staticPageWrapper}>
-  <div className={css.banner}>
+  <div className={css.questionMain}>
     <div className={css.sectionContent}>
-      <div className={css.bannerTitle}>
-        <h3 className={css.helpTitle}>
-        Your Questions
-        </h3>
-      </div>
-      <div className={css.bannerRight}>
-        <img src={help} className={css.helpImage} />
-      </div>
+      <div><h3 className={css.helpTitle}>Your Questions</h3></div>
+      <div className={css.logoWrap}><img src={logo} /></div>
     </div>
   </div>
   <div className={css.skinWrapper}>
@@ -59,7 +53,7 @@ const HelpCenter = () => {
     <div className={css.showArticles}>
       <div className={css.activeArticle}>
         <div className={css.articleInside}>
-          <h3>How do I find the right Pet Sitter?</h3>
+          <h3>How do I find the right Pet Sitter near me?</h3>
           <p>You can browse Pet Owners who have placed a listing in area or country specific locations. Get started by clicking the link on the home page “Find Homes to Sit” and you will then be redirected to the Trust My Pet Sitter key search page.
           </p>
           <a>Read More<img class={css.arroW} src={arrowRight} /></a>
