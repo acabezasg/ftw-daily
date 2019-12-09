@@ -57,15 +57,23 @@ const PetServicesQuestions = () => {
             <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Pet Service Questions</span></label>
 
               <Tab><div className={css.collapseItem}>
-                <a>1. What are your Service Fees?</a>
+                <a>1. How do I join Trust My Pet Sitter?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>2. How much does it cost to join Trust My Pet Sitter?</a>
+                <a>2. Do you charge a service fee?</a>
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>3. How do I create an account?</a>
+                <a>3. Can Pet Owners contact me directly?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>4. Do you provide Insurance?</a>
+              </div></Tab>
+
+              <Tab><div className={css.collapseItem}>
+                <a>5. How do I create an account?</a>
               </div></Tab>
 
             </TabList>
@@ -75,23 +83,34 @@ const PetServicesQuestions = () => {
       <div className={css.whatwedoRight}>
 
         <TabPanel>
-          <h2>
-            What are your Service Fees?
-          </h2>
-          <p>To help operate the Trust My Pet Sitter platform, including services like Pet Advice Line, Insurance,  customer support and credit card processing, we charge a service fee when a booking is confirmed.</p>
+          <h2>How do I join Trust My Pet Sitter?</h2>
 
-          <p><strong>Pet Services Fee</strong></p>
-
-          <p>Pet Services are not charged a service fee to receive contact from Pet Owners via the Trust My Pet Sitter Platform.</p>
+          <p>If you're interested in becoming a Pet Services Providers here are a few important things to know before you get started:</p>
+          
+          <ul className={css.mainUL}>
+            <li>You must be at least 18 years old and hold a government issued ID like a passport or driving licence.</li>
+            <li>Trust My Pet Sitter provides a platform to introduce you to Pet Owners and Pet Sitters and you are considered an independent contractor.</li>
+          </ul>
 
         </TabPanel>
 
         <TabPanel>
-        <h2>How much does it cost to join Trust My Pet Sitter?</h2>
+          <h2>
+            Do you charge a service fee?
+          </h2>
+          <p>Trust My Pet Sitter does not charge a service fee to Pet Services, which means you keep 100% of what you earn! All we ask is you pay our small monthly subscription fee to keep you membership active and you can use us as many times as you like without incurring any additional fees.</p>
+        </TabPanel>
 
-        <p>Trust My Pet Sitter charges a small membership fee to cover our Insurance, Pet Support Advice Line and support staff.</p>
+        <TabPanel>
+          <h2>Can Pet Owners contact me directly?</h2>
 
-        <p>You can review the latest membership fees at: <NamedLink name="LandingPage">Membership Page</NamedLink></p>
+          <p>Pet Owners can contact you directly through our secure messaging platform. We do not charge to reply to messages, nor charge a service fee on any bookings you make.</p>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>Do you provide Insurance?</h2>
+
+          <p>As a Pet Service Independent contractor you are responsible for providing your own insurance and liability cover.</p>
         </TabPanel>
 
         <TabPanel>

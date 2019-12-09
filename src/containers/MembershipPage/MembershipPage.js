@@ -59,13 +59,17 @@ const MembershipPage = () => {
                /year
              </span>
             </div>
-            <p className={css.offer}>Send messages, post listings...</p>
+            <p className={css.offer}>24/7 Virtual Vet, ID Verification...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} />30-day money back guarantee</li>
-              <li><img src={check} /> ID verification provided by Yoti.com</li>
-              <li><img src={check} /> Send messages to Pet Owners</li>
+              <li><img src={check} /> 24/7 Virtual Vet Advice for your pet </li>
+              <li><img src={check} /> Home covered by Insurance Backed Guarantee</li>
+              <li><img src={check} /> 30-day money back guarantee</li>
+              <li><img src={check} /> ID verification provided by <ExternalLink href="https://www.yoti.com/blog/trust-my-pet-sitter-verifies-accounts-with-yoti">Yoti.com</ExternalLink></li>
               <li><img src={check} /> Create your online Profile</li>
+              <li><img src={check} /> Receive messages from Pet Sitters</li>
+              <li><img src={check} /> Send messages to Pet Sitters/Services</li>
+              <li><img src={check} /> Pay securely within our platform</li>
             </ul>
             <div className={css.getPlan}>
               <NamedLink name="PaymentOwnerPage"><img src={premium} />Go Premium</NamedLink>
@@ -88,10 +92,14 @@ const MembershipPage = () => {
             <p className={css.offer}>Send messages, post listings...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} />30-day money back guarantee</li>
-              <li><img src={check} /> ID verification provided by Yoti.com</li>
-              <li><img src={check} /> Send messages to Pet Owners</li>
+              <li><img src={check} /> 24/7 Virtual Vet Advice wherever you are</li>
+              <li><img src={check} /> 30-day money back guarantee</li>
+              <li><img src={check} /> Create unlimited listings</li>
+              <li><img src={check} /> ID verification provided by <ExternalLink href="https://www.yoti.com/blog/trust-my-pet-sitter-verifies-accounts-with-yoti">Yoti.com</ExternalLink></li>
               <li><img src={check} /> Create your online Profile</li>
+              <li><img src={check} /> Receive messages from Pet Owners</li>
+              <li><img src={check} /> Send messages to Pet Owners</li>
+              <li><img src={check} /> Complete your booking and secure payment</li>
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentSitterPage"><img src={premium}  />Go Premium</NamedLink>
@@ -111,13 +119,17 @@ const MembershipPage = () => {
                /month
              </span>
             </div>
-            <p className={css.offer}>Send messages, post listings...</p>
+            <p className={css.offer}>Create profile, online messaging...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} />30-day money back guarantee</li>
-              <li><img src={check} /> ID verification provided by Yoti.com</li>
-              <li><img src={check} /> Send messages to Pet Owners</li>
-              <li><img src={check} /> Create your online Profile</li>
+              <li><img src={check} /> Create your profile</li>
+              <li><img src={check} /> Show in local pet listing searches</li>
+              <li><img src={check} /> Show in Category search listing</li>
+              <li><img src={check} /> Receive Messages from Pet Parents</li>
+              <li><img src={check} /> Send Messages to Pet Parents</li>
+              <li><img src={check} /> Secure online messaging</li>
+              <li><img src={check} /> No additional fees</li>
+              <li><img src={check} /> 30-day money back guarantee</li>
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentServicePage"><img src={premium}  />Go Premium</NamedLink>

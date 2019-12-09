@@ -195,7 +195,7 @@ const QuestionPage = () => {
 
         <p>Trust My Pet Sitter charges a small membership fee to cover our Insurance, Pet Support Advice Line and support staff.</p>
 
-        <p>You can review the latest membership fees at: <NamedLink name="LandingPage">Membership Page</NamedLink></p>
+        <p>You can review the latest membership fees at: <NamedLink name="MembershipPage">Membership Page</NamedLink></p>
         </TabPanel>
 
         <TabPanel>

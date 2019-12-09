@@ -105,7 +105,7 @@ const PetOwnerQuestions = () => {
               </div></Tab>
 
               <Tab><div className={css.collapseItem}>
-                <a>13. Can I choose my own Pet Sitter?</a>
+                <a>13. The Key Search Page</a>
               </div></Tab>
 
             </TabList>
@@ -197,7 +197,7 @@ const PetOwnerQuestions = () => {
 
         <p>Trust My Pet Sitter charges a small membership fee to cover our Insurance, Pet Support Advice Line and support staff.</p>
 
-        <p>You can review the latest membership fees at: <NamedLink name="LandingPage">Membership Page</NamedLink></p>
+        <p>You can review the latest membership fees at: <NamedLink name="MembershipPage">Membership Page</NamedLink></p>
         </TabPanel>
 
         <TabPanel>
@@ -253,10 +253,30 @@ const PetOwnerQuestions = () => {
 
         <TabPanel>
           <h2>How do I find a Pet Sitter?</h2>
+
+          <p>You must be a premium member of Trust My Pet Sitter in order to contact Pet Sitters directly.  If you haven’t yet signed up, then follow the link on the navbar to “Create Post” and complete the steps.</p>
+          
+          <p>Once you are a verified premium member you can make contact directly with Pet Sitters you find on the platform, as well as receive messages from them in your inbox.</p>
+
+          <p>If you want to search for a specific pet sitter or simply browse who is available on your dates you have several options.</p>
+
+          <p>Get started by clicking the link on the home page “Find a Pet Sitter” and you will then be redirected to the Trust My Pet Sitter key search page.</p>
         </TabPanel>
 
         <TabPanel>
-          <h2>Can I choose my own Pet Sitter?</h2>
+          <h2>The Key Search Page</h2>
+
+          <p>The Key Search Page allows you to select single or multiple options to find Pet Sitters. You can search by:</p>
+
+          <ul className={css.mainUL}>
+            <li><strong>Location</strong> – in the top search bar locate the magnifying glass search icon and free type if you want to find pet sitters who are in a specific location.</li>
+            <li><strong>Types</strong> – this area allows you to search Pet Sitters by Pet type experience.  So, for example if you have a parrot who requires a pet sitter, you would select “Pet Birds”.</li>
+            <li><strong>Price Range</strong> – When Pet Sitters create their listing they are asked to provide their rates. You can choose to search Pet Sitters by rates by using the toggle to select the maximum rate you are prepared to pay. For the widest display leave the search toggle at the default maximum.</li>
+          </ul>
+
+          <h3>Map Search</h3>
+
+          <p>You can also search for Pet Sitters who are in a specific map location. The map is shown on the right hand of the listing displays. For example, click on a price and the listing will pop up as a thumbnail image, if the Pet Sitter is of interest you can click on the image and it will load the main listing for you to browse suitability.</p>
         </TabPanel>
 
 

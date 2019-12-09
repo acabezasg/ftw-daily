@@ -6,7 +6,7 @@
   border-top-width: 1px;
   border-top-color: var(--matterColorNegative);
   position: relative;
-  z-index: 999;
+  z-index: 9;
 
   width: 100%;
   padding: 24px 24px 42px 24px;
