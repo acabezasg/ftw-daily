@@ -30,7 +30,7 @@ export class PaymentSitterPage extends Component {
     const el = document.createElement('script');
     el.onload = () => {
       window.Chargebee.init({
-        site: 'trustmypetsitter-test',
+        site: 'trustmypetsitter',
       });
       window.Chargebee.registerAgain();
       window.Chargebee.getInstance().setCheckoutCallbacks(() => {
@@ -88,7 +88,7 @@ export class PaymentSitterPage extends Component {
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="test-plan"
+                    data-cb-plan-id="Platinum_annual_plan"
                   >
                     <img src={card} />
                     Pay with card
