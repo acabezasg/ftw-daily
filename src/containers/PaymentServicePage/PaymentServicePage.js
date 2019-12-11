@@ -95,8 +95,10 @@ export class PaymentServicePage extends Component {
                   </div>
 
                   <div className={css.getHelp}>
-                    <p>
+                  <p>
                       Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                      <br />
+                      Coupon? Apply at the checkout
                     </p>
                   </div>
                 </div>

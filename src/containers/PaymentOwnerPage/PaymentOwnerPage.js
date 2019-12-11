@@ -83,7 +83,7 @@ export class PaymentOwnerPage extends Component {
                   <p>
                     just <span>$49.99</span> per year
                   </p>
-                  <p>(pay $4 per month)</p>
+                  <p>(only 4 per month)</p>
 
                   <div
                     className={css.Chargebee}
@@ -97,6 +97,8 @@ export class PaymentOwnerPage extends Component {
                   <div className={css.getHelp}>
                     <p>
                       Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                      <br />
+                      Coupon? Apply at the checkout
                     </p>
                   </div>
                 </div>

@@ -83,7 +83,7 @@ export class PaymentSitterPage extends Component {
                   <p>
                     just <span>$49.99</span> per year
                   </p>
-                  <p>(pay $4 per month)</p>
+                  <p>(only $4 per month)</p>
 
                   <div
                     className={css.Chargebee}
@@ -95,8 +95,10 @@ export class PaymentSitterPage extends Component {
                   </div>
 
                   <div className={css.getHelp}>
-                    <p>
+                  <p>
                       Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                      <br />
+                      Coupon? Apply at the checkout
                     </p>
                   </div>
                 </div>
