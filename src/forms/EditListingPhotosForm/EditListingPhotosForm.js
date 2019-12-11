@@ -177,7 +177,7 @@ export class EditListingPhotosFormComponent extends Component {
               onSubmit={e => {
                 e.preventDefault();
                 if (this.state.userFetched) {
-                  if (this.state.redirectPage) {
+                  if (this.state.redirectPage && user_type != 2) {
                     this.setState({ redirect: true });
                   } else {
                     this.submittedImages = images;
