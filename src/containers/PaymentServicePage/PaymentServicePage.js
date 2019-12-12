@@ -12,6 +12,7 @@ import {
 } from '../../components';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import SnowStorm from 'react-snowstorm';
 import { updateUserMembership } from '../../ducks/user.duck';
 import line from './images/sketch.svg';
 import crown from './images/crown.png';
@@ -20,6 +21,8 @@ import vet from './images/vet2.png';
 import listing from './images/checklist.png';
 import checkmark from './images/checkmark.png';
 import css from './PaymentServicePage.css';
+import balloons from './images/balloons.png';
+import close from './images/close.png';
 
 export class PaymentServicePage extends Component {
   constructor(props) {
@@ -72,6 +75,13 @@ export class PaymentServicePage extends Component {
           </LayoutWrapperTopbar>
 
           <LayoutWrapperMain className={css.PaymentWrapper}>
+          <div className={css.freeListingModal}>
+          <SnowStorm className={css.snowStormDiv} />
+            <div>
+              <img className={css.modalImage} src={balloons} />
+              <h3>Claim your free listing before 31st Dec 2019</h3>
+            </div>
+          </div>
             <div className={css.sectionContent}>
               <div className={css.gridContainer}>
                 <div className={css.item1}>
