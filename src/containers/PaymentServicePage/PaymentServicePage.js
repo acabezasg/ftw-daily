@@ -78,6 +78,9 @@ export class PaymentServicePage extends Component {
             <div>
               <img className={css.modalImage} src={balloons} />
               <h3>Claim your free listing before 31st Dec 2019</h3>
+              <div className={css.freeListing}>
+                CLAIM FREE LISTING
+              </div>
             </div>
           </div>
             <div className={css.sectionContent}>

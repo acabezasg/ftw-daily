@@ -50,7 +50,7 @@
   font-size: 28px;
   text-shadow: 1px 1px 1px #fff;
   color: #000 !important;
-  margin-top: 45px;
+  margin: 45px 0;
   font-weight: 700;
   font-weight: 800;
 }
@@ -150,6 +150,25 @@
   line-height: 47px;
   width: 250px;
   margin: 0 auto;
+}
+
+.freeListing {
+  font-size: 18px;
+  background: #ffd04d;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  height: 50px;
+  font-weight: 700;
+  line-height: 44.5px;
+  width: 250px;
+  margin: 0 auto;
+  border-bottom: 3px solid red;
+}
+
+.freeListing:hover {
+  cursor: pointer;
+  background: rgb(236, 196, 0);
 }
 
 .Chargebee:hover {
