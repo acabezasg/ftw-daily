@@ -41,3 +41,7 @@ export { default as PaymentAffiliatePage } from './PaymentAffiliatePage/PaymentA
 export { default as PetOwnerQuestions } from './PetOwnerQuestions/PetOwnerQuestions';
 export { default as PetServicesQuestions } from './PetServicesQuestions/PetServicesQuestions';
 export { default as MembershipPage } from './MembershipPage/MembershipPage';
+export { default as DogSitting } from './DogSitting/DogSitting';
+export { default as CatSitting } from './CatSitting/CatSitting';
+export { default as HouseSittersUk } from './HouseSittersUk/HouseSittersUk';
+export { default as PetSittersUk } from './PetSittersUk/PetSittersUk';

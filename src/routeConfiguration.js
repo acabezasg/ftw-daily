@@ -42,6 +42,10 @@ import {
   PetOwnerQuestions,
   PetServicesQuestions,
   MembershipPage,
+  DogSitting,
+  CatSitting,
+  HouseSittersUk,
+  PetSittersUk,
 
 } from './containers';
 
@@ -70,6 +74,26 @@ const routeConfiguration = () => {
       path: '/yoti',
       name: 'YotiPage',
       component: YotiPage,
+    },
+    {
+      path: '/pet-sitters-uk',
+      name: 'PetSittersUk',
+      component: PetSittersUk,
+    },
+    {
+      path: '/house-sitters-uk',
+      name: 'HouseSittersUk',
+      component: HouseSittersUk,
+    },
+    {
+      path: '/dog-sitting',
+      name: 'DogSitting',
+      component: DogSitting,
+    },
+    {
+      path: '/cat-sitting',
+      name: 'CatSitting',
+      component: CatSitting,
     },
     {
       path: '/pet-sitter-questions',
