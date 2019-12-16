@@ -16,6 +16,8 @@ import css from './EditListingPhotosForm.css';
 
 const ACCEPT_IMAGES = 'image/*';
 
+let claimed = false;
+
 export class EditListingPhotosFormComponent extends Component {
   constructor(props) {
     super(props);
@@ -59,6 +61,10 @@ export class EditListingPhotosFormComponent extends Component {
         redirectPage = 'PaymentServicePage';
         break;
     }
+
+    claimed = localStorage.getItem('isClaimed');
+
+    localStorage.removeItem('isClaimed');
 
     this.props
       .dispatch(getUser())
@@ -179,9 +185,13 @@ export class EditListingPhotosFormComponent extends Component {
                 if (this.state.userFetched) {
                   if (this.state.redirectPage && user_type != 2) {
                     this.setState({ redirect: true });
-                  } else {
-                    this.submittedImages = images;
-                    handleSubmit(e);
+                  } else if (user_type == 2) {
+                    if (claimed) {
+                      this.submittedImages = images;
+                      handleSubmit(e);
+                    } else {
+                      this.setState({ redirect: true });
+                    }
                   }
                 }
               }}

@@ -12,6 +12,7 @@ import {
 } from '../../components';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { updateUserMembership } from '../../ducks/user.duck';
 import line from './images/sketch.svg';
 import crown from './images/crown.png';
@@ -26,39 +27,40 @@ import close from './images/close.png';
 export class PaymentServicePage extends Component {
   constructor(props) {
     super(props);
-    this.state = { didPay: false };
+    this.state = { didClaim: false };
   }
   componentDidMount() {
-    const el = document.createElement('script');
-    el.onload = () => {
-      window.Chargebee.init({
-        site: 'trustmypetsitter',
-      });
-      window.Chargebee.registerAgain();
-      window.Chargebee.getInstance().setCheckoutCallbacks(() => {
-        // you can define a custom callbacks based on cart object
-        return {
-          step: value => {
-            if (value == 'thankyou_screen') {
-              this.props.dispatch(updateUserMembership({ petServiceMembership: true })).then(() => {
-                document.getElementById('cb-container') &&
-                  document.getElementById('cb-container').remove();
-                document.body.style.overflow = 'auto';
-                this.setState({ didPay: true });
-              });
-            }
-          },
-        };
-      });
-    };
-    el.setAttribute('src', 'https://js.chargebee.com/v2/chargebee.js');
-    document.body.appendChild(el);
+    // const el = document.createElement('script');
+    // el.onload = () => {
+    //   window.Chargebee.init({
+    //     site: 'trustmypetsitter',
+    //   });
+    //   window.Chargebee.registerAgain();
+    //   window.Chargebee.getInstance().setCheckoutCallbacks(() => {
+    //     // you can define a custom callbacks based on cart object
+    //     return {
+    //       step: value => {
+    //         if (value == 'thankyou_screen') {
+    //           this.props.dispatch(updateUserMembership({ petServiceMembership: true })).then(() => {
+    //             document.getElementById('cb-container') &&
+    //               document.getElementById('cb-container').remove();
+    //             document.body.style.overflow = 'auto';
+    //             this.setState({ didPay: true });
+    //           });
+    //         }
+    //       },
+    //     };
+    //   });
+    // };
+    // el.setAttribute('src', 'https://js.chargebee.com/v2/chargebee.js');
+    // document.body.appendChild(el);
   }
 
   render() {
-    return this.state.didPay ? (
-      <NamedRedirect name="PaymentAffiliatePage"></NamedRedirect>
+    return this.state.didClaim ? (
+      <Redirect to={localStorage.getItem('redirectPath')}></Redirect>
     ) : (
+      //<NamedRedirect name="PaymentAffiliatePage"></NamedRedirect>
       <StaticPage
         title="Buy Membership and Go Premium | Trust My Pet Sitter"
         schema={{
@@ -74,15 +76,21 @@ export class PaymentServicePage extends Component {
           </LayoutWrapperTopbar>
 
           <LayoutWrapperMain className={css.PaymentWrapper}>
-          <div className={css.freeListingModal}>
-            <div>
-              <img className={css.modalImage} src={balloons} />
-              <h3>Claim your free listing before 31st Dec 2019</h3>
-              <div className={css.freeListing}>
-                Claim Free Listing
+            <div className={css.freeListingModal}>
+              <div>
+                <img className={css.modalImage} src={balloons} />
+                <h3>Claim your free listing before 31st Dec 2019</h3>
+                <div
+                  onClick={() => {
+                    localStorage.setItem('isClaimed', 'Yes');
+                    this.setState({ didClaim: true });
+                  }}
+                  className={css.freeListing}
+                >
+                  Claim Free Listing
+                </div>
               </div>
             </div>
-          </div>
             <div className={css.sectionContent}>
               <div className={css.gridContainer}>
                 <div className={css.item1}>
@@ -106,7 +114,7 @@ export class PaymentServicePage extends Component {
                   </div>
 
                   <div className={css.getHelp}>
-                  <p>
+                    <p>
                       Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
                       <br />
                       Coupon? Apply at the checkout
