@@ -16,6 +16,8 @@ import css from './EditListingPhotosForm.css';
 
 const ACCEPT_IMAGES = 'image/*';
 
+let claimed = false;
+
 export class EditListingPhotosFormComponent extends Component {
   constructor(props) {
     super(props);
@@ -59,6 +61,10 @@ export class EditListingPhotosFormComponent extends Component {
         redirectPage = 'PaymentServicePage';
         break;
     }
+
+    claimed = localStorage.getItem('isClaimed');
+
+    localStorage.removeItem('isClaimed');
 
     this.props
       .dispatch(getUser())
@@ -168,9 +174,17 @@ export class EditListingPhotosFormComponent extends Component {
 
           const classes = classNames(css.root, className);
           const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
-          const addImagesTip = intl.formatMessage({
-            id: 'EditListingPhotosForm.addImagesTip.' + user_name,
-          });
+          let addImagesTip = null;
+          if (this.state.redirectPage && !claimed) {
+            addImagesTip = intl.formatMessage({
+              id: 'EditListingPhotosForm.payMembership',
+            });
+          } else {
+            addImagesTip = intl.formatMessage({
+              id: 'EditListingPhotosForm.addImagesTip.' + user_name,
+            });
+          }
+
           return (
             <Form
               className={classes}
@@ -179,9 +193,13 @@ export class EditListingPhotosFormComponent extends Component {
                 if (this.state.userFetched) {
                   if (this.state.redirectPage && user_type != 2) {
                     this.setState({ redirect: true });
-                  } else {
-                    this.submittedImages = images;
-                    handleSubmit(e);
+                  } else if (user_type == 2) {
+                    if (claimed) {
+                      this.submittedImages = images;
+                      handleSubmit(e);
+                    } else {
+                      this.setState({ redirect: true });
+                    }
                   }
                 }
               }}
@@ -191,69 +209,73 @@ export class EditListingPhotosFormComponent extends Component {
                   <FormattedMessage id="EditListingPhotosForm.updateFailed" />
                 </p>
               ) : null}
-              <AddImages
-                className={css.imagesField}
-                images={images}
-                thumbnailClassName={css.thumbnail}
-                savedImageAltText={intl.formatMessage({
-                  id: 'EditListingPhotosForm.savedImageAltText',
-                })}
-                onRemoveImage={onRemoveImage}
-              >
-                <Field
-                  id="addImage"
-                  name="addImage"
-                  accept={ACCEPT_IMAGES}
-                  form={null}
-                  label={chooseImageText}
-                  type="file"
-                  disabled={imageUploadRequested}
-                >
-                  {fieldprops => {
-                    const { accept, input, label, type, disabled } = fieldprops;
-                    const { name } = input;
-                    const onChange = e => {
-                      const file = e.target.files[0];
-                      form.change(`addImage`, file);
-                      form.blur(`addImage`);
-                      onImageUploadHandler(file);
-                    };
-                    const inputProps = { accept, id: name, name, onChange, type };
-                    return (
-                      <div className={css.addImageWrapper}>
-                        <div className={css.aspectRatioWrapper}>
-                          {disabled ? null : (
-                            <input {...inputProps} className={css.addImageInput} />
-                          )}
-                          <label htmlFor={name} className={css.addImage}>
-                            {label}
-                          </label>
-                        </div>
-                      </div>
-                    );
-                  }}
-                </Field>
 
-                <Field
-                  component={props => {
-                    const { input, type, meta } = props;
-                    return (
-                      <div className={css.imageRequiredWrapper}>
-                        <input {...input} type={type} />
-                        <ValidationError fieldMeta={meta} />
-                      </div>
-                    );
-                  }}
-                  name="images"
-                  type="hidden"
-                  validate={composeValidators(nonEmptyArray(imageRequiredMessage))}
-                />
-              </AddImages>
+              {!this.state.redirectPage || claimed ? (
+                <AddImages
+                  className={css.imagesField}
+                  images={images}
+                  thumbnailClassName={css.thumbnail}
+                  savedImageAltText={intl.formatMessage({
+                    id: 'EditListingPhotosForm.savedImageAltText',
+                  })}
+                  onRemoveImage={onRemoveImage}
+                >
+                  <Field
+                    id="addImage"
+                    name="addImage"
+                    accept={ACCEPT_IMAGES}
+                    form={null}
+                    label={chooseImageText}
+                    type="file"
+                    disabled={imageUploadRequested}
+                  >
+                    {fieldprops => {
+                      const { accept, input, label, type, disabled } = fieldprops;
+                      const { name } = input;
+                      const onChange = e => {
+                        const file = e.target.files[0];
+                        form.change(`addImage`, file);
+                        form.blur(`addImage`);
+                        onImageUploadHandler(file);
+                      };
+                      const inputProps = { accept, id: name, name, onChange, type };
+                      return (
+                        <div className={css.addImageWrapper}>
+                          <div className={css.aspectRatioWrapper}>
+                            {disabled ? null : (
+                              <input {...inputProps} className={css.addImageInput} />
+                            )}
+                            <label htmlFor={name} className={css.addImage}>
+                              {label}
+                            </label>
+                          </div>
+                        </div>
+                      );
+                    }}
+                  </Field>
+
+                  <Field
+                    component={props => {
+                      const { input, type, meta } = props;
+                      return (
+                        <div className={css.imageRequiredWrapper}>
+                          <input {...input} type={type} />
+                          <ValidationError fieldMeta={meta} />
+                        </div>
+                      );
+                    }}
+                    name="images"
+                    type="hidden"
+                    validate={composeValidators(nonEmptyArray(imageRequiredMessage))}
+                  />
+                </AddImages>
+              ) : null}
               {uploadImageFailed}
 
               <p className={css.tip}>
                 <FormattedMessage id={addImagesTip} />
               </p>
+
               {publishListingFailed}
               {showListingFailed}
 
@@ -264,7 +286,7 @@ export class EditListingPhotosFormComponent extends Component {
                 disabled={submitDisabled}
                 ready={submitReady}
               >
-                {saveActionMsg}
+                {this.state.redirectPage && !claimed ? 'Buy Membership' : saveActionMsg}
               </Button>
             </Form>
           );
