@@ -381,6 +381,8 @@
   "EditListingWizard.saveEditPricing": "Save Price",
   "EditListingWizard.saveEditPhotos": "Save Photos",
   "EditListingWizard.saveEditPolicies": "Save Verification",
+  "EditListingWizard.EditFeaturesSitter": "Save Useful Informations",
+  "EditListingWizard.SaveLocationOwner": "Save Location",
 
   "EditListingWizard.saveNewDescription": "Next: Pet Types",
   "EditListingWizard.saveNewFeatures": "Next: Home",
@@ -388,6 +390,8 @@
   "EditListingWizard.saveNewLocation": "Next: Availability",
   "EditListingWizard.saveNewLocationService": "Next: Your Rates",
   "EditListingWizard.saveNewAvailability": "Next: Price",
+  "EditListingWizard.saveNewFeaturesSitter": "Next: Useful Informations",
+  "EditListingWizard.EditLocationOwner": "Next: Required Dates",
 
   "EditListingWizard.saveNewPricing": "Next: Photo",
   "EditListingWizard.saveNewPhotos": "Publish Listing",

@@ -180,16 +180,21 @@ const EditListingWizardTab = props => {
     }
     case FEATURES: {
       if (isNewListingFlow) {
-        if (user_type !== 2) {
+        if (user_type == 1) {
+          submitButtonTranslationKey = 'EditListingWizard.saveNewFeaturesSitter';
+        }
+        else if (user_type == 0) {
           submitButtonTranslationKey = 'EditListingWizard.saveNewFeatures';
         } else {
           submitButtonTranslationKey = 'EditListingWizard.saveNewHome';
         }
       } else {
-        if (user_type !== 2) {
-          submitButtonTranslationKey = 'EditListingWizard.saveEditFeatures';
+        if (user_type == 1) {
+          submitButtonTranslationKey = 'EditListingWizard.EditFeaturesSitter';
+        } else if (user_type == 0) { 
+          submitButtonTranslationKey = 'EditListingWizard.saveEditHome';
         } else {
-          submitButtonTranslationKey = 'EditListingWizard.saveEditFeatures';
+          submitButtonTranslationKey = 'EditListingWizard.saveEditLocation';
         }
       }
       return (
@@ -235,6 +240,11 @@ const EditListingWizardTab = props => {
         submitButtonTranslationKey = isNewListingFlow
           ? 'EditListingWizard.saveNewLocation'
           : 'EditListingWizard.saveEditLocation';
+      } 
+      else if (user_type == 0) {
+        submitButtonTranslationKey = isNewListingFlow
+          ? 'EditListingWizard.EditLocationOwner'
+          : 'EditListingWizard.SaveLocationOwner';
       } else {
         submitButtonTranslationKey = isNewListingFlow
           ? 'EditListingWizard.saveNewLocationService'

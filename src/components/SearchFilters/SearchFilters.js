@@ -243,7 +243,7 @@ const SearchFiltersComponent = props => {
               { key: 'surgeon', label: 'Veterinary Surgeons' },
               { key: 'groomer', label: 'Pet Groomer' },
               { key: 'store', label: 'Pet Store' },
-              { key: 'sitter', label: 'Drop in Sitter' },
+              { key: 'sitter', label: 'Doggy Daycare' },
               { key: 'food', label: 'Food' },
             ]}
             initialValue={initialService}
