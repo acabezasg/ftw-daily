@@ -46,6 +46,7 @@ import {
   CatSitting,
   HouseSittersUk,
   PetSittersUk,
+  AboutUsPage,
 
 } from './containers';
 
@@ -171,7 +172,12 @@ const routeConfiguration = () => {
       component: PetOwnersPage,
     },
     {
-      path: '/presskit',
+      path: '/aboutus',
+      name: 'AboutUsPage',
+      component: AboutUsPage,
+    },
+    {
+      path: '/press',
       name: 'PresskitPage',
       component: PresskitPage,
     },

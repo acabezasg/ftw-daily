@@ -12,6 +12,7 @@ import {
 } from '../../components';
 
 import css from './DogSitting.css';
+import logo from './paw.png';
 
 const DogSitting = () => {
   // prettier-ignore
@@ -31,6 +32,14 @@ const DogSitting = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain>
+
+  <div className={css.questionMain}>
+    <div className={css.pageContent}>
+      <div><h3 className={css.helpTitle}>Dog Sitting</h3></div>
+      <div className={css.logoWrap}><img src={logo} /></div>
+    </div>
+  </div>
+
     <div className={css.sectionContent}>
 
     <h1 className={css.pawTitle}>Dog Sitting</h1>

@@ -21,6 +21,89 @@
   }
 }
 
+.questionMain {
+  height: 200px;
+  background: #1da1f2;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.questionMain > .sectionContent > h3 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 60px;
+  color: #fff !important;
+  font-size: 35px;
+}
+
+.pageContent {
+  margin: 0 auto;
+  padding: 0 36px 0 36px;
+  max-width: 1024px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.logoWrap {
+  position: relative;
+  height: 100%;
+}
+
+.logoWrap img {
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.helpTitle {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 60px;
+  color: #fff !important;
+  font-size: 35px;
+  text-decoration-color: #71c9f8;
+}
+
+.pageContent {
+  display: flex;
+}
+
+.pageContent div {
+  width: 50%;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .helpTitle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: inherit !important;
+    line-height: 35px;
+    text-decoration: none !important;
+  }
+  .logoWrap img {
+    opacity: 0.3;
+  }
+  .logoWrap {
+    width: 100%;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .pageContent div {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
 .pawTitle {
   text-align: center;
   margin-top: 0;

@@ -12,7 +12,7 @@ import {
   
 } from '../../components';
 
-import css from './PresskitPage.css';
+import css from './AboutUsPage.css';
 import angela from './team/angela.jpg';
 import sinead from './team/sinead.jpg';
 import shamus from './team/shamus.jpg';
@@ -27,16 +27,16 @@ import arrow from './right-arrow.png';
 import release from './release.pdf';
 import petowner from './petowner.png';
 
-const PresskitPage = () => {
+const AboutUsPage = () => {
   // prettier-ignore
   return (
     <StaticPage
       title="Presskit | Trust My Pet Sitter"
       schema={{
         '@context': 'http://schema.org',
-        '@type': 'PresskitPage',
-        description: 'Presskit',
-        name: 'Presskit',
+        '@type': 'AboutUsPage',
+        description: 'AboutUsPage',
+        name: 'AboutUsPage',
       }}
     >
       <LayoutSingleColumn>
@@ -151,16 +151,9 @@ const PresskitPage = () => {
 
         <div className={css.linkItem}>
         <div className={css.logo}>
-          <img src={download} />
-        </div>
-          <ExternalLink href="https://drive.google.com/drive/folders/1K40b_P-YN6SdUFVSuG0IIcvxzRid7WsW?usp=sharing">Download our Logo</ExternalLink>
-        </div>
-
-        <div className={css.linkItem}>
-        <div className={css.logo}>
           <img src={phone} />
         </div>
-          <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter&hl=sr">App Preview</ExternalLink>
+          <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter">Download the App</ExternalLink>
         </div>
 
         <div className={css.linkItem}>
@@ -168,13 +161,6 @@ const PresskitPage = () => {
           <img src={follow} />
         </div>
           <ExternalLink href="https://www.instagram.com/trustmypetsitter/">Follow Us</ExternalLink>
-        </div>
-
-        <div className={css.linkItem}>
-        <div className={css.logo}>
-          <img src={notes} />
-        </div>
-          <ExternalLink href="https://drive.google.com/drive/folders/18zrQ-0DKNR52wzLiHGcGgVBwI2pfv9Ju?usp=sharing">Launch Posts</ExternalLink>
         </div>
 
       </div>
@@ -217,6 +203,6 @@ const PresskitPage = () => {
   );
 };
 
-export default PresskitPage;
+export default AboutUsPage;
 
 

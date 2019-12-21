@@ -45,3 +45,4 @@ export { default as DogSitting } from './DogSitting/DogSitting';
 export { default as CatSitting } from './CatSitting/CatSitting';
 export { default as HouseSittersUk } from './HouseSittersUk/HouseSittersUk';
 export { default as PetSittersUk } from './PetSittersUk/PetSittersUk';
+export { default as AboutUsPage } from './AboutUsPage/AboutUsPage';
