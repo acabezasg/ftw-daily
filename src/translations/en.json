@@ -337,9 +337,9 @@
 
   "EditListingPricingForm.priceInputPlaceholder": "Choose your price…",
   "EditListingPricingForm.pricePerDay": "Price per day in USD",
-  "EditListingPricingForm.pricePerNight": "Price per night in USD",
+  "EditListingPricingForm.pricePerNight": "Price per night",
   "EditListingPricingForm.pricePerUnit": "Price per unit in USD",
-  "EditListingPricingForm.pricePerHour": "Price in USD",
+  "EditListingPricingForm.pricePerHour": "Price",
   "EditListingPricingForm.pricePerWeek": "Price per week in USD",
   "EditListingPricingForm.priceRequired": "You need to add a valid price.",
   "EditListingPricingForm.priceTooLow": "Price should be at least {minPrice}.",
@@ -381,7 +381,7 @@
   "EditListingWizard.saveEditPricing": "Save Price",
   "EditListingWizard.saveEditPhotos": "Save Photos",
   "EditListingWizard.saveEditPolicies": "Save Verification",
-  "EditListingWizard.EditFeaturesSitter": "Save Useful Informations",
+  "EditListingWizard.EditFeaturesSitter": "Save Useful Information",
   "EditListingWizard.SaveLocationOwner": "Save Location",
 
   "EditListingWizard.saveNewDescription": "Next: Pet Types",
@@ -390,7 +390,7 @@
   "EditListingWizard.saveNewLocation": "Next: Availability",
   "EditListingWizard.saveNewLocationService": "Next: Your Rates",
   "EditListingWizard.saveNewAvailability": "Next: Price",
-  "EditListingWizard.saveNewFeaturesSitter": "Next: Useful Informations",
+  "EditListingWizard.saveNewFeaturesSitter": "Next: Useful Information",
   "EditListingWizard.EditLocationOwner": "Next: Required Dates",
 
   "EditListingWizard.saveNewPricing": "Next: Photo",
@@ -486,7 +486,7 @@
   "Footer.termsOfUse": "Terms of Service",
   "Footer.toHowItWorksPage": "How It Works",
   "Footer.toContactPage": "Contact",
-  "Footer.toPresskitPage": "Presskit",
+  "Footer.toPresskitPage": "Press",
   "Footer.toFAQPage": "FAQ",
   "Footer.toWhatWeDoPage": "What We Do",
   "Footer.toNewListingPage": "Create Listing",

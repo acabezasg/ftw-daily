@@ -31,7 +31,7 @@ const AboutUsPage = () => {
   // prettier-ignore
   return (
     <StaticPage
-      title="Presskit | Trust My Pet Sitter"
+      title="About Us | Trust My Pet Sitter"
       schema={{
         '@context': 'http://schema.org',
         '@type': 'AboutUsPage',
@@ -120,7 +120,7 @@ const AboutUsPage = () => {
         Trust My Pet Sitter have teamed up with PawSquad which lets you video call or text chat with a UK-registered vet absolutely free at any time of day or night, 365 days a year. They have also teamed with YOTI to verify identity across 130 countries within minutes, helping to keep the Trust My Pet Sitter community safe and identifiable. 
       </p>
       <p className={css.nobttm}>
-        Trust My Pet Sitter is a Scottish based company.  For press inquiries, please contact <a href="mailto:angela@trustmypetsitter.com">Angela Fagan</a>.
+        Trust My Pet Sitter is a Scottish based company.
       </p>
 
       <div className={css.strike}>

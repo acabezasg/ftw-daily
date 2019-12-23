@@ -160,7 +160,7 @@ const PresskitPage = () => {
         <div className={css.logo}>
           <img src={phone} />
         </div>
-          <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter&hl=sr">App Preview</ExternalLink>
+          <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter&gl=GB">App Preview</ExternalLink>
         </div>
 
         <div className={css.linkItem}>
