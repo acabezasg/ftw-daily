@@ -913,7 +913,7 @@
   "SearchFiltersMobile.categoryLabel": "Category",
   "SearchFiltersMobile.heading": "Filter listings",
   "SearchFiltersMobile.resetAll": "Reset all",
-  "SearchFiltersMobile.showListings": "Show {count, number} {count, plural, one {sauna} other {saunas}}",
+  "SearchFiltersMobile.showListings": "Show {count, number} {count, plural, one {sauna} other {listings}}",
   "SearchFiltersPanel.apply": "Apply",
   "SearchFiltersPanel.cancel": "Cancel",
   "SearchFiltersPanel.resetAll": "Reset all",
