@@ -194,7 +194,7 @@ const EditListingWizardTab = props => {
         } else if (user_type == 0) { 
           submitButtonTranslationKey = 'EditListingWizard.saveEditHome';
         } else {
-          submitButtonTranslationKey = 'EditListingWizard.saveEditLocation';
+          submitButtonTranslationKey = 'EditListingWizard.saveEditPetTypes';
         }
       }
       return (
