@@ -76,8 +76,8 @@ export class PaymentServicePage extends Component {
           </LayoutWrapperTopbar>
 
           <LayoutWrapperMain className={css.PaymentWrapper}>
-            <div className={css.freeListingModal}>
-              <div>
+           {/* <div className={css.freeListingModal}>
+                <div>
                 <img className={css.modalImage} src={balloons} />
                 <h3>Claim your free listing before 31st Dec 2019</h3>
                 <div
@@ -90,7 +90,7 @@ export class PaymentServicePage extends Component {
                   Claim Free Listing
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className={css.sectionContent}>
               <div className={css.gridContainer}>
                 <div className={css.item1}>
