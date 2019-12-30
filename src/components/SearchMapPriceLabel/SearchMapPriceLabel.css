@@ -116,9 +116,9 @@
 }
 
 .location {
-  background-image: url('./location.png');
-  width: 30px;
-  height: 30px;
+  background-image: url('./service.png');
+  width: 35px;
+  height: 35px;
   display: block;
   background-size: cover;
   background-repeat: no-repeat;
@@ -131,5 +131,5 @@
 
 .priceLabel:hover .location,
 .priceLabelActive .location {
-  background-image: url('./locationwhite.png');
+  background-image: url('./service.png');
 }
