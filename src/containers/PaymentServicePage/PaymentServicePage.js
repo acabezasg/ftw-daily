@@ -84,7 +84,7 @@ export class PaymentServicePage extends Component {
                     <img className={css.lineImg} src={line} />
                   </div>
                   <p>
-                    just <span>$10</span> per month
+                    just <span>$30</span> per month
                   </p>
                   <p>(cancel anytime)</p>
 
