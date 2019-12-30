@@ -16,8 +16,6 @@ import css from './EditListingPhotosForm.css';
 
 const ACCEPT_IMAGES = 'image/*';
 
-let claimed = false;
-
 export class EditListingPhotosFormComponent extends Component {
   constructor(props) {
     super(props);
@@ -61,10 +59,6 @@ export class EditListingPhotosFormComponent extends Component {
         redirectPage = 'PaymentServicePage';
         break;
     }
-
-    claimed = localStorage.getItem('isClaimed');
-
-    localStorage.removeItem('isClaimed');
 
     this.props
       .dispatch(getUser())
@@ -175,7 +169,7 @@ export class EditListingPhotosFormComponent extends Component {
           const classes = classNames(css.root, className);
           const user_name = user_type === 0 ? 'owner' : user_type === 1 ? 'sitter' : 'service';
           let addImagesTip = null;
-          if (this.state.redirectPage && !claimed) {
+          if (this.state.redirectPage) {
             addImagesTip = intl.formatMessage({
               id: 'EditListingPhotosForm.payMembership',
             });
@@ -191,15 +185,11 @@ export class EditListingPhotosFormComponent extends Component {
               onSubmit={e => {
                 e.preventDefault();
                 if (this.state.userFetched) {
-                  if (this.state.redirectPage && user_type != 2) {
+                  if (this.state.redirectPage) {
                     this.setState({ redirect: true });
-                  } else if (user_type == 2) {
-                    if (claimed) {
-                      this.submittedImages = images;
-                      handleSubmit(e);
-                    } else {
-                      this.setState({ redirect: true });
-                    }
+                  } else {
+                    this.submittedImages = images;
+                    handleSubmit(e);
                   }
                 }
               }}
@@ -210,7 +200,7 @@ export class EditListingPhotosFormComponent extends Component {
                 </p>
               ) : null}
 
-              {!this.state.redirectPage || claimed ? (
+              {!this.state.redirectPage ? (
                 <AddImages
                   className={css.imagesField}
                   images={images}
@@ -286,7 +276,7 @@ export class EditListingPhotosFormComponent extends Component {
                 disabled={submitDisabled}
                 ready={submitReady}
               >
-                {this.state.redirectPage && !claimed ? 'Buy Membership' : saveActionMsg}
+                {this.state.redirectPage ? 'Buy Membership' : saveActionMsg}
               </Button>
             </Form>
           );

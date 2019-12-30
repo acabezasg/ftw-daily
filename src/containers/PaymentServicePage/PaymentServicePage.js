@@ -27,40 +27,39 @@ import close from './images/close.png';
 export class PaymentServicePage extends Component {
   constructor(props) {
     super(props);
-    this.state = { didClaim: false };
+    this.state = { didPay: false };
   }
   componentDidMount() {
-    // const el = document.createElement('script');
-    // el.onload = () => {
-    //   window.Chargebee.init({
-    //     site: 'trustmypetsitter',
-    //   });
-    //   window.Chargebee.registerAgain();
-    //   window.Chargebee.getInstance().setCheckoutCallbacks(() => {
-    //     // you can define a custom callbacks based on cart object
-    //     return {
-    //       step: value => {
-    //         if (value == 'thankyou_screen') {
-    //           this.props.dispatch(updateUserMembership({ petServiceMembership: true })).then(() => {
-    //             document.getElementById('cb-container') &&
-    //               document.getElementById('cb-container').remove();
-    //             document.body.style.overflow = 'auto';
-    //             this.setState({ didPay: true });
-    //           });
-    //         }
-    //       },
-    //     };
-    //   });
-    // };
-    // el.setAttribute('src', 'https://js.chargebee.com/v2/chargebee.js');
-    // document.body.appendChild(el);
+    const el = document.createElement('script');
+    el.onload = () => {
+      window.Chargebee.init({
+        site: 'trustmypetsitter',
+      });
+      window.Chargebee.registerAgain();
+      window.Chargebee.getInstance().setCheckoutCallbacks(() => {
+        // you can define a custom callbacks based on cart object
+        return {
+          step: value => {
+            if (value == 'thankyou_screen') {
+              this.props.dispatch(updateUserMembership({ petServiceMembership: true })).then(() => {
+                document.getElementById('cb-container') &&
+                  document.getElementById('cb-container').remove();
+                document.body.style.overflow = 'auto';
+                this.setState({ didPay: true });
+              });
+            }
+          },
+        };
+      });
+    };
+    el.setAttribute('src', 'https://js.chargebee.com/v2/chargebee.js');
+    document.body.appendChild(el);
   }
 
   render() {
-    return this.state.didClaim ? (
-      <Redirect to={localStorage.getItem('redirectPath')}></Redirect>
+    return this.state.didPay ? (
+      <NamedRedirect name="PaymentAffiliatePage"></NamedRedirect>
     ) : (
-      //<NamedRedirect name="PaymentAffiliatePage"></NamedRedirect>
       <StaticPage
         title="Buy Membership and Go Premium | Trust My Pet Sitter"
         schema={{
@@ -76,21 +75,6 @@ export class PaymentServicePage extends Component {
           </LayoutWrapperTopbar>
 
           <LayoutWrapperMain className={css.PaymentWrapper}>
-           {/* <div className={css.freeListingModal}>
-                <div>
-                <img className={css.modalImage} src={balloons} />
-                <h3>Claim your free listing before 31st Dec 2019</h3>
-                <div
-                  onClick={() => {
-                    localStorage.setItem('isClaimed', 'Yes');
-                    this.setState({ didClaim: true });
-                  }}
-                  className={css.freeListing}
-                >
-                  Claim Free Listing
-                </div>
-              </div>
-            </div> */}
             <div className={css.sectionContent}>
               <div className={css.gridContainer}>
                 <div className={css.item1}>
