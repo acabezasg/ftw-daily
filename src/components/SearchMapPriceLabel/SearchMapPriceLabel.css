@@ -115,7 +115,21 @@
   background-repeat: no-repeat;
 }
 
+.location {
+  background-image: url('./location.png');
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .priceLabel:hover .paw,
 .priceLabelActive .paw {
   background-image: url('./pawwhite.png');
+}
+
+.priceLabel:hover .location,
+.priceLabelActive .location {
+  background-image: url('./locationwhite.png');
 }

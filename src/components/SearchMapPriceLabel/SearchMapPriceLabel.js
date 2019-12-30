@@ -39,6 +39,8 @@ class SearchMapPriceLabel extends Component {
 
     if (currentListing.attributes.publicData.user_type == 0) {
       altformattedPrice = <div className={css.paw} />;
+    } else if (currentListing.attributes.publicData.user_type == 2) {
+      altformattedPrice = <div className={css.location} />;
     }
 
     return (
