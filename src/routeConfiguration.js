@@ -157,14 +157,14 @@ const routeConfiguration = () => {
       component: PetServicesPage,
     },
     {
-      path: '/pet-owner-questions',
-      name: 'PetOwnerQuestions',
-      component: PetOwnerQuestions
-    },
-    {
       path: '/pet-service-questions',
       name: 'PetServicesQuestions',
       component: PetServicesQuestions
+    },
+    {
+      path: '/pet-owner-questions/:id',
+      name: 'PetOwnerQuestions',
+      component: PetOwnerQuestions
     },
     {
       path: '/pet-owner-faq',
