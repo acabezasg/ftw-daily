@@ -488,3 +488,21 @@ input[type='checkbox'] {
     text-align: center;
   }
 }
+
+.link {
+  color:black;
+}
+
+
+.link:hover{
+  text-decoration: none;
+  color:inherit;
+}
+
+.activeLink{
+  color: #41a6df;
+}
+
+.activeLink:hover{
+  color: #41a6df;
+}
