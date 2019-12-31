@@ -97,7 +97,7 @@ const routeConfiguration = () => {
       component: CatSitting,
     },
     {
-      path: '/pet-sitter-questions',
+      path: '/pet-sitter-questions/:id',
       name: 'QuestionPage',
       component: QuestionPage,
     },
@@ -157,7 +157,7 @@ const routeConfiguration = () => {
       component: PetServicesPage,
     },
     {
-      path: '/pet-service-questions',
+      path: '/pet-service-questions/:id',
       name: 'PetServicesQuestions',
       component: PetServicesQuestions
     },
