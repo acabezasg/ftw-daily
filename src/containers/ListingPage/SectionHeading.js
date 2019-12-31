@@ -40,7 +40,7 @@ const SectionHeading = props => {
   console.log('price', formattedPrice, unitTranslationKey);
   return (
     <div className={css.sectionHeading}>
-      {user_type != 0 ? (
+      {user_type != 0 && user_type != 2 ? (
         <div className={css.desktopPriceContainer}>
           <div className={css.desktopPriceValue} title={priceTitle}>
             {formattedPrice}
