@@ -137,8 +137,8 @@ const Footer = props => {
                   </a>
                 </li>
                 <li className={css.listItem}>
-                  <NamedLink name="PresskitPage" className={css.link}>
-                    <FormattedMessage id="Footer.toPresskitPage" />
+                  <NamedLink name="AboutUsPage" className={css.link}>
+                    About
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
