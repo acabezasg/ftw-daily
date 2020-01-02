@@ -53,7 +53,7 @@ const MembershipPage = () => {
               £
              </span>
              <span className={css.bigNum}>
-               49
+               49<span class={css.decimal}>.99</span>
              </span>
              <span className={css.month}>
                /year
@@ -62,14 +62,14 @@ const MembershipPage = () => {
             <p className={css.offer}>24/7 Virtual Vet, ID Verification...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} /> 24/7 Virtual Vet Advice for your pet </li>
-              <li><img src={check} /> Home covered by Insurance Backed Guarantee</li>
-              <li><img src={check} /> 30-day money back guarantee</li>
-              <li><img src={check} /> ID verification provided by <ExternalLink href="https://www.yoti.com/blog/trust-my-pet-sitter-verifies-accounts-with-yoti">Yoti.com</ExternalLink></li>
-              <li><img src={check} /> Create your online Profile</li>
-              <li><img src={check} /> Receive messages from Pet Sitters</li>
-              <li><img src={check} /> Send messages to Pet Sitters/Services</li>
-              <li><img src={check} /> Pay securely within our platform</li>
+              <li><img src={check} /> Find the perfect Pet Sitter</li>
+              <li><img src={check} /> Contact Pet Services</li>
+              <li><img src={check} /> Home Covered by Insurance</li>
+              <li><img src={check} /> ID Verification </li>
+              <li><img src={check} /> Create Unlimited Listings</li>
+              <li><img src={check} /> Send secure messages</li>
+              <li><img src={check} /> Receive messages </li>
+              <li><img src={check} /> Pay Securely</li>
             </ul>
             <div className={css.getPlan}>
               <NamedLink name="PaymentOwnerPage"><img src={premium} />Go Premium</NamedLink>
@@ -83,7 +83,7 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               49
+               49<span class={css.decimal}>.99</span>
              </span>
              <span className={css.month}>
                /year
@@ -92,14 +92,14 @@ const MembershipPage = () => {
             <p className={css.offer}>Send messages, post listings...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} /> 24/7 Virtual Vet Advice wherever you are</li>
-              <li><img src={check} /> 30-day money back guarantee</li>
-              <li><img src={check} /> Create unlimited listings</li>
-              <li><img src={check} /> ID verification provided by <ExternalLink href="https://www.yoti.com/blog/trust-my-pet-sitter-verifies-accounts-with-yoti">Yoti.com</ExternalLink></li>
-              <li><img src={check} /> Create your online Profile</li>
-              <li><img src={check} /> Receive messages from Pet Owners</li>
-              <li><img src={check} /> Send messages to Pet Owners</li>
-              <li><img src={check} /> Complete your booking and secure payment</li>
+              <li><img src={check} /> Find the perfect pet to watch</li>
+              <li><img src={check} /> ID Verification</li>
+              <li><img src={check} /> 24/7 access to Virtual Vet</li>
+              <li><img src={check} /> Create online profile</li>
+              <li><img src={check} /> Receive messages</li>
+              <li><img src={check} /> Send messages</li>
+              <li><img src={check} /> Secure Payments</li>
+              <li><img src={check} /> Travel the World</li>
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentSitterPage"><img src={premium}  />Go Premium</NamedLink>
@@ -113,7 +113,7 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               10
+               30
              </span>
              <span className={css.month}>
                /month
@@ -122,14 +122,14 @@ const MembershipPage = () => {
             <p className={css.offer}>Create profile, online messaging...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} /> Create your profile</li>
-              <li><img src={check} /> Show in local pet listing searches</li>
-              <li><img src={check} /> Show in Category search listing</li>
-              <li><img src={check} /> Receive Messages from Pet Parents</li>
-              <li><img src={check} /> Send Messages to Pet Parents</li>
-              <li><img src={check} /> Secure online messaging</li>
+              <li><img src={check} /> Pet Services Profile</li>
               <li><img src={check} /> No additional fees</li>
-              <li><img src={check} /> 30-day money back guarantee</li>
+              <li><img src={check} /> Targeted local marketing</li>
+              <li><img src={check} /> Unlimited photos</li>
+              <li><img src={check} /> App Profile</li>
+              <li><img src={check} /> Reviews</li>
+              <li><img src={check} /> Add your website, address and contact number</li>
+              <li><img src={check} /> Trust My Pet Sitter Logo badge</li>
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentServicePage"><img src={premium}  />Go Premium</NamedLink>
@@ -146,19 +146,27 @@ const MembershipPage = () => {
         <div>
           <img src={message} />
           <h3>Send messages</h3>
-          <p>Get in touch with our worldwide users anytime.</p>
+          {/* <p>Get in touch with our worldwide users anytime.</p> */}
         </div>
         <div>
           <img src={virtualvet} />
           <h3>24/7 Virtual Vet</h3>
-          <p>Get covered by professional vets all the time.</p>
+          {/* <p>Get covered by professional vets all the time.</p> */}
         </div>
         <div>
           <img src={verification} />
           <h3>ID Verification</h3>
-          <p>Your account will become verified with the badge.</p>
+          {/* <p>Your account will become verified with the badge.</p> */}
         </div>
       </div>
+    </div>
+  </div>
+
+  <div className={css.basicWrapper}>
+    <div className={css.whyContent}>
+      <h3 className={css.basicTitle}>Staying Basic? What do I get?</h3>
+      <p className={css.basicP}>If you don’t wish to upgrade to the Premium membership you can still browse <span className={css.tLink}>Trust My Pet Sitter</span> free of charge. 
+        However, you won’t be able to create a listing or contact other users.</p>
     </div>
   </div>
 

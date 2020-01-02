@@ -163,7 +163,7 @@ const articles = [
   </div>,
 
   <div>
-    <h2>How do I find a Pet Sitter?</h2>
+    <h2>How do I find the right Pet Sitter near me?</h2>
 
     <p>You must be a premium member of Trust My Pet Sitter in order to contact Pet Sitters directly.  If you haven’t yet signed up, then follow the link on the navbar to “Create Post” and complete the steps.</p>
 
@@ -196,7 +196,7 @@ const PetOwnerQuestions = () => {
   // prettier-ignore
   return (
     <StaticPage
-      title="Help Center | Trust My Pet Sitter"
+      title="Pet Owner Questions | Trust My Pet Sitter"
       schema={{
         '@context': 'http://schema.org',
         '@type': 'PetOwnerQuestions',
@@ -323,7 +323,7 @@ const PetOwnerQuestions = () => {
                   <Tab>
                     <NavLink to="/pet-owner-questions/12" className={css.link} activeClassName={css.activeLink}>
                       <div className={css.collapseItem}>
-                        <a>12. How do I find a Pet Sitter?</a>
+                        <a>12. How do I find the right Pet Sitter near me?</a>
                       </div>
                     </NavLink>
                   </Tab>

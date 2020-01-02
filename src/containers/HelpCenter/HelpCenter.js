@@ -53,36 +53,39 @@ const HelpCenter = () => {
             <div className={css.showArticles}>
               <div className={css.activeArticle}>
                 <div className={css.articleInside}>
-                  <NamedLink name="PetOwnerQuestions" params={{ id: 6 }}>
+                  <NamedLink name="PetOwnerQuestions" params={{ id: 12 }}>
                     <h3>How do I find the right Pet Sitter near me?</h3>
-                    <p>You can browse Pet Owners who have placed a listing in area or country specific locations. Get started by clicking the link on the home page “Find Homes to Sit” and you will then be redirected to the Trust My Pet Sitter key search page.
-          </p>
+                    <p>You must be a premium member of Trust My Pet Sitter in order to contact Pet Sitters directly. If you haven’t yet signed up, then follow the link on the navbar to “Create Post” and complete the steps.
+                    </p>
                     <a>Read More<img class={css.arroW} src={arrowRight} /></a>
                   </NamedLink>
                 </div>
               </div>
               <div className={css.activeArticle}>
                 <div className={css.articleInside}>
-                  <h3>How do I find homes and Pets to Sit?</h3>
-                  <p>You can browse Pet Owners who have placed a listing in
-                    area or country specific locations. Get started by
-                    clicking the link on the home page “Find Homes to Sit”
-          </p>
+                <NamedLink name="QuestionPage" params={{ id: 6 }}>
+                  <h3>How much does it cost to join Trust My Pet Sitter?</h3>
+                  <p>Trust My Pet Sitter charges a small membership fee to cover our Insurance,
+                     Pet Support Advice Line and support staff.
+                     You can review the latest membership fees at Membership page.
+                  </p>
                   <a>Read More<img class={css.arroW} src={arrowRight} /></a>
+                  </NamedLink>
                 </div>
               </div>
               <div className={css.activeArticle}>
                 <div className={css.articleInside}>
-                  <h3>How are Pet Sitter and Owners verified?</h3>
-                  <p>From your payment details to your private conversations, all your information on our platform is encrypted, safe, and secure.
-          </p>
+                <NamedLink name="QuestionPage" params={{ id: 13 }}>
+                  <h3>What if my pet needs a vet when I am away from home?</h3>
+                  <p>At Trust My Pet Sitter all our Pet Sitters are provided with access to PawSquad a 24/7 Virtual Vet staffed with UK qualified Veterinary Surgeons for the duration of their pet sit.</p>
                   <a>Read More<img class={css.arroW} src={arrowRight} /></a>
+                </NamedLink>
                 </div>
               </div>
             </div>
             <hr className={css.helpDivider} />
             <div className={css.imageTips}>
-              <div className={css.imageItem}>
+              <NamedLink className={css.imageItem} name="QuestionPage" params={{ id: 1 }}>
                 <div className={css.imageContainer}>
                   <img src={sitters} />
                 </div>
@@ -94,8 +97,8 @@ const HelpCenter = () => {
             </p>
                   </div>
                 </div>
-              </div>
-              <div className={css.imageItem}>
+              </NamedLink>
+              <NamedLink className={css.imageItem} name="PetServicesQuestions" params={{ id: 1 }}>
                 <div className={css.imageContainer}>
                   <img src={service} />
                 </div>
@@ -106,8 +109,8 @@ const HelpCenter = () => {
             </p>
                   </div>
                 </div>
-              </div>
-              <div className={css.imageItem}>
+              </NamedLink>
+              <NamedLink className={css.imageItem} name="PetOwnerQuestions" params={{ id: 1 }}>
                 <div className={css.imageContainer}>
                   <img src={homes} />
                 </div>
@@ -115,10 +118,10 @@ const HelpCenter = () => {
                   <div className={css.textMove}>
                     <h3>Find a Pet Owner</h3>
                     <p>Search for Pet Owners looking for Sitters and Services
-            </p>
+                  </p>
                   </div>
                 </div>
-              </div>
+              </NamedLink>
             </div>
             <h2 className={css.topicsTitle}>Topics you may find useful</h2>
 

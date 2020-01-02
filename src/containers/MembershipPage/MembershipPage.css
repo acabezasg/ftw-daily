@@ -104,8 +104,12 @@
 
 @media (max-width: 512px) {
   .extend,
-  .whyTitle {
+  .whyTitle, 
+  .basicTitle {
     line-height: 45px;
+  }
+  .basicP {
+    line-height: 30px;
   }
   .whyFlex > div {
     max-width: 100% !important;
@@ -201,6 +205,30 @@
   color: #808f96;
   font-weight: 400;
   font-size: 16px;
+}
+
+.decimal {
+  color: #212529;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.basicWrapper {
+  background: #fff;
+}
+
+.tLink {
+  color: #41a6df;
+}
+
+.basicTitle {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.basicP {
+  text-align: center;
 }
 
 .bigNum {

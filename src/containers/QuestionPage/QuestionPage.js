@@ -218,7 +218,7 @@ const QuestionPage = () => {
   // prettier-ignore
   return (
     <StaticPage
-      title="Help Center | Trust My Pet Sitter"
+      title="Pet Sitter Questions | Trust My Pet Sitter"
       schema={{
         '@context': 'http://schema.org',
         '@type': 'QuestionPage',
