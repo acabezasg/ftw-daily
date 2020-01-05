@@ -291,6 +291,8 @@ img {
   }
   .sectionContent p {
     line-height: 30px;
+    word-break: break-word;
+    white-space: initial;
   }
   .videoSide {
     width: 100%;
