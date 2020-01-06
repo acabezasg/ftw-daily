@@ -491,6 +491,9 @@ export function requestCreateListingDraft(data) {
   };
 }
 
+
+
+
 export const requestPublishListingDraft = listingId => (dispatch, getState, sdk) => {
   dispatch(publishListing(listingId));
 
@@ -723,4 +726,25 @@ function createException(sdk, tab, data, dispatch) {
       log.error(e, 'update-listing-failed', { listingData: data });
       return dispatch(updateListingError(storableError(e)));
     });
+}
+
+
+
+export function claimListing(data) {
+  return (dispatch, getState, sdk) => {
+    return sdk.ownListings
+      .createDraft(
+        {
+          title: data.attributes.title,
+          description: data.attributes.description,
+          publicData: { ...data.attributes.publicData, location: { "address": data.attributes.publicData.address } },
+          ...(data.attributes.geolocation && { geolocation: { lat: data.attributes.geolocation.lat, lng: data.attributes.geolocation.lng } }),
+          price: { amount: 0, currency: "GBP" }
+        },
+        {
+          expand: true,
+          include: ["images"]
+        }
+      )
+  };
 }

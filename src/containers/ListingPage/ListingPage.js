@@ -28,6 +28,7 @@ import { richText } from '../../util/richText';
 import { getMarketplaceEntities } from '../../ducks/marketplaceData.duck';
 import { manageDisableScrolling, isScrollingDisabled } from '../../ducks/UI.duck';
 import { initializeCardPaymentData } from '../../ducks/stripe.duck.js';
+import { claimListing } from '../../containers/EditListingPage/EditListingPage.duck.js';
 import {
   Page,
   NamedLink,
@@ -207,6 +208,7 @@ export class ListingPageComponent extends Component {
     }
   }
 
+
   onSubmitEnquiry(values) {
     const { history, params, onSendEnquiry } = this.props;
     const routes = routeConfiguration();
@@ -253,6 +255,7 @@ export class ListingPageComponent extends Component {
       equipmentsConfig,
       locationsConfig,
       infoConfig,
+      onClaimListing
     } = this.props;
 
     const listingId = new UUID(rawParams.id);
@@ -598,52 +601,63 @@ export class ListingPageComponent extends Component {
                   ) : currentUser.attributes.profile.publicData.petOwnerMembership ||
                     currentUser.attributes.profile.publicData.petSitterMembership ||
                     currentUser.attributes.profile.publicData.petServiceMembership ? (
-                    <div className={css.bookingPanel}>
-                      {currentListing.attributes.publicData.requiredDates ? (
-                        <div className={css.required}>
-                          <div className={css.bookingHeading}>
-                            <h2 className={css.bookingTitle}>
-                              Contact <span className={css.username}>{makeContact}</span>
-                            </h2>
-                          </div>
-                          <p className={css.bookingTime} data-tip="" data-for="test">
-                            <img className={css.pcDates} src={calendar} />
-                            {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
-                          </p>
-                          <ReactTooltip id="test" className={css.customTip} effect="solid">
-                            <span className={css.tipColor}>
-                              Pet Owner is seeking a Pet Sitter for these dates. Are you available?
-                              Send a Message!
-                            </span>
-                          </ReactTooltip>
-                          <hr className={css.divhr} />
-                        </div>
-                      ) : null}
+                        <div className={css.bookingPanel}>
+                          {
+                            user_type == 2 ?
+                              <Button className={css.sendbtn} onClick={() => {
+                                onClaimListing(currentListing).then((res) => {
+                                  this.props.history.push(
+                                    createResourceLocatorString('EditListingPage', routeConfiguration(), { slug: createSlug(res.data.data.attributes.title), id: res.data.data.id.uuid, type: 'draft', tab: 'description' }, {})
+                                  );
+                                })
+                              }}>Claim Listing</Button> : null
+                          }
 
-                      <p className={css.smallPrint}>
-                        {user_type == 0 ? (
-                          <span>Contact Pet Owner directly</span>
-                        ) : (
-                          <span>Contact Pet Service directly</span>
-                        )}
-                      </p>
-                      <Button className={css.sendbtn} onClick={this.onContactUser}>
-                        Send Message
+                          {currentListing.attributes.publicData.requiredDates ? (
+                            <div className={css.required}>
+                              <div className={css.bookingHeading}>
+                                <h2 className={css.bookingTitle}>
+                                  Contact <span className={css.username}>{makeContact}</span>
+                                </h2>
+                              </div>
+                              <p className={css.bookingTime} data-tip="" data-for="test">
+                                <img className={css.pcDates} src={calendar} />
+                                {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                              </p>
+                              <ReactTooltip id="test" className={css.customTip} effect="solid">
+                                <span className={css.tipColor}>
+                                  Pet Owner is seeking a Pet Sitter for these dates. Are you available?
+                                  Send a Message!
+                            </span>
+                              </ReactTooltip>
+                              <hr className={css.divhr} />
+                            </div>
+                          ) : null}
+
+                          <p className={css.smallPrint}>
+                            {user_type == 0 ? (
+                              <span>Contact Pet Owner directly</span>
+                            ) : (
+                                <span>Contact Pet Service directly</span>
+                              )}
+                          </p>
+                          <Button className={css.sendbtn} onClick={this.onContactUser}>
+                            Send Message
                       </Button>
-                      <div className={css.openBookingFormMobile}>
-                        <Button className={css.sendbtn2} onClick={this.onContactUser}>
-                          Send Message
+                          <div className={css.openBookingFormMobile}>
+                            <Button className={css.sendbtn2} onClick={this.onContactUser}>
+                              Send Message
                         </Button>
-                      </div>
-                    </div>
-                  ) : null
+                          </div>
+                        </div>
+                      ) : null
                 ) : (
-                  <div className={css.bookingPanel}>
-                    <Button onClick={this.onProceedLogin}>
-                      <span>Login to proceed</span>
-                    </Button>
-                  </div>
-                )}
+                    <div className={css.bookingPanel}>
+                      <Button onClick={this.onProceedLogin}>
+                        <span>Login to proceed</span>
+                      </Button>
+                    </div>
+                  )}
               </div>
             </div>
           </LayoutWrapperMain>
@@ -765,6 +779,7 @@ const mapDispatchToProps = dispatch => ({
   callSetInitialValues: (setInitialValues, values) => dispatch(setInitialValues(values)),
   onSendEnquiry: (listingId, message) => dispatch(sendEnquiry(listingId, message)),
   onInitializeCardPaymentData: () => dispatch(initializeCardPaymentData()),
+  onClaimListing: (data) => dispatch(claimListing(data))
 });
 
 // Note: it is important that the withRouter HOC is **outside** the
