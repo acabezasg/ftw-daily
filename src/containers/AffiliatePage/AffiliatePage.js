@@ -94,7 +94,7 @@ const AffiliatePage = () => {
           <div className={css.sectionContent}>
             <h1>What do we look for in an affiliate?</h1>
             <p>We are always looking to build exciting new partnerships to help us introduce <strong>Trust My Pet Sitter</strong> to a new audience, and especially those who share our passion for pets and travel.</p>
-            <p>The <strong>Trust My Pet Sitter</strong>affiliate programme is a great way to earn a commission, simply by sharing your passion. </p>
+            <p>The <strong>Trust My Pet Sitter</strong> affiliate programme is a great way to earn a commission, simply by sharing your passion. </p>
             <p>You can enjoy the rewards that come from being part of the <strong>Trust My Pet Sitter</strong> Community —  you can get started straight away!</p>
           </div>
         </div>
