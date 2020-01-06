@@ -47,6 +47,7 @@ import {
   HouseSittersUk,
   PetSittersUk,
   AboutUsPage,
+  AffiliatePage,
 
 } from './containers';
 
@@ -120,6 +121,11 @@ const routeConfiguration = () => {
       path: '/helpcenter',
       name: 'HelpCenter',
       component: HelpCenter,
+    },
+    {
+      path: '/affiliate',
+      name: 'AffiliatePage',
+      component: AffiliatePage,
     },
     {
       path: '/virtualvet',
