@@ -152,6 +152,51 @@ const Footer = props => {
               <ul className={css.list}>
               <li className={css.listItem}>
                   <NamedLink
+                    name="HelpCenter"
+                    className={css.link}
+                  >
+                    Help Center
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
+                  <NamedLink
+                    name="MembershipPage"
+                    className={css.link}
+                  >
+                    Membership
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
+                  <NamedLink
+                    name="PresskitPage"
+                    className={css.link}
+                  >
+                    Impressum
+                  </NamedLink>
+                </li>
+                 <li className={css.listItem}>
+                  <NamedLink
+                    name="AffiliatePage"
+                    className={css.link}
+                  >
+                    Affiliate
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
+                  <NamedLink
+                    name="OrderTypesPage"
+                    params={{ type: 'new' }}
+                    className={css.link}
+                  >
+                    Create Post
+                  </NamedLink>
+                </li>
+              </ul>
+            </div>
+            <div className={css.searchesExtra}>
+            <ul className={css.list}>
+              <li className={css.listItem}>
+                  <NamedLink
                     name="SearchPage"
                     to={{
                       search:
@@ -208,70 +253,6 @@ const Footer = props => {
                     className={css.link}
                   >
                     <FormattedMessage id="Footer.searchSanFrancisco" />
-                  </NamedLink>
-                </li>
-              </ul>
-            </div>
-            <div className={css.searchesExtra}>
-              <ul className={css.list}>
-              <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Rome%2C%20Italy&bounds=42.295977%2C13.296344%2C41.307874%2C11.64446',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchRome" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Paris%2C%20France&bounds=48.901973%2C2.469753%2C48.815754%2C2.224219',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchParis" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Madrid%2C%20Spain&bounds=41.165845%2C-3.052983%2C39.88472%2C-4.579076',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchMadrid" />
-                  </NamedLink>
-                </li> 
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Toronto%2C%20Ontario%2C%20Canada&bounds=43.8554654957061%2C-79.1134670108977%2C43.5603428815601%2C-79.639302406235',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchToronto" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Sydney%2C%20New%20South%20Wales%2C%20Australia&bounds=-33.578140996%2C151.343020992%2C-34.118344992%2C150.520928608',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchSydney" />
                   </NamedLink>
                 </li>
               </ul>
