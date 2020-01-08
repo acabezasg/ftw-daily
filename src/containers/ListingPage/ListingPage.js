@@ -650,7 +650,7 @@ export class ListingPageComponent extends Component {
                                 {user_type == 0 ? (
                                   <span>Contact Pet Owner directly</span>
                                 ) : (
-                                    <span>Contact Pet Service directly</span>
+                                    <span>OR</span>
                                   )}
                               </p>
                               <Button className={css.sendbtn} onClick={this.onContactUser}>
