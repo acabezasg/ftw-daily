@@ -424,6 +424,7 @@ export class ListingPageComponent extends Component {
         })
         .filter(variant => variant != null);
 
+    const title_type = user_type === 0 ? 'Pet Owner' : user_type === 1 ? 'Pet Sitter' : 'Pet Service';
     const facebookImages = listingImages(currentListing, 'facebook');
     const twitterImages = listingImages(currentListing, 'twitter');
     const schemaImages = JSON.stringify(facebookImages.map(img => img.url));
@@ -432,7 +433,7 @@ export class ListingPageComponent extends Component {
       { id: 'ListingPage.schemaTitle' },
       {
         title,
-        price: currentListing.attributes.publicData.user_type ? formattedPrice : 'Pet Owner',
+        price: currentListing.attributes.publicData.user_type == 1 ? formattedPrice : title_type,
         siteTitle,
       }
     );
