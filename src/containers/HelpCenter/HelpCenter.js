@@ -91,7 +91,7 @@ const HelpCenter = () => {
                 </div>
                 <div className={css.textContainer}>
                   <div className={css.textMove}>
-                    <h3>Find a Pet Sitter</h3>
+                    <h3>Pet Sitters</h3>
                     <p>Get help
                       finding the perfect match for your pet.
             </p>
@@ -104,7 +104,7 @@ const HelpCenter = () => {
                 </div>
                 <div className={css.textContainer}>
                   <div className={css.textMove}>
-                    <h3>Find a Pet Service</h3>
+                    <h3>Pet Services</h3>
                     <p>Search for Pet Services by price, category or location.
             </p>
                   </div>
@@ -116,7 +116,7 @@ const HelpCenter = () => {
                 </div>
                 <div className={css.textContainer}>
                   <div className={css.textMove}>
-                    <h3>Find a Pet Owner</h3>
+                    <h3>Pet Owners</h3>
                     <p>Search for Pet Owners looking for Sitters and Services
                   </p>
                   </div>

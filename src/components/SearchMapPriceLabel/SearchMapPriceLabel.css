@@ -131,5 +131,5 @@
 
 .priceLabel:hover .location,
 .priceLabelActive .location {
-  background-image: url('./service.png');
+  background-image: url('./service-hover.png');
 }

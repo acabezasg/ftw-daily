@@ -26,6 +26,20 @@
  border-top-width: 7px !important;
 }
 
+.claimTip {
+  color: #fff !important;
+  background-color: #41a6df !important;
+  opacity: 0.99 !important;
+  padding: 10px 21px 13px !important;
+  text-align: center;
+  width: 280px;
+ }
+ 
+ .claimTip:after {
+  border-top-color: #41a6df !important;
+  border-top-width: 7px !important;
+ }
+
 .loadingText {
   margin: 24px;
 }
@@ -829,15 +843,35 @@
 }
 
 @media (max-width: 1024px) {
-  .sendbtn, .smallPrint, .divhr, .required {
+  .sendbtn, .smallPrint, .divhr, .required, .claimbtn {
   display: none;
   }
+}
+
+.bookingPanel button {
+  text-shadow: 1px 1px 1px darkslategrey;
 }
 
 .sendbtn:hover, .bookingPanel button:hover {
   background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
   color: #fff;
   text-decoration: none !important;
+}
+
+.claimbtn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to left bottom, #41a6df, #00c1e8, #00d7c6, #00e681, #a8eb12);
+  color: #fff;
+  text-decoration: none;
+}
+
+.claimbtn img {
+  height: 50px;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  z-index: 3;
 }
 
 .reqdates {
