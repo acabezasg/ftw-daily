@@ -61,6 +61,7 @@ import css from './ListingPage.css';
 
 import stripeimg from './stripe.png';
 import calendar from './calendar.svg';
+import claim from './claim.png';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
 
@@ -424,6 +425,7 @@ export class ListingPageComponent extends Component {
         })
         .filter(variant => variant != null);
 
+    const title_type = user_type === 0 ? 'Pet Owner' : user_type === 1 ? 'Pet Sitter' : 'Pet Service';
     const facebookImages = listingImages(currentListing, 'facebook');
     const twitterImages = listingImages(currentListing, 'twitter');
     const schemaImages = JSON.stringify(facebookImages.map(img => img.url));
@@ -432,7 +434,7 @@ export class ListingPageComponent extends Component {
       { id: 'ListingPage.schemaTitle' },
       {
         title,
-        price: currentListing.attributes.publicData.user_type ? formattedPrice : 'Pet Owner',
+        price: currentListing.attributes.publicData.user_type == 1 ? formattedPrice : title_type,
         siteTitle,
       }
     );
@@ -604,14 +606,20 @@ export class ListingPageComponent extends Component {
                         <div className={css.bookingPanel}>
                           {
                             user_type == 2 ?
-                              <Button className={css.sendbtn} onClick={() => {
+                              <Button data-tip="" data-for="claim" className={css.claimbtn} onClick={() => {
                                 onClaimListing(currentListing).then((res) => {
                                   this.props.history.push(
                                     createResourceLocatorString('EditListingPage', routeConfiguration(), { slug: createSlug(res.data.data.attributes.title), id: res.data.data.id.uuid, type: 'draft', tab: 'description' }, {})
                                   );
                                 })
-                              }}>Claim Listing</Button> : null
+                              }}>Claim Listing <img src={claim} /></Button> : null
                           }
+
+                            <ReactTooltip id="claim" className={css.claimTip} effect="solid">
+                              <span className={css.tipColor}>
+                                Are you the listing owner? Click the button and claim the listing!
+                              </span>
+                            </ReactTooltip>
 
                           {currentListing.attributes.publicData.requiredDates ? (
                             <div className={css.required}>
@@ -628,7 +636,7 @@ export class ListingPageComponent extends Component {
                                 <span className={css.tipColor}>
                                   Pet Owner is seeking a Pet Sitter for these dates. Are you available?
                                   Send a Message!
-                            </span>
+                                </span>
                               </ReactTooltip>
                               <hr className={css.divhr} />
                             </div>
@@ -638,7 +646,7 @@ export class ListingPageComponent extends Component {
                             {user_type == 0 ? (
                               <span>Contact Pet Owner directly</span>
                             ) : (
-                                <span>Contact Pet Service directly</span>
+                                <span>OR</span>
                               )}
                           </p>
                           <Button className={css.sendbtn} onClick={this.onContactUser}>
