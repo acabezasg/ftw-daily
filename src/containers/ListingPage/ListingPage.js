@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react';
 import { array, arrayOf, bool, func, shape, string, oneOf } from 'prop-types';
 import { FormattedMessage, intlShape, injectIntl } from 'react-intl';
@@ -425,7 +424,6 @@ export class ListingPageComponent extends Component {
         })
         .filter(variant => variant != null);
 
-    const title_type = user_type === 0 ? 'Pet Owner' : user_type === 1 ? 'Pet Sitter' : 'Pet Service';
     const facebookImages = listingImages(currentListing, 'facebook');
     const twitterImages = listingImages(currentListing, 'twitter');
     const schemaImages = JSON.stringify(facebookImages.map(img => img.url));
@@ -434,7 +432,7 @@ export class ListingPageComponent extends Component {
       { id: 'ListingPage.schemaTitle' },
       {
         title,
-        price: currentListing.attributes.publicData.user_type == 1 ? formattedPrice : title_type,
+        price: currentListing.attributes.publicData.user_type ? formattedPrice : 'Pet Owner',
         siteTitle,
       }
     );
@@ -600,20 +598,25 @@ export class ListingPageComponent extends Component {
                       timeSlots={timeSlots}
                       fetchTimeSlotsError={fetchTimeSlotsError}
                     />
-<<<<<<< HEAD
                   ) :
 
                     <div className={css.bookingPanel}>
                       {
                         user_type == 2 ?
-                          <Button className={css.sendbtn} onClick={() => {
+                        <Button data-tip="" data-for="claim" className={css.claimbtn} onClick={() => {
                             onClaimListing(currentListing).then((res) => {
                               this.props.history.push(
                                 createResourceLocatorString('EditListingPage', routeConfiguration(), { slug: createSlug(res.data.data.attributes.title), id: res.data.data.id.uuid, type: 'draft', tab: 'description' }, {})
                               );
                             })
-                          }}>Claim Listing</Button> : null
+                          }}><span>Claim Listing</span><img src={claim} /></Button> : null
                       }
+
+                            <ReactTooltip id="claim" className={css.claimTip} effect="solid">
+                              <span className={css.tipColor}>
+                                Are you the listing owner? Click the button and claim the listing!
+                              </span>
+                            </ReactTooltip>
 
                       {
                         currentUser.attributes.profile.publicData.petOwnerMembership ||
@@ -663,67 +666,6 @@ export class ListingPageComponent extends Component {
                     </div>
 
 
-=======
-                  ) : currentUser.attributes.profile.publicData.petOwnerMembership ||
-                    currentUser.attributes.profile.publicData.petSitterMembership ||
-                    currentUser.attributes.profile.publicData.petServiceMembership ? (
-                        <div className={css.bookingPanel}>
-                          {
-                            user_type == 2 ?
-                              <Button data-tip="" data-for="claim" className={css.claimbtn} onClick={() => {
-                                onClaimListing(currentListing).then((res) => {
-                                  this.props.history.push(
-                                    createResourceLocatorString('EditListingPage', routeConfiguration(), { slug: createSlug(res.data.data.attributes.title), id: res.data.data.id.uuid, type: 'draft', tab: 'description' }, {})
-                                  );
-                                })
-                              }}><span>Claim Listing</span> <img src={claim} /></Button> : null
-                          }
-
-                            <ReactTooltip id="claim" className={css.claimTip} effect="solid">
-                              <span className={css.tipColor}>
-                                Are you the listing owner? Click the button and claim the listing!
-                              </span>
-                            </ReactTooltip>
-
-                          {currentListing.attributes.publicData.requiredDates ? (
-                            <div className={css.required}>
-                              <div className={css.bookingHeading}>
-                                <h2 className={css.bookingTitle}>
-                                  Contact <span className={css.username}>{makeContact}</span>
-                                </h2>
-                              </div>
-                              <p className={css.bookingTime} data-tip="" data-for="test">
-                                <img className={css.pcDates} src={calendar} />
-                                {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
-                              </p>
-                              <ReactTooltip id="test" className={css.customTip} effect="solid">
-                                <span className={css.tipColor}>
-                                  Pet Owner is seeking a Pet Sitter for these dates. Are you available?
-                                  Send a Message!
-                                </span>
-                              </ReactTooltip>
-                              <hr className={css.divhr} />
-                            </div>
-                          ) : null}
-
-                          <p className={css.smallPrint}>
-                            {user_type == 0 ? (
-                              <span>Contact Pet Owner directly</span>
-                            ) : (
-                                <span>OR</span>
-                              )}
-                          </p>
-                          <Button className={css.sendbtn} onClick={this.onContactUser}>
-                            Send Message
-                      </Button>
-                          <div className={css.openBookingFormMobile}>
-                            <Button className={css.sendbtn2} onClick={this.onContactUser}>
-                              Send Message
-                        </Button>
-                          </div>
-                        </div>
-                      ) : null
->>>>>>> 787aaf7da5cfa19f6c1d10dcffdbad80c6de7b4f
                 ) : (
                     <div className={css.bookingPanel}>
                       <Button onClick={this.onProceedLogin}>
