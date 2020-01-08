@@ -600,6 +600,70 @@ export class ListingPageComponent extends Component {
                       timeSlots={timeSlots}
                       fetchTimeSlotsError={fetchTimeSlotsError}
                     />
+<<<<<<< HEAD
+                  ) :
+
+                    <div className={css.bookingPanel}>
+                      {
+                        user_type == 2 ?
+                          <Button className={css.sendbtn} onClick={() => {
+                            onClaimListing(currentListing).then((res) => {
+                              this.props.history.push(
+                                createResourceLocatorString('EditListingPage', routeConfiguration(), { slug: createSlug(res.data.data.attributes.title), id: res.data.data.id.uuid, type: 'draft', tab: 'description' }, {})
+                              );
+                            })
+                          }}>Claim Listing</Button> : null
+                      }
+
+                      {
+                        currentUser.attributes.profile.publicData.petOwnerMembership ||
+                          currentUser.attributes.profile.publicData.petSitterMembership ||
+                          currentUser.attributes.profile.publicData.petServiceMembership ? (
+                            <div>
+
+                              {currentListing.attributes.publicData.requiredDates ? (
+                                <div className={css.required}>
+                                  <div className={css.bookingHeading}>
+                                    <h2 className={css.bookingTitle}>
+                                      Contact <span className={css.username}>{makeContact}</span>
+                                    </h2>
+                                  </div>
+                                  <p className={css.bookingTime} data-tip="" data-for="test">
+                                    <img className={css.pcDates} src={calendar} />
+                                    {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                                  </p>
+                                  <ReactTooltip id="test" className={css.customTip} effect="solid">
+                                    <span className={css.tipColor}>
+                                      Pet Owner is seeking a Pet Sitter for these dates. Are you available?
+                                      Send a Message!
+                            </span>
+                                  </ReactTooltip>
+                                  <hr className={css.divhr} />
+                                </div>
+                              ) : null}
+
+                              <p className={css.smallPrint}>
+                                {user_type == 0 ? (
+                                  <span>Contact Pet Owner directly</span>
+                                ) : (
+                                    <span>Contact Pet Service directly</span>
+                                  )}
+                              </p>
+                              <Button className={css.sendbtn} onClick={this.onContactUser}>
+                                Send Message
+                      </Button>
+                              <div className={css.openBookingFormMobile}>
+                                <Button className={css.sendbtn2} onClick={this.onContactUser}>
+                                  Send Message
+                        </Button>
+                              </div>
+                            </div>
+                          ) : null}
+
+                    </div>
+
+
+=======
                   ) : currentUser.attributes.profile.publicData.petOwnerMembership ||
                     currentUser.attributes.profile.publicData.petSitterMembership ||
                     currentUser.attributes.profile.publicData.petServiceMembership ? (
@@ -659,6 +723,7 @@ export class ListingPageComponent extends Component {
                           </div>
                         </div>
                       ) : null
+>>>>>>> 787aaf7da5cfa19f6c1d10dcffdbad80c6de7b4f
                 ) : (
                     <div className={css.bookingPanel}>
                       <Button onClick={this.onProceedLogin}>
