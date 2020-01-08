@@ -612,7 +612,7 @@ export class ListingPageComponent extends Component {
                                     createResourceLocatorString('EditListingPage', routeConfiguration(), { slug: createSlug(res.data.data.attributes.title), id: res.data.data.id.uuid, type: 'draft', tab: 'description' }, {})
                                   );
                                 })
-                              }}>Claim Listing <img src={claim} /></Button> : null
+                              }}><span>Claim Listing</span> <img src={claim} /></Button> : null
                           }
 
                             <ReactTooltip id="claim" className={css.claimTip} effect="solid">
