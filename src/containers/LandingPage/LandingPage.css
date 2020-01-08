@@ -249,7 +249,7 @@
 }
 
 .whyContainer:nth-child(3):before {
-    content: url(/static/icons/why-3.png);
+    content: url(worldwide.png);
 }
 
 .whyContainer:nth-child(4):before {

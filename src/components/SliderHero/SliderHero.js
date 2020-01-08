@@ -99,6 +99,35 @@ const SliderHero = () => (
     <Carousel.Item>
     <div className={css.carouselHero}>
       <img
+        alt="Second"
+        src={secondSlide}
+      />
+    </div>
+      <div className={css.carouselCaption}>
+
+    <StyleRoot>
+        <h1 style={styles.fadeInUp}>Watch pets in their own home</h1>
+        <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
+
+         <div className={css.submitContainer}>
+            <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
+            <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
+            <a href="s?pub_user_type=0">Find Homes to Sit</a> 
+
+          </div>
+
+        <div className={css.submitContainer}>
+          <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
+        </div>
+
+    </StyleRoot>
+
+      </div>
+    </Carousel.Item>
+
+    <Carousel.Item>
+    <div className={css.carouselHero}>
+      <img
         alt="Third Slide"
         src={thirdSlide}
       />
@@ -150,35 +179,6 @@ const SliderHero = () => (
         <div className={css.submitContainer}>
           <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
         </div>
-    </StyleRoot>
-
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-    <div className={css.carouselHero}>
-      <img
-        alt="Second"
-        src={secondSlide}
-      />
-    </div>
-      <div className={css.carouselCaption}>
-
-    <StyleRoot>
-        <h1 style={styles.fadeInUp}>Watch pets in their own home</h1>
-        <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
-
-         <div className={css.submitContainer}>
-            <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
-            <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
-            <a href="s?pub_user_type=0">Find Homes to Sit</a> 
-
-          </div>
-
-        <div className={css.submitContainer}>
-          <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
-        </div>
-
     </StyleRoot>
 
       </div>

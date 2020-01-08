@@ -107,7 +107,7 @@
 }
 
 .paw {
-  background-image: url('./pawdark.png');
+  background-image: url('./service.png');
   width: 30px;
   height: 30px;
   display: block;
@@ -116,7 +116,7 @@
 }
 
 .location {
-  background-image: url('./service.png');
+  background-image: url('./bowl.png');
   width: 35px;
   height: 35px;
   display: block;
@@ -126,10 +126,10 @@
 
 .priceLabel:hover .paw,
 .priceLabelActive .paw {
-  background-image: url('./pawwhite.png');
+  background-image: url('./service-hover.png');
 }
 
 .priceLabel:hover .location,
 .priceLabelActive .location {
-  background-image: url('./service-hover.png');
+  background-image: url('./bowl-hover.png');
 }
