@@ -188,7 +188,7 @@ const Footer = props => {
                     params={{ type: 'new' }}
                     className={css.link}
                   >
-                    Create Post
+                    Create Listing
                   </NamedLink>
                 </li>
               </ul>

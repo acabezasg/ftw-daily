@@ -33,6 +33,7 @@
   padding: 10px 21px 13px !important;
   text-align: center;
   width: 280px;
+  margin-top: -12px !important;
  }
  
  .claimTip:after {

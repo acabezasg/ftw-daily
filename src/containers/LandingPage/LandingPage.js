@@ -126,30 +126,30 @@ export const LandingPageComponent = props => {
 
                 <div className={css.whyUse}>
                   <div className={css.whyContainer}>
-                    <h2>ID Verification</h2>
+                    <h2>Safety</h2>
 
                     <p>
-                      We use industry leading ID verification to confirm the identity of both our Pet Sitters and Pet Owners
+                    All Premium members are ID verified and the membership includes insurance and access to a 24/7 Virtual Vet
                     </p>
 
                     <NamedLink name="YotiPage">Learn More</NamedLink>
                   </div>
 
                  <div className={css.whyContainer}>
-                    <h2>5* Community</h2>
+                    <h2>Our Community</h2>
 
                     <p>
-                      We select the finest Pet Sitters for your pets. Only 20% of sitters who apply to Trust My Pet Sitter are successful
+                    Find and meet like minded people in our pet community. Find pet sitters, dog walkers, groomers and vets
                     </p>
 
                     <NamedLink name="SignupPage">Join Now</NamedLink>
                   </div>
 
                  <div className={css.whyContainer}>
-                    <h2>Virtual Vet</h2>
+                    <h2>Travel the World</h2>
 
                     <p>
-                      We have teamed up with PawSquad to provide active Pet Sitters with free 24/7 access to a UK qualified Vet
+                    Pet Sitters can travel the world looking after much loved pets in the family home. Find your next great adventure...
                     </p>
 
                     <NamedLink name="PawSquadPage">Learn More</NamedLink>

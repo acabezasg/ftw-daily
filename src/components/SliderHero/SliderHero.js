@@ -70,17 +70,18 @@ const SliderHero = () => (
     <Carousel.Item>
     <div className={css.carouselHero}>
       <img
-        alt="Second"
-        src={secondSlide}
+        alt="Test"
+        src={fifthSlide}
       />
     </div>
-      <div className={css.carouselCaption}>
+     <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Watch pets in their own home</h1>
-        <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
+        <h1 style={styles.fadeInUp}>Pet Services</h1>
+        <p style={styles.fadeInUp}>Dog Walking | Pet Foods | Drop- in Sitters | Grooming | Vets | Pet Stores</p>
 
-         <div className={css.submitContainer}>
+          <div className={css.submitContainer}>
+         
             <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
             <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
             <a href="s?pub_user_type=0">Find Homes to Sit</a> 
@@ -90,7 +91,6 @@ const SliderHero = () => (
         <div className={css.submitContainer}>
           <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
         </div>
-
     </StyleRoot>
 
       </div>
@@ -155,21 +155,20 @@ const SliderHero = () => (
       </div>
     </Carousel.Item>
 
-        <Carousel.Item>
+    <Carousel.Item>
     <div className={css.carouselHero}>
       <img
-        alt="Test"
-        src={fifthSlide}
+        alt="Second"
+        src={secondSlide}
       />
     </div>
-     <div className={css.carouselCaption}>
+      <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Dog Walking and Care</h1>
+        <h1 style={styles.fadeInUp}>Watch pets in their own home</h1>
         <p style={styles.fadeInUp}>Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry</p>
 
-          <div className={css.submitContainer}>
-         
+         <div className={css.submitContainer}>
             <a href="s?pub_user_type=1">Find a Pet Sitter</a> 
             <a className={css.btnPc} href="s?pub_user_type=2">Find a Pet Service</a>
             <a href="s?pub_user_type=0">Find Homes to Sit</a> 
@@ -179,6 +178,7 @@ const SliderHero = () => (
         <div className={css.submitContainer}>
           <a className={css.btnMob} style={stylesLeft.fadeInLeft} href="s?pub_user_type=2">Find a Pet Service</a> 
         </div>
+
     </StyleRoot>
 
       </div>
