@@ -184,11 +184,10 @@ const Footer = props => {
                 </li>
                 <li className={css.listItem}>
                   <NamedLink
-                    name="OrderTypesPage"
-                    params={{ type: 'new' }}
+                    name="YotiPage"
                     className={css.link}
                   >
-                    Create Listing
+                    ID Verification
                   </NamedLink>
                 </li>
               </ul>
