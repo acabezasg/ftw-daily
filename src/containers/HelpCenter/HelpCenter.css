@@ -105,6 +105,14 @@
   position: relative;
 }
 
+.topicsMain ul li a {
+  color: #484848;
+}
+
+.topicsMain ul li:hover a {
+  color: #41a6df !important;
+}
+
 @media (max-width: 992px) {
   .topicsMain ul li {
     overflow: hidden;

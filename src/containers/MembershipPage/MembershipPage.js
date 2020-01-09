@@ -18,6 +18,7 @@ import verification from './verification.png';
 import message from './message.png';
 import virtualvet from './virtualvet.png';
 import premium from './premium.png';
+import insurance from './insurance.png';
 
 const MembershipPage = () => {
 
@@ -152,6 +153,11 @@ const MembershipPage = () => {
           <img src={virtualvet} />
           <h3>24/7 Virtual Vet</h3>
           {/* <p>Get covered by professional vets all the time.</p> */}
+        </div>
+        <div>
+          <img src={insurance} />
+          <h3>Home Insurance</h3>
+          {/* <p>Your account will become verified with the badge.</p> */}
         </div>
         <div>
           <img src={verification} />

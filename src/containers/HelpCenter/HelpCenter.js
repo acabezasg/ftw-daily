@@ -134,10 +134,10 @@ const HelpCenter = () => {
                 <div className={css.topicContent}>
                   <h3>Getting started</h3>
                   <ul>
-                    <li>What is Trust My Pet Sitter and how does it work?</li>
-                    <li>Join Up</li>
-                    <li>Verify your email</li>
-                    <li>Create your first posting</li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 1 }}>How Do I Sign Up?</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 2 }}>Membership</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 3 }}>Create your Listing</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 4 }}>What is the minimum age?</NamedLink></li>
                   </ul>
                 </div>
               </div>
@@ -149,10 +149,10 @@ const HelpCenter = () => {
                 <div className={css.topicContent}>
                   <h3>Your account</h3>
                   <ul>
-                    <li>Managing your profile</li>
-                    <li>Membership options</li>
-                    <li>Managing your options</li>
-                    <li>Cancel my membership</li>
+                  <li><NamedLink name="GeneralQuestionsPage" params={{ id: 5 }}>Your Listings</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 6 }}>Managing your Profile</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 7 }}>Account Settings</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 8 }}>ID Verification</NamedLink></li>
                   </ul>
                 </div>
               </div>

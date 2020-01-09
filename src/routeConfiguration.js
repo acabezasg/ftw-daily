@@ -41,6 +41,7 @@ import {
   PaymentAffiliatePage,
   PetOwnerQuestions,
   PetServicesQuestions,
+  GeneralQuestionsPage,
   MembershipPage,
   DogSitting,
   CatSitting,
@@ -101,6 +102,11 @@ const routeConfiguration = () => {
       path: '/pet-sitter-questions/:id',
       name: 'QuestionPage',
       component: QuestionPage,
+    },
+    {
+      path: '/general/:id',
+      name: 'GeneralQuestionsPage',
+      component: GeneralQuestionsPage,
     },
     {
       path: '/howitworks',
