@@ -145,6 +145,11 @@
   background-color: #f7f7f7;
  }
 
+ .servicetitle {
+  text-align: center;
+  margin-bottom: 65px;
+ }
+
 /* A bar on top of light sections */
 .section:nth-of-type(2n) .sectionContent::before {
   display: none !important;
@@ -338,3 +343,59 @@
   }
 }
 
+.serviceIcons {
+  display: flex;
+  width: 100%;
+}
+
+.serviceSingle {
+  width: 33%;
+  padding: 0 10px;
+}
+
+.singleIcon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease 0s;
+}
+
+.singleIcon img {
+  height: 150px;
+}
+
+.lastBtn {
+  padding-top: 65px;
+  text-align: center;
+}
+
+.lastBtn a {
+  background-color: rgb(65,166,223);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.lastBtn a:hover {
+  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.serviceSingle h3 {
+  color: #41a6df !important;
+  margin: 0;
+}
+
+.serviceSingle h2 {
+  margin: 0.5rem 0;
+  color: rgb(100, 100, 105);
+}
+
+.serviceSingle p {
+  margin: 0;
+  color: rgb(100, 100, 105);
+}
+
+.serviceSingle:hover .singleIcon {
+  transform: translate(0px, -20px);
+}

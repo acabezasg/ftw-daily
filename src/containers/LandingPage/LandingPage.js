@@ -104,7 +104,7 @@ export const LandingPageComponent = props => {
               <p>Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar space.</p>
             
             <div className={css.mobbt}>
-              <a href="/signup">Start Now</a>
+              <NamedLink name="SignupPage">Start Now</NamedLink>
             </div>
           </div>
 
@@ -119,6 +119,47 @@ export const LandingPageComponent = props => {
               </div>
             </li>
 */}  
+
+            <li className={css.section}>
+              <div className={css.serviceContent}>
+            <div className={css.sectionContent}>
+              <h1 className={css.servicetitle}>Pet Services are Welcomed</h1>
+              <div className={css.serviceIcons}>
+
+                <div className={css.serviceSingle}>
+                  <div className={css.singleIcon}>
+                  <img src="https://i.imgur.com/D5dDCHL.png"></img>
+                 </div>
+                 <h3>STEP 1</h3>
+                 <h2>Find Pet Service</h2>
+                 <p>Filter your results based on experience or services offered.</p>
+                </div>
+
+                <div className={css.serviceSingle}>
+                  <div className={css.singleIcon}>
+                  <img src="https://i.imgur.com/95qkUzE.png"></img>
+                 </div>
+                 <h3>STEP 2</h3>
+                 <h2>Check Reviews</h2>
+                 <p>Filter your results based on experience or services offered.</p>
+                </div>
+
+                <div className={css.serviceSingle}>
+                  <div className={css.singleIcon}>
+                  <img src="https://i.imgur.com/FWSDzWF.png"></img>
+                 </div>
+                 <h3>STEP 3</h3>
+                 <h2>Contact Pet Service</h2>
+                 <p>Filter your results based on experience or services offered.</p>
+                </div>
+
+              </div>
+              <div className={css.lastBtn}>
+              <a href="/s?pub_user_type=2">Begin Your Search</a>
+            </div>
+            </div>
+            </div>
+            </li>
 
             <li className={(css.sections, css.whyUseBg)}>
               <div className={css.sectionContent}>
