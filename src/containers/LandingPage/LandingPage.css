@@ -405,3 +405,7 @@
 .serviceSingle:hover .singleIcon {
   transform: translate(0px, -20px);
 }
+
+.serviceSingle:hover hr {
+  border-color: rgb(65,166,223);
+}
