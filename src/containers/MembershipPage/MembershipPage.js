@@ -40,7 +40,43 @@ const MembershipPage = () => {
 
         <LayoutWrapperMain>
 
-        <div className={css.mBanner}></div>
+        <div className={css.whyWrapper}>
+    <div className={css.whyContent}>
+      <h3 className={css.whyTitle}>Why go Premium?</h3>
+      <div className={css.whyFlex}>
+        <div>
+          <img src={message} />
+          <h3>Send messages</h3>
+          {/* <p>Get in touch with our worldwide users anytime.</p> */}
+        </div>
+        <div>
+          <img src={virtualvet} />
+          <h3>24/7 Virtual Vet</h3>
+          {/* <p>Get covered by professional vets all the time.</p> */}
+        </div>
+        <div>
+          <img src={insurance} />
+          <h3>Home Insurance</h3>
+          {/* <p>Your account will become verified with the badge.</p> */}
+        </div>
+        <div>
+          <img src={verification} />
+          <h3>ID Verification</h3>
+          {/* <p>Your account will become verified with the badge.</p> */}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className={css.basicWrapper}>
+    <div className={css.whyContent}>
+      <h3 className={css.basicTitle}>Staying Basic? What do I get?</h3>
+      <p className={css.basicP}>If you don’t wish to upgrade to the Premium membership you can still browse <span className={css.tLink}>Trust My Pet Sitter</span> free of charge. 
+        However, you won’t be able to create a listing or contact other users.</p>
+    </div>
+  </div>
+
+  <div className={css.mBanner}></div>
 
     <div className={css.sectionContent}>
       <h3 className={css.extend}>Extend your experience</h3>
@@ -139,42 +175,6 @@ const MembershipPage = () => {
           </div>
        </div>
     </div>
-
-  <div className={css.whyWrapper}>
-    <div className={css.whyContent}>
-      <h3 className={css.whyTitle}>Why go Premium?</h3>
-      <div className={css.whyFlex}>
-        <div>
-          <img src={message} />
-          <h3>Send messages</h3>
-          {/* <p>Get in touch with our worldwide users anytime.</p> */}
-        </div>
-        <div>
-          <img src={virtualvet} />
-          <h3>24/7 Virtual Vet</h3>
-          {/* <p>Get covered by professional vets all the time.</p> */}
-        </div>
-        <div>
-          <img src={insurance} />
-          <h3>Home Insurance</h3>
-          {/* <p>Your account will become verified with the badge.</p> */}
-        </div>
-        <div>
-          <img src={verification} />
-          <h3>ID Verification</h3>
-          {/* <p>Your account will become verified with the badge.</p> */}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div className={css.basicWrapper}>
-    <div className={css.whyContent}>
-      <h3 className={css.basicTitle}>Staying Basic? What do I get?</h3>
-      <p className={css.basicP}>If you don’t wish to upgrade to the Premium membership you can still browse <span className={css.tLink}>Trust My Pet Sitter</span> free of charge. 
-        However, you won’t be able to create a listing or contact other users.</p>
-    </div>
-  </div>
 
       </LayoutWrapperMain>
 

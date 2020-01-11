@@ -39,6 +39,19 @@
   position: relative;
 }
 
+.gUL {
+  list-style: inherit;
+  padding-left: 40px;
+}
+
+.gUL li {
+  margin-bottom: 5px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+}
+
 .questionMain > .sectionContent > h3 {
   margin: 0;
   padding: 0;

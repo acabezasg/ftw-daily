@@ -159,30 +159,15 @@ const HelpCenter = () => {
 
               <div className={css.topicsMain}>
                 <div className={css.iconTopic}>
-                  <img src={community} />
-                </div>
-                <div className={css.topicContent}>
-                  <h3>Our Community</h3>
-                  <ul>
-                    <li>Accessibility</li>
-                    <li>Promoting on Social</li>
-                    <li>Responsibilities</li>
-                    <li>Security</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={css.topicsMain}>
-                <div className={css.iconTopic}>
                   <img src={shield} />
                 </div>
                 <div className={css.topicContent}>
                   <h3>Trust and safety</h3>
                   <ul>
-                    <li>ID Verification</li>
-                    <li>Insurance backed guarantee</li>
-                    <li>Payment Information</li>
-                    <li>Secure Messaging Platform</li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 9 }}>Yoti ID Verification</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 10 }}>Reviews</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 11 }}>Virtual Vet Support</NamedLink></li>
+                    <li><NamedLink name="GeneralQuestionsPage" params={{ id: 12 }}>Home Insurance</NamedLink></li>
                   </ul>
                 </div>
               </div>

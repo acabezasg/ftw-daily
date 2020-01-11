@@ -122,13 +122,8 @@ const Footer = props => {
             <div className={css.infoLinks}>
               <ul className={css.list}>
                 <li className={css.listItem}>
-                  <NamedLink name="PrivacyPolicyPage" className={css.link}>
-                    Privacy
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink name="TermsOfServicePage" className={css.link}>
-                    Terms
+                  <NamedLink name="PresskitPage" className={css.link}>
+                    Press
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
@@ -139,6 +134,11 @@ const Footer = props => {
                 <li className={css.listItem}>
                   <NamedLink name="AboutUsPage" className={css.link}>
                     About
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
+                  <NamedLink name="PrivacyPolicyPage" className={css.link}>
+                    Privacy & Terms
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
@@ -168,10 +168,10 @@ const Footer = props => {
                 </li>
                 <li className={css.listItem}>
                   <NamedLink
-                    name="PresskitPage"
+                    name="PawSquadPage"
                     className={css.link}
                   >
-                    Impressum
+                    Virtual Vet
                   </NamedLink>
                 </li>
                  <li className={css.listItem}>

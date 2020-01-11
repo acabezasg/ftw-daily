@@ -18,7 +18,7 @@ class HomepageVideo extends Component {
     </div>
     <br />
     <div className={css.subContainer}>
-    <span className={css.videoSub}>Pets stay at home | No Kennels | No Catteries | No strange places | Just familiarity, routine and 1 : 1 attention!</span>
+    <span className={css.videoSub}>Pets stay at home | No strange places | Just familiarity, routine and 1:1 attention!</span>
     </div>
 </div>
   <div className={css.homepageFlex}>

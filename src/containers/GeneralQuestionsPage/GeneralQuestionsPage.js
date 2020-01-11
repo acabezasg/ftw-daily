@@ -20,6 +20,7 @@ import {
 import arrow from './arrow.png';
 import logo from './logo.png';
 import css from './GeneralQuestionsPage.css';
+import user from './user.png';
 
 
 const articles = [
@@ -89,6 +90,46 @@ ID Verification
 <p>In order to manage your account, click the icon with your photo on the upper right hand side of the navigation bar.</p>
 <p>In order to qualify for our premium membership all Pet Sitters and Pet Owners must pass ID verification. You can find out more about it <NamedLink name="YotiPage">here</NamedLink>.</p>
 </div>,
+
+<div>
+<h2>
+Yoti ID Verification
+</h2>
+<p>We use Yoti.com to confirm your identity. In order to display the ID verified badge on your listing, you need to complete the Yoti verification.</p>
+<p>It only takes a few minutes to complete and helps to keep our community safe.</p>
+<p>Listings without verification may be removed.</p>
+</div>,
+
+<div>
+<h2>
+Reviews
+</h2>
+<p>Trust between sellers and buyers is critical for the success of a marketplace like Trust My Pet Sitter. One way to build trust between our users is to allow them to rate and comment each other after a transaction. This is how trust is built within our  Trust My Pet Sitter Community.</p>
+<h3>How do reviews work?</h3>
+<p>After a transaction is completed, both parties can review each other. A review consists of:</p>
+<ul className={css.gUL}>
+  <li>positive or negative rating (thumbs up or down)</li>
+  <li>A free-form text comment</li>
+</ul>
+<h3>Can users skip the feedback process?</h3>
+<p>Yes, users can choose not to review the other party. However, they can't refuse a review from the other party after a completed transaction.</p>
+<h3>Pet Service Reviews</h3>
+<p>Our Pet Services marketplace is currently built as a customer contact portal, therefore only registered premium members of Trust My Pet Sitter can leave reviews for Services.</p>
+</div>,
+
+<div>
+<h2>
+Virtual Vet Support
+</h2>
+<p>When you join the Trust My Pet Sitter Community all Pet Sitter bookings are covered by our 24/7 Vet Advice Line. Trust My Pet Sitter have teamed up with PawSquad, the UK’s leading online veterinary consultation service.</p>
+<p>You can read more <NamedLink name="PawSquadPage">here</NamedLink>.</p>
+</div>,
+
+<div>
+  <h2>Home Insurance</h2>
+  <p>All bookings are covered by our Insurance backed guarantee. More information about how we use Insurance backed guarantee will be available soon.
+</p>
+</div>,
 ]
 
 const GeneralQuestionsPage = () => {
@@ -113,7 +154,7 @@ const GeneralQuestionsPage = () => {
           <div className={css.questionMain}>
             <div className={css.pageContent}>
               <div><h3 className={css.helpTitle}>General Questions</h3></div>
-              <div className={css.logoWrap}><img src={logo} /></div>
+              <div className={css.logoWrap}><img src={user} /></div>
             </div>
           </div>
 
@@ -191,6 +232,40 @@ const GeneralQuestionsPage = () => {
                     <NavLink to="/general/8" className={css.link} activeClassName={css.activeLink} >
                       <div className={css.collapseItem}>
                         <a>8. ID Verification</a>
+                      </div>
+                    </NavLink>
+                  </Tab>
+
+                  <label for="collapsible1" className={css.lblToggle}><span className={css.collapsibleTitle}>Trust and Safety</span></label>
+
+                  <Tab>
+                    <NavLink to="/general/9" className={css.link} activeClassName={css.activeLink} >
+                      <div className={css.collapseItem}>
+                        <a>9. Yoti ID Verification</a>
+                      </div>
+                    </NavLink>
+                  </Tab>
+
+                  <Tab>
+                    <NavLink to="/general/10" className={css.link} activeClassName={css.activeLink} >
+                      <div className={css.collapseItem}>
+                        <a>10. Reviews</a>
+                      </div>
+                    </NavLink>
+                  </Tab>
+
+                  <Tab>
+                    <NavLink to="/general/11" className={css.link} activeClassName={css.activeLink} >
+                      <div className={css.collapseItem}>
+                        <a>11. Virtual Vet Support</a>
+                      </div>
+                    </NavLink>
+                  </Tab>
+
+                  <Tab>
+                    <NavLink to="/general/12" className={css.link} activeClassName={css.activeLink} >
+                      <div className={css.collapseItem}>
+                        <a>12. Home Insurance</a>
                       </div>
                     </NavLink>
                   </Tab>
