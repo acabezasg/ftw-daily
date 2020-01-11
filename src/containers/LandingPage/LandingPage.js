@@ -130,6 +130,7 @@ export const LandingPageComponent = props => {
                   <div className={css.singleIcon}>
                   <img src="https://i.imgur.com/D5dDCHL.png"></img>
                  </div>
+                 <hr className={css.serviceHr}></hr>
                  <h3>STEP 1</h3>
                  <h2>Find Pet Service</h2>
                  <p>Filter your results based on experience or services offered.</p>
@@ -139,6 +140,7 @@ export const LandingPageComponent = props => {
                   <div className={css.singleIcon}>
                   <img src="https://i.imgur.com/95qkUzE.png"></img>
                  </div>
+                 <hr className={css.serviceHr}></hr>
                  <h3>STEP 2</h3>
                  <h2>Check Reviews</h2>
                  <p>Filter your results based on experience or services offered.</p>
@@ -148,6 +150,7 @@ export const LandingPageComponent = props => {
                   <div className={css.singleIcon}>
                   <img src="https://i.imgur.com/FWSDzWF.png"></img>
                  </div>
+                 <hr className={css.serviceHr}></hr>
                  <h3>STEP 3</h3>
                  <h2>Contact Pet Service</h2>
                  <p>Filter your results based on experience or services offered.</p>
