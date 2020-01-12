@@ -604,7 +604,7 @@ export class ListingPageComponent extends Component {
                     <div className={css.bookingPanel}>
                       {
                         user_type == 2 ?
-                        <Button data-tip="" data-for="claim" className={css.claimbtn} onClick={() => {
+                          <Button data-tip="" data-for="claim" className={css.claimbtn} onClick={() => {
                             onClaimListing(currentListing).then((res) => {
                               this.props.history.push(
                                 createResourceLocatorString('EditListingPage', routeConfiguration(), { slug: createSlug(res.data.data.attributes.title), id: res.data.data.id.uuid, type: 'draft', tab: 'description' }, {})
@@ -613,38 +613,38 @@ export class ListingPageComponent extends Component {
                           }}><span>Claim Listing</span><img src={claim} /></Button> : null
                       }
 
-                            <ReactTooltip id="claim" className={css.claimTip} effect="solid">
-                              <span className={css.tipColor}>
-                                Are you the Business Owner? Click the button and Claim the Listing!
+                      <ReactTooltip id="claim" className={css.claimTip} effect="solid">
+                        <span className={css.tipColor}>
+                          Are you the Business Owner? Click the button and Claim the Listing!
                               </span>
-                            </ReactTooltip>
+                      </ReactTooltip>
+
+                      {currentListing.attributes.publicData.requiredDates ? (
+                        <div className={css.required}>
+                          <div className={css.bookingHeading}>
+                            <h2 className={css.bookingTitle}>
+                              Contact <span className={css.username}>{makeContact}</span>
+                            </h2>
+                          </div>
+                          <p className={css.bookingTime} data-tip="" data-for="test">
+                            <img className={css.pcDates} src={calendar} />
+                            {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
+                          </p>
+                          <ReactTooltip id="test" className={css.customTip} effect="solid">
+                            <span className={css.tipColor}>
+                              Pet Owner is seeking a Pet Sitter for these dates. Are you available?
+                              Send a Message!
+                            </span>
+                          </ReactTooltip>
+                          <hr className={css.divhr} />
+                        </div>
+                      ) : null}
 
                       {
                         currentUser.attributes.profile.publicData.petOwnerMembership ||
                           currentUser.attributes.profile.publicData.petSitterMembership ||
                           currentUser.attributes.profile.publicData.petServiceMembership ? (
                             <div>
-
-                              {currentListing.attributes.publicData.requiredDates ? (
-                                <div className={css.required}>
-                                  <div className={css.bookingHeading}>
-                                    <h2 className={css.bookingTitle}>
-                                      Contact <span className={css.username}>{makeContact}</span>
-                                    </h2>
-                                  </div>
-                                  <p className={css.bookingTime} data-tip="" data-for="test">
-                                    <img className={css.pcDates} src={calendar} />
-                                    {this.formattedDate(currentListing.attributes.publicData.requiredDates)}
-                                  </p>
-                                  <ReactTooltip id="test" className={css.customTip} effect="solid">
-                                    <span className={css.tipColor}>
-                                      Pet Owner is seeking a Pet Sitter for these dates. Are you available?
-                                      Send a Message!
-                            </span>
-                                  </ReactTooltip>
-                                  <hr className={css.divhr} />
-                                </div>
-                              ) : null}
 
                               <p className={css.smallPrint}>
                                 {user_type == 0 ? (
