@@ -737,7 +737,7 @@ export function claimListing(data) {
         {
           title: data.attributes.title,
           description: data.attributes.description,
-          publicData: { ...data.attributes.publicData, location: { "address": data.attributes.publicData.address } },
+          publicData: { ...data.attributes.publicData, location: { "address": data.attributes.publicData.address ? data.attributes.publicData.address : data.attributes.publicData.location.address } },
           ...(data.attributes.geolocation && { geolocation: { lat: data.attributes.geolocation.lat, lng: data.attributes.geolocation.lng } }),
           price: { amount: 0, currency: "GBP" }
         },
