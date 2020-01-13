@@ -123,7 +123,7 @@ export const LandingPageComponent = props => {
             <li className={css.section}>
               <div className={css.serviceContent}>
             <div className={css.sectionContent}>
-              <h1 className={css.servicetitle}>Pet Services are Welcomed</h1>
+              <h1 className={css.servicetitle}>Pet Services Directory</h1>
               <div className={css.serviceIcons}>
 
                 <div className={css.serviceSingle}>
