@@ -5,12 +5,14 @@ import { Form as FinalForm } from 'react-final-form';
 import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import config from '../../config';
-import { LINE_ITEM_NIGHT, LINE_ITEM_DAY,LINE_ITEM_HOUR, propTypes } from '../../util/types';
+import { LINE_ITEM_NIGHT, LINE_ITEM_DAY, LINE_ITEM_HOUR, propTypes } from '../../util/types';
+
+
 
 import * as validators from '../../util/validators';
 import { formatMoney } from '../../util/currency';
 import { types as sdkTypes } from '../../util/sdkLoader';
-import { Button, Form, FieldCurrencyInput,CategoryField } from '../../components';
+import { Button, Form, FieldCurrencyInput, CategoryField, FieldSelect } from '../../components';
 import css from './EditListingPricingForm.css';
 
 const { Money } = sdkTypes;
@@ -42,12 +44,12 @@ export const EditListingPricingFormComponent = props => (
       const translationKey = isHourly
         ? 'EditListingPricingForm.pricePerHour'
         : isNightly
-        ? 'EditListingPricingForm.pricePerNight'
-        : isDaily
-        ? 'EditListingPricingForm.pricePerDay'
-        : 'EditListingPricingForm.pricePerUnit';
+          ? 'EditListingPricingForm.pricePerNight'
+          : isDaily
+            ? 'EditListingPricingForm.pricePerDay'
+            : 'EditListingPricingForm.pricePerUnit';
 
-      const msg_key = user_type === 1?'EditListingPricingForm.pricePerNight':'EditListingPricingForm.pricePerHour';
+      const msg_key = user_type === 1 ? 'EditListingPricingForm.pricePerNight' : 'EditListingPricingForm.pricePerHour';
       const pricePerUnitMessage = intl.formatMessage({
         id: msg_key,
       });
@@ -111,7 +113,7 @@ export const EditListingPricingFormComponent = props => (
             </p>
           ) : null}
 
-          {user_type===2?(
+          {user_type === 2 ? (
             <CategoryField
               id="rate"
               name="rate"
@@ -122,8 +124,13 @@ export const EditListingPricingFormComponent = props => (
               categoryPlaceholder={categoryRatePlaceholder}
               categoryRequired={categoryRateRequired}
             />
-            ):null
+          ) : null
           }
+
+          <FieldSelect id="currency" name="currency" label="Select Currency" className={css.currency}>
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+          </FieldSelect>
 
           <FieldCurrencyInput
             id="price"
@@ -132,7 +139,7 @@ export const EditListingPricingFormComponent = props => (
             autoFocus
             label={pricePerUnitMessage}
             placeholder={pricePlaceholderMessage}
-            currencyConfig={config.currencyConfig}
+            currencyConfig={{ ...config.currencyConfig, currency: fieldRenderProps.values.currency }}
             validate={priceValidators}
           />
 

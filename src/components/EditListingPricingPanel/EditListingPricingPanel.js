@@ -16,7 +16,7 @@ const { Money } = sdkTypes;
 const EditListingPricingPanel = props => {
   const {
     className,
-    rootClassName, 
+    rootClassName,
     listing,
     onSubmit,
     onChange,
@@ -29,41 +29,44 @@ const EditListingPricingPanel = props => {
 
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
-  const { price,publicData } = currentListing.attributes;
+  const { price, publicData } = currentListing.attributes;
   const rate = config.custom.rate;
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-  const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
-  const publish = isPublished ?"title.":"createListingTitle.";
-  const PricingPanelTitle = 'EditListingPricingPanel.'+ publish + user_name;
+  const user_name = user_type === 0 ? "owner" : user_type === 1 ? "sitter" : "service";
+  const publish = isPublished ? "title." : "createListingTitle.";
+  const PricingPanelTitle = 'EditListingPricingPanel.' + publish + user_name;
   const panelTitle = isPublished ? (
     <FormattedMessage
       id={PricingPanelTitle}
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
   ) : (
-    <FormattedMessage id={PricingPanelTitle} />
-  );
+      <FormattedMessage id={PricingPanelTitle} />
+    );
+
 
   const priceCurrencyValid = price instanceof Money ? price.currency === config.currency : true;
-  const form = priceCurrencyValid ? (
+  const form =
     <EditListingPricingForm
       className={css.form}
-      initialValues={{ 
+      initialValues={{
         rate: publicData.rate,
         price: price,
-      }} 
+        currency: price.currency
+      }}
       onSubmit={values => {
-        const { 
+        const {
           rate,
-          price, 
+          price,
+          currency
         } = values;
 
         const updatedValues = {
-          publicData: { 
+          publicData: {
             rate,
           },
-          price:price,
-          
+          price: { ...price, currency }
+
         };
         onSubmit(updatedValues);
       }}
@@ -72,14 +75,10 @@ const EditListingPricingPanel = props => {
       updated={panelUpdated}
       updateInProgress={updateInProgress}
       fetchErrors={errors}
-      user_type ={ user_type}
-      rate = {rate}
+      user_type={user_type}
+      rate={rate}
     />
-  ) : (
-    <div className={css.priceCurrencyInvalid}>
-      <FormattedMessage id="EditListingPricingPanel.listingPriceCurrencyInvalid" />
-    </div>
-  );
+
 
   return (
     <div className={classes}>
