@@ -124,12 +124,29 @@
   background-repeat: no-repeat;
 }
 
+.petsitter {
+  background-image: url('./walking-outline-hover.png');
+  width: 32px;
+  height: 32px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .priceLabel:hover .paw,
 .priceLabelActive .paw {
   background-image: url('./service-hover.png');
 }
 
 .priceLabel:hover .location,
-.priceLabelActive .location {
+.priceLabelActive .location,
+.caret:hover .location {
   background-image: url('./bowl-hover.png');
+}
+
+.priceLabel:hover .petsitter,
+.priceLabelActive .petsitter,
+.priceLabel:hover .petsitter,
+.caret:hover .petsitter {
+  background-image: url('./walking-outline.png');
 }
