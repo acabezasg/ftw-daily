@@ -7,6 +7,7 @@ class ContactForm extends React.Component {
     super(props);
     this.state = {name: "", surname: "", email: "", message: ""};
   }
+  
 
   handleForm = e => {
     axios.post(
@@ -16,23 +17,32 @@ class ContactForm extends React.Component {
       )
 
       .then(function (response) {
-        let successMessage = document.querySelector('.success-message');
-        successMessage.innerHTML = JSON.stringify(response.data.title);
+        const { data } = response;
+        if (data.status == "success"){
+          let successMessage = document.querySelector('.success-message');
+          successMessage.innerHTML = "Thank you! We received your submission.";
+          successMessage.style.display = "block";
+        }
       })
       .catch(function (error) {
         let errorMessage = document.querySelector('.error-message');
-        errorMessage.innerHTML = JSON.stringify(error);
+        errorMessage.innerHTML = "There has been error. Please try again.";
+        errorMessage.style.display = "block";
       });
 
     e.preventDefault();
     this.setState({name: '', surname: '', email: '', message: ''}) // <= here
+
   }
     handleFields = e => this.setState({ [e.target.name]: e.target.value });  
+    
 
   render() {
     return (
 
       <form className={css.contactForm} onSubmit={this.handleForm}>
+          <div className="success-message"></div>
+          <div className="error-message"></div>
         <label htmlFor="name">Name</label>
         <input required type="text" id="name" placeholder="First name" name="name" onChange={this.handleFields} value={this.state.name} />
 
@@ -46,14 +56,6 @@ class ContactForm extends React.Component {
         <textarea required name="message" id="message" placeholder="Your message" onChange={this.handleFields} value={this.state.message}></textarea>
 
         <button id="how-button" type="submit">Send</button>
-
-          <div className="success-message">
-            <label></label>
-          </div>
-
-          <div className="error-message">
-            <label></label>
-          </div>
 
       </form>
     );
