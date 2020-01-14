@@ -77,7 +77,7 @@ const SliderHero = () => (
      <div className={css.carouselCaption}>
 
     <StyleRoot>
-        <h1 style={styles.fadeInUp}>Pet Services</h1>
+        <h1 style={styles.fadeInUp}>Pet Services Made Simple</h1>
         <p style={styles.fadeInUp}>Dog Walking | Pet Foods | Drop- in Sitters | Grooming | Vets | Pet Stores</p>
 
           <div className={css.submitContainer}>
