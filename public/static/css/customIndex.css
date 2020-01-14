@@ -156,13 +156,29 @@
     }
 
     .success-message {
-    color: #41a6df;
-    text-align: center;
+      border-radius: 3px;
+      color: #659f13;
+      background: #f2fae3;
+      -webkit-box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+      text-align: center;
+      height: 35px;
+      display: none;
+      line-height: 33px;
     }
 
-    .success-message {
-    color: #41a6df;
-    text-align: center;
+    .error-message {
+      border-radius: 3px;
+      color: #fff;
+      background: #aa0e08;
+      -webkit-box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+      text-align: center;
+      height: 35px;
+      display: none;
+      line-height: 33px;
     }
 
     .react-tabs__tab--selected {
