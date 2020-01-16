@@ -26,6 +26,9 @@ import { TopbarContainer } from '../../containers';
 import facebookImage from '../../assets/saunatimeFacebook-1200x630.jpg';
 import twitterImage from '../../assets/saunatimeTwitter-600x314.jpg';
 import howImage from './howitworks.png';
+import petservice1 from './petservices-1.png';
+import petservice2 from './petservices-2.png';
+import petservice3 from './petservices-3.png';
 import css from './LandingPage.css';
 
 export const LandingPageComponent = props => {
@@ -74,86 +77,40 @@ export const LandingPageComponent = props => {
 
           <ul className={css.sections}> 
 
-            <li className={css.section}>
-              <div className={css.sectionContentFirstChild}>
-                <HomepageVideo />
-              </div>
-            </li>
-
-            <li className={css.section}>
-              <div className={css.sectionContent}>
-              <h1 className={css.howtitle}>How it Works</h1>
-
-                <Stepper2 />
-
-            <div className={css.firstchistepper}>
-              <span className={css.step}>1</span>
-              <h2>Choose Pet Sitter</h2>
-              <p>Trust My Pet Sitter introduces a wider choice of local, national and international pet sitters.</p>
-            </div>
-
-            <div className={css.mobileStepper}>
-              <span className={css.step}>2</span>
-              <h2>Book Pet Sitter</h2>
-              <p>Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7 Vet Advice and Emergency Insurance</p>
-            </div>
-
-            <div className={css.mobileStepper}>
-              <span className={css.step}>3</span>
-              <h2>Pets are Happy at Home</h2>
-              <p>Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar space.</p>
-            
-            <div className={css.mobbt}>
-              <NamedLink name="SignupPage">Start Now</NamedLink>
-            </div>
-          </div>
-
-
-
-              </div>
-            </li>
-{/* 
-            <li className={css.section}>
-              <div className={css.sectionContentFirstChild}>
-                <SectionFeatured />
-              </div>
-            </li>
-*/}  
-
-            <li className={css.section}>
+          <li className={css.section}>
               <div className={css.serviceContent}>
             <div className={css.sectionContent}>
-              <h1 className={css.servicetitle}>Pet Services Directory</h1>
+              <h1 className={css.servicetitle}>The Largest Pet Services Directory is right here!</h1>
               <div className={css.serviceIcons}>
 
                 <div className={css.serviceSingle}>
                   <div className={css.singleIcon}>
-                  <img src="https://i.imgur.com/D5dDCHL.png"></img>
+                  <img src={petservice1}></img>
                  </div>
                  <hr className={css.serviceHr}></hr>
                  <h3>STEP 1</h3>
-                 <h2>Find Pet Service</h2>
-                 <p>Filter your results based on experience or services offered.</p>
+                 <h2>Search by Location</h2>
+                 <p>Find the top rated Pet Services in your local area.</p>
                 </div>
 
                 <div className={css.serviceSingle}>
                   <div className={css.singleIcon}>
-                  <img src="https://i.imgur.com/95qkUzE.png"></img>
+                  <img src={petservice2}></img>
                  </div>
                  <hr className={css.serviceHr}></hr>
                  <h3>STEP 2</h3>
-                 <h2>Check Reviews</h2>
-                 <p>Filter your results based on experience or services offered.</p>
+                 <h2>Search by Type</h2>
+                 <p>Find Dog Walkers, Groomers, Vets, Pet Stores, Daycare and more...</p>
                 </div>
 
                 <div className={css.serviceSingle}>
                   <div className={css.singleIcon}>
-                  <img src="https://i.imgur.com/FWSDzWF.png"></img>
+                  <img src={petservice3}></img>
                  </div>
                  <hr className={css.serviceHr}></hr>
                  <h3>STEP 3</h3>
-                 <h2>Contact Pet Service</h2>
-                 <p>Filter your results based on experience or services offered.</p>
+                 <h2>Read Reviews</h2>
+                 <p>Read reviews from verified pet parents at Trust My Pet Sitter.</p>
                 </div>
 
               </div>
@@ -164,6 +121,7 @@ export const LandingPageComponent = props => {
             </div>
             </li>
 
+            
             <li className={(css.sections, css.whyUseBg)}>
               <div className={css.sectionContent}>
                 <h1>Why use Trust My Pet Sitter?</h1>
@@ -211,6 +169,52 @@ export const LandingPageComponent = props => {
                 </div>
               </div>
             </li>
+
+            <li className={css.section}>
+              <div className={css.sectionContentFirstChild}>
+                <HomepageVideo />
+              </div>
+            </li>
+
+            <li className={css.section}>
+              <div className={css.sectionContent}>
+              <h1 className={css.howtitle}>How it Works</h1>
+
+                <Stepper2 />
+
+            <div className={css.firstchistepper}>
+              <span className={css.step}>1</span>
+              <h2>Choose Pet Sitter</h2>
+              <p>Trust My Pet Sitter introduces a wider choice of local, national and international pet sitters.</p>
+            </div>
+
+            <div className={css.mobileStepper}>
+              <span className={css.step}>2</span>
+              <h2>Book Pet Sitter</h2>
+              <p>Book your Pet Sitter using our secure payment provider. All bookings are covered by 24/7 Vet Advice and Emergency Insurance</p>
+            </div>
+
+            <div className={css.mobileStepper}>
+              <span className={css.step}>3</span>
+              <h2>Pets are Happy at Home</h2>
+              <p>Your Pet stays home with our verified Pet Sitter, happy and secure in their own familiar space.</p>
+            
+            <div className={css.mobbt}>
+              <NamedLink name="SignupPage">Start Now</NamedLink>
+            </div>
+          </div>
+
+
+
+              </div>
+            </li>
+{/* 
+            <li className={css.section}>
+              <div className={css.sectionContentFirstChild}>
+                <SectionFeatured />
+              </div>
+            </li>
+*/}  
             
             <li className={css.section}>
               <div className={css.sectionContent}>

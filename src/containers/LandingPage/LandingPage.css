@@ -66,10 +66,6 @@
   overflow: auto;
 }
 
-.sections .section:nth-child(3) {
-  display: none;
-}
-
 /* Square corners for the last section if it's even */
 .section:nth-of-type(2n):last-of-type {
   @media (--viewportMedium) {
@@ -128,15 +124,15 @@
   margin: 50px 0 !important;
   }}
 
-.section:nth-child(2) { 
+.section:nth-child(4) { 
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
-  url(https://i.imgur.com/IQEzaom.png);
+  url(howitworks-banner.png);
   background-size: cover;
   background-position: center;
   position: relative;
  }
 
-.section:nth-child(2):before {
+.section:nth-child(4):before {
   content: "";
   position: absolute;
   width : 100%;
@@ -184,6 +180,21 @@
   display: flex;
   text-align: center;
 } 
+
+@media (max-width: 580px) {
+  .serviceSingle {
+    width: 100% !important;
+    padding-bottom: 50px !important;
+  }
+
+  .serviceIcons .serviceSingle:nth-child(3) {
+    padding-bottom: 0 !important;
+  }
+
+  .serviceIcons {
+    flex-wrap: wrap;
+  }
+}
 
 @media (max-width: 600px) {
   .whyUse {
