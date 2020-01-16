@@ -100,7 +100,7 @@ export const LandingPageComponent = props => {
                  <hr className={css.serviceHr}></hr>
                  <h3>STEP 2</h3>
                  <h2>Search by Type</h2>
-                 <p>Find Dog Walkers, Groomers, Vets, Pet Stores, Daycare and more...</p>
+                 <p>Find Dog Walkers, Groomers, Vets, Pet Food, Daycare and more...</p>
                 </div>
 
                 <div className={css.serviceSingle}>
