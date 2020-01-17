@@ -59,17 +59,17 @@ export class BookingDatesFormComponent extends Component {
         </div>
       );
     }
-   
-  
-    if (unitPrice.currency !== config.currency) {
-      return (
-        <div className={classes}>
-          <p className={css.error}>
-            <FormattedMessage id="BookingDatesForm.listingCurrencyInvalid" />
-          </p>
-        </div>
-      );
-    }
+
+
+    // if (unitPrice.currency !== config.currency) {
+    //   return (
+    //     <div className={classes}>
+    //       <p className={css.error}>
+    //         <FormattedMessage id="BookingDatesForm.listingCurrencyInvalid" />
+    //       </p>
+    //     </div>
+    //   );
+    // }
 
     return (
       <FinalForm
@@ -117,17 +117,17 @@ export class BookingDatesFormComponent extends Component {
           const bookingData =
             startDate && endDate
               ? {
-                  unitType,
-                  unitPrice,
-                  startDate,
-                  endDate,
+                unitType,
+                unitPrice,
+                startDate,
+                endDate,
 
-                  // NOTE: If unitType is `line-item/units`, a new picker
-                  // for the quantity should be added to the form.
-                  quantity: 1,
-                }
+                // NOTE: If unitType is `line-item/units`, a new picker
+                // for the quantity should be added to the form.
+                quantity: 1,
+              }
               : null;
-          
+
           const bookingInfo = bookingData ? (
             <div className={css.priceBreakdownContainer}>
               <h3 className={css.priceBreakdownTitle}>
@@ -196,10 +196,10 @@ export class BookingDatesFormComponent extends Component {
                 </PrimaryButton>
                 <hr className={css.stripeHr} />
                 <a className={css.submitHref} href="https://stripe.com" target="_blank">
-                <img className={css.stripeImg} src={stripe} />
-                <p class={css.smallPrint}>
-                <span>Powered by Stripe</span>
-                </p>
+                  <img className={css.stripeImg} src={stripe} />
+                  <p class={css.smallPrint}>
+                    <span>Powered by Stripe</span>
+                  </p>
                 </a>
               </div>
             </Form>
