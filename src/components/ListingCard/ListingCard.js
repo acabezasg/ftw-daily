@@ -140,7 +140,10 @@ export const ListingCardComponent = props => {
           />
         </div>
       </div>
-      {
+
+      <div className={css.info}>
+        <div className={css.price}>
+        {
         publicData.service.length ?
           <div className={css.serviceType}>
             {publicData.service.map((type, index) => {
@@ -152,10 +155,7 @@ export const ListingCardComponent = props => {
               );
             })}
           </div> : null
-      }
-
-      <div className={css.info}>
-        <div className={css.price}>
+        }
           {price.amount !== 0 ? (
             <div>
               <div className={css.priceValue} title={priceTitle}>

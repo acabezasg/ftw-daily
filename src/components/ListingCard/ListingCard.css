@@ -58,6 +58,7 @@
   padding: 15px;
   background: #41a6df;
   padding: 15px;
+  align-items: center;
 }
 
 .price {
@@ -66,7 +67,6 @@
   flex-direction: column;
   justify-content: flex-start;
   flex-shrink: 0;
-  margin-right: 18px;
 }
 
 .priceValue {
