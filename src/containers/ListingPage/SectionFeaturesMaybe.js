@@ -6,38 +6,37 @@ import css from './ListingPage.css';
 
 const SectionFeaturesMaybe = props => {
   const { options, publicData } = props;
-  const { options1,options2,options3} = options;
+  const { options1, options2, options3 } = options;
   if (!publicData) {
     return null;
   }
-  
-  const selectedOptions1 = publicData && publicData.service ? [publicData.service] : [];
+
+  const selectedOptions1 = publicData && publicData.service ? publicData.service : [];
   const selectedOptions2 = publicData && publicData.amenities ? publicData.amenities : [];
-  
-  const selectedOptions3 = selectedOptions2 ? (typeof(publicData.dog) == 'string'?[publicData.dog]:publicData.dog): [];
-  console.log('user_type,service',publicData.user_type,publicData.service);
-  
+
+  const selectedOptions3 = selectedOptions2 ? (typeof (publicData.dog) == 'string' ? [publicData.dog] : publicData.dog) : [];
+
   return (
     <div>
       {
-        publicData.user_type === 2?
-        (
-          <div className={css.sectionFeatures}>
-            <h2 className={css.featuresTitle}>
-              <FormattedMessage id="ListingPage.serviceTitle" />
-            </h2>
-            <PropertyGroup
-              id="ListingPage.service" 
-              options={options1}
-              selectedOptions={selectedOptions1}
-              twoColumns={true}
-              flag = {3}
-              publicData = {publicData}
-              
-            />
-          </div>
-        )
-        :null
+        publicData.user_type === 2 ?
+          (
+            <div className={css.sectionFeatures}>
+              <h2 className={css.featuresTitle}>
+                <FormattedMessage id="ListingPage.serviceTitle" />
+              </h2>
+              <PropertyGroup
+                id="ListingPage.service"
+                options={options1}
+                selectedOptions={selectedOptions1}
+                twoColumns={true}
+                flag={3}
+                publicData={publicData}
+
+              />
+            </div>
+          )
+          : null
       }
       <div className={css.sectionFeatures}>
         <h2 className={css.featuresTitle}>
@@ -48,9 +47,9 @@ const SectionFeaturesMaybe = props => {
           options={options2}
           selectedOptions={selectedOptions2}
           twoColumns={true}
-          flag = {3}
-          publicData = {publicData}
-          
+          flag={3}
+          publicData={publicData}
+
         />
       </div>
 
@@ -63,9 +62,9 @@ const SectionFeaturesMaybe = props => {
           options={options3}
           selectedOptions={selectedOptions3}
           twoColumns={true}
-          flag = {3}
-          publicData = {publicData}
-          
+          flag={3}
+          publicData={publicData}
+
         />
       </div>
     </div>

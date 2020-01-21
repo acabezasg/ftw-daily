@@ -60,7 +60,7 @@ export class EditListingFeaturesFormComponent extends Component {
 
   init(data, pet_ary, key_ary) {
     if (pet_ary && pet_ary.length) {
-      pet_ary.forEach(function(f, i) {
+      pet_ary.forEach(function (f, i) {
         data[key_ary[f]] = !data[key_ary[f]];
       });
     }
@@ -266,7 +266,7 @@ export class EditListingFeaturesFormComponent extends Component {
             <Form className={classes} onSubmit={handleSubmit}>
               {errorMessage}
               {errorMessageShowListing}
-              <h3>{homeTitle}</h3>
+              <h3></h3>
               <FieldCheckboxGroup
                 className={css.features}
                 id={name}

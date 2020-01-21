@@ -176,3 +176,19 @@
   position: relative;
   bottom: 3.71px;
 }
+
+.serviceType{
+  background: #41a6df;
+  color:white;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.serviceType > span{
+  max-width: 300px;
+  word-break: break-all;
+}
+
+.serviceType span span{
+  padding: 5px;
+}

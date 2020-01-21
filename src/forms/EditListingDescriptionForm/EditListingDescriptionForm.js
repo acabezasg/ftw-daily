@@ -7,7 +7,7 @@ import { intlShape, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { maxLength, required, composeValidators } from '../../util/validators';
-import { Form, Button, FieldTextInput ,CategoryField} from '../../components';
+import { Form, Button, FieldTextInput, CategoryField, FieldCheckboxGroup } from '../../components';
 // import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.css';
@@ -19,7 +19,7 @@ const EditListingDescriptionFormComponent = props => (
     {...props}
     render={fieldRenderProps => {
       const {
-        
+
         className,
         disabled,
         handleSubmit,
@@ -33,10 +33,10 @@ const EditListingDescriptionFormComponent = props => (
         user_type,
         service,
       } = fieldRenderProps;
-      const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
-      const titleMessage = intl.formatMessage({ id: 'EditListingDescriptionForm.title.'+user_name });
+      const user_name = user_type === 0 ? "owner" : user_type === 1 ? "sitter" : "service";
+      const titleMessage = intl.formatMessage({ id: 'EditListingDescriptionForm.title.' + user_name });
       const titlePlaceholderMessage = intl.formatMessage({
-        id: 'EditListingDescriptionForm.titlePlaceholder.'+user_name,
+        id: 'EditListingDescriptionForm.titlePlaceholder.' + user_name,
       });
       const titleRequiredMessage = intl.formatMessage({
         id: 'EditListingDescriptionForm.titleRequired',
@@ -49,10 +49,10 @@ const EditListingDescriptionFormComponent = props => (
       );
 
       const descriptionMessage = intl.formatMessage({
-        id: 'EditListingDescriptionForm.description.'+user_name,
+        id: 'EditListingDescriptionForm.description.' + user_name,
       });
       const descriptionPlaceholderMessage = intl.formatMessage({
-        id: 'EditListingDescriptionForm.descriptionPlaceholder.'+user_name,
+        id: 'EditListingDescriptionForm.descriptionPlaceholder.' + user_name,
       });
       const maxLength60Message = maxLength(maxLengthMessage, TITLE_MAX_LENGTH);
       const descriptionRequiredMessage = intl.formatMessage({
@@ -104,7 +104,7 @@ const EditListingDescriptionFormComponent = props => (
           {errorMessageCreateListingDraft}
           {errorMessageUpdateListing}
           {errorMessageShowListing}
-          
+
           {/* {
             user_type ==2?
             (
@@ -120,19 +120,18 @@ const EditListingDescriptionFormComponent = props => (
             ):null
           } */}
           {
-            user_type === 2?
-            (
-              <CategoryField
-                id="service"
-                name="service"
-                className={css.category}
-                categories={service}
-                intl={intl}
-                categoryLabel={categoryServiceLabel}
-                categoryPlaceholder={categoryServicePlaceholder}
-                categoryRequired={categoryServiceRequired}
-              />
-            ):null
+            user_type === 2 ?
+              (
+                <div>
+                  <h3>Please choose your Pet Service Type</h3>
+                  <FieldCheckboxGroup
+                    className={css.features}
+                    id="service"
+                    name="service"
+                    options={service}
+                  />
+                </div>
+              ) : null
           }
           <FieldTextInput
             id="title"

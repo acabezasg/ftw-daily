@@ -82,12 +82,25 @@ export const ListingCardComponent = props => {
   const unitTranslationKey = isHourly
     ? 'ListingCard.perHour'
     : isNightly
-    ? 'ListingCard.perNight'
-    : isDaily
-    ? 'ListingCard.perDay'
-    : isWeekly
-    ? 'ListingCard.perWeek'
-    : 'ListingCard.perUnit';
+      ? 'ListingCard.perNight'
+      : isDaily
+        ? 'ListingCard.perDay'
+        : isWeekly
+          ? 'ListingCard.perWeek'
+          : 'ListingCard.perUnit';
+
+
+  publicData.service = publicData.service ? typeof publicData.service == "string" ? Array(publicData.service) : publicData.service : []
+
+
+  const serviceCategoriesMap = {
+    'walking': 'Dog Walking',
+    'surgeon': 'Veterinary Surgeons',
+    'groomer': 'Pet Groomer',
+    'store': 'Pet Store',
+    'sitter': 'Doggy Daycare',
+    'food': 'Food'
+  }
 
   return (
     <NamedLink className={classes} name="ListingPage" params={{ id, slug }}>
@@ -102,8 +115,8 @@ export const ListingCardComponent = props => {
               category === 'owner'
                 ? `${css.cardCategory} ${css.cardCategoryOwner}`
                 : category === 'sitter'
-                ? `${css.cardCategory} ${css.cardCategorySitter}`
-                : `${css.cardCategory} ${css.cardCategoryService}`
+                  ? `${css.cardCategory} ${css.cardCategorySitter}`
+                  : `${css.cardCategory} ${css.cardCategoryService}`
             }
           >
             {category}
@@ -127,6 +140,20 @@ export const ListingCardComponent = props => {
           />
         </div>
       </div>
+      {
+        publicData.service.length ?
+          <div className={css.serviceType}>
+            {publicData.service.map((type, index) => {
+              return (
+                <span>
+                  {serviceCategoriesMap[type] && serviceCategoriesMap[type].charAt(0).toUpperCase() + serviceCategoriesMap[type].slice(1)}
+                  {index != publicData.service.length - 1 ? <span className={css.separator}>|</span> : null}
+                </span>
+              );
+            })}
+          </div> : null
+      }
+
       <div className={css.info}>
         <div className={css.price}>
           {price.amount !== 0 ? (
@@ -141,6 +168,7 @@ export const ListingCardComponent = props => {
           ) : null}
         </div>
         <div className={css.mainInfo}>
+
           <div className={css.title}>
             {richText(title, {
               longWordMinLength: MIN_LENGTH_FOR_LONG_WORDS,

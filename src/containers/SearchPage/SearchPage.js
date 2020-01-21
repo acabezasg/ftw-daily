@@ -385,6 +385,7 @@ SearchPage.loadData = (params, search) => {
       'price',
       'publicData.rate',
       'publicData.user_type',
+      'publicData.service'
     ],
     'fields.user': ['profile.displayName', 'profile.abbreviatedName', 'profile.publicData'],
     'fields.image': ['variants.landscape-crop', 'variants.landscape-crop2x'],
