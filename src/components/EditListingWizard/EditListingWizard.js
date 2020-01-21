@@ -73,10 +73,9 @@ const tabCompleted = (tab, listing) => {
     publicData,
   } = listing.attributes;
   const images = listing.images;
-
   switch (tab) {
     case DESCRIPTION:
-      return !!(description && title);
+      return !!(description && title && (publicData.user_type == 2 ? (publicData.service && publicData.service.length > 0) : true));
     case FEATURES:
       return !!(publicData && publicData.amenities);
     case HOME:
@@ -230,10 +229,10 @@ class EditListingWizard extends Component {
       user_type === 0
         ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PHOTOS]
         : user_type === 1
-        ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PRICING, PHOTOS]
-        : service === 'walking' || service === 'sitter'
-        ? [DESCRIPTION, FEATURES, LOCATION, PRICING, PHOTOS]
-        : [DESCRIPTION, FEATURES, LOCATION, PRICING, PHOTOS];
+          ? [DESCRIPTION, FEATURES, HOME, LOCATION, ...availabilityMaybe, PRICING, PHOTOS]
+          : service === 'walking' || service === 'sitter'
+            ? [DESCRIPTION, FEATURES, LOCATION, PRICING, PHOTOS]
+            : [DESCRIPTION, FEATURES, LOCATION, PRICING, PHOTOS];
 
     const selectedTab = tab_ary[0];
     const isNewListingFlow = [LISTING_PAGE_PARAM_TYPE_NEW, LISTING_PAGE_PARAM_TYPE_DRAFT].includes(
