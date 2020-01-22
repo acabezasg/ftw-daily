@@ -80,7 +80,7 @@ export const LandingPageComponent = props => {
           <li className={css.section}>
               <div className={css.serviceContent}>
             <div className={css.sectionContent}>
-              <h1 className={css.servicetitle}>The Largest Pet Services Directory is right here!</h1>
+              <h1 className={css.servicetitle}>The Largest Pet Services Directory<br />is right here!</h1>
               <div className={css.serviceIcons}>
 
                 <div className={css.serviceSingle}>
