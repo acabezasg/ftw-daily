@@ -191,7 +191,7 @@ const EditListingWizardTab = props => {
       } else {
         if (user_type == 1) {
           submitButtonTranslationKey = 'EditListingWizard.EditFeaturesSitter';
-        } else if (user_type == 0) { 
+        } else if (user_type == 0) {
           submitButtonTranslationKey = 'EditListingWizard.saveEditHome';
         } else {
           submitButtonTranslationKey = 'EditListingWizard.saveEditPetTypes';
@@ -240,7 +240,7 @@ const EditListingWizardTab = props => {
         submitButtonTranslationKey = isNewListingFlow
           ? 'EditListingWizard.saveNewLocation'
           : 'EditListingWizard.saveEditLocation';
-      } 
+      }
       else if (user_type == 0) {
         submitButtonTranslationKey = isNewListingFlow
           ? 'EditListingWizard.EditLocationOwner'

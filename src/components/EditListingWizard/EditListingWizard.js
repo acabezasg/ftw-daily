@@ -269,7 +269,8 @@ class EditListingWizard extends Component {
       this.hasScrolledToTab = true;
     }
 
-    const tabLink = tab => {
+    const tabLink = (tab, user_name) => {
+      tab += '_' + user_name;
       return { name: 'EditListingPage', params: { ...params, tab } };
     };
 
@@ -297,7 +298,7 @@ class EditListingWizard extends Component {
                 key={tab}
                 tabId={`${id}_${tab}`}
                 tabLabel={tabLabel(intl, tab, user_name)}
-                tabLinkProps={tabLink(tab)}
+                tabLinkProps={tabLink(tab, user_name)}
                 selected={selectedTab === tab}
                 disabled={isNewListingFlow && !tabsStatus[tab]}
                 tab={tab}
