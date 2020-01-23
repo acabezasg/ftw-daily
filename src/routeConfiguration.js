@@ -49,6 +49,7 @@ import {
   PetSittersUk,
   AboutUsPage,
   AffiliatePage,
+  CrowdFundingPage,
 
 } from './containers';
 
@@ -132,6 +133,11 @@ const routeConfiguration = () => {
       path: '/affiliate',
       name: 'AffiliatePage',
       component: AffiliatePage,
+    },
+    {
+      path: '/crowdfunding',
+      name: 'CrowdFundingPage',
+      component: CrowdFundingPage,
     },
     {
       path: '/virtualvet',

@@ -43,8 +43,8 @@ class ContactForm extends React.Component {
   render() {
     return (
       <form className={css.contactForm} onSubmit={this.handleForm}>
-        <div className="success-message"></div>
-        <div className="error-message"></div>
+        <div class="success-message"></div>
+        <div class="error-message"></div>
         <label htmlFor="name">Name</label>
         <input
           required

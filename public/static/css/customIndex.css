@@ -168,6 +168,10 @@
       line-height: 33px;
     }
 
+    .success-crowd {
+      margin-bottom: 15px;
+    }
+
     .error-message {
       border-radius: 3px;
       color: #fff;
