@@ -39,7 +39,8 @@ const SliderHero = () => (
   <Carousel>
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img alt="First Slide" src={firstSlide} />
+        {/* <img alt="First Slide" src={firstSlide} /> */}
+        <img src="https://i.imgur.com/5UWHAVm.jpg"></img>
       </div>
 
       <div className={css.carouselCaption}>
