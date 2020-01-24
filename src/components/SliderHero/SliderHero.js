@@ -110,7 +110,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/VjCl8QS.jpg"></img>
+        <img src="https://i.imgur.com/XMzqO2e.jpg"></img>
       </div>
 
       <div className={css.carouselCaption}>
