@@ -427,7 +427,8 @@
 }
 
 .featuredSection {
-  margin: 30px auto;
+  padding: 30px 0;
+  margin: 0 auto;
   max-width: 1128px;
 }
 
@@ -436,6 +437,13 @@
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
   align-items: center;
+}
+
+.featuredIn {
+  position: relative;
+  z-index: 99;
+  box-shadow: 0 0px 6px 0 #8a8a8a;
+  background: #f3f3f3;
 }
 
 .featuredItem img {
@@ -463,7 +471,7 @@
 
 @media (max-width: 700px) {
   .featuredSection {
-    margin: 60px auto;
+    padding: 60px 0;
   }
   .featuredWrapper {
     grid-template-columns: inherit;

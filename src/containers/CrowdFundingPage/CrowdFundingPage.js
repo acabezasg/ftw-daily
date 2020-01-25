@@ -1,5 +1,5 @@
-import React from 'react';
-import { StaticPage, TopbarContainer } from '../../containers';
+import React from "react";
+import { StaticPage, TopbarContainer } from "../../containers";
 import {
   ContactForm,
   GoogleMap,
@@ -9,15 +9,15 @@ import {
   LayoutWrapperFooter,
   Footer,
   ExternalLink,
-  CrowdFundingForm,
+  CrowdFundingForm
   // ExternalLink,
-} from '../../components';
+} from "../../components";
 
-import css from './CrowdFundingPage.css';
-import banner from './banner.jpg';
-import affiliate from './affiliate.png';
-import paw from './paw.png';
-import img from './sitters.jpg';
+import css from "./CrowdFundingPage.css";
+import banner from "./banner.jpg";
+import affiliate from "./affiliate.png";
+import paw from "./paw.png";
+import img from "./sitters.jpg";
 
 const CrowdFundingPage = () => {
   // const { siteTwitterHandle, siteFacebookPage } = config;
@@ -105,4 +105,3 @@ const CrowdFundingPage = () => {
 };
 
 export default CrowdFundingPage;
-
