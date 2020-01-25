@@ -442,3 +442,34 @@
   width: 110px;
   object-fit: cover;
 }
+
+.featuredItem:nth-child(1) {
+  opacity: 1;
+}
+
+.featuredItem {
+  opacity: 0.7;
+}
+
+.featuredItem:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1128px) {
+  .featuredSection {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .featuredSection {
+    margin: 60px auto;
+  }
+  .featuredWrapper {
+    grid-template-columns: inherit;
+    grid-gap: 30px;
+  }
+  .featuredItem {
+    opacity: 1;
+  }
+}

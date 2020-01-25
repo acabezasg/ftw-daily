@@ -29,6 +29,10 @@ import howImage from './howitworks.png';
 import petservice1 from './petservices-1.png';
 import petservice2 from './petservices-2.png';
 import petservice3 from './petservices-3.png';
+import featured1 from './featuredin/1.png';
+import featured2 from './featuredin/2.png';
+import featured3 from './featuredin/3.png';
+import featured4 from './featuredin/4.png';
 import css from './LandingPage.css';
 
 export const LandingPageComponent = props => {
@@ -79,21 +83,21 @@ export const LandingPageComponent = props => {
 
           <li className={css.featuredSection}>
             <div className={css.featuredWrapper}>
-              <div className={css.featuredItem}>
+              <a className={css.featuredItem}>
                 FEATURED IN
-              </div>
-              <div className={css.featuredItem}>
-                <img src="https://images.squarespace-cdn.com/content/v1/591973799f74568eef634d06/1532424923526-QY6ZTV283T3IJ0DW0W28/ke17ZwdGBToddI8pDm48kBnujFwf5TXe-LG0nEhzqSZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzfCAoJPOtFAq_SF0_a_uKfHQ00gjW18qzbstil042EUlm1fKcw0z01Hj4CnJZcDF8/download.png" />
-              </div>
-              <div className={css.featuredItem}>
-                <img src="https://s2-prod.insider.co.uk/@trinitymirrordigital/chameleon-branding/publications/businessInsider/img/logo-businessInsider.png" />
-              </div>
-              <div className={css.featuredItem}>
-                <img src="https://www.ardanaiseig.com/wp-content/uploads/2015/12/sf-banner-logo-website-986x130.png" />     
-              </div>
-              <div className={css.featuredItem}>
-                <img src="https://upload.wikimedia.org/wikipedia/en/6/66/The_National_Newspaper_Logo.png" />
-              </div>
+              </a>
+              <a className={css.featuredItem}>
+                <img src={featured1} />
+              </a>
+              <a className={css.featuredItem}>
+                <img src={featured2} />
+              </a>
+              <a className={css.featuredItem}>
+                <img src={featured3} />     
+              </a>
+              <a className={css.featuredItem}>
+                <img src={featured4} />
+              </a>
             </div>
           </li>
 
