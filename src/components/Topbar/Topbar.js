@@ -179,13 +179,14 @@ class TopbarComponent extends Component {
     const initialSearchFormValues = {
       location: locationFieldsPresent
         ? {
-            search: address,
-            selectedPlace: { address, origin, bounds },
-          }
+          search: address,
+          selectedPlace: { address, origin, bounds },
+        }
         : null,
     };
 
-    const classes = classNames(rootClassName || css.root, css.topmenu, className);
+    const classes = classNames(rootClassName || css.root, className, this.props.location.pathname == '/' ? css.topmenuAbsolute : css.topmenu);
+
 
     return (
       <div className={classes}>

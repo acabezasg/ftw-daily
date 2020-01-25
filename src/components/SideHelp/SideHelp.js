@@ -45,7 +45,9 @@ class SideHelp extends React.Component {
 
     document.addEventListener('keydown', this.handleEscKey);
   };
-  closeNav = () => {
+
+
+  closeNav = (e) => {
     this.setState({
       showNav: false,
     });
@@ -59,6 +61,7 @@ class SideHelp extends React.Component {
     }
   };
 
+
   onSubmit(e) {
     e.preventDefault();
   }
@@ -70,6 +73,7 @@ class SideHelp extends React.Component {
   onClose = () => {
     this.setState({ single: false });
   };
+
 
   render() {
     const { showNav } = this.state;
@@ -137,7 +141,7 @@ class SideHelp extends React.Component {
       <div>
         <h3 className={css.insideTitle}>How Do I Find Homes and Pets to Sit?</h3>
         <p className={css.insideP}>
-          You can browse Pet Owners who have placed a listing in area or country specific locations. 
+          You can browse Pet Owners who have placed a listing in area or country specific locations.
           Get started by clicking the link on the home page “Find Homes to Sit” and you will then be redirected to the Trust My Pet Sitter key search page.
         </p>
         <h4>The Key Search Page</h4>
@@ -224,7 +228,7 @@ class SideHelp extends React.Component {
             <FormattedMessage id="Help">Help</FormattedMessage>
           </span>
         </span>
-        <div onClick={this.navCoverClick} className={css.navcover} style={navCoverStyle} />
+        <div onClick={this.closeNav} className={css.navcover} style={navCoverStyle} />
         <div name="side-nav" className={css.sidenav} style={sideNavStyle}>
           <div className={css.sideheader}>
             <h2 className={css.helptitle}>Recommended Help</h2>

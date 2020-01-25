@@ -62,15 +62,11 @@ const TopbarDesktop = props => {
       params={{ tab: currentUserHasListings ? 'sales' : 'orders' }}
     >
       <span className={css.signup}>
-        <img src={inbox} className={css.topbaricon} /> <FormattedMessage id="TopbarDesktop.inbox" />
+        <img src={inbox} className={css.topbariconTwo} /> <FormattedMessage id="TopbarDesktop.inbox" />
         {notificationDot}
       </span>
     </NamedLink>
   ) : null;
-
-
-
-  console.log(inbox)
 
   const currentPageClass = page => {
     const isAccountSettingsPage =
