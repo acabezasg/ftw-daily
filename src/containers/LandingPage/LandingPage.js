@@ -25,7 +25,6 @@ import { TopbarContainer } from "../../containers";
 
 import facebookImage from "../../assets/saunatimeFacebook-1200x630.jpg";
 import twitterImage from "../../assets/saunatimeTwitter-600x314.jpg";
-import howImage from "./howitworks.png";
 import petservice1 from "./petservices-1.png";
 import petservice2 from "./petservices-2.png";
 import petservice3 from "./petservices-3.png";
@@ -79,17 +78,15 @@ export const LandingPageComponent = props => {
           <TopbarContainer />
         </LayoutWrapperTopbar>
         <LayoutWrapperMain>
-          {/* 
+        {/* 
           <div className={css.heroContainer}>
             <SectionHero className={css.hero} history={history} location={location} />
           </div>
-*/}
-
+        */}
+<div>
           <SliderHero />
-
-          <ul className={css.sections}>
-            <div className={css.featuredIn}>
-              <li className={css.featuredSection}>
+          <div className={css.featuredIn}>
+              <div className={css.featuredSection}>
                 <div className={css.featuredWrapper}>
                   <div className={css.featuredItem}>FEATURED IN</div>
                   <a className={css.featuredItem}>
@@ -105,8 +102,12 @@ export const LandingPageComponent = props => {
                     <img src={featured4} />
                   </a>
                 </div>
-              </li>
+              </div>
             </div>
+
+        </div>
+
+          <ul className={css.sections}>
 
             <li className={css.section}>
               <div className={css.serviceContent}>
@@ -257,13 +258,6 @@ export const LandingPageComponent = props => {
                 </div>
               </div>
             </li>
-            {/* 
-            <li className={css.section}>
-              <div className={css.sectionContentFirstChild}>
-                <SectionFeatured />
-              </div>
-            </li>
-*/}
 
             <li className={css.section}>
               <div className={css.sectionContent}>
@@ -271,66 +265,6 @@ export const LandingPageComponent = props => {
               </div>
             </li>
 
-            {/*
-            <li className={css.section}>
-              <div id="how-padding" className={css.sectionContent}>
-                <div id="howitworks-title">
-                  <h1>Happy Pets = Happy Owners</h1>
-                </div>
-
-                <div id="how-it-works">
-                  <div id="three-containers">
-                    <h2>Live-in Pet Sitter</h2>
-
-                    <ul id="howitworks-ul">
-                      <li>24/7 Pet Care</li>
-                      <li>1:1 Play and Attention</li>
-                      <li>Own safe environmente</li>
-                      <li>Your home cared for</li>
-                      <li>Vetted Pet Sitters</li>
-                      <li>Perfect for nervous dogs</li>
-                      <li>Daily pics and videos</li>
-                      <li>You select your ideal sitter</li>
-                    </ul>
-                  </div>
-
-                  <div id="three-containers">
-                    <h2>Drop in Visits</h2>
-
-                    <ul id="howitworks-ul">
-                      <li>24/7 Pet Care</li>
-                      <li>1:1 Play and Attention</li>
-                      <li>Own safe environmente</li>
-                      <li>Your home cared for</li>
-                      <li>Vetted Pet Sitters</li>
-                      <li>Perfect for nervous dogs</li>
-                      <li>Daily pics and videos</li>
-                      <li>You select your ideal sitter</li>
-                    </ul>
-                  </div>
-
-                  <div id="three-containers">
-                    <h2>Dog Walkers</h2>
-
-                    <ul id="howitworks-ul">
-                      <li>24/7 Pet Care</li>
-                      <li>1:1 Play and Attention</li>
-                      <li>Own safe environmente</li>
-                      <li>Your home cared for</li>
-                      <li>Vetted Pet Sitters</li>
-                      <li>Perfect for nervous dogs</li>
-                      <li>Daily pics and videos</li>
-                      <li>You select your ideal sitter</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <a href="/s/listings" id="how-button">
-                  Explore
-                </a>
-              </div>
-            </li>
-            */}
           </ul>
         </LayoutWrapperMain>
         <LayoutWrapperFooter>
