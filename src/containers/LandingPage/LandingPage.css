@@ -439,8 +439,14 @@
   align-items: center;
 }
 
-.featuredIn {
+.sliderFeaturedWrapper {
   position: relative;
+}
+
+.featuredIn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   z-index: 99;
   box-shadow: 0 0px 6px 0 #8a8a8a;
   background: #f3f3f3;

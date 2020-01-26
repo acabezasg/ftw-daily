@@ -227,3 +227,7 @@
   position: relative;
   top: 1px;
 }
+
+.carousel-indicators {
+  bottom: 122px;
+}

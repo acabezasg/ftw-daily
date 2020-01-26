@@ -83,7 +83,7 @@ export const LandingPageComponent = props => {
             <SectionHero className={css.hero} history={history} location={location} />
           </div>
         */}
-<div>
+        <div className={css.sliderFeaturedWrapper}>
           <SliderHero />
           <div className={css.featuredIn}>
               <div className={css.featuredSection}>
