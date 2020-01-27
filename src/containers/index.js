@@ -14,6 +14,7 @@ export { default as EditListingPage } from './EditListingPage/EditListingPage';
 export { default as EmailVerificationPage } from './EmailVerificationPage/EmailVerificationPage';
 export { default as InboxPage } from './InboxPage/InboxPage';
 export { default as LandingPage } from './LandingPage/LandingPage';
+export { default as HomepageCopy } from './HomepageCopy/HomepageCopy';
 export { default as ListingPage } from './ListingPage/ListingPage';
 export { default as ManageListingsPage } from './ManageListingsPage/ManageListingsPage';
 export { default as NotFoundPage } from './NotFoundPage/NotFoundPage';

@@ -32,9 +32,9 @@ import featured1 from "./featuredin/1.png";
 import featured2 from "./featuredin/2.png";
 import featured3 from "./featuredin/3.png";
 import featured4 from "./featuredin/4.png";
-import css from "./LandingPage.css";
+import css from "./HomepageCopy.css";
 
-export const LandingPageComponent = props => {
+export const HomepageCopyComponent = props => {
   const { history, intl, location, scrollingDisabled } = props;
 
   // Schema for search engines (helps them to understand what this page is about)
@@ -277,7 +277,7 @@ export const LandingPageComponent = props => {
 
 const { bool, object } = PropTypes;
 
-LandingPageComponent.propTypes = {
+HomepageCopyComponent.propTypes = {
   scrollingDisabled: bool.isRequired,
 
   // from withRouter
@@ -300,10 +300,10 @@ const mapStateToProps = state => {
 // lifecycle hook.
 //
 // See: https://github.com/ReactTraining/react-router/issues/4671
-const LandingPage = compose(
+const HomepageCopy = compose(
   withRouter,
   connect(mapStateToProps),
   injectIntl
-)(LandingPageComponent);
+)(HomepageCopyComponent);
 
-export default LandingPage;
+export default HomepageCopy;
