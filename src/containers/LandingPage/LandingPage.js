@@ -83,6 +83,9 @@ export const LandingPageComponent = props => {
             <SectionHero className={css.hero} history={history} location={location} />
           </div>
         */}
+        <div className={css.testabs}>
+
+        </div>
         <div className={css.sliderFeaturedWrapper}>
           <SliderHero />
           <div className={css.featuredIn}>

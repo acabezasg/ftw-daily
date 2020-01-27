@@ -487,3 +487,13 @@
     opacity: 1;
   }
 }
+
+.testabs {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 999;
+  background: #937F4D;
+}
