@@ -81,7 +81,7 @@ const SliderHero = () => (
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Slider Title</h1>
+            <h1 style={styles.fadeInUp}>For Busy Professionals - and their Pets</h1>
             <p style={styles.fadeInUp}>
               Description
             </p>
