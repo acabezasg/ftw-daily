@@ -48,14 +48,11 @@ const SliderHero = () => (
           <div style={styles.fadeInUp}>
             <h1 style={styles.fadeInUp}>Elite Pet Sitting</h1>
             <p style={styles.fadeInUp}>
-              Bespoke, tailored pet care
+              Bespoke, Tailored Pet and Home Care
             </p>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -81,16 +78,13 @@ const SliderHero = () => (
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>For Busy Professionals - and their Pets</h1>
+            <h1 style={styles.fadeInUp}>For Busy Professionals</h1>
             <p style={styles.fadeInUp}>
-              Description
+              and their pets
             </p>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -123,9 +117,6 @@ const SliderHero = () => (
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -158,9 +149,6 @@ const SliderHero = () => (
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -193,9 +181,6 @@ const SliderHero = () => (
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -228,9 +213,6 @@ const SliderHero = () => (
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
