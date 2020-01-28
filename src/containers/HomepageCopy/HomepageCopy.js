@@ -109,6 +109,23 @@ export const HomepageCopyComponent = props => {
 
           <ul className={css.sections}>
 
+          <div className={css.featuredPartners}>
+              <div className={css.featuredSection}>
+                <div className={css.featuredWrapper}>
+                  <div className={css.featuredItem}>PARTNERS WITH</div>
+                  <a className={css.featuredItem}>
+                    <img src="https://i.imgur.com/BbpRKwn.jpg" />
+                  </a>
+                  <a className={css.featuredItem}>
+                    <img src="https://i.imgur.com/7GKbXYD.jpg" />
+                  </a>
+                  <a className={css.featuredItem}>
+                    <img src="https://i.imgur.com/gfmgC8Y.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <li className={css.section}>
               <div className={css.testAbs}></div>
               <div className={css.serviceContent}>
