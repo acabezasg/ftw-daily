@@ -40,6 +40,41 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
+        <img src="https://i.imgur.com/HKo2o6b.jpg"></img>
+      </div>
+
+      <div className={css.carouselCaption}>
+        <StyleRoot>
+          <div style={styles.fadeInUp}>
+            <h1 style={styles.fadeInUp}>Slider Title</h1>
+            <p style={styles.fadeInUp}>
+              Description
+            </p>
+
+            <div className={css.submitContainer}>
+              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
+              <a className={css.btnPc} href="s?pub_user_type=2">
+                Find a Pet Service
+              </a>
+              <a href="s?pub_user_type=0">Find Homes to Sit</a>
+            </div>
+          </div>
+
+          <div className={css.submitContainer}>
+            <a
+              className={css.btnMob}
+              style={stylesLeft.fadeInLeft}
+              href="s?pub_user_type=2"
+            >
+              Find a Pet Service
+            </a>
+          </div>
+        </StyleRoot>
+      </div>
+    </Carousel.Item>
+
+    <Carousel.Item>
+      <div className={css.carouselHero}>
         <img src="https://i.imgur.com/5UWHAVm.jpg"></img>
       </div>
 
@@ -110,7 +145,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/XMzqO2e.jpg"></img>
+        <img src={secondSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -145,7 +180,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/iLXfrSF.jpg"></img>
+        <img src={forthSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -180,42 +215,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/CR7Psf0.jpg"></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Slider Title</h1>
-            <p style={styles.fadeInUp}>
-              Description
-            </p>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/thYfoeO.jpg"></img>
+        <img src={firstSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>
