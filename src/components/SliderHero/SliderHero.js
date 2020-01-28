@@ -40,7 +40,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/HKo2o6b.jpg"></img>
+        <img src="https://i.imgur.com/RuIMBGJ.jpg"></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -247,45 +247,6 @@ const SliderHero = () => (
         </StyleRoot>
       </div>
     </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/lrWjQWP.jpg"></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Slider Title</h1>
-            <p style={styles.fadeInUp}>
-              Description
-            </p>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-
-
-
 {/*
 
     <Carousel.Item>
