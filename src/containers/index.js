@@ -50,3 +50,4 @@ export { default as AboutUsPage } from './AboutUsPage/AboutUsPage';
 export { default as AffiliatePage } from './AffiliatePage/AffiliatePage';
 export { default as GeneralQuestionsPage } from './GeneralQuestionsPage/GeneralQuestionsPage';
 export { default as CrowdFundingPage } from './CrowdFundingPage/CrowdFundingPage';
+export { default as PetServiceExplainer } from './PetServiceExplainer/PetServiceExplainer';

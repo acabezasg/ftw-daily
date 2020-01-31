@@ -110,6 +110,22 @@ export const LandingPageComponent = props => {
         </div>
 
           <ul className={css.sections}>
+            <li className={css.sections}>
+                <div className={css.sectionServiceContent}>
+                  <div className={css.serviceGrid}>
+                    <div className={css.serviceGridItem}>
+                      <div className={css.serviceGridContent}>
+                        <h1>
+                          Elite Pet Sitting
+                        </h1>
+                      </div>
+                    </div>
+                    <div className={css.serviceGridItem}>
+                      <img src="https://i.imgur.com/b3lSoZA.jpg"></img>
+                    </div>
+                  </div>
+                </div>	
+            </li>
 
             <li className={(css.sections, css.whyUseBg)}>
               <div className={css.sectionContent}>

@@ -75,7 +75,6 @@
   display: flex;
   width: 24px;
   align-self: stretch;
-  background-color: var(--matterColorLight);
   position: relative;
   left: 10px;
 }

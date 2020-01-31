@@ -51,7 +51,7 @@ import {
   AboutUsPage,
   AffiliatePage,
   CrowdFundingPage,
-
+  PetServiceExplainer,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -119,6 +119,11 @@ const routeConfiguration = () => {
       path: '/contact',
       name: 'ContactPage',
       component: ContactPage,
+    },
+    {
+      path: '/petservices',
+      name: 'PetServiceExplainer',
+      component: PetServiceExplainer,
     },
     {
       path: '/faq',
