@@ -48,13 +48,12 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 12px 0 0;
-  border: 1px solid #e7e7e7; 
 
   /* fill */
   background-color: var(--matterColorLight);
 
   /* shadows */
-  box-shadow: var(--boxShadowLight);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 
   @media (--viewportLarge) {
     padding: 0 24px 0 0;
