@@ -13,6 +13,7 @@ import secondSlide from "./slides/second.jpg";
 import thirdSlide from "./slides/third.jpg";
 import forthSlide from "./slides/forth.jpg";
 import fifthSlide from "./slides/fifth.jpg";
+import sixstSlide from "./slides/sixst.jpg";
 
 const styles = {
   fadeInUp: {
@@ -40,7 +41,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/RuIMBGJ.jpg"></img>
+        <img src={firstSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -72,7 +73,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/5UWHAVm.jpg"></img>
+        <img src={secondSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -104,39 +105,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src="https://i.imgur.com/8SmuH9R.jpg"></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Slider Title</h1>
-            <p style={styles.fadeInUp}>
-              Description
-            </p>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src={secondSlide}></img>
+        <img src={thirdSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -200,7 +169,39 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src={firstSlide}></img>
+        <img src={fifthSlide}></img>
+      </div>
+
+      <div className={css.carouselCaption}>
+        <StyleRoot>
+          <div style={styles.fadeInUp}>
+            <h1 style={styles.fadeInUp}>Slider Title</h1>
+            <p style={styles.fadeInUp}>
+              Description
+            </p>
+
+            <div className={css.submitContainer}>
+              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
+              <a href="s?pub_user_type=0">Find Homes to Sit</a>
+            </div>
+          </div>
+
+          <div className={css.submitContainer}>
+            <a
+              className={css.btnMob}
+              style={stylesLeft.fadeInLeft}
+              href="s?pub_user_type=2"
+            >
+              Find a Pet Service
+            </a>
+          </div>
+        </StyleRoot>
+      </div>
+    </Carousel.Item>
+
+    <Carousel.Item>
+      <div className={css.carouselHero}>
+        <img src={sixstSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>

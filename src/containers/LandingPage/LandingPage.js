@@ -84,6 +84,7 @@ export const LandingPageComponent = props => {
           </div>
         */}
         <div className={css.sliderFeaturedWrapper}>
+          <div>
           <SliderHero />
           <div className={css.featuredIn}>
               <div className={css.featuredSection}>
@@ -104,62 +105,11 @@ export const LandingPageComponent = props => {
                 </div>
               </div>
             </div>
+            </div>
 
         </div>
 
           <ul className={css.sections}>
-
-            <li className={css.section}>
-              <div className={css.serviceContent}>
-                <div className={css.sectionContent}>
-                  <h1 className={css.servicetitle}>
-                    The Largest Pet Services Directory
-                    <br />
-                    is right here!
-                  </h1>
-                  <div className={css.serviceIcons}>
-                    <div className={css.serviceSingle}>
-                      <div className={css.singleIcon}>
-                        <img src={petservice1}></img>
-                      </div>
-                      <hr className={css.serviceHr}></hr>
-                      <h3>STEP 1</h3>
-                      <h2>Search by Location</h2>
-                      <p>Find the top rated Pet Services in your local area.</p>
-                    </div>
-
-                    <div className={css.serviceSingle}>
-                      <div className={css.singleIcon}>
-                        <img src={petservice2}></img>
-                      </div>
-                      <hr className={css.serviceHr}></hr>
-                      <h3>STEP 2</h3>
-                      <h2>Search by Type</h2>
-                      <p>
-                        Find Dog Walkers, Groomers, Vets, Pet Food, Daycare and
-                        more...
-                      </p>
-                    </div>
-
-                    <div className={css.serviceSingle}>
-                      <div className={css.singleIcon}>
-                        <img src={petservice3}></img>
-                      </div>
-                      <hr className={css.serviceHr}></hr>
-                      <h3>STEP 3</h3>
-                      <h2>Read Reviews</h2>
-                      <p>
-                        Read reviews from verified pet parents at Trust My Pet
-                        Sitter.
-                      </p>
-                    </div>
-                  </div>
-                  <div className={css.lastBtn}>
-                    <a href="/s?pub_user_type=2">Begin Your Search</a>
-                  </div>
-                </div>
-              </div>
-            </li>
 
             <li className={(css.sections, css.whyUseBg)}>
               <div className={css.sectionContent}>
