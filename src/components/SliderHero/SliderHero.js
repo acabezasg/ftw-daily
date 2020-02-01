@@ -37,7 +37,7 @@ const stylesRight = {
 };
 
 const SliderHero = () => (
-  <Carousel interval="8000">
+  <Carousel interval="8000" fade={true}>
 
     <Carousel.Item>
       <div className={css.carouselHero}>
@@ -230,7 +230,7 @@ const SliderHero = () => (
         </StyleRoot>
       </div>
     </Carousel.Item>
-{/*
+    {/*
 
     <Carousel.Item>
       <div className={css.carouselHero}>
