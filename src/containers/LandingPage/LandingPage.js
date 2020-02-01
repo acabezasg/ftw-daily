@@ -32,6 +32,7 @@ import featured1 from "./featuredin/1.png";
 import featured2 from "./featuredin/2.png";
 import featured3 from "./featuredin/3.png";
 import featured4 from "./featuredin/4.png";
+import elite from './elite.jpg';
 import css from "./LandingPage.css";
 
 export const LandingPageComponent = props => {
@@ -115,13 +116,19 @@ export const LandingPageComponent = props => {
                   <div className={css.serviceGrid}>
                     <div className={css.serviceGridItem}>
                       <div className={css.serviceGridContent}>
+                        <div className={css.serviceCenter}>
                         <h1>
                           Elite Pet Sitting
                         </h1>
+                        <p>When you book one of our luxury houses you are getting more than just a magnificent home with the wow.</p>
+                        <div className={css.goto}>
+                        <a>Find Pet Sitters</a>
+                        </div>
+                        </div>
                       </div>
                     </div>
                     <div className={css.serviceGridItem}>
-                      <img src="https://i.imgur.com/b3lSoZA.jpg"></img>
+                      <img src={elite}></img>
                     </div>
                   </div>
                 </div>	

@@ -105,7 +105,7 @@
 
 .sectionServiceContent {
   position: relative;
-  margin: var(--LandingPage_sectionMarginTop) 24px 51px 24px;
+  margin: 0 0 1.25rem;
 
   @media (--viewportMedium) {
     max-width: 100%;
@@ -113,23 +113,21 @@
   }
 
   @media (--viewportLarge) {
-    max-width: 1128px;
-    padding: 0 36px 0 36px;
+    max-width: 100%;
+    padding: 0 1.25rem;
     margin: 80px auto;
   }
 
   @media (--viewportXLarge) {
-    max-width: 1056px;
+    max-width: 100%;
     padding: 0;
   }
 }
 
 .serviceGrid {
-  display: grid;
-  grid-template-areas: 'left right';
-  grid-auto-columns: 30% 70%;
-  grid-gap: 20px;
+  display: flex;
   align-items: center;
+  height: 400px;
 }
 
 .serviceGridContent h1 {
@@ -137,31 +135,106 @@
   padding: 0;
   font-family: 'Pacifico', cursive;
   letter-spacing: 4px;
+  color: #41a6df;
+  font-weight: 300;
+  color: #41a6df;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.serviceGridContent p {
+  width: 100%;
+  margin: 0.2rem 0 1rem;
+  color: #4a4a4a;
+}
+
+
+.serviceGridContent .goto {
+  display: inline-block;
+  padding: .3rem 2.1875rem .4rem 2.1875rem;
+  background-color: #e2dfd2;
+  border: 2px solid #e2dfd2;
+}
+
+.goto a {
+  color: #41a6df !important;
+  text-transform: uppercase;
 }
 
 .serviceGridItem:nth-child(1) {
-  grid-area: left;
+  position: relative;
+  width: 30%;
   height: 100%;
-  padding: 0 25px;
-  width: 100%;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
   text-align: center;
-  overflow: hidden;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url(https://pngimage.net/wp-content/uploads/2019/05/ray-of-light-png-transparent-4.png);
+  padding: 1.25rem 1.25rem 1.25rem 0;
+  background: url(https://bighouseexperience.com/media/wvtjiptw/background.jpg);
   background-position: center;
+  background-size: cover;
+}
+
+.serviceGridContent {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  border: 3px solid #41a6df;
+  border-radius: 5px;
+  padding: 0 25px;
+}
+
+.serviceCenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .serviceGridItem:nth-child(2) {
-  grid-area: right;
+  position: relative;
+  height: 100%;
+  width: 70%;
 }
 
 .serviceGridItem:nth-child(2) img {
-  height: 350px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 5px;
+  object-position: bottom;
+}
+
+@media (max-width: 1200px) {
+  .serviceGrid {
+    display: block;
+    height: auto;
+  }
+  .serviceGridItem:nth-child(1),
+  .serviceGridItem:nth-child(2) {
+    width: 100%;
+  }
+  .serviceGridItem:nth-child(1) {
+    padding: 0 1.25rem 1.25rem;
+  }
+  .serviceGridItem:nth-child(2) {
+    padding: 0 1.25rem;
+  }
+  .serviceGridContent h1 {
+    white-space: pre-wrap;
+  }
+  .sectionServiceContent {
+    margin: 3rem 0;
+  }
+  .serviceGridContent p {
+    margin: 1rem 0;
+  }
+  .serviceCenter {
+    top: inherit;
+    transform: inherit;
+  }
+  .serviceGridContent {
+    padding: 50px;
+  }
 }
 
 .sectionContentFirstChild {
