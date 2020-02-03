@@ -211,6 +211,7 @@ export const LandingPageComponent = props => {
 
             <li className={css.section}>
               <div className={css.sectionContent}>
+                <div className={css.howItWorksColors}>
                 <h1 className={css.howtitle}>How it Works</h1>
 
                 <Stepper2 />
@@ -246,6 +247,7 @@ export const LandingPageComponent = props => {
                     <NamedLink name="SignupPage">Start Now</NamedLink>
                   </div>
                 </div>
+              </div>
               </div>
             </li>
 

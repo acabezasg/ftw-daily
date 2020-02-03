@@ -159,6 +159,12 @@
   border: 2px solid #e2dfd2;
 }
 
+.goto:hover {
+  background: #ededed;
+  color: #4a4a4a;
+  cursor: pointer;
+}
+
 .goto a {
   color: #41a6df !important;
   text-transform: uppercase;
@@ -255,7 +261,7 @@
  }
  
 .howtitle {
-  color: #4a4a4a !important;
+  color: #fff !important;
   margin: 50px 0 !important;
   }}
 
@@ -677,4 +683,8 @@
 
 .WeVetLearn:hover .WeVetArrow {
   color: #41a6df !important;
+}
+
+.howItWorksColors {
+  color: #fff !important;
 }
