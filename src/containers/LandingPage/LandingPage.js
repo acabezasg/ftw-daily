@@ -117,7 +117,10 @@ export const LandingPageComponent = props => {
                     <div className={css.serviceGridItem}>
                       <div className={css.serviceGridContent}>
                         <div className={css.serviceCenter}>
-                        <img className={css.myimg} src="https://i.imgur.com/WUdyjKT.png"></img>
+                        <h1>
+                          Unique Experience
+                        </h1>
+                        <p>Build unforgettable memories<br />watching pets in their own home</p>
                         </div>
                       </div>
                     </div>
@@ -138,10 +141,11 @@ export const LandingPageComponent = props => {
                   <p className={css.WeVetLearn}>Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></p>
                 </div>
                 <div className={css.WeVetImage}>
-                  <img src="https://epipheo.com/wp-content/uploads/2018/10/ABM.jpg" />
+                  <img src="https://i.imgur.com/VOH5o0I.jpg" />
                 </div>
               </div>
             </li>
+
           {/*
             <li className={(css.sections, css.whyUseBg)}>
               <div className={css.sectionContent}>
@@ -203,6 +207,7 @@ export const LandingPageComponent = props => {
 
             */}
 
+          {/*
             <li className={css.section}>
               <div className={css.sectionContent}>
                 <div className={css.howItWorksColors}>
@@ -244,6 +249,8 @@ export const LandingPageComponent = props => {
               </div>
               </div>
             </li>
+
+          */}
 
             <li className={css.section}>
               <div className={css.sectionContent}>

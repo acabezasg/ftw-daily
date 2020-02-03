@@ -133,16 +133,16 @@
 .serviceGridContent h1 {
   margin: 0;
   padding: 0;
-  font-family: 'Pacifico', cursive;
-  letter-spacing: 4px;
-  color: #41a6df;
+  font-family: 'Satisfy', cursive;
+  letter-spacing: 2px;
+  color: #212529;
   font-weight: 300;
-  color: #41a6df;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   text-align: center;
   width: 100%;
   white-space: nowrap;
+  margin-bottom: 10px;
 }
 
 .serviceGridContent p {
@@ -185,7 +185,7 @@
   height: 100%;
   width: 100%;
   align-items: center;
-  border: 3px solid #41a6df;
+ /* border: 3px solid #41a6df; */
   border-radius: 5px;
   padding: 0 25px;
 }
@@ -193,7 +193,7 @@
 .serviceCenter {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .serviceGridItem:nth-child(2) {
@@ -265,6 +265,8 @@
   margin: 50px 0 !important;
   }}
 
+/*
+
 .section:nth-child(3) { 
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
   url(howitworks-banner.png);
@@ -285,6 +287,8 @@
  .section:nth-child(3) { 
   background-color: #f7f7f7;
  }
+
+*/
 
  .servicetitle {
   text-align: center;
@@ -660,7 +664,7 @@
 }
 
 .WeVetImage {
-  height: 500px;
+  height: 930px;
   width: 100%;
 }
 
@@ -687,9 +691,4 @@
 
 .howItWorksColors {
   color: #fff !important;
-}
-
-.myimg {
-  width: 100%;
-  transform: scale(1.1);
 }
