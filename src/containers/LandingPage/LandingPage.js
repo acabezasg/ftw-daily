@@ -134,6 +134,21 @@ export const LandingPageComponent = props => {
                 </div>	
             </li>
 
+            <li className={css.sections}>
+              <div className={(css.sectionServiceContent, css.sectionWeVet)}>
+                <div className={css.WeVetSection}>
+                  <h1 className={css.vettitle}>
+                    We Vet every Pet Sitter
+                  </h1>
+                  <p className={css.WeVetDiv}>We don't let just anyone watch our pets,<br/>why should you?</p>
+                  <p className={css.WeVetLearn}>Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></p>
+                </div>
+                <div className={css.WeVetImage}>
+                  <img src="https://epipheo.com/wp-content/uploads/2018/10/ABM.jpg" />
+                </div>
+              </div>
+            </li>
+          {/*
             <li className={(css.sections, css.whyUseBg)}>
               <div className={css.sectionContent}>
                 <h1>Why use Trust My Pet Sitter?</h1>
@@ -191,6 +206,8 @@ export const LandingPageComponent = props => {
                 <HomepageVideo />
               </div>
             </li>
+
+            */}
 
             <li className={css.section}>
               <div className={css.sectionContent}>
