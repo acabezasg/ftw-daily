@@ -117,13 +117,7 @@ export const LandingPageComponent = props => {
                     <div className={css.serviceGridItem}>
                       <div className={css.serviceGridContent}>
                         <div className={css.serviceCenter}>
-                        <h1>
-                          Elite Pet Sitting
-                        </h1>
-                        <p>When you book one of our luxury houses you are getting more than just a magnificent home with the wow.</p>
-                        <div className={css.goto}>
-                        <a>Find Pet Sitters</a>
-                        </div>
+                        <img className={css.myimg} src="https://i.imgur.com/WUdyjKT.png"></img>
                         </div>
                       </div>
                     </div>

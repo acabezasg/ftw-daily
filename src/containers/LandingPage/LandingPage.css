@@ -688,3 +688,8 @@
 .howItWorksColors {
   color: #fff !important;
 }
+
+.myimg {
+  width: 100%;
+  transform: scale(1.1);
+}
