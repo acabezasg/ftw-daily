@@ -111,6 +111,7 @@ export const LandingPageComponent = props => {
         </div>
 
           <ul className={css.sections}>
+
             <li className={css.sections}>
                 <div className={css.sectionServiceContent}>
                   <div className={css.serviceGrid}>
@@ -142,6 +143,95 @@ export const LandingPageComponent = props => {
                 </div>
                 <div className={css.WeVetImage}>
                   <img src="https://i.imgur.com/VOH5o0I.jpg" />
+                </div>
+              </div>
+            </li>
+
+            <li className={css.sections}>
+              <div className={css.sectionHomestay}>
+                <div className={css.newstandardSection}>
+                  <h1 className={css.vettitle}>
+                    A new standard in homestays
+                  </h1>
+                  <div className={css.newstandardCol}>
+                  <div className={css.newstandardItem}>
+                    <h2>1</h2>
+                  </div>
+                  <div className={css.newstandardItem}>
+                    <h2>2</h2>
+                  </div>
+                  <div className={css.newstandardItem}>
+                    <h2>3</h2>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li className={css.sections}>
+              <div className={css.sectionHomestay}>
+                <div className={css.newstandardSection}>
+                  <div className={css.carefullyselectedCol}>
+                  <div className={css.carefullyselectedItem}>
+                    <h1>Carefully Selected</h1>
+                    <p>
+                    The internet is awash with millions of short-term rentals, and millions of opinions, and yet no one seems to really know what they are booking. We’re here to change that. So thank you internet for the quantity, but it’s high time we turn the corner to quality.
+                    </p>
+                  </div>
+                  <div className={css.carefullyselectedItem}>
+                    <div className={css.carefullyImage}>
+                      <img src="https://static.plumcache.com/img/homepage/5050/4_5_5050_1.jpg?q=55&w=800&dpr=1" />
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li className={css.sections}>
+              <div className={css.sectionHomestay}>
+                <div className={css.newstandardSection}>
+                  <h1 className={css.vettitle}>
+                    Our Partners
+                  </h1>
+                  <div className={css.newstandardCol}>
+                  <div className={css.newstandardItem}>
+                    <div className={css.ourPartners}>
+                      <div className={css.ourPartnersItem1}>
+                         <img src="https://static.plumcache.com/img/homepage/services/4_5_service3.jpg?q=55&w=300&dpr=1" />
+                      </div>
+                      <div className={css.ourPartnersItem2}>
+                        <h2>Or simply send us a message</h2>
+                        <p>On your mobile, tablet or computer - no question is too small</p>
+                        <p className={css.secondCol}>Visit Website<span className={css.WeVetArrow5}>→</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.newstandardItem}>
+                    <div className={css.ourPartners}>
+                      <div className={css.ourPartnersItem1}>
+                         <img src="https://static.plumcache.com/img/homepage/services/4_5_service3.jpg?q=55&w=300&dpr=1" />
+                      </div>
+                      <div className={css.ourPartnersItem2}>
+                        <h2>Or simply send us a message</h2>
+                        <p>On your mobile, tablet or computer - no question is too small</p>
+                        <p className={css.secondCol}>Visit Website<span className={css.WeVetArrow5}>→</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.newstandardItem}>
+                    <div className={css.ourPartners}>
+                      <div className={css.ourPartnersItem1}>
+                         <img src="https://static.plumcache.com/img/homepage/services/4_5_service3.jpg?q=55&w=300&dpr=1" />
+                      </div>
+                      <div className={css.ourPartnersItem2}>
+                        <h2>Or simply send us a message</h2>
+                        <p>On your mobile, tablet or computer - no question is too small</p>
+                        <p className={css.secondCol}>Visit Website<span className={css.WeVetArrow5}>→</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
                 </div>
               </div>
             </li>

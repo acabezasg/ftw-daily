@@ -60,7 +60,7 @@
 .sections {
   margin: 0;
   padding-top: 1px;
-  background-color: #f3f3f3;
+  background-color: #fff;
 }
 
 .section {
@@ -92,13 +92,13 @@
   }
 
   @media (--viewportLarge) {
-    max-width: 1128px;
+    max-width: 100%;
     padding: 0 36px 0 36px;
     margin: 80px auto 128px auto;
   }
 
   @media (--viewportXLarge) {
-    max-width: 1056px;
+    max-width: 100%;
     padding: 0;
   }
 }
@@ -124,6 +124,30 @@
   }
 }
 
+.sectionHomestay {
+  position: relative;
+  margin: 0 auto;
+  padding: 60px 0;
+
+  @media (--viewportMedium) {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 36px;
+  }
+
+  @media (--viewportLarge) {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 36px;
+  }
+
+  @media (--viewportXLarge) {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 36px;
+  }
+}
+
 .serviceGrid {
   display: flex;
   align-items: center;
@@ -133,16 +157,25 @@
 .serviceGridContent h1 {
   margin: 0;
   padding: 0;
-  font-family: 'Satisfy', cursive;
-  letter-spacing: 2px;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 3px;
   color: #212529;
   font-weight: 300;
   font-weight: 300;
   font-size: 2.2rem;
   text-align: center;
   width: 100%;
-  white-space: nowrap;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1500px) {
+  .serviceCenter {
+    transform: translateY(-50%) scale(1) !important;
+  } 
+  .serviceGridContent h1 {
+    margin-bottom: 22px;
+    line-height: 55px;
+  }
 }
 
 .serviceGridContent p {
@@ -664,7 +697,7 @@
 }
 
 .WeVetImage {
-  height: 930px;
+  height: 880px;
   width: 100%;
 }
 
@@ -675,9 +708,9 @@
 }
 
 .sectionWeVet {
-  padding: 65px 0 0;
+  padding: 20px 0 0;
   margin: 0;
-  background: #EDEDED;
+  background: #fff;
 }
 
 .WeVetLearn:hover {
@@ -691,4 +724,78 @@
 
 .howItWorksColors {
   color: #fff !important;
+}
+
+.sectionHomestay h1 {
+  text-align: center;
+}
+
+.sectionHomestay .newstandardCol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 40px;
+  grid-gap: 16px;
+}
+
+.newstandardCol .newstandardItem {
+  text-align: center;
+}
+
+.newstandardItem h2 {
+  font-size: 35px;
+}
+
+.carefullyselectedCol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  align-items: center;
+}
+
+.carefullyselectedItem {
+  text-align: left;
+}
+
+.carefullyselectedItem h1 {
+  text-align: left !important;
+  margin: 0;
+  padding-bottom: 32px;
+
+}
+
+.carefullyselectedItem p {
+  padding: 0;
+  margin: 0;
+  color: #4a4a4a;
+}
+
+.carefullyImage {
+  padding: 128px;
+  background: #41a6df;
+}
+
+.ourPartners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  text-align: left;
+}
+
+.ourPartnersItem1 {
+  padding: 15px;
+}
+
+.ourPartnersItem2 h2 {
+  margin: 0;
+}
+
+.ourPartnersItem2 p {
+  margin: 0;
+  padding: 30px 0;
+}
+
+.secondCol {
+  padding: 0 !important;
+  margin: 0 !important;
 }
