@@ -210,7 +210,7 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <div className={css.ourPartners}>
                       <div className={css.ourPartnersItem1}>
-                         <img src="https://static.plumcache.com/img/homepage/services/4_5_service3.jpg?q=55&w=300&dpr=1" />
+                         <img src="https://i.imgur.com/m2U4vp1.jpg" />
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>Or simply send us a message</h2>
@@ -222,7 +222,7 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <div className={css.ourPartners}>
                       <div className={css.ourPartnersItem1}>
-                         <img src="https://static.plumcache.com/img/homepage/services/4_5_service3.jpg?q=55&w=300&dpr=1" />
+                         <img src="https://i.imgur.com/KW3nLC5.jpg" />
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>Or simply send us a message</h2>

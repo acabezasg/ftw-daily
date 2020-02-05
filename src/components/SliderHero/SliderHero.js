@@ -50,7 +50,7 @@ const SliderHero = () => (
           <div style={styles.fadeInUp}>
             <h1 style={styles.fadeInUp}>Discover a New Standard</h1>
             <p style={styles.fadeInUp}>
-            Pet Care
+            of Pet Care
             </p>
 
             <div className={css.submitContainer}>
