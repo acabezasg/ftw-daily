@@ -799,3 +799,9 @@
   padding: 0 !important;
   margin: 0 !important;
 }
+
+.WeVetSection h1 {
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 5px;
+  font-weight: 500;
+}

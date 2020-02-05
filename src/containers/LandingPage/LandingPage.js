@@ -135,7 +135,7 @@ export const LandingPageComponent = props => {
             <li className={css.sections}>
               <div className={(css.sectionServiceContent, css.sectionWeVet)}>
                 <div className={css.WeVetSection}>
-                  <h1 className={css.vettitle}>
+                  <h1 className={(css.vettitle)}>
                     We Vet every Pet Sitter
                   </h1>
                   <p className={css.WeVetDiv}>We don't let just anyone watch our pets,<br/>why should you?</p>
@@ -151,17 +151,17 @@ export const LandingPageComponent = props => {
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>
                   <h1 className={css.vettitle}>
-                    A new standard in homestays
+                    Discover a new standard in Pet Care
                   </h1>
                   <div className={css.newstandardCol}>
                   <div className={css.newstandardItem}>
-                    <h2>1</h2>
+                    <p>We carefully select the best pet sitters out there</p>
                   </div>
                   <div className={css.newstandardItem}>
-                    <h2>2</h2>
+                    <p>Our Insurance backed guarantee covers your home for up to £1 million</p>
                   </div>
                   <div className={css.newstandardItem}>
-                    <h2>3</h2>
+                    <p>With our trusted partners we've got you and your pet covered</p>
                   </div>
                   </div>
                 </div>
