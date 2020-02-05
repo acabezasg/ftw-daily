@@ -209,7 +209,9 @@
   height: 100%;
   text-align: center;
   padding: 1.25rem 1.25rem 1.25rem 0;
-  background: url(https://bighouseexperience.com/media/wvtjiptw/background.jpg);
+  background: #e4dece;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   background-position: center;
   background-size: cover;
 }
@@ -218,7 +220,7 @@
   height: 100%;
   width: 100%;
   align-items: center;
- /* border: 3px solid #41a6df; */
+  background: transparent;
   border-radius: 5px;
   padding: 0 25px;
 }
@@ -240,6 +242,8 @@
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   object-position: bottom;
 }
 
@@ -777,7 +781,7 @@
 
 .carefullyImage {
   padding: 128px;
-  background: #917f4d;
+  background: #c9bd9c;
 }
 
 .ourPartners {

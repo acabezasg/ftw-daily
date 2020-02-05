@@ -142,7 +142,7 @@ export const LandingPageComponent = props => {
                   <p className={css.WeVetLearn}>Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></p>
                 </div>
                 <div className={css.WeVetImage}>
-                  <img src="https://i.imgur.com/6c5tBtd.png" />
+                  <img src="https://i.imgur.com/Dc53yid.jpg" />
                 </div>
               </div>
             </li>
@@ -180,7 +180,7 @@ export const LandingPageComponent = props => {
                   </div>
                   <div className={css.carefullyselectedItem}>
                     <div className={css.carefullyImage}>
-                      <img src="https://i.imgur.com/L1x9nYI.jpg" />
+                      <img src="https://i.imgur.com/xWwAWmQ.jpg" />
                     </div>
                   </div>
                   </div>
