@@ -58,17 +58,17 @@
 }
 
 .carouselCaption p {
-	font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+	font-family: 'Pacifico', cursive;
+    font-weight: 200;
     margin: 43px 20px;
     padding: 0px;
     text-align: center;
     color: #fff;
     margin: 5px 0 4px;
-    letter-spacing: 1px;
-    overflow: hidden;
+    letter-spacing: 3px;
     white-space: nowrap;
     font-size: 25px;
+
 }
 
 .submitContainer {

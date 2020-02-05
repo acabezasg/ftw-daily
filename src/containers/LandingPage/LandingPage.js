@@ -142,7 +142,7 @@ export const LandingPageComponent = props => {
                   <p className={css.WeVetLearn}>Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></p>
                 </div>
                 <div className={css.WeVetImage}>
-                  <img src="https://i.imgur.com/8KdX76c.jpg" />
+                  <img src="https://i.imgur.com/6c5tBtd.png" />
                 </div>
               </div>
             </li>
@@ -198,7 +198,7 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <div className={css.ourPartners}>
                       <div className={css.ourPartnersItem1}>
-                         <img src="https://static.plumcache.com/img/homepage/services/4_5_service3.jpg?q=55&w=300&dpr=1" />
+                         <img src="https://i.imgur.com/dTI7Ibu.jpg" />
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>Or simply send us a message</h2>
