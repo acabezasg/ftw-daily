@@ -155,13 +155,13 @@ export const LandingPageComponent = props => {
                   </h1>
                   <div className={css.newstandardCol}>
                   <div className={css.newstandardItem}>
-                    <p>We carefully select the best pet sitters out there</p>
+                    <p>We carefully select the best<br />pet sitters out there</p>
                   </div>
                   <div className={css.newstandardItem}>
-                    <p>Our Insurance backed guarantee covers your home for up to £1 million</p>
+                    <p>Our Insurance backed guarantee covers<br />your home for up to £1 million</p>
                   </div>
                   <div className={css.newstandardItem}>
-                    <p>With our trusted partners we've got you and your pet covered</p>
+                    <p>With our trusted partners we've got<br />you and your pet covered</p>
                   </div>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export const LandingPageComponent = props => {
                   </div>
                   <div className={css.carefullyselectedItem}>
                     <div className={css.carefullyImage}>
-                      <img src="https://i.imgur.com/xWwAWmQ.jpg" />
+                      <img src="https://i.imgur.com/8FSOaAv.jpg" />
                     </div>
                   </div>
                   </div>
