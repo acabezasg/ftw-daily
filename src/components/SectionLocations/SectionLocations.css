@@ -4,6 +4,7 @@
   @apply --marketplaceH1FontStyles;
   font-family: 'Pacifico', cursive;
   letter-spacing: 5px;
+  font-weight: 500;
 
   margin-top: 0;
   text-align: center;

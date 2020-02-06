@@ -181,11 +181,17 @@ export const LandingPageComponent = props => {
             <li className={css.sections}>
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>
+                <h1>Carefully Selected</h1>
                   <div className={css.carefullyselectedCol}>
                   <div className={css.carefullyselectedItem}>
-                    <h1>Carefully Selected</h1>
                     <p>
-                    The internet is awash with millions of short-term rentals, and millions of opinions, and yet no one seems to really know what they are booking. We’re here to change that. So thank you internet for the quantity, but it’s high time we turn the corner to quality.
+                      Congratulations, you have discovered Trust My Pet Sitter! We are proud to offer a new standard of Pet Care. We are selective. And unapologetically so. We assess every application against our Eight Point Selection Process for inclusion. This gives you the guarantee that we select only the finest sitters to care for your precious pets.
+                    </p>
+                    <p>
+                      We love what we do. Our Pet Sitters are carefully selected by a highly experienced team of professionals to ensure only the highest calibre of sitters reach the TMPS benchmark to care for your fur babies.
+                    </p>
+                    <p>
+                      We build great relationships with our Pet Sitters, working closely with them to ensure that they have everything they need from us and from you to ensure a successful pet sitting experience for all.   We also encourage and monitor feedback from both parties to ensure that each continues to earn its place as part of our trusted community.
                     </p>
                   </div>
                   <div className={css.carefullyselectedItem}>

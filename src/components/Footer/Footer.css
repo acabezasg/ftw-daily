@@ -10,7 +10,7 @@
 
   width: 100%;
   padding: 24px 24px 42px 24px;
-  background-color: #41a6df;
+  background-color: #e4dece;
 
   @media (--viewportMedium) {
     padding: 0 24px 33px 24px;
@@ -125,28 +125,28 @@
 }
 
 .organizationInfo {
-  color: #fff;
+  color: #212529;
 }
 
 .organizationDescription {
   @apply --marketplaceTinyFontStyles;
-  color: #fff;
+  color: #212529;
   margin: 21px 0 !important;
 }
 
 .organizationCopyright {
   @apply --marketplaceTinyFontStyles;
   margin-top: 23px;
-  color: #ffff;
+  color: #212529;
 }
 
 .copyrightLink {
   color: var(--matterColor);
   transition: var(--transitionStyleButton);
-  color: #fff;
+  color: #212529;
 
   &:hover {
-    color: #fff;
+    color: #212529;
     text-decoration: none;
   }
 }
@@ -186,7 +186,7 @@
   line-height: 20px;
   color: var(--matterColor);
   transition: var(--transitionStyleButton);
-  color: #fff !important;
+  color: #212529 !important;
 
   margin-top: 0;
   margin-bottom: 12px;
@@ -340,7 +340,7 @@
 }
 
 .footerTitleContainer a {
-  color: #fff;
+  color: #212529;
   font-weight: 1000;
 }
 
