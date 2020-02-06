@@ -191,7 +191,10 @@ export const LandingPageComponent = props => {
                       We are proud to offer a new standard of Pet Care.
                     </p>
                     <p>
-                      We are selective. And unapologetically so. We assess every application against our Eight Point Selection Process for inclusion. This gives you the guarantee that we select only the finest sitters to care for your precious pets.
+                      We are selective. And unapologetically so.
+                    </p>
+                    <p>
+                      We assess every application against our Eight Point Selection Process for inclusion. This gives you the guarantee that we select only the finest sitters to care for your precious pets.
                     </p>
                     <p>
                       We love what we do. Our Pet Sitters are carefully selected by a highly experienced team of professionals to ensure only the highest calibre of sitters reach the TMPS benchmark to care for your fur babies.
