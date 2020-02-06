@@ -143,7 +143,7 @@ export const LandingPageComponent = props => {
                   <p className={css.WeVetLearn}>Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></p>
                 </div>
                 <div className={css.WeVetImage}>
-                  <img src="https://i.imgur.com/Dc53yid.jpg" />
+                  <img src="https://i.imgur.com/3YFZ5n2.jpg" />
                 </div>
               </div>
             </li>
@@ -185,7 +185,13 @@ export const LandingPageComponent = props => {
                   <div className={css.carefullyselectedCol}>
                   <div className={css.carefullyselectedItem}>
                     <p>
-                      Congratulations, you have discovered Trust My Pet Sitter! We are proud to offer a new standard of Pet Care. We are selective. And unapologetically so. We assess every application against our Eight Point Selection Process for inclusion. This gives you the guarantee that we select only the finest sitters to care for your precious pets.
+                      Congratulations, you have discovered Trust My Pet Sitter! 
+                    </p>
+                    <p> 
+                      We are proud to offer a new standard of Pet Care.
+                    </p>
+                    <p>
+                      We are selective. And unapologetically so. We assess every application against our Eight Point Selection Process for inclusion. This gives you the guarantee that we select only the finest sitters to care for your precious pets.
                     </p>
                     <p>
                       We love what we do. Our Pet Sitters are carefully selected by a highly experienced team of professionals to ensure only the highest calibre of sitters reach the TMPS benchmark to care for your fur babies.
