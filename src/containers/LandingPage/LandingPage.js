@@ -181,9 +181,9 @@ export const LandingPageComponent = props => {
             <li className={css.sections}>
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>
-                <h1>Carefully Selected</h1>
                   <div className={css.carefullyselectedCol}>
                   <div className={css.carefullyselectedItem}>
+                  <h1>Carefully Selected</h1>
                     <p>
                       Congratulations, you have discovered Trust My Pet Sitter! 
                     </p>
