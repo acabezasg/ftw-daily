@@ -19,7 +19,8 @@ import {
   SliderHero,
   HomepageVideo,
   Stepper2,
-  NamedLink
+  NamedLink,
+  ExternalLink,
 } from "../../components";
 import { TopbarContainer } from "../../containers";
 
@@ -155,13 +156,22 @@ export const LandingPageComponent = props => {
                   </h1>
                   <div className={css.newstandardCol}>
                   <div className={css.newstandardItem}>
-                    <p>We carefully select the best<br />pet sitters out there</p>
+                    <p className={css.discoverFlex}>
+                      <span><img src="https://i.imgur.com/G1GYEOU.png" /></span>
+                      <span>We carefully select the best<br />pet sitters out there</span>
+                    </p>
                   </div>
                   <div className={css.newstandardItem}>
-                    <p>Our Insurance backed guarantee covers<br />your home for up to £1 million</p>
+                    <p className={css.discoverFlex}>
+                      <span><img src="https://i.imgur.com/G1GYEOU.png" /></span>
+                      <span>Our Insurance backed guarantee covers<br />your home for up to £1 million</span>
+                    </p>
                   </div>
                   <div className={css.newstandardItem}>
-                    <p>With our trusted partners we've got<br />you and your pet covered</p>
+                    <p className={css.discoverFlex}>
+                      <span><img src="https://i.imgur.com/G1GYEOU.png" /></span>
+                      <span>With our trusted partners we've got<br />you and your pet covered</span>
+                    </p>
                   </div>
                   </div>
                 </div>
@@ -188,11 +198,13 @@ export const LandingPageComponent = props => {
               </div>
             </li>
 
+            <hr />
+
             <li className={css.sections}>
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>
                   <h1 className={css.vettitle}>
-                    Our Partners
+                    Our Trusted Partners
                   </h1>
                   <div className={css.newstandardCol}>
                   <div className={css.newstandardItem}>
@@ -201,9 +213,9 @@ export const LandingPageComponent = props => {
                          <img src="https://i.imgur.com/dTI7Ibu.jpg" />
                       </div>
                       <div className={css.ourPartnersItem2}>
-                        <h2>Or simply send us a message</h2>
-                        <p>On your mobile, tablet or computer - no question is too small</p>
-                        <p className={css.secondCol}>Visit Website<span className={css.WeVetArrow5}>→</span></p>
+                        <h2>YOTI</h2>
+                        <p>YOTI works by allowing you to set up a trusted, genuine and verified digital identity.</p>
+                        <p className={css.secondCol}><ExternalLink href="https://www.yoti.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
                       </div>
                     </div>
                   </div>
@@ -213,9 +225,9 @@ export const LandingPageComponent = props => {
                          <img src="https://i.imgur.com/m2U4vp1.jpg" />
                       </div>
                       <div className={css.ourPartnersItem2}>
-                        <h2>Or simply send us a message</h2>
-                        <p>On your mobile, tablet or computer - no question is too small</p>
-                        <p className={css.secondCol}>Visit Website<span className={css.WeVetArrow5}>→</span></p>
+                        <h2>Superhog</h2>
+                        <p>An Insurance backed guarantee working to protect your home and contents for up to £1 million.</p>
+                        <p className={css.secondCol}><ExternalLink>Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
                       </div>
                     </div>
                   </div>
@@ -225,9 +237,9 @@ export const LandingPageComponent = props => {
                          <img src="https://i.imgur.com/KW3nLC5.jpg" />
                       </div>
                       <div className={css.ourPartnersItem2}>
-                        <h2>Or simply send us a message</h2>
-                        <p>On your mobile, tablet or computer - no question is too small</p>
-                        <p className={css.secondCol}>Visit Website<span className={css.WeVetArrow5}>→</span></p>
+                        <h2>Pawsquad</h2>
+                        <p>PawSquad lets you video call or text chat with a qualified vet free at any time or day or night, 365 days a year.</p>
+                        <p className={css.secondCol}><ExternalLink href="https://www.pawsquad.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
                       </div>
                     </div>
                   </div>

@@ -814,3 +814,28 @@
   letter-spacing: 5px;
   font-weight: 500;
 }
+
+.secondCol a {
+  text-decoration: none !important;
+}
+
+.discoverFlex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.discoverFlex span {
+  width: 100%;
+}
+
+.discoverFlex span:nth-child(1) {
+  padding-bottom: 20px;
+}
+
+.discoverFlex span:nth-child(1) img {
+  height: 90px;
+  width: 90px;
+}
