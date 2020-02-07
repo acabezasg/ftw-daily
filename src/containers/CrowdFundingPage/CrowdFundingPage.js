@@ -14,7 +14,7 @@ import {
 } from "../../components";
 
 import css from "./CrowdFundingPage.css";
-import banner from "./banner2.jpg";
+import banner from "./banner.jpg";
 import affiliate from "./affiliate.png";
 import paw from "./paw.png";
 import img from "./sitters.jpg";
@@ -57,9 +57,9 @@ const CrowdFundingPage = () => {
               <h1>Don't miss out...</h1>
               <p className={css.wrapP}>
                 Over 50% of UK adults own at least one pet, that’s more than 26 million people!</p> <p>We beta tested our model on over 600 users across 3 continents, and feedback was both Pet Owners and Sitters were wowed! They loved the site – and the concept.</p> 
-              <p><i>
+              <p><i><strong>
                 “We had a great 2 weeks in Scotland looking after Willow, we loved the walks in the great outdoors and can’t wait for our next pet-sit!” John and Lucy, USA
-              </i></p>
+              </strong></i></p>
               <p>We are now crowdfunding our seed round and would love you to join our tribe.</p>
              </div>
 
