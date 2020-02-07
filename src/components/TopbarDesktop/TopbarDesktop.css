@@ -66,6 +66,7 @@
   flex-shrink: 0;
   padding: 21px 24px 21px 24px;
   height: 100%;
+  background: #c9bd9c;
 
   @media (--viewportLarge) {
     padding: 21px 36px 21px 36px;
