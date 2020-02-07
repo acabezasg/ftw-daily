@@ -225,7 +225,7 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <div className={css.ourPartners}>
                       <div className={css.ourPartnersItem1}>
-                         <img src="https://i.imgur.com/dTI7Ibu.jpg" />
+                         <img src="https://i.imgur.com/2Zfo6CI.png" />
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>YOTI</h2>

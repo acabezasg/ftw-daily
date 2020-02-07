@@ -14,7 +14,7 @@ import {
 } from "../../components";
 
 import css from "./CrowdFundingPage.css";
-import banner from "./banner.jpg";
+import banner from "./banner2.jpg";
 import affiliate from "./affiliate.png";
 import paw from "./paw.png";
 import img from "./sitters.jpg";
@@ -60,6 +60,7 @@ const CrowdFundingPage = () => {
               <p><i>
                 “We had a great 2 weeks in Scotland looking after Willow, we loved the walks in the great outdoors and can’t wait for our next pet-sit!” John and Lucy, USA
               </i></p>
+              <p>We are now crowdfunding our seed round and would love you to join our tribe.</p>
              </div>
 
              <div className={css.wrapCol}>
