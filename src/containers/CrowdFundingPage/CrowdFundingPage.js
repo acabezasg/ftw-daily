@@ -56,14 +56,10 @@ const CrowdFundingPage = () => {
              <div className={css.wrapCol}>
               <h1>Don't miss out...</h1>
               <p className={css.wrapP}>
-                Last year we raised £330k in a very successful crowdfunding campaign. 
-                We overfunded by 265% with more than 400 investors in just 7 days! 
-                Completing the round so quickly did mean however, that not everyone 
-                was able to come on board at that time.
-              </p>
-
-              <p className={css.wrapP}><strong>If you missed out last time, now is your chance as we’re about to launch our second crowdfunding campaign.</strong></p>
-
+                Over 50% of UK adults own at least one pet, that’s more than 26 million people!</p> <p>We beta tested our model on over 600 users across 3 continents, and feedback was both Pet Owners and Sitters were wowed! They loved the site – and the concept.</p> 
+              <p><i>
+                “We had a great 2 weeks in Scotland looking after Willow, we loved the walks in the great outdoors and can’t wait for our next pet-sit!” John and Lucy, USA
+              </i></p>
              </div>
 
              <div className={css.wrapCol}>
@@ -76,8 +72,14 @@ const CrowdFundingPage = () => {
 
         <div className={css.affiliateSecond}>
           <div className={css.sectionContent}>
-            <h1>Our Mission</h1>
-            <p>Nobody should need to spend hours plotting routes, let alone worry about “getting it right”.</p>
+            <h1>Our Partners</h1>
+            <h2>Yoti</h2>
+            <p>YOTI works by allowing you to set up a trusted, genuine and verified digital identity.</p>
+            <h2>Superhog</h2>
+            <p>An Insurance backed guarantee working to protect your home and contents for up to £1 million.</p>
+            <h2>PawSquad</h2>
+            <p>PawSquad lets you video call or text chat with a qualified vet free at any time or day or night, 365 days a year.</p>
+
           </div>
         </div>
 
@@ -86,10 +88,11 @@ const CrowdFundingPage = () => {
             <h1>Pre-register for exclusive early access</h1>
             <h2 className={css.byJoin}>We have big plans for 2020, we’re going to:</h2>
             <ul className={css.affUl}>
-              <li>Expand into the much larger motorboat market</li>
-              <li>Drastically increase our marketing spend</li>
+              <li>Undertake targeted customer acquisition strategies</li>
+              <li>Invest in SEO-boosting, authority building and trust enhancing</li>
+              <li>Build brand storytelling that fosters credibility and awareness</li>
               <li>Add new acquisition channels</li>
-              <li>And form industry partnerships</li>
+              <li>Add new industry partnerships</li>
             </ul>
           </div>
         </div>

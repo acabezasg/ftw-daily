@@ -111,7 +111,7 @@
 }
 
 .byJoin {
-  color: darkslategray !important;
+  color: #212529 !important;
   margin: 0;
   margin-bottom: 25px;
 }
@@ -159,7 +159,7 @@
 }
 
 .affiliateSecond {
-  background: #f9f9f9;
+  background: #e4dece;
 }
 
 .affiliateWrapper h1 {
