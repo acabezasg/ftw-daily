@@ -141,7 +141,7 @@ const routeConfiguration = () => {
       component: AffiliatePage,
     },
     {
-      path: '/testpage',
+      path: '/crowdfunding',
       name: 'CrowdFundingPage',
       component: CrowdFundingPage,
     },
