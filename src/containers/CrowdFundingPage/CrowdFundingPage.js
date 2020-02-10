@@ -56,7 +56,14 @@ const CrowdFundingPage = () => {
              <div className={css.wrapCol}>
               <h1>Don't miss out...</h1>
               <p className={css.wrapP}>
-                Over 50% of UK adults own at least one pet, that’s more than 26 million people!</p> <p>We beta tested our model on over 600 users across 3 continents, and feedback was both Pet Owners and Sitters were wowed! They loved the site – and the concept.</p> 
+                Over 50% of UK adults own at least one pet, that’s more than 26 million people!
+              </p> 
+              <p>
+                In the USA this figures is almost 67% - a whopping 180 million people!
+              </p>
+              <p>
+                We beta tested our model on over 600 users across 3 continents, and feedback was both Pet Owners and Sitters were wowed! They loved the site – and the concept.
+              </p> 
               <p><i><strong>
                 “We had a great 2 weeks in Scotland looking after Willow, we loved the walks in the great outdoors and can’t wait for our next pet-sit!” John and Lucy, USA
               </strong></i></p>
