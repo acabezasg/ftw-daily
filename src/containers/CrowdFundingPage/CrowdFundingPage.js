@@ -73,19 +73,6 @@ const CrowdFundingPage = () => {
 
         <div className={css.affiliateSecond}>
           <div className={css.sectionContent}>
-            <h1>Our Partners</h1>
-            <h2>Yoti</h2>
-            <p>YOTI works by allowing you to set up a trusted, genuine and verified digital identity.</p>
-            <h2>Superhog</h2>
-            <p>An Insurance backed guarantee working to protect your home and contents for up to £1 million.</p>
-            <h2>PawSquad</h2>
-            <p>PawSquad lets you video call or text chat with a qualified vet free at any time or day or night, 365 days a year.</p>
-
-          </div>
-        </div>
-
-        <div className={css.affiliateFirst}>
-          <div className={css.sectionContent}>
             <h1>Pre-register for exclusive early access</h1>
             <h2 className={css.byJoin}>We have big plans for 2020, we’re going to:</h2>
             <ul className={css.affUl}>
@@ -95,6 +82,18 @@ const CrowdFundingPage = () => {
               <li>Add new acquisition channels</li>
               <li>Add new industry partnerships</li>
             </ul>
+          </div>
+        </div>
+
+        <div className={css.affiliateFirst}>
+          <div className={css.sectionContent}>
+          <h1>Our Partners</h1>
+            <h2>Yoti</h2>
+            <p>YOTI works by allowing you to set up a trusted, genuine and verified digital identity.</p>
+            <h2>Superhog</h2>
+            <p>An Insurance backed guarantee working to protect your home and contents for up to £1 million.</p>
+            <h2>PawSquad</h2>
+            <p>PawSquad lets you video call or text chat with a qualified vet free at any time or day or night, 365 days a year.</p>
           </div>
         </div>
 

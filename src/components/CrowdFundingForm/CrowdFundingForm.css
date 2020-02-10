@@ -37,7 +37,7 @@ input:focus,
 
 .FundingForm button {
     width: 100%;
-    background: #41a6df;
+    background: #c9bd9c;
     border: none;
     color: #fff;
     padding: 8px 0;
@@ -45,5 +45,5 @@ input:focus,
 }
 
 .FundingForm button:hover {
-    background: rgb(65,166,223,.7);
+    background: rgb(201,189,156, .8);
 }

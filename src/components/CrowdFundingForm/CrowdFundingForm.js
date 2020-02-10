@@ -62,7 +62,7 @@ class Form extends React.Component {
         <div className={css.FundingSelect}>
         <svg width="16" height="16" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg"><path d="M6.53 7.472c.26.26.68.26.94 0l5.335-5.333c.26-.263.26-.684 0-.944-.26-.26-.683-.26-.943 0L7 6.056l-4.862-4.86c-.26-.26-.683-.26-.943 0-.26.26-.26.68 0 .943L6.53 7.47z" stroke="%234A4A4A" fill="%234A4A4A" fill-rule="evenodd"/></svg>
         <select id="intrest" name="intrest" required onChange={this.handleFields}>
-            <option value="" selected disabled>Level of Intrest</option>
+            <option value="" selected disabled>Level of Interest</option>
             <option>£10 - £499</option>
             <option>£500 - £999</option>
             <option>£1,000 - £4,999</option>

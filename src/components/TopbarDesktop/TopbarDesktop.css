@@ -50,7 +50,8 @@
   padding: 0 12px 0 0;
 
   /* fill */
-  background-color: var(--matterColorLight);
+  /* background-color: var(--matterColorLight); */
+  background-color: #c9bd9c;
 
   /* shadows */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
