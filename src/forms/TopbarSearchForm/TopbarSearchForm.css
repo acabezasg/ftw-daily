@@ -64,7 +64,7 @@
 }
 
 .desktopInput::placeholder {
-  color: #b2b2b2 !important;
+  color: rgb(0, 0, 0, .5) !important;
   font-size: 19px;
 }
 

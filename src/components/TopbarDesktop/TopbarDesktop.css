@@ -109,7 +109,8 @@
   margin-right: 24px;
   border-left-style: solid;
   border-left-width: 1px;
-  border-left-color: var(--matterColorNegative);
+  /* border-left-color: var(--matterColorNegative); */
+  border-left-color: rgba(0, 0, 0, 0.5);
 
   @media (--viewportLarge) {
     padding-left: 0;
@@ -139,12 +140,12 @@
   flex-shrink: 0;
   height: 100%;
   padding: 0 12px 0 12px;
-  color: var(--marketplaceColor);
+  color: #000;
   margin-top: 0;
   margin-bottom: 0;
 
   &:hover {
-    color: var(--marketplaceColorDark);
+    color: #000;
   }
 
   @media (--viewportMedium) {
