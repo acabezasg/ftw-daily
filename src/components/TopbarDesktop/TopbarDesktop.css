@@ -110,7 +110,7 @@
   border-left-style: solid;
   border-left-width: 1px;
   /* border-left-color: var(--matterColorNegative); */
-  border-left-color: rgba(0, 0, 0, 0.5);
+  border-left-color: rgba(0, 0, 0, 0.2);
 
   @media (--viewportLarge) {
     padding-left: 0;

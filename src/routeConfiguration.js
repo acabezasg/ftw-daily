@@ -52,6 +52,7 @@ import {
   AffiliatePage,
   CrowdFundingPage,
   PetServiceExplainer,
+  WeVetPage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -124,6 +125,11 @@ const routeConfiguration = () => {
       path: '/petservices',
       name: 'PetServiceExplainer',
       component: PetServiceExplainer,
+    },
+    {
+      path: '/what-makes-us-different',
+      name: 'WeVetPage',
+      component: WeVetPage,
     },
     {
       path: '/faq',
