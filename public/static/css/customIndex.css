@@ -59,9 +59,10 @@
 
     #how-button {
     color: #fff;
-    background-color: #41a6df;
+    background-color: #c9bd9c;
     padding: 10px 20px;
     border-radius: 5px;
+    border: 1px solid #c9bd9c;
     }
 
     #how-button:hover {

@@ -122,8 +122,8 @@ const Footer = props => {
             <div className={css.infoLinks}>
               <ul className={css.list}>
                 <li className={css.listItem}>
-                  <NamedLink name="PresskitPage" className={css.link}>
-                    Press
+                  <NamedLink name="WeVetPage" className={css.link}>
+                    Our Selection Process
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>

@@ -53,6 +53,7 @@ import {
   CrowdFundingPage,
   PetServiceExplainer,
   WeVetPage,
+  SuperHogPage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -157,6 +158,11 @@ const routeConfiguration = () => {
       component: PawSquadPage,
     },
     {
+      path: '/superhog',
+      name: 'SuperHogPage',
+      component: SuperHogPage,
+    },
+    {
       path: '/payment-service',
       name: 'PaymentServicePage',
       component: PaymentServicePage,
@@ -207,7 +213,7 @@ const routeConfiguration = () => {
       component: AboutUsPage,
     },
     {
-      path: '/press',
+      path: '/press-private',
       name: 'PresskitPage',
       component: PresskitPage,
     },
