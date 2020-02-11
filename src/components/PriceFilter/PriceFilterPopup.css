@@ -34,7 +34,7 @@
   height: auto;
   min-height: 0;
   border-radius: 4px;
-  border: 1px solid var(--marketplaceColor);
+  border: 1px solid #c9bd9c;
 
   &:hover,
   &:focus {

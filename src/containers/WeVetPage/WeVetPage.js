@@ -52,9 +52,6 @@ const WeVetPage = () => {
             <p className={css.HowWeDoIt}>When we were putting together Trust My Pet Sitter one thing stood out to us over all others, we didn’t want just anyone to watch our pets, we wanted to be sure Pet Sitters were right for us – and our pets.</p>
             <p>That’s why we are selective about who makes the grade - and unapologetically so.</p>
             <p className={css.HowWeDoItP}><strong>You could say that’s what sets up out from the crowd. What makes us different.</strong></p>
-            <hr className={css.HowWeDoItHr} />
-            <h2 className={css.HowWeDoItAll}>How Do We Do It?</h2>
-            <p className={css.HowWeDoItP}>When we conducted our Beta test, we asked Pet Owners what would help make them secure that we were the right fit for them?</p>
           </div>
         </div>
 
@@ -99,7 +96,7 @@ const WeVetPage = () => {
                   <img src="https://i.imgur.com/KxRDZfS.jpg" />
                 </div>
                 <div className={css.partnersContent}>
-                  <p><strong>We partnered up with Home Safety</strong></p>
+                  <p><strong>We partnered up with Superhog</strong></p>
                   <p>Superhog is our premium members insurance backed guarantee, working to protect your home and contents for up to £1million while you are away from home.</p>
                 </div>
               </div>
