@@ -80,6 +80,7 @@ const WeVetPage = () => {
                 <div className={css.partnersContent}>
                   <p><strong>We partnered up with PawSquad</strong></p>
                   <p>PawSquad lets you video call or text chat with a qualified vet free at any time or day or night, 365 days a year. You can be sure when you are away from home your Pet sitter has a Vet available to discuss any issues, no matter how small.</p>
+                  <p><ExternalLink className={css.learnMore} href="https://pawsquad.com">Learn more →</ExternalLink></p>
                 </div>
               </div>
               <div className={css.partnersItem}>
@@ -89,6 +90,7 @@ const WeVetPage = () => {
                 <div className={css.partnersContent}>
                   <p><strong>We partnered up with YOTI</strong></p>
                   <p>YOTI works by setting up a trusted, genuine and verified digital identity across 130 countries within a few minutes.  So, you can see that all of our members have a verified digital identity.</p>
+                  <p><ExternalLink className={css.learnMore} href="https://yoti.com">Learn more →</ExternalLink></p>
                 </div>
               </div>
               <div className={css.partnersItem}>
@@ -98,6 +100,7 @@ const WeVetPage = () => {
                 <div className={css.partnersContent}>
                   <p><strong>We partnered up with Superhog</strong></p>
                   <p>Superhog is our premium members insurance backed guarantee, working to protect your home and contents for up to £1million while you are away from home.</p>
+                  <p><ExternalLink className={css.learnMore} href="https://superhog.com">Learn more →</ExternalLink></p>
                 </div>
               </div>
             </div>

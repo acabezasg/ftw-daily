@@ -239,7 +239,7 @@ export const LandingPageComponent = props => {
                       <div className={css.ourPartnersItem2}>
                         <h2>Superhog</h2>
                         <p>An Insurance backed guarantee working to protect your home and contents for up to £1 million.</p>
-                        <p className={css.secondCol}><ExternalLink>Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
+                        <p className={css.secondCol}><ExternalLink href="https://superhog.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
                       </div>
                     </div>
                   </div>

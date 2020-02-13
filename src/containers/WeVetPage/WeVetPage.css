@@ -435,3 +435,7 @@
 .partnersItem p:nth-child(1) {
   white-space: nowrap;
 }
+
+.learnMore {
+  text-decoration: none !important;
+}

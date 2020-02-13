@@ -854,7 +854,7 @@
 }
 
 .sendbtn:hover, .bookingPanel button:hover {
-  background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+  background: #b7a77b;
   color: #fff;
   text-decoration: none !important;
 }

@@ -38,7 +38,8 @@
 
   &:hover,
   &:focus {
-    border: 1px solid var(--marketplaceColorDark);
+    border: 1px solid #c9bd9c;
+    background-color: #c9bd9c !important;
   }
 }
 
