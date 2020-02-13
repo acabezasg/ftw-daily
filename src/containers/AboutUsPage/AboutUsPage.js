@@ -103,6 +103,23 @@ const AboutUsPage = () => {
     </div>
     </ExternalLink>
 
+    <ExternalLink className={css.card} href="https://www.linkedin.com/in/sinead-fitzsimons-9249a9195/">
+     <div className={css.card_image_container}>
+       <img className={css.card_image} src="https://cdn11.bigcommerce.com/s-gho61/stencil/31cc7cb0-5035-0136-2287-0242ac11001b/e/3dad8ea0-5035-0136-cda0-0242ac110004/images/no-image.svg" />
+    </div>
+      
+      <svg className={css.card_svg} viewBox="0 0 800 500">
+
+        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#41a6df"/>
+        <path className={css.card_line} d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
+      </svg>
+    
+     <div className={css.card_content}>
+       <h1 className={css.card_title}>Aleksa Prebiracevic</h1>
+     <p>CTO</p>
+    </div>
+    </ExternalLink>
+
 </div>
     <div className={css.strike}>
       <h1 className={css.pressTitle2}>Our Story</h1>
@@ -114,7 +131,10 @@ const AboutUsPage = () => {
         They thought there must be a better way of doing this, could they find someone they trusted to come to their home and look after the pets? Being a pet lover is a way of life, the pet sitter would need to be experienced, be trustworthy and mindful of the routine, feeding and of course their home.  Combining a House Sitter with a Pet Sitter, their task was to find people like them. 
       </p>
       <p>
-        They created Trust My Pet Sitter because they wanted to make Pet Sitting a profession people could choose to follow, travelling the world looking after other people’s pets.  A way of life for pet lovers who love to travel, from retirees to career break professionals to Millennials choosing a different career path.  The additional features on the app are available to search for Pet Owners and Pet Sitters by Country, Date, Pet Type and Price per night.  Coming soon features include connecting dog owners with local dog friendly businesses.
+        They created Trust My Pet Sitter because they wanted to make Pet Sitting a profession people could choose to follow, travelling the world looking after other people’s pets.  A way of life for pet lovers who love to travel, from retirees to career break professionals to Millennials choosing a different career path.  The additional features on the app are available to search for Pet Owners and Pet Sitters by Country, Date, Pet Type and Price per night.
+      </p>
+      <p>
+        Aleksa Prebiracevic, a Computer Science Graduate joined the team in January 2019 as CTO with a responsibility for
       </p>
       <p>
         Trust My Pet Sitter have teamed up with PawSquad which lets you video call or text chat with a UK-registered vet absolutely free at any time of day or night, 365 days a year. They have also teamed with YOTI to verify identity across 130 countries within minutes, helping to keep the Trust My Pet Sitter community safe and identifiable. 

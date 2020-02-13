@@ -147,7 +147,7 @@ export const LandingPageComponent = props => {
                 </div>
               </div>
             </li>
-
+            
             <li className={css.sections}>
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>
@@ -189,9 +189,6 @@ export const LandingPageComponent = props => {
                     </p>
                     <p> 
                       We are proud to offer a new standard of Pet Care.
-                    </p>
-                    <p>
-                      We are selective. And unapologetically so.
                     </p>
                     <p>
                       We assess every application against our Six Point Selection Process for inclusion. This gives you the guarantee that we select only the finest sitters to care for your precious pets.

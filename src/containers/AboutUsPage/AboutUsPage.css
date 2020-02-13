@@ -74,14 +74,16 @@ img {
   max-width: 100%;
 }
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
   justify-content: center;
   width: 100%;
 }
 .card {
   position: relative;
   background: #41a6df;
-  width: 33%;
+  width: 100%;
   height: auto;
   border-radius: 6px;
   padding: 2rem;
@@ -118,6 +120,7 @@ img {
 .card_title {
   color: white;
   margin-top: 0;
+  white-space: nowrap;
 }
 .card_content {
   text-align: center;
@@ -136,7 +139,7 @@ img {
 .card_svg {
   position: absolute;
   left: 0;
-  top: 125px;
+  bottom: 110px;
 }
 
 .pressTitle2 {
