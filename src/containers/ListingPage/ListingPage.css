@@ -862,7 +862,7 @@
 .claimbtn {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to left bottom, #41a6df, #00c1e8, #00d7c6, #00e681, #a8eb12);
+  background-image: linear-gradient(to right, #c9bd9c, #d49f7f, #d97c80, #c7619c, #845ec2);
   color: #fff;
   text-decoration: none;
 }
