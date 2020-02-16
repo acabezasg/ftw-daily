@@ -84,6 +84,8 @@ const SuperHogPage = () => {
 
     <p>SUPERHOG’s SUPERGUARANTEE provides market-leading home-sharing protection to hosts and pet-sitters in case our prevention fails. Our comprehensive host, pet-sitter and property validation services enable us to guarantee our members against up to £1m of damage, legal liability and travel disasters.</p>
     
+    <NamedLink name="SuperHogPage">Learn more about Superhog</NamedLink>
+
     <p className={css.joinNow}>
     <NamedLink name="SignupPage">Join Now</NamedLink>
     </p>

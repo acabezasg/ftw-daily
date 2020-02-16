@@ -134,7 +134,7 @@ const AboutUsPage = () => {
         They created Trust My Pet Sitter because they wanted to make Pet Sitting a profession people could choose to follow, travelling the world looking after other people’s pets.  A way of life for pet lovers who love to travel, from retirees to career break professionals to Millennials choosing a different career path.  The additional features on the app are available to search for Pet Owners and Pet Sitters by Country, Date, Pet Type and Price per night.
       </p>
       <p>
-        Aleksa Prebiracevic, a Computer Science Graduate joined the team in January 2019 as CTO with a responsibility for
+      I would make this part say: Aleksa Prebiracevic, a Computer Science Graduate joined the team in January 2019 as CTO with a responsibility for managing and directing the front and back end platform functions and design.
       </p>
       <p>
         Trust My Pet Sitter have teamed up with PawSquad which lets you video call or text chat with a UK-registered vet absolutely free at any time of day or night, 365 days a year. They have also teamed with YOTI to verify identity across 130 countries within minutes, helping to keep the Trust My Pet Sitter community safe and identifiable. 

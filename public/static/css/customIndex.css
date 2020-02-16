@@ -232,3 +232,57 @@
 .carousel-indicators {
   bottom: 122px;
 }
+
+#mTabs {
+  position: relative;
+}
+
+#mTabs .react-tabs {
+  width: 100%;
+}
+
+#mTabs .react-tabs > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  top: -76px;
+}
+
+#mTabs .react-tabs > ul > li {
+  line-height: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -.33px;
+  color: #2d4053;
+  background-image: linear-gradient(0deg,#fbfcfe 5%,#fcfcfc 95%);
+  width: 100%;
+  max-width: 346px;
+  text-align: center;
+  padding: 24px 0;
+  border: 1px solid #e3e3e3;
+  border-top: 3px solid transparent;
+  border-radius: 8px 8px 0 0;
+  margin: 0 3px;
+  cursor: pointer;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+}
+
+#mTabs .react-tabs > ul > li > span {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+#mTabs .react-tabs > ul > .react-tabs__tab--selected {
+  border-top: 3px solid #41a6df !important;
+  border-bottom: none;
+}
+
+@media (max-width: 400px) {
+  #mTabs .react-tabs > ul > li {
+    padding: 24px 10px !important;
+  }
+}

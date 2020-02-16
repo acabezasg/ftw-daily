@@ -62,9 +62,8 @@ const WeVetPage = () => {
               <p>We assess every application at Trust My Pet Sitter against our six point Selection Process for inclusion.  This gives you the guarantee that we select only the finest sitters to care for your precious pets.</p>
               <p>Our Pet Sitters are carefully selected by a highly experienced team of professionals to ensure only the highest calibre of sitters reach the TMPS benchmark to care for your fur babies.</p>
               <p>We offer bespoke day care through to short and long-term assignments.</p>
-              <p>We assess every Pet Sitter against our exacting Six Point criterion for inclusion. This give you the guarantee that you will be presented with a choice of high calibre candidates to choose from.</p>
               <p>We build great relationships with our Pet Sitters, working closely with them to ensure that they have everything they need from us and from you to ensure a successful pet sitting experience for all.</p>
-              <p>We also encourage and monitor feedback from both parties to ensure that each continues to earn its place as part of our elite community.</p>
+              <p>We also encourage and monitor feedback from both parties to ensure that each continues to earn its place as part of our community.</p>
             </div>
           </div>
         </div>

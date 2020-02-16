@@ -49,11 +49,15 @@ const YotiPage = () => {
 
         <LayoutWrapperMain>
 
+    <div className={css.idn}>
+
+      <h1 className={css.yotiTitle}>Verify your identity with Yoti</h1>
+
+    </div>
+
     <div className={css.staticPageWrapper}>
 
       <div className={css.sectionContent}>
-
-      <h1 className={css.yotiTitle}>Verify your identity with Yoti</h1>
 
     <div className={css.whatwedoWrapper}>
 
@@ -88,7 +92,10 @@ const YotiPage = () => {
           </p>
 
           <p>
-            <ExternalLink href="https://www.yoti.com">Learn more about Yoti</ExternalLink>
+            <NamedLink name="YotiPage">Learn more about Yoti</NamedLink>
+          </p>
+
+          <p>
             <NamedLink className={css.joinNow} name="SignupPage">Join Now<img src={rotate} className={css.imgRotate} /></NamedLink>
           </p>
 

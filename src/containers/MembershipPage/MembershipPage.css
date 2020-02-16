@@ -1,18 +1,18 @@
 @import '../../marketplace.css';
 
 .sectionContent {
-  margin: -200px auto 80px;
+  margin: 0 auto 80px;
   padding: 0 36px 0 36px;
 
   @media (--viewportMedium) {
     width: 100%;
-    margin: -200px auto 80px;
+    margin: 0 auto 80px;
   }
 
   @media (--viewportLarge) {
     width: 1024px;
     padding: 0 36px 0 36px;
-    margin: -200px auto 80px;
+    margin: 0 auto 80px;
   }
 
   @media (--viewportXLarge) {
@@ -47,12 +47,35 @@
 }
 
 .extend {
+  text-align: center;
+  margin-top: 0;
+}
+
+.extend p {
+  color: #fff;
+  padding-top: 10px;
+}
+
+.extend h1 {
   color: #fff !important;
   text-shadow: 1px 1px 1px #444;
-  text-align: center;
-  font-size: 40px;
-  margin-top: 0;
-  margin-bottom: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 400px) {
+  .mobNo {
+    display: none;
+  }
+  .extend {
+    padding: 0 20px;
+  }
+}
+
+.extend p {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
 }
 
 .whyTitle {
@@ -64,7 +87,7 @@
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%), url(dog.jpg);
   background-size: cover;
   background-position: center;
-  padding-bottom: 300px;
+  padding: 100px 0 150px;
 }
 
 .mMain {
@@ -163,9 +186,9 @@
 }
 
 .getPlan a {
-  background: #ffd04d;
+  background: #41a6df;
   padding: 8px 15px 11px;
-  color: #425168 !important; 
+  color: #fff !important; 
   border-radius: 5px;
   font-size: 17px;
 }

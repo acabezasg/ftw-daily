@@ -33,6 +33,9 @@
   line-height: 36px;
   height: 40px;
   position: relative;
+  width: auto !important;
+  float: left !important;
+  margin: 0 !important;
 }
 
 @media (max-width: 1380px) {
@@ -278,7 +281,6 @@
 
 .yotiTitle {
     text-align: center;
-    margin-bottom: 65px;
     margin-top: inherit;
 }
 
@@ -438,3 +440,22 @@
   text-decoration: none;
 }
 
+.idn {
+  background-image: linear-gradient(45deg,rgba(0,0,0,.5),rgba(0,0,0,.6)),url('banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 160px 20px;
+}
+
+.idn h1 {
+  color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .idn h1 {
+    line-height: 50px;
+    font-size: 2rem;
+  }
+}
