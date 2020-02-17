@@ -48,17 +48,22 @@
 }
 
 .carouselCaption h1 {
-	font-family: sans-serif;
+    font-family: "narrow", "Times New Roman", serif;
+    font-size: 45px;
+    line-height: 48px;
+    font-weight: 500;
     font-weight: 500;
     font-size: 56px;
     line-height: 72px;
-    letter-spacing: 3px;
     overflow: visible;
     white-space: nowrap;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.5px;
 }
 
 .carouselCaption p {
-	font-family: sans-serif;
+    font-family: "narrow", "Times New Roman", serif;
     font-weight: 300;
     margin: 43px 20px;
     padding: 0px;
