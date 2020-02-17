@@ -21,14 +21,18 @@ import {
   Stepper2,
   NamedLink,
   ExternalLink,
+  FeaturedIn,
 } from "../../components";
 import { TopbarContainer } from "../../containers";
 
+import carefully from "./carefully.jpg";
+import check from "./check.png";
+import wevet from "./wevet.jpg";
+import superhog from "./superhog.jpg";
+import yoti from "./yoti.jpg";
+import pawsquad from "./pawsquad.png";
 import facebookImage from "../../assets/saunatimeFacebook-1200x630.jpg";
 import twitterImage from "../../assets/saunatimeTwitter-600x314.jpg";
-import petservice1 from "./petservices-1.png";
-import petservice2 from "./petservices-2.png";
-import petservice3 from "./petservices-3.png";
 import featured1 from "./featuredin/1.png";
 import featured2 from "./featuredin/2.png";
 import featured3 from "./featuredin/3.png";
@@ -90,6 +94,10 @@ export const LandingPageComponent = props => {
           <SliderHero />
           <div className={css.featuredIn}>
               <div className={css.featuredSection}>
+              <div className={css.featuredMobile}>
+                <h1>Featured In</h1>
+                <FeaturedIn />
+              </div>
                 <div className={css.featuredWrapper}>
                   <div className={css.featuredItem}>FEATURED IN</div>
                   <a className={css.featuredItem}>
@@ -140,10 +148,10 @@ export const LandingPageComponent = props => {
                     We Vet every Pet Sitter
                   </h1>
                   <p className={css.WeVetDiv}>We don't let just anyone watch our pets,<br/>why should you?</p>
-                  <p className={css.WeVetLearn}>Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></p>
+                  <p className={css.WeVetLearn}><NamedLink name="WeVetPage">Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></NamedLink></p>
                 </div>
                 <div className={css.WeVetImage}>
-                  <img src="https://i.imgur.com/3YFZ5n2.jpg" />
+                  <img src={wevet} />
                 </div>
               </div>
             </li>
@@ -157,19 +165,19 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardCol}>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
-                      <span><img src="https://i.imgur.com/G1GYEOU.png" /></span>
+                      <span><img src={check} /></span>
                       <span>We carefully select the best<br />pet sitters out there</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
-                      <span><img src="https://i.imgur.com/G1GYEOU.png" /></span>
+                      <span><img src={check}  /></span>
                       <span>Our Insurance backed guarantee covers<br />your home for up to £1 million</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
-                      <span><img src="https://i.imgur.com/G1GYEOU.png" /></span>
+                      <span><img src={check}  /></span>
                       <span>With our trusted partners we've got<br />you and your pet covered</span>
                     </p>
                   </div>
@@ -202,7 +210,7 @@ export const LandingPageComponent = props => {
                   </div>
                   <div className={css.carefullyselectedItem}>
                     <div className={css.carefullyImage}>
-                      <img src="https://i.imgur.com/8FSOaAv.jpg" />
+                      <img src={carefully} />
                     </div>
                   </div>
                   </div>
@@ -222,7 +230,7 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <div className={css.ourPartners}>
                       <div className={css.ourPartnersItem1}>
-                         <img src="https://i.imgur.com/2Zfo6CI.png" />
+                         <img src={yoti} />
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>YOTI</h2>
@@ -234,7 +242,7 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <div className={css.ourPartners}>
                       <div className={css.ourPartnersItem1}>
-                         <img src="https://i.imgur.com/fZeVyDM.png" />
+                         <img src={superhog} />
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>Superhog</h2>
@@ -246,7 +254,7 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <div className={css.ourPartners}>
                       <div className={css.ourPartnersItem1}>
-                         <img src="https://i.imgur.com/KW3nLC5.jpg" />
+                         <img src={pawsquad} />
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>Pawsquad</h2>

@@ -15,6 +15,9 @@ import {
 
 import css from "./WeVetPage.css";
 import banner from "./banner.jpg";
+import pawsquad from "./pawsquad.png";
+import superhog from "./superhog.jpg";
+import yoti from "./yoti.jpg";
 
 const WeVetPage = () => {
   // const { siteTwitterHandle, siteFacebookPage } = config;
@@ -49,6 +52,7 @@ const WeVetPage = () => {
 
         <div className={css.affiliateFirst}>
           <div className={css.sectionContent}>
+            <h1 className={css.pageTitle}>Our Selection Process</h1>
             <p className={css.HowWeDoIt}>When we were putting together Trust My Pet Sitter one thing stood out to us over all others, we didn’t want just anyone to watch our pets, we wanted to be sure Pet Sitters were right for us – and our pets.</p>
             <p>That’s why we are selective about who makes the grade - and unapologetically so.</p>
             <p className={css.HowWeDoItP}><strong>You could say that’s what sets up out from the crowd. What makes us different.</strong></p>
@@ -74,7 +78,7 @@ const WeVetPage = () => {
             <div className={css.partnersGrid}>
               <div className={css.partnersItem}>
                 <div className={css.partnersImg}>
-                  <img src="https://i.imgur.com/KW3nLC5.jpg" />
+                  <img src={yoti} />
                 </div>
                 <div className={css.partnersContent}>
                   <p><strong>We partnered up with PawSquad</strong></p>
@@ -84,7 +88,7 @@ const WeVetPage = () => {
               </div>
               <div className={css.partnersItem}>
                 <div className={css.partnersImg}>
-                  <img src="https://i.imgur.com/2Zfo6CI.png" />
+                  <img src={superhog} />
                 </div>
                 <div className={css.partnersContent}>
                   <p><strong>We partnered up with YOTI</strong></p>
@@ -94,7 +98,7 @@ const WeVetPage = () => {
               </div>
               <div className={css.partnersItem}>
                 <div className={css.partnersImg}>
-                  <img src="https://i.imgur.com/KxRDZfS.jpg" />
+                  <img src={pawsquad} />
                 </div>
                 <div className={css.partnersContent}>
                   <p><strong>We partnered up with Superhog</strong></p>

@@ -233,6 +233,12 @@
   bottom: 122px;
 }
 
+@media (max-width: 700px) {
+  .carousel-indicators {
+    bottom: 0 !important;
+  }
+}
+
 #mTabs {
   position: relative;
 }

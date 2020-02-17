@@ -333,11 +333,16 @@
     margin-left: 15px;
 }
 
-@media (max-width: 620px) {
-
+@media (max-width: 800px) {
+  .pageTitle {
+    display: none;
+  }
 }
 
 @media (max-width: 800px) {
+  .pageTitle {
+    display: block;
+  }
   .sectionContent {
     margin: 60px auto;
   }
@@ -419,12 +424,11 @@
 }
 
 .partnersImg {
-  width: 100px;
   margin: 0 auto;
 }
 
 .partnersImg img {
-  width: 100%;
+  width: 130px;
   height: auto;
 }
 
@@ -438,4 +442,11 @@
 
 .learnMore {
   text-decoration: none !important;
+}
+
+@media (max-width: 970px) {
+  .partnersGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
+  }
 }

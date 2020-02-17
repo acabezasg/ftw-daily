@@ -6,13 +6,14 @@ import config from '../../config';
 import IconLogo from './IconLogo';
 import LogoImage from './saunatime-logo.png';
 import css from './Logo.css';
+import logo from './logo.png';
 
 const Logo = props => {
   const { className, format, ...rest } = props;
   const mobileClasses = classNames(css.logoMobile, className);
 
   if (format === 'desktop') {
-    return <img className={className} src="https://i.imgur.com/ePwU1mR.png" alt={config.siteTitle} {...rest} />;
+    return <img className={className} src={logo} alt={config.siteTitle} {...rest} />;
   }
 
   return <IconLogo className={mobileClasses} {...rest} />;

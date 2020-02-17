@@ -9938,6 +9938,14 @@ react-addons-shallow-compare@^15.6.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
+react-alice-carousel@^1.17.3:
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/react-alice-carousel/-/react-alice-carousel-1.17.3.tgz#c247c49d56434b138e21176ac52d58fc24505431"
+  integrity sha512-b+ODgT//GTUORlkN01H5NFj3jugR0unwbCBBOgOibg2bkhJglmuADyXzEoQlCBSkIRJjs4PqCNUbpwdzaHcG5w==
+  dependencies:
+    prop-types "^15.5.10"
+    vanilla-swipe "^1.0.0"
+
 react-animations@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-animations/-/react-animations-1.0.0.tgz#d96222920dfeabec8984d9b2ef2c5a5aadb40f06"
@@ -12432,6 +12440,11 @@ value-equal@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/value-equal/-/value-equal-1.0.1.tgz#1e0b794c734c5c0cade179c437d356d931a34d6c"
   integrity sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==
+
+vanilla-swipe@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vanilla-swipe/-/vanilla-swipe-1.1.1.tgz#8792b849f60a3ae98dfe8cc0313e52f8bad118bf"
+  integrity sha512-GQ8y6omllPD03KbVTlxa6cjdn+T69nXVitTLRG3PMCz3t8fPdMDFODwIDgj53IfRxcdw5bL6n6Q8MIPoctIA3w==
 
 vary@~1.1.2:
   version "1.1.2"

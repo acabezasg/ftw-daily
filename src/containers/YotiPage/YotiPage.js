@@ -1,6 +1,10 @@
-import React from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
+import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import {
+  StaticPage,
+  TopbarContainer,
+  ProfileSettingsPage
+} from "../../containers";
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -9,26 +13,25 @@ import {
   Footer,
   NamedLink,
   ExternalLink
-  
-} from '../../components';
+} from "../../components";
 
-import yoti from './yotilogo.png';
-import idphoto from './profile.svg';
-import birth from './dateofbirth.svg';
-import email from './email.svg';
-import phone from './phone.svg';
-import yotiscan from './yoti.png';
-import document from './document.svg';
-import name from './name.svg';
-import scan from './scan.png';
-import one from './1.png';
-import two from './2.png';
-import three from './3.png';
-import four from './4.png';
-import appstore from './appstore.png';
-import googlestore from './googlestore.png';
-import css from './YotiPage.css';
-import rotate from './rotate.png';
+import yoti from "./yotilogo.png";
+import idphoto from "./profile.svg";
+import birth from "./dateofbirth.svg";
+import email from "./email.svg";
+import phone from "./phone.svg";
+import yotiscan from "./yoti.png";
+import document from "./document.svg";
+import name from "./name.svg";
+import scan from "./scan.png";
+import one from "./1.png";
+import two from "./2.png";
+import three from "./3.png";
+import four from "./4.png";
+import appstore from "./appstore.png";
+import googlestore from "./googlestore.png";
+import css from "./YotiPage.css";
+import rotate from "./rotate.png";
 
 const YotiPage = () => {
   // prettier-ignore
@@ -143,5 +146,3 @@ const YotiPage = () => {
 };
 
 export default YotiPage;
-
-

@@ -364,6 +364,10 @@
   width: 100%;
 }
 
+.playIconMobile img {
+  width: 120px;
+}
+
 .playIconMobile span {
   font-size: 12px;
   line-height: 15px;

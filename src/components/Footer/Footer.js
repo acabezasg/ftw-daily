@@ -301,9 +301,8 @@ const Footer = props => {
                 </ul>
               </div>
             </div>
-                      <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter" className={css.playIconMobile}>
-                <div className={css.googleShape}></div>
-                    <span>Get it on<br /><span className={css.googleBold}>Google Play</span></span>
+              <ExternalLink href="https://play.google.com/store/apps/details?id=com.trustmypetsitter" className={css.playIconMobile}>
+                <img src={googlePlayBadge} />
              </ExternalLink>
           </div>
 

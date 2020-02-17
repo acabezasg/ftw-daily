@@ -1,6 +1,10 @@
-import React from 'react';
-import { StaticPage, TopbarContainer, ProfileSettingsPage } from '../../containers';
-import classNames from 'classnames';
+import React from "react";
+import {
+  StaticPage,
+  TopbarContainer,
+  ProfileSettingsPage
+} from "../../containers";
+import classNames from "classnames";
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -8,21 +12,19 @@ import {
   LayoutWrapperFooter,
   Footer,
   NamedLink,
-  ExternalLink,
-  
-} from '../../components';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+  ExternalLink
+} from "../../components";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-import css from './MembershipPage.css';
-import check from './check.png';
-import verification from './verification.png';
-import message from './message.png';
-import virtualvet from './virtualvet.png';
-import premium from './premium.png';
-import insurance from './insurance.png';
+import css from "./MembershipPage.css";
+import check from "./check.png";
+import verification from "./verification.png";
+import message from "./message.png";
+import virtualvet from "./virtualvet.png";
+import premium from "./premium.png";
+import insurance from "./insurance.png";
 
 const MembershipPage = () => {
-
   // prettier-ignore
   return (
     <StaticPage
@@ -277,6 +279,4 @@ const MembershipPage = () => {
   );
 };
 
-export default MembershipPage ;
-
-
+export default MembershipPage;
