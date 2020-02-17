@@ -146,7 +146,7 @@
   font-family: sans-serif;
   letter-spacing: 5px;
   color: #212529;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2.2rem;
   text-align: center;
   width: 100%;
@@ -734,7 +734,7 @@
   text-align: center;
   font-family: sans-serif;
   letter-spacing: 5px;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -771,7 +771,7 @@
   text-align: left !important;
   font-family: sans-serif;
   letter-spacing: 5px;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
   padding-bottom: 32px;
 
@@ -836,7 +836,7 @@
 .WeVetSection h1 {
   font-family: sans-serif;
   letter-spacing: 5px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .secondCol a {

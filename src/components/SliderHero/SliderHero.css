@@ -49,7 +49,7 @@
 
 .carouselCaption h1 {
 	font-family: sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 56px;
     line-height: 72px;
     letter-spacing: 3px;
@@ -59,7 +59,7 @@
 
 .carouselCaption p {
 	font-family: sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     margin: 43px 20px;
     padding: 0px;
     text-align: center;
