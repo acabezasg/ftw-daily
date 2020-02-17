@@ -40,18 +40,15 @@ const stylesRight = {
 const SliderHero = () => (
   <Carousel interval="8000" fade={true}>
 
-    <Carousel.Item>
+<Carousel.Item>
       <div className={css.carouselHero}>
-        <img src={firstSlide}></img>
+        <img src={forthSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Discover a New Standard</h1>
-            <p style={styles.fadeInUp}>
-            of Pet Care
-            </p>
+            <h1 style={styles.fadeInUp}>Finest Selection of Pet Sitters</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
@@ -84,35 +81,6 @@ const SliderHero = () => (
             <p style={styles.fadeInUp}>
               and their pets
             </p>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src={forthSlide}></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Finest Selection of Pet Sitters</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
