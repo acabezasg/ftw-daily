@@ -61,6 +61,13 @@
     letter-spacing: 0.5px;
 }
 
+@media (max-width: 800px) {
+    .carouselCaption h1 {
+        font-size: 50px !important;
+        line-height: 65px !important;
+    }
+}
+
 .carouselCaption p {
     font-family: "narrow", "Times New Roman", serif;
     font-weight: 300;
@@ -106,7 +113,7 @@
 
 @media (max-width: 992px) {
     .carouselCaption p {
-    	font-size: 15px;
+    	font-size: 25px;
     }
 }
 
