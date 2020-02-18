@@ -81,6 +81,9 @@
 .whyTitle {
   text-align: center;
   font-size: 40px;
+  font-family: "narrow", "Times New Roman", serif;
+  font-weight: bold;
+  letter-spacing: 3px !important;
 }
 
 .mBanner {
@@ -248,6 +251,9 @@
   padding-bottom: 30px;
   text-align: center;
   font-size: 40px;
+  font-family: "narrow", "Times New Roman", serif;
+  font-weight: bold;
+  letter-spacing: 3px !important;
 }
 
 .basicP {

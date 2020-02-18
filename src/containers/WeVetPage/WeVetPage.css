@@ -2,6 +2,7 @@
 
 .pageTitle {
   text-align: center;
+  font-family: "narrow", "Times New Roman", serif;
 }
 
 .sectionContent {
@@ -163,10 +164,14 @@
 }
 
 .affiliateWrapper h1 {
+  font-family: "narrow", "Times New Roman", serif;
   margin: 0;
   line-height: 60px;
-  letter-spacing: 0.3px;
   white-space: nowrap;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 75px;
 }
 
 .crowdTitle {
@@ -388,11 +393,17 @@
 }
 
 .affiliateFirst h1 {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 3px;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
 }
 
 .affiliateSecond h1 {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 3px;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
 }
