@@ -186,8 +186,6 @@
   width: 100%;
   margin: 0;
   color: #4a4a4a;
-  font-family: "narrow", "Times New Roman", serif;
-  letter-spacing: 1.5px;
 }
 
 
@@ -254,13 +252,14 @@
 }
 
 .serviceCenter h1 {
-  line-height: 53px;
+  line-height: 55px;
 }
 
 @media (max-width: 1200px) {
   .serviceCenter h1 {
     line-height: 45px;
   }
+  
   .experienceBr {
     display: none;
   }
@@ -770,7 +769,6 @@
   letter-spacing: 5px;
   font-weight: bold;
   margin: 0;
-  padding-bottom: 30px;
 }
 
 .sectionHomestay .newstandardCol {
