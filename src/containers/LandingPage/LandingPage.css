@@ -186,6 +186,8 @@
   width: 100%;
   margin: 0;
   color: #4a4a4a;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.5px;
 }
 
 
@@ -768,6 +770,7 @@
   letter-spacing: 5px;
   font-weight: bold;
   margin: 0;
+  padding-bottom: 30px;
 }
 
 .sectionHomestay .newstandardCol {
