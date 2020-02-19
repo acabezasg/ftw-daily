@@ -51,7 +51,7 @@
 
   /* fill */
   /* background-color: var(--matterColorLight); */
-  background-color: #c9bd9c;
+  background-color: #fff;
 
   /* shadows */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
@@ -67,7 +67,7 @@
   flex-shrink: 0;
   padding: 21px 24px 21px 24px;
   height: 100%;
-  background: #c9bd9c;
+  background: #fff;
 
   @media (--viewportLarge) {
     padding: 21px 36px 21px 36px;
