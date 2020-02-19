@@ -127,3 +127,7 @@
         padding: 0px 15px;
     }
 }
+
+.sSlide {
+    object-position: center !important;
+}

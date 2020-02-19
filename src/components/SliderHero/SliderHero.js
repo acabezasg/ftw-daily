@@ -69,7 +69,7 @@ const SliderHero = () => (
 
 <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src={forthSlide}></img>
+        <img className={css.sSlide} src={forthSlide}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -99,7 +99,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src={test6}></img>
+        <img className={css.sSlide} src={test6}></img>
       </div>
 
       <div className={css.carouselCaption}>

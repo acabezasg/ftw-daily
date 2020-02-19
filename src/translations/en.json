@@ -942,7 +942,7 @@
   "SectionFeatured.listingsInFeatured": "{location}",
   "SectionFeatured.featuredBadge": "{badge}",
   "SectionFeatured.title": "Featured Listings",
-  "SectionLocations.title": "We are travelling!",
+  "SectionLocations.title": "We are travelling",
   "SelectMultipleFilter.labelSelected": "{labelText} • {count}",
   "SelectMultipleFilterPlainForm.labelSelected": "{labelText} • {count}",
   "SelectSingleFilter.popupClear": "Clear",

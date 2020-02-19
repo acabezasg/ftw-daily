@@ -714,6 +714,8 @@
 
 .WeVetDiv {
   margin: 25px 0;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.5px;
 }
 
 .WeVetLearn {
@@ -721,6 +723,9 @@
   letter-spacing: 1px;
   margin: 0;
   padding-bottom: 65px;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.5px;
+  font-weight: bold;
 }
 
 .WeVetSection p {
