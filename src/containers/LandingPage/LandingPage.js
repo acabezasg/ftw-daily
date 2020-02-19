@@ -39,6 +39,9 @@ import featured3 from "./featuredin/3.png";
 import featured4 from "./featuredin/4.png";
 import elite from './elite.jpg';
 import css from "./LandingPage.css";
+import discoverCheck from "./select.png";
+import discoverShield from "./shield.png";
+import discoverNetwork from "./network.png";
 
 export const LandingPageComponent = props => {
   const { history, intl, location, scrollingDisabled } = props;
@@ -165,19 +168,19 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardCol}>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
-                      <span><img src={check} /></span>
+                      <span><img src={discoverCheck} /></span>
                       <span>We carefully select the best<br />pet sitters out there</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
-                      <span><img src={check}  /></span>
+                      <span><img src={discoverShield}  /></span>
                       <span>Our Insurance backed guarantee covers<br />your home for up to £1 million</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
-                      <span><img src={check}  /></span>
+                      <span><img src={discoverNetwork}  /></span>
                       <span>With our trusted partners we've got<br />you and your pet covered</span>
                     </p>
                   </div>

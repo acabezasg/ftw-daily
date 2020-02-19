@@ -5,6 +5,7 @@ import {
   ProfileSettingsPage
 } from "../../containers";
 import classNames from "classnames";
+import ReactTooltip from 'react-tooltip';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -72,7 +73,7 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               9<span class={css.decimal}>.99</span>
+               119<span class={css.decimal}>.00</span>
              </span>
              <span className={css.month}>
                /year
@@ -81,14 +82,45 @@ const MembershipPage = () => {
             <p className={css.offer}>Send messages, post listings...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} /> Find the perfect pet to watch</li>
-              <li><img src={check} /> ID Verification</li>
-              <li><img src={check} /> 24/7 access to Virtual Vet</li>
-              <li><img src={check} /> Create online profile</li>
-              <li><img src={check} /> Receive messages</li>
+            <li><img src={check} /> <span data-tip="" data-for="insurance">Home Insurance</span></li>
+              <ReactTooltip id="insurance" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  £1m insurance back guarantee
+                </span>
+              </ReactTooltip>
+              <li><img src={check} /> <span data-tip="" data-for="care">Virtual Vet (during sit)</span></li>
+              <ReactTooltip id="care" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  24/7 virtual vet care
+                </span>
+              </ReactTooltip>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Insurance</span></li>
+              <li><img src={check} /> Email Alert</li>
+              <li><img src={check} /> <span data-tip="" data-for="cover">Home Contents Cover</span></li>
+              <ReactTooltip id="cover" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  Covers up to £100,000
+                </span>
+              </ReactTooltip>
               <li><img src={check} /> Send messages</li>
+              <li><img src={check} /> Receive Messages</li>
               <li><img src={check} /> Secure Payments</li>
-              <li><img src={check} /> Travel the World</li>
+              <li className={css.mDisabled}><img src={check} /> <span>Social Media Listing</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Insurance</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Account Manager</span></li>
+              <li><img src={check} /> Pet 1:1 Care</li>
+              <li><img src={check} /> Newsletter</li>
+              <li><img src={check} /> 24/7 email support</li>
+              <li><img src={check} /> Live Chat</li>
+              <li><img src={check} /> Online Profile</li>
+              <li className={css.mDisabled}><img src={check} /> <span>Pet Sitter Membership</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Featured listing</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Food</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Accessories</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Treats</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Vet Care</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Toys</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Travel</span></li>
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentSitterPage">Start with Basic</NamedLink>
@@ -102,23 +134,64 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               49<span class={css.decimal}>.99</span>
+               199<span class={css.decimal}>.00</span>
              </span>
              <span className={css.month}>
-               /month
+               /year
              </span>
             </div>
             <p className={css.offer}>Create profile, online messaging...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} /> Pet Services Profile</li>
-              <li><img src={check} /> No additional fees</li>
-              <li><img src={check} /> Targeted local marketing</li>
-              <li><img src={check} /> Unlimited photos</li>
-              <li><img src={check} /> App Profile</li>
-              <li><img src={check} /> Reviews</li>
-              <li><img src={check} /> Add your website, address and contact number</li>
-              <li><img src={check} /> Trust My Pet Sitter Logo badge</li>
+            <li><img src={check} /> <span data-tip="" data-for="insurance">Home Insurance</span></li>
+              <ReactTooltip id="insurance" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  £1m insurance back guarantee
+                </span>
+              </ReactTooltip> 
+              <li><img src={check} /> <span data-tip="" data-for="care">Virtual Vet (during sit)</span></li>
+              <ReactTooltip id="care" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  24/7 virtual vet care
+                </span>
+              </ReactTooltip>
+              <li className={css.mDisabled}><img src={check} /> <span data-tip="" data-for="discount">Discount Pet Insurance</span></li>
+              <ReactTooltip id="discount" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  Coming soon!
+                </span>
+              </ReactTooltip>
+              <li><img src={check} /> Email Alert</li>
+              <li><img src={check} /> <span data-tip="" data-for="cover">Home Contents Cover</span></li>
+              <ReactTooltip id="cover" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  Covers up to £100,000
+                </span>
+              </ReactTooltip>
+              <li><img src={check} /> Send messages</li>
+              <li><img src={check} /> Receive Messages</li>
+              <li><img src={check} /> Secure Payments</li>
+              <li><img src={check} /> Social Media Listing</li>
+              <li><img src={check} /> Discount Pet Insurance</li>
+              <li><img src={check} /> Account Manager</li>
+              <li><img src={check} /> Pet 1:1 Care</li>
+              <li><img src={check} /> Newsletter</li>
+              <li><img src={check} /> 24/7 email support</li>
+              <li><img src={check} /> Live Chat</li>
+              <li><img src={check} /> Online Profile</li>
+              <li><img src={check} /> <span data-tip="" data-for="sitters">Pet Sitter Membership</span></li>
+              <ReactTooltip id="sitters" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  Worth £89.00
+                </span>
+              </ReactTooltip>
+              <li><img src={check} /> Featured listing</li>
+              <li><img src={check} /> Discount Pet Food</li>
+              <li><img src={check} /> Discount Pet Accessories</li>
+              <li><img src={check} /> Discount Pet Treats</li>
+              <li><img src={check} /> Discount Vet Care</li>
+              <li><img src={check} /> Discount Pet Toys</li>
+              <li><img src={check} /> Discount Travel</li>
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentServicePage"><img src={premium}  />Go Premium</NamedLink>
@@ -138,7 +211,7 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               9<span class={css.decimal}>.99</span>
+              89<span class={css.decimal}>.99</span>
              </span>
              <span className={css.month}>
                /year
@@ -147,14 +220,29 @@ const MembershipPage = () => {
             <p className={css.offer}>Send messages, post listings...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} /> Find the perfect pet to watch</li>
-              <li><img src={check} /> ID Verification</li>
-              <li><img src={check} /> 24/7 access to Virtual Vet</li>
-              <li><img src={check} /> Create online profile</li>
-              <li><img src={check} /> Receive messages</li>
+              <li><img src={check} /> Home Insurance</li>
+              <li><img src={check} /> <span data-tip="" data-for="care">Virtual Vet (during sit)</span></li>
+              <ReactTooltip id="care" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  24/7 virtual vet care
+                </span>
+              </ReactTooltip>
+              <li><img src={check} /> Trip Breakdown Cover</li>
+              <li><img src={check} /> Email Alert</li>
               <li><img src={check} /> Send messages</li>
+              <li><img src={check} /> Receive Messages</li>
               <li><img src={check} /> Secure Payments</li>
-              <li><img src={check} /> Travel the World</li>
+              <li><img src={check} /> Social Media Listing</li>
+              <li><img src={check} /> 24/7 email support</li>
+              <li><img src={check} /> Live Chat</li>
+              <li><img src={check} /> Online Profile</li>
+              <li className={css.mDisabled}><img src={check} /> <span>Featured Listing</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Discount Travel</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Accomodation Cover</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Home Failure</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Home Fraud</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Host Cancellation</span></li>
+              <li className={css.mDisabled}><img src={check} /> <span>Home Representation</span></li>
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentSitterPage">Start with Basic</NamedLink>
@@ -168,23 +256,38 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               49<span class={css.decimal}>.99</span>
+               179<span class={css.decimal}>.99</span>
              </span>
              <span className={css.month}>
-               /month
+               /year
              </span>
             </div>
             <p className={css.offer}>Create profile, online messaging...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} /> Pet Services Profile</li>
-              <li><img src={check} /> No additional fees</li>
-              <li><img src={check} /> Targeted local marketing</li>
-              <li><img src={check} /> Unlimited photos</li>
-              <li><img src={check} /> App Profile</li>
-              <li><img src={check} /> Reviews</li>
-              <li><img src={check} /> Add your website, address and contact number</li>
-              <li><img src={check} /> Trust My Pet Sitter Logo badge</li>
+            <li><img src={check} /> Home Insurance</li>
+            <li><img src={check} /> <span data-tip="" data-for="care">Virtual Vet (during sit)</span></li>
+              <ReactTooltip id="care" className={css.memberTip} effect="solid">
+                <span className={css.tipColor}>
+                  24/7 virtual vet care
+                </span>
+              </ReactTooltip>
+              <li><img src={check} /> Trip Breakdown Cover</li>
+              <li><img src={check} /> Email Alert</li>
+              <li><img src={check} /> Send messages</li>
+              <li><img src={check} /> Receive Messages</li>
+              <li><img src={check} /> Secure Payments</li>
+              <li><img src={check} /> Social Media Listing</li>
+              <li><img src={check} /> 24/7 email support</li>
+              <li><img src={check} /> Live Chat</li>
+              <li><img src={check} /> Online Profile</li>
+              <li><img src={check} /> Featured Listing</li>
+              <li><img src={check} /> Discount Travel</li>
+              <li><img src={check} /> Accomodation Cover</li>
+              <li><img src={check} /> Home Failure</li>
+              <li><img src={check} /> Home Fraud</li>
+              <li><img src={check} /> Host Cancellation</li>
+              <li><img src={check} /> Home Representation</li>
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentServicePage"><img src={premium}  />Go Premium</NamedLink>

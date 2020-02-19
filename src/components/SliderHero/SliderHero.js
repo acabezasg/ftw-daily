@@ -8,13 +8,18 @@ import { NamedLink } from "../../components";
 import css from "./SliderHero.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import firstSlide from "./slides/first.jpg";
-import secondSlide from "./slides/second.jpg";
-import thirdSlide from "./slides/third.jpg";
 import forthSlide from "./slides/forth.jpg";
 import fifthSlide from "./slides/fifth.jpg";
 import sixstSlide from "./slides/sixst.jpg";
 import testSlide from "./slides/test.jpg";
+
+import test1 from "./testslides/test1.jpg";
+import test2 from "./testslides/test2.jpg";
+import test3 from "./testslides/test3.jpg";
+import test4 from "./testslides/test4.jpg";
+import test5 from "./testslides/test5.jpg";
+import test6 from "./testslides/test6.jpg";
+import test7 from "./testslides/test7.jpg";
 
 const styles = {
   fadeInUp: {
@@ -71,7 +76,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src={sixstSlide}></img>
+        <img src={test7}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -162,26 +167,25 @@ const SliderHero = () => (
       </div>
     </Carousel.Item>
 
-    {/*
+
+
+
+
+
+
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img alt="First Slide" src={firstSlide} /> 
+        <img src={test1}></img>
       </div>
 
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>For Pet Parents Everywhere</h1>
-            <p style={styles.fadeInUp}>
-              Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry
-            </p>
+            <h1 style={styles.fadeInUp}>Test Heading</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -201,22 +205,16 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img alt="Test" src={fifthSlide} />
+        <img src={test2}></img>
       </div>
+
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Pet Services Made Simple</h1>
-            <p style={styles.fadeInUp}>
-              Dog Walking | Pet Foods | Drop- in Sitters | Grooming | Vets | Pet
-              Stores
-            </p>
+            <h1 style={styles.fadeInUp}>Test Heading</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -236,21 +234,16 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img alt="Second" src={secondSlide} />
+        <img src={test3}></img>
       </div>
+
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Watch pets in their own home</h1>
-            <p style={styles.fadeInUp}>
-              Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry
-            </p>
+            <h1 style={styles.fadeInUp}>Test Heading</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -270,24 +263,16 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img alt="Third Slide" src={thirdSlide} />
+        <img src={test4}></img>
       </div>
 
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>
-              Our Professional Sitters come to you
-            </h1>
-            <p style={styles.fadeInUp}>
-              Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry
-            </p>
+            <h1 style={styles.fadeInUp}>Test Heading</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -307,21 +292,16 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img alt="Test" src={forthSlide} />
+        <img src={test5}></img>
       </div>
+
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>For short and long term sits</h1>
-            <p style={styles.fadeInUp}>
-              Dogs | Cats | Rabbits | Reptiles | Pet Birds | Aquarium | Poultry
-            </p>
+            <h1 style={styles.fadeInUp}>Test Heading</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a className={css.btnPc} href="s?pub_user_type=2">
-                Find a Pet Service
-              </a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
             </div>
           </div>
@@ -338,7 +318,45 @@ const SliderHero = () => (
         </StyleRoot>
       </div>
     </Carousel.Item>
-*/}
+
+    <Carousel.Item>
+      <div className={css.carouselHero}>
+        <img src={test6}></img>
+      </div>
+
+      <div className={css.carouselCaption}>
+        <StyleRoot>
+          <div style={styles.fadeInUp}>
+            <h1 style={styles.fadeInUp}>Test Heading</h1>
+
+            <div className={css.submitContainer}>
+              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
+              <a href="s?pub_user_type=0">Find Homes to Sit</a>
+            </div>
+          </div>
+
+          <div className={css.submitContainer}>
+            <a
+              className={css.btnMob}
+              style={stylesLeft.fadeInLeft}
+              href="s?pub_user_type=2"
+            >
+              Find a Pet Service
+            </a>
+          </div>
+        </StyleRoot>
+      </div>
+    </Carousel.Item>
+
+
+
+
+
+
+
+
+
+
   </Carousel>
 );
 

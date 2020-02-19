@@ -616,7 +616,7 @@ export class ListingPageComponent extends Component {
                       <ReactTooltip id="claim" className={css.claimTip} effect="solid">
                         <span className={css.tipColor}>
                           Are you the Business Owner? Click the button and Claim the Listing!
-                              </span>
+                        </span>
                       </ReactTooltip>
 
                       {currentListing.attributes.publicData.requiredDates ? (
