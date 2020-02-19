@@ -98,7 +98,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src={test2}></img>
+        <img src={test6}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -127,7 +127,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src={test6}></img>
+        <img src={test2}></img>
       </div>
 
       <div className={css.carouselCaption}>
@@ -153,15 +153,6 @@ const SliderHero = () => (
         </StyleRoot>
       </div>
     </Carousel.Item>
-
-
-
-
-
-
-
-
-
 
   </Carousel>
 );
