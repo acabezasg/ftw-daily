@@ -131,7 +131,7 @@ export const LandingPageComponent = props => {
                       <div className={css.serviceGridContent}>
                         <div className={css.serviceCenter}>
                         <h1>
-                          Unique Experience
+                          Unique<br className={css.experienceBr} /> Experience
                         </h1>
                         <p>Build unforgettable memories<br />watching pets in their own home</p>
                         </div>

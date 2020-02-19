@@ -251,7 +251,17 @@
   object-position: bottom;
 }
 
+.serviceCenter h1 {
+  line-height: 53px;
+}
+
 @media (max-width: 1200px) {
+  .serviceCenter h1 {
+    line-height: 45px;
+  }
+  .experienceBr {
+    display: none;
+  }
   .serviceGrid {
     display: grid;
     grid-gap: 20px;
