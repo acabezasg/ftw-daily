@@ -75,7 +75,8 @@ const SliderHero = () => (
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Discover a new standard of Pet Care</h1>
+            <h1 style={styles.fadeInUp}>Pets stay in their own home</h1>
+            <p>when you travel</p>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
@@ -104,7 +105,7 @@ const SliderHero = () => (
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Test Heading</h1>
+            <h1 style={styles.fadeInUp}>Travel the world looking after pets</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
@@ -133,7 +134,7 @@ const SliderHero = () => (
       <div className={css.carouselCaption}>
         <StyleRoot>
           <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Test Heading</h1>
+            <h1 style={styles.fadeInUp}>Stay in wonderful locations</h1>
 
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>

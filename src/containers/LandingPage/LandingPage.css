@@ -186,6 +186,8 @@
   width: 100%;
   margin: 0;
   color: #4a4a4a;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.5px;
 }
 
 
@@ -252,14 +254,13 @@
 }
 
 .serviceCenter h1 {
-  line-height: 55px;
+  line-height: 53px;
 }
 
 @media (max-width: 1200px) {
   .serviceCenter h1 {
     line-height: 45px;
   }
-  
   .experienceBr {
     display: none;
   }
