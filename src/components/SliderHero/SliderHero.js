@@ -45,6 +45,36 @@ const stylesRight = {
 const SliderHero = () => (
   <Carousel interval="8000" fade={true}>
 
+
+<Carousel.Item>
+      <div className={css.carouselHero}>
+        <img src={test5}></img>
+      </div>
+
+      <div className={css.carouselCaption}>
+        <StyleRoot>
+          <div style={styles.fadeInUp}>
+            <h1 style={styles.fadeInUp}>Test Heading</h1>
+
+            <div className={css.submitContainer}>
+              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
+              <a href="s?pub_user_type=0">Find Homes to Sit</a>
+            </div>
+          </div>
+
+          <div className={css.submitContainer}>
+            <a
+              className={css.btnMob}
+              style={stylesLeft.fadeInLeft}
+              href="s?pub_user_type=2"
+            >
+              Find a Pet Service
+            </a>
+          </div>
+        </StyleRoot>
+      </div>
+    </Carousel.Item>
+
 <Carousel.Item>
       <div className={css.carouselHero}>
         <img src={forthSlide}></img>
@@ -76,223 +106,7 @@ const SliderHero = () => (
 
     <Carousel.Item>
       <div className={css.carouselHero}>
-        <img src={test7}></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>For Busy Professionals</h1>
-            <p style={styles.fadeInUp}>
-              and their pets
-            </p>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src={fifthSlide}></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Short and Long Term</h1>
-            <p style={styles.fadeInUp}>
-            Pet Sitting
-            </p>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src={testSlide}></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Stay in the Finest Locations</h1>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-
-
-
-
-
-
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src={test1}></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Test Heading</h1>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
         <img src={test2}></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Test Heading</h1>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src={test3}></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Test Heading</h1>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src={test4}></img>
-      </div>
-
-      <div className={css.carouselCaption}>
-        <StyleRoot>
-          <div style={styles.fadeInUp}>
-            <h1 style={styles.fadeInUp}>Test Heading</h1>
-
-            <div className={css.submitContainer}>
-              <a href="s?pub_user_type=1">Find a Pet Sitter</a>
-              <a href="s?pub_user_type=0">Find Homes to Sit</a>
-            </div>
-          </div>
-
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
-        </StyleRoot>
-      </div>
-    </Carousel.Item>
-
-    <Carousel.Item>
-      <div className={css.carouselHero}>
-        <img src={test5}></img>
       </div>
 
       <div className={css.carouselCaption}>

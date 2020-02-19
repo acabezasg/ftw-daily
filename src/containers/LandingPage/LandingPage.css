@@ -286,6 +286,9 @@
     grid-template-columns: repeat(1, 1fr) !important;
     grid-gap: 35px !important;
   }
+  .ourPartnersItem1 img {
+    opacity: 1 !important;
+  }
 }
 
 .sectionContentFirstChild {
