@@ -28,8 +28,8 @@ import { TopbarContainer } from "../../containers";
 import carefully from "./carefully.jpg";
 import check from "./check.png";
 import wevet from "./wevet.jpg";
-import superhog from "./superhog.jpg";
-import yoti from "./yoti.jpg";
+import superhog from "./superhog.png";
+import yoti from "./yoti.png";
 import pawsquad from "./pawsquad.png";
 import facebookImage from "../../assets/saunatimeFacebook-1200x630.jpg";
 import twitterImage from "../../assets/saunatimeTwitter-600x314.jpg";
@@ -250,7 +250,7 @@ export const LandingPageComponent = props => {
                       <div className={css.ourPartnersItem2}>
                         <h2>Superhog</h2>
                         <p>An Insurance backed guarantee working to protect your home and contents for up to £1 million.</p>
-                        <p className={css.secondCol}><ExternalLink href="https://superhog.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
+                        <p className={css.secondCol}><ExternalLink href="https://www.superhog.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
                       </div>
                     </div>
                   </div>

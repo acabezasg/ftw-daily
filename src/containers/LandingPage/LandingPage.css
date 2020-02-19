@@ -135,7 +135,7 @@
 }
 
 .hpHr {
-  margin: 80px 0 70px;
+  margin: 80px 0 65px;
   border-top: 1px solid rgba(0,0,0,.2) !important;
 }
 
@@ -822,7 +822,12 @@
   text-align: center;
 }
 
+.ourPartners:hover .ourPartnersItem1 img {
+  opacity: 1;
+}
+
 .ourPartnersItem1 img {
+  opacity: 0.7;
   width: 200px;
 }
 
