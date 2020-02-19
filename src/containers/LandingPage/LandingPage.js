@@ -189,6 +189,8 @@ export const LandingPageComponent = props => {
               </div>
             </li>
 
+            <hr className={css.hpHr2} />
+
             <li className={css.sections}>
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>

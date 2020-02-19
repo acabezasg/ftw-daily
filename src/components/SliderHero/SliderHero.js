@@ -9,17 +9,9 @@ import css from "./SliderHero.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import forthSlide from "./slides/forth.jpg";
-import fifthSlide from "./slides/fifth.jpg";
-import sixstSlide from "./slides/sixst.jpg";
-import testSlide from "./slides/test.jpg";
-
-import test1 from "./testslides/test1.jpg";
 import test2 from "./testslides/test2.jpg";
-import test3 from "./testslides/test3.jpg";
-import test4 from "./testslides/test4.jpg";
 import test5 from "./testslides/test5.jpg";
 import test6 from "./testslides/test6.jpg";
-import test7 from "./testslides/test7.jpg";
 
 const styles = {
   fadeInUp: {

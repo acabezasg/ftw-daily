@@ -135,7 +135,12 @@
 }
 
 .hpHr {
-  margin: 80px 0 65px;
+  margin: 80px 0;
+  border-top: 1px solid rgba(0,0,0,.2) !important;
+}
+
+.hpHr2 {
+  margin: 0 0 80px;
   border-top: 1px solid rgba(0,0,0,.2) !important;
 }
 
