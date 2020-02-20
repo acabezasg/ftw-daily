@@ -756,15 +756,6 @@
   background: #fff;
 }
 
-.WeVetLearn:hover {
-  color: #41a6df;
-  cursor: pointer;
-}
-
-.WeVetLearn:hover .WeVetArrow {
-  color: #41a6df !important;
-}
-
 .howItWorksColors {
   color: #fff !important;
 }
@@ -830,9 +821,11 @@
 
 
 .carefullyselectedItem p {
-  padding-bottom: 15px;
+  padding-bottom: 30px;
   margin: 0;
   color: #4a4a4a;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.5px;
 }
 
 .carefullyselectedItem p:last-child {
@@ -912,6 +905,8 @@
 .discoverFlex span {
   width: 100%;
   color: #4a4a4a;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.5px;
 }
 
 .discoverFlex span:nth-child(1) {
@@ -955,13 +950,21 @@
   margin: 0;
 }
 
+.WeVetLearn:hover {
+  color: transparent !important;
+}
+
 .WeVetLearn a {
   color: #4a4a4a;
   text-decoration: none !important;
 }
 
 .WeVetLearn a:hover {
-  color: #41a6df;
+  color: #41a6df !important;
+}
+
+.WeVetLearn a:hover span {
+  color: #41a6df !important;
 }
 
 .carefullyCopy {

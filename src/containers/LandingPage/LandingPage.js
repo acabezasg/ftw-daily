@@ -212,7 +212,7 @@ export const LandingPageComponent = props => {
                   </div>
                   <div className={css.carefullyselectedItem}>
                     <div className={css.carefullyImage}>
-                      <img src="https://i.imgur.com/3T9oBBO.jpg" />
+                      <img src={carefully} />
                     </div>
                   </div>
                   </div>
