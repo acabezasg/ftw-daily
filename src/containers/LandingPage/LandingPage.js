@@ -26,10 +26,9 @@ import {
 import { TopbarContainer } from "../../containers";
 
 import carefully from "./carefully.jpg";
-import check from "./check.png";
 import wevet from "./wevet.jpg";
-import superhog from "./superhog.png";
-import yoti from "./yoti.png";
+import superhog from "./superhog.jpg";
+import yoti from "./yoti.jpg";
 import pawsquad from "./pawsquad.png";
 import facebookImage from "../../assets/saunatimeFacebook-1200x630.jpg";
 import twitterImage from "../../assets/saunatimeTwitter-600x314.jpg";
@@ -272,6 +271,8 @@ export const LandingPageComponent = props => {
                 </div>
               </div>
             </li>
+
+            <hr className={css.hpHr} />
 
           {/*
             <li className={(css.sections, css.whyUseBg)}>
