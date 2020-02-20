@@ -799,7 +799,20 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 16px;
-  align-items: center;
+}
+
+.carefullyselectedItem:nth-child(1) {
+  display: inline-block;
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 128px;
+}
+
+.carefullyselectedItem:nth-child(2) img {
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .carefullyselectedItem {
@@ -812,9 +825,9 @@
   letter-spacing: 5px;
   font-weight: bold;
   margin: 0;
-  padding-bottom: 32px;
-
+  padding-bottom: 20px;
 }
+
 
 .carefullyselectedItem p {
   padding-bottom: 15px;
@@ -949,4 +962,20 @@
 
 .WeVetLearn a:hover {
   color: #41a6df;
+}
+
+.carefullyCopy {
+  padding-left: 15px;
+}
+
+.carefullyCopy li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  color: #4a4a4a;
+}
+
+.carefullyCopy li img {
+  height: 45px;
+  padding-right: 5px;
 }

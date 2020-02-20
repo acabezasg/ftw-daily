@@ -195,26 +195,24 @@ export const LandingPageComponent = props => {
                 <div className={css.newstandardSection}>
                   <div className={css.carefullyselectedCol}>
                   <div className={css.carefullyselectedItem}>
-                  <h1>Carefully Selected</h1>
+                  <h1>We’ve got you Covered</h1>
                     <p>
-                      Congratulations, you have discovered Trust My Pet Sitter! 
+                       From Dogs, Cats and Rabbits to Gecko’s, Parrots and Horses
                     </p>
-                    <p> 
-                      We are proud to offer a new standard of Pet Care.
-                    </p>
-                    <p>
-                      We assess every application against our Six Point Selection Process for inclusion. This gives you the guarantee that we select only the finest sitters to care for your precious pets.
-                    </p>
-                    <p>
-                      We love what we do. Our Pet Sitters are carefully selected by a highly experienced team of professionals to ensure only the highest calibre of sitters reach the TMPS benchmark to care for your fur babies.
-                    </p>
-                    <p>
-                      We build great relationships with our Pet Sitters, working closely with them to ensure that they have everything they need from us and from you to ensure a successful pet sitting experience for all.   We also encourage and monitor feedback from both parties to ensure that each continues to earn its place as part of our trusted community.
-                    </p>
+                   <ul className={css.carefullyCopy}>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Pets are happiest at home in their own environment</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> 1:1 care and attention</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Get regular updates from your sitter</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Pets follow their familiar routines when you are away</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Minimise disruption to your family</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Choose the sitter that is right for your pets</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Our sitters come with an Insurance backed guarantee</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Happy Pets = Happy Owners</li>
+                   </ul>
                   </div>
                   <div className={css.carefullyselectedItem}>
                     <div className={css.carefullyImage}>
-                      <img src={carefully} />
+                      <img src="https://i.imgur.com/3T9oBBO.jpg" />
                     </div>
                   </div>
                   </div>
