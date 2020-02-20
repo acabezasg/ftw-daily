@@ -819,6 +819,7 @@
   letter-spacing: 5px;
   font-weight: bold;
   margin: 0;
+  padding-bottom: 25px;
 }
 
 .carefullyselectedItem hr {
@@ -880,12 +881,16 @@
 
 .ourPartnersItem2 h2 {
   margin: 0;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 2px;
 }
 
 .ourPartnersItem2 p {
   margin: 0;
   padding: 30px 0;
   color: #4a4a4a;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.5px;
 }
 
 .secondCol {

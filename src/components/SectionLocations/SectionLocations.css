@@ -93,6 +93,9 @@
 }
 
 .linkText {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1px !important;
+  font-weight: bold !important;
   @apply --marketplaceH2FontStyles;
   color: var(--matterColor);
   margin-top: 15px;

@@ -197,7 +197,6 @@ export const LandingPageComponent = props => {
                   <div className={css.carefullyselectedItem}>
                   <h1>We’ve got you Covered</h1>
                     <p>
-                       <hr />
                        From Dogs, Cats and Rabbits to Gecko’s, Parrots and Horses
                     </p>
                    <ul className={css.carefullyCopy}>
@@ -237,7 +236,7 @@ export const LandingPageComponent = props => {
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>YOTI</h2>
-                        <p>YOTI works by allowing you to set up a trusted, genuine and verified digital identity.</p>
+                        <p>YOTI works by allowing you to set<br />up a trusted, genuine and verified<br />digital identity.</p>
                         <p className={css.secondCol}><ExternalLink href="https://www.yoti.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
                       </div>
                     </div>
@@ -249,7 +248,7 @@ export const LandingPageComponent = props => {
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>Superhog</h2>
-                        <p>An Insurance backed guarantee working to protect your home and contents for up to £1 million.</p>
+                        <p>An Insurance backed guarantee working<br />to protect your home and contents<br />for up to £1 million.</p>
                         <p className={css.secondCol}><ExternalLink href="https://www.superhog.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
                       </div>
                     </div>
@@ -261,7 +260,7 @@ export const LandingPageComponent = props => {
                       </div>
                       <div className={css.ourPartnersItem2}>
                         <h2>Pawsquad</h2>
-                        <p>PawSquad lets you video call or text chat with a qualified vet free at any time or day or night, 365 days a year.</p>
+                        <p>PawSquad lets you video call or text chat<br />with a qualified vet free at any time or day<br />or night, 365 days a year.</p>
                         <p className={css.secondCol}><ExternalLink href="https://www.pawsquad.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
                       </div>
                     </div>
