@@ -168,7 +168,7 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
                       <span><img src={discoverCheck} /></span>
-                      <span>We carefully select the best<br />pet sitters out there</span>
+                      <span>We provide a wide choice of Pet Sitters,<br />to help you choose the one that's right<br />for you and your pets</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}>
