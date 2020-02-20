@@ -64,8 +64,24 @@
 
 @media (max-width: 800px) {
     .carouselCaption h1 {
-        font-size: 50px !important;
-        line-height: 65px !important;
+        font-size: 45px !important;
+        line-height: 57px !important;
+        white-space: inherit;
+        margin-bottom: 0 !important;
+    }
+    .carouselCaption p {
+        padding: 15px 15px 0 !important;
+    }
+    .submitContainer {
+        display: block;
+        flex-wrap: wrap;
+    }
+    .submitContainer a {
+        width: 100%;
+        white-space: nowrap;
+    }
+    .submitContainer a:nth-child(1) {
+        margin-bottom: 10px !important;
     }
 }
 

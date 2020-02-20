@@ -149,7 +149,7 @@ export const LandingPageComponent = props => {
                   <h1 className={(css.vettitle)}>
                     We Vet every Pet Sitter
                   </h1>
-                  <p className={css.WeVetDiv}>We don't let just anyone watch our pets,<br/>why should you?</p>
+                  <p className={css.WeVetDiv}>We don't let just anyone watch our pets</p>
                   <p className={css.WeVetLearn}><NamedLink name="WeVetPage">Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></NamedLink></p>
                 </div>
                 <div className={css.WeVetImage}>

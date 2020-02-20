@@ -54,15 +54,6 @@ const SliderHero = () => (
             </div>
           </div>
 
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
         </StyleRoot>
       </div>
     </Carousel.Item>
@@ -84,15 +75,6 @@ const SliderHero = () => (
             </div>
           </div>
 
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
         </StyleRoot>
       </div>
     </Carousel.Item>
@@ -113,15 +95,6 @@ const SliderHero = () => (
             </div>
           </div>
 
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
         </StyleRoot>
       </div>
     </Carousel.Item>
@@ -142,15 +115,6 @@ const SliderHero = () => (
             </div>
           </div>
 
-          <div className={css.submitContainer}>
-            <a
-              className={css.btnMob}
-              style={stylesLeft.fadeInLeft}
-              href="s?pub_user_type=2"
-            >
-              Find a Pet Service
-            </a>
-          </div>
         </StyleRoot>
       </div>
     </Carousel.Item>
