@@ -258,6 +258,9 @@
 }
 
 @media (max-width: 1200px) {
+  .carefullyselectedItem:nth-child(1) {
+    padding-top: 0 !important;
+  }
   .serviceCenter h1 {
     line-height: 45px;
   }
@@ -796,11 +799,11 @@
   display: inline-block;
   width: 600px;
   margin: 0 auto;
-  padding-top: 64px;
+  padding-top: 128px;
 }
 
 .carefullyselectedItem:nth-child(2) img {
-  height: 650px;
+  height: 600px;
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
@@ -927,6 +930,7 @@
   color: #4a4a4a;
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 1.5px;
+  white-space: nowrap;
 }
 
 .discoverFlex span:nth-child(1) {
@@ -1007,4 +1011,19 @@
 .carefullyCopy li img {
   height: 45px;
   padding-right: 5px;
+}
+
+@media (max-width: 1500px) {
+  .carefullyselectedItem:nth-child(2) img {
+    height: 550px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carefullyselectedItem:nth-child(1) {
+    width: 100% !important;
+  }
+  .carefullyCopy {
+    padding-left: 0 !important;
+  }
 }

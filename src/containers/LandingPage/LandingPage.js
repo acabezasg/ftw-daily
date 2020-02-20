@@ -168,19 +168,19 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
                       <span><img src={discoverCheck} /></span>
-                      <span>We provide a wide choice of Pet Sitters, to help you choose the one that's rightfor you and your pets</span>
+                      <span>We provide a wide choice of Pet Sitters,<br />to help you choose the one that's right<br />for you and your pets</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
                       <span><img src={discoverShield}  /></span>
-                      <span>Our Insurance backed guarantee covers<br />your home for up to £1 million</span>
+                      <span>Peace of mind with our Insurance backed<br />guarantee covering your home for<br />up to £1 million</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
                       <span><img src={discoverNetwork}  /></span>
-                      <span>With our trusted partners we've got<br />you and your pet covered</span>
+                      <span>Our trusted partners provide you with the<br />knowledge that we've got your home and<br />your pet covered when you're not there</span>
                     </p>
                   </div>
                   </div>
