@@ -162,13 +162,13 @@ export const LandingPageComponent = props => {
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>
                   <h1 className={css.vettitle}>
-                    Discover a new standard in Pet Care
+                    We've raised the bar
                   </h1>
                   <div className={css.newstandardCol}>
                   <div className={css.newstandardItem}>
                     <p className={css.discoverFlex}>
                       <span><img src={discoverCheck} /></span>
-                      <span>We provide a wide choice of Pet Sitters,<br />to help you choose the one that's right<br />for you and your pets</span>
+                      <span>We provide a wide choice of Pet Sitters, to help you choose the one that's rightfor you and your pets</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}>
@@ -197,6 +197,7 @@ export const LandingPageComponent = props => {
                   <div className={css.carefullyselectedItem}>
                   <h1>We’ve got you Covered</h1>
                     <p>
+                       <hr />
                        From Dogs, Cats and Rabbits to Gecko’s, Parrots and Horses
                     </p>
                    <ul className={css.carefullyCopy}>

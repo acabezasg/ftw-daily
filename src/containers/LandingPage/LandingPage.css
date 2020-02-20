@@ -796,7 +796,7 @@
   display: inline-block;
   width: 600px;
   margin: 0 auto;
-  padding-top: 128px;
+  padding-top: 64px;
 }
 
 .carefullyselectedItem:nth-child(2) img {
@@ -816,7 +816,11 @@
   letter-spacing: 5px;
   font-weight: bold;
   margin: 0;
-  padding-bottom: 20px;
+}
+
+.carefullyselectedItem hr {
+  margin: 30px 0 20px;
+  border-top: 1px solid rgba(0,0,0,.2);
 }
 
 
@@ -826,6 +830,7 @@
   color: #4a4a4a;
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 1.5px;
+  display: inline-block;
 }
 
 .carefullyselectedItem p:last-child {
