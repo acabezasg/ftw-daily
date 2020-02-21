@@ -5,6 +5,19 @@
   font-family: "narrow", "Times New Roman", serif;
 }
 
+.sectionContent ul {
+  list-style: initial;
+  padding-left: 30px;
+  padding-top: 25px;
+}
+
+.sectionContent ul li {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 0.8px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
 .sectionContent {
   margin: 80px auto 80px;
   padding: 0 36px 0 36px;
@@ -465,4 +478,8 @@
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 40px;
   }
+}
+
+.affiliateFirst .sectionContent .pageTitle {
+  line-height: 57px;
 }
