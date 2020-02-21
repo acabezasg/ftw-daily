@@ -204,7 +204,6 @@
 }
 
 .affiliateFirst p {
-  color: darkslategray;
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 0.7px;
 }
@@ -416,6 +415,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
+  font-size: 40px;
 }
 
 .affiliateSecond h1 {
@@ -432,6 +432,8 @@
 
 .HowWeDoIt {
   margin-top: 0;
+  font-weight: bold;
+  text-align: center;
 }
 
 .HowWeDoItAll {
