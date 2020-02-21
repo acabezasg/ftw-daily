@@ -292,3 +292,9 @@
     padding: 24px 10px !important;
   }
 }
+
+@media (max-width: 700px) {
+.carousel-inner .carousel-item:nth-child(1) div img {
+   object-position: -200px !important;
+  } 
+}

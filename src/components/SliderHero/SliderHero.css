@@ -56,7 +56,6 @@
     margin-top: 0;
     line-height: 72px;
     overflow: visible;
-    white-space: nowrap;
     font-style: normal;
     font-stretch: normal;
     letter-spacing: 0.5px;
@@ -94,7 +93,6 @@
     color: #fff;
     margin: 5px 0 4px;
     letter-spacing: 3px;
-    white-space: nowrap;
     font-size: 25px;
 
 }
@@ -134,13 +132,23 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     .carouselCaption h1, .carouselCaption p {
         white-space: inherit;
     }
 
     .carouselCaption p {
         padding: 0px 15px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .carouselCaption h1, .carouselCaption p {
+        white-space: nowrap;
+    }
+
+    .carouselCaption p {
+        white-space: nowrap;
     }
 }
 

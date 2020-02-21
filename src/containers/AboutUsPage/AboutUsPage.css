@@ -26,10 +26,11 @@
 	  margin: 0 !important;
 	}
 	.card {
-	  padding: 0 !important;
-	}
+    padding: 0 !important;
+    background: transparent !important;;
+  }
 	.container {
-	  display: block !important;
+    grid-template-columns: repeat(1, 1fr) !important;
 	}
 	.card_content {
 	  margin-top: 0 !important;
@@ -47,7 +48,8 @@
       padding: 0;
 	}
 	.card_title {
-	  margin-bottom: 5px;
+    margin-bottom: 5px;
+    white-space: inherit !important;
 	}
 	.card_svg {
 	  display: none;
@@ -142,7 +144,6 @@ img {
 .pressTitle2 {
   text-align: center;
   margin-top: 50px;
-  padding: 0 60px;
 }
 
 .pressSub:nth-of-type(2) {

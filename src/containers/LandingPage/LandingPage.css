@@ -1083,7 +1083,7 @@
      display: none;
   }
   .carefullyselectedItem:nth-child(1) {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 100%), url('./carefully.jpg');
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%), url('./carefully.jpg');
     background-size: cover;
     background-position: center center;
     padding: 34px !important;
@@ -1103,5 +1103,11 @@
   .carefullyselectedItem h1,
   .carefullyselectedItem p {
     text-align: center !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .vettitle {
+      padding: 0 10px;
   }
 }
