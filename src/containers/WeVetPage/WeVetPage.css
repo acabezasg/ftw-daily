@@ -67,6 +67,8 @@
 }
 .affiliateSecond p {
   color: darkslategray;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1px;
 }
 .start {
   background-color: rgb(65,166,223);
@@ -184,11 +186,14 @@
 
 .crowdTitle p {
   margin: 10px 0 0;
-  letter-spacing: 0.3px;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.8px;
 }
 
 .affiliateFirst p {
   color: darkslategray;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1px;
 }
 
 .difMar {
