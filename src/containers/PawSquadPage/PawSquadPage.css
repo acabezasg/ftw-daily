@@ -21,6 +21,20 @@
   }
 }
 
+.sectionContent p,
+.sectionContent h1,
+.sectionContent h2 {
+  font-family: "narrow", "Times New Roman", serif;
+}
+
+.sectionContent h2 {
+  letter-spacing: 0.8px;
+}
+
+.sectionContent p {
+  letter-spacing: 0.7px;
+}
+
 .pawTitle {
   text-align: center;
   margin-top: 0;
@@ -29,6 +43,8 @@
 .pawSub {
   font-size: 28px;
   text-align: center;
+  letter-spacing: 0.8px;
+  font-weight: bold;
   margin-bottom: 24px !important;
 }
 

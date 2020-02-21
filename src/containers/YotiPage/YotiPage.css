@@ -24,6 +24,27 @@
   }
 }
 
+.whatwedoLeft p,
+.whatwedoLeft h2,
+.whatwedoRight h2,
+.whatwedoRight p {
+  font-family: "narrow", "Times New Roman", serif;
+}
+
+.whatwedoLeft p,
+.whatwedoRight p {
+  letter-spacing: 0.7px;
+}
+
+.whatwedoRight p {
+  font-weight: bold;
+}
+
+.whatwedoLeft h2,
+.whatwedoRight h2 {
+  letter-spacing: 0.8px;
+}
+
 .joinNow {
   background-color: #c9bd9c;
   color: #fff;

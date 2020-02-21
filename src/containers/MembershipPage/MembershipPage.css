@@ -51,9 +51,16 @@
   margin-top: 0;
 }
 
+.sectionContent ul:nth-child(1) li {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 0.8px;
+}
+
 .extend p {
   color: #fff;
   padding-top: 10px;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 2.5px;
 }
 
 .extend h1 {
@@ -170,6 +177,8 @@
 }
 
 .whyFlex > div > h3 {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 0.8px;
   font-size: 22px;
 }
 
@@ -258,6 +267,8 @@
 
 .basicP {
   text-align: center;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 0.7px;
 }
 
 .bigNum {

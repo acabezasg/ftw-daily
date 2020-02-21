@@ -45,14 +45,14 @@ const WeVetPage = () => {
             <div className={css.imgOverlay}>
               <div className={css.crowdTitle}>
               <h1 className={css.pageTitle}>We Vet every Pet Sitter</h1>
-              <p>We don't let just anyone watch our pets,<br />why should you?</p>
+              <p>We don't let just anyone watch our pets</p>
               </div>
             </div>
           </div>
 
         <div className={css.affiliateFirst}>
           <div className={css.sectionContent}>
-            <h1 className={css.pageTitle}>Our Selection Process</h1>
+            <h1 className={css.pageTitle}>We've raised the bar</h1>
             <p className={css.HowWeDoIt}>When we were putting together Trust My Pet Sitter one thing stood out to us over all others, we didn’t want just anyone to watch our pets, we wanted to be sure Pet Sitters were right for us – and our pets.</p>
             <p>That’s why we are selective about who makes the grade - and unapologetically so.</p>
             <p className={css.HowWeDoItP}><strong>You could say that’s what sets up out from the crowd. What makes us different.</strong></p>

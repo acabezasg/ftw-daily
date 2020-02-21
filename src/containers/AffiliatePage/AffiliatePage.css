@@ -25,6 +25,33 @@
   }
 }
 
+.sectionConent h1,
+.sectionContent h2,
+.sectionContent p,
+.sectionContent ul li,
+.sectionContent span {
+  font-family: "narrow", "Times New Roman", serif;
+}
+
+.sectionContent p,
+.sectionContent span {
+  letter-spacing: 0.7px;
+}
+
+.sectionContent ul li {
+  font-weight: bold;
+}
+
+.sectionContent h2 {
+  font-weight: 600;
+}
+
+.sectionConent h1,
+.sectionContent h2,
+.sectionContent ul li {
+  letter-spacing: 0.8px;
+}
+
 .staticPageWrapper {
   width: calc(100% - 48px);
   max-width: 1056px;
@@ -68,6 +95,8 @@
   color: darkslategray;
 }
 .start {
+  font-family: "narrow", "Times New Roman", serif !important;
+  letter-spacing: 0.8px;
   background-color: rgb(65,166,223);
   color: #fff !important;
   padding: 10px 20px;

@@ -68,7 +68,7 @@
 .affiliateSecond p {
   color: darkslategray;
   font-family: "narrow", "Times New Roman", serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.7px;
 }
 .start {
   background-color: rgb(65,166,223);
@@ -193,7 +193,7 @@
 .affiliateFirst p {
   color: darkslategray;
   font-family: "narrow", "Times New Roman", serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.7px;
 }
 
 .difMar {

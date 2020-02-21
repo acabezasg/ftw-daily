@@ -95,10 +95,6 @@ const YotiPage = () => {
           </p>
 
           <p>
-            <NamedLink name="YotiPage">Learn more about Yoti</NamedLink>
-          </p>
-
-          <p>
             <NamedLink className={css.joinNow} name="SignupPage">Join Now<img src={rotate} className={css.imgRotate} /></NamedLink>
           </p>
 

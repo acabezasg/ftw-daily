@@ -143,6 +143,8 @@
 }
 
 .helpTitle {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 2px;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -239,6 +241,8 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 20px;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 0.1px;
 }
 
 .helpDivider {
@@ -247,9 +251,13 @@
 
 .skinWrapper h2 {
   font-weight: 700;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 0.8px;
 }
 
 .skinWrapper h3 {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 0.7px;
   font-weight: 600;
   color: #484848 !important;
   padding-right: 10px;
