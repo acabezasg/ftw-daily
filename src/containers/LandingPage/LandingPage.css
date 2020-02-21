@@ -777,6 +777,39 @@
   padding-top: 40px;
 }
 
+.sections:nth-child(3) .sectionHomestay .newstandardCol {
+  display: grid;
+  grid-template-columns: auto 1px auto 1px auto;
+  padding-top: 40px;
+}
+
+.sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+.sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  background: rgb(0, 0, 0, .2);
+}
+
+@media (max-width: 1100px) {
+  .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+  .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  display: none;
+}
+.sections:nth-child(3) .sectionHomestay .newstandardCol {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 500px) {
+  .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+  .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  display: block;
+  height: 1px;
+  background: rgb(0, 0, 0, .3);
+}
+.sections:nth-child(3) .sectionHomestay .newstandardCol {
+  grid-template-columns: auto 1px auto 1px auto;
+}
+}
+
 .newstandardCol .newstandardItem {
   text-align: center;
 }
@@ -891,6 +924,7 @@
   color: #4a4a4a;
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 1.5px;
+  white-space: nowrap;
 }
 
 .secondCol {
@@ -936,6 +970,16 @@
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 1.5px;
   white-space: nowrap;
+}
+
+@media (max-width: 1260px) {
+  .discoverFlex span,
+  .ourPartnersItem2 p {
+    white-space: inherit !important;
+  }
+  .noPc {
+    display: none;
+  }
 }
 
 .discoverFlex span:nth-child(1) {
@@ -1011,6 +1055,7 @@
   align-items: center;
   padding-bottom: 15px;
   color: #4a4a4a;
+  font-weight: bold;
 }
 
 .carefullyCopy li img {
@@ -1030,5 +1075,33 @@
   }
   .carefullyCopy {
     padding-left: 0 !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .carefullyselectedItem:nth-child(2) {
+     display: none;
+  }
+  .carefullyselectedItem:nth-child(1) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 100%), url('./carefully.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 34px !important;
+    border-radius: 5px;
+ }
+  .carefullyselectedCol {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .carefullyselectedItem h1,
+  .carefullyselectedItem ul li,
+  .carefullyselectedItem p {
+    color: #fff;
+  }
+  .carefullyCopy {
+    padding-left: 0;
+  }
+  .carefullyselectedItem h1,
+  .carefullyselectedItem p {
+    text-align: center !important;
   }
 }

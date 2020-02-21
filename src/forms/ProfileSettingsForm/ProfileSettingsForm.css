@@ -341,18 +341,14 @@ iframe[title='Yoti - Modal'] {
 }
 
 .yotiContainer {
-  height: 120px;
-  width: auto;
-  padding-top: 10px;
+  height: 57px;
+  width: 201px;
 }
 
 .needHelp {
   color: #b2b2b2;
-  position: relative;
-  top: 18px;
-  right: 85px;
   font-size: 17px;
-  max-height: 25px;
+  padding-left: 10px;
 }
 
 .customTip {
@@ -371,6 +367,8 @@ iframe[title='Yoti - Modal'] {
 
 .yotiBtn1 {
   display: flex;
+  align-items: center;
+  padding: 10px 0 56px;
 }
 
 .numb {
@@ -427,6 +425,12 @@ iframe[title='Yoti - Modal'] {
 }
 
 @media (max-width: 620px) {
+  .yotiBtn1 {
+    padding: 10px 0 0 !important;
+  }
+  .mobileHelp {
+    padding-bottom: 10px;
+  }
   .forMob {
     display: block !important;
   }
