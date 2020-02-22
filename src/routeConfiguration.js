@@ -54,6 +54,7 @@ import {
   PetServiceExplainer,
   WeVetPage,
   SuperHogPage,
+  WhyPetOwnersPage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -248,6 +249,11 @@ const routeConfiguration = () => {
       name: 'SearchFiltersPage',
       component: props => <SearchPage {...props} tab="filters" />,
       loadData: SearchPage.loadData,
+    },
+    {
+      path: '/reasons-hesitant-hire-professional-pet-sitter',
+      name: 'WhyPetOwnersPage',
+      component: WhyPetOwnersPage,
     },
     {
       path: '/s/listings',

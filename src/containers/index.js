@@ -53,3 +53,4 @@ export { default as CrowdFundingPage } from './CrowdFundingPage/CrowdFundingPage
 export { default as PetServiceExplainer } from './PetServiceExplainer/PetServiceExplainer';
 export { default as WeVetPage } from './WeVetPage/WeVetPage';
 export { default as SuperHogPage } from './SuperHogPage/SuperHogPage';
+export { default as WhyPetOwnersPage } from './WhyPetOwnersPage/WhyPetOwnersPage';
