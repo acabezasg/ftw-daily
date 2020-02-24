@@ -267,3 +267,8 @@
 .choose {
   text-decoration: none !important;
 }
+
+.choose button:hover {
+  background: #c9bd9c;
+  text-shadow: 1px 1px 1px darkslategrey;
+}

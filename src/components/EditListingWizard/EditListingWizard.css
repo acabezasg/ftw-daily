@@ -124,8 +124,13 @@
 }
 
 .backButtonContainer button {
-  background-color: #41a6df !important;
+  background: #c9bd9c !important;
+  text-shadow: 1px 1px 1px darkslategrey;
   color: #fff !important;
+}
+
+.backButtonContainer button:hover {
+  background: #b7a77b !important;
 }
 
 @media (max-width: 1023px) {

@@ -19,11 +19,12 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import css from "./MembershipPage.css";
 import check from "./check.png";
-import verification from "./verification.png";
-import message from "./message.png";
-import virtualvet from "./virtualvet.png";
 import premium from "./premium.png";
-import insurance from "./insurance.png";
+import paw from "./paw.png";
+
+import why1 from "../LandingPage/select.png";
+import why2 from "../LandingPage/shield.png";
+import why3 from "../LandingPage/network.png";
 
 const MembershipPage = () => {
   // prettier-ignore
@@ -56,9 +57,9 @@ const MembershipPage = () => {
 
   <Tabs>
     <TabList>
-      <Tab><span className={css.mobNo}>Pet </span>Owner</Tab>
-      <Tab><span className={css.mobNo}>Pet </span>Sitter</Tab>
-      <Tab><span className={css.mobNo}>Pet </span>Service</Tab>
+      <Tab><span className={css.mobNo}>Pet </span>Owner<img className={css.activePaw} src={paw} /></Tab>
+      <Tab><span className={css.mobNo}>Pet </span>Sitter<img className={css.activePaw} src={paw} /></Tab>
+      <Tab><span className={css.mobNo}>Pet </span>Service<img className={css.activePaw} src={paw} /></Tab>
   </TabList>
 
 <TabPanel>
@@ -73,7 +74,7 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               119<span class={css.decimal}>.00</span>
+               119
              </span>
              <span className={css.month}>
                /year
@@ -94,7 +95,7 @@ const MembershipPage = () => {
                   24/7 virtual vet care
                 </span>
               </ReactTooltip>
-              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Insurance</span></li>
+              <li><img src={check} /> <span>Discount Pet Insurance</span></li>
               <li><img src={check} /> Email Alert</li>
               <li><img src={check} /> <span data-tip="" data-for="cover">Home Contents Cover</span></li>
               <ReactTooltip id="cover" className={css.memberTip} effect="solid">
@@ -106,7 +107,7 @@ const MembershipPage = () => {
               <li><img src={check} /> Receive Messages</li>
               <li><img src={check} /> Secure Payments</li>
               <li className={css.mDisabled}><img src={check} /> <span>Social Media Listing</span></li>
-              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Insurance</span></li>
+              <li><img src={check} /> <span>Discount Pet Insurance</span></li>
               <li className={css.mDisabled}><img src={check} /> <span>Account Manager</span></li>
               <li><img src={check} /> Pet 1:1 Care</li>
               <li><img src={check} /> Newsletter</li>
@@ -123,7 +124,7 @@ const MembershipPage = () => {
               <li className={css.mDisabled}><img src={check} /> <span>Discount Travel</span></li>
             </ul>
             <div className={css.getPlan}>
-            <NamedLink name="PaymentSitterPage">Start with Basic</NamedLink>
+            <NamedLink name="PaymentOwnerPage">Start with Basic</NamedLink>
             </div>
           </div>
           <div>
@@ -134,7 +135,7 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               199<span class={css.decimal}>.00</span>
+               199
              </span>
              <span className={css.month}>
                /year
@@ -155,12 +156,7 @@ const MembershipPage = () => {
                   24/7 virtual vet care
                 </span>
               </ReactTooltip>
-              <li className={css.mDisabled}><img src={check} /> <span data-tip="" data-for="discount">Discount Pet Insurance</span></li>
-              <ReactTooltip id="discount" className={css.memberTip} effect="solid">
-                <span className={css.tipColor}>
-                  Coming soon!
-                </span>
-              </ReactTooltip>
+              <li><img src={check} /> <span>Discount Pet Insurance</span></li>
               <li><img src={check} /> Email Alert</li>
               <li><img src={check} /> <span data-tip="" data-for="cover">Home Contents Cover</span></li>
               <ReactTooltip id="cover" className={css.memberTip} effect="solid">
@@ -182,7 +178,7 @@ const MembershipPage = () => {
               <li><img src={check} /> <span data-tip="" data-for="sitters">Pet Sitter Membership</span></li>
               <ReactTooltip id="sitters" className={css.memberTip} effect="solid">
                 <span className={css.tipColor}>
-                  Worth £89.00
+                  Worth £89
                 </span>
               </ReactTooltip>
               <li><img src={check} /> Featured listing</li>
@@ -194,7 +190,7 @@ const MembershipPage = () => {
               <li><img src={check} /> Discount Travel</li>
             </ul>
             <div className={css.getPlan}>
-            <NamedLink name="PaymentServicePage"><img src={premium}  />Go Premium</NamedLink>
+            <NamedLink name="PaymentOwnerPage"><img src={premium}  />Go Premium</NamedLink>
             </div>
           </div>
           </div>
@@ -205,13 +201,13 @@ const MembershipPage = () => {
          <div className={css.mWrapper}>
           <div>
             <h3>Basic</h3>
-            <p>Plans for all pet sitters</p>
+            <p>Plan for all pet sitters</p>
             <div className={css.price}>
              <span className={css.currency}>
               $
              </span>
              <span className={css.bigNum}>
-              89<span class={css.decimal}>.99</span>
+              89
              </span>
              <span className={css.month}>
                /year
@@ -250,13 +246,13 @@ const MembershipPage = () => {
           </div>
           <div>
             <h3>Premium</h3>
-            <p>Plans for all pet sitters</p>
+            <p>Plan for all pet sitters</p>
             <div className={css.price}>
              <span className={css.currency}>
               $
              </span>
              <span className={css.bigNum}>
-               179<span class={css.decimal}>.99</span>
+               129
              </span>
              <span className={css.month}>
                /year
@@ -290,7 +286,7 @@ const MembershipPage = () => {
               <li><img src={check} /> Home Representation</li>
             </ul>
             <div className={css.getPlan}>
-            <NamedLink name="PaymentServicePage"><img src={premium}  />Go Premium</NamedLink>
+            <NamedLink name="PaymentSitterPage"><img src={premium}  />Go Premium</NamedLink>
             </div>
           </div>
           </div>
@@ -307,10 +303,10 @@ const MembershipPage = () => {
               $
              </span>
              <span className={css.bigNum}>
-               19<span class={css.decimal}>.99</span>
+               10
              </span>
              <span className={css.month}>
-               /year
+               /month
              </span>
             </div>
             <p className={css.offer}>Send messages, post listings...</p>
@@ -326,7 +322,7 @@ const MembershipPage = () => {
               <li><img src={check} /> Travel the World</li>
             </ul>
             <div className={css.getPlan}>
-            <NamedLink name="PaymentSitterPage">Start with Business</NamedLink>
+            <NamedLink name="PaymentServicePage">Start with Business</NamedLink>
             </div>
           </div>
           </div>
@@ -338,27 +334,21 @@ const MembershipPage = () => {
 
     <div className={css.whyWrapper}>
     <div className={css.whyContent}>
-      <h3 className={css.whyTitle}>Why go Premium?</h3>
+      <h3 className={css.whyTitle}>We've raised the bar</h3>
       <div className={css.whyFlex}>
         <div>
-          <img src={message} />
-          <h3>Send messages</h3>
-          {/* <p>Get in touch with our worldwide users anytime.</p> */}
+          <img src={why1} />
+          <p>We provide a wide choice of Pet Sitters,<br className={css.budiNesto} /> to help you choose the one that's right<br className={css.budiNesto} /> for you and your pets</p>
         </div>
+        <div className={css.flexHr}></div>
         <div>
-          <img src={virtualvet} />
-          <h3>24/7 Virtual Vet</h3>
-          {/* <p>Get covered by professional vets all the time.</p> */}
+          <img src={why2} />
+          <p>Peace of mind with our Insurance backed<br className={css.budiNesto} /> guarantee covering your home for<br className={css.budiNesto} /> up to £1 million</p>
         </div>
+        <div className={css.flexHr}></div>
         <div>
-          <img src={insurance} />
-          <h3>Home Insurance</h3>
-          {/* <p>Your account will become verified with the badge.</p> */}
-        </div>
-        <div>
-          <img src={verification} />
-          <h3>ID Verification</h3>
-          {/* <p>Your account will become verified with the badge.</p> */}
+          <img src={why3} />
+          <p>Our trusted partners provide you with the<br className={css.budiNesto} /> knowledge that we've got your home and<br className={css.budiNesto} /> your pet covered when you're not there</p>
         </div>
       </div>
     </div>

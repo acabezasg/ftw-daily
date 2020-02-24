@@ -13,7 +13,7 @@ const Logo = props => {
   const mobileClasses = classNames(css.logoMobile, className);
 
   if (format === 'desktop') {
-    return <img className={className} src={logo} alt={config.siteTitle} {...rest} />;
+    return <img className={className} src="https://i.imgur.com/aK0bEqW.png" alt={config.siteTitle} {...rest} />;
   }
 
   return <IconLogo className={mobileClasses} {...rest} />;

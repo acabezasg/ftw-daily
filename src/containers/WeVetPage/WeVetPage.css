@@ -14,7 +14,6 @@
 .sectionContent ul li {
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 0.8px;
-  font-weight: bold;
   padding-bottom: 10px;
 }
 
@@ -433,7 +432,6 @@
 .HowWeDoIt {
   margin-top: 0;
   font-weight: bold;
-  text-align: center;
 }
 
 .HowWeDoItAll {
@@ -459,12 +457,14 @@
 }
 
 .partnersImg img {
-  width: 130px;
+  width: 150px;
   height: auto;
+  opacity: 0.7;
 }
 
 .partnersItem {
   text-align: center;
+  cursor: pointer;
 }
 
 .partnersItem p:nth-child(1) {
@@ -473,6 +473,19 @@
 
 .learnMore {
   text-decoration: none !important;
+  color: #4a4a4a;
+  font-weight: bold;
+  transition: all .2s ease;
+  position: relative;
+}
+
+.partnersItem:hover .partnersImg img {
+  opacity: 1;
+}
+
+.partnersItem:hover .learnMore {
+  left: 10px;
+  color: #41a6df !important;
 }
 
 @media (max-width: 970px) {
@@ -484,4 +497,8 @@
 
 .affiliateFirst .sectionContent .pageTitle {
   line-height: 57px;
+}
+
+.partnersGrid p {
+  white-space: nowrap;
 }

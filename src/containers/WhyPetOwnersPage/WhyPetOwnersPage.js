@@ -12,8 +12,7 @@ import {
 } from '../../components';
 
 import css from './WhyPetOwnersPage.css';
-import pawsquad from './images/paw.png';
-import pawexplanation from './images/pawexplanation.png';
+import banner from './images/banner.jpg';
 
 const WhyPetOwnersPage = () => {
   // prettier-ignore
@@ -33,11 +32,18 @@ const WhyPetOwnersPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain>
+
+    <div className={css.pageBanner}>
+      <img src={banner} />
+    <div className={css.pageBannerOverlay}>
+      <h1 className={css.pawTitle}>Why are some Pet Owners still hesitant to<br />hire a Professional Pet Sitter?</h1>
+    </div>
+    </div>
+
+
     <div className={css.sectionContent}>
 
-    <h1 className={css.pawTitle}>Why are some Pet Owners still hesitant to hire a Professional Pet Sitter?</h1>
-
-    <p>Over the last few years Pet owners are becoming aware of Professional Pet Sitters, consider it and then stop before signing up their beloved pet. So why do some still hesitate?</p>
+    <p className={css.noma}>Over the last few years Pet owners are becoming aware of Professional Pet Sitters, consider it and then stop before signing up their beloved pet. So why do some still hesitate?</p>
     
     <p>Pet Sitting reduces your pets’ risk of disease - our pets always stay in their own home environment surrounded by familiarity and routine.</p>
 
@@ -55,9 +61,13 @@ const WhyPetOwnersPage = () => {
 
     <p>Choosing Pet Sitting as a career means professionals are familiar with a wide variety of pets and unlike non-professionals or family and friends, they have the proper experience to handle different situations. We back them up with Virtual Vet available 24/7 to answer questions and provide advice, in addition to our Property, Public Liability and Damage Insurance. They’ve also got a member of our team at the end of a phone when they need us.</p>
 
+    <hr className={css.whyHr} />
+
     <h2>No2: “Worried about letting a stranger into their home”</h2>
 
     <p>This is a legitimate concern, but it’s good to keep in mind that Professional Pet Sitters are like Home Cleaners, Nanny’s, Real Estate Agents, Trade workers, and Contractors. It is an intricate part of their job to visit and enter people’s homes, and part of what they do every day.   We provide the added peace of mind with Digital ID Verification and an Insurance backed guarantee for up to £1m.  A Professional Pet Sitter will always be respectful of their clients’ property and belongings and a member of our team personally approves every Pet Sitter on our platform.</p>
+
+    <hr className={css.whyHr} />
 
     <h2>No3: They still believe that asking friends, neighbours or a family member is a better option.</h2>
 
@@ -76,6 +86,8 @@ const WhyPetOwnersPage = () => {
     <p>Does your home insurance cover you for damages? Do they have 24/7 Vet Advice? Are they able to fulfil the schedule your pet needs?</p>
 
     <p>Our Professional Pet Sitters come with all the advantages and none of the disadvantages.  You tell them when you need them, what you need them to do, and you get peace of mind by taking advantage of our Insurance backed guarantees.</p>
+
+    <hr className={css.whyHr} />
 
     <h2>No4: “Professional Pet sitters are expensive”</h2>
 

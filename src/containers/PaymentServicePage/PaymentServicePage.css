@@ -143,13 +143,19 @@
 
 .Chargebee {
   font-size: 18px;
-  background: #41a6df;
+  background: #b7a77b;
   border-radius: 5px;
   color: #fff;
   height: 50px;
   line-height: 47px;
   width: 250px;
   margin: 0 auto;
+  text-shadow: 1px 1px 1px #425168;
+}
+
+.Chargebee:hover {
+  background: #c9bd9c;
+  cursor: pointer;
 }
 
 .freeListing {
@@ -170,11 +176,6 @@
 .freeListing:hover {
   cursor: pointer;
   background: #f1b905;
-}
-
-.Chargebee:hover {
-  background: #438cb5;
-  cursor: pointer;
 }
 
 .item1 p span {

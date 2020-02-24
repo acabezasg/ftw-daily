@@ -239,7 +239,7 @@ export const LandingPageComponent = props => {
                       <div className={css.ourPartnersItem2}>
                         <h2>YOTI</h2>
                         <p>YOTI works by allowing you to set<br className={css.noPc} /> up a trusted, genuine and verified <br className={css.noPc} />digital identity.</p>
-                        <p className={css.secondCol}><ExternalLink href="https://www.yoti.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
+                        <p className={css.secondCol}><NamedLink name="YotiPage">Learn more <span className={css.WeVetArrow5}>→</span></NamedLink></p>
                       </div>
                     </div>
                   </div>
@@ -251,7 +251,7 @@ export const LandingPageComponent = props => {
                       <div className={css.ourPartnersItem2}>
                         <h2>Superhog</h2>
                         <p>An Insurance backed guarantee working<br className={css.noPc} /> to protect your home and contents <br className={css.noPc} />for up to £1 million.</p>
-                        <p className={css.secondCol}><ExternalLink href="https://www.superhog.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
+                        <p className={css.secondCol}><NamedLink name="SuperHogPage">Learn more <span className={css.WeVetArrow5}>→</span></NamedLink></p>
                       </div>
                     </div>
                   </div>
@@ -263,7 +263,7 @@ export const LandingPageComponent = props => {
                       <div className={css.ourPartnersItem2}>
                         <h2>Pawsquad</h2>
                         <p>PawSquad lets you video call or text chat<br className={css.noPc} /> with a qualified vet free at any time or day <br className={css.noPc} />or night, 365 days a year.</p>
-                        <p className={css.secondCol}><ExternalLink href="https://www.pawsquad.com">Learn more <span className={css.WeVetArrow5}>→</span></ExternalLink></p>
+                        <p className={css.secondCol}><NamedLink name="PawSquadPage">Learn more <span className={css.WeVetArrow5}>→</span></NamedLink></p>
                       </div>
                     </div>
                   </div>

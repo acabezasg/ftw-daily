@@ -5,6 +5,11 @@
 
   /* Clear padding that is set for link elements looking like buttons */
   padding: 0;
+  background-color: #c9bd9c;
+
+  &:hover{
+    background-color: #b7a77b !important;
+  }
 }
 
 
@@ -58,7 +63,7 @@
   
   text-decoration: none !important;
   &:hover{
-    background-color: #41a6df; 
+    background-color: #b7a77b; 
     color: #fff; 
     border: none !important;
     text-decoration: none !important;
@@ -69,7 +74,7 @@
   border-top-right-radius: 5px !important;
   text-decoration: none !important;
   &:hover{
-    background-color: #41a6df; 
+    background-color: #b7a77b; 
     color: #fff; 
     border: none !important;
     text-decoration: none !important;
@@ -80,7 +85,7 @@
   border-bottom-right-radius: 5px !important;
   text-decoration: none !important;
   &:hover{
-    background-color: #41a6df; 
+    background-color: #b7a77b; 
     color: #fff; 
     border: none !important;
     text-decoration: none !important;

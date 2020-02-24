@@ -17,12 +17,8 @@ import { updateUserMembership } from '../../ducks/user.duck';
 import line from './images/sketch.svg';
 import crown from './images/crown.png';
 import card from './images/card.png';
-import vet from './images/vet2.png';
-import listing from './images/checklist.png';
-import checkmark from './images/checkmark.png';
+import checkmark from '../MembershipPage/check.png';
 import css from './PaymentServicePage.css';
-import balloons from './images/balloons.png';
-import close from './images/close.png';
 
 export class PaymentServicePage extends Component {
   constructor(props) {
@@ -84,7 +80,7 @@ export class PaymentServicePage extends Component {
                     <img className={css.lineImg} src={line} />
                   </div>
                   <p>
-                    just <span>$30</span> per month
+                    just <span>$10</span> per month
                   </p>
                   <p>(cancel anytime)</p>
 

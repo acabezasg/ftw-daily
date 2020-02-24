@@ -25,6 +25,10 @@
   background: #EBF1FA;
 }
 
+.whyWrapper .whyContent {
+  width: 100%;
+}
+
 .whyContent {
   margin: 80px auto 80px;
   padding: 0 36px 0 36px;
@@ -118,7 +122,14 @@
   padding: 20px 20px 50px;
   border-radius: 4px;
   border-top: 6px solid;
-  border-top-color: #41a6df;
+  border-top-color: #b7a77b;
+}
+
+.activePaw {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(-20px, -50%);
 }
 
 @media (max-width: 700px) {
@@ -158,22 +169,41 @@
 }
 
 .whyFlex {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  margin-top: 60px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto 1px auto 1px auto;
+  grid-gap: 10px;
 }
 
-.whyFlex > div {
-  text-align: center;
-  max-width: 25%;
-  flex: 0 0 25%;
-  margin: 0 15px;
+@media (max-width: 1126px) {
+.budiNesto {
+  display: none;
+  }
+
+  .whyFlex p {
+    white-space: inherit !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .whyFlex {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .flexHr {
+    height: 1px;
+  }
 }
 
 .whyFlex > div > p {
   color: #425168;
   font-weight: 300;
   font-size: 18px;
+  white-space: nowrap;
+}
+
+.flexHr {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .whyFlex > div > h3 {
@@ -187,7 +217,7 @@
 }
 
 .mWrapper > div > h3 {
-  color: #41a6df !important;
+  color: #212529 !important;
   font-weight: 500;
   font-size: 22px;
   text-align: center;
@@ -198,7 +228,7 @@
 }
 
 .getPlan a {
-  background: #41a6df;
+  background: #b7a77b;
   padding: 8px 15px 11px;
   color: #fff !important; 
   border-radius: 5px;
@@ -213,7 +243,7 @@
 }
 
 .getPlan a:hover {
-  background: rgb(236, 196, 0);
+  background: #c9bd9c;
   color: #fff !important;
   text-decoration: none; 
 }

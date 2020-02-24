@@ -9,7 +9,8 @@ import {
   LayoutWrapperFooter,
   Footer,
   ExternalLink,
-  CrowdFundingForm
+  CrowdFundingForm,
+  NamedLink
   // ExternalLink,
 } from "../../components";
 
@@ -62,11 +63,11 @@ const WeVetPage = () => {
         <div className={css.affiliateSecond}>
           <div className={css.sectionContent}>
             <ul>
-              <li>£1m property damage and £1m public liability protection </li>
+              <li>£1m property damage and £1m public liability protection</li>
               <li>Damages deposit up to £1000 per pet sit</li>
               <li>Secure PCI Level 1 Payment Gateway to protect your transactions</li>
-              <li>Free ID check – Fast, accurate and free ID verification tool </li>
-              <li>24/7 Virtual Vet Advice for all Pet Sitters staffed by UK qualified Veterinary Surgeons.</li>
+              <li>Free ID check – Fast, accurate and free ID verification tool</li>
+              <li>24/7 Virtual Vet Advice for all Pet Sitters staffed by UK qualified Veterinary Surgeons</li>
             </ul>
           </div>
         </div>
@@ -74,16 +75,16 @@ const WeVetPage = () => {
 
         <div className={css.affiliateFirst}>
           <div className={css.sectionContent}>
-            <h1>Our Partnerships</h1>
+            <h1>Our Trusted Partners</h1>
             <div className={css.partnersGrid}>
-              <div className={css.partnersItem}>
+            <div className={css.partnersItem}>
                 <div className={css.partnersImg}>
                   <img src={yoti} />
                 </div>
                 <div className={css.partnersContent}>
-                  <p><strong>We partnered up with PawSquad</strong></p>
-                  <p>PawSquad lets you video call or text chat with a qualified vet free at any time or day or night, 365 days a year. You can be sure when you are away from home your Pet sitter has a Vet available to discuss any issues, no matter how small.</p>
-                  <p><ExternalLink className={css.learnMore} href="https://pawsquad.com">Learn more →</ExternalLink></p>
+                  <p><h2>YOTI</h2></p>
+                  <p>YOTI works by allowing you to set<br />up a trusted, genuine and verified<br />digital identity.</p>
+                  <p><NamedLink className={css.learnMore} name="YotiPage">Learn more →</NamedLink></p>
                 </div>
               </div>
               <div className={css.partnersItem}>
@@ -91,9 +92,9 @@ const WeVetPage = () => {
                   <img src={superhog} />
                 </div>
                 <div className={css.partnersContent}>
-                  <p><strong>We partnered up with YOTI</strong></p>
-                  <p>YOTI works by setting up a trusted, genuine and verified digital identity across 130 countries within a few minutes.  So, you can see that all of our members have a verified digital identity.</p>
-                  <p><ExternalLink className={css.learnMore} href="https://yoti.com">Learn more →</ExternalLink></p>
+                  <p><h2>Superhog</h2></p>
+                  <p>An Insurance backed guarantee<br />working to protect your home and<br />contents for up to £1 million.</p>
+                  <p><NamedLink className={css.learnMore} name="SuperHogPage">Learn more →</NamedLink></p>
                 </div>
               </div>
               <div className={css.partnersItem}>
@@ -101,9 +102,9 @@ const WeVetPage = () => {
                   <img src={pawsquad} />
                 </div>
                 <div className={css.partnersContent}>
-                  <p><strong>We partnered up with Superhog</strong></p>
-                  <p>Superhog is our premium members insurance backed guarantee, working to protect your home and contents for up to £1million while you are away from home.</p>
-                  <p><ExternalLink className={css.learnMore} href="https://superhog.com">Learn more →</ExternalLink></p>
+                  <p><h2>Pawsquad</h2></p>
+                  <p>PawSquad lets you video call or<br />text chat with a qualified vet free at any<br />time or day or night, 365 days a year.</p>
+                  <p><NamedLink className={css.learnMore} name="PawSquadPage">Learn more →</NamedLink></p>
                 </div>
               </div>
             </div>
