@@ -1,18 +1,18 @@
 @import '../../marketplace.css';
 
 .sectionContent {
-  margin: 0 auto 80px;
+  margin: 0 auto 0;
   padding: 0 36px 0 36px;
 
   @media (--viewportMedium) {
     width: 100%;
-    margin: 0 auto 80px;
+    margin: 0 auto 0;
   }
 
   @media (--viewportLarge) {
     width: 1024px;
     padding: 0 36px 0 36px;
-    margin: 0 auto 80px;
+    margin: 0 auto 0;
   }
 
   @media (--viewportXLarge) {
@@ -21,8 +21,20 @@
   }
 }
 
+.serviceP {
+  margin: 0;
+}
+
 .whyWrapper {
   background: #EBF1FA;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 1px 0;
+  margin-top: 70px;
 }
 
 .whyWrapper .whyContent {

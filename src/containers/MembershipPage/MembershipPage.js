@@ -195,6 +195,27 @@ const MembershipPage = () => {
           </div>
           </div>
        </div>
+    <div className={css.whyWrapper}>
+    <div className={css.whyContent}>
+      <h3 className={css.whyTitle}>We've raised the bar</h3>
+      <div className={css.whyFlex}>
+        <div>
+          <img src={why1} />
+          <p>We provide a wide choice of Pet Sitters,<br className={css.budiNesto} /> to help you choose the one that's right<br className={css.budiNesto} /> for you and your pets</p>
+        </div>
+        <div className={css.flexHr}></div>
+        <div>
+          <img src={why2} />
+          <p>Peace of mind with our Insurance backed<br className={css.budiNesto} /> guarantee covering your home for<br className={css.budiNesto} /> up to £1 million</p>
+        </div>
+        <div className={css.flexHr}></div>
+        <div>
+          <img src={why3} />
+          <p>Our trusted partners provide you with the<br className={css.budiNesto} /> knowledge that we've got your home and<br className={css.budiNesto} /> your pet covered when you're not there</p>
+        </div>
+      </div>
+    </div>
+  </div>
        </TabPanel>
        <TabPanel>
        <div className={css.mMain}>
@@ -291,6 +312,27 @@ const MembershipPage = () => {
           </div>
           </div>
        </div>
+  <div className={css.whyWrapper}>
+    <div className={css.whyContent}>
+      <h3 className={css.whyTitle}>Lifestyle Choice</h3>
+      <div className={css.whyFlex}>
+        <div>
+          <img src={why1} />
+          <p>Spend more time<br />with animals and meet pets</p>
+        </div>
+        <div className={css.flexHr}></div>
+        <div>
+          <img src={why2} />
+          <p>Better Pay and<br />set your own rates</p>
+        </div>
+        <div className={css.flexHr}></div>
+        <div>
+          <img src={why3} />
+          <p>Stay in fantastic locations<br />and meet amazing pets</p>
+        </div>
+      </div>
+    </div>
+  </div>
        </TabPanel>
        <TabPanel>
        <div className={css.mMain}>
@@ -327,30 +369,32 @@ const MembershipPage = () => {
           </div>
           </div>
        </div>
-       </TabPanel>
-       </Tabs>
-    </div>
-  </div>
-
-    <div className={css.whyWrapper}>
+  <div className={css.whyWrapper}>
     <div className={css.whyContent}>
-      <h3 className={css.whyTitle}>We've raised the bar</h3>
+      <h3 className={css.whyTitle}>For Services</h3>
       <div className={css.whyFlex}>
         <div>
           <img src={why1} />
-          <p>We provide a wide choice of Pet Sitters,<br className={css.budiNesto} /> to help you choose the one that's right<br className={css.budiNesto} /> for you and your pets</p>
+          <h2>Sector/location specific Profile</h2>
+          <p className={css.serviceP}>Increase your client<br />attraction in the local area</p>
         </div>
         <div className={css.flexHr}></div>
         <div>
           <img src={why2} />
-          <p>Peace of mind with our Insurance backed<br className={css.budiNesto} /> guarantee covering your home for<br className={css.budiNesto} /> up to £1 million</p>
+          <h2>Targeted Audience of Pet Members</h2>
+          <p className={css.serviceP} >Local, national and worldwide </p>
         </div>
         <div className={css.flexHr}></div>
         <div>
           <img src={why3} />
-          <p>Our trusted partners provide you with the<br className={css.budiNesto} /> knowledge that we've got your home and<br className={css.budiNesto} /> your pet covered when you're not there</p>
+          <h2>Social media advertising</h2>
+          <p className={css.serviceP}>Advertise for free to our<br />social media accounts For Services</p>
         </div>
       </div>
+    </div>
+  </div>
+       </TabPanel>
+       </Tabs>
     </div>
   </div>
 
