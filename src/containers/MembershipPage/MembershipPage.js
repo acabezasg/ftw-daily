@@ -354,14 +354,6 @@ const MembershipPage = () => {
     </div>
   </div>
 
-  <div className={css.basicWrapper}>
-    <div className={css.whyContent}>
-      <h3 className={css.basicTitle}>Staying Basic? What do I get?</h3>
-      <p className={css.basicP}>If you don’t wish to upgrade to the Premium membership you can still browse <span className={css.tLink}>Trust My Pet Sitter</span> free of charge. 
-        However, you won’t be able to create a listing or contact other users.</p>
-    </div>
-  </div>
-
       </LayoutWrapperMain>
 
         <LayoutWrapperFooter>

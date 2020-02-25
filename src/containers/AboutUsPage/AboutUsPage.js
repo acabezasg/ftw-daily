@@ -58,12 +58,12 @@ const AboutUsPage = () => {
       
       <svg className={css.card_svg} viewBox="0 0 800 500">
 
-        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#41a6df"/>
+        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#c9bd9c"/>
         <path className={css.card_line} d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
       </svg>
     
      <div className={css.card_content}>
-       <h1 className={css.card_title}>Shamus Fitzsimons</h1>
+       <h1 className={css.card_title}>Shamus<br />Fitzsimons</h1>
      <p>CCO and 
      Co- Founder</p>
     </div>
@@ -76,12 +76,12 @@ const AboutUsPage = () => {
       
       <svg className={css.card_svg} viewBox="0 0 800 500">
 
-        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#41a6df"/>
+        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#c9bd9c"/>
         <path className={css.card_line} d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
       </svg>
     
      <div className={css.card_content}>
-       <h1 className={css.card_title}>Angela Fagan</h1>
+       <h1 className={css.card_title}>Angela<br />Fagan</h1>
      <p>CEO and Co-Founder</p>
     </div>
     </ExternalLink>
@@ -93,12 +93,12 @@ const AboutUsPage = () => {
       
       <svg className={css.card_svg} viewBox="0 0 800 500">
 
-        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#41a6df"/>
+        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#c9bd9c"/>
         <path className={css.card_line} d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
       </svg>
     
      <div className={css.card_content}>
-       <h1 className={css.card_title}>Sinead Fitzsimons</h1>
+       <h1 className={css.card_title}>Sinead<br />Fitzsimons</h1>
      <p>Co-Founder</p>
     </div>
     </ExternalLink>
@@ -110,12 +110,12 @@ const AboutUsPage = () => {
       
       <svg className={css.card_svg} viewBox="0 0 800 500">
 
-        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#41a6df"/>
+        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#c9bd9c"/>
         <path className={css.card_line} d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
       </svg>
     
      <div className={css.card_content}>
-       <h1 className={css.card_title}>Aleksa Prebiracevic</h1>
+       <h1 className={css.card_title}>Aleksa<br />Prebiracevic</h1>
      <p>CTO</p>
     </div>
     </ExternalLink>
