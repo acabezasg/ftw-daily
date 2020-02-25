@@ -86,7 +86,7 @@ export class PaymentOwnerPage extends Component {
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="owner_members_plan"
+                    data-cb-plan-id="copy_of_owners_basic_plan"
                   >
                     <img src={card} />
                     Pay with card
@@ -112,7 +112,7 @@ export class PaymentOwnerPage extends Component {
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="owner_members_plan"
+                    data-cb-plan-id="copy_of_owner_members_plan"
                   >
                     <img src={card} />
                     Pay with card

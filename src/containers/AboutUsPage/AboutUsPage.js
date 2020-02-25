@@ -99,11 +99,11 @@ const AboutUsPage = () => {
     
      <div className={css.card_content}>
        <h1 className={css.card_title}>Sinead<br />Fitzsimons</h1>
-     <p>Co-Founder</p>
+     <p>DCO and Co Founder</p>
     </div>
     </ExternalLink>
 
-    <ExternalLink className={css.card} href="https://www.linkedin.com/in/sinead-fitzsimons-9249a9195/">
+    <ExternalLink className={css.card} href="https://www.linkedin.com/in/aleksa-prebiracevic-6a945417b/">
      <div className={css.card_image_container}>
        <img className={css.card_image} src="https://cdn11.bigcommerce.com/s-gho61/stencil/31cc7cb0-5035-0136-2287-0242ac11001b/e/3dad8ea0-5035-0136-cda0-0242ac110004/images/no-image.svg" />
     </div>

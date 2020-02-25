@@ -87,7 +87,7 @@ export class PaymentSitterPage extends Component {
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="Platinum_annual_plan"
+                    data-cb-plan-id="copy_of_Standard_pet_sitters_plan"
                   >
                     <img src={card} />
                     Pay with card
@@ -113,7 +113,7 @@ export class PaymentSitterPage extends Component {
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="Platinum_annual_plan"
+                    data-cb-plan-id="copy_of_Platinum_annual_plan"
                   >
                     <img src={card} />
                     Pay with card
