@@ -502,3 +502,7 @@
 .partnersGrid p {
   white-space: nowrap;
 }
+
+.affiliateFirst:nth-of-type(4) .sectionContent {
+  margin-bottom: 0 !important;
+}
