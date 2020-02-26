@@ -113,7 +113,6 @@ const MembershipPage = () => {
               <li><img src={check} /> Receive Messages</li>
               <li><img src={check} /> Secure Payments</li>
               <li className={css.mDisabled}><img src={check} /> <span>Social Media Listing</span></li>
-              <li><img src={check} /> <span>Discount Pet Insurance</span></li>
               <li className={css.mDisabled}><img src={check} /> <span>Account Manager</span></li>
               <li><img src={check} /> Pet 1:1 Care</li>
               <li><img src={check} /> Newsletter</li>
@@ -174,7 +173,6 @@ const MembershipPage = () => {
               <li><img src={check} /> Receive Messages</li>
               <li><img src={check} /> Secure Payments</li>
               <li><img src={check} /> Social Media Listing</li>
-              <li><img src={check} /> Discount Pet Insurance</li>
               <li><img src={check} /> Account Manager</li>
               <li><img src={check} /> Pet 1:1 Care</li>
               <li><img src={check} /> Newsletter</li>
@@ -360,14 +358,22 @@ const MembershipPage = () => {
             <p className={css.offer}>Send messages, post listings...</p>
             <div className={css.block}></div>
             <ul className={css.plans}>
-              <li><img src={check} /> Find the perfect pet to watch</li>
-              <li><img src={check} /> ID Verification</li>
-              <li><img src={check} /> 24/7 access to Virtual Vet</li>
-              <li><img src={check} /> Create online profile</li>
-              <li><img src={check} /> Receive messages</li>
-              <li><img src={check} /> Send messages</li>
-              <li><img src={check} /> Secure Payments</li>
-              <li><img src={check} /> Travel the World</li>
+              <li><img src={check} /> Live Chat</li>
+              <li><img src={check} /> Online Profile</li>
+              <li><img src={check} /> Social Media </li>
+              <li><img src={check} /> Newsletter</li>
+              <li><img src={check} /> 24/7 email support</li>
+              <li><img src={check} /> Account Manager</li>
+              <li><img src={check} /> Local advertising</li>
+              <li><img src={check} /> Nationwide advertising</li>
+              <li><img src={check} /> Global advertising</li>
+              <li><img src={check} /> Contact details</li>
+              <li><img src={check} /> Partner Opportunities</li>
+              <li><img src={check} /> Optional Extras</li>
+              <li><img src={check} /> Targeted email campaigns</li>
+              <li><img src={check} /> Featured listings</li>
+              <li><img src={check} /> Newsletter advertising</li>
+
             </ul>
             <div className={css.getPlan}>
             <NamedLink name="PaymentServicePage">Start with Business</NamedLink>

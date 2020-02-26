@@ -107,25 +107,28 @@ export class PaymentServicePage extends Component {
                   <div className={css.whybuy}>
                     <ul>
                       <li>
-                        <img src={checkmark} /> Create your profile
+                        <img src={checkmark} /> Live Chat
                       </li>
                       <li>
-                        <img src={checkmark} /> Show in local pet listing searches
+                        <img src={checkmark} /> Online Profile
                       </li>
                       <li>
-                        <img src={checkmark} /> Show in Category search listings
+                        <img src={checkmark} /> Social Media 
                       </li>
                       <li>
-                        <img src={checkmark} /> Receive Messages from Pet Parents
+                        <img src={checkmark} /> 24/7 email support
                       </li>
                       <li>
-                        <img src={checkmark} /> Send Messages to Pet Parents
+                        <img src={checkmark} /> Local advertising
                       </li>
                       <li>
-                        <img src={checkmark} /> Secure online messaging
+                        <img src={checkmark} /> Nationwide advertising
                       </li>
                       <li>
-                        <img src={checkmark} /> No additional fees
+                        <img src={checkmark} /> Partner Opportunities
+                      </li>
+                      <li>
+                        <img src={checkmark} /> Featured listings
                       </li>
                     </ul>
                   </div>
