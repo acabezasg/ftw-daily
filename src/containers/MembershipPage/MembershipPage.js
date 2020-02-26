@@ -25,6 +25,12 @@ import paw from "./paw.png";
 import why1 from "../LandingPage/select.png";
 import why2 from "../LandingPage/shield.png";
 import why3 from "../LandingPage/network.png";
+import why4 from "./pet.png";
+import why5 from "./money.png";
+import why6 from "./airplane.png";
+import why7 from "./maps-and-location.png";
+import why8 from "./target.png";
+import why9 from "./facebook.png";
 
 const MembershipPage = () => {
   // prettier-ignore
@@ -317,17 +323,17 @@ const MembershipPage = () => {
       <h3 className={css.whyTitle}>Lifestyle Choice</h3>
       <div className={css.whyFlex}>
         <div>
-          <img src={why1} />
+          <img src={why4} />
           <p>Spend more time<br />with animals and meet pets</p>
         </div>
         <div className={css.flexHr}></div>
         <div>
-          <img src={why2} />
+          <img src={why5} />
           <p>Better Pay and<br />set your own rates</p>
         </div>
         <div className={css.flexHr}></div>
         <div>
-          <img src={why3} />
+          <img src={why6} />
           <p>Stay in fantastic locations<br />and meet amazing pets</p>
         </div>
       </div>
@@ -374,19 +380,19 @@ const MembershipPage = () => {
       <h3 className={css.whyTitle}>For Services</h3>
       <div className={css.whyFlex}>
         <div>
-          <img src={why1} />
+          <img src={why7} />
           <h2>Sector/location specific Profile</h2>
           <p className={css.serviceP}>Increase your client<br />attraction in the local area</p>
         </div>
         <div className={css.flexHr}></div>
         <div>
-          <img src={why2} />
+          <img src={why8} />
           <h2>Targeted Audience of Pet Members</h2>
           <p className={css.serviceP} >Local, national and worldwide </p>
         </div>
         <div className={css.flexHr}></div>
         <div>
-          <img src={why3} />
+          <img src={why9} />
           <h2>Social media advertising</h2>
           <p className={css.serviceP}>Advertise for free to our<br />social media accounts For Services</p>
         </div>
