@@ -94,7 +94,7 @@ const WeVetPage = () => {
             <p>If you are looking for the least expensive service you can find, then we are not for you. The girl next door, a close neighbour or a browse through Facebook you will certainly find a cheaper option.</p>
             <p>You’ll get what you pay for, by way of peace of mind, professional quality service, experience and accountability. Our Professional Pet Sitters are fully insured and come with a £1m guarantee.</p>
             <p>Have we been able to convince you to hire a Professional Pet Sitter?
-If not, tell us why! To us, there’s no substitute for the quality of pet care and peace of mind our clients receive by signing a professional. If you’re still hesitant, let us know, we’d love to talk to you about it.</p>
+If not, tell us why! To us, there’s no substitute for the quality of pet care and peace of mind our clients receive by signing a professional. If you’re still hesitant, <NamedLink name="ContactPage">let us know</NamedLink>, we’d love to talk to you about it.</p>
           </div>
         </div>
 
