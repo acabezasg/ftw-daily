@@ -98,6 +98,7 @@ If not, tell us why! To us, there’s no substitute for the quality of pet care 
           </div>
         </div>
 
+<hr className={css.myHr} />
 
         <div className={css.affiliateFirst}>
           <div className={css.sectionContent}>
