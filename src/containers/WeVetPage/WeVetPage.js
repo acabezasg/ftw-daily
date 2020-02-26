@@ -75,7 +75,7 @@ const WeVetPage = () => {
         
         <div className={css.affiliateFirst}>
           <div className={css.sectionContent}>
-            <h1>We can maybe add some title?</h1>
+            <h1>What makes us Different?</h1>
             <h2>No1 Backup</h2>
             <p>Choosing Pet Sitting as a career means professionals are familiar with a wide variety of pets and unlike non-professionals or family and friends, they have the proper experience to handle different situations. We back them up with Virtual Vet available 24/7 to answer questions and provide advice, in addition to our Property, Public Liability and Damage Insurance. They’ve also got a member of our team at the end of a phone when they need us.</p>
             <h2>No2 Responsibility</h2>
