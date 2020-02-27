@@ -8,7 +8,7 @@
 .sectionContent ul {
   list-style: initial;
   padding-left: 30px;
-  padding-top: 25px;
+  margin: 0;
 }
 
 .sectionContent ul li {
@@ -174,7 +174,7 @@
 }
 
 .affiliateSecond {
-  background: #e4dece;
+  background: #c9bd9c;
 }
 
 .affiliateWrapper h1 {
@@ -423,6 +423,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
+  font-size: 40px;
 }
 
 .affiliateSecond p {
@@ -459,7 +460,6 @@
 .partnersImg img {
   width: 150px;
   height: auto;
-  opacity: 0.7;
 }
 
 .partnersItem {

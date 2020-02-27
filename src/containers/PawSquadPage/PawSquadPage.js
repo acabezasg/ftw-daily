@@ -66,7 +66,7 @@ const PawSquadPage = () => {
     </p>
 
     <p>
-    <NamedLink name="PawSquadPage">Learn more about PawSquad</NamedLink>
+    <ExternalLink href="https://www.pawsquad.com/trustmypetsitter">Learn more about PawSquad</ExternalLink>
     </p>
     
     <p className={css.joinNow}>
