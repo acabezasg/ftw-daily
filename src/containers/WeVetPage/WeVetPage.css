@@ -11,6 +11,20 @@
   margin: 0;
 }
 
+.sectionContent h2 {
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.4px;
+  margin: 0;
+}
+
+.sectionContent hr {
+  margin: 20px 0 15px;
+}
+
+.weSec p {
+  margin-bottom: 0;
+}
+
 .sectionContent ul li {
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 0.8px;

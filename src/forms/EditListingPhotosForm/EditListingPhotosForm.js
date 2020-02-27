@@ -48,15 +48,15 @@ export class EditListingPhotosFormComponent extends Component {
     switch (this.props.user_type) {
       case 0:
         memberShip = 'petOwnerMembership';
-        redirectPage = 'PaymentOwnerPage';
+        redirectPage = 'MembershipPage';
         break;
       case 1:
         memberShip = 'petSitterMembership';
-        redirectPage = 'PaymentSitterPage';
+        redirectPage = 'MembershipPage';
         break;
       case 2:
         memberShip = 'petServiceMembership';
-        redirectPage = 'PaymentServicePage';
+        redirectPage = 'MembershipPage';
         break;
     }
 
