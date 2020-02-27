@@ -196,12 +196,12 @@ const routeConfiguration = () => {
     {
       path: '/pet-service-questions/:id',
       name: 'PetServicesQuestions',
-      component: PetServicesQuestions
+      component: PetServicesQuestions,
     },
     {
       path: '/pet-owner-questions/:id',
       name: 'PetOwnerQuestions',
-      component: PetOwnerQuestions
+      component: PetOwnerQuestions,
     },
     {
       path: '/pet-owner-faq',
@@ -241,12 +241,14 @@ const routeConfiguration = () => {
     {
       path: '/s',
       name: 'SearchPage',
+      auth: true,
       component: props => <SearchPage {...props} />,
       loadData: SearchPage.loadData,
     },
     {
       path: '/s/filters',
       name: 'SearchFiltersPage',
+      auth: true,
       component: props => <SearchPage {...props} tab="filters" />,
       loadData: SearchPage.loadData,
     },
@@ -258,6 +260,7 @@ const routeConfiguration = () => {
     {
       path: '/s/listings',
       name: 'SearchListingsPage',
+      auth: true,
       component: props => <SearchPage {...props} tab="listings" />,
       loadData: SearchPage.loadData,
     },
@@ -276,6 +279,7 @@ const routeConfiguration = () => {
     {
       path: '/s/map',
       name: 'SearchMapPage',
+      auth: true,
       component: props => <SearchPage {...props} tab="map" />,
       loadData: SearchPage.loadData,
     },
@@ -287,6 +291,7 @@ const routeConfiguration = () => {
     {
       path: '/l/:slug/:id',
       name: 'ListingPage',
+      auth: true,
       component: props => <ListingPage {...props} />,
       loadData: ListingPage.loadData,
     },
