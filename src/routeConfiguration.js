@@ -17,7 +17,6 @@ import {
   EmailVerificationPage,
   InboxPage,
   LandingPage,
-  HomepageCopy,
   ListingPage,
   ManageListingsPage,
   NotFoundPage,
@@ -222,11 +221,6 @@ const routeConfiguration = () => {
       path: '/',
       name: 'LandingPage',
       component: props => <LandingPage {...props} />,
-    },
-    {
-      path: '/our-selection-process',
-      name: 'HomepageCopy',
-      component: props => <HomepageCopy {...props} />,
     },
     {
       path: '/membership',
