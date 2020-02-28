@@ -121,8 +121,8 @@ const MembershipPage = () => {
               <li><img src={check} /> Online Profile</li>
               <li className={css.mDisabled}><img src={check} /> <span>Pet Sitter Membership</span></li>
               <li className={css.mDisabled}><img src={check} /> <span>Featured listing</span></li>
-              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Food</span></li>
-              <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Accessories</span></li>
+              <li><img src={check} /> <span>Discount Pet Food</span></li>
+              <li><img src={check} /> <span>Discount on Dog Activity Monitor</span></li>
               <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Treats</span></li>
               <li className={css.mDisabled}><img src={check} /> <span>Discount Vet Care</span></li>
               <li className={css.mDisabled}><img src={check} /> <span>Discount Pet Toys</span></li>
