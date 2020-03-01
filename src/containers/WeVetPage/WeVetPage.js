@@ -10,7 +10,8 @@ import {
   Footer,
   ExternalLink,
   CrowdFundingForm,
-  NamedLink
+  NamedLink,
+  Button,
   // ExternalLink,
 } from "../../components";
 
@@ -103,6 +104,11 @@ const WeVetPage = () => {
             <p>Have we been able to convince you to hire a Professional Pet Sitter?
 If not, tell us why! To us, there’s no substitute for the quality of pet care and peace of mind our clients receive by signing a professional. If you’re still hesitant, <NamedLink name="ContactPage">let us know</NamedLink>, we’d love to talk to you about it.</p>
             </div>
+<div className={css.weV}>
+  <NamedLink name="SignupPage">
+    <Button>Join Now</Button>
+  </NamedLink>
+</div>
           </div>
         </div>
 

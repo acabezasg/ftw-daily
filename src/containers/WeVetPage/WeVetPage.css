@@ -520,3 +520,12 @@
 .myHr {
   margin: 0;
 }
+
+.weV {
+  width: 40%;
+  margin: 30px auto 0;
+}
+
+.weV a {
+  text-decoration: none !important;
+}
