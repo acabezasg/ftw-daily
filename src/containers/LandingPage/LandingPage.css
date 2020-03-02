@@ -1128,6 +1128,9 @@
 
 .sections .sections:nth-child(2) {
   padding-top: 0;
+}
+
+.testimonialsSection {
   padding: 0 1.25rem;
   margin: 0 auto 80px;
 }
@@ -1192,7 +1195,7 @@
   font-weight: 600;
 }
 
-.testimonialAuthor span p:nth-child(2) {
+.tLoc {
   margin: 0;
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 1px;
@@ -1202,4 +1205,9 @@
 .testimonialsSection h1 {
   margin: 0;
   text-align: center;
+}
+
+.tHr {
+  border-top: 1px solid rgba(0,0,0,.2) !important;
+  margin: 0 0 80px;
 }
