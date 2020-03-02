@@ -144,6 +144,70 @@ export const LandingPageComponent = props => {
             </li>
 
             <li className={css.sections}>
+              <div className={css.testimonialsSection}>
+                <h1>We Break Myths</h1>
+                 <div className={css.testimonials}>
+                   <div className={css.testimonial}>
+                     <p className={css.tContent}>Being a Pet Sitter love being my own boss. I am free to choose the location and dates that suit me. I get to meet amazing animals and their owners. I get to stay in some amazing locations and houses. The best job ever!</p>
+                      <div className={css.testimonialAuthor}>
+                       <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" />
+                       <span className={css.testR}>
+                         <p className={css.smallAuthor}>
+                           Julie O'Reilly
+                         </p>
+                         <p>
+                           England
+                         </p>
+                       </span>
+                     </div>
+                   </div>
+                   <div className={css.testimonial}>
+                     <p className={css.tContent}>There's many things I love about a pet sitter, I love getting to spend so much time with a variety of loving animals, getting to traing them, seeing the progress and grow. The relationship I build with them and their owners is lovely and very rewarding.</p>
+                      <div className={css.testimonialAuthor}>
+                       <img src="https://thumbs.dreamstime.com/b/default-placeholder-profile-icon-avatar-gray-man-90197971.jpg" />
+                       <span className={css.testR}>
+                         <p className={css.smallAuthor}>
+                           Holly Probert
+                         </p>
+                         <p>
+                           England
+                         </p>
+                       </span>
+                     </div>
+                   </div>
+                   <div className={css.testimonial}>
+                   <p className={css.tContent}>I love being a pet sitter because I always had pets and loved being surrounded by animals and having the chance to look after them. By being a pet sitter I get the opportunity to meet new furry and human friends. I know how important is to have someone reliable to look after your pets especially as they get access to your home and personal belongings.</p>
+                      <div className={css.testimonialAuthor}>
+                       <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" />
+                       <span className={css.testR}>
+                         <p className={css.smallAuthor}>
+                          Paula-Alexandra
+                         </p>
+                         <p>
+                           England
+                         </p>
+                       </span>
+                     </div>
+                   </div>
+                   <div className={css.testimonial}>
+                     <p className={css.tContent}>Get to know the animals while experiencing a different air is a heart warming experience that keeps me going. It ends up being your home too.</p>
+                      <div className={css.testimonialAuthor}>
+                       <img src="https://thumbs.dreamstime.com/b/default-placeholder-profile-icon-avatar-gray-man-90197971.jpg" />
+                       <span className={css.testR}>
+                         <p className={css.smallAuthor}>
+                           Sebasitan Di Giuseppe
+                         </p>
+                         <p>
+                           Argentina
+                         </p>
+                       </span>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+            </li>
+
+            <li className={css.sections}>
               <div className={(css.sectionServiceContent, css.sectionWeVet)}>
                 <div className={css.WeVetSection}>
                   <h1 className={(css.vettitle)}>
@@ -277,112 +341,6 @@ export const LandingPageComponent = props => {
             </li>
 
             <hr className={css.hpHr} />
-
-          {/*
-            <li className={(css.sections, css.whyUseBg)}>
-              <div className={css.sectionContent}>
-                <h1>Why use Trust My Pet Sitter?</h1>
-
-                <div className={css.whyUse}>
-                  <div className={css.whyContainer}>
-                    <h2>Safety</h2>
-
-                    <p>
-                      All Premium members are ID verified and the membership
-                      includes insurance and access to a 24/7 Virtual Vet
-                    </p>
-
-                    <NamedLink name="YotiPage">Learn More</NamedLink>
-                  </div>
-
-                  <div className={css.whyContainer}>
-                    <h2>Our Community</h2>
-
-                    <p>
-                      Find and meet like minded people in our pet community.
-                      Find pet sitters, dog walkers, groomers and vets
-                    </p>
-
-                    <NamedLink name="SignupPage">Join Now</NamedLink>
-                  </div>
-
-                  <div className={css.whyContainer}>
-                    <h2>Travel the World</h2>
-
-                    <p>
-                      Pet Sitters can travel the world looking after much loved
-                      pets in the family home. Find your next great adventure...
-                    </p>
-
-                    <NamedLink name="PawSquadPage">Learn More</NamedLink>
-                  </div>
-
-                  <div className={css.whyContainer}>
-                    <h2>The Personal Touch</h2>
-
-                    <p>
-                      Our team personally approve every verified Pet Sitter
-                      prior to going live on Trust My Pet Sitter
-                    </p>
-
-                    <NamedLink name="SignupPage">Join Now</NamedLink>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li className={css.section}>
-              <div className={css.sectionContentFirstChild}>
-                <HomepageVideo />
-              </div>
-            </li>
-
-            */}
-
-          {/*
-            <li className={css.section}>
-              <div className={css.sectionContent}>
-                <div className={css.howItWorksColors}>
-                <h1 className={css.howtitle}>How it Works</h1>
-
-                <Stepper2 />
-
-                <div className={css.firstchistepper}>
-                  <span className={css.step}>1</span>
-                  <h2>Choose Pet Sitter</h2>
-                  <p>
-                    Trust My Pet Sitter introduces a wider choice of local,
-                    national and international pet sitters.
-                  </p>
-                </div>
-
-                <div className={css.mobileStepper}>
-                  <span className={css.step}>2</span>
-                  <h2>Book Pet Sitter</h2>
-                  <p>
-                    Book your Pet Sitter using our secure payment provider. All
-                    bookings are covered by 24/7 Vet Advice and Emergency
-                    Insurance
-                  </p>
-                </div>
-
-                <div className={css.mobileStepper}>
-                  <span className={css.step}>3</span>
-                  <h2>Pets are Happy at Home</h2>
-                  <p>
-                    Your Pet stays home with our verified Pet Sitter, happy and
-                    secure in their own familiar space.
-                  </p>
-
-                  <div className={css.mobbt}>
-                    <NamedLink name="SignupPage">Start Now</NamedLink>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </li>
-
-          */}
 
             <li className={css.section}>
               <div className={css.sectionContent}>
