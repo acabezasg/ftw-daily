@@ -529,3 +529,9 @@
 .weV a {
   text-decoration: none !important;
 }
+
+@media (max-width: 768px) {
+  .weV {
+    width: 100%;
+  }
+}

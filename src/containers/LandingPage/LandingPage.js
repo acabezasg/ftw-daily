@@ -2,26 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 import { injectIntl, intlShape } from "react-intl";
 import { isScrollingDisabled } from "../../ducks/UI.duck";
 import config from "../../config";
 import {
   Page,
-  SectionHero,
   SectionLocations,
-  SectionFeatured,
   LayoutSingleColumn,
   LayoutWrapperTopbar,
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
   SliderHero,
-  HomepageVideo,
-  Stepper2,
   NamedLink,
-  ExternalLink,
   FeaturedIn,
+  Button,
 } from "../../components";
 import { TopbarContainer } from "../../containers";
 
@@ -57,6 +53,10 @@ export const LandingPageComponent = props => {
     id: "LandingPage.schemaDescription"
   });
   const schemaImage = `${config.canonicalRootURL}${facebookImage}`;
+
+  const handleSignUpClick = () => {
+    history.push("/signup");
+  }
 
   return (
     <Page
@@ -150,7 +150,11 @@ export const LandingPageComponent = props => {
                     We Vet every Pet Sitter
                   </h1>
                   <p className={css.WeVetDiv}>We don't let just anyone watch our pets</p>
-                  <p className={css.WeVetLearn}><NamedLink name="WeVetPage">Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></NamedLink></p>
+                  <p className={css.WeVetLearn}>
+                    <NamedLink name="WeVetPage">Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></NamedLink>
+
+                    <Button onClick={handleSignUpClick}>Sign Up</Button>
+                  </p>
                 </div>
                 <div className={css.WeVetImage}>
                   <img src={wevet} />

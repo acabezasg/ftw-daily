@@ -729,6 +729,10 @@
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 1.5px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .WeVetSection p {
@@ -1033,6 +1037,7 @@
   transition: all .2s ease;
   position: relative;
   left: 0px;
+  width: 100%;
 }
 
 .WeVetLearn a:hover {
@@ -1110,4 +1115,13 @@
   .vettitle {
       padding: 0 10px;
   }
+}
+
+.WeVetLearn button {
+  display: inline-block;
+  width: auto;
+  padding: 0 25px;
+  margin-top: 25px;
+  min-height: auto;
+  padding: 10px 40px;
 }

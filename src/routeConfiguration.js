@@ -560,6 +560,7 @@ const routeConfiguration = () => {
     {
       path: '/ordertype/:type',
       name: 'OrderTypesPage',
+      auth: true,
       component: props => <OrderTypesPage {...props} />,
     },
   ];
