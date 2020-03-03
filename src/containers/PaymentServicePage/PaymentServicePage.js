@@ -80,14 +80,19 @@ export class PaymentServicePage extends Component {
                     <img className={css.lineImg} src={line} />
                   </div>
                   <p>
-                    just <span>$10</span> per month
+                    just <span>{this.props.location.state.country == 'GB' ? '£10' : '$10'}</span>{' '}
+                    per month
                   </p>
                   <p>(cancel anytime)</p>
 
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="copy_of_services_members_plan"
+                    data-cb-plan-id={
+                      this.props.location.state.country == 'GB'
+                        ? 'copy_of_services_members_plan'
+                        : 'services_members_plan'
+                    }
                   >
                     <img src={card} />
                     Pay with card
@@ -113,7 +118,7 @@ export class PaymentServicePage extends Component {
                         <img src={checkmark} /> Online Profile
                       </li>
                       <li>
-                        <img src={checkmark} /> Social Media 
+                        <img src={checkmark} /> Social Media
                       </li>
                       <li>
                         <img src={checkmark} /> 24/7 email support

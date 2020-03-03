@@ -25,6 +25,7 @@ export class PaymentOwnerPage extends Component {
     this.state = { didPay: false };
   }
   componentDidMount() {
+    alert(this.props.country);
     const el = document.createElement('script');
     el.onload = () => {
       window.Chargebee.init({
@@ -79,14 +80,19 @@ export class PaymentOwnerPage extends Component {
                     <img className={css.lineImg} src={line} />
                   </div>
                   <p>
-                    just <span>$119</span> per year
+                    just <span>{this.props.location.state.country == 'GB' ? '£119' : '$119'} </span>{' '}
+                    per year
                   </p>
                   <p>(Basic Membership)</p>
 
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="copy_of_owners_basic_plan"
+                    data-cb-plan-id={
+                      this.props.location.state.country == 'GB'
+                        ? 'copy_of_owners_basic_plan'
+                        : 'owners_basic_plan'
+                    }
                   >
                     <img src={card} />
                     Pay with card
@@ -99,7 +105,7 @@ export class PaymentOwnerPage extends Component {
                   </div>
                 </div>
                 <div className={css.item2}>
-                <div className={css.firstRow}>
+                  <div className={css.firstRow}>
                     <img src={crown} />
                     <h2>Go Premium now</h2>
                     <img className={css.lineImg} src={line} />

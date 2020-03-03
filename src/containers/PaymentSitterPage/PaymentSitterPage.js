@@ -94,35 +94,40 @@ export class PaymentSitterPage extends Component {
                   </div>
 
                   <div className={css.getHelp}>
-                  <p>
-                    Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
-                  </p>
+                    <p>
+                      Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                    </p>
                   </div>
                 </div>
                 <div className={css.item2}>
-                <div className={css.firstRow}>
+                  <div className={css.firstRow}>
                     <img src={crown} />
                     <h2>Go Premium now</h2>
                     <img className={css.lineImg} src={line} />
                   </div>
                   <p>
-                    just <span>$129</span> per year
+                    just <span>{this.props.location.state.country == 'GB' ? '£129' : '$129'}</span>{' '}
+                    per year
                   </p>
                   <p>(Premium Membership)</p>
 
                   <div
                     className={css.Chargebee}
                     data-cb-type="checkout"
-                    data-cb-plan-id="copy_of_Platinum_annual_plan"
+                    data-cb-plan-id={
+                      this.props.location.state.country == 'GB'
+                        ? 'copy_of_Platinum_annual_plan'
+                        : 'Platinum_annual_plan'
+                    }
                   >
                     <img src={card} />
                     Pay with card
                   </div>
 
                   <div className={css.getHelp}>
-                  <p>
-                    Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
-                  </p>
+                    <p>
+                      Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                    </p>
                   </div>
                 </div>
               </div>
