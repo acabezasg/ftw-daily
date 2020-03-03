@@ -127,7 +127,7 @@ const Footer = props => {
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
-                  <a href="https://help.trustmypetsitter.com/blog/" className={css.link}>
+                  <a href="https://blog.trustmypetsitter.com" className={css.link}>
                     Blog
                   </a>
                 </li>
@@ -151,12 +151,12 @@ const Footer = props => {
             <div className={css.searches}>
               <ul className={css.list}>
               <li className={css.listItem}>
-                  <NamedLink
-                    name="HelpCenter"
+                  <a
+                    href="https://help.trustmypetsitter.com/en/"
                     className={css.link}
                   >
                     Help Center
-                  </NamedLink>
+                  </a>
                 </li>
                 <li className={css.listItem}>
                   <NamedLink

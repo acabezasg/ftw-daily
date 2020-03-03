@@ -90,13 +90,13 @@
 }
 
 .joinNow a {
-  background-color: rgb(65,166,223);
+  background-color: #c9bd9c;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
 .joinNow a:hover {
-      background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
+      background: #b7a77b;
       text-decoration: none !important;
 }

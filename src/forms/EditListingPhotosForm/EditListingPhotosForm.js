@@ -26,7 +26,6 @@ export class EditListingPhotosFormComponent extends Component {
       redirectPage: null,
       redirect: null,
       userFetched: false,
-      country: '',
     };
     this.onImageUploadHandler = this.onImageUploadHandler.bind(this);
     this.submittedImages = [];
@@ -47,46 +46,39 @@ export class EditListingPhotosFormComponent extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://ipapi.co/json/').then(response => {
-      this.setState({ country: response.data.country });
+    let memberShip, redirectPage;
+    switch (this.props.user_type) {
+      case 0:
+        memberShip = 'petOwnerMembership';
+        redirectPage = 'MembershipPage';
+        break;
+      case 1:
+        memberShip = 'petSitterMembership';
+        redirectPage = 'MembershipPage';
+        break;
+      case 2:
+        memberShip = 'petServiceMembership';
+        redirectPage = 'MembershipPage';
+        break;
+    }
 
-      let memberShip, redirectPage;
-      switch (this.props.user_type) {
-        case 0:
-          memberShip = 'petOwnerMembership';
-          redirectPage = 'PaymentOwnerPage';
-          break;
-        case 1:
-          memberShip = 'petSitterMembership';
-          redirectPage = 'PaymentSitterPage';
-          break;
-        case 2:
-          memberShip = 'petServiceMembership';
-          redirectPage = 'PaymentServicePage';
-          break;
-      }
-
-      this.props
-        .dispatch(getUser())
-        .then(response => {
-          let currentUser = response.data.data;
-          if (!currentUser.attributes.profile.publicData[memberShip]) {
-            localStorage.setItem('redirectPath', new URL(window.location.href).pathname);
-            this.setState({ redirectPage });
-          }
-        })
-        .finally(() => {
-          this.setState({ userFetched: true });
-        });
-    });
+    this.props
+      .dispatch(getUser())
+      .then(response => {
+        let currentUser = response.data.data;
+        if (!currentUser.attributes.profile.publicData[memberShip]) {
+          localStorage.setItem('redirectPath', new URL(window.location.href).pathname);
+          this.setState({ redirectPage });
+        }
+      })
+      .finally(() => {
+        this.setState({ userFetched: true });
+      });
   }
 
   render() {
     return this.state.redirect ? (
-      <NamedRedirect
-        name={this.state.redirectPage}
-        state={{ country: this.state.country }}
-      ></NamedRedirect>
+      <NamedRedirect name={this.state.redirectPage}></NamedRedirect>
     ) : (
       <FinalForm
         {...this.props}

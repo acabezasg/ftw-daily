@@ -25,7 +25,6 @@ export class PaymentOwnerPage extends Component {
     this.state = { didPay: false };
   }
   componentDidMount() {
-    alert(this.props.country);
     const el = document.createElement('script');
     el.onload = () => {
       window.Chargebee.init({
@@ -73,63 +72,61 @@ export class PaymentOwnerPage extends Component {
           <LayoutWrapperMain className={css.PaymentWrapper}>
             <div className={css.sectionContent}>
               <div className={css.gridContainer}>
-                <div className={css.item1}>
-                  <div className={css.firstRow}>
-                    <img src={paw} />
-                    <h2>Go Basic now</h2>
-                    <img className={css.lineImg} src={line} />
-                  </div>
-                  <p>
-                    just <span>{this.props.location.state.country == 'GB' ? '£119' : '$119'} </span>{' '}
-                    per year
-                  </p>
-                  <p>(Basic Membership)</p>
-
-                  <div
-                    className={css.Chargebee}
-                    data-cb-type="checkout"
-                    data-cb-plan-id={
-                      this.props.location.state.country == 'GB'
-                        ? 'copy_of_owners_basic_plan'
-                        : 'owners_basic_plan'
-                    }
-                  >
-                    <img src={card} />
-                    Pay with card
-                  </div>
-
-                  <div className={css.getHelp}>
+                {this.props.location.state.planType == 'basic' ? (
+                  <div className={css.item1}>
+                    <div className={css.firstRow}>
+                      <img src={paw} />
+                      <h2>Go Basic now</h2>
+                      <img className={css.lineImg} src={line} />
+                    </div>
                     <p>
-                      Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                      just <span>{this.props.location.state.currency}119</span> per year
                     </p>
-                  </div>
-                </div>
-                <div className={css.item2}>
-                  <div className={css.firstRow}>
-                    <img src={crown} />
-                    <h2>Go Premium now</h2>
-                    <img className={css.lineImg} src={line} />
-                  </div>
-                  <p>
-                    just <span>$199</span> per year
-                  </p>
-                  <p>(Premium Membership)</p>
+                    <p>(Basic Membership)</p>
 
-                  <div
-                    className={css.Chargebee}
-                    data-cb-type="checkout"
-                    data-cb-plan-id="copy_of_owner_members_plan"
-                  >
-                    <img src={card} />
-                    Pay with card
-                  </div>
+                    <div
+                      className={css.Chargebee}
+                      data-cb-type="checkout"
+                      data-cb-plan-id={this.props.location.state.planId}
+                    >
+                      <img src={card} />
+                      Pay with card
+                    </div>
 
-                  <div className={css.getHelp}>
+                    <div className={css.getHelp}>
+                      <p>
+                        Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className={css.item1}>
+                    <div className={css.firstRow}>
+                      <img src={crown} />
+                      <h2>Go Premium now</h2>
+                      <img className={css.lineImg} src={line} />
+                    </div>
                     <p>
-                      Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                      just <span>{this.props.location.state.currency}199</span> per year
                     </p>
+                    <p>(Premium Membership)</p>
+
+                    <div
+                      className={css.Chargebee}
+                      data-cb-type="checkout"
+                      data-cb-plan-id={this.props.location.state.planId}
+                    >
+                      <img src={card} />
+                      Pay with card
+                    </div>
+
+                    <div className={css.getHelp}>
+                      <p>
+                        Need help? <NamedLink name="ContactPage">Send us a message</NamedLink>
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </LayoutWrapperMain>

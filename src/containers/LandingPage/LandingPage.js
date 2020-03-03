@@ -2,26 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 import { injectIntl, intlShape } from "react-intl";
 import { isScrollingDisabled } from "../../ducks/UI.duck";
 import config from "../../config";
 import {
   Page,
-  SectionHero,
   SectionLocations,
-  SectionFeatured,
   LayoutSingleColumn,
   LayoutWrapperTopbar,
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
   SliderHero,
-  HomepageVideo,
-  Stepper2,
   NamedLink,
-  ExternalLink,
   FeaturedIn,
+  Button,
 } from "../../components";
 import { TopbarContainer } from "../../containers";
 
@@ -57,6 +53,10 @@ export const LandingPageComponent = props => {
     id: "LandingPage.schemaDescription"
   });
   const schemaImage = `${config.canonicalRootURL}${facebookImage}`;
+
+  const handleSignUpClick = () => {
+    history.push("/signup");
+  }
 
   return (
     <Page
@@ -144,13 +144,70 @@ export const LandingPageComponent = props => {
             </li>
 
             <li className={css.sections}>
+              <div className={css.testimonialsSection}>
+                <h1>We break Myths</h1>
+                 <div className={css.testimonials}>
+                   <div className={css.testimonial}>
+                     <p className={css.tContent}>I love being a Pet Sitter.  I am free to choose the location and dates that suit me. I get to meet amazing animals and their owners. I get to stay in some amazing locations and houses. The best job ever!</p>
+                      <div className={css.testimonialAuthor}>
+                       <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" />
+                       <span className={css.testR}>
+                         <p className={css.smallAuthor}>
+                           Julie O - <span className={css.tLoc}>UK</span>
+                         </p>
+                       </span>
+                     </div>
+                   </div>
+                   <div className={css.testimonial}>
+                     <p className={css.tContent}>There's many things I love about a pet sitter, I love getting to spend so much time with a variety of loving pets.  The relationship I build with them and their owners is lovely and very rewarding.</p>
+                      <div className={css.testimonialAuthor}>
+                       <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" />
+                       <span className={css.testR}>
+                         <p className={css.smallAuthor}>
+                           Holly P - <span className={css.tLoc}>UK</span>
+                         </p>
+                       </span>
+                     </div>
+                   </div>
+                   <div className={css.testimonial}>
+                   <p className={css.tContent}>I love being a pet sitter because I am surrounded by animals and enjoy the chance to look after them. Being a pet sitter gives me the opportunity to meet new furry and human friends. I know how important is to have someone reliable to look after your pets and I love what I do.</p>
+                      <div className={css.testimonialAuthor}>
+                       <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" />
+                       <span className={css.testR}>
+                         <p className={css.smallAuthor}>
+                           Paula Alexandra - <span className={css.tLoc}>UK</span>
+                         </p>
+                       </span>
+                     </div>
+                   </div>
+                   <div className={css.testimonial}>
+                     <p className={css.tContent}>I love getting to know the pets and travelling to different locations.  When you watch a pet in their own home it ends up feeling like you are home too. I love being a Pet Sitter!</p>
+                      <div className={css.testimonialAuthor}>
+                       <img src="https://thumbs.dreamstime.com/b/default-placeholder-profile-icon-avatar-gray-man-90197971.jpg" />
+                       <span className={css.testR}>
+                         <p className={css.smallAuthor}>
+                           Sebastian D - <span className={css.tLoc}>Europe</span>
+                         </p>
+                       </span>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+              <hr className={css.tHr} />
+            </li>
+
+            <li className={css.sections}>
               <div className={(css.sectionServiceContent, css.sectionWeVet)}>
                 <div className={css.WeVetSection}>
                   <h1 className={(css.vettitle)}>
                     We Vet every Pet Sitter
                   </h1>
                   <p className={css.WeVetDiv}>We don't let just anyone watch our pets</p>
-                  <p className={css.WeVetLearn}><NamedLink name="WeVetPage">Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></NamedLink></p>
+                  <p className={css.WeVetLearn}>
+                    <NamedLink name="WeVetPage">Learn How We Do It <span className={css.WeVetArrow}>&rarr;</span></NamedLink>
+
+                    <Button onClick={handleSignUpClick}>Sign Up</Button>
+                  </p>
                 </div>
                 <div className={css.WeVetImage}>
                   <img src={wevet} />
@@ -273,112 +330,6 @@ export const LandingPageComponent = props => {
             </li>
 
             <hr className={css.hpHr} />
-
-          {/*
-            <li className={(css.sections, css.whyUseBg)}>
-              <div className={css.sectionContent}>
-                <h1>Why use Trust My Pet Sitter?</h1>
-
-                <div className={css.whyUse}>
-                  <div className={css.whyContainer}>
-                    <h2>Safety</h2>
-
-                    <p>
-                      All Premium members are ID verified and the membership
-                      includes insurance and access to a 24/7 Virtual Vet
-                    </p>
-
-                    <NamedLink name="YotiPage">Learn More</NamedLink>
-                  </div>
-
-                  <div className={css.whyContainer}>
-                    <h2>Our Community</h2>
-
-                    <p>
-                      Find and meet like minded people in our pet community.
-                      Find pet sitters, dog walkers, groomers and vets
-                    </p>
-
-                    <NamedLink name="SignupPage">Join Now</NamedLink>
-                  </div>
-
-                  <div className={css.whyContainer}>
-                    <h2>Travel the World</h2>
-
-                    <p>
-                      Pet Sitters can travel the world looking after much loved
-                      pets in the family home. Find your next great adventure...
-                    </p>
-
-                    <NamedLink name="PawSquadPage">Learn More</NamedLink>
-                  </div>
-
-                  <div className={css.whyContainer}>
-                    <h2>The Personal Touch</h2>
-
-                    <p>
-                      Our team personally approve every verified Pet Sitter
-                      prior to going live on Trust My Pet Sitter
-                    </p>
-
-                    <NamedLink name="SignupPage">Join Now</NamedLink>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li className={css.section}>
-              <div className={css.sectionContentFirstChild}>
-                <HomepageVideo />
-              </div>
-            </li>
-
-            */}
-
-          {/*
-            <li className={css.section}>
-              <div className={css.sectionContent}>
-                <div className={css.howItWorksColors}>
-                <h1 className={css.howtitle}>How it Works</h1>
-
-                <Stepper2 />
-
-                <div className={css.firstchistepper}>
-                  <span className={css.step}>1</span>
-                  <h2>Choose Pet Sitter</h2>
-                  <p>
-                    Trust My Pet Sitter introduces a wider choice of local,
-                    national and international pet sitters.
-                  </p>
-                </div>
-
-                <div className={css.mobileStepper}>
-                  <span className={css.step}>2</span>
-                  <h2>Book Pet Sitter</h2>
-                  <p>
-                    Book your Pet Sitter using our secure payment provider. All
-                    bookings are covered by 24/7 Vet Advice and Emergency
-                    Insurance
-                  </p>
-                </div>
-
-                <div className={css.mobileStepper}>
-                  <span className={css.step}>3</span>
-                  <h2>Pets are Happy at Home</h2>
-                  <p>
-                    Your Pet stays home with our verified Pet Sitter, happy and
-                    secure in their own familiar space.
-                  </p>
-
-                  <div className={css.mobbt}>
-                    <NamedLink name="SignupPage">Start Now</NamedLink>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </li>
-
-          */}
 
             <li className={css.section}>
               <div className={css.sectionContent}>

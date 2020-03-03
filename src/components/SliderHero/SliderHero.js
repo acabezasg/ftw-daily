@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { render } from "react-dom";
 import { fadeInUp, fadeInLeft, fadeInRight } from "react-animations";
 import Radium, { StyleRoot } from "radium";
-import { NamedLink } from "../../components";
+import { NamedLink, ExternalLink } from "../../components";
 
 import css from "./SliderHero.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -51,6 +51,7 @@ const SliderHero = () => (
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
+              <ExternalLink href="https://trustmypetsitter.seedrs.com/">Don't Miss Out, We Are Crowdfunding on Seedrs</ExternalLink>
             </div>
           </div>
 
@@ -72,6 +73,7 @@ const SliderHero = () => (
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
+              <ExternalLink href="https://trustmypetsitter.seedrs.com/">Don't Miss Out, We Are Crowdfunding on Seedrs</ExternalLink>
             </div>
           </div>
 
@@ -92,6 +94,7 @@ const SliderHero = () => (
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
+              <ExternalLink href="https://trustmypetsitter.seedrs.com/">Don't Miss Out, We Are Crowdfunding on Seedrs</ExternalLink>
             </div>
           </div>
 
@@ -112,6 +115,7 @@ const SliderHero = () => (
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
+              <ExternalLink href="https://trustmypetsitter.seedrs.com/">Don't Miss Out, We Are Crowdfunding on Seedrs</ExternalLink>
             </div>
           </div>
 

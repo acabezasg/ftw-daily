@@ -27,11 +27,11 @@
 
 .item1,
 .item2 {
-  box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.25)
+  box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.25);
 }
 
 .PaymentWrapper {
-  background: #EBF1FA;
+  background: #ebf1fa;
 }
 
 .whybuy ul a:hover {
@@ -41,8 +41,7 @@
 
 .gridContainer {
   display: grid;
-  grid-template-areas:
-    'main right';
+  grid-template-areas: 'main';
   grid-gap: 100px;
   padding: 10px;
   grid-auto-columns: 1fr;
@@ -76,7 +75,7 @@
 
 .getHelp {
   padding-top: 0px;
-  padding-bottom: 
+  padding-bottom: ;
 }
 
 .getHelp {
@@ -200,12 +199,16 @@
   padding: 30px 0;
 }
 
-.item1 { grid-area: main; border-radius: 10px; }
-.item2 { grid-area: right; }
+.item1 {
+  grid-area: main;
+  border-radius: 10px;
+}
+.item2 {
+  grid-area: right;
+}
 
 .whybuy ul {
   text-align: left;
-
 }
 
 .whybuy ul li {
@@ -241,7 +244,8 @@
     grid-template-areas: initial !important;
     grid-template-columns: repeat(1, 1fr);
   }
-  .item1, .item2 {
+  .item1,
+  .item2 {
     grid-area: initial !important;
   }
 }

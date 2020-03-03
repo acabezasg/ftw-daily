@@ -258,9 +258,9 @@ class SideHelp extends React.Component {
           })}
 
           <div className={css.sidefooter}>
-            <NamedLink name="HelpCenter" className={css.helpcenter}>
+            <a href="https://help.trustmypetsitter.com/en/" className={css.helpcenter}>
               <span>Visit the Help Center</span>
-            </NamedLink>
+            </a>
           </div>
         </div>
       </React.Fragment>

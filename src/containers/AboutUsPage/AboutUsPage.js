@@ -48,7 +48,7 @@ const AboutUsPage = () => {
     <div className={css.sectionContent}>
       <h1 className={css.pressTitle}>The Pet Team</h1>
       <p className={css.pressSub}>
-        Trust My Pet Sitter founders <strong>Angela Fagan</strong>, <strong>Sinead</strong> and <strong>Shamus Fitzsimons</strong> built a pet care app that connects pet owners with pet sitters based on what’s most important to them.
+      Trust My Pet Sitter founders built a pet care app that connects pet owners with pet sitters based on what’s most important to them.
       </p>
 <div className={css.container}>
   <ExternalLink className={css.card} href="https://www.linkedin.com/in/shamus-fitzsimons-trustmypetsitter/">

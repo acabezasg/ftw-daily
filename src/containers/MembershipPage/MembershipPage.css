@@ -26,7 +26,7 @@
 }
 
 .whyWrapper {
-  background: #EBF1FA;
+  background: #ebf1fa;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -68,14 +68,14 @@
 }
 
 .sectionContent ul:nth-child(1) li {
-  font-family: "narrow", "Times New Roman", serif;
+  font-family: 'narrow', 'Times New Roman', serif;
   letter-spacing: 0.8px;
 }
 
 .extend p {
   color: #fff;
   padding-top: 10px;
-  font-family: "narrow", "Times New Roman", serif;
+  font-family: 'narrow', 'Times New Roman', serif;
   letter-spacing: 2.5px;
 }
 
@@ -104,13 +104,14 @@
 .whyTitle {
   text-align: center;
   font-size: 40px;
-  font-family: "narrow", "Times New Roman", serif;
+  font-family: 'narrow', 'Times New Roman', serif;
   font-weight: bold;
   letter-spacing: 3px !important;
 }
 
 .mBanner {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%), url(dog.jpg);
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%),
+    url(dog.jpg);
   background-size: cover;
   background-position: center;
   padding: 100px 0 150px;
@@ -128,7 +129,7 @@
 .mWrapper > div {
   max-width: 35%;
   flex: 0 0 35%;
-  box-shadow: 0px 8px 44px -10px rgba(0,22,89,0.3);
+  box-shadow: 0px 8px 44px -10px rgba(0, 22, 89, 0.3);
   margin: 0 15px;
   background-color: #fff;
   padding: 20px 20px 50px;
@@ -160,7 +161,7 @@
 
 @media (max-width: 512px) {
   .extend,
-  .whyTitle, 
+  .whyTitle,
   .basicTitle {
     line-height: 45px;
   }
@@ -189,8 +190,8 @@
 }
 
 @media (max-width: 1126px) {
-.budiNesto {
-  display: none;
+  .budiNesto {
+    display: none;
   }
 
   .whyFlex p {
@@ -219,7 +220,7 @@
 }
 
 .whyFlex > div > h3 {
-  font-family: "narrow", "Times New Roman", serif;
+  font-family: 'narrow', 'Times New Roman', serif;
   letter-spacing: 0.8px;
   font-size: 22px;
 }
@@ -242,7 +243,7 @@
 .getPlan a {
   background: #b7a77b;
   padding: 8px 15px 11px;
-  color: #fff !important; 
+  color: #fff !important;
   border-radius: 5px;
   font-size: 17px;
 }
@@ -257,7 +258,7 @@
 .getPlan a:hover {
   background: #c9bd9c;
   color: #fff !important;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .mWrapper > div > div:nth-of-type(1) {
@@ -302,14 +303,14 @@
   padding-bottom: 30px;
   text-align: center;
   font-size: 40px;
-  font-family: "narrow", "Times New Roman", serif;
+  font-family: 'narrow', 'Times New Roman', serif;
   font-weight: bold;
   letter-spacing: 3px !important;
 }
 
 .basicP {
   text-align: center;
-  font-family: "narrow", "Times New Roman", serif;
+  font-family: 'narrow', 'Times New Roman', serif;
   letter-spacing: 0.7px;
 }
 
@@ -372,4 +373,8 @@
 
 .memberTip {
   margin-top: -6px !important;
+}
+
+.disabled {
+  color: red;
 }

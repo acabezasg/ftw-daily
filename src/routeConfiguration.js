@@ -17,7 +17,6 @@ import {
   EmailVerificationPage,
   InboxPage,
   LandingPage,
-  HomepageCopy,
   ListingPage,
   ManageListingsPage,
   NotFoundPage,
@@ -149,7 +148,7 @@ const routeConfiguration = () => {
       component: AffiliatePage,
     },
     {
-      path: '/crowdfunding',
+      path: '/crowdtest',
       name: 'CrowdFundingPage',
       component: CrowdFundingPage,
     },
@@ -222,11 +221,6 @@ const routeConfiguration = () => {
       path: '/',
       name: 'LandingPage',
       component: props => <LandingPage {...props} />,
-    },
-    {
-      path: '/our-selection-process',
-      name: 'HomepageCopy',
-      component: props => <HomepageCopy {...props} />,
     },
     {
       path: '/membership',
@@ -566,6 +560,7 @@ const routeConfiguration = () => {
     {
       path: '/ordertype/:type',
       name: 'OrderTypesPage',
+      auth: true,
       component: props => <OrderTypesPage {...props} />,
     },
   ];

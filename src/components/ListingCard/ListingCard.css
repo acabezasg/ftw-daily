@@ -69,7 +69,7 @@
 }
 
 .priceValue {
-  color: #fff;
+  color: rgba(0,0,0,.8);
   /* Font */
   @apply --marketplaceH3FontStyles;
 
@@ -86,7 +86,7 @@
 .perUnit {
   /* Font */
   @apply --marketplaceTinyFontStyles;
-  color: #fff;
+  color: rgba(0,0,0,.8);
 
   /* Remove default margins from font */
   margin-top: 0;
