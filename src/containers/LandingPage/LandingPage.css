@@ -283,7 +283,7 @@
     white-space: pre-wrap;
   }
   .sectionServiceContent {
-    margin: 3rem 1.25rem;
+    margin: 80px 1.25rem;
   }
   .serviceGridContent p {
     margin: 1rem 0 0;
@@ -508,9 +508,9 @@
   margin: 0 auto 110px auto !important;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 1024px) {
 .sectionContent {
-  padding: 0 36px 0 36px;
+  padding: 0 1.25rem !important;
 }}
 
 .howSection {
@@ -1142,7 +1142,7 @@
   padding-top: 40px;
 }
 
-.testimonialsSection .testimonials div .tContent {
+.tContent {
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 1.3px;
   font-weight: 500;
@@ -1155,9 +1155,10 @@
   border-radius: 5px;
   position: relative;
   margin-bottom: 30px;
+  width: 100%;
 }
 
-.testimonialsSection .testimonials div .tContent:after {
+.tContent:after {
   content: "";
   width: 0;
   height: 0;
@@ -1167,11 +1168,11 @@
   left: 0;
 }
 
-.testimonialsSection .testimonials div .tContent {
+.tContent {
   background: #e4dfcf;
 }
 
-.testimonialsSection .testimonials div .tContent:after {
+.tContent:after {
   border-top: 30px solid #e4dfcf;
 }
 
@@ -1193,6 +1194,7 @@
   font-family: "narrow", "Times New Roman", serif;
   letter-spacing: 1px;
   font-weight: 600;
+  text-align: left;
 }
 
 .tLoc {
@@ -1210,4 +1212,28 @@
 .tHr {
   border-top: 1px solid rgba(0,0,0,.2) !important;
   margin: 0 0 80px;
+}
+
+@media (max-width: 991px) {
+  .testimonials {
+    display: none !important;
+  }
+  .mobTestimonials {
+    padding-top: 40px;
+  }
+  .mobTestimonials .testimonial {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobTestimonials {
+    display: none;
+  }
+}
+
+@media (max-width: 630px) {
+  .mobTestimonials .testimonial {
+    padding: 0 10px;
+  }
 }

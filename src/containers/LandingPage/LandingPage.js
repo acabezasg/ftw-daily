@@ -18,6 +18,7 @@ import {
   NamedLink,
   FeaturedIn,
   Button,
+  Testimonials,
 } from "../../components";
 import { TopbarContainer } from "../../containers";
 
@@ -96,7 +97,7 @@ export const LandingPageComponent = props => {
           <SliderHero />
           <div className={css.featuredIn}>
               <div className={css.featuredSection}>
-              <div className={css.featuredMobile}>
+              <div className={css.featuredMobile} id="fM">
                 <h1>Featured In</h1>
                 <FeaturedIn />
               </div>
@@ -146,6 +147,9 @@ export const LandingPageComponent = props => {
             <li className={css.sections}>
               <div className={css.testimonialsSection}>
                 <h1>We break Myths</h1>
+                <div className={css.mobTestimonials} id="mT">
+                  <Testimonials />
+                </div>
                  <div className={css.testimonials}>
                    <div className={css.testimonial}>
                      <p className={css.tContent}>I love being a Pet Sitter.  I am free to choose the location and dates that suit me. I get to meet amazing animals and their owners. I get to stay in some amazing locations and houses. The best job ever!</p>

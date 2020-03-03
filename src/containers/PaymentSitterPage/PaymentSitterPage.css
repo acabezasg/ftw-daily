@@ -28,6 +28,8 @@
 .item1,
 .item2 {
   box-shadow: 4px 6px 25px 1px rgba(0, 0, 0, 0.25);
+  width: 50%;
+  margin: 0 auto;
 }
 
 .gridContainer {
@@ -230,28 +232,15 @@
 
 /* Media */
 
-@media (max-width: 992px) {
-  .gridContainer {
-    grid-gap: 50px;
-  }
-  .item1 {
-    padding: 30px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .gridContainer {
-    grid-template-areas: initial !important;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .item1,
-  .item2 {
-    grid-area: initial !important;
-  }
-}
-
 @media (max-width: 520px) {
   .sectionContent {
     padding: 0;
+  }
+}
+
+@media (max-width: 730px) {
+  .item1 {
+    width: 100%;
+    padding: 30px !important;
   }
 }

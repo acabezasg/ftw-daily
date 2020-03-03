@@ -30,7 +30,7 @@
     white-space: normal;
     line-height: 0; }
     .alice-carousel__stage-item * {
-      width: 280px;
+      width: 100%;
       line-height: initial; }
     .alice-carousel__stage-item.__cloned {
       visibility: hidden;
@@ -154,3 +154,11 @@
   100% {
     opacity: 0;
     visibility: hidden; } }
+
+#mT .alice-carousel__dots {
+  display: none;
+}
+
+#fM .alice-carousel__stage-item * {
+  width: 280px;
+}

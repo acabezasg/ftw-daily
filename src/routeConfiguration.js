@@ -165,16 +165,19 @@ const routeConfiguration = () => {
     {
       path: '/payment-service',
       name: 'PaymentServicePage',
+      auth: true,
       component: PaymentServicePage,
     },
     {
       path: '/payment-sitter',
       name: 'PaymentSitterPage',
+      auth: true,
       component: PaymentSitterPage,
     },
     {
       path: '/payment-owner',
       name: 'PaymentOwnerPage',
+      auth: true,
       component: PaymentOwnerPage,
     },
     {
