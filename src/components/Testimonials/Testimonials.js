@@ -48,7 +48,7 @@ const Testimonials = () => {
       </div>
       <div className={css.testimonial}>
         <p className={css.tContent}>
-              Being a pet sitter gives me the opportunity to meet new furry and human friends.
+        I love being a pet sitter because I am surrounded by animals and enjoy the chance to look after them. I know how important is to have someone reliable to look after your pets and I love what I do.
         </p>
         <div className={css.testimonialAuthor}>
           <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg" />
