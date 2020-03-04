@@ -341,7 +341,7 @@
 .desktopPriceValue {
   /* Font */
   @apply --marketplaceH1FontStyles;
-  color: var(--marketplaceColor);
+  color: #b7a77b;
 
   @media (--viewportMedium) {
     margin-top: 0;

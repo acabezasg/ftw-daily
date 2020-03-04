@@ -124,7 +124,7 @@
   }
 }
 
-.sections:nth-child(4) .sectionHomestay {
+.sections:nth-child(3) .sectionHomestay {
   padding: 80px 1.25rem !important;
 }
 
@@ -476,22 +476,6 @@
   color: #fff;
 }
 
-.whyContainer:nth-child(1):before {
-    content: url(/static/icons/why-1.png);
-}
-
-.whyContainer:nth-child(2):before {
-    content: url(/static/icons/why-2.png);
-}
-
-.whyContainer:nth-child(3):before {
-    content: url(worldwide.png);
-}
-
-.whyContainer:nth-child(4):before {
-    content: url(/static/icons/why-4.png);
-}
-
 .whyContainer a:hover {
     background-image: linear-gradient(to right top, #d16ba5, #c077bd, #a983d0, #8d8fdc, #6d9ae2, #6d9ae2, #6d9ae2, #6d9ae2, #8d8fdc, #a983d0, #c077bd, #d16ba5);
     color: #fff;
@@ -781,35 +765,35 @@
   padding-top: 40px;
 }
 
-.sections:nth-child(4) .sectionHomestay .newstandardCol {
+.sections:nth-child(3) .sectionHomestay .newstandardCol {
   display: grid;
   grid-template-columns: auto 1px auto 1px auto;
   padding-top: 40px;
 }
 
-.sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
-.sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+.sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+.sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
   background: rgb(0, 0, 0, .2);
 }
 
 @media (max-width: 1100px) {
-  .sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
-  .sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+  .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
   display: none;
 }
-.sections:nth-child(4) .sectionHomestay .newstandardCol {
+.sections:nth-child(3) .sectionHomestay .newstandardCol {
   grid-template-columns: repeat(3, 1fr);
 }
 }
 
 @media (max-width: 500px) {
-  .sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
-  .sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+  .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
   display: block;
   height: 1px;
   background: rgb(0, 0, 0, .3);
 }
-.sections:nth-child(4) .sectionHomestay .newstandardCol {
+.sections:nth-child(3) .sectionHomestay .newstandardCol {
   grid-template-columns: auto 1px auto 1px auto;
 }
 }
@@ -1132,7 +1116,12 @@
 
 .testimonialsSection {
   padding: 0 1.25rem;
-  margin: 0 auto 80px;
+  margin: 0 auto;
+}
+
+.testHr {
+  margin: 80px 0 60px;
+  border-top: 1px solid rgba(0,0,0,.2) !important;
 }
 
 .testimonialsSection .testimonials {

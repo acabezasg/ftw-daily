@@ -13,8 +13,8 @@
       cursor: pointer;
 
       /* Same as active */
-      background-color: var(--marketplaceColor);
-      border-color: var(--marketplaceColor);
+      background-color: #c9bd9c;
+      border-color: #c9bd9c;
       color: var(--matterColorLight);
       box-shadow: var(--boxShadowPopup);
     }
@@ -58,8 +58,8 @@
 
 .priceLabelActive {
   /* Same as hover */
-  background-color: var(--marketplaceColor);
-  border-color: var(--marketplaceColor);
+  background-color: #c9bd9c;
+  border-color: #c9bd9c;
   color: var(--matterColorLight);
   box-shadow: var(--boxShadowPopup);
 }
@@ -102,8 +102,8 @@
 
 .caretActive {
   /* Same as hover */
-  background-color: var(--marketplaceColor);
-  border-color: var(--marketplaceColor);
+  background-color: #c9bd9c;
+  border-color: #c9bd9c;
 }
 
 .paw {
@@ -133,20 +133,3 @@
   background-repeat: no-repeat;
 }
 
-.priceLabel:hover .paw,
-.priceLabelActive .paw {
-  background-image: url('./service-hover.png');
-}
-
-.priceLabel:hover .location,
-.priceLabelActive .location,
-.caret:hover .location {
-  background-image: url('./bowl-hover.png');
-}
-
-.priceLabel:hover .petsitter,
-.priceLabelActive .petsitter,
-.priceLabel:hover .petsitter,
-.caret:hover .petsitter {
-  background-image: url('./walking-outline.png');
-}

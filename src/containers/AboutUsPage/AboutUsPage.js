@@ -16,13 +16,12 @@ import css from './AboutUsPage.css';
 import angela from './team/angela.jpg';
 import sinead from './team/sinead.jpg';
 import shamus from './team/shamus.jpg';
+import aleksa from './team/aleksa.jpg';
 import poster from './tmpsposter.png';
 import video from './tmps.mp4';
 import petsitter from './petsitter.mp4';
-import download from './download.png';
 import phone from './phone.png';
 import follow from './follow.png';
-import notes from './notes.png';
 import arrow from './right-arrow.png';
 import release from './release.pdf';
 import petowner from './petowner.png';
@@ -105,7 +104,7 @@ const AboutUsPage = () => {
 
     <ExternalLink className={css.card} href="https://www.linkedin.com/in/aleksa-prebiracevic-6a945417b/">
      <div className={css.card_image_container}>
-       <img className={css.card_image} src="https://cdn11.bigcommerce.com/s-gho61/stencil/31cc7cb0-5035-0136-2287-0242ac11001b/e/3dad8ea0-5035-0136-cda0-0242ac110004/images/no-image.svg" />
+       <img className={css.card_image} src={aleksa} />
     </div>
       
       <svg className={css.card_svg} viewBox="0 0 800 500">
