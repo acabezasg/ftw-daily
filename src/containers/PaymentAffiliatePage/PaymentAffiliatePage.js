@@ -8,6 +8,7 @@ import {
   Footer,
   ExternalLink,
   NamedLink,
+  NamedRedirect,
 } from '../../components';
 
 import line from './images/sketch.svg';
@@ -24,15 +25,20 @@ export class PaymentAffiliatePage extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ readyToRedirect: true });
-    }, 5000);
+    }, 3000);
   }
 
   render() {
-    return (
-      <div>
-        {localStorage.getItem('redirectPath') && this.state.readyToRedirect ? (
-          <Redirect to={localStorage.getItem('redirectPath')}></Redirect>
-        ) : null}
+    if (this.state.readyToRedirect) {
+      if (localStorage.getItem('redirectPath')) {
+        const redirectUrl = localStorage.getItem('redirectPath');
+        localStorage.removeItem('redirectPath');
+        return <Redirect to={redirectUrl}></Redirect>;
+      } else {
+        return <NamedRedirect name="OrderTypesPage" params={{ type: 'new' }}></NamedRedirect>;
+      }
+    } else {
+      return (
         <StaticPage
           title="Buy Membership and Go Premium | Trust My Pet Sitter"
           schema={{
@@ -75,8 +81,8 @@ export class PaymentAffiliatePage extends Component {
             </LayoutWrapperFooter>
           </LayoutSingleColumn>
         </StaticPage>
-      </div>
-    );
+      );
+    }
   }
 }
 
