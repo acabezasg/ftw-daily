@@ -199,20 +199,20 @@ export const LandingPageComponent = props => {
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>
                   <h1 className={css.vettitle}>
-                     REGISTER AT TRUST MY PET SITTER<br /><span>(It's free)</span>
+                     Register at Trust My Pet Sitter<br /><span>(It's free!)</span>
                   </h1>
                   <div className={css.newstandardCol}>
                   <div className={css.newstandardItem}>
                     <p>
-                      <img src="https://i.imgur.com/ymUJ7dl.png" />
-                      <span>Access to our<br />member only homes</span>
+                      <img src="https://i.imgur.com/7MfnIDd.png" />
+                      <span>Browse the<br />Latest Listings</span>
                     </p>
                   </div>
                   <div className={css.newstandardItem}></div>
                   <div className={css.newstandardItem}>
                   <p>
-                      <img src="https://i.imgur.com/qRm8nMe.png" />
-                      <span>Discount and<br />special offers</span>
+                      <img src="https://i.imgur.com/nfn41TC.png" />
+                      <span>Access Special<br />Offers and Discounts </span>
                   </p> 
                   <div className={css.signNews}>
                     <input type="text" name="email" placeholder="Enter your email" />
@@ -222,8 +222,8 @@ export const LandingPageComponent = props => {
                   <div className={css.newstandardItem}></div>
                   <div className={css.newstandardItem}>
                   <p>
-                      <img src="https://i.imgur.com/azjvDrJ.png" />
-                      <span>Insider tips from<br />our big team</span>
+                      <img src="https://i.imgur.com/GWhGyiU.png" />
+                      <span>Join our<br />Pet Community</span>
                   </p>
                   </div>
                   </div>
