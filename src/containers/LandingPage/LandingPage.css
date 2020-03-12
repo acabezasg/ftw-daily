@@ -128,6 +128,19 @@
   padding: 80px 1.25rem !important;
 }
 
+.sections:nth-child(4) {
+  background: #f3f3f3;
+  padding: 80px 0 !important;
+}
+
+.sections:nth-child(4) .vettitle span {
+  font-size: 25px;
+}
+
+.sections:nth-child(5) {
+  padding-top: 80px;
+}
+
 .sectionHomestay {
   position: relative;
   margin: 0 auto;
@@ -765,7 +778,8 @@
   padding-top: 40px;
 }
 
-.sections:nth-child(3) .sectionHomestay .newstandardCol {
+.sections:nth-child(3) .sectionHomestay .newstandardCol,
+.sections:nth-child(4) .sectionHomestay .newstandardCol {
   display: grid;
   grid-template-columns: auto 1px auto 1px auto;
   padding-top: 40px;
@@ -776,9 +790,63 @@
   background: rgb(0, 0, 0, .2);
 }
 
+.sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+.sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  background: rgb(0, 0, 0, .2);
+}
+
+.sections:nth-child(4) {
+  padding-bottom: 80px;
+}
+
+.sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+.sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  background: transparent !important;
+}
+
+.sections:nth-child(4) p {
+  width: 100%;
+  color: #4a4a4a;
+  font-family: "narrow", "Times New Roman", serif;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.sections:nth-child(4) input {
+  width: 100%;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px 12px;
+}
+
+.sections:nth-child(4) input:focus {
+  border-bottom-color: #c9bd9c !important;
+}
+
+.sections:nth-child(4) .newstandardCol {
+  padding-top: 60px !important;
+}
+
+.signNews {
+  margin: 60px 0 0;
+}
+
+.sections.sections:nth-child(4) p img {
+  padding-right: 15px;
+  height: 60px;
+}
+
 @media (max-width: 1100px) {
   .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
   .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  display: none;
+}
+.sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+  .sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
   display: none;
 }
 .sections:nth-child(3) .sectionHomestay .newstandardCol {
@@ -789,6 +857,12 @@
 @media (max-width: 500px) {
   .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
   .sections:nth-child(3) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
+  display: block;
+  height: 1px;
+  background: rgb(0, 0, 0, .3);
+}
+.sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(2),
+  .sections:nth-child(4) .sectionHomestay .newstandardCol .newstandardItem:nth-child(4) {
   display: block;
   height: 1px;
   background: rgb(0, 0, 0, .3);

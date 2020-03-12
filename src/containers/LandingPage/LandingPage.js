@@ -195,7 +195,41 @@ export const LandingPageComponent = props => {
               </div>
             </li>
 
-            <hr className={css.hpHr2} />
+            <li className={css.sections}>
+              <div className={css.sectionHomestay}>
+                <div className={css.newstandardSection}>
+                  <h1 className={css.vettitle}>
+                     REGISTER AT TRUST MY PET SITTER<br /><span>(It's free)</span>
+                  </h1>
+                  <div className={css.newstandardCol}>
+                  <div className={css.newstandardItem}>
+                    <p>
+                      <img src="https://i.imgur.com/ymUJ7dl.png" />
+                      <span>Access to our<br />member only homes</span>
+                    </p>
+                  </div>
+                  <div className={css.newstandardItem}></div>
+                  <div className={css.newstandardItem}>
+                  <p>
+                      <img src="https://i.imgur.com/qRm8nMe.png" />
+                      <span>Discount and<br />special offers</span>
+                  </p> 
+                  <div className={css.signNews}>
+                    <input type="text" name="email" placeholder="Enter your email" />
+                    <Button>SIGN ME UP</Button>
+                   </div>
+                  </div>
+                  <div className={css.newstandardItem}></div>
+                  <div className={css.newstandardItem}>
+                  <p>
+                      <img src="https://i.imgur.com/azjvDrJ.png" />
+                      <span>Insider tips from<br />our big team</span>
+                  </p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
 
             <li className={css.sections}>
               <div className={css.sectionHomestay}>
