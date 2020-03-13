@@ -198,3 +198,4 @@ export { default as SideHelpArticle } from './SideHelpArticle/SideHelpArticle';
 export { default as CrowdFundingForm } from './CrowdFundingForm/CrowdFundingForm';
 export { default as FeaturedIn } from './FeaturedIn/FeaturedIn';
 export { default as Testimonials } from './Testimonials/Testimonials';
+export { default as NewsletterForm } from './NewsletterForm/NewsletterForm';

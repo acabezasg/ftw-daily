@@ -52,6 +52,7 @@ import {
   CrowdFundingPage,
   PetServiceExplainer,
   WeVetPage,
+  GuaranteePage,
   SuperHogPage,
   WhyPetOwnersPage,
 } from './containers';
@@ -131,6 +132,11 @@ const routeConfiguration = () => {
       path: '/what-makes-us-different',
       name: 'WeVetPage',
       component: WeVetPage,
+    },
+    {
+      path: '/guarantee',
+      name: 'GuaranteePage',
+      component: GuaranteePage,
     },
     {
       path: '/faq',

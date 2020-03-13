@@ -130,7 +130,7 @@
 
 .sections:nth-child(4) {
   background: #f3f3f3;
-  padding: 80px 0 !important;
+  padding: 60px 0 !important;
 }
 
 .sections:nth-child(4) .vettitle span {
@@ -821,6 +821,31 @@
   margin-bottom: 20px;
   background: #fff;
   padding: 15px 12px;
+}
+
+.sections:nth-child(4) button {
+  background-color: #c9bd9c;
+  min-height: 65px;
+  color: #fff;
+  font-family: 'sofiapro', Helvetica, Arial, sans-serif;
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 2px;
+  background-color: #c9bd9c;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.signNews > form > div {
+  padding-top: 15px;
+}
+
+.sections:nth-child(4) button:hover {
+  background-color: #b7a77b;
 }
 
 .sections:nth-child(4) input:focus {

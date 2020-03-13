@@ -61,6 +61,7 @@
     "react-icons": "^3.7.0",
     "react-intercom": "^1.0.15",
     "react-intl": "^2.7.2",
+    "react-mailchimp-form": "^1.0.2",
     "react-mapbox-gl": "^4.7.0",
     "react-material-stepper": "^1.0.0",
     "react-modal": "^3.8.2",

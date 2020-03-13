@@ -19,6 +19,7 @@ import {
   FeaturedIn,
   Button,
   Testimonials,
+  NewsletterForm,
 } from "../../components";
 import { TopbarContainer } from "../../containers";
 
@@ -215,8 +216,7 @@ export const LandingPageComponent = props => {
                       <span>Access Special<br />Offers and Discounts </span>
                   </p> 
                   <div className={css.signNews}>
-                    <input type="text" name="email" placeholder="Enter your email" />
-                    <Button>SIGN ME UP</Button>
+                    <NewsletterForm />
                    </div>
                   </div>
                   <div className={css.newstandardItem}></div>
