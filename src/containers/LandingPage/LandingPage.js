@@ -199,6 +199,36 @@ export const LandingPageComponent = props => {
             <li className={css.sections}>
               <div className={css.sectionHomestay}>
                 <div className={css.newstandardSection}>
+                  <div className={css.carefullyselectedCol}>
+                  <div className={css.carefullyselectedItem}>
+                  <h1>We’ve got you Covered</h1>
+                    <p>
+                       From Dogs, Cats and Rabbits to Gecko’s, Parrots and Horses
+                    </p>
+                   <ul className={css.carefullyCopy}>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Pets are happiest at home in their own environment</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> 1:1 care and attention</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Get regular updates from your sitter</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Pets follow their familiar routines when you are away</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Minimise disruption to your family</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Choose the sitter that is right for your pets</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Our sitters come with an Insurance backed guarantee</li>
+                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Happy Pets = Happy Owners</li>
+                   </ul>
+                  </div>
+                  <div className={css.carefullyselectedItem}>
+                    <div className={css.carefullyImage}>
+                      <img src={carefully} />
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li className={css.sections}>
+              <div className={css.sectionHomestay}>
+                <div className={css.newstandardSection}>
                   <h1 className={css.vettitle}>
                      Register at Trust My Pet Sitter<br /><span>(It's free!)</span>
                   </h1>
@@ -230,38 +260,6 @@ export const LandingPageComponent = props => {
                 </div>
               </div>
             </li>
-
-            <li className={css.sections}>
-              <div className={css.sectionHomestay}>
-                <div className={css.newstandardSection}>
-                  <div className={css.carefullyselectedCol}>
-                  <div className={css.carefullyselectedItem}>
-                  <h1>We’ve got you Covered</h1>
-                    <p>
-                       From Dogs, Cats and Rabbits to Gecko’s, Parrots and Horses
-                    </p>
-                   <ul className={css.carefullyCopy}>
-                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Pets are happiest at home in their own environment</li>
-                     <li><img src="https://i.imgur.com/5acrgq1.png" /> 1:1 care and attention</li>
-                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Get regular updates from your sitter</li>
-                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Pets follow their familiar routines when you are away</li>
-                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Minimise disruption to your family</li>
-                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Choose the sitter that is right for your pets</li>
-                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Our sitters come with an Insurance backed guarantee</li>
-                     <li><img src="https://i.imgur.com/5acrgq1.png" /> Happy Pets = Happy Owners</li>
-                   </ul>
-                  </div>
-                  <div className={css.carefullyselectedItem}>
-                    <div className={css.carefullyImage}>
-                      <img src={carefully} />
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <hr className={css.testHr} />
 
             <li className={css.sections}>
               <div className={css.testimonialsSection}>
