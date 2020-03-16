@@ -43,6 +43,16 @@ const GuaranteePage = () => {
 
         <LayoutWrapperMain>
 
+        <div className={css.affiliateWrapper}>
+            <img src={banner} />
+            <div className={css.imgOverlay}>
+              <div className={css.crowdTitle}>
+              <h1 className={css.pageTitle}>We’ve Raised the Bar</h1>
+              <p>We don't let just anyone watch our pets</p>
+              </div>
+            </div>
+          </div>
+
         <div className={css.affiliateFirst}>
           <div className={css.sectionContent}>
             <h1 className={css.pageTitle}>Our Guarantees</h1>
