@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 // import the component
-import Mailchimp from 'react-mailchimp-form'
+import Mailchimp from 'react-mailchimp-form';
+import css from './NewsletterForm.css';
+import { compose } from "redux";
+import { Redirect, withRouter } from "react-router-dom";
+import { injectIntl, intlShape } from "react-intl";
+import PropTypes from "prop-types";
 
-class NewsletterForm extends Component {
-  render() {
+export const NewsletterFormComponent = props => {
+
+const { history } = props;
+
+  const handleSignUpClick = () => {
+    history.push("/signup");
+  }
+
     return (
         <Mailchimp
-        action='https://trustmypetsitter.us19.list-manage.com/subscribe/post?u=4a35a5d134da29e00c99b1019&amp;id=da197424fe'
+        action='https://trustmypetsitter.us19.list-manage.com/subscribe/post?u=145dd169debb895ee85a3f842&amp;id=ca2a05fd83'
         fields={[
           {
             name: 'EMAIL',
@@ -40,10 +51,24 @@ class NewsletterForm extends Component {
                    color: '#ED4C67'
                }
             }
-        }
+        } 
+        className={css.NewsletterForm}
         />
     );
-  }
-}
+
+};
+
+
+const { object } = PropTypes;
+
+NewsletterFormComponent.propTypes = {
+  history: object.isRequired
+};
+
+
+const NewsletterForm = compose(
+  withRouter,
+  injectIntl
+)(NewsletterFormComponent);
 
 export default NewsletterForm;
