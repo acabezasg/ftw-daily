@@ -54,7 +54,7 @@ export const LandingPageComponent = props => {
   const schemaDescription = intl.formatMessage({
     id: "LandingPage.schemaDescription"
   });
-  const schemaImage = {facebookImage};
+  const schemaImage = `${config.canonicalRootURL}${facebookImage}`;
 
   const handleSignUpClick = () => {
     history.push("/signup");
@@ -70,7 +70,7 @@ export const LandingPageComponent = props => {
       facebookImages={[{ url: facebookImage, width: 1200, height: 630 }]}
       twitterImages={[
         {
-          url: {twitterImage},
+          url: `${config.canonicalRootURL}${twitterImage}`,
           width: 600,
           height: 314
         }
