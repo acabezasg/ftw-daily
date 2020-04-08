@@ -33,6 +33,8 @@ const EditListingDescriptionFormComponent = props => (
         user_type,
         service,
       } = fieldRenderProps;
+
+
       const user_name = user_type === 0 ? "owner" : user_type === 1 ? "sitter" : "service";
       const titleMessage = intl.formatMessage({ id: 'EditListingDescriptionForm.title.' + user_name });
       const titlePlaceholderMessage = intl.formatMessage({
@@ -71,6 +73,12 @@ const EditListingDescriptionFormComponent = props => (
         intl.formatMessage({
           id: 'EditListingDescriptionForm.category.service.required',
           // values: {animal},
+        })
+      );
+
+      const sitterTypeRequired = required(
+        intl.formatMessage({
+          id: 'EditListingDescriptionForm.category.sittertype.required',
         })
       );
 
@@ -122,17 +130,68 @@ const EditListingDescriptionFormComponent = props => (
           {
             user_type === 2 ?
               (
+                <>
+                  <div>
+                    <h3>Please choose your Pet Service Type</h3>
+                    <FieldCheckboxGroup
+                      className={css.features}
+                      id="service"
+                      name="service"
+                      options={service}
+                    />
+                  </div>
+
+                  {
+                    fieldRenderProps.values.service.includes("food") ?
+                      <div>
+                        <h3>Please choose Food Type</h3>
+                        <FieldCheckboxGroup
+                          className={css.features}
+                          id="foodtype"
+                          name="foodtype"
+                          options={[
+                            { key: "treats", label: "Treats" },
+                            { key: "raw", label: "Raw" },
+                            { key: "fresh", label: "Fresh" },
+                            { key: "vegan", label: "Vegan" }
+                          ]}
+                        />
+                      </div> : null
+
+                  }
+
+
+                </>
+
+
+              ) : null
+
+
+
+
+          }
+
+          {
+            user_type === 1 ?
+              (
                 <div>
-                  <h3>Please choose your Pet Service Type</h3>
-                  <FieldCheckboxGroup
-                    className={css.features}
-                    id="service"
-                    name="service"
-                    options={service}
-                  />
+                  <CategoryField
+                    className={css.title}
+                    id="sittertype"
+                    name="sittertype"
+                    categories={[{ key: 'overnight', label: "Overnight" }, { key: "daycare", label: "Daycare" }]}
+                    categoryLabel="Select Type"
+                    categoryPlaceholder="Pet Sitter Type"
+                    categoryRequired={sitterTypeRequired}
+                  >
+                  </CategoryField>
                 </div>
               ) : null
           }
+
+
+
+
           <FieldTextInput
             id="title"
             name="title"

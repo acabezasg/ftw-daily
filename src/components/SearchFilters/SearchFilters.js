@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { compose } from 'redux';
 import { object, string, bool, number, func, shape } from 'prop-types';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
@@ -38,9 +38,9 @@ const initialPriceRangeValue = (queryParams, paramName) => {
 
   return !!price && valuesFromParams.length === 2
     ? {
-        minPrice: valuesFromParams[0],
-        maxPrice: valuesFromParams[1],
-      }
+      minPrice: valuesFromParams[0],
+      maxPrice: valuesFromParams[1],
+    }
     : null;
 };
 
@@ -51,14 +51,16 @@ const initialDateRangeValue = (queryParams, paramName) => {
   const initialValues =
     !!dates && valuesFromParams.length === 2
       ? {
-          dates: { startDate: valuesFromParams[0], endDate: valuesFromParams[1] },
-        }
+        dates: { startDate: valuesFromParams[0], endDate: valuesFromParams[1] },
+      }
       : { dates: null };
 
   return initialValues;
 };
 
 const SearchFiltersComponent = props => {
+  const [isSitter, setSitter] = useState(false);
+
   const {
     rootClassName,
     className,
@@ -101,6 +103,11 @@ const SearchFiltersComponent = props => {
 
   const initialService = initialValue(urlQueryParams, 'pub_service');
 
+  const initialSitterType = initialValue(urlQueryParams, 'pub_sittertype');
+
+
+  const initialFoodType = initialValue(urlQueryParams, 'pub_foodtype');
+
   const initialPriceRange = priceFilter
     ? initialPriceRangeValue(urlQueryParams, priceFilter.paramName)
     : null;
@@ -119,19 +126,36 @@ const SearchFiltersComponent = props => {
   };
 
   const handleSelectOption = (urlParam, option) => {
+    console.log(urlParam, option);
     // query parameters after selecting the option
     // if no option is passed, clear the selection for the filter
     const queryParams = option
       ? { ...urlQueryParams, [urlParam]: option }
       : omit(urlQueryParams, urlParam);
 
-    if (urlParam == 'pub_user_type' && option != 2) {
-      delete queryParams.pub_service;
-      removeAsService();
-    } else {
-      delete queryParams.dates;
-      setAsService();
+    if (urlParam == 'pub_user_type') {
+      if (option != 2) {
+        if (option == 0) {
+          delete queryParams.pub_sittertype;
+        }
+        delete queryParams.pub_service;
+        delete queryParams.pub_foodtype;
+        removeAsService();
+      } else {
+        delete queryParams.dates;
+        delete queryParams.pub_sittertype;
+        setAsService();
+      }
     }
+
+
+
+    if (urlParam == 'pub_service') {
+      if (option != 'food') {
+        delete queryParams.pub_foodtype;
+      }
+    }
+
 
     history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, queryParams));
   };
@@ -232,6 +256,25 @@ const SearchFiltersComponent = props => {
       <div className={css.filters}>
         {categoryFilterElement}
 
+
+        {
+          urlQueryParams.pub_user_type == 1 ? (
+            <SelectSingleFilter
+              urlParam="pub_sittertype"
+              label="Sitter Type"
+              onSelect={handleSelectOption}
+              showAsPopup
+              options={[
+                { key: 'overnight', label: 'Overnight' },
+                { key: 'daycare', label: 'Daycare' },
+              ]}
+              initialValue={initialSitterType}
+              contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
+            />
+          ) : null
+        }
+
+
         {isService || urlQueryParams.pub_user_type == 2 ? (
           <SelectSingleFilter
             urlParam="pub_service"
@@ -251,10 +294,33 @@ const SearchFiltersComponent = props => {
           />
         ) : null}
 
+        {
+          urlQueryParams.pub_service == "food" ? (
+            <SelectSingleFilter
+              urlParam="pub_foodtype"
+              label="Food Type"
+              onSelect={handleSelectOption}
+              showAsPopup
+              options={[
+                { key: "treats", label: "Treats" },
+                { key: "raw", label: "Raw" },
+                { key: "fresh", label: "Fresh" },
+                { key: "vegan", label: "Vegan" }
+              ]}
+              initialValue={initialFoodType}
+              contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
+            />
+          ) : null
+        }
+
+
+
+
+
         {amenitiesFilterElement}
         {priceFilterElement}
         {
-            !isService && urlQueryParams.pub_user_type != 2 ? dateRangeFilterElement : null
+          !isService && urlQueryParams.pub_user_type != 2 ? dateRangeFilterElement : null
         }
         {toggleSearchFiltersPanelButton}
       </div>

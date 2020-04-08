@@ -52,12 +52,10 @@
   "BookingBreakdown.hourCount": "{count, number} {count, plural, one {hour} other {hours}}",
   "BookingBreakdown.weekCount": "{count, number} {count, plural, one {weeek} other {weeeks}}",
   "BookingBreakdown.unitCount": "{count, number} {count, plural, one {unit} other {units}}",
-
   "BookingBreakdown.pricePerDay": "Price",
   "BookingBreakdown.pricePerNight": "Price",
   "BookingBreakdown.pricePerHour": "Price",
   "BookingBreakdown.pricePerWeek": "Price",
-
   "BookingBreakdown.pricePerQuantity": "Price per person",
   "BookingBreakdown.providerTotalCanceled": "Total price",
   "BookingBreakdown.providerTotalDeclined": "Final sum",
@@ -153,17 +151,13 @@
   "DateInput.closeDatePicker": "Close",
   "DateInput.defaultPlaceholder": "Date input",
   "DateInput.screenReaderInputMessage": "Date input",
-
   "EditListingDescriptionForm.categoryLabel": "Listing type",
   "EditListingDescriptionForm.categoryPlaceholder": "Choose the type…",
   "EditListingDescriptionForm.categoryRequired": "You need to select a category for your Listing.",
-
   "EditListingDescriptionForm.business": "Listing type",
   "EditListingDescriptionForm.businessPlaceholder": "Create a sub category in Pet Services",
   "EditListingDescriptionForm.businessRequired": "Business description is required.",
-
   "EditListingDescriptionForm.createListingDraftError": "Failed to create a draft listing. Please try again.",
-
   "EditListingDescriptionForm.description.owner": "Tell us a little more about your home and location",
   "EditListingDescriptionForm.descriptionPlaceholder.owner": "Our 2 beautiful dogs Sammy and Cleo and well behaved Pomeranians looking for a loving pet sitter ….. we have an apartment right in the centre of Manhattan with dog parks within a short distance ….",
   "EditListingDescriptionForm.description.sitter": "Tell us a little more about your pet experience and motivations for pet sitting",
@@ -173,7 +167,6 @@
   "EditListingDescriptionForm.descriptionRequired": "A description is required.",
   "EditListingDescriptionForm.maxLength": "Must be {maxLength} characters or less",
   "EditListingDescriptionForm.showListingFailed": "Fetching listing data failed",
-
   "EditListingDescriptionForm.title.owner": "Add a Heading to Introduce Yourself",
   "EditListingDescriptionForm.title.sitter": "Add a Heading to Introduce Yourself",
   "EditListingDescriptionForm.title.service": "Add a Heading to Introduce Your Business",
@@ -182,95 +175,76 @@
   "EditListingDescriptionForm.titlePlaceholder.service": "Kensington Veterinary Centre ",
   "EditListingDescriptionForm.titleRequired": "You need to add a heading.",
   "EditListingDescriptionForm.updateFailed": "Failed to update listing. Please try again.",
-
   "EditListingDescriptionPanel.createListingTitle.owner": "About you and your pets",
   "EditListingDescriptionPanel.createListingTitle.sitter": "About you and your pet experience",
   "EditListingDescriptionPanel.createListingTitle.service": "About your business",
   "EditListingDescriptionPanel.title.owner": "Edit description of {listingTitle}",
   "EditListingDescriptionPanel.title.sitter": "Edit description of {listingTitle}",
   "EditListingDescriptionPanel.title.service": "Edit service of {listingTitle}",
-
   "EditListingDescriptionForm.category.service.label": "Please choose your Pet Service Type",
   "EditListingDescriptionForm.category.service.placeholder": "Choose the service",
   "EditListingDescriptionForm.category.service.required": "You need to select a category for your cat.",
-
+  "EditListingDescriptionForm.category.sittertype.required": "You need to select sitter type",
   "EditListingDescriptionForm.category.service.homeTitle": "Please choose your Pet Service Type",
-
   "EditListingFeaturesForm.homeTitle.owner": "Please select all applicable ",
   "EditListingFeaturesForm.homeTitle.sitter": "Please select all applicable ",
   "EditListingFeaturesForm.homeTitle.service": "Please select all applicable ",
-
   "EditListingFeaturesForm.categoryLabel": "{petCategory} Size",
   "EditListingFeaturesForm.categoryPlaceholder": "Please state other type of {petCategory}…",
   "EditListingFeaturesForm.categoryRequired": "You need to select a category for your {petCategory}.",
-
   "EditListingFeaturesForm.category.dog.label": "Dog Size",
   "EditListingFeaturesForm.category.dog.placeholder": "Choose the size of your dog",
   "EditListingFeaturesForm.category.dog.required": "You need to select a category for your dog.",
-
   "EditListingFeaturesForm.category.cat.label": "Cat Size",
   "EditListingFeaturesForm.category.cat.placeholder": "Choose the size of your cat",
   "EditListingFeaturesForm.category.cat.required": "You need to select a category for your cat.",
-
   "EditListingFeaturesForm.category.reptiles.label": "Reptiles Size",
   "EditListingFeaturesForm.category.reptiles.placeholder": "Choose the size of your reptiles",
   "EditListingFeaturesForm.category.reptiles.required": "You need to select a category for your reptiles.",
-
   "EditListingFeaturesForm.category.horse.label": "Horse Size",
   "EditListingFeaturesForm.category.horse.placeholder": "Choose the size of your horse",
   "EditListingFeaturesForm.category.horse.required": "You need to select a category for your horse.",
-
   "EditListingFeaturesForm.category.bird.label": "Bird Size",
   "EditListingFeaturesForm.category.bird.placeholder": "Choose the size of your bird",
   "EditListingFeaturesForm.category.bird.required": "You need to select a category for your bird.",
-
   "EditListingFeaturesForm.category.farm_animals.label": "Farm Animal Size",
   "EditListingFeaturesForm.category.farm_animals.placeholder": "Choose the size of your farm animal",
   "EditListingFeaturesForm.category.farm_animals.required": "You need to select a category for your farm animal.",
-
   "EditListingFeaturesForm.category.rabbits.label": "Rabbits Size",
   "EditListingFeaturesForm.category.rabbits.placeholder": "Choose the size of your rabbits",
   "EditListingFeaturesForm.category.rabbits.required": "You need to select a category for your rabbits.",
-
   "EditListingFeaturesForm.category.aquarium.label": "Aquarium Fish Size",
   "EditListingFeaturesForm.category.aquarium.placeholder": "Choose the size of your aquarium fish",
   "EditListingFeaturesForm.category.aquarium.required": "You need to select a category for your aquarium fish.",
-
   "EditListingFeaturesForm.category.other.label": "Other",
   "EditListingFeaturesForm.category.other.placeholder": "Please state other type of pet",
   "EditListingFeaturesForm.category.other.required": "You need to select a category for your other.",
-
   "EditListingFeaturesForm.showListingFailed": "Fetching listing data failed",
   "EditListingFeaturesForm.updateFailed": "Failed to update listing. Please try again.",
-
   "EditListingFeaturesPanel.createListingTitle.owner": "What pets do you have?",
   "EditListingFeaturesPanel.createListingTitle.sitter": "Your pet experience",
   "EditListingFeaturesPanel.createListingTitle.service": "Select the Pet Types your business serves",
   "EditListingFeaturesPanel.title.owner": "Edit pets of {listingTitle}",
   "EditListingFeaturesPanel.title.sitter": "Edit pet experience of {listingTitle}",
   "EditListingFeaturesPanel.title.service": "Edit pets of {listingTitle}",
-
   "EditListingHomeForm.category.bedroom.label": "Number of Bedrooms",
   "EditListingHomeForm.category.bathroom.label": "Number of Bathrooms",
   "EditListingHomeForm.category.bedroom.placeholder": "Drop down list to choose number",
   "EditListingHomeForm.category.bathroom.placeholder": "Drop down list to choose number",
   "EditListingHomeForm.category.bedroom.required": "Please input umber of badrooms",
   "EditListingHomeForm.category.bathroom.required": "Please input umber of bathrooms",
-
   "EditListingHomeForm.homeTitle.owner": "Please select all that apply",
   "EditListingHomeForm.title.owner": "Please select all that apply",
   "EditListingHomeForm.homeTitle.sitter": "Please select all that apply",
   "EditListingHomeForm.title.sitter": "Please select all that apply",
   "EditListingHomeForm.homeTitle.service": "Please select all that apply",
   "EditListingHomeForm.title.service": "Please select all that apply",
-
   "EditListingHomePanel.createListingTitle.owner": "About your home and your surroundings",
   "EditListingHomePanel.createListingTitle.sitter": "Useful Information",
   "EditListingHomePanel.createListingTitle.service": "About your home and your surroundings",
   "EditListingHomePanel.title.owner": "Edit home of {listingTitle}",
   "EditListingHomePanel.title.sitter": "Edit Information of {listingTitle}",
   "EditListingHomePanel.title.service": "Edit home of {listingTitle}",
-
   "EditListingAvailabilityForm.fetchMonthDataFailed": "Oops, couldn't load data for {month}, please try again.",
   "EditListingAvailabilityForm.availableDay": "Available",
   "EditListingAvailabilityForm.blockedDay.owner": "Not yet booked",
@@ -278,7 +252,6 @@
   "EditListingAvailabilityForm.blockedDay.service": "Not available",
   "EditListingAvailabilityForm.bookedDay": "Booked",
   "EditListingAvailabilityForm.updateFailed": "Failed to update listing. Please try again.",
-
   "EditListingAvailabilityPanel.title.owner": "Required Dates of {listingTitle}",
   "EditListingAvailabilityPanel.title.sitter": "Edit availability of {listingTitle}",
   "EditListingAvailabilityPanel.title.service": "Edit availability of {listingTitle}",
@@ -288,7 +261,6 @@
   "EditListingAvailabilityPanel.createListingTitle.owner": "Required Dates",
   "EditListingAvailabilityPanel.createListingTitle.sitter": "Your Availability",
   "EditListingAvailabilityPanel.createListingTitle.service": "Dog Walking Availability",
-
   "EditListingLocationForm.address.owner": "Please enter your Town or Village",
   "EditListingLocationForm.address.sitter": "Please enter your Town or Village",
   "EditListingLocationForm.address.service": "Please enter your Street Address",
@@ -299,18 +271,15 @@
   "EditListingLocationForm.buildingPlaceholder": "A 42",
   "EditListingLocationForm.showListingFailed": "Fetching listing data failed",
   "EditListingLocationForm.updateFailed": "Failed to update listing. Please try again.",
-
   "EditListingLocationPanel.createListingTitle.owner": "Where's your Location?",
   "EditListingLocationPanel.createListingTitle.sitter": "Your Current Location",
   "EditListingLocationPanel.createListingTitle.service": "Your Current Location",
   "EditListingLocationPanel.title.owner": "Edit location of {listingTitle}",
   "EditListingLocationPanel.title.sitter": "Edit location of {listingTitle}",
   "EditListingLocationPanel.title.service": "Edit location of {listingTitle}",
-
   "EditListingPage.loadingListingData": "Loading listing data…",
   "EditListingPage.titleCreateListing": "Create a listing",
   "EditListingPage.titleEditListing": "Edit listing",
-
   "EditListingPhotosForm.addImagesTip.owner": "Tip :Please upload your Photographs to be used alongside your listing. We recommend at least 4 photos which include your pets and home",
   "EditListingPhotosForm.addImagesTip.sitter": "Tip :Please upload your Photographs to be used alongside your listing. We recommend at least 4 photos ideally showing you with pets",
   "EditListingPhotosForm.addImagesTip.service": "Tip :Please upload your Photographs to be used alongside your listing. We recommend at least 2 photos ideally showing you with pets",
@@ -324,7 +293,6 @@
   "EditListingPhotosForm.savedImageAltText": "Saved listing image",
   "EditListingPhotosForm.showListingFailed": "Fetching listing data failed",
   "EditListingPhotosForm.updateFailed": "Failed to update listing. Please try again.",
-
   "EditListingPhotosPanel.payoutModalInfo": "Since this was the first listing you created, we need to know bit more about you in order to send you money. We only ask these once.",
   "EditListingPhotosPanel.payoutModalTitleOneMoreThing": "One more thing:",
   "EditListingPhotosPanel.payoutModalTitlePayoutPreferences": "Payout preferences",
@@ -334,7 +302,6 @@
   "EditListingPhotosPanel.title.sitter": "Edit photos of {listingTitle}",
   "EditListingPhotosPanel.createListingTitle.service": "Your Photos",
   "EditListingPhotosPanel.title.service": "Edit photos of {listingTitle}",
-
   "EditListingPricingForm.priceInputPlaceholder": "Choose your price…",
   "EditListingPricingForm.pricePerDay": "Price per day in USD",
   "EditListingPricingForm.pricePerNight": "Price per night",
@@ -345,9 +312,7 @@
   "EditListingPricingForm.priceTooLow": "Price should be at least {minPrice}.",
   "EditListingPricingForm.showListingFailed": "Fetching listing data failed",
   "EditListingPricingForm.updateFailed": "Failed to update listing. Please try again.",
-
   "EditListingPricingPanel.listingPriceCurrencyInvalid": "Listing currency is different from the marketplace currency. You cannot Edit price.",
-
   "EditListingPricingPanel.createListingTitle.owner": "How much does it cost?",
   "EditListingPricingPanel.title.owner": "Edit pricing of {listingTitle}",
   "EditListingPricingPanel.createListingTitle.sitter": "Your Rates",
@@ -357,7 +322,6 @@
   "EditListingPricingForm.category.rate.label": "You can select rates in the following categories",
   "EditListingPricingForm.category.rate.placeholder": "Please select your rates",
   "EditListingPricingForm.category.rate.required": "Please add your rates",
-
   "EditListingPoliciesForm.rulesLabel": "ID Verification",
   "EditListingPoliciesForm.rulesLabelSmall": "All Trust My Pet Sitter Owners and Sitters are ID verified.  It only takes a few minutes and helps keep all members of our community safe.",
   "EditListingPoliciesForm.rulesPlaceholder": "Take to YOTI",
@@ -365,14 +329,12 @@
   "EditListingPoliciesForm.updateFailed": "Failed to update listing. Please try again.",
   "EditListingPoliciesForm.maxLength": "Must be {maxLength} characters or less",
   "EditListingPoliciesForm.rulesRequired": "You need to add an ID.",
-
   "EditListingPoliciesPanel.createListingTitle.owner": "Verify identity with YOTI",
   "EditListingPoliciesPanel.title.owner": "Edit verification of {listingTitle}",
   "EditListingPoliciesPanel.createListingTitle.sitter": "Verify identity with YOTI",
   "EditListingPoliciesPanel.title.sitter": "Edit verification of {listingTitle}",
   "EditListingPoliciesPanel.createListingTitle.service": "Verify identity with YOTI",
   "EditListingPoliciesPanel.title.service": "Edit verification of {listingTitle}",
-
   "EditListingWizard.saveEditDescription": "Save Description",
   "EditListingWizard.saveEditFeatures": "Save Pet Types",
   "EditListingWizard.saveEditHome": "Save Home",
@@ -384,7 +346,6 @@
   "EditListingWizard.saveEditPolicies": "Save Verification",
   "EditListingWizard.EditFeaturesSitter": "Save Useful Information",
   "EditListingWizard.SaveLocationOwner": "Save Location",
-
   "EditListingWizard.saveNewDescription": "Next: Pet Types",
   "EditListingWizard.saveNewFeatures": "Next: Home",
   "EditListingWizard.saveNewHome": "Next: Location",
@@ -393,11 +354,9 @@
   "EditListingWizard.saveNewAvailability": "Next: Price",
   "EditListingWizard.saveNewFeaturesSitter": "Next: Useful Information",
   "EditListingWizard.EditLocationOwner": "Next: Required Dates",
-
   "EditListingWizard.saveNewPricing": "Next: Photo",
   "EditListingWizard.saveNewPhotos": "Publish Listing",
   "EditListingWizard.saveNewPolicies": "Publish Listing",
-
   "EditListingWizard.tabLabelDescription.owner": "Pet Owner",
   "EditListingWizard.tabLabelFeatures.owner": "Your Pets",
   "EditListingWizard.tabLabelHome.owner": "Your Home",
@@ -406,7 +365,6 @@
   "EditListingWizard.tabLabelPhotos.owner": "Your Photos",
   "EditListingWizard.tabLabelPolicy.owner": "ID Verification",
   "EditListingWizard.tabLabelPricing.owner": "Your Price",
-
   "EditListingWizard.tabLabelDescription.sitter": "Pet Sitter",
   "EditListingWizard.tabLabelFeatures.sitter": "Pet Types",
   "EditListingWizard.tabLabelHome.sitter": "Useful Information",
@@ -415,7 +373,6 @@
   "EditListingWizard.tabLabelPhotos.sitter": "Your Photos",
   "EditListingWizard.tabLabelPolicy.sitter": "ID Verification",
   "EditListingWizard.tabLabelPricing.sitter": "Your Rates",
-
   "EditListingWizard.tabLabelDescription.service": "Pet Services",
   "EditListingWizard.tabLabelFeatures.service": "Pet Types",
   "EditListingWizard.tabLabelHome.service": "Your Home",
@@ -424,7 +381,6 @@
   "EditListingWizard.tabLabelPhotos.service": "Your Photos",
   "EditListingWizard.tabLabelPolicy.service": "ID Verification",
   "EditListingWizard.tabLabelPricing.service": "Your Rates",
-
   "EmailVerificationForm.finishAccountSetup": "We will need to send you email notifications. To allow this, please verify your email address {email}.",
   "EmailVerificationForm.successButtonText": "Continue exploring",
   "EmailVerificationForm.successText": "Everything looks good. Time to get out there – have a great day.",
@@ -520,7 +476,6 @@
   "ListingCard.perUnit": "per unit",
   "ListingCard.unsupportedPrice": "({currency})",
   "ListingCard.unsupportedPriceTitle": "Unsupported currency ({currency})",
-
   "ListingPage.homeTitle": "About your home",
   "ListingPage.usefulTitle": "Useful informations",
   "ListingPage.serviceTitle": "Service Type",
@@ -555,7 +510,6 @@
   "ListingPage.schemaTitle": "{title} - {price} | {siteTitle}",
   "ListingPage.viewImagesButton": "View photos ({count})",
   "ListingPage.yourHostHeading": "Profile",
-
   "LocationAutocompleteInput.currentLocation": "Current location",
   "LocationSearchForm.placeholder": "e.g London...",
   "LoginForm.emailInvalid": "A valid email address is required",

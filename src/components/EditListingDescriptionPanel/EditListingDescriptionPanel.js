@@ -28,8 +28,8 @@ const EditListingDescriptionPanel = props => {
   const { description, title, publicData } = currentListing.attributes;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
-  const user_name = user_type === 0?"owner":user_type === 1?"sitter":"service";
-  const publish = isPublished ?"title.":"createListingTitle.";
+  const user_name = user_type === 0 ? "owner" : user_type === 1 ? "sitter" : "service";
+  const publish = isPublished ? "title." : "createListingTitle.";
   const DescriptionPanelTitle = 'EditListingDescriptionPanel.' + publish + user_name;
   const service = config.custom.service;
   const panelTitle = isPublished ? (
@@ -38,25 +38,27 @@ const EditListingDescriptionPanel = props => {
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
   ) : (
-    <FormattedMessage id={DescriptionPanelTitle} />
-  );
+      <FormattedMessage id={DescriptionPanelTitle} />
+    );
 
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingDescriptionForm
         className={css.form}
-        initialValues={{ title, description,user_type,service: publicData.service }}
+        initialValues={{ title, description, user_type, service: publicData.service, sittertype: publicData.sittertype, foodtype: publicData.foodtype }}
         saveActionMsg={submitButtonText}
         onSubmit={values => {
-          const { title, description, user_type, service } = values;
+          const { title, description, user_type, service, foodtype, sittertype } = values;
           const updateValues = {
             title: title.trim(),
-            description:description,
-            publicData: 
-            { 
+            description: description,
+            publicData:
+            {
               user_type,
               service,
+              foodtype,
+              sittertype
             }
           };
 
@@ -66,8 +68,8 @@ const EditListingDescriptionPanel = props => {
         updated={panelUpdated}
         updateInProgress={updateInProgress}
         fetchErrors={errors}
-        user_type ={ user_type}
-        service ={service}
+        user_type={user_type}
+        service={service}
       />
     </div>
   );
