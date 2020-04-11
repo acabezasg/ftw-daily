@@ -51,7 +51,8 @@ const SliderHero = () => (
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
-              <ExternalLink href="https://trustmypetsitter.seedrs.com/">Don't Miss Out, We Are Crowdfunding on Seedrs</ExternalLink>
+              <a href="s?pub_user_type=2">Find a Pet Service</a>
+              <ExternalLink href="https://trustmypetsitter.seedrs.com/">We Are Crowdfunding on Seedrs</ExternalLink>
             </div>
           </div>
 
@@ -73,7 +74,8 @@ const SliderHero = () => (
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
-              <ExternalLink href="https://trustmypetsitter.seedrs.com/">Don't Miss Out, We Are Crowdfunding on Seedrs</ExternalLink>
+              <a href="s?pub_user_type=2">Find a Pet Service</a>
+              <ExternalLink href="https://trustmypetsitter.seedrs.com/">We Are Crowdfunding on Seedrs</ExternalLink>
             </div>
           </div>
 
@@ -94,7 +96,8 @@ const SliderHero = () => (
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
-              <ExternalLink href="https://trustmypetsitter.seedrs.com/">Don't Miss Out, We Are Crowdfunding on Seedrs</ExternalLink>
+              <a href="s?pub_user_type=2">Find a Pet Service</a>
+              <ExternalLink href="https://trustmypetsitter.seedrs.com/">We Are Crowdfunding on Seedrs</ExternalLink>
             </div>
           </div>
 
@@ -115,7 +118,8 @@ const SliderHero = () => (
             <div className={css.submitContainer}>
               <a href="s?pub_user_type=1">Find a Pet Sitter</a>
               <a href="s?pub_user_type=0">Find Homes to Sit</a>
-              <ExternalLink href="https://trustmypetsitter.seedrs.com/">Don't Miss Out, We Are Crowdfunding on Seedrs</ExternalLink>
+              <a href="s?pub_user_type=2">Find a Pet Service</a>
+              <ExternalLink href="https://trustmypetsitter.seedrs.com/">We Are Crowdfunding on Seedrs</ExternalLink>
             </div>
           </div>
 

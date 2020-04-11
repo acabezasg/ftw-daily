@@ -187,7 +187,6 @@ class TopbarComponent extends Component {
 
     const classes = classNames(rootClassName || css.root, className, this.props.location.pathname == '/' ? css.topmenuAbsolute : css.topmenu);
 
-
     return (
       <div className={classes}>
         <div className={classNames(mobileRootClassName || css.container, mobileClassName)}>
