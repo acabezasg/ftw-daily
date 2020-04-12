@@ -247,8 +247,10 @@ export const service = [
   { key: 'surgeon', label: 'Veterinary Surgeons' },
   { key: 'groomer', label: 'Pet Groomer' },
   { key: 'store', label: 'Pet Store' },
-  { key: 'sitter', label: 'Doggy Daycare' },
-  { key: 'food', label: 'Food' },
+  { key: 'food', label: 'Pet Food' },
+  { key: 'tech', label: 'Pet Tech' },
+  { key: 'accessories', label: 'Accessories' },
+  { key: 'photo', label: 'Photography' },
 ];
 
 export const size = [
