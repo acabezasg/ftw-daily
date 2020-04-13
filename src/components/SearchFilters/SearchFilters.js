@@ -101,7 +101,7 @@ const SearchFiltersComponent = props => {
     ? initialValue(urlQueryParams, categoryFilter.paramName)
     : null;
 
-  const initialService = initialValue(urlQueryParams, 'pub_service');
+  const initialServices = initialValues(urlQueryParams, 'pub_service');
 
   const initialSitterType = initialValue(urlQueryParams, 'pub_sittertype');
 
@@ -276,10 +276,12 @@ const SearchFiltersComponent = props => {
 
 
         {isService || urlQueryParams.pub_user_type == 2 ? (
-          <SelectSingleFilter
+          <SelectMultipleFilter
+            id="service"
+            name="service"
             urlParam="pub_service"
             label="Service Type"
-            onSelect={handleSelectOption}
+            onSubmit={handleSelectOptions}
             showAsPopup
             options={[
               { key: 'walking', label: 'Dog Walking' },
@@ -291,7 +293,7 @@ const SearchFiltersComponent = props => {
               { key: 'accessories', label: 'Accessories' },
               { key: 'photo', label: 'Photography' },
             ]}
-            initialValue={initialService}
+            initialValues={initialServices}
             contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
           />
         ) : null}
