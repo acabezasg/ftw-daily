@@ -142,7 +142,7 @@ const EditListingDescriptionFormComponent = props => (
                   </div>
 
                   {
-                    fieldRenderProps.values.service.includes("food") ?
+                    fieldRenderProps.values.service && fieldRenderProps.values.service.includes("food") ?
                       <div>
                         <h3>Please choose Food Type</h3>
                         <FieldCheckboxGroup
